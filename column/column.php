@@ -1,6 +1,7 @@
 <?php 
 	require_once('../frame.php');
 	$id = intval($_GET['id']);
+	$date=$_GET['date'];
 	if(empty($id)){
 		die();
 	}else{
@@ -42,14 +43,17 @@
 					<div id=c_b_title>
 						<div id=wz>按日期存档</div>
 					</div>
-					<?php for($i=0;$i<5;$i++){ ?>
-						<div class=c_b_content><a href="">2010年1月</a></div>
+					<?php
+					$db=get_db();
+					$datetime=$db->query('select distinct(concat(left(created_at,7))) as date from fb_news where author_id='.$id.' and author_type=1 and is_adopt=1 order by created_at desc limit 5');
+					 for($i=0;$i<count($datetime);$i++){ ?>
+						<div class=c_b_content><a href="column.php?id=<?php echo $id; ?>&date=<?php echo $datetime[$i]->date; ?>"><?php echo $datetime[$i]->date; ?></a></div>
 					<?php } ?>
 					<div class=c_title>
 						<div class=wz>其他特约专栏作家</div>
 					</div>
 					<?php
-					$db=get_db();
+					
 					$othercolumn=$db->query('select image_src,nick_name,id from fb_user where id<>'.$id.' order by id desc limit 6');
 					for($i=0;$i<count($othercolumn);$i++){ ?>
 						<div class=b_b_left>
@@ -62,14 +66,19 @@
 		</div>
 		<div id=column_person_right>
 			<div id=title>
-				<input type="hidden" id="columnid" value="<?php echo $id; ?>>">
-				<div param=1 id="other_title1" param1="news" class=dq_title>专栏文章</div>
-				<div param=2 id="other_title2" param2="pic" class=other_title>专栏照片</div>
-				<div param=3 id="other_title3" param3="other" class=other_title>专栏作者详细介绍</div>	
+				<input type="hidden" id="columnid" value="<?php echo $id; ?>">
+				<div param=1 id="othertitle1" param1="news" class=other_title>专栏文章</div>
+				<div param=2 id="othertitle2" param1="pic" class=other_title>专栏照片</div>
+				<div param=3 id="othertitle3" param1="other" class=other_title>专栏作者详细介绍</div>	
 			</div>
-			<iframe id="iframesrc" border=0  frameborder="no" width=100% height=100% src="iframe.php?type=news&id=<?php echo $id;?>"></iframe>
+			<iframe scrolling="no" id="iframesrc" border=0  frameborder="no" width=100% height=100% src="iframe.php?type=news&id=<?php echo $id;?>&date=<?php echo $date; ?>"></iframe>
 		</div>
 		<? require_once('../inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>
+<script>
+	$(function(){
+		$("#othertitle1").attr('class','dq_title');
+	})
+</script>
