@@ -48,9 +48,11 @@ $lineplot->SetColor( 'red' );
 $lineplot->SetCenter();
 $lineplot->SetWeight( 2 );   // Two pixel wide
 $lineplot->mark->SetType(MARK_FILLEDCIRCLE);
+$lineplot->mark->SetWidth(3);
 $lineplot->mark->SetColor('blue');
 $lineplot->mark->SetFillColor('red');
 
+$lineplot->value->format = "%.3f";
 $lineplot->value->Show();
 
 // Add the plot to the graph
