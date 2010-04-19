@@ -11,7 +11,7 @@
 				</div>
 				<div class=b_v></div>
 				<div class=td1>
-					<div style="width:100%; height:20px; " <?php show_page_pos('lists_td1_0'); $posname='lists_td1_0';?>><a <?php show_page_pos('billinaires_td1_0'); $posname='billinaires_td1_0'; ?> style="font-weight:bold;" href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
+					<div style="width:100%; height:20px; " <?php show_page_pos('billinaires_td1_0'); $posname='billinaires_td1_0'; ?>><a style="font-weight:bold;" href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
 					<?php for($i=1;$i<7;$i++){ ?><div style="width:100%; height:20px; " <?php show_page_pos('billinaires_td1_'.$i); $posname='billinaires_td1_'.$i;?>><a   href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
 				</div>
 				<div class=b_v></div>
