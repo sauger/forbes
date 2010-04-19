@@ -137,8 +137,8 @@
 							<img src="<?php echo $pos_items->$pos_name->image1;?>" width=50 height=50 />
 						</div>
 						
-						<div id=ipo_title><?php echo $pos_items->$pos_name->display; ?></div>
-						<div id=ipo_content><?php echo $pos_items->$pos_name->description;?></div>
+						<div id=ipo_title><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display; ?></a></div>
+						<div id=ipo_content><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->description;?></a></div>
 						
 					</div>
 					<img src="/upload/ipo.png" />
