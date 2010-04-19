@@ -14,16 +14,16 @@
 	<title>福布斯-杂志</title>
 	<?php
 		use_jquery();
-		js_include_tag('select2css','magazine');
-		css_include_tag('html/magazine/magazine','top','bottom');
+		js_include_tag('public','right','magazine');
+		css_include_tag('magazine/magazine','public','right_inc');
 	?>
 </head>
 <body>
 	<div id=ibody>
 	<?php require_once('../inc/top.inc.php');?>
-		<div id=cyindex><img src="/images/zz/top_title.jpg"></div>
-		<div id=cytitle><a style="color:#666666;" href="/">福布斯中文网　＞　</a><a style="color:#666666;" href="/magazine">杂志　＞　</a><a><?php echo $magazine_now->name;?></a></div>
-		<div id=cyline></div>
+		<div id=bread>
+			<a href="/magazine/">杂志首页</a> > <span>杂志</span>		
+		</div>
 		<div id=t>
 			<div id=t_l>
 				<div id=t_l_t>

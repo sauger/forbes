@@ -30,7 +30,7 @@ my.query(sql).each do |code,scount,start_time,intval,id,rate|
 		end
 	end
 	value = res.split(',')[1].to_f * scount.to_i / 100000000 * rate.to_f
-	file.printf("$ydata[]=%.1f;",value)
+	file.printf("$ydata[]=%.3f;",value)
 	#update the next generate time
 	#tstart = Time.parse(start_time)
 	#tstart = tstart + intval.to_i * 60
