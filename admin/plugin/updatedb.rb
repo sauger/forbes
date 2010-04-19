@@ -13,7 +13,7 @@ my.query("select d.id,d.name,sum(a.stock_value*c.rate*b.stock_count) as fortune 
 			last_index = last.to_s
 		end
 		stmt = my.prepare("insert into fb_dynamic_fortune_list (richer_id,current_index,last_index,name,fortune,regdate) values (?,?,?,?,?,NOW())")
-		stmt.execute id,index,last_index,name,count
+		stmt.execute id,index,last_index,name,fortune
 	end
 	stmt = my.prepare("insert into fb_dynamic_fortune_history (richer_id,current_index,name,fortune,regdate) values (?,?,?,?,NOW())")
 	stmt.execute id,index,name,count
