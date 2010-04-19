@@ -126,7 +126,11 @@
 					if($asset){
 						switch ($asset){
 							case 1:$sql .=" and r2.fortune<0.5";
-							case 1:$sql .=" and r2.fortune<1 and r2.fortune>0.5";
+							case 2:$sql .=" and r2.fortune<=1 and r2.fortune>0.5";
+							case 3:$sql .=" and r2.fortune<=10 and r2.fortune>1";
+							case 4:$sql .=" and r2.fortune<=50 and r2.fortune>10";
+							case 5:$sql .=" and r2.fortune<=100 and r2.fortune>50";
+							case 6:$sql .=" and r2.fortune>100";
 						}
 					}
 					$sql .=" group by r1.id";
@@ -137,7 +141,7 @@
 					<tr>
 						<td valign="middle" width="5%"><img src="/images/search/icon.gif"></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->name;?></td>
-						<td valign="middle" width="15%"><?php echo $rich[$i]->rich_fortune;?></td>
+						<td valign="middle" width="15%"><?php if($rich[$i]->rich_fortune!='')echo $rich[$i]->rich_fortune;else echo '未知';?></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->country;?></td>
 						<td valign="middle" width="10%"><?php $year = intval($rich[$i]->birthday);if(empty($year))echo "未知";else echo (date('Y')-$year).'岁';?></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->cname;?></td>
