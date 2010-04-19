@@ -11,8 +11,8 @@ $(function(){
 	});
 	
 	$('#admin_edit_div img').live('click',function(e){
+		e.preventDefault();
 		var $this = $(this);
-		e.preventDefult();
 		parent.$.fn.colorbox({
 			href: '/admin/position/edit.php?pos_name=' + $($this).parent().attr('pos_name'),
 			width:'800px',
