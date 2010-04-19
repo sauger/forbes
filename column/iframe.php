@@ -32,7 +32,7 @@ if($type="news"){
 </div>
 <div class=page><?php paginate();?></div>
 <?php }}else if($type="pic"){ 
-	$images=$db->paginate('select * from fb_images where publisher='.$id.' and is_dopt=1 order by priority asc,created_at desc',3);
+	$images=$db->paginate('select * from fb_images where publisher='.$id.' and is_adopt=1 order by priority asc,created_at desc',3);
 ?>
 <div class=r_content>
 	<div class=column_img>

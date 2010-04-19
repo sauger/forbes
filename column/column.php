@@ -23,7 +23,7 @@
 <body>
 	<div id=ibody>
 		<? require_once('../inc/top.inc.php');?>
-		<div id=bread><a href="#">个人专栏</a></div>
+		<div id=bread><a href="#">专栏</a></div>
 		<div id=bread_line></div>
 		<div id=column_person_left>
 			<div id=column_person_left_t></div>
@@ -62,9 +62,10 @@
 		</div>
 		<div id=column_person_right>
 			<div id=title>
-				<div param=1 class=dq_title>专栏文章</div>
-				<div param=2 class=other_title>专栏照片</div>
-				<div param=3 class=other_title>专栏作者详细介绍</div>	
+				<input type="hidden" id="columnid" value="<?php echo $id; ?>>">
+				<div param=1 id="other_title1" param1="news" class=dq_title>专栏文章</div>
+				<div param=2 id="other_title2" param2="pic" class=other_title>专栏照片</div>
+				<div param=3 id="other_title3" param3="other" class=other_title>专栏作者详细介绍</div>	
 			</div>
 			<iframe id="iframesrc" border=0  frameborder="no" width=100% height=100% src="iframe.php?type=news&id=<?php echo $id;?>"></iframe>
 		</div>
