@@ -26,3 +26,4 @@ htmldir
 admin/plugin/ipo
 admin/plugin/update_stock
 test.php
+test.post.php
