@@ -3,7 +3,7 @@ require_once ('../../lib/jpgraph/jpgraph.php');
 require_once ('../../lib/jpgraph/jpgraph_line.php');
 // Some (random) data
 $str = file_get_contents('./ipo');
-$xdata = array("9:30","10:00","10:30","11:00","11:30","13:00","13:30","14:00","14:30","15:00","15:30");
+$xdata = array("9:30","9:31","10:00","10:30","11:00","11:30","13:00","13:30","14:00","14:30","15:00","15:30");
 eval($str);
 
 #var_dump($xdata);
