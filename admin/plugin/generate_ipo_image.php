@@ -35,7 +35,7 @@ $graph->SetMarginColor('white');
 $graph->SetFrame(false);
 
 // Setup margin and titles
-$graph->SetMargin(40,20,20,20);
+$graph->SetMargin(40,10,10,20);
 $graph->yaxis->title->SetFont( FF_FONT1 , FS_BOLD );
 $graph->xaxis->title->SetFont( FF_FONT1 , FS_BOLD );
 $graph->xaxis->SetTickLabels($xdata);
@@ -49,10 +49,11 @@ $lineplot->SetCenter();
 $lineplot->SetWeight( 2 );   // Two pixel wide
 $lineplot->mark->SetType(MARK_FILLEDCIRCLE);
 $lineplot->mark->SetWidth(3);
-$lineplot->mark->SetColor('blue');
+$lineplot->mark->SetColor('red');
 $lineplot->mark->SetFillColor('red');
 
-$lineplot->value->format = "%.3f";
+$lineplot->value->format = "%.1f";
+$lineplot->value->SetFont(FF_FONT1,FS_NORMAL,5);
 $lineplot->value->Show();
 
 // Add the plot to the graph
