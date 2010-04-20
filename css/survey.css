@@ -1,0 +1,23 @@
+body {font-size:12px; font-family:宋体,Arial; color:#000000; margin:0 auto; padding:0;}
+p{margin:0; padding:0;}
+ul{margin:0; padding:0;}
+li{margin:0; padding:0;} 
+div{margin:0; padding:0; float:left; display:inline;}
+
+#ibody{width:1000px; margin:0 auto; float:none; display:block;}
+#bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
+#bread a{color:#666666; text-decoration:none;}
+#bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
+a{	color: #333333;	text-decoration: none;}
+
+
+#hr_top{width:1000px; height:14px; background:url(../images/contact/zh_hr.jpg) no-repeat;  float:left; dislay:inline;}
+
+#questions_div{width:651px;  float:left; display:inline;}
+#questions_title{width:500px; height:30px; margin-top:15px; color:#333333; font-family:黑体; line-height:35px; font-size:15px; margin-left:30px; font:left; display:inline;}
+#answer_title{width:500px; margin-top:5px; font-family:黑体; font-size:14px; margin-left:30px; font:left; display:inline;}
+.answer{width:400px; height:20px; font-family:黑体; margin-left:30px; color:#666666; font-size:12px; font:left; display:inline;}
+#questions_n{width:645px; height:400px; margin-left:1px;  border-left:1px solid #A5DA94; border-right:1px solid #A5DA94; font:left; display:inline;}
+#questions_top{width:651px; height:8px; background:url(../images/survey/top.jpg) no-repeat; font-size:0px; line-height:0xp; float:left; display:inline;}
+
+#questions_bottom{width:651px; height:10px;  float:left; display:inline;}
