@@ -6,8 +6,9 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-CN>
-	<?php css_include_tag('column');
+	<?php css_include_tag('column','colorbox');
 		use_jquery();
+		js_include_tag('jquery.colorbox-min.js');
 	?>
 </head>
 <body>
@@ -41,21 +42,22 @@ if($type=="news"){
 </div>
 <?php } ?>
 <div class=page><?php paginate();?></div>
-<?php }else if($type=="pic"){ 
-	$images=$db->paginate('select * from fb_images where publisher='.$id.' and is_adopt=1 '.$sql.' order by priority asc,created_at desc',18);
-	for($i=0;$i<count($images);$i++){	
-?>
+<?php }else if($type=="pic"){ ?>
 <div class=r_content>
-	<div class=column_img>
-		<a class=color param="<?php echo $images[$i]->src; ?>" href=""><img border=0 src="<?php echo $imgaes[$i]->src2; ?>"></a>
+<?php $images=$db->paginate('select * from fb_images where publisher='.$id.' and is_adopt=1 '.$sql.' order by priority asc,created_at desc',18);
+	for($i=0;$i<count($images);$i++){
+?>
+	<div class=column_image style="border:1px solid #000000;">
+		<a class=color param="<?php echo $images[$i]->id; ?>" href=""><img border=0 src="<?php echo $images[$i]->src2; ?>" /></a>
 	</div>
-</div>
 <?php } ?>
 <script>
  $(".color").colorbox({
-	href:'column_img.php?src='+$(this).attr('param');
+	href:function(){
+		return 'column_img.php?id='+$(this).attr('param');}
 });
 </script>
+</div>
 <div class=page><?php paginate();?></div>
 <?php }else{
 	$content=$db->query('select description from fb_user where id='.$id);

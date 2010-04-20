@@ -91,8 +91,8 @@ $(function(){
 	});
 	
 	$("#fortune_add").click(function(){
-		var str = '<tr class="tr3"><td><input type="text" class="news_fortune"></input></td>'
-				+ '<td><input type="text" class="news_fortune_class"></input></td>'
+		var str = '<tr class="tr3"><td><input type="text" class="news_fortune"></input>(请输入单位为亿人民币的数字)</td>'
+				+ '<td><input type="text" class="news_fortune_class"></input>(输入4位年份)</td>'
 				+ '<td><input type="text" class="news_fortune_order"></input></td>'
 				+ '<td><a class="f_delete"><img src="/images/btn_delete.png" border="0"></a>'
 				+ '<input type="hidden" class="f_hidden" value="0"></input></td>'
@@ -102,16 +102,25 @@ $(function(){
 	
 	$("#fortune_save").click(function(){
 		var ids = new Array();
-		$('#table_fortune').find('.tr4').each(function(){
+		$flag = true;
+		$('#table_fortune').find('.tr3').each(function(){
+			$(this).find('input').each(function(){
+				if(isNaN($(this).val())&&$(this).attr('type')=='text'){
+					$flag = false;
+				}
+			});
 			ids.push($(this).find('input:eq(3)').val() +'|'+ $(this).find('input:eq(0)').val() +'|'+ $(this).find('input:eq(1)').val() +'|'+$(this).find('input:eq(2)').val());
 		});
-		$.post('edit_rich_fortune.post.php',{'params':ids.join(','),'rich_id':$('#id').val()},function(data){
-			var ids = data.split(',');
-			$('.f_hidden').each(function(i){
-				$(this).val(ids[i]);
+		if($flag){
+			$.post('edit_rich_fortune.post.php',{'params':ids.join(','),'rich_id':$('#id').val()},function(data){
+				var ids = data.split(',');
+				$('.f_hidden').each(function(i){
+					$(this).val(ids[i]);
+				});
+				alert("保存成功");
 			});
-			alert("保存成功");
-		});
-		return false;
+		}else{
+			alert("请输入数字!");
+		}
 	});
 })

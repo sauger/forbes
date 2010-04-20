@@ -60,4 +60,4 @@ puts 'start to update'
 system "mysql -h#{dbhost} -u#{dbuser} -p#{dbpassword} #{dbname} < update_stock"
 puts 'update finish'
 
-require "updatedb.rb"
+require File.dirname(__FILE__) +"/updatedb.rb"

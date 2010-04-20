@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+body {font-size:12px; font-family:宋体,Arial; color:#000000; margin:0 auto; padding:0;}
+p{margin:0; padding:0;}
+ul{margin:0; padding:0;}
+li{margin:0; padding:0;} 
+div{margin:0; padding:0; float:left; display:inline;}
+
+#ibody{width:1000px; margin:0 auto; float:none; display:block;}
+#forbes_trt{width:300px; margin-top:10px; overflow:hidden; float:left; margin-left:350px;}
+#forbes_trt .title{width:75px; height:26px; line-height:26px; font-size:13px; color:#003399; background:url(/images/index/block1.jpg) no-repeat; text-align:center; cursor:pointer;}
+#forbes_trt .title.selected{background:url(/images/index/block2.jpg) no-repeat; font-weight:bold; color:#000000;}
+.rt_tab{display:none;}
+#forbes_trt #ph{width:300px; height:23px; line-height:23px; border-top:2px solid #666666; border-bottom:1px solid #666666; overflow:hidden;}
+#rt_tab1 #ph .span1{width:40px;}
+#rt_tab1 #ph .span2{width:160px;}
+#rt_tab1 #ph .span3{width:60px;}
+#rt_tab1 #ph .span4{width:35px;}
+#rt_tab1 .content .span1{width:40px; color:#000000; font-weight:bold;}
+#rt_tab1 .content .span2{width:160px; height:26px; line-height:26px; overflow:hidden;}
+#rt_tab1 .content .span3{width:60px;}
+#rt_tab1 .content .span4{width:35px; font-size:14px; font-weight:bold;}
+
+#rt_tab2_box{width:300px; height:65px; border-bottom:1px dotted;}
+
+#forbes_trt #phb{width:300px;}
+#forbes_trt #phname{width:300px; background:url(/images/index/t_r_t_ph.jpg) no-repeat;}
+#forbes_trt #phname .content{width:300px; height:24px; line-height:24px; color:#666666; border-bottom:1px solid #CCCCCC; padding:0;overflow:hidden;}
+#forbes_trt #phname .content a{margin-left:50px; color:#0033CC; text-decoration:none;}
+#phb span{float:left; text-align:center;}
+span.up{color:#FF0000;}
+span.down{color:#33CC00;}

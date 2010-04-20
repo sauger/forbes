@@ -7,16 +7,25 @@
 		$value = explode('|',$param);
 		$table->id = $value[0];
 		$table->rich_id = $_POST['rich_id'];
-		if($value[1]){
+		$flag = true;
+		if($value[1]!=''){
 			$table->fortune = $value[1];
+		}else{
+			$flag = false;
 		}
-		if($value[2]){
+		if($value[2]!=''){
 			$table->fortune_year = $value[2];
+		}else{
+			$flag = false;
 		}
-		if($value[3]){
+		if($value[3]!=''){
 			$table->fortune_order = $value[3];
+		}else{
+			$flag = false;
 		}
-		$table->save();
+		if($flag){
+			$table->save();
+		}
 		array_push($ids, $table->id);
 	}
 	$ids = implode(',', $ids);
