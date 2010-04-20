@@ -27,7 +27,5 @@ function search(){
 	if(industry!=''){
 		url = url+"&industry="+industry;
 	}
-	if(url!='rich.php?'){
-		window.location.href=url;
-	}
+	window.location.href=url;
 }

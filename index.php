@@ -123,7 +123,7 @@
 						?>
 						<div class=content>
 							<span style="width: 40px; color:#000000; font-weight:bold;"><?php echo $i+1;?>.</span>
-							<span style="width:100px;"><a style="margin-left:0px;" href=""><?php echo $items[$i]->name;?></a></span>
+							<span style="width:100px;height:18px;overflow:hidden;"><a style="margin-left:0px;" href=""><?php echo $items[$i]->name;?></a></span>
 							<span style="width:90px;"><?php echo $items[$i]->fortune;?></span>
 							<span style="font-size:14px; font-weight:bold;margin-left:10px;" class="<?php echo $class;?>"><?php echo $word;?></span>
 						</div>
@@ -137,8 +137,8 @@
 							<img src="<?php echo $pos_items->$pos_name->image1;?>" width=50 height=50 />
 						</div>
 						
-						<div id=ipo_title><?php echo $pos_items->$pos_name->display; ?></div>
-						<div id=ipo_content><?php echo $pos_items->$pos_name->description;?></div>
+						<div id=ipo_title><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display; ?></a></div>
+						<div id=ipo_content><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->description;?></a></div>
 						
 					</div>
 					<img src="/upload/ipo.png" />

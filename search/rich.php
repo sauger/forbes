@@ -108,25 +108,32 @@
 			<div id="result">
 				<table width="600" border="0" cellspacing="0" cellpadding="0">
 				<?php
-					$sql = "select f.r_fortune,f.name,f.birthday,f.country,group_concat(n.name) as cname,group_concat(n.id) as cid,group_concat(n.cname) as iname FROM v_rich_fortune f left join fb_rich_company m on f.id=m.rich_id left join v_company_industry n on m.company_id=n.id where 1=1";
-					if($name){$sql .= " and f.name like '%$name%'";}
-					if($nationality){$sql .= " and f.country = '$nationality'";}
-					if($indust){$sql .= " and iname like '%$indust%'";}
+					$sql = "SELECT r1.country,r1.name,r1.birthday,group_concat(i2.name) as iname,r2.fortune,group_concat(c2.name) as cname  FROM fb_rich r1  left join fb_rich_company c1 on r1.id=c1.rich_id left join fb_company c2 on c1.company_id=c2.id left join fb_company_industry i1 on c2.id=i1.company_id left join fb_industry i2 on i1.industry_id=i2.id left join fb_rich_fortune r2 on r1.id=r2.rich_id where 1=1";
+					if($name){$sql .= " and r1.name like '%$name%'";}
+					if($nationality){$sql .= " and r1.country = '$nationality'";}
+					if($indust){$sql .= " and i2.name like '%$indust%'";}
 					if($year){
 						switch ($year){
-							case 1:$sql .= " and f.birthday<'".date('Y')."' and f.birthday>'".(date('Y')-19)."'";break;
-							case 2:$sql .= " and f.birthday<'".(date('Y')-20)."' and f.birthday>'".(date('Y')-29)."'";break;
-							case 3:$sql .= " and f.birthday<'".(date('Y')-30)."' and f.birthday>'".(date('Y')-39)."'";break;
-							case 4:$sql .= " and f.birthday<'".(date('Y')-40)."' and f.birthday>'".(date('Y')-49)."'";break;
-							case 5:$sql .= " and f.birthday<'".(date('Y')-50)."' and f.birthday>'".(date('Y')-59)."'";break;
-							case 6:$sql .= " and f.birthday<'".(date('Y')-60)."' and f.birthday>'".(date('Y')-79)."'";break;
-							case 7:$sql .= " and f.birthday<'".(date('Y')-80)."' and f.birthday>'".(date('Y')-200)."'";break;
+							case 1:$sql .= " and r1.birthday<'".date('Y')."' and r1.birthday>'".(date('Y')-19)."'";break;
+							case 2:$sql .= " and r1.birthday<'".(date('Y')-20)."' and r1.birthday>'".(date('Y')-29)."'";break;
+							case 3:$sql .= " and r1.birthday<'".(date('Y')-30)."' and r1.birthday>'".(date('Y')-39)."'";break;
+							case 4:$sql .= " and r1.birthday<'".(date('Y')-40)."' and r1.birthday>'".(date('Y')-49)."'";break;
+							case 5:$sql .= " and r1.birthday<'".(date('Y')-50)."' and r1.birthday>'".(date('Y')-59)."'";break;
+							case 6:$sql .= " and r1.birthday<'".(date('Y')-60)."' and r1.birthday>'".(date('Y')-79)."'";break;
+							case 7:$sql .= " and r1.birthday<'".(date('Y')-80)."' and r1.birthday>'".(date('Y')-200)."'";break;
 						}
 					}
 					if($asset){
+						switch ($asset){
+							case 1:$sql .=" and r2.fortune<0.5";
+							case 2:$sql .=" and r2.fortune<=1 and r2.fortune>0.5";
+							case 3:$sql .=" and r2.fortune<=10 and r2.fortune>1";
+							case 4:$sql .=" and r2.fortune<=50 and r2.fortune>10";
+							case 5:$sql .=" and r2.fortune<=100 and r2.fortune>50";
+							case 6:$sql .=" and r2.fortune>100";
+						}
 					}
-					$sql .=" group by f.name";
-					alert($sql);
+					$sql .=" group by r1.id";
 					$rich = $db->paginate($sql,20);
 					$count = count($rich);
 					for($i=0;$i<$count;$i++){
@@ -134,7 +141,7 @@
 					<tr>
 						<td valign="middle" width="5%"><img src="/images/search/icon.gif"></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->name;?></td>
-						<td valign="middle" width="15%"><?php echo $rich[$i]->rich_fortune;?></td>
+						<td valign="middle" width="15%"><?php if($rich[$i]->rich_fortune!='')echo $rich[$i]->rich_fortune;else echo '未知';?></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->country;?></td>
 						<td valign="middle" width="10%"><?php $year = intval($rich[$i]->birthday);if(empty($year))echo "未知";else echo (date('Y')-$year).'岁';?></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->cname;?></td>
