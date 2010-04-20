@@ -65,8 +65,12 @@ div{margin:0; padding:0; float:left; display:inline;}
 #ibottom a{color:#ffffff; text-decoration:none;}
 #ibottom .b_v{width:2px; height:133px; margin-top:5px; background:url(/images/public/bottom_vertical.jpg) no-repeat; filter: Alpha(Opacity=50);}
 #ibottom #b_top{width:1000px; height:138px; margin-top:5px; overflow:hidden;}
-#ibottom .td1{width:74px; height:138px; margin-left:8px; line-height:20px;  text-align:left; overflow:hidden;}
-#ibottom .td2{width:115px; height:138px; margin-left:5px; line-height:20px; text-align:left; overflow:hidden;}
+#ibottom .b_box{width:80px; height:138px; margin-left:8px; line-height:20px;  text-align:left; overflow:hidden;}
+#ibottom .b_box div{width:100%; height:20px;}
+#ibottom .b_box a{font-weight:bold;}
+#ibottom .lists{width:100%; height:20px; margin-left:2px;}
+#ibottom .lists a{font-weight:normal;}
+
 #ibottom #td5{width:1000px; height:30px; margin-top:5px; line-height:30px; text-align:center; color:#ffffff;}
 .ibabout{width:1000px; height:48px; margin-top:20px; margin-bottom:10px; line-height:16px; font-size:12px; text-align:center; overflow:hidden;}
 
