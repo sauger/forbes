@@ -10,12 +10,6 @@
 	if(strlen($name)>20){
 		$name = '';
 	}
-	if(strlen($year)>20){
-		$year = '';
-	}
-	if(strlen($asset)>20){
-		$asset = '';
-	}
 	if(strlen($nationality)>20){
 		$nationality = '';
 	}
@@ -148,6 +142,7 @@
 						<td valign="middle" width="15%"><?php echo $rich[$i]->iname;?></td>
 					</tr><?php }?>
 				</table>
+				<div class="paginate"><?php paginate()?></div>
 			</div>
 		</div>
 		<div id="right_inc">

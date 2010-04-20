@@ -102,7 +102,7 @@ $(function(){
 	
 	$("#fortune_save").click(function(){
 		var ids = new Array();
-		$('#table_fortune').find('.tr4').each(function(){
+		$('#table_fortune').find('.tr3').each(function(){
 			ids.push($(this).find('input:eq(3)').val() +'|'+ $(this).find('input:eq(0)').val() +'|'+ $(this).find('input:eq(1)').val() +'|'+$(this).find('input:eq(2)').val());
 		});
 		$.post('edit_rich_fortune.post.php',{'params':ids.join(','),'rich_id':$('#id').val()},function(data){

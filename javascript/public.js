@@ -173,8 +173,8 @@ var isIE=(document.all&&document.getElementById&&!window.opera)?true:false;
 var isMozilla=(!document.all&&document.getElementById&&!window.opera)?true:false;
 var isOpera=(window.opera)?true:false;
 var seturl='url(#default#homepage)';
-var weburl=window.location.href;
-var webname=document.title;
+var weburl='http://www.forbeschina.com';
+var webname='福布斯中文网';
 
 
 function myhomepage() {

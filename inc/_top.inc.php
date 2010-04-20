@@ -16,7 +16,7 @@
 				<a href="/user" id="">会员中心</a>
 				<?php }?>
 			</div>
-			<div class=user_btn><a href="javascript:void(0)" onclick="myhomepage()" name="homepage">设为首页</a>　<a href="javascript:void(0)" onclick="addfavorite()">收藏本页</a></div>
+			<div class=user_btn><a href="javascript:void(0)" onclick="myhomepage()" name="homepage">设为首页</a>　<a href="javascript:void(0)" onclick="addfavorite()">收藏本站</a></div>
 			<div id=magazine_title>本期杂志介绍</div>
 			<?php 
 				$pos_name = "top_magazine";
