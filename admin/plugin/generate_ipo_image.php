@@ -53,7 +53,7 @@ $lineplot->mark->SetColor('red');
 $lineplot->mark->SetFillColor('red');
 
 $lineplot->value->format = "%.1f";
-$lineplot->value->SetFont(FF_FONT1,FS_NORMAL,5);
+$lineplot->value->SetFont(FF_ARIAL,FS_NORMAL,7);
 $lineplot->value->Show();
 
 // Add the plot to the graph
