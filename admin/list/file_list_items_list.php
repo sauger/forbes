@@ -37,17 +37,21 @@
 </head>
 
 <body>
-	<table width="795" border="0" id="list">
-		<tr class="tr1">
-			<td colspan="6">
-				<?php if ($id){ ?>   <a href="file_list_item_edit.php?list_id=<?php echo $id; ?>">添加榜单项</a> <?php } ?>  搜索　
-				<input id="search" type="text" value="<? echo $_REQUEST['search']?>">
-    			<input type="button" value="搜索" id="search_b" style="border:1px solid #0000ff; height:21px">
-				<a href="file_list_list.php" style="cursor:pointer">返回榜单列表</a>
-			</td>
-		</tr>
-		<tr class="tr2">
-			<td width="115">标题</td><td width="210">操作</td>
+<div id=icaption>
+    <div id=title>榜单项管理</div>
+	  <a href="file_list_list.php" id=btn_back></a>
+</div>	
+	
+<div id=isearch>
+		<input id="search" type="text" value="<? echo $_REQUEST['search']?>">
+  	<input type="button" value="搜索" id="search_button">
+</div>		
+<div id=itable>	
+	
+	<table cellspacing=1 border="0">
+
+		<tr class="itable_title">
+			<td width="50%">标题</td><td width="50%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
@@ -55,18 +59,19 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><?php echo $record[$i]->title;?></td>
 					<td>
-						<a href="file_list_item_edit.php?id=<?php echo $record[$i]->id;?>&list_id=<?php echo $id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer">编辑</a>
-						<span style="cursor:pointer;color:#FF0000" class="del" name="<?php echo $record[$i]->id;?>">删除</span>
+						<a href="file_list_item_edit.php?id=<?php echo $record[$i]->id;?>&list_id=<?php echo $id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border=0></a>
+						<span class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border=0></span>
 						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:40px;">
 					</td>
 				</tr>
 		<?php
 			}
 		?>
-		<tr class="tr3">
+		<tr class="btools">
 				<td colspan=6><input type="hidden" id="db_table" value="fb_file_list_items"><button id="edit_priority">编辑优先级</button> <button id="clear_priority">清空优先级</button><?php paginate();?></td>
 		</tr>
 		<input type="hidden" id="list_id" name="id" value="<?php echo $id;?>"> 
 	</table>
+</div>	
 </body>
 </html>

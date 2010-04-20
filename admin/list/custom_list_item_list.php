@@ -29,7 +29,7 @@
 			}
 			$condition = array('conditions' => implode(' or ',$search_fields));
 		}
-		$record = $table->paginate("all",$condition);
+		$record = $table->paginate("all",$condition,'30');
 	?>
 </head>
 
@@ -89,7 +89,7 @@
 			}
 		?>
 		<tr class="btools">
-			<td colspan=<?php echo $i;?>>
+			<td colspan=<?php $i++; echo $i;?>>
 				<?php paginate();?>
 				<input type="hidden" id="id" value="<?php echo $id;?>"> 
 			</td>
