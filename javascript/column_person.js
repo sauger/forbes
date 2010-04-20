@@ -10,7 +10,7 @@ $(function(){
 		{	
 			$(this).css('margin-left','60px;');		
 		}
-		var iframsrc='iframe.php?id='+$('#columnid').attr('value')+'&type='+$(this).attr('param1');
+		var iframsrc='iframe.php?id='+$('#columnid').attr('value')+'&type='+$(this).attr('param1')+'&date='+$('#columndate').attr('value');
 		$('#iframesrc').attr('src',iframsrc);
 	});
 });

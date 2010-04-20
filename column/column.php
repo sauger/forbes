@@ -67,6 +67,7 @@
 		<div id=column_person_right>
 			<div id=title>
 				<input type="hidden" id="columnid" value="<?php echo $id; ?>">
+				<input type="hidden" id="columndate" value="<?php echo $date; ?>">
 				<div param=1 id="othertitle1" param1="news" class=other_title>专栏文章</div>
 				<div param=2 id="othertitle2" param1="pic" class=other_title>专栏照片</div>
 				<div param=3 id="othertitle3" param1="other" class=other_title>专栏作者详细介绍</div>	

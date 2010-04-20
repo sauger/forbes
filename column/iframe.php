@@ -24,7 +24,7 @@ else
 {
 	$sql='';
 }
-if($type="news"){
+if($type=="news"){
 	$news=$db->paginate('select * from fb_news where author_id='.$id.' and author_type=1 and is_adopt=1 '.$sql.' order by priority asc, created_at desc',4);
 	for($i=0;$i<count($news);$i++){ ?>
 <div class=r_content>
@@ -39,10 +39,9 @@ if($type="news"){
 	</div>
 	<div class=r_dash></div>
 </div>
-	<?php } ?>
-
+<?php } ?>
 <div class=page><?php paginate();?></div>
-<?php }else if($type="pic"){ 
+<?php }else if($type=="pic"){ 
 	$images=$db->paginate('select * from fb_images where publisher='.$id.' and is_adopt=1 '.$sql.' order by priority asc,created_at desc',18);
 	for($i=0;$i<count($images);$i++){	
 ?>
