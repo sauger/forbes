@@ -38,16 +38,18 @@
 			<td class=td1 width=15%>名称</td>
 			<td width="85%"><input type="text" name="post[name]" value="<?php echo $menu->name;?>" class="required"></td>
 		</tr>
+	<!--	
 		<tr class=tr4>
 			<td class=td1>类型</td>
 			<td>
-				<select name="post[type]" style="width:155px;">
+				<select name="post[type]">
 					<option <?php if($menu->type=='both'){echo 'selected="selected"';}?> value="both">公共导航</option>
 					<option <?php if($menu->type=='top'){echo 'selected="selected"';}?> value="top">TOP导航</option>
 					<option <?php if($menu->type=='bottom'){echo 'selected="selected"';}?> value="bottom">Bottom导航</option>
 				</select>				
 			</td>
 		</tr>	
+	-->	
 		<tr class=tr4>
 			<td class=td1>链接</td>
 			<td><input type="text" name="post[href]" value="<?php echo $menu->href;?>"></td>
@@ -55,7 +57,7 @@
 		<tr class="tr4">
 			<td class=td1>链接方式</td>
 			<td>
-				<select id="sel_target" name="post[target]" style="width:155px;">
+				<select id="sel_target" name="post[target]" >
 					<option value="_slef" <?php if($menu->target == '_slef') echo 'selected="selected"'; ?>>当前窗口</option>
 					<option value="_blank" <?php if($menu->target == '_blank') echo 'selected="selected"'; ?>>新建窗口</option>
 				</select>				
