@@ -34,34 +34,35 @@
 </head>
 
 <body>
-	<table width="795" border="0" id="list">
-		<tr class="tr1">
-			<td colspan="20">
-				<span style="color:red;"><?php echo $list_name;?></span>
-				<a href="custom_list_item_edit.php?list_id=<?php echo $id;?>">添加榜单项</a>
-				  搜索　
-				 <input id="s_text" type="text" value="<? echo $_REQUEST['s_text']?>">
-				 搜索列名<select style="width:80px;" id="s_field">
-				 	<option value="0">所有列</option>
-					<?php 
-						foreach ($table->fields as $field) {
-							if($field->name == 'id') continue;
-					?>
-					<option <?php if($_REQUEST[s_field]==$field->name)echo 'selected="selected"';?> value="<?php echo $field->name;?>"><?php echo $field->comment;?></option>
-					<?php }?>
-				</select>　
-				<input type="button" value="搜索" id="search_b" style="border:1px solid #0000ff; height:21px">
-				 <a href="index.php" style="cursor:pointer">返回榜单列表</a>
-			</td>
-		</tr>
-		<tr class="tr2">
+<div id=icaption>
+    <div id=title><?php echo $list_name;?></div>
+	  <a href="index.php" id=btn_back></a>
+	  <a href="custom_list_item_edit.php?list_id=<?php echo $id;?>" id=btn_add title="添加榜单项"></a>
+</div>
+<div id=isearch>
+	 <input id="s_text" type="text" value="<? echo $_REQUEST['s_text']?>">
+	 <select id="s_field">
+		 	<option value="0">所有列</option>
+			<?php 
+					foreach ($table->fields as $field) {
+						if($field->name == 'id') continue;
+			?>
+			<option <?php if($_REQUEST[s_field]==$field->name)echo 'selected="selected"';?> value="<?php echo $field->name;?>"><?php echo $field->comment;?></option>
+				<?php }?>
+		</select>
+		<input type="button" value="搜索" id="search_button">
+</div>
+
+<div id=itable>	
+	<table cellspacing=1 border="0">
+		<tr class="itable_title">
 			<?php 
 				foreach ($table->fields as $v) {
 					if($v->name == 'id') continue;
 					echo "<td>{$v->comment}</td>";
 				}
 			?>
-			<td width="210">操作</td>
+			<td width="5%">操作</td>
 		</tr>
 		<?php
 			if(!is_array($record)){
@@ -69,7 +70,7 @@
 			}
 			foreach ($record as $v) {
 		?>
-				<tr class="tr3" id="<?php echo $v->fields['id']->value;?>">
+			<tr class="tr3" id="<?php echo $v->fields['id']->value;?>">
 					<?php 
 						foreach ($v->fields as $val) {
 							if($val->name == 'id') continue;
@@ -77,18 +78,21 @@
 						}
 					?>
 					<td>
-						<a href="custom_list_item_edit.php?list_id=<?php echo $id;?>&id=<?php echo $v->fields['id']->value;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer">编辑</a>
-						<span style="cursor:pointer;color:#FF0000" class="del" name="<?php echo $v->fields['id']->value;?>">删除</span>
+						<a href="custom_list_item_edit.php?list_id=<?php echo $id;?>&id=<?php echo $v->fields['id']->value;?>" class="edit" name="<?php echo $record[$i]->id;?>"><img src="/images/btn_edit.png" border=0></a>
+						<span class="del" name="<?php echo $v->fields['id']->value;?>"><img src="/images/btn_delete.png" border=0></span>
+						<input type="hidden" id="db_table" value="<?php echo $table_name;?>">
 					</td>
 				</tr>
-				<input type="hidden" id="db_table" value="<?php echo $table_name;?>">
 		<?php
 			}
 		?>
-		<tr class="tr3">
-			<td colspan=20><?php paginate();?></td>
+		<tr class="btools">
+			<td colspan=100>
+				<?php paginate();?>
+				<input type="hidden" id="id" value="<?php echo $id;?>"> 
+			</td>
 		</tr>
-		<input type="hidden" id="id" value="<?php echo $id;?>"> 
 	</table>
+</div>	
 </body>
 </html>

@@ -75,13 +75,15 @@
 		}
 		$order = ' priority asc, created_at desc';
 		$conditions['order'] = $order;
-		$record = $list->paginate("all",$conditions);
+		$record = $list->paginate("all",$conditions,'30');
 		$count = count($record);
 	?>
-	<table width="795" border="0" id="list">
-		<tr class="tr1">
-			<td colspan="5">
-				　关联榜单<a href="javascript:history.go(-1)"><img src="/images/btn_back.png" border=0></a>   搜索　
+<div id=icaption>
+    <div id=title>关联榜单</div>
+	  <a href="javascript:history.go(-1)" id=btn_back></a>
+</div>	
+	
+<div id=isearch>
 				 <input id="s_text" type="text" value="<? echo $_REQUEST['s_text'];?>">
 				 <select id="s_list_type">
 				 	<option value="-1">榜单类型</option>
@@ -99,11 +101,13 @@
 					<option value="1" <? if($_REQUEST['adopt']=="1"){?>selected="selected"<? }?>>已关联</option>
 					<option value="0" <? if($_REQUEST['adopt']=="0"){?>selected="selected"<? }?>>未关联</option>
 				</select>
-				 <input type="button" value="搜索" id="search_b" style="border:1px solid #0000ff; height:21px">
-			</td>
-		</tr>
-		<tr class="tr2">
-			<td width="300">榜单名称</td><td width="200">榜单类型</td><td width="295">操作</td>
+				 <input type="button" value="搜索" id="search_button">	
+</div>	
+	
+<div id=itable>	
+	<table cellspacing=1 border="0">
+		<tr class="itable_title">
+			<td width="50%">榜单名称</td><td width="25%">榜单类型</td><td width="25%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
@@ -131,10 +135,14 @@
 		<?php
 			}
 		?>
-			<tr class="tr3">
-				<td colspan=6><?php paginate();?>　<button id=edit_priority>编辑优先级</button><input type="hidden" id="list_id" value="<?php echo $id?>"></td>
+			<tr class="btools">
+				<td colspan=10>
+					<?php paginate();?>
+					<button id=edit_priority>编辑优先级</button>
+					<input type="hidden" id="list_id" value="<?php echo $id?>">
+				</td>
 			</tr>
 		</table>	
-
-	</body>
+</div>
+</body>
 </html>

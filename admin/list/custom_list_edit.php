@@ -27,7 +27,7 @@
 <body>
 	<div id=icaption>
     <div id=title><?php if($id){echo '编辑榜单';}else{echo '添加榜单';}?></div>
-	  <a href="news_list.php" id=btn_back></a>
+	  <a href="list_list.php" id=btn_back></a>
 </div>
 	<form id="list_edit" action="edit.post.php" enctype="multipart/form-data"  method="post"> 
 <div id=itable>

@@ -26,33 +26,36 @@
 </head>
 
 <body>
+<div id=icaption>
+    <div id=title><?php echo $list_name;?></div>
+	  <a href="custom_list_item_list.php?id=<?php echo $list_id;?>" id=btn_back></a>
+</div>	
+	
+	
+<div id=itable>	
 	<form action="custom_list_item.post.php" method="post">
 	<table cellspacing="1" align="center">
-		<tr class="tr1">
-			<td colspan="6">
-			<a href="custom_list_item_list.php?id=<?php echo $list_id;?>"><?php echo $list_name;?></a><?php if($id){ ?>编辑<?php }else{ ?>添加<?php }?>榜单项 
-			</td>
-		</tr>
 		<?php foreach ($table->fields as $field) {
 			if($field->name == 'id') continue;
 		?>
 		<tr class=tr4>
-			<td><?php echo $field->comment?></td>
-			<td align="left">
+			<td width="30%" class=td1><?php echo $field->comment?></td>
+			<td width="70%">
 				<input type="text" name="list[<?php echo $field->name;?>]" value="<?php echo $field->value;?>">
 			</td>
 		</tr>
 		<?php }?>
 		<tr class="btools">
-			<td colspan="10"  align="center"><input id="finish" type="submit" value="保　　　　　存"></td>
-		</tr>	
-		<tr class="tr3">
-			<td colspan=6><?php paginate();?></td>
+			<td colspan="10">
+					<input id="finish" type="submit" value="保存">
+					<input type="hidden" name="id" value="<?php echo $id;?>"> 
+					<input type="hidden" name="list_id" value="<?php echo $list_id;?>"></input>
+					<input type="hidden" name="table_name" value="<?php echo $table_name;?>"></input>	
+			</td>
 		</tr>
-		<input type="hidden" name="id" value="<?php echo $id;?>"> 
-		<input type="hidden" name="list_id" value="<?php echo $list_id;?>"></input>
-		<input type="hidden" name="table_name" value="<?php echo $table_name;?>"></input>
+
 	</table>
 	</form>
+</div>	
 </body>
 </html>

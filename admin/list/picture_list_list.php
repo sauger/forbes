@@ -46,10 +46,10 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><a href="#"> <?php echo $record[$i]->name;?></a></td>
 					<td>
-						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" >关联</a>
-						<a href="picture_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer"><img border=0 src="/images/btn_edit.png"></a>
-						<a href="picture_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" style="cursor:pointer">榜单项管理</a>
-						<span style="cursor:pointer;color:#FF0000" class="del1" name="<?php echo $record[$i]->id;?>"><img border=0 src="/images/btn_delete.png"></span>
+						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" title="关联"><img border=0 src="/images/btn_relation.png"></a>
+						<a href="picture_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img border=0 src="/images/btn_edit.png"></a>
+						<a href="picture_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/btn_item.png"></a>
+						<span class="del1" name="<?php echo $record[$i]->id;?>"><img border=0 src="/images/btn_delete.png"></span>
 						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:40px;">
 					</td>
 				</tr>

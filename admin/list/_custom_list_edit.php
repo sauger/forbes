@@ -5,8 +5,8 @@
 				if($k == 'id') continue;
 		?>
 		<tr class="tr4">
-			<td width="130">列名</td>
-			<td width="695" align="left">
+			<td width="15%" class=td1>列名</td>
+			<td width="85%">
 				<div style="float:left">
 				<input type="text" name="list[<?php echo $k;?>][comment]" value="<?php echo $v->comment;?>" class="required">
 				<select name="list[<?php echo $k;?>][type]" style="width:100px;">
