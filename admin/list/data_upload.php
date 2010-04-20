@@ -23,20 +23,23 @@
 	}
 	
 ?>
-<body style="background:#E1F0F7">
+<body>
+<div id=icaption>
+    <div id=title>榜单：<?php echo $table[0]->name?></div>
+	  <a href="list_list.php" id=btn_back></a>
+</div>
+<div id=itable>
 	<form id="data_upload" enctype="multipart/form-data" action="upload.post.php" method="post"> 
-	<table width="795" border="0">
-		<tr class=tr1>
-			<td colspan="6" width="795">　　榜单：<?php echo $table[0]->name?>　数据导入<a href="list_list.php"><img src="/images/btn_back.png" border="0"></a></td>
-		</tr>
+	<table cellspacing=1 border="0">
+
 		<tr class="tr4 add">
-			<td width="130">上传XLS</td>
-			<td width="695" align="left">
+			<td width="30%" class=td1>上传XLS</td>
+			<td width="70">
 				<input type="file" name="xls">
 			</td>
 		</tr>
-		<tr class="tr1 add">
-			<td colspan="6" width="795">　　字段匹配（在输入框里输入相应的列号，没有的相对应的列号不用输入）</td>
+		<tr class="tr4 add">
+			<td colspan="10">　　字段匹配（在输入框里输入相应的列号，没有的相对应的列号不用输入）</td>
 		</tr>
 		<?php
 			if($table_name=='fb_rich_list_items'||$table_name=='fb_famous_list_items'){
@@ -47,19 +50,20 @@
 			for($i=1;$i<count($table_fields);$i++){
 		?>
 		<tr class="tr4 add">
-			<td width="130"><?php echo $table_fields[$i]->Comment?></td>
-			<td width="695" align="left">
-				<input style="width:50px;" type="text"  class="number" name="<?php echo $table_fields[$i]->Field?>">
-			</td>
+			<td class=td1><?php echo $table_fields[$i]->Comment?></td>
+			<td><input type="text"  class="number" name="<?php echo $table_fields[$i]->Field?>"></td>
 		</tr>
 		<?php
 			}
 		?>
-		<tr class=tr3>
-			<td colspan="2" width="795" align="center"><input id="submit" type="submit" value="发布"></td>
+		<tr class=btools>
+			<td colspan="10">
+				<input id="submit" type="submit" value="发布">
+				<input type="hidden" name="list_id" value="<?php echo $id;?>">
+			</td>
 		</tr>
-		<input type="hidden" name="list_id" value="<?php echo $id;?>">
 	</table>
 	</form>
+</div>	
 </body>
 </html>
