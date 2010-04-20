@@ -30,7 +30,7 @@
 					<div class=common_article_lis1 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name);?></div>
 					<div class=common_article_description1><?php show_page_desc($pos_items,$pos_name);?></div>
 				<? }?>
-				<?php  for($i=5;$i<15;$i++){ $pos_name = $pos.'acticle'.$i;?>
+				<?php  for($i=6;$i<15;$i++){ $pos_name = $pos.'acticle'.$i;?>
 					<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name);?></div>
 				<?php } ?>
 			</div>
