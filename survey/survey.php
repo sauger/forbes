@@ -40,135 +40,32 @@
 			
 				<div id="questions_n">
 				
-						<div id="question_menu"><b>在线问卷<b></div>	
+						<div id="question_menu"><b>在线问卷</b></div>	
 						<div id="questions__top">
 							
 							<div class="answer_title">问题1：</div>
 							<div class="answer_dd">
 							<DIV CLASS="answer_z">
 												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxA" name="checkbox" value="A" /></DIV>
-												<div class="answer_letter">A:</div>
 												<div class="answer"><label for="checkboxA">你选sdfsadfsa择的是A</label></div>
 							</DIV>
 							<DIV CLASS="answer_z">
 												<DIV CLASS="answer_select"><input type="checkbox"id="checkboxB" name="checkbox" value="B" /></DIV>
-												<div class="answer_letter">B:</div>
 												<div class="answer"><label for="checkboxB">你选择dfasfas的是</label></div>
 							</DIV>
 							<DIV CLASS="answer_z">
 												<DIV CLASS="answer_select"><input type="checkbox" ID="checkboxC" name="checkbox" value="C" /></DIV>
-												<div class="answer_letter">C:</div>
 												<div class="answer"><label for="checkboxC">你选择fasdfsad的是C</label></div>
 							</DIV>
 							<DIV CLASS="answer_z">
 												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxD" name="checkbox" value="D" /></DIV>
-												<div class="answer_letter">D:</div>
 												<div class="answer"><LABEL for="checkboxD">你选择sdfsafassafdasfsa的是D</label></div>
 							</DIV>
-						</div><div id="answer_hr"></div>
+						</div>
+						<div id="answer_hr"></div>
 							
 							
 							
-							<div class="answer_title">问题1：</div>
-							<div class="answer_dd">
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxA" name="checkbox" value="A" /></DIV>
-												<div class="answer_letter">A:</div>
-												<div class="answer"><label for="checkboxA">你选sdfsadfsa择的是A</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox"id="checkboxB" name="checkbox" value="B" /></DIV>
-												<div class="answer_letter">B:</div>
-												<div class="answer"><label for="checkboxB">你选择dfasfas的是</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" ID="checkboxC" name="checkbox" value="C" /></DIV>
-												<div class="answer_letter">C:</div>
-												<div class="answer"><label for="checkboxC">你选择fasdfsad的是C</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxD" name="checkbox" value="D" /></DIV>
-												<div class="answer_letter">D:</div>
-												<div class="answer"><LABEL for="checkboxD">你选择sdfsafassafdasfsa的是D</label></div>
-							</DIV>
-						</div><div id="answer_hr"></div>
-							
-							
-							
-							<div class="answer_title">问题1：</div>
-							<div class="answer_dd">
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxA" name="checkbox" value="A" /></DIV>
-												<div class="answer_letter">A:</div>
-												<div class="answer"><label for="checkboxA">你选sdfsadfsa择的是A</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox"id="checkboxB" name="checkbox" value="B" /></DIV>
-												<div class="answer_letter">B:</div>
-												<div class="answer"><label for="checkboxB">你选择dfasfas的是</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" ID="checkboxC" name="checkbox" value="C" /></DIV>
-												<div class="answer_letter">C:</div>
-												<div class="answer"><label for="checkboxC">你选择fasdfsad的是C</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxD" name="checkbox" value="D" /></DIV>
-												<div class="answer_letter">D:</div>
-												<div class="answer"><LABEL for="checkboxD">你选择sdfsafassafdasfsa的是D</label></div>
-							</DIV>
-						</div><div id="answer_hr"></div>
-							
-							
-							
-							<div class="answer_title">问题1：</div>
-							<div class="answer_dd">
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxA" name="checkbox" value="A" /></DIV>
-												<div class="answer_letter">A:</div>
-												<div class="answer"><label for="checkboxA">你选sdfsadfsa择的是A</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox"id="checkboxB" name="checkbox" value="B" /></DIV>
-												<div class="answer_letter">B:</div>
-												<div class="answer"><label for="checkboxB">你选择dfasfas的是</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" ID="checkboxC" name="checkbox" value="C" /></DIV>
-												<div class="answer_letter">C:</div>
-												<div class="answer"><label for="checkboxC">你选择fasdfsad的是C</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxD" name="checkbox" value="D" /></DIV>
-												<div class="answer_letter">D:</div>
-												<div class="answer"><LABEL for="checkboxD">你选择sdfsafassafdasfsa的是D</label></div>
-							</DIV>
-						</div><div id="answer_hr"></div>
-							
-							
-							<div class="answer_title">问题1：</div>
-							<div class="answer_dd">
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxA" name="checkbox" value="A" /></DIV>
-												<div class="answer_letter">A:</div>
-												<div class="answer"><label for="checkboxA">你选sdfsadfsa择的是A</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox"id="checkboxB" name="checkbox" value="B" /></DIV>
-												<div class="answer_letter">B:</div>
-												<div class="answer"><label for="checkboxB">你选择dfasfas的是</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" ID="checkboxC" name="checkbox" value="C" /></DIV>
-												<div class="answer_letter">C:</div>
-												<div class="answer"><label for="checkboxC">你选择fasdfsad的是C</label></div>
-							</DIV>
-							<DIV CLASS="answer_z">
-												<DIV CLASS="answer_select"><input type="checkbox" id="checkboxD" name="checkbox" value="D" /></DIV>
-												<div class="answer_letter">D:</div>
-												<div class="answer"><LABEL for="checkboxD">你选择sdfsafassafdasfsa的是D</label></div>
-							</DIV>
-						</div><div id="answer_hr"></div>
 							
 							
 							

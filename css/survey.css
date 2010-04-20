@@ -16,14 +16,13 @@ a{	color: #333333;	text-decoration: none;}
 #questions_div{width:651px;  float:left; display:inline;}
 #questions_title{width:500px; height:30px; margin-top:15px; color:#333333; font-family:黑体; line-height:35px; font-size:15px; margin-left:30px; font:left; display:inline;}
 .answer_title{width:610px; margin-top:5px; font-family:黑体; font-size:14px; margin-left:20px; font:left; display:inline;}
-.answer{width:500px; height:20px; font-family:黑体; margin-left:30px; color:#666666; font-size:12px; font:left; display:inline;}
+.answer{width:500px; height:20px; font-family:黑体; margin-left:20px; color:#666666; font-size:12px; font:left; display:inline;}
 #questions_n{width:645px;  margin-left:1px; background:#DBF1D4;  border-left:1px solid #A5DA94; border-right:1px solid #A5DA94; font:left; display:inline;}
 #questions_top{width:651px; height:8px; background:url(../images/survey/top.jpg) no-repeat; font-size:0px; line-height:0xp; float:left; display:inline;}
 #questions__top{width:639px;  margin-left:3px; margin-right:3px; margin-top:5px; background:#FFFFFF; float:left; display:inline;}
 #questions_bottom{width:651px; height:10px; background:url(../images/survey/buttom.jpg) no-repeat; float:left; display:inline;}
-#question_menu{width:200px; height:25px;  font-size:20px; font-family:黑体; margin-left:20px; float:left; display:inline;}
-.answer_select{WIDTH:10PX; HEIGHT:10PX; FONT-SIZE:0PX; margin-left:20px; LINE-HEIGHT:0PX; float:left; display:inline;}
-.answer_letter{WIDTH:15PX; HEIGHT:15PX; MARGIN-LEFT:30PX; FLOAT:LEFT; DISPLAY:INLINE;}
+#question_menu{width:200px; margin-left:20px; font-family:黑体; font-size:20px; border:1px solid red; float:left; display:inline;}
+.answer_select{WIDTH:25PX; HEIGHT:20PX;  margin-left:20px; float:left; display:inline;}
 .answer_z{width:630px; margin-top:5px; float:left; display:inline;}
 .answer_dd{width:630px;  margin-left:3px; margin-top:5px; float:left; display:inline;}
 #answer_hr{width:600px; height:2px; margin-left:20px; margin-top:15px; border-top:1px dotted #E2E3c8; float:left; display:inline;}
