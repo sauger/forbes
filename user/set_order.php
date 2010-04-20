@@ -1,6 +1,9 @@
 <?php
     include_once('../frame.php');
-	
+	if(!is_ajax()){
+	 	die();
+	 }
+	echo "abc";
 	$uid = $_SESSION['user_id'];
 	$sql = "update fb_yh_dy set";
 	if(isset($_POST['jhtj'])){

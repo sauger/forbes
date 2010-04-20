@@ -1,6 +1,9 @@
 <?php
      include_once('../frame.php');
-	 
+	 if(!is_ajax()){
+	 	die();
+	 }
+     
 	 $user = new table_class("fb_yh");
 	 $user->find($_SESSION['user_id']);
 	 if($user->password==md5($_POST['o_p'])){

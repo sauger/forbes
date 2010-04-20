@@ -13,17 +13,15 @@
 	<?php
 		use_jquery();
 		js_include_tag('public','user/user','jquery.colorbox-min');
-		css_include_tag('html/user/user','public','colorbox');
+		css_include_tag('user/user','public','colorbox');
 	?>
 </head>
 <body>
 	<div id=ibody>
 		<?php include "../inc/top.inc.php";?>
 		<div id=top>
-			<div id=title>用户中心</div>
-			<div id=title1><a style="color:#626262;" href="">个人中心</a> > <a href="" style="color:#246BB0;">个人基本信息</a> </div>
-			<div id=line></div>
-		</div>
+			 <div id=bread><a href="/user/">用户中心</a><a>修改登录密码</a></div>
+	 	 <div id=bread_line></div>
 		<div id=left>
 			<div id=left_top>
 				用户中心导航
@@ -68,7 +66,7 @@
 				<?php $log = $db->query("select * from fb_yh_log where yh_id=$uid order by id desc limit 2");?>
 				<span class="r_t_right">亲爱的<?php echo $_SESSION['name'];?>：您上次登录的时间是 <?php if($db->record_count==2) echo $log[1]->time;else echo $log[0]->time;?></span>
 			</div>
-			<div class="right_text">
+			<div class="right_text2">
 				<div style="margin-top:40px;" class="p_list"><label for="old_pass">原密码</label><input id="old_pass" type="password"></div>
 				<div class="p_list"><label for="new_pass">新密码</label><input id="new_pass" type="password"></div>
 				<div class="p_list"><label for="rnew_pass">确认新密码</label><input id="rnew_pass" type="password"></div>

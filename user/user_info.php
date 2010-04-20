@@ -16,17 +16,14 @@
 	<?php
 		use_jquery();
 		js_include_tag('public','user/user','jquery.colorbox-min');
-		css_include_tag('html/user/user','public','html/user/register_user','colorbox');
+		css_include_tag('user/user','public','user/register_user','colorbox');
 	?>
 </head>
 <body>
 	<div id=ibody>
 		<?php include "../inc/top.inc.php";?>
-		<div id=top>
-			<div id=title>用户中心</div>
-			<div id=title1><a style="color:#626262;" href="">个人中心</a> > <a href="" style="color:#246BB0;">个人基本信息</a> </div>
-			<div id=line></div>
-		</div>
+		 <div id=bread><a href="/user/">用户中心</a><a>个人基本信息</a></div>
+	 	 <div id=bread_line></div>
 		<div id=left>
 			<div id=left_top>
 				用户中心导航

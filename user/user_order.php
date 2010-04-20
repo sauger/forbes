@@ -13,16 +13,16 @@
 	<?php
 		use_jquery();
 		js_include_tag('public','user/user','jquery.colorbox-min');
-		css_include_tag('html/user/user','public','colorbox');
+		css_include_tag('user/user','public','colorbox');
 	?>
 </head>
 <body>
 	<div id=ibody>
 		<?php include "../inc/top.inc.php";?>
 		<div id=top>
-			<div id=title>用户中心</div>
-			<div id=title1><a style="color:#626262;" href="">个人中心</a> > <a href="" style="color:#246BB0;">个人基本信息</a> </div>
-			<div id=line></div>
+			<div id=top>
+			 <div id=bread><a href="/user/">用户中心</a><a>订阅信息</a></div>
+	 	 <div id=bread_line></div>
 		</div>
 		<div id=left>
 			<div id=left_top>
@@ -67,7 +67,7 @@
 				<?php $log = $db->query("select * from fb_yh_log where yh_id=$uid order by id desc limit 2");?>
 				<span class="r_t_right">亲爱的<?php echo $_SESSION['name'];?>：您上次登录的时间是 <?php if($db->record_count==2) echo $log[1]->time;else echo $log[0]->time;?></span>
 			</div>
-			<div class="right_text">
+			<div class="right_text2">
 				<?php
 					$order = $db->query("select * from fb_yh_dy where yh_id=$uid");
 				?>
