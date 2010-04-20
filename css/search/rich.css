@@ -20,3 +20,6 @@
 #result{width:660px; line-height:20px; font-size:13px; float:left;}
 #result table{margin:0 auto; margin-top:10px;}
 #result tr{height:40px; background:url('/images/html/news/dash4.gif') repeat-x bottom;}
+
+.paginate{width:660px; margin-top:90px; line-height:20px; color:#666666; text-align:center; float:left; display:inline;}
+.paginate a{color:#246BB0; text-decoration:none;}
