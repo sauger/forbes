@@ -72,9 +72,11 @@
 		?>
 			<tr class="tr3" id="<?php echo $v->fields['id']->value;?>">
 					<?php 
+ 					  $i=0;
 						foreach ($v->fields as $val) {
 							if($val->name == 'id') continue;
 							echo "<td>{$val->value}</td>";
+							$i++;
 						}
 					?>
 					<td>
@@ -87,7 +89,7 @@
 			}
 		?>
 		<tr class="btools">
-			<td colspan=100>
+			<td colspan=<?php echo $i;?>>
 				<?php paginate();?>
 				<input type="hidden" id="id" value="<?php echo $id;?>"> 
 			</td>

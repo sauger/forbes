@@ -115,7 +115,7 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class="itable_title">
-			<td width="40%">榜单名称</td><td width="10%">榜单类型</td><td width="10%">发布位置</td><td width="10%">推荐优先级</td><td width="30%">操作</td>
+			<td width="50%">榜单名称</td><td width="10%">榜单类型</td><td width="10%">发布位置</td><td width="10%">推荐优先级</td><td width="20%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
