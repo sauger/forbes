@@ -10,12 +10,6 @@
 	if(strlen($name)>20){
 		$name = '';
 	}
-	if(strlen($year)>20){
-		$year = '';
-	}
-	if(strlen($asset)>20){
-		$asset = '';
-	}
 	if(strlen($nationality)>20){
 		$nationality = '';
 	}
@@ -108,7 +102,7 @@
 			<div id="result">
 				<table width="600" border="0" cellspacing="0" cellpadding="0">
 				<?php
-					$sql = "SELECT r1.country,r1.name,r1.birthday,group_concat(i2.name) as iname,r2.fortune,group_concat(c2.name) as cname  FROM fb_rich r1  left join fb_rich_company c1 on r1.id=c1.rich_id left join fb_company c2 on c1.company_id=c2.id left join fb_company_industry i1 on c2.id=i1.company_id left join fb_industry i2 on i1.industry_id=i2.id left join fb_rich_fortune r2 on r1.id=r2.rich_id where 1=1";
+					$sql = "SELECT r1.country,r1.name,r1.birthday,group_concat(i2.name) as iname,r2.fortune,group_concat(c2.name) as cname  FROM fb_rich r1  left join fb_rich_company c1 on r1.id=c1.rich_id left join fb_company c2 on c1.company_id=c2.id left join fb_company_industry i1 on c2.id=i1.company_id left join fb_industry i2 on i1.industry_id=i2.id left join fb_rich_fortune r2 on r1.id=r2.rich_id where (r2.fortune_year is null or r2.fortune_year=".date('Y').")";
 					if($name){$sql .= " and r1.name like '%$name%'";}
 					if($nationality){$sql .= " and r1.country = '$nationality'";}
 					if($indust){$sql .= " and i2.name like '%$indust%'";}
@@ -141,13 +135,14 @@
 					<tr>
 						<td valign="middle" width="5%"><img src="/images/search/icon.gif"></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->name;?></td>
-						<td valign="middle" width="15%"><?php if($rich[$i]->rich_fortune!='')echo $rich[$i]->rich_fortune;else echo '未知';?></td>
+						<td valign="middle" width="15%"><?php if($rich[$i]->fortune!='')echo $rich[$i]->fortune.'亿人民币';else echo '未知';?></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->country;?></td>
 						<td valign="middle" width="10%"><?php $year = intval($rich[$i]->birthday);if(empty($year))echo "未知";else echo (date('Y')-$year).'岁';?></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->cname;?></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->iname;?></td>
 					</tr><?php }?>
 				</table>
+				<div class="paginate"><?php paginate()?></div>
 			</div>
 		</div>
 		<div id="right_inc">

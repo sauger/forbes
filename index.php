@@ -103,7 +103,7 @@
 			<div id=phb>
 				<div id="rt_tab1" class="rt_tab" style="display:inline;">
 					<div id=ph>
-						<span style="margin-left:10px;">排名</span><span style="margin-left:55px;">姓名</span><span style="margin-left:50px;">财富（亿）</span><span style="margin-left:20px;">变动</span>
+						<span class="span1">排名</span><span  class="span2">姓名</span><span  class="span3">财富（亿）</span><span  class="span4">变动</span>
 					</div>
 					<div id=phname>
 						<?php 
@@ -122,32 +122,32 @@
 							}
 						?>
 						<div class=content>
-							<span style="width: 40px; color:#000000; font-weight:bold;"><?php echo $i+1;?>.</span>
-							<span style="width:100px;height:18px;overflow:hidden;"><a style="margin-left:0px;" href=""><?php echo $items[$i]->name;?></a></span>
-							<span style="width:90px;"><?php echo $items[$i]->fortune;?></span>
-							<span style="font-size:14px; font-weight:bold;margin-left:10px;" class="<?php echo $class;?>"><?php echo $word;?></span>
+							<span class="span1"><?php echo $i+1;?>.</span>
+							<span class="span2"><a style="margin-left:0px;" href=""><?php echo $items[$i]->name;?></a></span>
+							<span class="span3"><?php echo $items[$i]->fortune;?></span>
+							<span class="<?php echo $class;?> span4"><?php echo $word;?></span>
 						</div>
 						<?php }?>
 					</div>
 				</div>
 				<?php $pos_name = "index_ipo"?>
 				<div id="rt_tab2" class="rt_tab" <?php show_page_pos($pos_name)?>>
-					<div style="clear:both;width:300px;height:80px;border-bottom:1px dotted;" >
+					<div id=rt_tab2_box>
 						<div id="ipo_img">
 							<img src="<?php echo $pos_items->$pos_name->image1;?>" width=50 height=50 />
 						</div>
 						
 						<div id=ipo_title><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display; ?></a></div>
 						<div id=ipo_content><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->description;?></a></div>
-						
 					</div>
-					<img src="/upload/ipo.png" />
+					<div id=ipo_info>单位:亿元人民币</div>
+					<img id=ipo_src src="/upload/ipo.png" />
 				</div>
 				<div id="rt_tab3" class="rt_tab">
 				</div>
 				<div id="rt_tab4" class="rt_tab">
 				</div>
-				<div id=bottom style="height:77px;">
+				<div id=bottom>
 					<div id=title>实时财富动态</div>
 					<?php for($i=0;$i<2;$i++){ ?>
 						<div class=bottom_list>瑞银与高盛领跑AIG香港上市业务</div>
@@ -391,9 +391,9 @@
 		
 		<div class=forbes_l style="margin-left:25px;">
     	<div class=caption>
-				<div class="caption_base captions caption_selected" id="cls_cpt1">最受欢迎</div>
+				<div class="caption_base captions caption_selected" id="cls_cpt1">最受欢迎<span>Most Popular</span></div>
 				<div class=line>|</div>
-				<div class="caption_base" id="cls_cpt2">编辑推荐</div>
+				<div class="caption_base" id="cls_cpt2">编辑推荐<span>Reference</span></div>
 		</div>
 		<div id="div_caption1">
 			<?php for($i=0;$i<6;$i++){ $pos_name = "index_pop".$i;?>

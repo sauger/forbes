@@ -1,5 +1,5 @@
 <?php
-update_pos("投资",15,"invest_acticle",true);
+update_pos("投资",16,"invest_acticle",true);
 update_news_column("投资",3,'author','invest_column');
 update_pos("创业",15,"initiate_acticle",true);
 update_news_column("创业",3,'author','initiate_column');

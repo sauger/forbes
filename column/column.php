@@ -81,5 +81,5 @@
 <script>
 	$(function(){
 		$("#othertitle1").attr('class','dq_title');
-	})
+	});
 </script>

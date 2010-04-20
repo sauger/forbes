@@ -136,12 +136,12 @@
 			?>
 			<table cellspacing="1"  align="center" id="table_fortune">
 				<tr class="itable_title" id="fortune_box">
-					<td width=40%>个人财富</td><td width=20%>所属年份</td><td width=20%>财富排名</td><td width=20%>操作</td>
+					<td width=40%>个人财富</td><td width=35%>所属年份</td><td width=15%>财富排名</td><td width=10%>操作</td>
 				</tr>
 				<?php foreach ($fortune as $v) {?>
 				<tr class="tr3">
-					<td><input type="text" class="fortune" value="<?php echo $v->fortune;?>"></input></td>
-					<td><input type="text" class="fortune_class" value="<?php echo $v->fortune_year;?>"></input></td>
+					<td><input type="text" class="fortune" value="<?php echo $v->fortune;?>"></input>(请输入单位为亿人民币的数字)</td>
+					<td><input type="text" class="fortune_class" value="<?php echo $v->fortune_year;?>"></input>(输入4位年份)</td>
 					<td><input type="text" class="fortune_order" value="<?php echo $v->fortune_order;?>"></input></td>
 					<td>
 						<a style="cursor:pointer;" class="f_delete"><img src="/images/btn_delete.png" border="0"></a>
