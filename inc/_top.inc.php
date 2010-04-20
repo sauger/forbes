@@ -64,11 +64,11 @@
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="商业"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[5]->href; ?>"><div class="nav" param1="<?php echo $countnav[5]->id; ?>" id=picbusiness></div></a>
+				<a href="<?php echo $countnav[4]->href; ?>"><div class="nav" param1="<?php echo $countnav[4]->id; ?>" id=picbusiness></div></a>
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="创业"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[4]->href; ?>"><div class="nav" param1="<?php echo $countnav[4]->id; ?>" id=picinitiate></div></a>
+				<a href="<?php echo $countnav[5]->href; ?>"><div class="nav" param1="<?php echo $countnav[5]->id; ?>" id=picinitiate></div></a>
 			</div>
 
 			<div class=vertical></div>
