@@ -13,6 +13,7 @@
 		js_include_tag('public','right');
 		css_include_tag('column','right_inc','public');
 		init_page_items();
+		#var_dump($pos_items);
 	?>
 </head>
 <body>
@@ -36,27 +37,27 @@
 					</div>
 					<?php
 						for($i=0;$i<4;$i++){
-							
+						$pos_name1 = 'column_recommend_top_l_'.$i;	
 					?>
 					<div class=column_recommend>
-						<div class=column_recommend_top>
+						<div class=column_recommend_top <?php show_page_pos($pos_name1);?>>
 							<div class=column_recommend_top_l>
-								<div class=picture <?php show_page_pos('column_recommend_top_l_'.$i);?>>
-									<? show_page_img($pos_items,'column_recommend_top_l_'.$i); ?>
+								<div class=picture>
+									<? show_page_img($pos_items,$pos_name1); ?>
 								</div>
-								<div class=n <?php show_page_pos('column_recommend_top_n_'.$i);?>>
-									<? $posname='column_recommend_top_n_'.$i; echo $pos_items->$posname->display; ?>
+								<div class=n>
+									<? echo $pos_items->$pos_name1->reserve; ?>
 								</div>
 							</div>
 							<div class=column_recommend_top_r>
 								<div class=t1>
-									<?php echo $pos_items->$posname->display;?>专栏
+									<?php echo $pos_items->$pos_name1->alias;?>专栏
 								</div>
-								<div class=t2 <?php show_page_pos('column_recommend_top_t2_0');?>>
-									<?php show_page_href($pos_items,'column_recommend_top_t2_0'); ?>
+								<div class=t2>
+									<?php show_page_href($pos_items,$pos_name1); ?>
 								</div>
 								<div class=t3>
-									<?php show_page_desc($pos_items,'column_recommend_top_t2_0'); ?>
+									<?php show_page_desc($pos_items,$pos_name1); ?>
 								</div>
 							</div>
 						</div>
@@ -77,31 +78,33 @@
 					</div>
 					<?php
 						for($i=0;$i<3;$i++){
+							$pos_name = 'column_edit_t'.$i;
 					?>
-					<div class=column_edit_t>
+					<div class=column_edit_t <?php show_page_pos($pos_name); ?>>
 						<div class=t1>
-							<div class=t2 <?php show_page_pos('column_edit_t'.$i); ?>>
+							<div class=t2>
 								<?php show_page_href($pos_items,'column_edit_t'.$i);?>
 							</div>
 							<div class=t3 <?php show_page_pos('column_edit_author_'.$i); ?>>
-								——<?php $posname='column_edit_author_'.$i; echo $pos_items->$posname->display;?>
+								——<?php echo $pos_items->$pos_name->reserve;?>
 							</div>
 						</div>
 						<div class=t4>
-							<?php show_page_desc($pos_items,'column_edit_desc_'.$i);?>
+							<?php show_page_desc($pos_items,$pos_name);?>
 						</div>
 					</div>
 					<?php }?>
-					<div id=column_edit_recommend>
+					<div id=column_edit_recommend <?php show_page_pos($pos_name); ?>>
 						<?php
-							for($i=0;$i<8;$i++){
+							for($i=3;$i<11;$i++){
+								$pos_name = 'column_edit_t'.$i;
 						?>
 						<div class=t1>
-							<div class=t2 <? show_page_pos('column_edit_recommend_'.$i); ?>>
-								<?php show_page_href($pos_items,'column_edit_recommend_'.$i); ?>
+							<div class=t2>
+								<?php show_page_href($pos_items,$pos_name); ?>
 							</div>
-							<div class=t3 <? show_page_pos('column_edit_recommend_author_'.$i); ?>>
-								——<?php $posname='column_edit_recommend_author_'.$i; echo $pos_items->$posname->display;?>
+							<div class=t3>
+								—<?php echo $pos_items->$pos_name->reserve;?>
 							</div>
 						</div>
 						<?php }?>
@@ -129,42 +132,44 @@
 					</div>
 					<div class=column_special_top>
 						<div class=t1 <? show_page_pos('column_c_b_zk_'.$i); ?>>
-							<?php show_page_href($pos_item,'column_c_b_zk_'.$i); ?>
+							<?php show_page_href($pos_items,'column_c_b_zk_'.$i); ?>
 						</div>
 						<div class=t2>
-							<?php show_page_desc($pos_item,'column_c_b_zk_'.$i);?>
+							<?php show_page_desc($pos_items,'column_c_b_zk_'.$i);?>
 						</div>
 					</div>
 					<?php
 						for($i=0;$i<4;$i++){
+							$pos_name = 'column_r_t_l'.$i;
 					?>
 					<div class=column_recommend>
-						<div class=column_recommend_top>
+						<div class=column_recommend_top <?php show_page_pos($pos_name); ?>>
 							<div class=column_recommend_top_l>
-								<div class=picture <?php show_page_pos('column_r_t_l'.$i); ?>>
-									<?php show_page_img($pos_item,'column_r_t_l'.$i); ?>
+								<div class=picture>
+									<?php show_page_img($pos_item,$pos_name); ?>
 								</div>
-								<div class=n <?php show_page_pos('column_r_t_l_n_'.$i); ?>>
-									<?php $posname='column_r_t_l_n_'.$i; echo $pos_items->$posname->display;?>
+								<div class=n>
+									<?php echo $pos_items->$pos_name->reserve;?>
 								</div>
 							</div>
 							<div class=column_recommend_top_r>
 								<div class=t1>
-									<?php $posname='column_r_t_l_n_'.$i; echo $pos_items->$posname->display;?>专栏
+									<?php echo $pos_items->$pos_name->alias;?>专栏
 								</div>
-								<div class=t2 <?php show_page_pos('column_recommend_top_r_t2_0'); ?>>
-									<?php show_page_href($pos_item,'column_recommend_top_r_t2_0'); ?>
+								<div class=t2>
+									<?php echo show_page_href($pos_items,$pos_name); ?>
 								</div>
 								<div class=t3>
-									<?php show_page_desc($pos_item,'column_recommend_top_r_t2_0');?>
+									<?php show_page_desc($pos_items,$pos_name);?>
 								</div>
 							</div>
 						</div>
 						<?php
 							for($j=1;$j<3;$j++){
+								$pos_name = "column_recommend_top_r_t2_{$i}_{$j}";
 						?>
-						<div class=column_recommend_b <?php show_page_pos('column_recommend_top_r_t2_'.$j);?>>
-							<?php show_page_href($pos_item,'column_recommend_top_r_t2_'.$j); ?>
+						<div class=column_recommend_b <?php show_page_pos($pos_name);?>>
+							<?php show_page_href($pos_items,$pos_name); ?>
 						</div>
 						<?php }?>
 					</div>
@@ -177,31 +182,33 @@
 					</div>
 					<?php
 						for($i=0;$i<3;$i++){
+							$pos_name = "column_edit_edit_t2_{$i}";
 					?>
-					<div class=column_edit_t>
+					<div class=column_edit_t <?php show_page_pos($pos_name); ?>>
 						<div class=t1>
-							<div class=t2 <?php show_page_pos('column_edit_edit_t2_'.$i); ?>>
-								<?php show_page_href($pos_item,'column_edit_edit_t2_'.$i); ?>
+							<div class=t2 >
+								<?php show_page_href($pos_items,$pos_name); ?>
 							</div>
-							<div class=t3 <?php show_page_pos('column_edit_edit_author_'.$i); ?>>
-								——<?php $posname='column_edit_edit_author_'.$i; echo $pos_items->$posname->display;?>
+							<div class=t3>
+								—<?php echo $pos_items->$pos_name->reserve;?>
 							</div>
 						</div>
-						<div class=t4 <?php show_page_pos('column_edit_edit_desc_'.$i); ?>>
-							<?php show_page_desc($pos_item,'column_edit_edit_desc_'.$i);?>
+						<div class=t4>
+							<?php show_page_desc($pos_items,$pos_name);?>
 						</div>
 					</div>
 					<?php }?>
 					<div id=column_edit_recommend>
 						<?php
-							for($i=0;$i<8;$i++){
+							for($i=3;$i<11;$i++){
+								$pos_name = "column_edit_edit_t2_{$i}";
 						?>
 						<div class=t1>
-							<div class=t2 <?php show_page_pos('column_edit_recommend_'.$i); ?>>
-								<?php show_page_href($pos_item,'column_edit_recommend_'.$i); ?>
+							<div class=t2>
+								<?php show_page_href($pos_items,$pos_name); ?>
 							</div>
-							<div class=t3 <?php show_page_pos('column_edit_recommend_author_'.$i); ?>>
-								——<?php $posname='column_edit_recommend_author_'.$i; echo $pos_items->$posname->display;?>
+							<div class=t3>
+								—<?php echo $pos_items->$pos_name->reserve;?>
 							</div>
 						</div>
 						<?php }?>
@@ -215,7 +222,7 @@
 							for($i=0;$i<14;$i++){
 						?>
 						<div class=t2 <?php show_page_pos('column_list_'.$i) ?>>
-							<?php show_page_href($pos_item,'column_list_'.$i); ?>
+							<?php show_page_href($pos_items,'column_list_'.$i); ?>
 						</div>
 						<?php }?>
 					</div>

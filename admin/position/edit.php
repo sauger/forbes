@@ -60,7 +60,11 @@
 		<tr class=tr4>
 			<td class=td1>备用字段</td>
 			<td><input name="pos[alias]" value="<?php echo $pos->alias;?>"></input></td>
-		</tr>	
+		</tr>
+		<tr class=tr4>
+			<td class=td1>备用字段2</td>
+			<td><input name="pos[reserve]" value="<?php echo $pos->reserve;?>"></input></td>
+		</tr>		
 		<tr class=tr4>
 			<td class=td1>说明</td>
 			<td><textarea name="pos[comment]"><?php echo $pos->comment;?></textarea></td>

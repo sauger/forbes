@@ -15,10 +15,8 @@ function update_news_pos($pos){
 		$type = 'richindex_news1_';
 	}
 	$table = new table_class('fb_page_pos');
-	$db->echo_sql = true;
 	$items = $db->query("select id,title,created_at,description,author from fb_news where category_id={$category_id} order by created_at desc limit 6");
 	$exist_items = $table->find('all',array('conditions' => "name like '{$type}%' and (end_time <= now() or end_time is null)",'order' =>"name"));
-	$db->echo_sql = false;
 	$len = empty($exist_items)? 0 : count($exist_items);
 	for($i=0;$i<$len; $i++){
 		$exist_items[$i]->display = $items[$i]->title;
