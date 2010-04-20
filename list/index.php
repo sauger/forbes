@@ -8,27 +8,24 @@
 		$db = get_db();
 		use_jquery();
 		js_include_tag('public','index','right');
-		css_include_tag('charts_index','public','right_inc');
+		css_include_tag('lists','public','right_inc');
 		init_page_items();
 	?>
 </head>
 <body>
 	<div id=ibody>
 		<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=top>
-			<div id=cyindex><img src="/images/html/list/title.gif"></div>
-			<div id=cytitle><a style="color:#666666;" href="/">福布斯中文网　＞　</a><a >榜单首页</a></div>
-			<div id=cyline></div>
-		</div>
-		<div id="left">
-			<div id=t_l_t>
+		<div id=bread><a href="#">榜单</a></div>
+		<div id=bread_line></div>
+		<div id="list_left">
+			<div id=lists_headline>
 				<?php $record_show = get_news_by_pos('榜单头条','榜单首页');?>
-				<div id=t_l_t_t>
+				<div id=list_headline>
 					<div class=headline_pic id=headline_pic_0><a href="<?php echo $pos_items->listindex_hl_0->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_0->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_1 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_1->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_1->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_2 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_2->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_2->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_3 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_3->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_3->image1; ?>"></a></div>
-					<div id=t_l_t_t_r>
+					<div id=list_headline_content>
 						<div class=headline_title id=headline_title_0 <?php show_page_pos('listindex_hl_0')?>><a href="<?php echo $pos_items->listindex_hl_0->href;?>"><?php echo $pos_items->listindex_hl_0->display; ?></a></div>
 						<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos('listindex_hl_1')?>><a href="<?php echo $pos_items->listindex_hl_1->href;?>"><?php echo $pos_items->listindex_hl_1->display; ?></a></div>
 						<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos('listindex_hl_2')?>><a href="<?php echo $pos_items->listindex_hl_2->href;?>"><?php echo $pos_items->listindex_hl_2->display; ?></a></div>
@@ -88,7 +85,7 @@
 			</div>
 			<div class="dash"></div>
 			
-			<div id="left_list">
+			<div id="normal_list">
 				<div class=left_title>
 					<div class="title_name">常规榜单</div>
 					<div class=more2><a href=""><img border=0 src="/images/more.gif"></a></div>	

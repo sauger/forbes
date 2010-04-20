@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once(dirname(__FILE__).'/../frame.php');
 	$id = intval($_GET['id']);
 	$date=$_GET['date'];
 	if(empty($id)){
@@ -81,5 +81,5 @@
 <script>
 	$(function(){
 		$("#othertitle1").attr('class','dq_title');
-	})
+	});
 </script>
