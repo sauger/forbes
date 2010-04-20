@@ -8,34 +8,36 @@
 		$db = get_db();
 		use_jquery();
 		js_include_tag('public');
-		css_include_tag('list/more','public');
+		css_include_tag('lists','public');
 	?>
 </head>
 <body>
 <?php
 	$id = intval($_GET['id']);
 	$order = $_GET['order'];
-	if(strlen($order)>20){
+	if(strlen($order)>20||$id==""){
 		die();
 	}
 	$desc = intval($_GET['desc']);
+	
 	$list = new table_class('fb_custom_list_type');
 	$list->find($id);
+	if($list->table_name=="")
+	{
+		die();
+	}
 ?>
 	<div id=ibody>
 		<?php require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=top>
-			<div id=cyindex><img src="/images/html/list/title.gif"></div>
-			<div id=cytitle><a style="color:#666666;" href="/">福布斯中文网</a>　＞　<a style="color:#666666;" href="/list">榜单</a>　＞　<a href="show_list.php?id=<?php echo $id;?>"><?php echo $list->name;?></a></div>
-			<div id=cyline></div>
-		</div>
-			<div id="list_content">
+		<div id=bread><a href="#">榜单</a></div>
+		<div id=bread_line></div>
+			<div id="more_list_content">
 			<?php
 				if($list->table_name=="fb_famous_list_items"){
 			?>
-				<div id="content_top">
+				<div id="more_content_top">
 					<table border="0" cellpadding="0" cellspacing="0" >
-						<tr id="top_tr">
+						<tr id="more_top_tr">
 							<td valign="middle" style="border-left:0;" width="10%"><a href="more.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合<br>排名</a></td>
 							<td valign="middle" width="10%">姓名</td>
 							<td valign="middle" width="15%">职业</td>
@@ -62,7 +64,7 @@
 						$count = count($list);
 						for($i=0;$i<$count;$i++){
 					?>
-					<tr class="btr">
+					<tr class="more_btr">
 						<td valign="middle" width="10%" style="color:#246BB0;"><?php echo $list[$i]->overall_order;?></td>
 						<td valign="middle" width="10%">
 							<?php if($list[$i]->famous_id!=''){?>
@@ -80,9 +82,9 @@
 					<?php }?>
 				</table>
 			<?php }else if($list->table_name=="fb_rich_list_items"){?>
-				<div id="content_top">
+				<div id="more_content_top">
 					<table border="0" cellpadding="0" cellspacing="0" >
-						<tr id="top_tr">
+						<tr id="more_top_tr">
 							<td valign="middle" style="border-left:0;" width="10%"><a href="more.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合排名</a></td>
 							<td valign="middle" width="15%">姓名</td>
 							<td valign="middle" width="15%">年龄</td>
@@ -108,7 +110,7 @@
 						$count = count($list); 
 						for($i=0;$i<$count;$i++){
 					?>
-					<tr class="btr">
+					<tr class="more_btr">
 						<td valign="middle" width="10%" style="color:#246BB0;"><?php echo $list[$i]->overall_order;?></td>
 						<td valign="middle" width="15%">
 							<?php if($list[$i]->rich_id!=''){?>
@@ -125,9 +127,9 @@
 					<?php }?>
 				</table>
 			<?php }else{?>
-				<div id="content_top">
+				<div id="more_content_top">
 					<table border="0" cellpadding="0" cellspacing="0" >
-						<tr id="top_tr">
+						<tr id="more_top_tr">
 							<?php 
 								$fields = $db->query("show full fields FROM {$list->table_name}");
 								$count = $db->record_count;
@@ -165,7 +167,7 @@
 						$list_count = count($list);
 						for($i=0;$i<$list_count;$i++){
 					?>
-					<tr class="btr">
+					<tr class="more_btr">
 						<?php for($j=1;$j<$count;$j++){
 							$field_name = field_.$j;
 						?>
@@ -176,7 +178,7 @@
 				</table>
 			<?php }?>
 			</div>
-			<div id="paginate">
+			<div id="more_paginate">
 				<?php paginate();?>
 			</div>
 		<?php require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
