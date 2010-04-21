@@ -27,7 +27,7 @@
 		<div id=forbes_tlt>
   		<div id=headline>
 				<div class=headline_pic id=headline_pic_0><a href="<?php echo $pos_items->index_hl_0->href;?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->index_hl_0->image1; ?>"></a></div>
-				<?php for($i=1;$i<4;$i++){
+				<?php for($i=1;$i<3;$i++){
 					$pos_name = "index_hl_{$i}";
 				?>
 				<div class=headline_pic id="headline_pic_<?php echo $i;?>" style="display:none;"><a href="<?php echo $pos_items->$pos_name->href;?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->$pos_name->image1; ?>"></a></div>
@@ -36,16 +36,14 @@
 					<div class=headline_title id=headline_title_0 <?php show_page_pos("index_hl_0")?>><a href="<?php echo $pos_items->index_hl_0->href;?>"><?php echo $pos_items->index_hl_0->display; ?></a></div>
 					<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos("index_hl_1")?>><a href="<?php echo $pos_items->index_hl_1->href;?>"><?php echo $pos_items->index_hl_1->display; ?></a></div>
 					<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos("index_hl_2")?>><a href="<?php echo $pos_items->index_hl_2->href;?>"><?php echo $pos_items->index_hl_2->display; ?></a></div>
-					<div class=headline_title id=headline_title_3 style="display:none;" <?php show_page_pos("index_hl_3")?>><a href="<?php echo $pos_items->index_hl_3->href;?>"><?php echo $pos_items->index_hl_3->display; ?></a></div>
 					<div class=headline_description id=headline_description_0><?php echo $pos_items->index_hl_0->description; ?></div>
 					<div class=headline_description id=headline_description_1 style="display:none;"><?php echo $pos_items->index_hl_1->description; ?></div>
 					<div class=headline_description id=headline_description_2 style="display:none;"><?php echo $pos_items->index_hl_2->description; ?></div>
-					<div class=headline_description id=headline_description_3 style="display:none;"><?php echo $pos_items->index_hl_3->description; ?></div>
 					  
-			    	<?php for($j=0;$j<=3;$j++){?>
+			    <?php for($j=0;$j<3;$j++){?>
 					<div class=headline_related id=headline_related_<?php echo $j?> <?php if($j<>0){echo "style='display:none'";}?> >
 					<?php				
-							for($i=0;$i<3;$i++)
+							for($i=0;$i<2;$i++)
 							{$pos_name = "index_hl".$j."_r".$i;
 					?>
 					<div class=list <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name,false);?></div>
@@ -61,7 +59,6 @@
 						<div class=headline_btn2 id=0 style="background:url(/images/index/slideshow_active.gif) no-repeat"></div>
 						<div class=headline_btn2 id=1 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
 						<div class=headline_btn2 id=2 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
-						<div class=headline_btn2 id=3 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
 						<div class=headline_btn1 id=r style="background:url(/images/index/slideshow_next.gif) no-repeat"></div>
 					</div>
 				</div>
