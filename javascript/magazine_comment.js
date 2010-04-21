@@ -9,4 +9,11 @@ $(function(){
 				+ '		<a href="/register/">注册</a>';				
 	}
 	$('#submit_div').html(str);
+	
+	$('#submit').click(function(){
+		if($('#co').length > 2000){
+			alert('评论内容过长，请分次提交！');
+			return;
+		}
+	});
 });
