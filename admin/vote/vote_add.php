@@ -26,7 +26,7 @@
  	<table cellspacing="1" align="center">
 		<tr class=tr4>
 			<td align="center" width="15%">标题：</td>
-			<td width="85%" align="left"><input type="text" name="vote[title]"></td>
+			<td width="85%" align="left"><input type="text" class="required" name="vote[name]"></td>
 		</tr>
 		<tr class=tr4>
 			<td align="center">描述：</td>
@@ -34,7 +34,7 @@
 		</tr>
 		<tr class=tr4>
 			<td align="center">添加图片：</td>
-			<td align="left"><input type="hidden" name="MAX_FILE_SIZE" value="2097152"><input name="image" id="image" type="file"></td>
+			<td align="left"><input name="image" type="file"></td>
 		</tr>
 		<!--
 		<tr class=tr4>
@@ -86,21 +86,16 @@
 		<tr class=tr4 id="item">
 			<td align="center">投票项目：</td>
 			<td align="left" id="single">
-				<input type="text" name="vote_item1[title]" id="first_item" style="width:300px" class="required">
-				<input type="hidden" name="MAX_FILE_SIZE" value="2097152">
-				<input name="item_image1" type="file" class="item_image" style="display:none;">
+				<input type="text" name="vote_item[title][]" style="width:300px" class="required">
+				<input type="file" name="vote_item[]" class="item_image" style="display:none;">
 				<a id="add_item" value="1" style="cursor:pointer;">继续添加</a>
-				<input type="hidden" name="deleted1" value="false">
 			</td>	
 			<td align="left" style="display:none;" id="many">
-					<a  href="" class="thickbox" id="add_sub_vote">添加子投票</a>
-					<a  id="can_not_add" style="display:none; cursor:pointer;">请先填写日期并选择好控制方式</a>
+					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=400&width=560" class="thickbox" id="add_sub_vote">添加子投票</a>
 			</td>
 		</tr>
 		<tr class=btools>
 			<td colspan="10" align="center"><input id="submit" type="submit" value="发布投票"></td>
-			<input type="hidden" name="vote[created_at]"  value="<?php echo date("y-m-d")?>">
-			<input type="hidden" id="vote_item_count" name="vote_item_count" value="1">
 			<input type="hidden" name="vote[is_sub_vote]" value="0">
 		</tr>
  	</table>
