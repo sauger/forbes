@@ -50,15 +50,15 @@ content1 a:visited{color:#003A7B;}
 #lists_headline{width:670px; height:200px; margin-top:10px; padding:1px; border:1px solid #e1e9f0;}
 #list_headline{width:670px; height:200px; background:#f4f4f4;}
 .headline_pic{float:left; display:inline;}
-#list_headline_content{width:361px; height:200px; margin-top:1px; float:right;}
-.headline_title{width:351px; height:28px; margin-top:16px; line-height:28px; overflow:hidden;}
+#list_headline_content{width:351px; height:200px; margin-top:1px; line-height:28px; float:right;}
+.headline_title{width:336px; height:28px; margin-top:16px; line-height:28px; overflow:hidden;}
 .headline_title a{color:#003399; font-size:24px; font-family:微软雅黑,黑体; font-weight:bold;  text-decoration:none;}
 .headline_title a:hover{color:#94000B;}
-.headline_description{width:351px; height:66px; margin-top:10px; margin-left:2px; margin-bottom:8px; line-height:24px; font-size:14px; overflow:hidden;}
+.headline_description{width:336px; height:66px; margin-top:10px; margin-left:2px; margin-bottom:8px; text-indent:28px; line-height:22px; font-size:14px; overflow:hidden;}
 .headline_related{width:350px; height:48px;}
-#list_headline_content .cl{width:224px; height:24px; padding-left:13px; line-height:22px; background:url(/images/index/yuan.jpg) no-repeat 0 8px; overflow:hidden;}
-#list_headline_content .cl a{color:#003399; font-size:14px; text-decoration:none;}
-#list_headline_content .cl a:hover{color:#94000B;}
+.headline_related .list{width:224px; height:24px; padding-left:13px; line-height:22px; background:url(/images/public/circle1.jpg) no-repeat 0 8px; overflow:hidden;}
+.headline_related .list a{font-size:14px; color:#003399; text-decoration:none;}
+.headline_related .list a:hover{color:#94000B;}
 
 #list_headline_content #more{width:60px; height:20px; margin-top:50px; float:right;}
 #list_headline_content #more a{color:#003399;}

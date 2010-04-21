@@ -42,7 +42,7 @@
 							//		  if(count($rela_list)<1){break;}
 								$pos_name = "listindex_hl_{$j}_{$i}";
 								?>
-									<div class=cl <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+									<div class=list <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
 							<?php 	}
 							//}
 						?>				
