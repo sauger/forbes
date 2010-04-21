@@ -40,7 +40,7 @@
 			
 				<div id="questions_n">
 				
-						<div id="question_menu"><b>在线问卷</b></div>	
+						<div id="question_menu">在线问卷</div>	
 						<div id="questions__top">
 							
 							<div class="answer_title">问题1：</div>
@@ -63,12 +63,6 @@
 							</DIV>
 						</div>
 						<div id="answer_hr"></div>
-							
-							
-							
-							
-							
-							
 							<div id="submit_div"><a href="#"><div id="submit">提&nbsp;&nbsp;&nbsp;交</div></a></div>
 							
 						</div>
@@ -76,6 +70,7 @@
 				
 				
 				</div>
+				
 			<div id="questions_bottom"></div>
 			
 			

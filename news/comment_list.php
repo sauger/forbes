@@ -37,12 +37,10 @@
 <body>
 <div id=ibody>
 		<?php include "../inc/top.inc.php";?>
-		<div id=bread>
-				评论 > 
-			<span style="color:#246BB0;"><?php echo strip_tags($news->title);?></span>				
+		<div id=bread> 评论 > 
+			<span style="color:#246BB0;"><?php echo strip_tags($news->title);?></span>
 		</div>
-		<div id=bread_line></div>		
-	
+		<div id=bread_line></div>
 		<div id=l>
 				<div id=news_title><?php echo $title;?></div>
 				<input type="hidden" id=is_comment value='1'></input>
@@ -55,7 +53,6 @@
 						$news = new table_class('fb_news');
 						$news->find($id);
 					?>
-					
 				<div id=comment_caption>
 					<div id=comment_title>读者评论</div>
 					<div id=comment_count>(共<?php echo $count;?>条)</div>

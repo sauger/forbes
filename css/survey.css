@@ -21,7 +21,7 @@ a{	color: #333333;	text-decoration: none;}
 #questions_top{width:651px; height:8px; background:url(../images/survey/top.jpg) no-repeat; font-size:0px; line-height:0xp; float:left; display:inline;}
 #questions__top{width:639px;  margin-left:3px; margin-right:3px; margin-top:5px; background:#FFFFFF; float:left; display:inline;}
 #questions_bottom{width:651px; height:10px; background:url(../images/survey/buttom.jpg) no-repeat; float:left; display:inline;}
-#question_menu{width:200px; margin-left:20px; font-family:ºÚÌå; font-size:20px; border:1px solid red; float:left; display:inline;}
+#question_menu{width:200px; margin-left:20px; font-weight:bold; font-size:20px; float:left; display:inline;}
 .answer_select{WIDTH:25PX; HEIGHT:20PX;  margin-left:20px; float:left; display:inline;}
 .answer_z{width:630px; margin-top:5px; float:left; display:inline;}
 .answer_dd{width:630px;  margin-left:3px; margin-top:5px; float:left; display:inline;}

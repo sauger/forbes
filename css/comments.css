@@ -1,0 +1,51 @@
+body {font-size:12px; font-family:ËÎÌו,Arial; color:#000000; margin:0 auto; padding:0;}
+p{margin:0; padding:0;}
+ul{margin:0; padding:0;}
+li{margin:0; padding:0;}
+div{margin:0; padding:0; float:left; display:inline;}
+
+#ibody{width:1000px; margin:0 auto; float:none; display:block;}
+#bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
+#bread a{color:#666666; text-decoration:none;}
+#bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
+#hr_top{width:1000px; height:20px; background:url(../images/comments/zh_hr.jpg) no-repeat;  float:left; dislay:inline;}
+
+#c_join_a{width:630px; margin-top:12px;  float:left; display:inline;}
+
+
+#comments_top{width:630px; height:30px;  float:left; display:inline;}
+#title_pg_l{width:10px; height:30px; background:url(../images/comments/hr_pg_l.jpg) no-repeat; float:left; display:inline;}
+#title_pg_r{width:8px; height:30px; background:url(../images/comments/hr_pg_r.jpg) no-repeat; float:right; display:inline;}
+#title_pg{width:612px; height:28px; margin-top:1px; background:#C0C0C0;  font-weight:bold; font-size:14px; line-height:27px; float:left; display:inline;}
+
+#left{width:630px; float:left; display:inline;}
+
+.hr{WIDTH:630PX; height:1PX; FLOAT:LEFT; DISPLAY:INLINE;}
+
+.c_join{width:630px; margin-top:2px; float:left; display:inline;}
+
+.join_top{width:625px; height:15px; font-weight:bold; font-size:14px; float:left; display:inline;}
+.name{width:100px; height:18px; float:left; display:inline;}
+.time{width:150px; height:18px; float:left; display:inline;}
+.issues{width:150px; height:18px; float:left; display:inline;}
+.title{width:100px; height:18px; margin-left:10px; float:left; display:inline;}
+.content{width:627px; margin-top:8px; background:#EAEAEA;letter-spacing:1pt; word-spacing:2mm; line-height:20px; float:left; display:inline;}
+
+.hr_dashed{width:627px; height:15px;  background:url(../images/news/dash.gif) repeat-x; margin-top:15px;  float:left; display:inline;}
+
+.content_lable{width:600px; margin-bottom:5px; margin-right:7px; margin-left:15px;  margin-top:5px;  float:left; display:inline;}
+
+.title_people{width:100px; height:18px; float:left; display:inline;}
+
+#content_bottom{width:620PX;  MARGIN-TOP:10PX; FLOAT:LEFT; DISPLAY:INLINE;}
+
+#z{width:125px; float:left; display:inline;}
+#z_bottom{width:615px; float:left; display:inline;}
+#z_right{width:150px; margin-top:5px;  text-align:right; font-size:13px; float:right; display:inline;}
+#z_left{width:150px; text-align:left; margin-top:3px; margin-left:5px; font-size:14px; font-weight:bold; float:left; display:inline;}
+#c_text{width:620px;  float:left; display:inline;}
+#text{width:615px; height:100px;  float:left; display:inline;}
+#ta{width:620px; height:80px;	 margin-top:10px; BORDER: #666666 1px solid;}
+#submit{width:100px; height:20px; margin-left:50px; text-align:center; background:#AEAEAE;  float:left; display:inline;}
+#s_radio{width:25px; height:18px; margin-left:200px; float:left; display:inline;}
+#s_niming{width:30px; height:18px; margin-top:2px;  font-weight:bold;  float:left; display:inline;}

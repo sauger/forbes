@@ -36,7 +36,7 @@ a{	color: #333333;	text-decoration: none;}
 /*中间右边*/
 
 #right{width:754px;  margin-left:25px; float:left; display:inline;}
-#right_t{width:753px; height:15px; background:url(../images/contact/zhr_top.jpg);  margin-left:1px; float:left; display:inline;}
+#right_t{width:755px; height:15px; background:url(../images/contact/zhr_top.jpg);  margin-left:1px; float:left; display:inline;}
 #right_title{width:755px; margin-left:1px;  border-left:1px solid #EBE9EA; border-right:1px solid #EBE9EA; float:left; display:inline;}
 #right_b{width:754px; height:15px; margin-left:-1px; background:url(../images/contact/zhr_bottom.jpg); float:left; display:inline;}
 
