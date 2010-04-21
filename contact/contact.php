@@ -23,22 +23,14 @@
 	?>
 </head>
 <body>
-	<div id=ibody>
-		
-		<?php include "../inc/top.inc.php";?>
-		
-		<div id=bread>
-			
-				<span>关于我们</span>
-				
+	<div id=ibody>		
+		<?php include "../inc/top.inc.php";?>		
+		<div id=bread>			
+				<span>关于我们</span>				
 		</div>
-
-		<div id="hr_top"></div>
-		
-		<div id="middle">
-			
-			<div id="middle_left">
-				
+		<div id="hr_top"></div>		
+		<div id="middle">			
+			<div id="middle_left">				
 				<div id="middle_menu">
 						<div id="menu_t"></div>
 						<div id="menu">
@@ -97,10 +89,9 @@
 									<div class="left_text"><b><a href="contact.php?id=8">网站声明</a></b></div>
 									<div class="left_text"><b><a href="contact.php?id=9">联系我们</a></b></div>
 									<div id="left_text_b"><b><a href="contact.php?id=10">网站地图</a></b></div>
-						</div>
-						
-						<div id="menu_b"></div>
-						
+						</div>						
+						<div id="menu_b">
+						</div>						
 				</div>
 			
 		</div>
