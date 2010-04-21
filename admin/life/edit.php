@@ -50,11 +50,14 @@
 		<?php if($type<>"news"){ ?>
 		<tr class=tr4>
 			<td class=td1>选择图片</td>
-			<td><input type="hidden" name="MAX_FILE_SIZE1" value="2097152"><input name="image[src]" id="upfile" type="file">(请上传小于2M的图片，格式支持jpg、gif、png)<?php if($image->src!=''){?><a href="<?php echo $image->src;?>" target="_blank" style="color:#0000FF">点击查看图片</a><?php } ?></td>
-		</tr><tr class=tr4>
-			<td class=td1>缩略图</td>
-			<td><input type="hidden" name="MAX_FILE_SIZE2" value="2097152"><input name="image[src2]" id="upfile" type="file">(请上传小于2M的图片，格式支持jpg、gif、png)<?php if($image->src2!=''){?><a href="<?php echo $image->src2;?>" target="_blank" style="color:#0000FF">点击查看图片</a><?php } ?></td>
+			<td><input type="hidden" name="MAX_FILE_SIZE1" value="2097152"><input name="image[src]" id="upfile" type="file"><?php if($type=="top"){echo "760*540";}?><?php if($type=="middle"){echo "164*158";}?> (请上传小于2M的图片，格式支持jpg、gif、png)<?php if($image->src!=''){?><a href="<?php echo $image->src;?>" target="_blank" style="color:#0000FF">点击查看图片</a><?php } ?></td>
 		</tr>
+		<?php if($type=="top"){?>
+		<tr class=tr4>
+			<td class=td1>缩略图</td>
+			<td><input type="hidden" name="MAX_FILE_SIZE2" value="2097152"><input name="image[src2]" id="upfile" type="file"><?php if($type=="top"){echo "235*135";}?> (请上传小于2M的图片，格式支持jpg、gif、png)<?php if($image->src2!=''){?><a href="<?php echo $image->src2;?>" target="_blank" style="color:#0000FF">点击查看图片</a><?php } ?></td>
+		</tr>
+		<?php }?>
 		<?php } ?>
 		<tr class="btools">
 			<td colspan="10">
