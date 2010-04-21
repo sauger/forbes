@@ -13,7 +13,7 @@
 			<div id=common_head_r>
 				<div id=common_head_description <?php show_page_pos($pos_name);?>><?php show_page_desc($pos_items,$pos_name)?></div>
 				<div id=common_head_list>
-					<?php for($i=0; $i<4;$i++){ $pos_name = $pos_name.'_r'.$i?>
+					<?php for($i=0; $i<2;$i++){ $pos_name = $pos_name.'_r'.$i?>
 						<div class=common_head_list <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name);?></div>
 					<?php } ?>
 				</div>

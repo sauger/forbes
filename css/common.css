@@ -17,9 +17,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #common_head_title_pic{width:102px; height:102px; margin-top:10px; border:1px solid #cccccc; overflow:hidden;}
 #common_head_title_pic img{width:100px; height:100px; margin:1px;}
 #common_head_r{width:532px; height:104px; margin-top:10px; margin-left:15px;}
-#common_head_description{width:532px; height:46px; font-size:14px; line-height:23px; overflow:hidden;}
+#common_head_description{width:532px; height:69px; font-size:14px; line-height:23px; overflow:hidden;}
 #common_head_description a{color:#666666; text-decoration:none;}
-#common_head_list{width:532px; height:46px; margin-top:10px;}
+#common_head_list{width:532px; height:23px; margin-top:10px;}
 .common_head_list{width:250px; height:27px; padding-left:13px; font-size:14px; line-height:23px; background:url(/images/public/circle1.jpg) no-repeat 0 10px; overflow:hidden;}
 .common_head_list a{color:#003899; text-decoration:none;}
 
