@@ -1,4 +1,4 @@
-body {font-size:12px; font-family:ËÎÌå,Arial; color:#000000; margin:0 auto; padding:0;}
+body {font-size:12px; font-family:ï¿½ï¿½ï¿½ï¿½,Arial; color:#000000; margin:0 auto; padding:0;}
 p{margin:0; padding:0;}
 ul{margin:0; padding:0;}
 li{margin:0; padding:0;}
@@ -27,7 +27,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .join_top{width:625px; height:15px; font-weight:bold; font-size:14px; float:left; display:inline;}
 .name{width:100px; height:18px; float:left; display:inline;}
 .time{width:150px; height:18px; float:left; display:inline;}
-.issues{width:150px; height:18px; float:left; display:inline;}
+.issues{width:200px; height:18px; float:left; display:inline; overflow:hidden;}
 .title{width:100px; height:18px; margin-left:10px; float:left; display:inline;}
 .content{width:627px; margin-top:8px; background:#EAEAEA;letter-spacing:1pt; word-spacing:2mm; line-height:20px; float:left; display:inline;}
 
@@ -48,4 +48,4 @@ div{margin:0; padding:0; float:left; display:inline;}
 #ta{width:620px; height:80px;	 margin-top:10px; BORDER: #666666 1px solid;}
 #submit{width:100px; height:20px; margin-left:50px; text-align:center; background:#AEAEAE;  float:left; display:inline;}
 #s_radio{width:25px; height:18px; margin-left:200px; float:left; display:inline;}
-#s_niming{width:30px; height:18px; margin-top:2px;  font-weight:bold;  float:left; display:inline;}
+#s_niming{width:40px; height:18px; margin-top:2px;  font-weight:bold;  float:left; display:inline;}
