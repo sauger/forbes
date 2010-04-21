@@ -49,11 +49,11 @@
 					<div class=common_subject_list><?php show_page_href($pos_items,$pos_name)?></div>
 					<div class=common_subject_description><?php show_page_desc($pos_items,$pos_name)?></div>
 				</div>
+					<?php for($j=0;$j<2;$j++){ $pos_name = $pos."them".$i.$j;?>
+						<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name)?></div>
+					<?php }?>
 				<?php }?>
-				
-				<?php for($i=2;$i<8;$i++){ $pos_name = $pos."them".$i;?>
-					<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name)?></div>
-				<?php }?>
+
 				
 				<div class=caption style="height:40px; margin-top:20px;">
 					<div class=captions><?php echo $catename[0]->name; ?>专栏</div>
