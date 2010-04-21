@@ -27,7 +27,7 @@
 				</div>
 				<?php
 					$db = get_db();
-					$magazine = $db->query("select * from fb_magazine where 1=1 order by publish_data");
+					$magazine = $db->query("select * from fb_magazine where 1=1 order by publish_data desc");
 				?>
 				<div class=l_pic>
 					<a href="magazine.php?id=<?php echo  $magazine[0]->id;?>"><img border=0 src="<?php echo $magazine[0]->img_src;?>"></a>	
