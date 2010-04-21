@@ -16,7 +16,7 @@
 	<?php
 		use_jquery();
 		js_include_tag('public','user/user','jquery.colorbox-min');
-		css_include_tag('html/user/user','public','html/user/register_user','colorbox');
+		css_include_tag('user/user','public','user/register_user','colorbox');
 	?>
 </head>
 <body>
