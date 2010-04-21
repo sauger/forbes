@@ -6,18 +6,28 @@
 	if($type=='top'){
 		$sql = "select * from fb_life_flash where type='top' order by priority asc,created_at desc limit 5";
 		$img = $db->query($sql);
-		$fcontent .= '<document>';
+		$fcontent .= '
+<document>';
 		for($i=0;$i<count($img);$i++){
-			$fcontent .= '<item><image>'.$img[$i]->src;
-			$fcontent .= '</image><smallimage>'.$img[$i]->src2;
-			$fcontent .= '</smallimage><video>'.$img[$i]->url;
-			$fcontent .= '</video><captionlines>4</captionlines><headline>';
-			$fcontent .= '</headline><caption>';
-			$fcontent .= '</caption><photocaption>';
-			$fcontent .= '</photocaption></item>';
+			$fcontent .= '
+<item>
+<image>'.$img[$i]->src;
+			$fcontent .= '</image>
+<smallimage>'.$img[$i]->src2;
+			$fcontent .= '</smallimage>
+<video>'.$img[$i]->url;
+			$fcontent .= '</video>
+<captionlines>4</captionlines><headline>';
+			$fcontent .= '</headline>
+<caption>';
+			$fcontent .= '</caption>
+<photocaption>';
+			$fcontent .= '</photocaption>
+</item>';
 		}
-		$fcontent .= '</document>';
-		$filename = '../../life/flash/flash1.xml';
+		$fcontent .= '
+</document>';
+		$filename = '../../life/xml/life1.xml';
 		$handle=fopen($filename,"wt");
 		fwrite($handle,$fcontent);
 		fclose($handle);
@@ -25,31 +35,43 @@
 	elseif($type=='middle'){
 		$sql = "select * from fb_life_flash where type='middle' order by priority asc,created_at desc limit 9";
 		$img = $db->query($sql);
-		$fcontent .= '<URL>';
+		$fcontent .= '
+<URL>';
 		
 		for($i=0;$i<count($img);$i++){
-			$fcontent .= '<Image_Information><img_name>'.$img[$i]->title;
-			$fcontent .= '</img_name><img_link>'.$img[$i]->url;
-			$fcontent .= '</img_link><thumb_image>'.$img[$i]->src;
-			$fcontent .= '</thumb_image></Image_Information>';
+			$fcontent .= '
+<Image_Information>
+<img_name>'.$img[$i]->title;
+			$fcontent .= '</img_name>
+<img_link>'.$img[$i]->url;
+			$fcontent .= '</img_link>
+<thumb_image>'.$img[$i]->src;
+			$fcontent .= '</thumb_image>
+</Image_Information>';
 		}
-		$fcontent .= '</URL>';
-		$filename = '../../life/flash/flash2.xml';
+		$fcontent .= '
+</URL>';
+		$filename = '../../life/xml/life3.xml';
 		$handle=fopen($filename,"wt");
+		$fcontent=iconv("UTF-8","GB2312",$fcontent);
 		fwrite($handle,$fcontent);
 		fclose($handle);
 	}
 	elseif($type=='news'){
 		$sql = "select * from fb_life_flash where type='news' order by priority asc,created_at desc limit 8";
 		$news = $db->query($sql);
-		$fcontent .= '<list>';
+		$fcontent = '<?xml version="1.0" encoding="gbk" ?>
+<list>';
 		
 		for($i=0;$i<count($news);$i++){
-			$fcontent .= "<gg name= \"{$news[$i]->title}\" url=\"{$news[$i]->url}\" target=\"_blank\"/> ";
+			$fcontent .= "
+<gg name= \"{$news[$i]->title}\" url=\"{$news[$i]->url}\" target=\"_blank\"/> ";
 		}
-		$fcontent .= '</list> ';
-		$filename = '../../life/flash/flash3.xml';
+		$fcontent .= '
+</list> ';
+		$filename = '../../life/xml/life2.xml';
 		$handle=fopen($filename,"wt");
+		$fcontent=iconv("UTF-8","GB2312",$fcontent);
 		fwrite($handle,$fcontent);
 		fclose($handle);
 	}

@@ -110,19 +110,18 @@
 
 		<tr class=tr4>
 			<td class=td1>头条新闻关联</td>
-			<td id="td_related_sub_headline">已关联　<span id="span_sub_headline"></span>　条新闻<a href="#" id="a_sub_headline" style="color:blue">编辑</a></td>
+			<td id="td_related_sub_headline">已关联　<span id="span_sub_headline"></span>　条新闻 <a href="#" id="a_sub_headline" style="color:blue">编辑</a></td>
 		</tr>
 		
 		<tr class=tr4>
 			<td class=td1>相关新闻关联</td>
-			<td id="td_related_news">已关联　<span id="span_related_news"></span>　条新闻<a href="#" id="a_related_news" style="color:blue">编辑</a></td>
+			<td id="td_related_news">已关联　<span id="span_related_news"></span>　条新闻 <a href="#" id="a_related_news" style="color:blue">编辑</a></td>
 		</tr>
 		
 		<tr class=tr4>
 			<td class=td1>相关行业</td>
 			<td id="td_related_industry">
-				已关联　<span id="span_related_industry"></span>　个行业
-				<a href="<?php echo $news->id;?>" id="a_related_industry" style="color:blue">编辑</a>
+				已关联　<span id="span_related_industry"></span>　个行业 <a href="<?php echo $news->id;?>" id="a_related_industry" style="color:blue">编辑</a>
 				<input type="hidden" id="hidden_related_industry" name="related_industry" value="<?php echo $news_industry;?>"></input>
 			</td>
 		</tr>

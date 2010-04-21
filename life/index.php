@@ -18,20 +18,20 @@
 <div id=ibody>
 <? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 <div id=life_top>
-	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="960" height="540">
-       <param name="movie" value="/flash/scroll.swf">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1000" height="540">
+       <param name="movie" value="life1.swf">
        <param name="quality" value="high">
        <param name="wmode" value="transparent" />
-       <embed src="/flash/scroll.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="960" height="540"></embed>
+       <embed src="life1.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1000" height="540"></embed>
 	</object>
 </div>
 <div id=life_middle>
 	<div id="life_middle_flash">
 			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="525" height="140">
-            <param name="movie" value="/flash/wenzi.swf">
+            <param name="movie" value="life2.swf">
             <param name="quality" value="high">
             <param name="wmode" value="transparent" />
-            <embed src="/flash/wenzi.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="525" height="140"></embed>
+            <embed src="life2.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="525" height="140"></embed>
 			</object>
 	</div>
 	<div id=life_middle_bg></div>
@@ -50,11 +50,11 @@
 				<div class=captions>奢华<span>推荐</span></div>
 			</div>
 			<div id=life_bottom_flash>
-			  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="656" height="190">
-             <param name="movie" value="/flash/gallery.swf">
+			  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="660" height="210">
+             <param name="movie" value="life3.swf">
               <param name="quality" value="high">
               <param name="wmode" value="transparent" />
-              <embed src="/flash/gallery.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="656" height="190"></embed>
+              <embed src="life3.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="660" height="210"></embed>
 			   </object>
 			</div>
       
