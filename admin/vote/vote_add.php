@@ -11,7 +11,7 @@
 <?php 
 	css_include_tag('admin','thickbox','jquery_ui');
 	use_jquery_ui();
-	js_include_tag('admin_pub','vote','thickbox');
+	js_include_tag('admin/vote/vote','thickbox');
 	validate_form("vote_form");
 ?>
 </head>
@@ -26,17 +26,18 @@
  	<table cellspacing="1" align="center">
 		<tr class=tr4>
 			<td align="center" width="15%">标题：</td>
-			<td width="85%" align="left"><?php show_fckeditor('title','Title',true,"80");?></td>
+			<td width="85%" align="left"><input type="text" name="vote[title]"></td>
 		</tr>
-		<tr class=tr3>
-			<td>描述：</td>
+		<tr class=tr4>
+			<td align="center">描述：</td>
 			<td align="left"><textarea cols=70 name="vote[description]"></textarea></td>
 		</tr>
-		<tr class=tr3>
-			<td>添加图片：</td>
+		<tr class=tr4>
+			<td align="center">添加图片：</td>
 			<td align="left"><input type="hidden" name="MAX_FILE_SIZE" value="2097152"><input name="image" id="image" type="file"></td>
 		</tr>
-		<tr class=tr3>
+		<!--
+		<tr class=tr4>
 			<td>所属类别：</td>
 			<td align="left">
 				<select  name="vote[category_id]">
@@ -45,9 +46,9 @@
 					<?php }?>
 				</select>
 			</td>
-		</tr>
-		<tr class=tr3>
-			<td>投票类型：</td>
+		</tr>-->
+		<tr class=tr4>
+			<td align="center">投票类型：</td>
 			<td align="left">
 				<select id=select_vote_type name="vote[vote_type]">
 					<option value="word_vote">文字投票</option>
@@ -56,8 +57,8 @@
 				</select>
 			</td>
 		</tr>
-		<tr class=tr3>
-			<td>控制方式：</td>
+		<tr class=tr4>
+			<td align="center">控制方式：</td>
 			<td align="left">
 				<select id=select_limit_type name="vote[limit_type]">
 					<option value="user_id">工号登录</option>
@@ -66,26 +67,26 @@
 				</select>
 			</td>
 		</tr>
-		<tr class=tr3>
-			<td>投票次数限制：</td>
+		<tr class=tr4>
+			<td align="center">投票次数限制：</td>
 			<td align="left"><input type="text" name="vote[max_vote_count]" class="number" id="max_vote_count">如果不填则无限制</td>
 		</tr>
-		<tr class=tr3>
-			<td>投票选项限制：</td>
+		<tr class=tr4>
+			<td align="center">投票选项限制：</td>
 			<td align="left"><input type="text" name="vote[max_item_count]" class="number" id="max_item_count">如果不填则无限制</td>
 		</tr>
-		<tr class=tr3>
-			<td>开始日期：</td>
+		<tr class=tr4>
+			<td align="center">开始日期：</td>
 			<td align="left"><input type="text" class="date_jquery" name="started_at" id="start"></td>
 		</tr>
-		<tr class=tr3>
-			<td>截止日期：</td>
+		<tr class=tr4>
+			<td align="center">截止日期：</td>
 			<td align="left"><input type="text"  class="date_jquery" name="ended_at" id="end"></td>
 		</tr>
-		<tr class=tr3 id="item">
-			<td>投票项目：</td>
+		<tr class=tr4 id="item">
+			<td align="center">投票项目：</td>
 			<td align="left" id="single">
-				标题<input type="text" name="vote_item1[title]" id="first_item" style="width:300px" class="required">
+				<input type="text" name="vote_item1[title]" id="first_item" style="width:300px" class="required">
 				<input type="hidden" name="MAX_FILE_SIZE" value="2097152">
 				<input name="item_image1" type="file" class="item_image" style="display:none;">
 				<a id="add_item" value="1" style="cursor:pointer;">继续添加</a>
