@@ -13,8 +13,8 @@
 	<meta name="Description" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
 	<?php
 		use_jquery();
-		js_include_tag('public');
-		css_include_tag('public','comments','right_inc');
+		js_include_tag('public','jquery.colorbox-min','comment','right');
+		css_include_tag('public','comments','right_inc','colorbox');
 		$db = get_db();
 		$items = $db->paginate("select a.resource_type,a.title,a.magzine_number,a.nick_name,a.comment,a.created_at,b.title as news_title from fb_comment a left join fb_news b on a.resource_id = b.id where is_approve=1 order by a.id desc",30);
 		$len = count($items);

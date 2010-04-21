@@ -320,7 +320,6 @@ function require_login($type="redirect"){
 		return true;
 	}
 	if($_COOKIE['name'] && $_COOKIE['password']){
-		echo "here";
 		$name = $_COOKIE['name'];
 		$password = md5($_COOKIE['password']);
 		$db = get_db();

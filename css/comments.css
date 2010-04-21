@@ -39,7 +39,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #content_bottom{width:620PX;  MARGIN-TOP:10PX; FLOAT:LEFT; DISPLAY:INLINE;}
 
-#z{width:125px; float:left; display:inline;}
+#z{width:125px; cursor:pointer; float:left; display:inline;}
 #z_bottom{width:615px; float:left; display:inline;}
 #z_right{width:150px; margin-top:5px;  text-align:right; font-size:13px; float:right; display:inline;}
 #z_left{width:150px; text-align:left; margin-top:3px; margin-left:5px; font-size:14px; font-weight:bold; float:left; display:inline;}
