@@ -37,7 +37,7 @@
 						<?php				
 							//if($record_show[$j]->id!=''){
 							//	$rela_list = $db->query("select t1.* from fb_custom_list_type t1 join fb_list_relation t2 on t1.id=t2.rela_id where t2.list_id={$record_show[$j]->id} order by t2.priority limit 3");
-								for($i=0;$i<3;$i++)
+								for($i=0;$i<2;$i++)
 								{
 							//		  if(count($rela_list)<1){break;}
 								$pos_name = "listindex_hl_{$j}_{$i}";
