@@ -26,5 +26,5 @@ a{	color: #333333;	text-decoration: none;}
 .answer_z{width:630px; margin-top:5px; float:left; display:inline;}
 .answer_dd{width:630px;  margin-left:3px; margin-top:5px; float:left; display:inline;}
 #answer_hr{width:600px; height:2px; margin-left:20px; margin-top:15px; border-top:1px dotted #E2E3c8; float:left; display:inline;}
-#submit{width:63px; height:24px;background:url(../images/survey/right_b_b_btn.jpg); border:0px solid #ffffff; text-align:center; line-height:25px; float:left; display:inline;}
+#submit{width:63px; height:24px;background:url(../images/survey/right_b_b_btn.jpg) no-repeat; border:0px solid #ffffff; text-align:center; line-height:25px; float:left; display:inline;}
 #submit_div{width:65px; height:25px; margin-left:280px; float:left; display:inline;}
