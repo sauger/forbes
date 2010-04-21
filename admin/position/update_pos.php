@@ -41,7 +41,7 @@ function update_pos($category_name,$limit,$position_name,$is_parent=false,$flag=
 					$pos->find($record[0]->id);
 					$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 					$pos->end_time = $end_time;
-					$pos->display = $news[$i]->short_title;
+					$pos->display = $news[$i]->title;
 					$pos->title = $news[$i]->title;
 					$pos->image1 = $news[$i]->video_photo_src;
 					$pos->description = $news[$i]->description;

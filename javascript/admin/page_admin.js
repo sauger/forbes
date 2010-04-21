@@ -16,7 +16,7 @@ $(function(){
 		parent.$.fn.colorbox({
 			href: '/admin/position/edit.php?pos_name=' + $($this).parent().attr('pos_name'),
 			width:'800px',
-			height: '600px',
+			height: '630px',
 			iframe: true
 		});
 	});

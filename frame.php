@@ -305,6 +305,10 @@ function require_role($role='member'){
 	}	
 }
 
+function role_name(){
+	return $_SESSION[role_name];
+};
+
 function has_right($right_name){
 	return @in_array($right_name,$_SESSION['admin_menu_rights']) || @in_array($right_name,$_SESSION['admin_system_rights']);
 }
@@ -320,7 +324,6 @@ function require_login($type="redirect"){
 		return true;
 	}
 	if($_COOKIE['name'] && $_COOKIE['password']){
-		echo "here";
 		$name = $_COOKIE['name'];
 		$password = md5($_COOKIE['password']);
 		$db = get_db();
