@@ -33,7 +33,7 @@
 					<img src="/images/html/user/c1a.gif">
 					<img style="display:none" src="/images/html/user/c1b.gif">
 				</div>
-				<div class="left_text"><a href="user_info.php">个人基本信息</div></a>
+				<div class="left_text"><a href="user_info.php">个人基本信息</a></div>
 				<div class="icon2"><img src="/images/html/user/coin.gif"></div>
 			</div>
 			<div class="left_list2">
