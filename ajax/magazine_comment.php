@@ -36,8 +36,8 @@ include "../frame.php";
 						<span><label>您的手机</label></span><input type="text" maxlength="15" name="mo"/>
 					</div>
 					<div id="submit_div">
-						<span><label>用户名</label></span><input type="text" maxlength="50" name="n" /> 
-						<span><label>密　码</label></span><input type="text" maxlength="50" name="p" />
+						<span><label>用户名</label></span><input type="text" maxlength="50" id="n" name="n"/> 
+						<span><label>密　码</label></span><input type="text" maxlength="50" id="p" name="p" />
 						<button id="submit">提交</button>
 					</div>
 				</div>

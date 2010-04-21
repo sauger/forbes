@@ -24,6 +24,9 @@
 	if($up!=''){
 		array_push($c, "set_up=$up");
 	}
+	if(role_name() == 'column_editor'){
+		$c[] = "publisher={$_SESSION['admin_user_id']}";
+	}
 	$news = new table_class($tb_news);
 	$record = $news->paginate('all',array('conditions' => implode(' and ', $c),'order' => 'created_at desc,category_id'),30);
 ?>
