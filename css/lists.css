@@ -54,15 +54,15 @@ content1 a:visited{color:#003A7B;}
 .headline_title{width:351px; height:28px; margin-top:16px; line-height:28px; overflow:hidden;}
 .headline_title a{color:#003399; font-size:24px; font-family:微软雅黑,黑体; font-weight:bold;  text-decoration:none;}
 .headline_title a:hover{color:#94000B;}
-.headline_description{width:351px; height:45px; margin-top:10px; margin-left:2px; margin-bottom:8px; line-height:24px; font-size:14px; overflow:hidden;}
-.headline_related{width:230px; height:80px;}
+.headline_description{width:351px; height:66px; margin-top:10px; margin-left:2px; margin-bottom:8px; line-height:24px; font-size:14px; overflow:hidden;}
+.headline_related{width:350px; height:48px;}
 #list_headline_content .cl{width:224px; height:24px; padding-left:13px; line-height:22px; background:url(/images/index/yuan.jpg) no-repeat 0 8px; overflow:hidden;}
 #list_headline_content .cl a{color:#003399; font-size:14px; text-decoration:none;}
 #list_headline_content .cl a:hover{color:#94000B;}
 
 #list_headline_content #more{width:60px; height:20px; margin-top:50px; float:right;}
 #list_headline_content #more a{color:#003399;}
-#list_headline_content #btn{width:115px; height:14px; margin-top:3px; margin-right:10px; float:right;}
+#list_headline_content #btn{width:100px; height:14px; margin-top:3px; margin-right:10px; float:right;}
 #list_headline_content #btn .headline_btn1{width:14px; height:14px; margin-left:5px; cursor:pointer;}
 #list_headline_content #btn .headline_btn2{width:14px; height:14px; margin-left:5px; cursor:pointer;}
 

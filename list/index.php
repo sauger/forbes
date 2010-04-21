@@ -24,18 +24,15 @@
 					<div class=headline_pic id=headline_pic_0><a href="<?php echo $pos_items->listindex_hl_0->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_0->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_1 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_1->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_1->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_2 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_2->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_2->image1; ?>"></a></div>
-					<div class=headline_pic id=headline_pic_3 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_3->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_3->image1; ?>"></a></div>
 					<div id=list_headline_content>
 						<div class=headline_title id=headline_title_0 <?php show_page_pos('listindex_hl_0')?>><a href="<?php echo $pos_items->listindex_hl_0->href;?>"><?php echo $pos_items->listindex_hl_0->display; ?></a></div>
 						<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos('listindex_hl_1')?>><a href="<?php echo $pos_items->listindex_hl_1->href;?>"><?php echo $pos_items->listindex_hl_1->display; ?></a></div>
 						<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos('listindex_hl_2')?>><a href="<?php echo $pos_items->listindex_hl_2->href;?>"><?php echo $pos_items->listindex_hl_2->display; ?></a></div>
-						<div class=headline_title id=headline_title_3 style="display:none;" <?php show_page_pos('listindex_hl_3')?>><a href="<?php echo $pos_items->listindex_hl_3->href;?>"><?php echo $pos_items->listindex_hl_3->display; ?></a></div>
 						<div class=headline_description id=headline_description_0><?php echo $pos_items->listindex_hl_0->description; ?></div>
 						<div class=headline_description id=headline_description_1 style="display:none;"><?php echo $pos_items->listindex_hl_1->description; ?></div>
 						<div class=headline_description id=headline_description_2 style="display:none;"><?php echo $pos_items->listindex_hl_2->description; ?></div>
-						<div class=headline_description id=headline_description_3 style="display:none;"><?php echo $pos_items->listindex_hl_3->description; ?></div>
 						
-					<?php for($j=0;$j<=3;$j++){?>	
+					<?php for($j=0;$j<=2;$j++){?>	
 						<div class="headline_related" id="headline_related_<?php echo $j?>" <?php if($j<>0){echo "style='display:none'";}?> >
 						<?php				
 							//if($record_show[$j]->id!=''){
@@ -52,13 +49,11 @@
 						</div>
 					<? }?>	
 		
-						<div id=more><a href="list.php">查看更多</a></div>
 						<div id=btn>
 							<div class=headline_btn1 id=l style="background:url(/images/index/slideshow_back.gif) no-repeat;"></div>
 							<div class=headline_btn2 id=0 style="background:url(/images/index/slideshow_active.gif) no-repeat"></div>
 							<div class=headline_btn2 id=1 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
 							<div class=headline_btn2 id=2 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
-							<div class=headline_btn2 id=3 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
 							<div class=headline_btn1 id=r style="background:url(/images/index/slideshow_next.gif) no-repeat"></div>
 						</div>
 					</div>
