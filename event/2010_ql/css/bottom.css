@@ -1,0 +1,4 @@
+﻿#b_body{width:980px; font-size:12px; font-family:Verdana,宋体; float:left; display:inline}
+#line{width:960px; height:5px; margin-left:10px; background:#AF8352; float:left; display:inline}
+#about{width:960px; height:40px; margin-top:10px; margin-left:10px; color:#666666; text-align:center; line-height:20px; float:left; display:inline;}
+#about a{color:#666666;}

@@ -319,7 +319,7 @@
 			<div id=activity>
 				<div class=public_top1>
 					<div class=public_caption1>论坛活动<span>Conferences</span></div>
-					<a href="" class=public_more1></a>
+					<a href="event/list.php" target=_blank class=public_more1></a>
 				</div>
 				<div class=public_box1>
 				<?php

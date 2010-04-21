@@ -1,0 +1,52 @@
+/* CSS Document */
+*{ padding:0; margin:0; font-size:12px;color:#666; }
+img{ border:0;}
+
+#mainbody{ width:1024px; height:100%; margin:0px auto;}
+#top_bg{ height:328px; background:url(top_content_bg.jpg) no-repeat top;}
+#menu{	width:680px;height:45px;position:relative;left: 344px;top: 283px;}
+#menu ul li{ list-style:none; margin-left:7px; float:left; }
+#content{  height:100%; background:url(content_all_bg.gif) repeat-y top; }
+#content_center{ width:960px; margin-left:32px;}
+#left{ width:200px; float:left; margin-left:12px; }
+#center{ width:512px; float:left; margin:0px 8px; }
+#right{
+	width:200px;
+	position:absolute;
+	left: 887px;
+	top: 339px;
+	background-color:#f3f3f3;
+	padding:0px 10px 10px 10px;
+}
+#left,#center,#right{_display:inline}
+
+#hm_txt{ width:480px;margin-left:15px; border-top:#e7e7e7 solid 1px; float:left; padding:10px 10px 10px 0px; line-height:24px;}
+
+#left_txt{ width:154px;float:left; border:#e7e7e7 solid 4px; padding:10px; line-height:24px;}
+
+#more_link{ margin-top:25px;margin-right:20px; float:right;}
+#host{ width:184px;border:#e7e7e7 solid 1px; background-color:#FFFFFF; padding:8px; float:left;}
+#host ul li {list-style:none; line-height:24px;}
+#host ul li li { font-weight:bold;}
+
+#partner{ width:184px;border:#e7e7e7 solid 1px; background-color:#FFFFFF; padding:8px; float:left; text-align:center;}
+#partner ul li {list-style:none; line-height:40px; color:#333;}
+#hp_invite{ float:left; margin-right:24px; border:#e7e7e7 solid 1px; padding:2px;}
+#title{ float:left; line-height:32px;padding-top:12px; padding-left:15px; background:url(icon_title.gif) no-repeat 0px 24px;
+color:#111; font-size:16px; font-weight:bold;}
+#title ul li {}
+
+
+#footer{ height:80px;; background:url(footer_bg.gif) no-repeat; color:#5d9dd9; font-size:12px; font-family:Arial; line-height:24px;text-align:center; }
+
+#in_title{ float:left; width:600px; line-height:32px;padding:10px; margin-left:25px;color:#111; font:21px ºÚÌå; font-weight:bold; }
+#in_center{ width:680px; float:left; margin:0px 8px; }
+#in_txt{ width:620px;margin-left:37px; border-top:#e7e7e7 solid 1px; float:left; padding:10px; line-height:24px;}
+#in_txt_left{ width:480px;float:left; padding:10px;}
+.title_num{color:#f1f1f1; font-size:36px; font-family:Arial; }
+.split_glay { border-bottom: #666 1px solid; height: 1px
+}
+#inviter{ float:left; border:#e7e7e7 solid 4px;}
+
+
+#compose{ width:440px; border:#f1f1f1 solid 6px; float:left; padding:0px 30px; line-height:24px;}

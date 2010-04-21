@@ -1,0 +1,10 @@
+﻿#r_body{width:284px; font-family:Verdana,宋体; background:#EBEBEB; padding-bottom:10px; float:right; display:inline;}
+#r_title{width:284px; height:30px; margin-bottom:5px; background:url('../images/r_title_bg.jpg') no-repeat; float:left; display:inline;}
+#r_t{width:284px; height:210px; float:left; display:inline;}
+#r_t #content{width:270px; height:210px; border-bottom:1px dashed #C9C9C9; margin-top:10px; margin-left:7px;line-height:20px; font-size:12px; float:left; display:inline;}
+#r_t #content a{color:#565656; text-decoration:none;}
+#r_m{width:284px; height:180px; float:left; display:inline;}
+#r_m #content{width:270px; height:180px; margin-top:4px; margin-left:7px; line-height:20px; font-size:12px; float:left; display:inline;}
+#r_m #content a{color:#565656; text-decoration:none;}
+.r_b{width:260px; height:85px; margin-top:10px; margin-left:12px; background:#ffffff; float:left; display:inline;}
+.r_b .pic{width:250px; margin:5px; float:left; display:inline;}
