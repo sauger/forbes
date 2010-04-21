@@ -1,0 +1,19 @@
+﻿body {margin:0px; font-family:宋体; background:#C8C8C8; font-size:12px; color:#000000;}
+#ibody{width:1000px; margin:0 auto;}
+#top{width:100px; height:313px; float:left; display:inline;}
+#bottom{width:1000px; height:1320px; background:url('../images/about_b_bg.jpg') repeat-x; float:left; display:inline;}
+#left{width:343px; height:653px; float:left; display:inline;}
+#title{width:800px; height:34px; padding-left:200px; text-align:center; background:url('../images/title_bg.jpg') repeat-x; float:left; display:inline;}
+#title .cl{width:100px; height:25px; margin-top:1px; padding-top:8px; margin-right:20px; float:left; display:inline;}
+#title .cl a{color:#A96023; font-size:16px; font-weight:bold; text-decoration:none;}
+#right{width:657px; margin-top:1px; background:url('../images/agenda_r_bg.jpg') repeat-x; float:right; display:inline;}
+#right #c_t_l{width:160px; height:260px; text-align:center; float:left; display:inline;}
+#right #c_t_l .pic{width:145px; height:109px; margin-top:10px; border:5px solid #E4E4E4; float:left; display:inline;}
+#right #c_t_r{width:390px; height:260px; margin-top:10px; float:right; display:inline;}
+#right #r_t{width:657px; height:37px; background:url('../images/index_r_t_bg.jpg') repeat-x; float:right; display:inline;}
+#right #r_m{width:621px; margin-left:18px; float:left; display:inline;}
+#right #r_m_t{width:621px; height:10px; background:url('../images/overview_r_t_bg.gif') no-repeat; float:left; display:inline;}
+#right #r_m .content{width:500px; margin-left:30px; font-size:18px; color:#A96023; font-weight:bold; float:left; display:inline;}
+#right #r_m .context{width:564px; margin-left:28px; color:#666666; line-height:28px; float:left; display:inline;}
+#right #r_m_c{width:621px; height:71px; background:url('../images/index_r_c2_bg.jpg') no-repeat; float:left; display:inline;}
+#right #r_b{width:657px; height:37px; margin-top:55px; color:#A96023; text-align:center; line-height:18px; background:url('../images/index_r_m_b_bg.jpg') repeat-x; float:left; display:inline;}

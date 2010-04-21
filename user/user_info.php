@@ -67,7 +67,7 @@
 				<?php $log = $db->query("select * from fb_yh_log where yh_id=$uid order by id desc limit 2");?>
 				<span class="r_t_right">亲爱的<?php echo $_SESSION['name'];?>：您上次登录的时间是 <?php if($db->record_count==2) echo $log[1]->time;else echo $log[0]->time;?></span>
 			</div>
-			<div class="right_text">
+			<div class="right_text2">
 				<div id=register>
 					<div id=person>
 						完善您的个人信息，就有机会获得《福布斯》中文版杂志赠阅机会！<br/>

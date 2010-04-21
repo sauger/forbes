@@ -2,6 +2,7 @@
 div{float:left;}
 span{font-size:14px;}
 img{border:1px solid #CCCCCC;padding:2px;}
+a{color:#000000;text-decoration:none;}
 #comment_container{width:600px;margin:0 auto; float:none;}
 #comment_title{width:100%;font-size:12px;}
 #comment_left_box{width:360px;height:220px;}

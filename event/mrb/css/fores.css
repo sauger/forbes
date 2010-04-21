@@ -1,0 +1,109 @@
+body{margin:0; font-family:宋体; font-size:12px;}
+
+/*   外围一个大层的样式     */
+#ibody{width:950px; height:1170px; margin-top:10px; margin:0 auto;}
+
+
+/*   设置 超链接的 样式 */
+a{color: #FFFFFF;	text-decoration: none;}
+
+/*    顶部 top */
+#top_pg{width:950px; height:226px; background:url(../image/top.jpg); text-align:center; float:left; display:inline; }
+
+/*     hr title  */
+#hr{ width:950px; height:40px; font-family:宋体; font-size:15px; color:#FFFFFF;  background:url(../image/hr_a_pg.jpg); float:left; display:inline;}
+#hr_a{ width:150px; height:20px; line-height:18px; float:left; display:inline;}
+#hr_b{ width:150px; margin-left:15px;  height:20px; line-height:18px;  float:left; display:inline;}
+#hr_c{ width:150px; margin-left:10px;  height:20px; line-height:18px;  float:left; display:inline;}
+#hr_d{ width:150px; margin-left:15px;   height:20px; line-height:18px;  float:left; display:inline;}
+#hr_e{ width:100px; margin-left:8px;   height:20px; line-height:18px;  float:left; display:inline;}
+
+#h{ width:800px; height:20px; margin-left:110px; margin-top:10px; float:left; display:inline;}
+
+#hr_bb_hr{width:950px; height:28px; background:url(../image/hr_b.jpg); float:left; display:inline;}
+
+
+/*     中间 显示的内容   */
+#hr_bb{width:950px; height:510px; margin-top:-7px;  overflow:hidden; float:left; display:inline;}
+
+
+
+/*标题*/
+.title{width:408px; height:20px; font-size:14px; color:#333333; overflow:hidden; float:left; display:inline;}
+/*内容*/
+.content{width:408px; height:40px;  text-indent: 2em;  overflow:hidden; float:left; display:inline;}
+
+
+/*   中间内容 第一部分  左边*/
+#hra{ width:211px; height:500px;  overflow:hidden; margin-top:1px; float:left; display:inline;}
+#hra_watches{width:211px; height:231px; background:url(../image/c_pg.jpg) no-repeat; margin-top:-4px; float:left; display:inline; }
+#w_pg{width:175px; height:195px; margin-top:17px;margin-left:13px; background:url(../image/watches.jpg); float:left; display:inline;}
+#hra_super{ width:211px; height:272px; background:url(../image/super_pg.jpg) no-repeat; float:left; display:inline;}
+
+/*   中间 内容  第二部分  中间  福布斯中国名人榜简介*/
+#hrb{ width:436px; height:500px; margin-left:15px;  margin-top:11px; overflow:hidden;  float:left; display:inline;}
+#hrb_top{ width:436px; height:35px;  background:#C4C2C3; float:left; display:inline;}
+#hrb_top_img{width:58px; height:35px; float:left; display:inline;}
+#hrb_top_title{width:350px; height:35px; font-size:16px; color:#000000; font-family:黑体; margin-left:15px; line-height:35px; float:left; display:inline; }
+
+#hrb_center{width:436px; height:450px; font-size:13px; text-align:left; overflow:hidden; float:left; display:inline;}
+.hrb_center_a{width:415PX; height:60px;  margin-left:2px; margin-top:12px; font-size:14px;  font-family:宋体;  overflow:hidden;  color:#666666;  line-height:22px; float:left; display:inline;}
+/*    名人榜榜单的样式   */
+#har_super_top{width:100px ; height:20px;  margin-left:18px;  margin-top: 20px; font-size:16px; color:#000000; font-family:黑体;float:left; display:inline;}
+.har_super_conn{ width:168px; height:20px; margin-left:10px; margin-top:8px;  font-size:12px; color:#000000; font-family:宋体;  float:left; display:inline;}
+.har_id{width:20px; height:20px; font-size: 14px;  color: #000000; font-family:宋体;  float:left; display:inline;}
+.har_name{width:40px; height:20px; float:left; display:inline;}
+.har_zhiye{width:50px; height:20px;  float:left; display:inline;}
+.har_number{width:45px; height:20px; margin-left:5px;  float:left; display:inline; overflow:hidden;}
+#har_super_bottom{width:173px;  height:213px;  margin-left:13px; background-color:#E1E0E1; float:left; display:inline;}
+
+/*   中间内容  第三部分  右边*/
+#hrc{ width:286px; height:510px;  margin-top:-2px; overflow:hidden; float:right; display:inline;}
+#hrb_bottom_right_super{width:273px; height:247px; background:url(../image/people_pg.jpg) no-repeat; float:right; display:inline;}
+#hrb_num{width:75px; height:14px; margin-top:205px; margin-left:170px; float:left; display:inline;}
+.f_a{ width:13px; height:13px; text-align:center; font-size:12px; background:url(../image/yello.jpg); color:#ffffff;float:left; display:inline;}
+.f_b{ width:13px; height:13px; text-align:center; font-size:12px; background:url(../image/2-5.jpg);  color:#ffffff;  margin-left:2px;   float:left;displaY:inline;}
+.f_c{ width:13px; height:13px; text-align:center; font-size:12px; background:url(../image/2-5.jpg);  color:#ffffff; margin-left:2px; float:left; displaY:inline;}
+.f_d{ width:13px; height:13px; text-align:center; font-size:12px; background:url(../image/2-5.jpg);  color:#ffffff; margin-left:2px;  float:left;  displaY:inline;}
+.f_e{ width:13px; height:13px; text-align:center; font-size:12px; background:url(../image/2-5.jpg);  color:#ffffff;  margin-left:2px; float:left;   displaY:inline;}
+#hrb_right_md{ width:270px; height: 112px;  margin-top:15px;  background:url(../image/center_pg.jpg) no-repeat; float:right; display:inline;}
+#imga{width:245px; height:85px; margin-top:12px; margin-left:15px; float:left; display:inline;}
+#hrb_right_bottom{ width:270px; height: 112px;  margin-top:15px; margin-left:15px;  background:url(../image/center_pg.jpg) no-repeat; float:right; display:inline;}
+#imgb{width:245px; height:85px; margin-top:12px; margin-left:15px; float:left; display:inline;}
+#super_people{width:245px; height:220px; margin-top:16px; margin-left:18px;  background:url(../image/people.jpg) no-repeat; float:left; display:inline;}
+/*    底部  图片 样式   */
+#super{width:950px; height:275px; margin-top:10px; background:#F3F0F0; float:left; display:inline;}
+#super_top_b{width:950px; height:35px;  background:#C4C2C3; float:left; display:inline;}
+#super_z{width:920px; height:210px; margin-top:15px; margin-left:22px; float:left; display:inline; }
+#supera{width:210px;   height:208px; border: 1px solid #D5D2D3;  background:#ffffff; float:left; display:inline;}
+#superb{width:210px; margin-left:20px;  border: 1px solid #D5D2D3;   height:208px; background:#ffffff; float:left; display:inline;}
+#superc{width:210px; margin-left:20px; border: 1px solid #D5D2D3;  height:208px; background:#ffffff; float:left; display:inline;}
+#superd{width:210px; margin-left:20px;  border: 1px solid #D5D2D3;   height:208px; background:#ffffff; float:left; display:inline;}
+#supera_a{width:198px; height:196px; margin:6px; float:left; display:inline;}
+#supera_b{width:198px; height:196px; margin:6px; float:left; display:inline;}
+#supera_c{width:198px; height:196px; margin:6px; float:left; display:inline;}
+#supera_d{width:198px; height:196px; margin:6px; float:left; display:inline;}
+
+
+#super_photo{width:130px; height:18px; margin-left:30px; font-size:16px; color:#000000; font-family:黑体; line-height:35px; float:left; display:inline;}
+
+
+/*     低部  橘红色 横条    */
+#hr_bottom{width:950px; height:5px; margin-top:16px; background:url(../image/bottom_hr.jpg) no-repeat; float:left; display:inline;}
+
+
+#f_image_i{width:58px; height:35px; float:left; display:inline;}
+
+
+/*     底部 文字  */
+#bottom{ width:950px; height:20px; margin-top:22px; text-align:center; font-size:12px; color:#9F9F9F; font-family:宋体;  float:left; display:inline;}
+
+
+
+
+/*名人榜*/
+
+#bang{width:100px; margin-left:15px; margin-top:23px; font-size:15px; font-weight:bold; color:#312727; float:left; display:inline;}
+#bang_rong{width:175px; height:201px; margin-left:10px; margin-top:10px; background:#E1E0E1; float:left; display:inline;}
+
+.table_list{width:170px; margin-top:8px; padding-left:5px; font-family:微软雅黑; font-weight:bold; font-size:12.5px; color:#5E5E5E; text-align:left; line-height:18px; float:left;display:inline;}

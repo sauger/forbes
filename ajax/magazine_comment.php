@@ -19,12 +19,12 @@ include "../frame.php";
 				<div id="comment_title">请填写您的“读者来函“，参与的用户将有机会获得福布斯每期发出的大奖！</div>
 				<div id="comment_left_box">
 					<textarea rows="6" cols="35"></textarea>
-					<div><span>如果您能提供文章标题，请输入</span><input type="text" /></div>
-					<div><span>如果您能提供期刊号，请输入</span><input type="text" /></div>
+					<div><span>如果您能提供文章标题，请输入</span><input type="text" name="t"/></div>
+					<div><span>如果您能提供期刊号，请输入</span><input type="text" name="o" /></div>
 				</div>
 				<div id="comment_right_box">
 					<div>
-						<img src="" border="0" width="100" height="100" />
+						<img src="/images/comment_gift.jpg" border="0" width="100" height="100" />
 					</div>
 					<div class="text">本期大奖：碧欧泉男士护肤套装</div>
 					<div class="text">礼品数量：5</div>
@@ -32,8 +32,8 @@ include "../frame.php";
 				</div>
 				<div id="comment_bottom_box">
 					<div>
-						<span><label>您的email</label></span><input type="text" /> 
-						<span><label>您的手机</label></span><input type="text" />
+						<span><label>您的email</label></span><input type="text" name="em"/> 
+						<span><label>您的手机</label></span><input type="text" name="mo"/>
 					</div>
 					<div id="submit_div">
 						<span><label>用户名</label></span><input type="text" name="n" /> 

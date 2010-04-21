@@ -1,0 +1,60 @@
+﻿body {margin:0px; font-family:Verdana,宋体; font-size:12px; color:#000000; background:#C8C8C8;}
+#ibody{width:980px; margin:0 auto;}
+#background{width:980px; border:10px solid #ffffff; background:#ffffff; float:left; display:inline;}
+#top{width:980px; float:left; display:inline;}
+#left{width:662px; margin-top:10px; margin-left:10px; float:left; display:inline;}
+#left .tr{width:662px; line-height:20px; float:left; display:inline;}
+#left .td{width:330px; float:left; display:inline;}
+#left .txtinput{border:0px; border-bottom:1px solid #000000;}
+#left #sub_title{width:662px; height:20px; margin-top:10px; line-height:20px; text-align:center; font-size:16px; font-weight:bold; float:left; display:inline;}
+#left .s_title{width:650px; height:20px; margin-top:10px; margin-bottom:10px; padding-left:12px; line-height:20px; font-weight:bold; font-size:14px; background:#c0c0c0; float:left; display:inline;}
+#left .s_content{width:650px; padding-left:12px; line-height:20px; float:left; display:inline;}
+#left .l_title{width:662px; height:30px; margin-top:10px; background:url('../images/l_title_bg.jpg') no-repeat; font-weight:bold; font-size:15px; line-height:30px; color:#ffffff; float:left; display:inline;}
+#left .l_title a{font-weight:bold; font-size:15px; color:#ffffff; text-decoration:none;}
+#left .l_content{width:660px; border:1px solid #999999; float:left; display:inline;}
+#left .l_context{width:642px; margin-top:10px; margin-left:9px; padding-bottom:7px; font-size:13px; color:#666666; line-height:24px; float:left; display:inline;}
+#left .l_context a{color:#666666; font-size:13px; text-decoration:none;}
+#left #page{width:662px; height:20px; margin-top:10px; text-align:center; float:left; display:inline;}
+#left #page a{color:#0000ff; text-decoration:none;}
+#right{width:284px; height:930px; margin-top:20px; float:right; display:inline;}
+#right2{width:284px; height:750px; margin-top:20px; float:right; display:inline;}
+#right_b{width:277px; margin-top:10px; padding-top:5px; padding-bottom:5px; padding-left:5px; line-height:20px; border:1px solid #999999; float:right; display:inline;}
+#bottom{width:980px; height:60px; margin-top:10px; margin-bottom:10px; text-align:center; float:left; display:inline;}
+
+
+.l_context2{width:632px; margin-top:10px; margin-left:9px; padding-left:10px; padding-bottom:7px; font-size:13px; color:#666666; line-height:24px; float:left; display:inline;}
+.l_context2 a{color:#666666; font-size:13px; text-decoration:none;}
+.p_div{width:100px; margin-right:25px; float:left; display:inline;}
+
+.f_title{width:980px; height:35px; margin-top:20px; float:left; display:inline;}
+.f_title_l{width:58px; height:35px; margin-left:10px; background:url('../images/f_title.jpg') no-repeat; float:left; display:inline;}
+.f_title_r{width:901px; height:35px; margin-left:1px; background:#c5c3c4; float:left; display:inline;}
+.f_title_r .wz{width:800px; height:35px; margin-left:10px; line-height:35px; font-size:14px; color:#000000; font-weight:bold; float:left; display:inline;}
+.f_content{width:958px; margin-top:10px; margin-left:10px; padding-bottom:18px; border:1px solid #cccccc; float:left; display:inline;}
+.f_content .pic{width:182px; height:228px; margin-left:45px; margin-top:18px; margin-bottom:0px; border:1px solid #e6e6e6; overflow:hidden; float:left; display:inline;}
+.f_content .pic img{width:174px; height:220px; margin:4px;}
+.f_content .pictitle{width:182px; margin-top:5px; margin-left:45px; text-align:center; line-height:15px;  color:#000000; float:left; display:inline;}
+#f_content_b{width:960px; margin-left:10px; float:left; display:inline;}
+#f_content_b .pic{width:279px; height:173px; margin:20px; overflow:hidden; float:left; display:inline;}
+#f_content_b .pic img{width:279px; height:173px;}
+.f_c{width:959px; margin-top:10px; margin-left:10px; border-right:#e2e3e7; border-bottom:#e2e3e7; background:#faf9fe; float:left; display:inline;}
+.f_c .f_c_l{width:260px; height:188px; margin-top:10px; margin-left:10px; border:1px solid #cccccc; overflow:hidden; float:left; display:inline;}
+.f_c .f_c_l img{width:250px; height:178px; margin:5px;}
+.f_c .f_c_r{width:662px; height:188px; margin-top:10px; margin-right:10px; border:1px solid #cccccc; float:right; display:inline;}
+.f_c .f_c_r .content{width:640px; height:168px; margin-top:10px; margin-left:11px; line-height:21px; color:#000000; overflow:hidden; float:left; display:inline;}
+.f_c .f_c_b_t{width:959px; float:left; display:inline;}
+.f_c .f_c_b_t .pic1{width:117px; height:132px; margin:36px; margin-top:20px; margin-bottom:0px; border:1px solid #cccccc; overflow:hidden; float:left; display:inline;}
+.f_c .f_c_b_t img{width:105px; height:120px; margin:6px;}
+.f_c .f_c_b_t .pictitle1{width:119px; height:20px; margin-top:5px; margin-left:36px; margin-right:36px; text-align:center; line-height:20px; overflow:hidden; float:left; display:inline;}
+.f_c .f_c_b_b{width:934px; height:120px; margin-top:10px; margin-left:13px; border:1px solid #cccccc; float:left; display:inline;}
+.f_c .f_c_b_b textarea{width:900px; height:88px; padding:8px; color:#666666; margin-top:10px; line-height:15px; margin-left:10px; border:0px;}
+.f_c .f_c_b_t .pic2{width:117px; height:132px; margin:20px; margin-bottom:0px; border:1px solid #cccccc; overflow:hidden; float:left; display:inline;}
+.f_c .f_c_b_t .pictitle2{width:119px; height:20px; margin-top:5px; margin-left:20px; margin-right:20px; text-align:center; line-height:20px; overflow:hidden; float:left; display:inline;}
+.f_c .f_c_b_t .pic3{width:117px; height:132px; margin:9px; margin-top:20px; margin-bottom:0px; border:1px solid #cccccc; overflow:hidden; float:left; display:inline;}
+.f_c .f_c_b_t .pictitle3{width:119px; height:20px; margin-top:5px; margin-left:9px; margin-right:9px; text-align:center; line-height:20px; overflow:hidden; float:left; display:inline;}
+.f_content1{width:958px; margin-top:10px; margin-left:10px; padding-bottom:10px; border:1px solid #999999; float:left; display:inline;}
+.f_content1 .pic1{width:223p; height:171px; margin:7px; margin-top:10px; border:1px solid #cccccc; float:left; display:inline;}
+.f_content1 .pic1 img{width:211px; height:159px; margin:6px;}
+.f_content1 .pictitle1{width:225px; height:15px; margin-top:5px; margin-left:7px; margin-right:7px; text-align:center; line-height:15px;  color:#000000; overflow:hidden; float:left; display:inline;}
+.f_content1 .pic2{width:223p; height:153px; margin:7px; margin-top:10px; border:1px solid #cccccc; float:left; display:inline;}
+.f_content1 .pic2 img{width:211px; height:141px; margin:6px;}

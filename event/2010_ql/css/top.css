@@ -1,0 +1,8 @@
+﻿#t_body{width:980px; height:277px; font-family:Verdana,宋体; float:left; display:inline;}
+#logo{width:980px; height:237px; float:left; display:inline;}
+#logo #EC{width:970px; margin-top:10px; margin-right:10px; color:#ffffff; text-align:right; line-height:20px; float:right; display:inline;}
+#logo #EC a{color:#ffffff; font-size:14px; font-weight:bold; text-decoration:none;}
+#title{width:980px; height:40px; background:url('../images/top_title.jpg') no-repeat; float:left; display:inline;}
+#title .context{width:135px; height:40px; text-align:center; line-height:40px; float:left; display:inline;}
+#title .pic{margin-top:10px; float:left; display:inline;}
+#title .context a{color:#ffffff; font-size:14px; font-weight:bold; text-decoration:none;}

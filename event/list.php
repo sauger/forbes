@@ -31,8 +31,8 @@
 					for($i=0;$i<$count;$i++){
 					?>
 					<div class=list_box>
-							<div class=title><a title="<?php echo $record[$i]->title;?>" href="<?php echo $record[$i]->url;?>"><?php echo $record[$i]->title?></a></div>
-							<div class=info>举办地：<?php echo $record[$i]->place;?>　举办时间：<?php echo substr($record[$i]->time,0,10);?></div>
+							<div class=title><a title="<?php echo $record[$i]->title;?>" href="<?php echo $record[$i]->url;?>" target="_blank"><?php echo $record[$i]->title?></a></div>
+							<div class=info>举办地：<?php echo $record[$i]->place;?>　举办时间：<?php echo $record[$i]->time;?></div>
 					</div>
 					<?php }?>
 					<div id=page><?php paginate();?></div>

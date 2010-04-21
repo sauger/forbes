@@ -36,9 +36,9 @@ a{	color: #333333;	text-decoration: none;}
 /*中间右边*/
 
 #right{width:754px;  margin-left:25px; float:left; display:inline;}
-#right_t{width:755px; height:15px; background:url(../images/contact/zhr_top.jpg);  margin-left:1px; float:left; display:inline;}
-#right_title{width:755px; margin-left:1px;  border-left:1px solid #EBE9EA; border-right:1px solid #EBE9EA; float:left; display:inline;}
-#right_b{width:754px; height:15px; margin-left:-1px; background:url(../images/contact/zhr_bottom.jpg); float:left; display:inline;}
+#right_t{width:759px; height:15px; background:url(../images/contact/zhr_top.jpg); float:left; display:inline;}
+#right_title{width:754px; margin-left:1px;  border-left:1px solid #EBE9EA; border-right:1px solid #EBE9EA; float:left; display:inline;}
+#right_b{width:759px; height:15px; margin-left:-1px; background:url(../images/contact/zhr_bottom.jpg) NO-REPEAT; float:left; display:inline;}
 
 /*中间右边内容*/
 #title{width:600px; height:40px;  margin-left:10px; font-size:32px; font-family:黑体; color:#246BB0; float:left; display:inline;}

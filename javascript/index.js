@@ -33,7 +33,7 @@ function head_line2()
 	  }
 		var now_id=headline_id;	
 		now_id=parseInt(headline_id)+1;
-    if(now_id>3){now_id=0;}
+    if(now_id>2){now_id=0;}
 
 		$(".headline_btn2").css('background','url(/images/index/slideshow_unactive.gif) no-repeat');
 		$("#"+now_id).css('background','url(/images/index/slideshow_active.gif) no-repeat');
@@ -73,8 +73,8 @@ $(function(){
 			var now_id=$(this).attr('id');	
 			if(now_id=="l"){now_id=parseInt(headline_id)-1;}
 			else{now_id=parseInt(headline_id)+1;}
- 	    if(now_id>3){now_id=0;}
- 	    if(now_id<0){now_id=3;}
+ 	    if(now_id>2){now_id=0;}
+ 	    if(now_id<0){now_id=2;}
 
 			head_line(now_id);
 		});	

@@ -63,7 +63,7 @@
 							</DIV>
 						</div>
 						<div id="answer_hr"></div>
-							<div id="submit_div"><a href="#"><div id="submit">提&nbsp;&nbsp;&nbsp;交</div></a></div>
+							<div id="submit_div"><input type="buttom" value="提&nbsp;交" id="submit"></div>
 							
 						</div>
 						

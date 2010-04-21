@@ -6,7 +6,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 
-#life_top{width:1000px; height:594px; margin-top:17px; background:#efefef;}
+#life_top{width:1000px; height:540px; margin-top:17px; }
 
 #life_middle{width:1000px; height:141px; margin-top:30px;}
 #life_middle_flash{width:525px; height:140px;float:left;}
@@ -29,7 +29,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .life_caption .line{width:1px; height:10px; margin-top:10px; margin-left:10px; font-size:10px; line-height:10px;}
 .life_caption .more{width:38px; height:8px; margin-top:11px; margin-left:15px; background:url(/images/public/more.jpg) no-repeat; float:left;}
 
-#life_bottom_flash{width:720px; height:175px; margin-top:10px; background:#efefef;}
+#life_bottom_flash{width:720px; height:175px; text-align:center; margin-top:10px; }
 
 .life_box{width:240px; height:256px; margin-top:25px; overflow:hidden;}
 .life_box #picture{width:210px; height:160px; margin-top:10px;}

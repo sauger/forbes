@@ -5,9 +5,10 @@
 	$db = get_db();
 	$sql = "select * from fb_event";
 	if($search!=''){
-		$sql .= " where title like '%".$search."%'";
+		$sql .= " where title like '%".$search."%' ";
 	}
-	$record = $db->paginate($sql,15);
+	$sql .=" order by id desc";
+	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
 
