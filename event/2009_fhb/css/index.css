@@ -1,0 +1,34 @@
+body {margin:0px; font-family:arail; color:#757d8a; background:#fef4da;}
+
+#ibody{width:905px; background:#ffffff; margin:0 auto; }
+#header{width:904px; height:316px; background:url(../images/top.jpg) no-repeat; float:left; display:inline;}
+#header #menu{width:904px;  margin-top:290px; text-align:center; float:left; display:inline;}
+#header #menu li{margin-left:15px; float:left; display:inline;}
+#header #menu li a{font-size:16px; font-weight:bold; color:#ffffff; text-decoration:none;}
+
+
+#left{width:227px; margin-left:6px; margin-top:6px; float:left; display:inline;}
+#left #l_t{width:225px; border:1px #cccccc solid; float:left; display:inline;}
+#left #l_b{width:225px; margin-top:10px; border:1px #edd586 solid; float:left; display:inline;}
+#left #l_b p{margin-top:0px; margin-left:20px; margin-bottom:12px; padding:0px; color:#000000; font-size:14px; line-height:20px;}
+
+#center{width:443px; margin-top:6px; margin-left:8px; float:left; display:inline;}
+#c_content1{width:443px; font-size:14px;  float:left; display:inline; }
+#c_content1 p{ margin:0px; margin-top:3px; padding-left:5px; padding-right:5px; text-indent:28px; color:#a56619; line-height:22px; }
+#right{width:160px;  margin-top:6px; margin-left:5px; float:left; display:inline;}
+.right_box {width:206px; border:1px solid #edd586;}
+.mid1 {width:430px; height: 24px;  background:url(../images/index_04.gif) no-repeat; padding:5px; color:#8c6c4c; font-size: 14px; FONT-WEIGHT: bold; PADDING-TOP: 5px; float:left;}
+#bottom{width:905px; margin-top:10px; float:left; display:inline;}
+
+.title{line-height:20px; background:#edd586; color:#8c6c4c; font-size:14px; font-weight:bold; margin-left:0px;padding-top:5px;text-align:left; padding-left:5px;}
+.c_ul{text-align:left; font-size:14px;}
+.c_ul li{margin-top:5px; margin-left:0px; line-height:20px;}
+
+#down_div a{margin-top:20px;color:#A56619}
+#down_div A:link {TEXT-DECORATION: none}
+#down_div A:visited {	TEXT-DECORATION: none}
+#down_div A:hover {	COLOR: red; CURSOR: hand; TEXT-DECORATION: none}
+#down_div A:active {	TEXT-DECORATION: none}
+#link span {line-height:20px;}
+
+#page a{color:#ff6600}
