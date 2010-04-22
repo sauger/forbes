@@ -9,14 +9,7 @@ li{font-size:12px; line-height:24px; list-style-position:outside; background:url
 
 li a:link{color:#003A7B; text-decoration:none;}
 li a:visited{color:#003A7B; text-decoration:none;}
-#content1 li a:link{color:#003A7B; }
-#content1 li a:visited{color:#003A7B; }
-content1 a:link{color:#003A7B;}
-content1 a:visited{color:#003A7B;}
-#more3 a:link{color:#003899;}
-#more3 a:visited{color:#003899;}
-#title1 a:link{text-decoration:none;}
-#title1 a:visited{text-decoration:none;}
+
 
 
 #bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
@@ -37,12 +30,12 @@ content1 a:visited{color:#003A7B;}
 
 #normal_list{width:679px; margin-top:25px;}
 .list_list{width:300px; height:600px;}
-.list_box{width:300px; height:140px; margin-top:20px;}
+.list_box{width:300px; height:120px; margin-top:20px;}
 .list_title{width:300px; height:20px; font-size:14px; color:#003A7B; font-weight:bold; line-height:20px;}
 .list_title .title{width:40px; height:20px;}
 .list_title .title_line{width:240px; height:8px; margin-left:5px; margin-top:7px; line-height:0; font-size:0; background:#E5E5E5;}
-.list_li_box{width:300px; height:100px; margin-top:10px; line-height:20px;}
-.list_li_box li{width:290px; height:20px; margin-top:6px; overflow:hidden; font-size:14px; padding-left:10px; background:url(/images/html/list/tar.gif) no-repeat 0 10px;}
+.list_li_box{width:300px; height:100px; margin-top:5px; line-height:20px;}
+.list_li_box li{width:285px; height:25px; margin-left:5px; padding-left:10px;  font-size:14px; line-height:25px; background:url(/images/html/list/tar.gif) no-repeat 0 10px; overflow:hidden;}
 
 #line2{width:1px; height:670px; margin-left:20px; margin-right:40px; margin-top:5px; background:url(/images/html/news/dash5.gif) repeat-y;}
 #more{width:42px; height:16px; font-size:12px; margin-top:7px; line-height:16px; margin-right:16px; float:right; }
