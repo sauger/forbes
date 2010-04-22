@@ -1,5 +1,5 @@
 ﻿<?php 
-	require_once('../frame.php');
+	include_once(dirname(__FILE__).'/../frame.php');
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
 	<?php
 		use_jquery_ui();
 		js_include_tag('public','picture_list/index','right');
-		css_include_tag('jquery-ui','imagesphb','public','right_inc');
+		css_include_tag('lists','jquery-ui','public','right_inc');
 		$db = get_db();
 		$id = intval($_GET['id']);
 		if(empty($id)){
@@ -36,17 +36,16 @@
 </head>
 <body>
 	<div id=ibody>
-	<? require_once('../inc/top.inc.php');?>
-		<div id=cyindex></div>
-		<div id=cytitle><a style="color:#666666;" href="/">福布斯中文网　＞　</a><a href="/list/list.php?id=9">图片排行榜</a>　＞　<span><?php echo $list->name;?></span></div>
-		<div id=cyline></div>
+	<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+		<div id=bread><a href="#">榜单</a></div>
+		<div id=bread_line></div>
 		<div id=phb_left>
 			<div id=p_flash>
 				<div id="control_panel">
 					<div id="btns">
-						<img id="btn_prev" src="/images/imagephb/prev.jpg" title="上一张" />
-						<img id="btn_play" src="/images/imagephb/pause.jpg" title="暂停" />
-						<img id="btn_next" src="/images/imagephb/next.jpg" title="下一张" />
+						<img id="btn_prev" src="/images/list/prev.jpg" title="上一张" />
+						<img id="btn_play" src="/images/list/pause.jpg" title="暂停" />
+						<img id="btn_next" src="/images/list/next.jpg" title="下一张" />
 					</div>
 					<div id="slider"></div>
 					<span id="speed">播放速度</span>
@@ -59,14 +58,10 @@
 					<img width="108" height="108" src="<?php echo $items[1]->image;?>" />
 					<img width="108" height="108" src="<?php echo $items[2]->image;?>" />
 				</div>
-				
-				<!-- 
-				<img src="/images/imagephb/image_flash.jpg">
-				 -->
 				 	
 			</div>
 			<div id=email>
-					<div id=pic><a href=""><img border=0 src="/images/imagephb/email.jpg"></a></div>
+					<div id=pic><a href=""><img border=0 src="/images/list/email.jpg"></a></div>
 					<div id=wz><a href="">分享给好友</a></div>
 			</div>
 			<div id=p_r_t>
@@ -91,7 +86,7 @@
 		 		<?php include "../right/four.php";?>
 		 		<?php include "../right/magazine.php";?>
 		</div>
-	<? require_once('../inc/bottom.inc.php');?>
+	<? require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>
