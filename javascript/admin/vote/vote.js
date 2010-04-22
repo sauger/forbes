@@ -47,6 +47,11 @@ $(function() {
 					del_vote($(this).attr('name'));
 					$(this).parent().parent().remove();
 				});
+				$(".del_old_vote").each(function(){
+					del_vote($(this).attr('name'));
+					del_item($(this).prev().prev().val());
+					$(this).parent().parent().remove();
+				});
 				$("#first_item").attr('class','required');
 				$("#single").show();
 				$("#many").hide();
@@ -63,6 +68,10 @@ $(function() {
 				}
 			}else{ //如果投票类型是复合投票，则首先将添加过的投票选择都删除，然后将添加子投票的链接显示出来
 				$(".s_item").remove();
+				$(".del_old_item").each(function(){
+					del_item($(this).attr('name'));
+					$(this).parent().parent().remove();
+				});
 				$(".item_image").attr('class','item_image');
 				$("#first_item").attr('class','');
 				$("#single").hide();
