@@ -33,7 +33,9 @@ while true do
 		rescue
 			fail_count = fail_count + 1
 			break if fail_count > 10
-			puts 'erro'
+			puts url if fail_count == 1
+			puts 'erro' + fail_count
+			
 		end
 	end
 	j=0
