@@ -9,7 +9,7 @@ dbuser = 'forbes_db'
 dbpassword = 'xunao'
 dbname = 'forbes'
 my = Mysql.connect(dbhost, dbuser, dbpassword ,dbname)
-file = File.new('./update_stock',"w+")
+file = File.new(File.dirname(__FILE__) +'/update_stock',"w+")
 interval = 200
 i = 0
 while true do 
