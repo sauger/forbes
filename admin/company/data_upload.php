@@ -1,4 +1,8 @@
-<?php require_once('../../frame.php');?>
+<?php 
+	session_start();
+	require_once('../../frame.php');
+	judge_role();
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -80,8 +84,8 @@
 					<input  type="text"  class="number" name="stock_place_code" value="9">(支持：上海 深圳 香港 新加坡 韩国 法国 英国 德国 日本 美国)
 				</td>
 			</tr>
-			<tr class=tr3>
-				<td colspan="2" width="795" align="center"><input id="submit" type="submit" value="提交">	</td>
+			<tr class=btools>
+				<td colspan="2" align="center"><input id="submit" type="submit" value="提交">	</td>
 			</tr>
 		</table>
 	</form>

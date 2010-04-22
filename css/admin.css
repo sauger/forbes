@@ -64,6 +64,7 @@ table{width:1026px; border:none; text-align:center; background:#e7e7e7;}
 
 .tr3{height:28px; text-align:center; font-size:12px; line-height:15px; background:#ffffff;}
 .tr3 td{text-align:center;}
+.tr3 span{cursor:pointer;}
 
 .tr4{height:28px; text-align:left; font-size:12px; line-height:20px; background:#ffffff;}
 .tr4 .td1{text-align:left; text-indent:24px;}

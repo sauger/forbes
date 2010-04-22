@@ -1,6 +1,7 @@
 <?php
-	require_once('../../frame.php');
-	$db = get_db();
+	session_start();
+	include_once('../../frame.php');
+	judge_role();
 	$title = $_REQUEST['title'];
 	$type=$_REQUEST['type'];
 	$is_adopt = $_REQUEST['adopt'];

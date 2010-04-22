@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once('../../frame.php');
 	judge_role();
 	
@@ -61,13 +62,13 @@
 			<td><?php echo $images[$i]->created_at;?></td>
 			<td>
 				<?php if($images[$i]->is_adopt=="1"){?>
-					<span style="color:#FF0000;cursor:pointer" class="revocation" name="<?php echo $images[$i]->id;?>">撤消</span>
+					<span class="revocation" name="<?php echo $images[$i]->id;?>" title="撤消"><img src="/images/btn_unapply.png" border=0></span>
 				<?php }?>
 				<?php if($images[$i]->is_adopt=="0"){?>
-					<span style="color:#0000FF;cursor:pointer" class="publish" name="<?php echo $images[$i]->id;?>">发布</span>
+					<span class="publish" name="<?php echo $images[$i]->id;?>" title="发布"><img src="/images/btn_apply.png" border=0></span>
 				<?php }?>
-				<a href="image_edit.php?id=<?php echo $images[$i]->id;?>" style="color:#000000; text-decoration:none">编辑</a> 
-				<span style="cursor:pointer; color:#FF0000" class="del" name="<?php echo $images[$i]->id;?>">删除</span>
+				<a href="image_edit.php?id=<?php echo $images[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border=0></a> 
+				<span class="del" name="<?php echo $images[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border=0></span>
 				<input type="hidden" class="priority" name="<?php echo $images[$i]->id;?>" value="<?php if($images[$i]->priority!=100){echo $images[$i]->priority;}?>" style="width:40px;">
 				<input type="hidden" id="priorityh<? echo $p;?>" value="<?php echo $images[$i]->id;?>" style="width:40px;">	
 			</td>

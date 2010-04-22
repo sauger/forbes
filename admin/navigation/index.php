@@ -1,5 +1,6 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+	include_once('../../frame.php');
 	judge_role();
 	$menu_title="添加主导航"; 
 	$menu_table=$tb_menu;
