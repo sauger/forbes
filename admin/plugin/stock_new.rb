@@ -10,12 +10,12 @@ dbpassword = 'xunao'
 dbname = 'forbes'
 my = Mysql.connect(dbhost, dbuser, dbpassword ,dbname)
 file = File.new('./update_stock',"w+")
-interval = 199
+interval = 200
 i = 0
 while true do 
 	start = i*interval
 	puts "handle #{i}"
-	sql = "select id, stock_code,stock_place_code from fb_company limit #{start},200"
+	sql = "select id, stock_code,stock_place_code from fb_company where date(stock_update_time) != date(now()) or stock_update_time is null order by stock_place_code desc limit #{start},#{interval}"
 	items = my.query(sql)
 	codes = []
 	ids = []
@@ -27,7 +27,7 @@ while true do
 	end
 
 	code = codes.join(',')
-	url = "http://download.finance.yahoo.com/d/quotes.csv?s=#{code}&f=sl1d1t1c1ohgv&e=.csv"
+	url = "http://download.finance.yahoo.com/d/quotes.csv?s=#{code}&f=sl1&e=.csv"
 	url_str = url
 	url = URI.parse(url);
 	fail_count = 0
@@ -38,6 +38,7 @@ while true do
 			break
 		rescue
 			fail_count = fail_count + 1
+			sleep(fail_count + 1)
 			puts url if fail_count == 1
 			puts 'erro' + fail_count.to_s
 			if fail_count > 10
@@ -56,24 +57,23 @@ while true do
 				value = line.split(',')[1]
 				if value.nil?
 				else
-					sql = "update fb_company set stock_value=#{value} where id=#{ids[j]};"
+					sql = "update fb_company set stock_value=#{value},stock_update_time = now() where id=#{ids[j]};"
 					file.puts sql
 				end
 			end
 			j = j+1
 		end
 	else #获得股价失败
-		str = url_str + "||" + ids.join(',')
-		#retry_file.puts str
+
 	end
 	i = i+1
 		if items.num_rows < interval
 		break
 	end 
 	items.free
+	sleep(2)
 end
 file.close
-#retry_file.close
 puts 'start to update'
 system "mysql -h#{dbhost} -u#{dbuser} -p#{dbpassword} #{dbname} < update_stock"
 puts 'update finish'

@@ -53,7 +53,7 @@
 <div id=itable>
 	<table cellspacing="1">	
 		<tr class="itable_title">
-			<td width="5%"><a href="#" id="a_select_all" style="color:blue;">选择</a></td><td width="25%">名称</td><td width="10%">国家</td><td width="10%">股票代码</td><td width="10%">交易所</td><td width="10%">股价</td><td width="15%">货币种类</td><td width="15%">操作</td>
+			<td width="5%"><a href="#" id="a_select_all" style="color:blue;">选择</a></td><td width="20%">名称</td><td width="7%">国家</td><td width="8%">股票代码</td><td width="8%">交易所</td><td width="7%">股价</td><td width="20%">更新时间</td><td width="10%">货币种类</td><td width="15%">操作</td>
 		</tr>
 		<?php
 			$len = count($record);
@@ -105,6 +105,9 @@
 					</td>
 					<td>
 						<?php echo $record[$i]->stock_value;?>
+					</td>
+					<td>
+						<?php echo $record[$i]->stock_update_time;?>
 					</td>
 					<td>
 						<?php
