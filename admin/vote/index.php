@@ -32,9 +32,8 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="20%">投票名称</td><td width="80">登录限制</td><td width="80">票数限制</td><td width="80">投票类型</td><td width="80">发布时间</td><td width="80">到期时间</td><td width="80">所属类别</td><td width="120">操作</td>
+			<td width="20%">投票名称</td><td width="10%">登录限制</td><td width="10%">票数限制</td><td width="10%">投票类型</td><td width="10%">发布时间</td><td width="10%">到期时间</td><td width="20%">操作</td>
 		</tr>
-	<table width="795" border="0" id="list">
 		<?php
 			$vote = new table_class("fb_vote");
 			if($key!=''){
@@ -77,6 +76,7 @@
 				<tr class=tr3 id=<?php echo $record[$i]->id;?> >
 					<td><?php echo $record[$i]->name;?></td>
 					<td><?php echo $limit_name;?></td>
+					<td><?php echo $record[$i]->max_vote_count;?></td>
 					<td><?php echo $vote_name;?></td>
 					<td><?php echo substr($record[$i]->created_at, 0, 10);?></td>
 					<td><?php echo substr($record[$i]->ended_at, 0, 10);?></td>

@@ -8,7 +8,7 @@ include "../frame.php";
 	<meta http-equiv=Content-Language content=zh-CN>
 	<?php 
 		use_jquery();
-		js_include_tag('jquery.cookie', 'magazine_comment');	
+		js_include_tag('jquery.cookie','pubfun', 'magazine_comment');	
 		css_include_tag("magazine_comment");
 	?>
 	<title>福布斯中文网</title>
@@ -32,12 +32,12 @@ include "../frame.php";
 				</div>
 				<div id="comment_bottom_box">
 					<div>
-						<span><label>您的email</label></span><input type="text" maxlength="50" name="em"/> 
+						<span><label>您的email</label></span><input type="text" id="em" maxlength="50" name="em"/> 
 						<span><label>您的手机</label></span><input type="text" maxlength="15" name="mo"/>
 					</div>
 					<div id="submit_div">
-						<span><label>用户名</label></span><input type="text" maxlength="50" name="n" /> 
-						<span><label>密　码</label></span><input type="text" maxlength="50" name="p" />
+						<span><label>用户名</label></span><input type="text" maxlength="50" id="n" name="n"/> 
+						<span><label>密　码</label></span><input type="password" maxlength="50" id="p" name="p" />
 						<button id="submit">提交</button>
 					</div>
 				</div>

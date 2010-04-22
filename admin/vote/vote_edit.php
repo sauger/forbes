@@ -129,7 +129,6 @@
 				<td align="left">
 					<input type="text" name="vote_item1[title]" id="first_item" value="<?php echo $vote_item_record[0]->title?>" style="width:100px" class="required">
 					<?php if(null!=$vote_item_record[0]->photo_url){?><img src="<?php echo $vote_item_record[0]->photo_url;?>" class="show_image" width="50" height="50" border="0"><?php }?>
-					<input type="hidden" name="MAX_FILE_SIZE" value="2097152">
 					<input name="item_image1"  class="item_image"  type="file">
 					<a  id="add_item" value="1" style="cursor:pointer;">继续添加</a>
 					<input type="hidden" name="deleted1" value="false"> 
@@ -166,7 +165,7 @@
 			<tr class=tr3 id="item">
 				<td>投票项目：</td>
 				<td align="left" id="many">
-					<a  href="" class="thickbox" id="add_sub_vote">添加子投票</a>
+					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=400&width=540" class="thickbox" id="add_sub_vote">添加子投票</a>
 					<a  id="can_not_add" style="display:none; cursor:pointer;">请先填写日期并选择好控制方式</a>
 				</td>
 			</tr>

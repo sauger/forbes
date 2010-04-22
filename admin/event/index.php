@@ -1,5 +1,7 @@
 <?php
+	session_start();
 	require_once('../../frame.php');
+	judge_role();
 	
 	$search = $_REQUEST['search'];
 	$db = get_db();
@@ -49,8 +51,8 @@
 					<td><?php echo $record[$i]->time;?></td>
 					<td><?php echo $record[$i]->url;?></td>
 					<td>
-						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer" title="编辑"><img src="/images/btn_edit.png" border=0></a>
-						<span style="cursor:pointer;" class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border=0></span>
+						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border=0></a>
+						<span class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border=0></span>
 					</td>
 				</tr>
 		<?php

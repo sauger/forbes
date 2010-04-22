@@ -36,22 +36,22 @@ div{margin:0; padding:0; float:left; display:inline;}
 .common_article_description1{width:306px; height:40px; margin-top:5px; margin-left:10px; margin-bottom:10px; line-height:20px; font-size:14px; overflow:hidden;}
 .common_article_description1 a{color:#666666; text-decoration:none;}
 
-.common_article_lis2{width:290px; height:22px; margin-top:5px; margin-left:10px; padding-left:13px; line-height:22px; font-size:14px; background:url(/images/public/circle1.jpg) no-repeat 0 10px; overflow:hidden;}
+.common_article_lis2{width:290px; height:25px; margin-left:10px; padding-left:13px; line-height:22px; font-size:14px; background:url(/images/public/circle1.jpg) no-repeat 0 10px; overflow:hidden;}
 .common_article_lis2 a{color:#003899; text-decoration:none;}
 
 #common_dash{width:1px; height:808px; margin-top:40px; margin-left:10px; background:url(/images/tz/l_dash.jpg) no-repeat; overflow:hidden;}
 
-.common_subject{width:315px; height:120px; margin-top:10px; margin-bottom:10px;}
+.common_subject{width:315px; height:100px; margin-top:10px; }
 .common_subject_pic{width:92px; height:92px;  border:1px solid #cccccc;}
 .common_subject_pic img{width:90px; height:90px; margin:1px;}
-.common_subject_list{width:206px; height:50px; font-family:黑体; line-height:25px; font-size:20px; overflow:hidden; float:right;}
+.common_subject_list{width:206px; height:25px; font-family:黑体; line-height:25px; font-size:20px; overflow:hidden; float:right;}
 .common_subject_list a{color:#003899; text-decoration:none;}
 .common_subject_description{width:206px; height:60px; margin-top:5px; line-height:20px; font-size:14px; overflow:hidden; float:right;}
 .common_subject_description a{color:#666666; text-decoration:none;}
 
 .column_container img{width:90px; height:90px; padding:1px; border:1px solid #cccccc; float:left;}
 .column_container .article{width:195px; height:130px; margin-left:10px;}
-.common_list3{width:195px; font-size:15px; font-weight:bold; line-height:22px;}
+.common_list3{width:195px; height:44px; font-size:15px; font-weight:bold; line-height:22px; overflow:hidden;}
 .common_list3 a{color:#003899; text-decoration:none;}
 .common_description3{width:195px; height:40px; margin-top:5px; font-size:13px; color:#666666; line-height:22px; overflow:hidden; float:right;}
 .common_writer{width:195px; height:25px; margin-top:5px; font-weight:bold; font-size:13px; text-align:right; line-height:17px; color:#333333;}

@@ -1,6 +1,8 @@
 <?php
-	require_once('../../frame.php');
-	
+	session_start();
+	include_once('../../frame.php');
+	judge_role();
+		
 	$search = $_REQUEST['search'];
 	$db = get_db();
 	$sql = "select * from fb_industry";

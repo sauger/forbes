@@ -31,6 +31,22 @@ function display_login(dom_id,admin){
 	$('#' + dom_id).html(str);
 }
 
+function is_number(str){
+	var r = new RegExp("^-?[0-9]*$");
+	return r.test(str);
+}
+function is_characters(str){
+	var r = new RegExp("^[a-zA-Z]*$");
+	return r.test(str);
+}
+function is_number_character(str){
+	var r = new RegExp("^[0-9a-zA-Z]*$");
+	return r.test(str);
+}
+function is_email(str){
+	var myReg = /^[-_A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
+	return myReg.test(str);
+}
 function array_remove(array,val){
 	icount = array.length;
 	for(i=0;i<icount;i++){
@@ -39,4 +55,6 @@ function array_remove(array,val){
 		}
 	}
 }
+
+
 

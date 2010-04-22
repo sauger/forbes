@@ -1,64 +1,53 @@
 <?php
 	require_once "../../frame.php";
 	use_jquery();
-	//var_dump($_POST);
-	$vote = new table_class('smg_vote');
-	if(null!==$_POST['vote_id']){
+	var_dump($_POST);
+	die();
+	$vote = new table_class('fb_vote');
+	if($_POST['vote_id']!=''){
 		$vote->find($_POST['vote_id']);
 	}
-	
-	if($_FILES['image'][name]!=null){
+	if($_FILES['image']['name']!=null){
 		$upload = new upload_file_class();
 		$upload->save_dir = '/upload/images/';
 		$img = $upload->handle('image','filter_pic');
 		if($img === false){
-				alert('上传文件失败 !');				
-				//redirect('vote_add.php');
+				alert('上传文件失败 !');
 		}
 		$vote->photo_url = "/upload/images/" .$img;
 	}//如果投票上传图片，做处理
 	
-	$table_change = array('<p>'=>'');
-	$table_change += array('</p>'=>'');
-	$title = strtr($_POST['title'],$table_change);
-	$vote->name = $title;
-	$vote->update_attributes($_POST['vote']);
+	$vote->update_attributes($_POST['vote'],false);
+	if($img){
+	$vote->save();
 	
-	$vote_id = $vote->id;
-	for($i=1;$i<=$_POST['sub_item_num'];$i++){
-		$vote_item = new table_class('smg_vote_item');
-		if($_POST['deleted'.$i]=='false'){
-			if(null!==$_POST['vote_item'.$i.'_id']){
-				$vote_item->find($_POST['vote_item'.$i.'_id']);
-			}
-			$vote_item->vote_id = $vote_id;
-			if($_POST['vote']['vote_type']=='image_vote'){
-				if($_FILES['item_image'.$i][name]!=null){
-					$upload = new upload_file_class();
-					$upload->save_dir = '/upload/images/';
-					$img = $upload->handle('item_image'.$i,'filter_pic');
-					//var_dump($_FILES);
-					
-					if($img === false){
-						alert('上传文件失败 !');				
-						//redirect('vote_add.php');
-					}
-					
-					$vote_item->photo_url = "/upload/images/" .$img;
-				}
-				
+	$count = count($_POST['vote_item']['title']);
+	
+	$item = new table_class("fb_vote_item");
+	if($_POST['vote']['vote_type']!='more_vote'){
+		$upload = new upload_file_class();
+		$upload->save_dir = '/upload/images/';
+		$img = $upload->handle('vote_item','filter_pic');
+	}
+	for($i=0;$i<$count;$i++){
+		$item->id=0;
+		$item->vote_id = $vote->id;
+		if($_POST['vote']['vote_type']!='more_vote'){
+			if($img[$i]['result']){
+				$item->photo_url = "/upload/images/" .$img[$i]['name'];
 			}else{
-				$vote_item->photo_url = "";
+				$item->photo_url = "";
 			}//投票项目图片处理
-			
-			$vote_item->update_attributes($_POST['vote_item'.$i]);
-		}else{
-			if($_POST['sub_type']=="edit_sub"){
-				$vote_item->delete($_POST['vote_item'.$i.'_id']);
+			if($_POST['vote_item']['title'][$i]!=''){
+				$item->title = $_POST['vote_item']['title'][$i];
+				$item -> save();
 			}
+		}else{
+			$item->sub_vote_id = $_POST['vote_id'.$i];
+			$item->save();
 		}
 	}
-	
+	}
 	$type = $_POST['sub_type'];
 	//echo $type;
 	echo $vote_id;

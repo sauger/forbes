@@ -1,5 +1,6 @@
 ﻿<?php
-	require_once('../../frame.php');
+	session_start();
+  require_once('../../frame.php');
 	judge_role();
 	$id=$_REQUEST['id'];	
 	$menu1 = new table_class($tb_menu);
