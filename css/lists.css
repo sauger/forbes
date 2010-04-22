@@ -62,6 +62,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #list_top_tr{height:25px; font-size:12px; font-weight:bold; color:#666666; text-align:center;}
 #list_top_tr td{border-bottom:1px solid #999999; background:#f0f0f0;}
+#list_top_tr a{color:#000000; text-decoration:none;}
+#list_top_tr a:hover{text-decoration:underline;}
 
 .list_btr td{text-align:center; word-break:break-all; word-wrap:break-word; font-size:12px; line-height:16px;}
 .list_btr a{color:#000000; text-decoration:none;}
