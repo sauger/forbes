@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/Tr/1999/rEC-html401-19991224/loose.dtd">
 <head>
    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
@@ -59,32 +59,33 @@
 					</div>
 				</div>
 			</div>
-			<div id="Recommend">
-				<div class=Recommend_title>
-					<div class="title_name">榜单推荐</div>
-					<div class=more2><a href=""><img border=0 src="/images/more.gif"></a></div>	
-				</div>
-				<?php 
+
+			<div class=caption>
+					<div class=captions>榜单推荐</div>
+					<div class=line>|</div>
+					<a href="" class=more></a>
+			</div>
+			<div id=recommend>
+
+					<?php 
 					for($i=0;$i<5;$i++){
 						$pos_name = "listindex_recommend_{$i}";
-				?>
-				<div class="Recommend_p" <?php show_page_pos($pos_name)?>>
-					<div class=picture3>
-						<img width="94" height="94" src="<?php echo $pos_items->$pos_name->image1;?>">
+					?>
+					<div class="recommend_p" <?php show_page_pos($pos_name)?>>
+						<div class=recommend_pic><img width="94" height="94" src="<?php echo $pos_items->$pos_name->image1;?>"></div>
+						<div class="recommend_list"><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></div>
 					</div>
-					<div class="Recommend_p">
-						<a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a>
-					</div>
-				</div>
-				<?php }?>
+					<?php }?>
 			</div>
-			<div class="dash"></div>
-			
+			<div class="recommend_dash"></div>
+
+			<div class=caption>
+					<div class=captions>常规榜单</div>
+					<div class=line>|</div>
+					<a href="" class=more></a>
+			</div>
+
 			<div id="normal_list">
-				<div class=Recommend_title>
-					<div class="title_name">常规榜单</div>
-					<div class=more2><a href=""><img border=0 src="/images/more.gif"></a></div>	
-				</div>
 				<div class="list_list">
 				<?php 							
 					$type = array('rich' => '富豪','company' => '公司','famous' => '名人','tech' => '科技');
@@ -105,7 +106,7 @@
 					</div>
 					<?php }?>
 				</div>
-				<div id=line2></div>
+				<div id=list_dash></div>
 				<div class="list_list">
 					<?php $type= array('invest' => '投资','city' => '城市','sport' => '体育','edu' => '教育')?>
 					<?php 							
@@ -127,6 +128,8 @@
 					<?php }?>
 				</div>
 			</div>
+	
+		
 		</div>
 		<div id="right_inc" style="margin-top:10px;">
 		  		<?php include dirname(__FILE__)."/../right/ad.php";?>

@@ -4,9 +4,9 @@
 		if(isset($_REQUEST['id'])){
 			$vote = new table_class('fb_vote');
 			$vote->find($id);
-			$vote_item = new table_class('fb_vote_item');
-			$vote_item_record = $vote_item->find('all',array('conditions' => 'vote_id='.$id));
-			$item_count = count($vote_item_record);
+			$db = get_db();
+			$vote_item_record = $db->query("select * from fb_vote_item where vote_id=$id");
+			$item_count = $db->record_count;
 		}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -77,7 +77,7 @@
 			<td align="center">投票项目：</td>
 			<td id="single">
 				<input type="text" name="vote_item[title][]" style="width:300px;" <?php if(empty($id)){?>class="required"<?php }?>>
-				<input name="vote_item[]"  class="item_image[]"  type="file"  <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
+				<input name="vote_item[]"  class="item_image"  type="file"  <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
 				<a class="add_item" value="1" style="cursor:pointer;">继续添加</a>
 			</td>	
 		</tr>
@@ -111,7 +111,9 @@
 		$("#vote_type").change(function(){
 			if($("#vote_type").attr('value')=="word_vote"){
 				$(".item_image").hide();
+				displayed = "none";
 			}else{
+				displayed = "inline";
 				$(".item_image").show();
 			}
 		});

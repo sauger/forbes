@@ -5,47 +5,22 @@ li{margin:0; padding:0;}
 div{margin:0; padding:0; float:left; display:inline;}
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 
-li{font-size:12px; line-height:24px; list-style-position:outside; background:url(/images/list/tar-1.jpg) no-repeat 1% 50%;  list-style-type:none;}
-
-li a{color:#003A7B; text-decoration:none;}
-#content1 li a{color:#003A7B; }
-content1 a{color:#003A7B;}
-#more3 a{color:#003899;}
-#title1 a{text-decoration:none;}
-
 
 
 #bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
 #bread a{color:#666666; text-decoration:none;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}px;}
 
+.caption{width:670px; height:28px;}
+.caption .captions{height:18px; margin-top:5px; padding-left:18px; line-height:18px; font-size:14px; color:#666666; font-weight:bold;  background:url(/images/public/square.jpg) no-repeat 0 5px;}
+.caption .line{width:1px; height:10px; margin-top:9px; margin-left:10px; font-size:10px; line-height:10px;}
+.caption .more{width:38px; height:8px; margin-top:10px; margin-left:15px; background:url(/images/public/more.jpg) no-repeat; float:left;}
 
-#Recommend{width:679px; height:190px; margin-top:30px;}
-.Recommend_title{width:600px; height:20px; font-size:14px; color:#666666; font-weight:bold; line-height:20px; text-indent:20px; background:url(/images/list/tar2.jpg) no-repeat 0 5px;}
-.Recommend_title .title_name{width:85px; height:20px; float:left; display;inline;}
-.more2{width:43px; height:10px; margin-left:10px; margin-top:4px; border-left:1px solid #666666; }
-.more2 img{ margin-left:10px; }
-.Recommend_p{width:96px; height:125px; margin-left:32px; margin-top:17px;}
-.Recommend_ptitle{width:96px; height:20px; line-height:20px; font-size:12px; color:#333333; text-align:center; margin-top:10px;}
-.Recommend_ptitle a{color:#003A7B; text-decoration:none;}
-.picture3{width:94px; height:94px; padding:1px; font-size:0; background:none; border:1px solid #CCCCCC;}
-.dash{width:670px; height:1px; font-size:0; line-height:0px; border-bottom:1px dotted #000000; overflow:hidden;}
+#list_left{width:675px; overflow:hidden;}
 
-#normal_list{width:679px; margin-top:25px;}
-.list_list{width:300px; height:600px;}
-.list_box{width:300px; height:120px; margin-top:20px;}
-.list_title{width:300px; height:20px; font-size:14px; color:#003A7B; font-weight:bold; line-height:20px;}
-.list_title .title{width:40px; height:20px;}
-.list_title .title_line{width:240px; height:8px; margin-left:5px; margin-top:7px; line-height:0; font-size:0; background:#E5E5E5;}
-.list_li_box{width:300px; height:100px; margin-top:5px; line-height:20px;}
-.list_li_box li{width:285px; height:25px; margin-left:5px; padding-left:10px;  font-size:14px; line-height:25px; background:url(/images/list/tar.gif) no-repeat 0 10px; overflow:hidden;}
-
-#line2{width:1px; height:670px; margin-left:20px; margin-right:35px; margin-top:5px; border-right:1px dotted #000000;}
-#more{width:42px; height:16px; font-size:12px; margin-top:7px; line-height:16px; margin-right:16px; float:right; }
-#content1{width:240px; height:268px; text-indent:10px; margin-top:12px; margin-left:10px;}
-#lists_headline{width:670px; height:200px; margin-top:10px; margin-bottom:20px; padding:1px; border:1px solid #e1e9f0;}
+#lists_headline{width:670px; height:200px; margin-top:10px; margin-bottom:15px; padding:1px; border:1px solid #e1e9f0; overflow:hidden;}
 #headline{width:670px; height:200px; background:#f4f4f4; overflow:hidden;}
-#headline_content{width:361px; height:200px; margin-top:1px; overflow:hidden; float:right;}
+#headline_content{width:351px; height:200px; margin-top:1px; overflow:hidden; float:right;}
 .headline_title{width:351px; height:28px; margin-top:16px; line-height:28px; overflow:hidden;}
 .headline_title a{font-weight:bold; font-size:24px; font-family:微软雅黑,黑体; color:#003399; text-decoration:none;}
 .headline_title a:hover{color:#94000B;}
@@ -57,6 +32,31 @@ content1 a{color:#003A7B;}
 #headline #btn{width:100px; height:14px; margin-top:3px; margin-right:10px; float:right;}
 #headline #btn .headline_btn1{width:14px; height:14px; margin-left:5px; cursor:pointer;}
 #headline #btn .headline_btn2{width:14px; height:14px; margin-left:5px; cursor:pointer;}
+
+#recommend{width:675px;}
+.recommend_p{width:100px; margin-left:28px; margin-top:17px; overflow:hidden;}
+.recommend_list{width:96px; height:36px; margin-top:5px; line-height:18px; overflow:hidden;}
+.recommend_list a{color:#003A7B; text-decoration:none;}
+.recommend_ptitle{width:96px; height:20px;  margin-top:10px; line-height:20px; font-size:12px; color:#333333; text-align:center; overflow:hidden;}
+.recommend_ptitle a{color:#003A7B; text-decoration:none;}
+.recommend_pic{width:94px; height:94px; padding:1px; font-size:0; border:1px solid #CCCCCC;}
+.recommend_dash{width:670px; height:1px; margin-top:15px; margin-bottom:15px; font-size:0; line-height:0px; border-bottom:1px dotted #cccccc; overflow:hidden;}
+
+#normal_list{width:675px;}
+.list_list{width:300px; height:600px;}
+.list_box{width:300px; height:120px; margin-top:20px;}
+.list_title{width:300px; height:20px; font-size:14px; color:#003A7B; font-weight:bold; line-height:20px;}
+.list_title .title{width:40px; height:20px;}
+.list_title .title_line{width:240px; height:8px; margin-left:5px; margin-top:7px; line-height:0; font-size:0; background:#E5E5E5;}
+.list_li_box{width:300px; height:100px; margin-top:5px; line-height:20px;}
+.list_li_box li{width:285px; height:25px; margin-left:5px; padding-left:10px; list-style-position:outside; list-style-type:none; font-size:14px; line-height:25px; background:url(/images/public/circle1.jpg) no-repeat 0 10px; overflow:hidden;}
+.list_li_box li a{color:#003A7B; text-decoration:none;}
+#list_dash{width:1px; height:580px; margin-left:20px; margin-right:35px; margin-top:5px; border-right:1px dotted #cccccc;}
+
+#right_inc{width:225px; overflow:hidden; float:right;}
+
+
+
 
 #t_l_t_b{width:680px; height:123px; background:url('/images/index/t_l_t.jpg'); }
 #line{width:1000px; height:10px; background-image:url(/images/list/line.jpg);}
@@ -73,7 +73,6 @@ content1 a{color:#003A7B;}
 #page{width:330px; height:22px; margin-left:10px; text-align:center;}
 
 
-#list_left{width:680px;}
 
 #sort_title1 a{color:#666666; text-decoration:none;}
 #sort_l1 a{color:#246BB0; text-decoration:underline;}
