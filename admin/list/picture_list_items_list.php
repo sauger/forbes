@@ -42,6 +42,7 @@
 <div id=icaption>
     <div id=title>榜单项管理</div>
 	  <a href="picture_list_list.php" id=btn_back></a>
+	  <a href="picture_list_item_edit.php?list_id=<?php echo $id?>" id=btn_add></a>
 </div>	
 	
 <div id=isearch>
