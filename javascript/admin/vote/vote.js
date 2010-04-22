@@ -53,8 +53,8 @@ $(function() {
 				if($(this).attr('value')=="image_vote"){
 					$(".item_image").show();
 					display = "inline";
-					$(".item_image").attr('class','item_image required')
-					empty = "item_image required";
+					$(".item_image").attr('class','item_image')
+					empty = "item_image";
 				}else{ 
 					$(".item_image").hide();
 					display = "none";

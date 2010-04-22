@@ -36,7 +36,7 @@
 		</tr>
 		<?php for($i=0;$i<$count;$i++){?>
 		<tr class="tr3" id="<?php echo $records[$i]->id;?>">
-			<td><?php echo $records[$i]->name;?></td>
+			<td><a href="/column/column.php?id=<?php echo $records[$i]->id;?>" target="_blank"><?php echo $records[$i]->name;?></a></td>
 			<td><?php echo $records[$i]->nick_name;?></td>
 			<td><?php echo $records[$i]->role_name;?></td>
 			<td>	

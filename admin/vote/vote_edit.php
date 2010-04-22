@@ -101,7 +101,7 @@
 						<input type="text" name="old_item[title][]" style="width:300px;" class="required" value="<?php echo $item[$k]->title;?>">
 						<?php if("image_vote"==$vote->vote_type&&null!=$item[$k]->photo_url){?><a href="<?php echo $item[$k]->photo_url;?>" target="_blank">点击查看</a><?php }?>
 						<input name="old_item[]"  class="item_image"  type="file" <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
-						<input type="hidden" name="old_item[id][]" value="<?php echo $vote_item_record[$k]->id;?>">
+						<input type="hidden" name="old_item[id][]" value="<?php echo $item[$k]->id;?>">
 						<a class='del_old_item' name="<?php echo $item[$k]->id;?>" style='cursor:pointer;'>删除</a>
 					</td>
 				</tr>
@@ -110,7 +110,7 @@
 		<tr class=tr4 id="item">
 			<td align="center">投票项目：</td>
 			<td align="left" id="single" <?php if($vote->vote_type=="more_vote"){?>style="display:none;"<?php }?>>
-				<input type="text" name="vote_item[title][]" style="width:300px" class="required" id="first_item">
+				<input type="text" name="vote_item[title][]" style="width:300px" id="first_item">
 				<input type="file" name="vote_item[]" class="item_image" style="display:none;">
 				<a id="add_item" value="1" style="cursor:pointer;">继续添加</a>
 			</td>
@@ -135,6 +135,7 @@
 		<tr class=btools>
 			<td colspan="10" align="center"><input id="submit" type="submit" value="发布投票"></td>
 			<input type="hidden" name="vote[is_sub_vote]" value="0">
+			<input type="hidden" name="vote_id" value="<?php echo $id;?>">
 		</tr>
  	</table>
 	</div>
