@@ -80,7 +80,7 @@
 				<a href="<?php echo $countnav[7]->href; ?>"><div class="nav" param1="<?php echo $countnav[7]->id; ?>" id=piccity></div></a>
 			</div>
 			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="奢华"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
+			<div class="menu"  <?php if($navigation[0]->name=="生活"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
 				<a href="<?php echo $countnav[8]->href; ?>"><div class="nav" param1="<?php echo $countnav[8]->id; ?>" id=piclife></div></a>
 			</div>
 			<div class=vertical></div>
