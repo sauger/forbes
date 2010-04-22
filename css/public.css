@@ -44,7 +44,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #navigation #magazine{width:52px; height:12px; margin-top:12px; margin-right:10px; cursor:pointer; background:url(/images/public/magazine.png); float:right;}
 
 #navigation2{width:1000px; height:27px; background:#C1E1EE;}
-#navigation2 .nav2{width:940px; height:27px; font-size:12px; margin-left:30px; line-height:27px; display:none;}
+#navigation2 .nav2{width:960px; height:27px; font-size:12px; margin-left:30px; line-height:27px; display:none;}
 #navigation2 .nav2 a{color:#000000; text-decoration:underline;}
 #navigation2 .nav2 a:hover{color:#0000CC;}
 
