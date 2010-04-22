@@ -44,7 +44,7 @@
 			for($i=0;$i<$count;$i++){
 		?>
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
-					<td><a href="#"> <?php echo $record[$i]->name;?></a></td>
+					<td><a href="/list/show_list.php?id=<?php echo $record[$i]->id;?>" target="_blank"><?php echo $record[$i]->name;?></a></td>
 					<td>
 						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" title="关联"><img border=0 src="/images/btn_relation.png"></a>
 						<a href="file_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img border=0 src="/images/btn_edit.png"></a>

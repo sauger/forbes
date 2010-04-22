@@ -19,12 +19,9 @@ $(function() {
 		//日历框函数
 		
 		
-		$(".del_item").live('click',function(){
-			$(this).parent().parent().remove();
-		});
 		
 		$("#add_item").click(function(){
-			$("#item").after("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='"+empty+"' style='display:"+display+";'><a class='del_item' style='cursor:pointer;'>删除</a></td></tr>");
+			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='"+empty+"' style='display:"+display+";'><a class='del_item' style='cursor:pointer;'>删除</a></td></tr>");
 		});
 		//添加一个投票项目
 		/*
@@ -46,8 +43,10 @@ $(function() {
 		
 		$("#select_vote_type").change(function(){
 			if($(this).attr('value')=="word_vote"||$(this).attr('value')=="image_vote"){ 
-				$(".sub_vote").remove();
-				vote_num = 1; //投票项目重新计数
+				$(".del_vote").each(function(){
+					del_vote($(this).attr('name'));
+					$(this).parent().parent().remove();
+				});
 				$("#first_item").attr('class','required');
 				$("#single").show();
 				$("#many").hide();
@@ -71,21 +70,43 @@ $(function() {
 			}
 		});
 		//当投票类型选择框变化时，通过类型来显示不同的投票项目
+		
+		$(".del_item").live('click',function(){
+			$(this).parent().parent().remove();
+		});
+		
+		$(".del_vote").live('click',function(){
+			del_vote($(this).attr('name'));
+			$(this).parent().parent().remove();
+		});
+		
+		$(".del_old_vote").click(function(){
+			del_vote($(this).attr('name'));
+			del_item($(this).prev().prev().val());
+			$(this).parent().parent().remove();
+		});
+		
+		$(".del_old_item").click(function(){
+			del_item($(this).attr('name'));
+			$(this).parent().parent().remove();
+		});
 });
 
-function remove_tb(vote_id){
-	vote_num++;
-	$("#item").before('<tr class="tr3 sub_vote"><td>投票项目：</td><td align="left" ><a href="vote_add.ajax.php?id='+vote_id+'&KeepThis=true&TB_iframe=true&height=600&width=600" id="thickbox'+vote_id+'">查看该投票</a><a class="del_vote" style="cursor:pointer;margin-left:50px">删除</a><input type="hidden" name="deleted'+vote_num+'" id="deleted'+vote_num+'" value="false"><input type="hidden" name="vote_id'+vote_num+'" value="'+vote_id+'"></td></tr>');
-	$("#vote_item_count").attr('value',vote_num);
-	$(".del_vote").click(function(){
-		$(this).parent().parent().hide();
-		$(this).next().attr('value','true');
-	});
+function remove_tb(vote_id,vote_name){
+	$(".btools").before('<tr class="tr4 sub_vote"><td align="center">投票项目：</td><td><div style="width:300px;" name='+vote_id+'>'+vote_name+'</div>　　<input type="hidden" name="vote_vote[title][]" value="'+vote_name+'"><input type="hidden" name="vote_vote[id][]" value="'+vote_id+'"><a id="thickbox'+vote_id+'" href="vote_add.ajax.php?id='+vote_id+'&KeepThis=true&TB_iframe=true&height=600&width=560">点击查看</a><a class="del_vote" name="'+vote_id+'" style="cursor:pointer;margin-left:50px">删除</a></td></tr>');
 	tb_remove(); //关闭弹出窗口
 	tb_init('#thickbox'+vote_id); //注册thickbox
 }
 
-function remove_tb2(){
+function remove_tb2(vote_id,vote_name){
+	$("div[name="+vote_id+"]").html(vote_name);
+	$("div[name="+vote_id+"]").next().val(vote_name);
 	tb_remove(); //关闭弹出窗口
 }
 
+function del_vote(id){
+	$.post('del_vote.php',{'id':id});
+}
+function del_item(id){
+	$.post('del_item.php',{'id':id});
+}

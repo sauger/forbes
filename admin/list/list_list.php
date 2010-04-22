@@ -121,7 +121,7 @@
 			for($i=0;$i<$count;$i++){
 		?>
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
-					<td><a href="#"> <?php echo $record[$i]->name;?></a></td>
+					<td><a href="/list/show_list.php?id=<?php echo $record[$i]->id;?>" target="_blank"> <?php echo $record[$i]->name;?></a></td>
 					<td>
 						<?php echo list_type($record[$i]->list_type);?>
 					</td>

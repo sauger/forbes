@@ -76,7 +76,7 @@
 				<tr class=tr3 id=<?php echo $record[$i]->id;?> >
 					<td><?php echo $record[$i]->name;?></td>
 					<td><?php echo $limit_name;?></td>
-					<td><?php echo $record[$i]->max_vote_count;?></td>
+					<td><?php if($record[$i]->max_vote_count!=0){echo $record[$i]->max_vote_count;}else{echo "无限制";}?></td>
 					<td><?php echo $vote_name;?></td>
 					<td><?php echo substr($record[$i]->created_at, 0, 10);?></td>
 					<td><?php echo substr($record[$i]->ended_at, 0, 10);?></td>
@@ -95,8 +95,8 @@
 		<tr class="btools">
 			<td colspan=10>
 				<?php paginate("",null,"page",true);?>
-				<button id=clear_priority style="display:none">清空优先级</button>
-				<button id=edit_priority  style="display:none">编辑优先级</button>
+				<button id=clear_priority>清空优先级</button>
+				<button id=edit_priority>编辑优先级</button>
 				<input type="hidden" id="db_table" value="fb_vote">
 				<input type="hidden" id="relation" value="image">
 			</td>

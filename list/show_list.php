@@ -21,6 +21,10 @@
 	$desc = intval($_GET['desc']);
 	$list = new table_class('fb_custom_list_type');
 	$list->find($id);
+	if($list->list_type==4){
+		redirect('pic_list.php?id='.$id);
+		die();
+	}
 	if($list->tablename="")
 	{
 		die();
