@@ -1,5 +1,6 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+	include_once('../../frame.php');
 	judge_role();
 	$parent_id = ($_REQUEST['parent_id']=='')?0:$_REQUEST['parent_id'];
 	$id = $_REQUEST['id'];

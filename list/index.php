@@ -8,7 +8,7 @@
 		$db = get_db();
 		use_jquery();
 		js_include_tag('public','index','right');
-		css_include_tag('lists','public','right_inc');
+		css_include_tag('lists','index','public','right_inc');
 		init_page_items();
 	?>
 </head>
@@ -20,11 +20,11 @@
 		<div id="list_left">
 			<div id=lists_headline>
 				<?php $record_show = get_news_by_pos('榜单头条','榜单首页');?>
-				<div id=list_headline>
+				<div id=headline>
 					<div class=headline_pic id=headline_pic_0><a href="<?php echo $pos_items->listindex_hl_0->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_0->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_1 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_1->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_1->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_2 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_2->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_2->image1; ?>"></a></div>
-					<div id=list_headline_content>
+					<div id=headline_content>
 						<div class=headline_title id=headline_title_0 <?php show_page_pos('listindex_hl_0')?>><a href="<?php echo $pos_items->listindex_hl_0->href;?>"><?php echo $pos_items->listindex_hl_0->display; ?></a></div>
 						<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos('listindex_hl_1')?>><a href="<?php echo $pos_items->listindex_hl_1->href;?>"><?php echo $pos_items->listindex_hl_1->display; ?></a></div>
 						<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos('listindex_hl_2')?>><a href="<?php echo $pos_items->listindex_hl_2->href;?>"><?php echo $pos_items->listindex_hl_2->display; ?></a></div>
@@ -59,8 +59,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="left_box">
-				<div class=left_title>
+			<div id="Recommend">
+				<div class=Recommend_title>
 					<div class="title_name">榜单推荐</div>
 					<div class=more2><a href=""><img border=0 src="/images/more.gif"></a></div>	
 				</div>
@@ -68,11 +68,11 @@
 					for($i=0;$i<5;$i++){
 						$pos_name = "listindex_recommend_{$i}";
 				?>
-				<div class="left_pbox" <?php show_page_pos($pos_name)?>>
+				<div class="Recommend_p" <?php show_page_pos($pos_name)?>>
 					<div class=picture3>
 						<img width="94" height="94" src="<?php echo $pos_items->$pos_name->image1;?>">
 					</div>
-					<div class="left_ptitle">
+					<div class="Recommend_p">
 						<a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 			<div class="dash"></div>
 			
 			<div id="normal_list">
-				<div class=left_title>
+				<div class=Recommend_title>
 					<div class="title_name">常规榜单</div>
 					<div class=more2><a href=""><img border=0 src="/images/more.gif"></a></div>	
 				</div>

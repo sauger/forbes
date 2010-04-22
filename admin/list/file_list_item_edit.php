@@ -1,11 +1,15 @@
+<?php
+	session_start();
+  require_once('../../frame.php');
+	judge_role();
+?>	
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-CN>
-	<title>发布新闻</title>
+	<title></title>
 	<?php 
-		require_once('../../frame.php');
 		$list_id = intval($_REQUEST['list_id']);
 		if (!$list_id) {
 			alert('invalid request');
@@ -25,8 +29,8 @@
 		js_include_tag('category_class.js', 'admin/news_pub', 'admin/list/file_list_item_edit.js','jquery.colorbox-min.js','jquery-ui-1.7.2.custom.min.js','../ckeditor/ckeditor.js','autocomplete.jquery','pubfun');
 	?>
 </head>
-<body style="background:#E1F0F7">
-	<?php
+<body>
+<?php
 	$category = new category_class('file_list');
 	$category->echo_jsdata();
 	if($id){
@@ -38,8 +42,9 @@
 		$category_id = -1;
 	}
 ?>
+<div id=itable>
 	<form id="news_edit" enctype="multipart/form-data" action="file_list_item_edit.post.php" method="post"> 
-	<table width="795" border="0">
+	<table cellspacing=1 border="0">
 		<tr class=tr1>
 			<td colspan="2" width="795">　　发布榜单项 <a href="<?php echo "file_list_items_list.php?id={$list_id}";?>"><img src="/images/btn_back.png" border=0></a></td>
 		</tr>
@@ -153,7 +158,7 @@
 		<input type="hidden" name="news[sub_headline]" id="hidden_sub_headline" value="<?php echo $news->sub_headline ? $news->sub_headline : "";?>"></input>
 		<input type="hidden" name="news[list_id]" value="<?php echo $news->list_id;?>"></input>
 	</form>
-
+</div>
 <script>
 $(function(){
 		category.display_select('category_select',$('#span_category'),<?php echo $category_id;?>,'', function(id){			

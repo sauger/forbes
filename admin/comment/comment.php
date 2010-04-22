@@ -1,5 +1,7 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+	include_once('../../frame.php');
+	judge_role();	
 	$type = $_REQUEST['type'];
 	$type = empty($type) ? "news" : $type; 
 	$id = $_REQUEST['id'];

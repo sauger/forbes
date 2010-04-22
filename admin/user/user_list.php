@@ -1,5 +1,6 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+  require_once('../../frame.php');
 	judge_role();
 	$user_title="添加用户"; 
 	$db = get_db();
@@ -39,13 +40,13 @@
 			<td><?php echo $records[$i]->nick_name;?></td>
 			<td><?php echo $records[$i]->role_name;?></td>
 			<td>	
-				<a href="user_edit.php?id=<?php echo $records[$i]->id;?>" title="编辑" style="color:#000000; text-decoration:none"><img src="/images/btn_edit.png" border="0"></a> 
-				<span style="color:#ff0000; cursor:pointer" class="del" title="删除" name="<?php echo $records[$i]->id;?>"><img src="/images/btn_delete.png" border="0"></span>
+				<a href="user_edit.php?id=<?php echo $records[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border="0"></a> 
+				<span class="del" title="删除" name="<?php echo $records[$i]->id;?>"><img src="/images/btn_delete.png" border="0"></span>
 			</td>
 		</tr>
 		<? }?>
 	</table>
-	</div>
+</div>
 	<input type="hidden" id="db_table" value="<?php echo $tb_user;?>">
 </body>
 </html>
