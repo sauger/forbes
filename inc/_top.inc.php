@@ -43,7 +43,7 @@
 	
 	<?php
 		if($nav==""){	$nav=3;	}
-		$countnav=$db->query("select * from fb_navigation where parent_id=0 and (type='both' or type='top') order by priority asc");
+		$countnav=$db->query("select * from fb_navigation where parent_id=0 order by priority asc");
 		$navigation=$db->query('select name,id from fb_navigation where id='.$nav);
 	?>
   <div id=navigation>
