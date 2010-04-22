@@ -54,7 +54,7 @@
 					<option value="word_vote">文字投票</option>
 					<option value="image_vote">图片投票</option>
 					<option value="more_vote">复合投票</option>
-				</select>
+				</select>切换投票类型会使已添加的选项或者投票消失
 			</td>
 		</tr>
 		<tr class=tr4>
@@ -86,7 +86,7 @@
 		<tr class=tr4 id="item">
 			<td align="center">投票项目：</td>
 			<td align="left" id="single">
-				<input type="text" name="vote_item[title][]" style="width:300px" class="required">
+				<input type="text" name="vote_item[title][]" style="width:300px" class="required" id="first_item">
 				<input type="file" name="vote_item[]" class="item_image" style="display:none;">
 				<a id="add_item" value="1" style="cursor:pointer;">继续添加</a>
 			</td>	
