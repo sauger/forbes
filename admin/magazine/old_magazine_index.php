@@ -1,6 +1,7 @@
 <?php
-	require_once('../../frame.php');
-	
+	session_start();
+  require_once('../../frame.php');
+	judge_role();	
 	$search = $_REQUEST['search'];
 	$db = get_db();
 	$sql = "select * from fb_old_magazine";
@@ -57,6 +58,10 @@
 		<tr class="btools">
 			<td colspan=10>
 				<?php paginate("",null,"page",true);?>
+			</td>
+		</tr>
+		<tr class="btools">
+			<td colspan=10>
 				<button id=clear_priority>清空优先级</button>
 				<button id=edit_priority>编辑优先级</button>
 				<input type="hidden" id="relation" value="news">

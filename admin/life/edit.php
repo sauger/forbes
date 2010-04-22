@@ -1,5 +1,6 @@
 ﻿<?php
-	require_once('../../frame.php');
+	session_start();
+	include_once('../../frame.php');
 	judge_role();
 	$id = $_REQUEST['id'];
 	$type=$_REQUEST['type'];

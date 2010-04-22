@@ -1,5 +1,7 @@
 <?php
-include '../../frame.php';
+session_start();
+include_once('../../frame.php');
+judge_role();
 $type = $_GET['type'];
 switch ($type) {
 	case 'news':

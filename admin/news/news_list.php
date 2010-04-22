@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include_once('../../frame.php');
 	judge_role();
 	$category = new category_class('news');

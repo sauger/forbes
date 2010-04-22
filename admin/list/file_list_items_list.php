@@ -1,5 +1,7 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+  require_once('../../frame.php');
+	judge_role();
 	$id = intval($_REQUEST['id']);
 	if($id <= 0){
 		alert('invalid request!');

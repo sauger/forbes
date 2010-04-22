@@ -1,6 +1,7 @@
 <?php
-	require_once('../../frame.php');
-	
+	session_start();
+  require_once('../../frame.php');
+	judge_role();	
 	$search = $_REQUEST['search'];
 	$db = get_db();
 	$sql = "SELECT t1.id,t1.created_at,t2.year,t2.name,t3.name as uname FROM fb_magazine_order t1 join fb_old_magazine t2 on t1.magazine_id=t2.id join fb_yh t3 on t1.user_id=t3.id where 1=1";
