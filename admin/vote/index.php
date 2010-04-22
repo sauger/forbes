@@ -104,3 +104,9 @@
 	</table>
 </body>
 </html>
+<script>
+	$(".del_vote").click(function(){
+		$.post('vote.post.php',{'post_type':'del','del_id':$(this).attr('name')});
+		$(this).parent().parent().remove();
+	});
+</script>

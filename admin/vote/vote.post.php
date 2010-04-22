@@ -2,15 +2,13 @@
 	require_once "../../frame.php";
 	if("del"==$_POST['post_type'])
 	{
-		$post = new table_class($_POST['db_table']);
-		$post -> delete($_POST['del_id']);
+		$id = $_POST['del_id'];
 		$db = get_db();
-		$sql = 'delete from smg_vote_item where vote_id='.$_POST['del_id'];
-		$db->execute($sql);
-		echo $_POST['del_id'];
+		$db->execute("delete from fb_vote_item where vote_id=$id");
+		$db->execute("delete from fb_vote where id=$id");
 	}else{
 		$vote = new table_class('fb_vote');
-		if($_POST['type']=='edit'){
+		if($_POST['vote_id']!=''){
 			$vote->find($_POST['vote_id']);
 		}
 		if($_FILES['image']['name']!=null){
@@ -67,11 +65,31 @@
 				$item -> save();
 			}
 		}
+		for($i=0;$i<$old_count;$i++){
+			$item->find($_POST['old_item']['id'][$i]);
+			if($_POST['vote']['vote_type']=='image_vote'){
+				if($old_img[$i]['result']){
+					$item->photo_url = "/upload/images/" .$old_img[$i]['name'];
+				}else{
+					$item->photo_url = $item->photo_url;
+				}//投票项目图片处理
+			}
+			if($_POST['old_item']['title'][$i]!=''){
+				$item->title = $_POST['old_item']['title'][$i];
+				$item->save();
+			}
+		}
 		for($i=0;$i<$vote_count;$i++){
 			$item->id=0;
 			$item->vote_id = $vote->id;
 			$item->title = $_POST['vote_vote']['title'][$i];
 			$item->sub_vote_id = $_POST['vote_vote']['id'][$i];
+			$item->save();
+		}
+		for($i=0;$i<$old_vote_count;$i++){
+			$item->find($_POST['old_vote_vote']['id'][$i]);
+			$item->title = $_POST['old_vote_vote']['title'][$i];
+			echo $_POST['old_vote_vote']['title'][$i];
 			$item->save();
 		}
 		redirect('index.php');
