@@ -64,8 +64,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="left_box">
-				<div class=left_title>
+			<div id="Recommend">
+				<div class=Recommend_title>
 					<div class="title_name">榜单推荐</div>
 					<div class=more2><a href=""><img border=0 src="/images/more.gif"></a></div>	
 				</div>
@@ -73,11 +73,11 @@
 					for($i=0;$i<5;$i++){
 						$pos_name = "listindex_recommend_{$i}";
 				?>
-				<div class="left_pbox" <?php show_page_pos($pos_name)?>>
+				<div class="Recommend_p" <?php show_page_pos($pos_name)?>>
 					<div class=picture3>
 						<img width="94" height="94" src="<?php echo $pos_items->$pos_name->image1;?>">
 					</div>
-					<div class="left_ptitle">
+					<div class="Recommend_p">
 						<a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a>
 					</div>
 				</div>
@@ -86,7 +86,7 @@
 			<div class="dash"></div>
 			
 			<div id="normal_list">
-				<div class=left_title>
+				<div class=Recommend_title>
 					<div class="title_name">常规榜单</div>
 					<div class=more2><a href=""><img border=0 src="/images/more.gif"></a></div>	
 				</div>
