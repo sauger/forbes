@@ -2,46 +2,32 @@ var vote_num = 0;
 
 $(function() {
 		
-		var num = 1; //记录有几条投票项目	
 		var display = "none"; //是否显示添加图片的框
 		var empty = "item_image"; //图片是否可以为空
 	
-
-		$("#submit").click(function(){
-			var oEditor = FCKeditorAPI.GetInstance('title') ;
-			var title = oEditor.GetHTML();
-			if(title==""){
-				alert("请输入标题！");
-				return false;
-			}
-		}); 		
-
-	
 	
 		$(".date_jquery").datepicker(
-			{
-				monthNames:['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
-				dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
-				dayNamesMin:["日","一","二","三","四","五","六"],
-				dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
-				dateFormat: 'yy-mm-dd'
-			}
-		);
+		{
+			changeMonth: true,
+			changeYear: true,
+			monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+			dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+			dayNamesMin:["日","一","二","三","四","五","六"],
+			dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+			dateFormat: 'yy-mm-dd'
+		});
 		//日历框函数
 		
+		
+		$(".del_item").live('click',function(){
+			$(this).parent().parent().remove();
+		});
+		
 		$("#add_item").click(function(){
-			num++;
-			$("#vote_item_count").attr('value',num);
-			$("#list").append("<tr class=tr3 id='tr"+num+"' name='new_item'><td>投票项目：</td><td align='left'>标题<input type='text' name='vote_item"+num+"[title]' style='width:300px;' class='required'>&nbsp;<input type='hidden' name='MAX_FILE_SIZE' value='2097152'><input name='item_image"+num+"' type='file' class='"+empty+"' style='display:"+display+";'><a class='del_item' style='cursor:pointer;'>删除</a><input type='hidden' name='deleted"+num+"' id='deleted"+num+"' value='false'></td></tr>");
-			$(".del_item").click(function(){
-				$(this).prev().attr('class','');
-				$(this).prev().prev().prev().attr('class','');
-				$(this).next().attr('value','true');
-				$(this).parent().parent().hide();
-			})
-			
+			$("#item").after("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='"+empty+"' style='display:"+display+";'><a class='del_item' style='cursor:pointer;'>删除</a></td></tr>");
 		});
 		//添加一个投票项目
+		/*
 		$("#many").hover(function(){
 			if($("#end").attr('value')==""||$("#start").attr('value')==""){ //如果开始和结束时间没有填写，则不能添加子投票
 				$("#can_not_add").show(); 
@@ -55,7 +41,7 @@ $(function() {
 				
 				//子投票使用thickbox弹出框的形式，使用href来指定参数
 			}
-		});
+		})*/;
 		//使用鼠标放到添加子投票链接上的时候来判断是否符合添加子投票的条件
 		
 		$("#select_vote_type").change(function(){
@@ -77,12 +63,9 @@ $(function() {
 					empty = "item_image";
 				}
 			}else{ //如果投票类型是复合投票，则首先将添加过的投票选择都删除，然后将添加子投票的链接显示出来
-				$("tr[name]").each(function(){
-					$(this).remove();
-				});
+				$(".s_item").remove();
 				$(".item_image").attr('class','item_image');
 				$("#first_item").attr('class','');
-				num = 1; //投票项目重新计数
 				$("#single").hide();
 				$("#many").show();
 			}
