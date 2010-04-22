@@ -34,7 +34,7 @@ while true do
 			fail_count = fail_count + 1
 			break if fail_count > 10
 			puts url if fail_count == 1
-			puts 'erro' + fail_count
+			puts 'erro' + fail_count.to_s
 			
 		end
 	end
