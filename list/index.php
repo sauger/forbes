@@ -8,7 +8,7 @@
 		$db = get_db();
 		use_jquery();
 		js_include_tag('public','index','right');
-		css_include_tag('lists','public','right_inc');
+		css_include_tag('lists','index','public','right_inc');
 		init_page_items();
 	?>
 </head>
@@ -20,11 +20,11 @@
 		<div id="list_left">
 			<div id=lists_headline>
 				<?php $record_show = get_news_by_pos('榜单头条','榜单首页');?>
-				<div id=list_headline>
+				<div id=headline>
 					<div class=headline_pic id=headline_pic_0><a href="<?php echo $pos_items->listindex_hl_0->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_0->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_1 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_1->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_1->image1; ?>"></a></div>
 					<div class=headline_pic id=headline_pic_2 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_2->href; ?>"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_2->image1; ?>"></a></div>
-					<div id=list_headline_content>
+					<div id=headline_content>
 						<div class=headline_title id=headline_title_0 <?php show_page_pos('listindex_hl_0')?>><a href="<?php echo $pos_items->listindex_hl_0->href;?>"><?php echo $pos_items->listindex_hl_0->display; ?></a></div>
 						<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos('listindex_hl_1')?>><a href="<?php echo $pos_items->listindex_hl_1->href;?>"><?php echo $pos_items->listindex_hl_1->display; ?></a></div>
 						<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos('listindex_hl_2')?>><a href="<?php echo $pos_items->listindex_hl_2->href;?>"><?php echo $pos_items->listindex_hl_2->display; ?></a></div>

@@ -44,22 +44,6 @@ content1 a{color:#003A7B;}
 #more{width:42px; height:16px; font-size:12px; margin-top:7px; line-height:16px; margin-right:16px; float:right; }
 #content1{width:240px; height:268px; text-indent:10px; margin-top:12px; margin-left:10px;}
 #lists_headline{width:670px; height:200px; margin-top:10px; padding:1px; border:1px solid #e1e9f0;}
-#list_headline{width:670px; height:200px; background:#f4f4f4;}
-.headline_pic{float:left; display:inline;}
-#list_headline_content{width:351px; height:200px; margin-top:1px; line-height:28px; float:right;}
-.headline_title{width:336px; height:28px; margin-top:16px; line-height:28px; overflow:hidden;}
-.headline_title a{color:#003399; font-size:24px; font-family:微软雅黑,黑体; font-weight:bold;  text-decoration:none;}
-.headline_description{width:351px; height:45px; margin-top:10px; margin-left:2px; margin-bottom:8px; line-height:24px; font-size:14px; overflow:hidden;}
-.headline_related{width:230px; height:80px;}
-#list_headline_content .cl{width:224px; height:24px; padding-left:13px; line-height:22px; background:url(/images/index/yuan.jpg) no-repeat 0 8px; overflow:hidden;}
-#list_headline_content .cl a{color:#003399; font-size:14px; text-decoration:none;}
-
-
-#list_headline_content #more{width:60px; height:20px; margin-top:50px; float:right;}
-#list_headline_content #more a{color:#003399;}
-#list_headline_content #btn{width:100px; height:14px; margin-top:3px; margin-right:10px; float:right;}
-#list_headline_content #btn .headline_btn1{width:14px; height:14px; margin-left:5px; cursor:pointer;}
-#list_headline_content #btn .headline_btn2{width:14px; height:14px; margin-left:5px; cursor:pointer;}
 
 #t_l_t_b{width:680px; height:123px; background:url('/images/index/t_l_t.jpg'); }
 #line{width:1000px; height:10px; background-image:url(/images/list/line.jpg);}
