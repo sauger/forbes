@@ -38,7 +38,7 @@
 				for($i=0;$i<$len;$i++){
 					if($items[$i]->resource_type == 'magazine'){
 						$is_magazine = true;
-						$title = $items[$i]->magzine_number . $items[$i]->title;
+						$title = $items[$i]->magzine_number ." ". $items[$i]->title;
 					}else{
 						$title = $items[$i]->news_title;
 					}
