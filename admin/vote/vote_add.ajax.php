@@ -4,9 +4,9 @@
 		if(isset($_REQUEST['id'])){
 			$vote = new table_class('fb_vote');
 			$vote->find($id);
-			$vote_item = new table_class('fb_vote_item');
-			$vote_item_record = $vote_item->find('all',array('conditions' => 'vote_id='.$id));
-			$item_count = count($vote_item_record);
+			$db = get_db();
+			$vote_item_record = $db->query("select * from fb_vote_item where vote_id=$id");
+			$item_count = $db->record_count;
 		}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -68,7 +68,7 @@
 						<?php if("image_vote"==$vote->vote_type&&null!=$vote_item_record[$k]->photo_url){?><a href="<?php echo $vote_item_record[$k]->photo_url;?>" target="_blank">点击查看</a><?php }?>
 						<input name="old_item[]"  class="item_image"  type="file" <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
 						<input type="hidden" name="old_item[id][]" value="<?php echo $vote_item_record[$k]->id;?>">
-						<a class='del_old_item' name="<?php echo $vote_item_record[$k]->id;?>" style='cursor:pointer;'>删除</a>
+						<a class='del_old_item' name="<?php echo $vote_item_record[$k]->id;?>" style='cursor:pointer;' title="删除"><img src="/images/btn_delete.png" border="0"></a>
 					</td>
 				</tr>
 			<?php }?>
@@ -77,8 +77,8 @@
 			<td align="center">投票项目：</td>
 			<td id="single">
 				<input type="text" name="vote_item[title][]" style="width:300px;" <?php if(empty($id)){?>class="required"<?php }?>>
-				<input name="vote_item[]"  class="item_image[]"  type="file"  <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
-				<a class="add_item" value="1" style="cursor:pointer;">继续添加</a>
+				<input name="vote_item[]"  class="item_image"  type="file"  <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
+				<a class="add_item" value="1" style="cursor:pointer;" title="继续添加"><img src="/images/btn_add.png" border="0"></a>
 			</td>	
 		</tr>
 		<tr class=btools>
@@ -105,13 +105,15 @@
 		
 		
 		$(".add_item").click(function(){
-			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='item_image' style='display:"+displayed+";'><a class='del_item' style='cursor:pointer;'>删除</a></td></tr>");
+			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='item_image' style='display:"+displayed+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/btn_delete.png' border='0'></a></td></tr>");
 		});
 	
 		$("#vote_type").change(function(){
 			if($("#vote_type").attr('value')=="word_vote"){
 				$(".item_image").hide();
+				displayed = "none";
 			}else{
+				displayed = "inline";
 				$(".item_image").show();
 			}
 		});

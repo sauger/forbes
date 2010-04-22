@@ -16,10 +16,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #list_left{width:675px; overflow:hidden;}
 
-#lists_headline{width:670px; height:200px; margin-top:10px; margin-bottom:15px; padding:1px; border:1px solid #e1e9f0; overflow:hidden;}
-#headline{width:670px; height:200px; background:#f4f4f4; overflow:hidden;}
-#headline_content{width:351px; height:200px; margin-top:1px; overflow:hidden; float:right;}
-.headline_title{width:351px; height:28px; margin-top:16px; line-height:28px; overflow:hidden;}
+#lists_headline{width:660px; height:200px; margin-top:10px; margin-bottom:15px; padding:1px; border:1px solid #e1e9f0; overflow:hidden;}
+#headline{width:660px; height:200px; background:#f4f4f4; overflow:hidden;}
+#headline_content{width:341px; height:200px; margin-top:1px; overflow:hidden; float:right;}
+.headline_title{width:341px; height:28px; margin-top:16px; line-height:28px; overflow:hidden;}
 .headline_title a{font-weight:bold; font-size:24px; font-family:微软雅黑,黑体; color:#003399; text-decoration:none;}
 .headline_title a:hover{color:#94000B;}
 .headline_description{width:336px; height:66px; margin-top:10px; margin-left:2px; margin-bottom:8px; text-indent:28px; line-height:22px; font-size:14px; overflow:hidden;}
@@ -53,7 +53,17 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #right_inc{width:225px; overflow:hidden; float:right;}
 
+#list_left{width:675px;}
+#list_left_top{width:600px; height:25px; margin-top:15px;}
+#list_left_top a{width:100px; height:25px; color:#246BB0; font-size:12px; line-height:25px; text-align:center; text-decoration:none; background:url('/images/list/button.gif'); float:left; display:inline;}
+#list_list_content{width:660px; margin-top:10px;}
+#list_list_content table{width:100%; text-align:center; background:#e7e7e7;}
+#list_list_content td{height:32px; text-align:center; padding:5px; word-break:break-all; word-wrap:break-word; font-size:12px; line-height:16px; background:#ffffff;}
 
+#list_top_tr{height:25px; font-size:12px; font-weight:bold; color:#666666; text-align:center;}
+#list_top_tr td{border-bottom:1px solid #999999; background:#f0f0f0;}
+#list_top_tr a{color:#666666; text-decoration:none;}
+#list_top_tr a:hover{color:#000000; text-decoration:underline;}
 
 
 #t_l_t_b{width:680px; height:123px; background:url('/images/index/t_l_t.jpg');}
