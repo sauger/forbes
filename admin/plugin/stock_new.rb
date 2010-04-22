@@ -10,10 +10,11 @@ dbpassword = 'xunao'
 dbname = 'forbes'
 my = Mysql.connect(dbhost, dbuser, dbpassword ,dbname)
 file = File.new('./update_stock',"w+")
-retry_file = File.new('./retry_stock',"w+")
+interval = 199
 i = 0
 while true do 
-	start = i*200
+	start = i*interval
+	puts "handle #{i}"
 	sql = "select id, stock_code,stock_place_code from fb_company limit #{start},200"
 	items = my.query(sql)
 	codes = []
@@ -63,16 +64,16 @@ while true do
 		end
 	else #获得股价失败
 		str = url_str + "||" + ids.join(',')
-		retry_file.puts str
+		#retry_file.puts str
 	end
 	i = i+1
-		if items.num_rows < 200
+		if items.num_rows < interval
 		break
 	end 
 	items.free
 end
 file.close
-retry_file.close
+#retry_file.close
 puts 'start to update'
 system "mysql -h#{dbhost} -u#{dbuser} -p#{dbpassword} #{dbname} < update_stock"
 puts 'update finish'
