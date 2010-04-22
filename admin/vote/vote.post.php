@@ -10,6 +10,8 @@
 		$vote = new table_class('fb_vote');
 		if($_POST['vote_id']!=''){
 			$vote->find($_POST['vote_id']);
+		}else{
+			$vote->created_at = now();
 		}
 		if($_FILES['image']['name']!=null){
 			$upload = new upload_file_class();
@@ -34,7 +36,6 @@
 		}else{
 			$vote->ended_at = null;
 		}
-		$vote->created_at = now();
 		$vote->save();
 		
 		

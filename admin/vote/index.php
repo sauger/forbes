@@ -1,6 +1,18 @@
 <?php
 	require_once('../../frame.php');
 	$key = $_REQUEST['key'];
+	$id_adopt = $_REQUEST['adopt'];
+	$db = get_db();
+	$sql = "select * from fb_vote where is_sub_vote=0";
+	if($key!=''){
+		$sql .= " and name='$key'";
+	}
+	if($id_adopt!=''){
+		$sql .= " and is_adopt=$id_adopt";
+	}
+	$sql .= " order by priority asc,created_at desc";
+	$record = $db->query($sql);
+	$count_record = $db->record_count;
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -21,8 +33,8 @@
 	<a href="vote_add.php" id=btn_add></a>
 </div>
 <div id=isearch>
-		<input id=title type="text" value="<? echo $_REQUEST['title']?>"><span id="span_category"></span>
-		<select id=adopt style="width:100px" class="select_new">
+		<input id=title type="text" value="<?php echo $key?>">
+		<select id=adopt style="width:100px">
 					<option value="">发布状况</option>
 					<option value="1" <? if($_REQUEST['adopt']=="1"){?>selected="selected"<? }?>>已发布</option>
 					<option value="0" <? if($_REQUEST['adopt']=="0"){?>selected="selected"<? }?>>未发布</option>
@@ -35,13 +47,6 @@
 			<td width="20%">投票名称</td><td width="10%">登录限制</td><td width="10%">票数限制</td><td width="10%">投票类型</td><td width="10%">发布时间</td><td width="10%">到期时间</td><td width="20%">操作</td>
 		</tr>
 		<?php
-			$vote = new table_class("fb_vote");
-			if($key!=''){
-				$record = $vote->paginate("all",array('conditions' => 'is_sub_vote=0 name  like "%'.trim($key).'%"','order' => 'priority,created_at desc'),15);
-			}else{
-				$record = $vote->paginate("all",array('conditions' => 'is_sub_vote=0 ','order' => 'priority,created_at desc'),15);
-			}
-			$count_record = count($record);
 			//--------------------
 			for($i=0;$i<$count_record;$i++){
 				switch($record[$i]->vote_type) {
@@ -98,7 +103,6 @@
 				<button id=clear_priority>清空优先级</button>
 				<button id=edit_priority>编辑优先级</button>
 				<input type="hidden" id="db_table" value="fb_vote">
-				<input type="hidden" id="relation" value="image">
 			</td>
 		</tr>
 	</table>
@@ -109,4 +113,13 @@
 		$.post('vote.post.php',{'post_type':'del','del_id':$(this).attr('name')});
 		$(this).parent().parent().remove();
 	});
+	$("#search_button").click(function(){
+		search();
+	});
+	$("#adopt").change(function(){
+		search();
+	});
+	function search(){
+		window.location.href = "index.php?key="+encodeURI($("#title").val())+"&adopt="+$("#adopt").val();
+	}
 </script>

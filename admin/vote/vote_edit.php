@@ -115,7 +115,7 @@
 				<a id="add_item" value="1" style="cursor:pointer;">继续添加</a>
 			</td>
 			<td align="left" <?php if($vote->vote_type!="more_vote"){?>style="display:none;"<?php }?> id="many">
-					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=400&width=560" class="thickbox" id="add_sub_vote">添加子投票</a>
+					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=600&width=560" class="thickbox" id="add_sub_vote">添加子投票</a>
 			</td>
 		</tr>
 		<?php if($vote->vote_type=="more_vote"){?>
@@ -123,11 +123,7 @@
 			<tr class=tr4>
 				<td align="center">投票项目：</td>
 				<td align="left">
-					<div style="width:300px;" name="<?php echo $item[$k]->sub_vote_id;?>"><?php echo $item[$k]->title;?></div>　　
-					<input type="hidden" name="old_vote_vote[title][]" value="<?php echo $item[$k]->title;?>">
-					<input type="hidden" name="old_vote_vote[id][]" value="<?php echo $item[$k]->id;?>">
-					<a class="thickbox" href="vote_add.ajax.php?id=<?php echo $item[$k]->sub_vote_id;?>&KeepThis=true&TB_iframe=true&height=600&width=560">点击查看</a>
-					<a class="del_old_vote" name="<?php echo $item[$k]->sub_vote_id;?>" style="cursor:pointer;margin-left:50px">删除</a>
+					<div style="width:300px;" name="<?php echo $item[$k]->sub_vote_id;?>"><?php echo $item[$k]->title;?></div>　　<input type="hidden" name="old_vote_vote[title][]" value="<?php echo $item[$k]->title;?>"><input type="hidden" name="old_vote_vote[id][]" value="<?php echo $item[$k]->id;?>"><a class="thickbox" href="vote_add.ajax.php?id=<?php echo $item[$k]->sub_vote_id;?>&KeepThis=true&TB_iframe=true&height=600&width=560">点击查看</a><a class="del_old_vote" name="<?php echo $item[$k]->sub_vote_id;?>" style="cursor:pointer;margin-left:50px">删除</a>
 				</td>
 			</tr>
 			<?php }?>

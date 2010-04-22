@@ -91,7 +91,7 @@
 				<a id="add_item" value="1" style="cursor:pointer;">继续添加</a>
 			</td>	
 			<td align="left" style="display:none;" id="many">
-					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=400&width=560" class="thickbox" id="add_sub_vote">添加子投票</a>
+					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=600&width=560" class="thickbox" id="add_sub_vote">添加子投票</a>
 			</td>
 		</tr>
 		<tr class=btools>
