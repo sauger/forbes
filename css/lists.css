@@ -68,7 +68,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .list_btr td{text-align:center; word-break:break-all; word-wrap:break-word; font-size:12px; line-height:16px;}
 .list_btr a{color:#000000; text-decoration:none;}
 
-#list_paginate{width:660px; margin-top:30px; line-height:20px; font-size:13px; color:#666666; text-align:center; float:left; display:inline;}
+#list_paginate{width:660px; margin-top:30px; line-height:20px; font-size:13px; color:#666666; text-align:center;}
 #list_paginate a{color:#246BB0; text-decoration:none
 
 #more_list_content{width:1000px; margin-top:15px;}
