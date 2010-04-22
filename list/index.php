@@ -100,7 +100,7 @@
 							<?php for($i=0;$i<4;$i++){
 								$pos_name = "listindex_{$key}_{$i}"; 
 							?>
-								<li <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></li>
+								<li <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href?>" target=_blank><?php echo $pos_items->$pos_name->display;?></a></li>
 							<?php } ?>
 						</div>
 					</div>
@@ -121,7 +121,7 @@
 							<?php for($i=0;$i<4;$i++){
 								$pos_name = "listindex_{$key}_{$i}"; 
 							?>
-								<li <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></li>
+								<li <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href?>" target=_blank><?php echo $pos_items->$pos_name->display;?></a></li>
 							<?php } ?>
 						</div>
 					</div>
