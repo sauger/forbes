@@ -12,6 +12,7 @@
 		use_jquery();
 		js_include_tag('select2css','public');
 		css_include_tag('club_index','public');
+		init_page_items();
 	?>
 </head>
 <body>
@@ -20,12 +21,14 @@
 		<div id=bread><a href="#">会员俱乐部</a></div>
 		<div id=bread_line></div>
 		<div id=club_left>
-			<div id=club_l_t>
-				<img src="/images/club/one.jpg">
-				<div id=fd>
+			<div id=club_img <?php $pos_name='club_img'; show_page_pos($pos_name); ?>>
+				<div id=club_l_t>
+					<img src="<?php echo $pos_items->$pos_name->image1; ?>">
+					<div id=fd>
+					</div>
+					<div id=fd_l ><?php echo $pos_items->$pos_name->description; ?></div>
+					<div id=fd_r><a href="<?php echo $pos_items->$pos_name->href; ?>">了解详情>></a></div>
 				</div>
-				<div id=fd_l>会员俱乐部——他是一个冷酷无情的人，嗜酒如命且毒瘾甚深，有好几次差点把命都给送了，就因为在酒吧里看不顺眼一位酒保而犯下杀人罪，目前被判终身监禁。</div>
-				<div id=fd_r><a href="">了解详情>></a></div>
 			</div>
 			<div class=survey_title_left></div>
 			<div class=survey_title_center>
@@ -35,30 +38,23 @@
 			<div class=survey_title_right></div>
 			<div id="survey_content_left"></div>
 			<div id="survey_content_center">
-				<div class=content>
+			<?php for($i=0;$i<2;$i++){ ?>
+				<div class=content <?php $pos_name='club_survey_'.$i; show_page_pos($pos_name); ?>>
 					<div class=content_l>
-						<a href=""><img border=0 src="/images/club/two.jpg"></a>	
+						<?php show_page_img($pos_items,$pos_name); ?>	
 					</div>
 					<div class=content_r>
-						<div class=title><a href="">创造与毁灭的力量（安东尼罗宾）教学参考</a></div>
-						<div class=context><a href="">有两位年届七十岁的老太太，对于未来也因不同的信念而有了不同的人生。一位认为到了这个年纪可算是人生的尽头，于是便开始料理后事；然而另一位却认为一个人能做什么事不在于年龄的大小，而在于是怎么个想法......</a></div>
-						<div class=dc><a href="">开始调查>></a></div>
+						<div class=title><?php show_page_href($pos_items,$pos_name); ?></div>
+						<div class=context><?php show_page_desc($pos_items,$pos_name); ?></div>
+						<div class=dc><a href="<?php echo $pos_items->$pos_name->href; ?>">开始调查>></a></div>
 					</div>
 				</div>
-				<div class=content>
-					<div class=content_l>
-						<a href=""><img border=0 src="/images/club/two.jpg"></a>	
-					</div>
-					<div class=content_r>
-						<div class=title><a href="">创造与毁灭的力量（安东尼罗宾）教学参考</a></div>
-						<div class=context><a href="">有两位年届七十岁的老太太，对于未来也因不同的信念而有了不同的人生。一位认为到了这个年纪可算是人生的尽头，于是便开始料理后事；然而另一位却认为一个人能做什么事不在于年龄的大小，而在于是怎么个想法......</a></div>
-						<div class=dc><a href="">开始调查>></a></div>
-					</div>
-				</div>
+			<?php } ?>
+				
 			</div>
 			<div id="survey_content_right"></div>
 			<div class=survey_title_left></div>
-			<div class=survey_title_center>c
+			<div class=survey_title_center>
 				<div class=wz>礼品兑换</div>
 				<div class=more><a href="">more>></a></div>
 			</div>
@@ -81,7 +77,7 @@
 				<div class=Bulletin_t>
 					<div class=wz>会员公告</div>
 				</div>
-				<div id=Bulletin_c>
+				<div id=Bulletin_c  <?php $pos_name='club_post'; show_page_pos($pos_name); ?>>
 					<div id=pic><a href=""><img border=0 src="/images/index/one.jpg"></a></div>
 					<div id=pictitle><a href="">中国最富有的女富豪</a></div>
 					<div id=piccontent><a href="">其加薪理由是在危机期间未接作家沃尔夫各央行应将通胀目标从2%提高至4%...</a></div>
