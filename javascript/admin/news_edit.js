@@ -87,7 +87,7 @@ $(function(){
 		filte_len = filte_words.length;
 	});
 	$('#a_related_industry').colorbox({href:'industry_filter.php?ids='+ $('#hidden_related_industry').val()});
-	$('#publish_schedule').datepicker({
+	$('.publish_schedule').datepicker({
 		changeMonth: true,
 		changeYear: true,
 		monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
@@ -253,45 +253,9 @@ $(function(){
 		$('#tr_copy_news').hide();
 		$(this).next().val(0);
 	});
-	$('#a_sub_headline').colorbox({href:'news_filter.php?selected_news=' + $('#hidden_sub_headline').val()+'&call_back=save_sub_headlines'});
+	//$('#a_sub_headline').colorbox({href:'news_filter.php?selected_news=' + $('#hidden_sub_headline').val()+'&call_back=save_sub_headlines'});
 	$('#a_related_news').colorbox({href:'news_filter.php?selected_news=' + $('#hidden_related_news').val()+'&call_back=save_related_news'});
-	refresh_sub_headlines();
+	//refresh_sub_headlines();
 	refresh_related_news();
 	refresh_related_industry();
-	var json_options = {
-			script:'/admin/user/_user_autocomplete.php?limit=6&',
-			varname:'auto_name',
-			json:true,
-			shownoresults:true,
-			maxresults:16,
-			meth:'post',
-			//noresults:"没有匹配的记录",
-			valueSep:null
-	};
-	$('#news_author').autocomplete({
-		source:'/admin/user/_user_autocomplete.php?'
-	});
-	$('#news_author_type').change(function(e){
-		var author_type= $(this).val();
-		//记者
-		if(author_type == 1 && $('#news_author').val()){
-			$.post('/admin/user/_check_user.php',{'name':$('#news_author').val(),'role_name':'journalist'},function(data){
-				data = parseInt(data);
-				if(data <= 0){
-					$('#news_author').val('');
-					$('#news_author').focus();
-				}
-				$('#news_author_id').val(data);
-			});
-		}else if(author_type == 2){
-			$.post('/admin/user/_check_user.php',{'name':$('#news_author').val(),'role_name':'author'},function(data){
-				data = parseInt(data);
-				if(data <= 0){
-					$('#news_author').val('');
-					$('#news_author').focus();
-				}
-				$('#news_author_id').val(data);
-			});
-		}
-	});
 });

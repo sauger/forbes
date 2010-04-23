@@ -78,7 +78,7 @@
 					<div class=wz>会员公告</div>
 				</div>
 				<div id=Bulletin_c  <?php $pos_name='club_post'; show_page_pos($pos_name); ?>>
-					<div id=pic><a href=""><img border=0 src="/images/index/one.jpg"></a></div>
+					<div id=pic><a href=""><img border=0 src="<></img"></a></div>
 					<div id=pictitle><a href="">中国最富有的女富豪</a></div>
 					<div id=piccontent><a href="">其加薪理由是在危机期间未接作家沃尔夫各央行应将通胀目标从2%提高至4%...</a></div>
 				</div>
