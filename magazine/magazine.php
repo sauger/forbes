@@ -24,6 +24,7 @@
 		<div id=bread>
 			<a href="/magazine/">杂志首页</a> > <span>杂志</span>		
 		</div>
+		<div id=bread_line></div>
 		<div id=t>
 			<div id=t_l>
 				<div id=t_l_t>
@@ -79,7 +80,6 @@
 				$magazine_news = $db->query($sql);
 				for($i=0;$i<count($magazine_news);$i++){
 			?>
-			<img src="upload/xsHzQbn2ZP.jpg" style=" border:1px solid red; width:200px; height:200px;">
 			<div class=m_l>
 					<div class=picture>
 					<img src="<?php if($magazine_news[$i]->video_photo_src!='')echo $magazine_news[$i]->video_photo_src;else echo $magazine_now->img_src;?>" width="150" height="190">
