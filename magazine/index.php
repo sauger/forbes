@@ -18,7 +18,7 @@
 	<div id=ibody>
 	<? require_once('../inc/top.inc.php');?>
 		<div id=bread>
-			<span>杂志首页</span>		
+			<span>杂志首页</span>
 		</div>
 		<div id=bread_line></div>
 		<div id=zzleft>
@@ -26,7 +26,7 @@
 			<div id=l_t_content>
 				<?php $pos_name = 'magazine_index0';?>
 				<div class=l_title>
-					<div class=wz>杂志展示</div>	
+					<div class=wz>杂志展示</div>
 				</div>
 				<div class=l_pic>
 					<?php show_page_img($pos_items,$pos_name);?>

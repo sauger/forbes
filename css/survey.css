@@ -28,3 +28,19 @@ a{	color: #333333;	text-decoration: none;}
 #answer_hr{width:600px; height:2px; margin-left:20px; margin-top:15px; border-top:1px dotted #E2E3c8; float:left; display:inline;}
 #submit{width:63px; height:24px;background:url(../images/survey/right_b_b_btn.jpg) no-repeat; border:0px solid #ffffff; text-align:center; line-height:25px; float:left; display:inline;}
 #submit_div{width:65px; height:25px; margin-left:280px; float:left; display:inline;}
+
+
+
+
+
+
+
+#questions2_div{width:658px;  float:left; display:inline;}
+.survey2_z{width:658px; height:180px;  float:left; display:inline;}
+.title_pic{width:19px; height:21px; margin-top:3px; margin-left:10px; float:left; display:inline;}
+.s2_title{width:500px; height:20px; margin-top:5px; line-height:20px; font-size:15px; font-weight:600; color:#246BB0;  margin-left:5px; float:left; display:inline;}
+.s2_top{width:658px; height:30px; background:url(../images/survey/top2_pg.jpg); float:left; display:inline;}
+.s2_c{width:600px; height:20px; margin-left:10px; margin-top:10px; overflow:hidden; float:left; display:inline;}
+.s2_c_radio{width:20px; height:20px;  float:left; display:inline;}
+.s2_c_content{width:570px; height:20px; margin-left:5px; font-size:13px; line-height:20px; font-weight:550;  float:left; display:inline;}
+#s2_submit{width:658px; height:30px; text-align:center;  float:left; display:inline;}
