@@ -55,6 +55,11 @@
 		</tr>
 		
 		<tr class=tr4>
+			<td class=td1>作者名</td>
+			<td><input type="text" name="news[author]" id="news_short_title" value="<?php echo strip_tags($news->author ? $news->author : $_SESSION['admin_nick_name']);?>"></input></td>
+		</tr>
+		
+		<tr class=tr4>
 			<td class=td1>wap标题</td>
 			<td><input type="text" name="news[wap_title]" id="news_wap_title" value="<?php echo strip_tags($news->wap_title);?>"></input></td>
 		</tr>		
