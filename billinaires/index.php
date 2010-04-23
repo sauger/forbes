@@ -25,7 +25,7 @@
 					$pos_name = "richindex_head";
 							
 			?>
-			<div id=billinaires_head pos ="<?php echo $pos_name;?>">
+			<div id=billinaires_head <?php show_page_pos($pos_name); ?>>
 				<div id=pic>
 					<img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"/>
 					<div id=flash></div>

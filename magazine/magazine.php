@@ -134,7 +134,6 @@
 				</div>
 				<input type=button id=button>
 			</div>
-		</div>
 	<?php require_once('../inc/bottom.inc.php');?>
 	</div>
 </body>
