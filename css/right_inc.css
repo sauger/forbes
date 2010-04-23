@@ -34,27 +34,21 @@ ul{list-style:none; padding:0; margin:0;}
 #right_inc #r_c_l{width:9px; height:140px; cursor:pointer; background:url(/images/right/r_c_l.jpg) no-repeat; float:left; display:inline;}
 #right_inc #r_c_r{width:9px; height:140px; cursor:pointer; background:url(/images/right/r_c_r.jpg) no-repeat; float:left; display:inline;}
 #right_inc #r_c_c{width:299px; height:140px; overflow:hidden; float:left; display:inline;}
-#right_inc #r_c_c .content{width:139px; height:138px; margin-top:5px; margin-left:5px; margin-right:5px; float:left; display:inline;}
-#right_inc #r_c_c .pic{width:135px; height:100px; padding:1px; border:1px solid #cccccc;  float:left; display:inline;}
+#right_inc #r_c_c .content{width:139px; height:138px; margin-top:5px; margin-left:5px; margin-right:3px; float:left; display:inline;}
+#right_inc #r_c_c .pic{width:137px; height:102px; padding:1px; border:1px solid #cccccc;  float:left; display:inline;}
 #right_inc #r_c_c .pic img{width:135px; height:100px;}
 #right_inc #r_c_c .pictitle{width:135px; height:34px; font-size:12px; overflow:hidden; line-height:17px; float:left; display:inline;}
 #right_inc #r_c_c .pictitle a{color:#003899; text-decoration:none;}
 
-#right_inc #hy_r_b_title{width:315px; *width:317px; height:28px; margin-top:10px; border:1px solid #dfdfdf; background:url('/images/right/order_title_bg.jpg') repeat-x; float:left; display:inline;}
-#right_inc #hy_r_b_title #wz{height:18px; margin-top:5px; margin-left:15px; color:#999999; font-size:14px; font-weight:bold; line-height:18px; float:left; display:inline;}
-#right_inc #hy_r_b_left{width:3px; height:156px; background:url(/images/right/order_left.jpg); clear:left; float:left; display:inline;}
-#right_inc #hy_r_b_center{width:311px; height:155px; *height:156px; border-bottom:1px solid #dfdfdf; float:left; display:inline;}
-#right_inc #hy_r_b_center #content{width:291px; height:104px; margin-top:20px; margin-left:10px; float:left; display:inline;}
-#right_inc #hy_r_b_center #content_t{width:291px; height:24px; float:left; display:inline;}
-#right_inc #hy_r_b_center #content_t #content_t_l{width:195px; height:24px; line-height:24px; font-size:14px; color:#11579e; font-weight:bold; float:left; display:inline;}
-#right_inc #hy_r_b_center #content_t #content_t_r{width:63px; height:24px; line-height:20px; float:right; display:inline;}
-#right_inc #hy_r_b_center #content_t #content_t_r button{width:63px; height:24px; border:0px; font-weight:bold; font-size:14px; background:url('/images/right/right_b_b_btn.jpg') no-repeat;}
-#right_inc #hy_r_b_center #content_b{width:291px; margin-top:10px; float:left; display:inline;}
-#right_inc #hy_r_b_center #content_b #content_b_l{width:195px; color:#666666; line-height:24px; float:left; display:inline;}
-#right_inc #hy_r_b_center #content_b #content_b_l .cl{width:195px; height:24px; font-size:12px; margin-top:5px; float:left; display:inline;}
-#right_inc #hy_r_b_center #content_b #content_b_r{width:63px; height:24px; margin-top:24px; line-height:20px; float:right; display:inline;}
-#right_inc #hy_r_b_center #content_b #content_b_r button{width:63px; height:24px; border:0px; font-weight:bold; font-size:14px; background:url('/images/right/right_b_b_btn.jpg') no-repeat;}
-#right_inc #hy_r_b_right{width:3px; height:156px; background:url(/images/right/order_right.jpg); float:left; display:inline;}
+#right_inc #order_top{width:291px; height:24px; margin-top:20px; margin-left:10px; float:left; display:inline;}
+#right_inc #order_t_l{width:195px; height:24px; line-height:24px; font-size:14px; color:#11579e; font-weight:bold; float:left; display:inline;}
+#right_inc #order_t_r{width:63px; height:24px; line-height:20px; float:right; display:inline;}
+#right_inc #order_t_r button{width:63px; height:24px; border:0px; font-weight:bold; font-size:14px; background:url('/images/right/right_b_b_btn.jpg') no-repeat;}
+#right_inc #order_bot{width:291px; margin-top:10px; margin-left:10px; float:left; display:inline;}
+#right_inc #order_b_l{width:195px; color:#666666; line-height:24px; float:left; display:inline;}
+#right_inc #order_b_l .cl{width:195px; height:24px; font-size:12px; margin-top:5px; float:left; display:inline;}
+#right_inc #order_b_r{width:63px; height:24px; margin-top:24px; line-height:20px; float:right; display:inline;}
+#right_inc #order_b_r button{width:63px; height:24px; border:0px; font-weight:bold; font-size:14px; background:url('/images/right/right_b_b_btn.jpg') no-repeat;}
 
 
 #right_inc .rich_content{width:300px; height:105px; margin-left:5px; border-bottom:1px dashed #6E6E6E; float:left; display:inline;}
