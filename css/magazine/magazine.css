@@ -56,6 +56,6 @@ p{margin:0; padding:0}
 #ad{width:1000px; height:102px; background-image:url(../../../images/magazine/ad.jpg); margin-top:18px; float:left; display:inline;}
 #m #title2{width:995px; height:30px;  background:url(../../../images/magazine/title1.jpg) no-repeat; float:left; display:inline;}
 #title_f{width:300px; height:30px; margin-left:15px; color:#8D8D8D; font-weight:bold; font-size:14px; line-height:30px; float:left; displaY:inline;}
-#t_r_b p{font-size:14px;  letter-spacing:0.1px; line-height:25px; font-weight:500;}
+#t_r_b p{font-size:12px;  letter-spacing:0.1px; line-height:25px; font-weight:500;}
 #zhuanlan_top{width:300px; height:50px; font-size:18px; font-weight:bold; color:#003A7B; line-height:50px; float:left; display:inline;}
 #t_r_pg{width:500px; height:580px; margin-left:35px; overflow:hidden;  float:left; display:inline;}
