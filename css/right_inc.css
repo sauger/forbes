@@ -79,6 +79,17 @@ ul{list-style:none; padding:0; margin:0;}
 #right_inc .column_box .clo_des{width:217px; height:40px; margin-top:2px; margin-left:10px; color:#666666; line-height:20px; font-size:12px; overflow:hidden; float:left; display:inline;}
 #right_inc .column_box .clo_news{width:270px; height:18px; padding-left:15px; line-height:18px; font-size:13px; overflow:hidden; font-weight:bold; line-height:18px; margin-left:3px; margin-top:7px; background:url(/images/right/tar3.gif) no-repeat 0 6px; float:left; display:inline;}
 
+#r_c_title{width:317px; height:30px; margin-top:10px; line-height:30px; font-size:14px; color:#999999; font-weight:bold; float:right;}
+#r_c_l{width:9px; height:140px; cursor:pointer; background:url(/images/right/r_c_l.jpg) no-repeat;}
+#r_c_r{width:9px; height:140px; cursor:pointer; background:url(/images/right/r_c_r.jpg) no-repeat;}
+#r_c_c{width:299px; height:140px; overflow:hidden;}
+#r_c_c .content{width:139px; height:138px; margin-top:5px; margin-left:5px; margin-right:5px;}
+#r_c_c .pic{width:137px; height:102px;  border:1px solid #cccccc; overflow:hidden;}
+#r_c_c .pic img{width:135px; height:100px; margin:1px;}
+#r_c_c .pictitle{width:135px; height:34px; line-height:17px;}
+#r_c_c .pictitle a{color:#003899; text-decoration:none;}
+
+
 #right_inc .right_span{height:25px; margin-left:20px; margin-top:10px; line-height:25px; font-weight:bolder; white-space:nowrap;  font-size:13px; float:left; display:inline;}
 #right_inc .right_span a{color:#333385; text-decoration:none;}
 
