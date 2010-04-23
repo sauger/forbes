@@ -1,6 +1,6 @@
 <?php init_page_items();?>
 <div class="left_title">
-	<div class="left_bottom_title" name="create" style="background:url(/images/right/background2.jpg); color:#000000;">创业</div>
+	<div class="left_bottom_title selected" name="create">创业</div>
 	<div name="ology" class="left_bottom_title">科技</div>
 	<div style="width:77px;" name="business" class="left_bottom_title">商业</div>
 	<div name="invest" class="left_bottom_title">投资</div>

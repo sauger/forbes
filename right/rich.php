@@ -4,8 +4,8 @@
 		$rich = $db->query($sql);
 		if($db->record_count>0){
 	?>
-	<div id="r_t_title">
-		<div id=wz>行业富豪</div>
+	<div class=right_title>
+		<div class=title_con>行业富豪</div>
 	</div>
 	<div class="right_box">
 		<?php

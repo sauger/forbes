@@ -88,7 +88,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #picture_content{width:359px; height:359px; border:2px solid #D7D8D7; margin-left:2px; margin-top:20px;}
 #picture_content img{width:359px; height:359px;}
 #picture_list{margin-top:20px;}
-#picture_list img{width:108px; height:108px; border: 1px solid #D7D8D7;padding:1px;cursor: pointer; margin-right:10px;}
+#picture_list img{width:108px; height:108px; border: 1px solid #D7D8D7; cursor: pointer; margin-right:7px; overflow:hidden;}
 #picture_list img.selected{border:3px solid #236B9E; padding:1px; }
 #pic_list #email{width:114px; height:23px; margin-top:12px; margin-right:20px; float:right;}
 #pic_list #email #pic{width:40px; height:23px; }
