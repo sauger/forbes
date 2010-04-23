@@ -29,7 +29,7 @@
 ?>
 <div id=ibody>
 		<?php require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=bread><a href="#">榜单</a></div>
+		<div id=bread><a href="index.php">榜单</a></div>
 		<div id=bread_line></div>
 		<div id="list_list_content" style="width:1000px;">
 			<?php

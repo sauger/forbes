@@ -66,7 +66,7 @@
 			
 		 <div id=forbes_tltb>	
 			 <div id=lujiazui>
-  		 	 <div id=lujiazui_caption><a href="">陆家嘴早茶</a><span>Lujiazui Breakfast</span></div>
+  		 	 <div id=lujiazui_caption><a href="">陆家嘴早餐</a><span>Lujiazui Breakfast</span></div>
   		 	 	<?php for($i=0;$i<3;$i++){
   		 	 		$pos_name = "index_bf".$i;
   		 	 	?>
@@ -438,7 +438,7 @@
 			
 		<div class=forbes_l style="margin-top:0px; margin-left:25px;">
 	  	<div class=caption>
-				<div class=captions>采编智库<span>Bloggers</span></div>
+				<div class=captions>采编空间<span>Bloggers</span></div>
 				<div class=line>|</div>
 				<a href="/column/" class=more></a>
 			</div>

@@ -71,7 +71,6 @@
 					<td class="sub_menu"><li style="color:#0000ff;"><?php echo $record2[$j]->name;?></li></td>
 					<td><input type="text" class="priority" name="<?php echo $record2[$j]->id;?>" value="<?php if($record2[$j]->priority!=100){echo $record2[$j]->priority;}?>" style="width:30px;"></td>
 					<td><?php echo $record2[$j]->href;?></td>
-					<td><?php echo display_type($record2[$j]->type);?></td>
 					<td><?php echo display_target($record2[$j]->target);?></td>
 					<td><a href="edit.php?id=<?php echo $record2[$j]->id;?>&type=<?php echo $type?>" target="admin_iframe" title="编辑"><img src="/images/btn_edit.png" border="0"></a>　<a class="del" name="<?php echo $record2[$j]->id;?>" style="color:#ff0000; cursor:pointer" title="删除"><img src="/images/btn_delete.png" border="0"></a></td>
 				</tr>
@@ -82,10 +81,13 @@
 			//--------------------
 		?>
 		<tr class=btools>
-			<td colspan="10" ><button id="edit_priority">编辑优先级</button> <button id="clear_priority">清空优先级</button></td>
+			<td colspan="10" >
+				<button id="edit_priority">编辑优先级</button>
+				<button id="clear_priority">清空优先级</button>
+				<input type="hidden" id="db_table" value="fb_navigation">
+			</td>
 		</tr>
 	</table>
 </div>
-	<input type="hidden" id="db_table" value="fb_navigation">
 </body>
 </html>
