@@ -38,9 +38,14 @@
 						
 						<div class="survey2_z">
 									<div class="s2_top">
-											<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
-											<div class="s2_title">首付款撒旦法沙发ius生地方eif啊是的烦恼</div>
+											<div class="top_lpg"><img src="../images/survey/t_l.jpg"></div>
+													<div class="top_pg">
+													<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
+													<div class="s2_title">首付款撒旦法沙发ius生地方eif啊是的烦恼</div>
+													</div>
+											<div class="top_rpg"><img src="../images/survey/t_r.jpg"></div>
 									</div>
+									<div class="s2"></div>
 									<div class="s2_content">
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
@@ -62,18 +67,15 @@
 						</div>
 						<div class="survey2_z">
 									<div class="s2_top">
-											<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
-											<div class="s2_title">首付款撒旦法沙发iu生地方seif啊是的烦恼</div>
+											<div class="top_lpg"><img src="../images/survey/t_l.jpg"></div>
+													<div class="top_pg">
+													<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
+													<div class="s2_title">首付款撒旦法沙发ius生地方eif啊是的烦恼</div>
+													</div>
+											<div class="top_rpg"><img src="../images/survey/t_r.jpg"></div>
 									</div>
+									<div class="s2"></div>
 									<div class="s2_content">
-											<div class="s2_c">
-													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊 生地方啊啊发生地方那是哦发啊</div>
-											</div>
-											<div class="s2_c">
-													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊 啊啊发生地方生地方那是哦发啊</div>
-											</div>
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
 													<div class="s2_c_content">哈哈啊 啊生地方啊发生地方那是哦发啊</div>
@@ -82,25 +84,9 @@
 													<div class="s2_c_radio"><input type="radio" ></div>
 													<div class="s2_c_content">哈哈啊 啊啊发生地方生地方那是哦发啊</div>
 											</div>
-									</div>
-						</div>
-						<div class="survey2_z">
-									<div class="s2_top">
-											<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
-											<div class="s2_title">首付款撒旦法沙发iuseif生地方啊是的烦恼</div>
-									</div>
-									<div class="s2_content">
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊 啊啊发生地方生地方那是哦发啊</div>
-											</div>
-											<div class="s2_c">
-													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊生地方 啊啊发生地方那是哦发啊</div>
-											</div>
-											<div class="s2_c">
-													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊生地方 啊啊发生地方那是哦发啊</div>
+													<div class="s2_c_content">哈哈啊 啊啊生地方发生地方那是哦发啊</div>
 											</div>
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
@@ -110,37 +96,76 @@
 						</div>
 						<div class="survey2_z">
 									<div class="s2_top">
-											<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
-											<div class="s2_title">首付款撒旦法沙发iuse生地方if啊是的烦恼</div>
+											<div class="top_lpg"><img src="../images/survey/t_l.jpg"></div>
+													<div class="top_pg">
+													<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
+													<div class="s2_title">首付款撒旦法沙发ius生地方eif啊是的烦恼</div>
+													</div>
+											<div class="top_rpg"><img src="../images/survey/t_r.jpg"></div>
 									</div>
+									<div class="s2"></div>
 									<div class="s2_content">
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈生地方啊 啊啊发生地方那是哦发啊</div>
+													<div class="s2_c_content">哈哈啊 啊生地方啊发生地方那是哦发啊</div>
+											</div>
+											<div class="s2_c">
+													<div class="s2_c_radio"><input type="radio" ></div>
+													<div class="s2_c_content">哈哈啊 啊啊发生地方生地方那是哦发啊</div>
+											</div>
+											<div class="s2_c">
+													<div class="s2_c_radio"><input type="radio" ></div>
+													<div class="s2_c_content">哈哈啊 啊啊生地方发生地方那是哦发啊</div>
 											</div>
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
 													<div class="s2_c_content">哈哈啊 啊啊发生生地方地方那是哦发啊</div>
 											</div>
+									</div>
+						</div>
+						<div class="survey2_z">
+									<div class="s2_top">
+											<div class="top_lpg"><img src="../images/survey/t_l.jpg"></div>
+													<div class="top_pg">
+													<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
+													<div class="s2_title">首付款撒旦法沙发ius生地方eif啊是的烦恼</div>
+													</div>
+											<div class="top_rpg"><img src="../images/survey/t_r.jpg"></div>
+									</div>
+									<div class="s2"></div>
+									<div class="s2_content">
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊 生地方啊啊发生地方那是哦发啊</div>
+													<div class="s2_c_content">哈哈啊 啊生地方啊发生地方那是哦发啊</div>
 											</div>
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
 													<div class="s2_c_content">哈哈啊 啊啊发生地方生地方那是哦发啊</div>
+											</div>
+											<div class="s2_c">
+													<div class="s2_c_radio"><input type="radio" ></div>
+													<div class="s2_c_content">哈哈啊 啊啊生地方发生地方那是哦发啊</div>
+											</div>
+											<div class="s2_c">
+													<div class="s2_c_radio"><input type="radio" ></div>
+													<div class="s2_c_content">哈哈啊 啊啊发生生地方地方那是哦发啊</div>
 											</div>
 									</div>
 						</div>
 						<div class="survey2_z">
 									<div class="s2_top">
-											<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
-											<div class="s2_title">首付款撒旦法沙发iu生地方seif啊是的烦恼</div>
+											<div class="top_lpg"><img src="../images/survey/t_l.jpg"></div>
+													<div class="top_pg">
+													<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
+													<div class="s2_title">首付款撒旦法沙发ius生地方eif啊是的烦恼</div>
+													</div>
+											<div class="top_rpg"><img src="../images/survey/t_r.jpg"></div>
 									</div>
+									<div class="s2"></div>
 									<div class="s2_content">
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊生地方 啊啊发生地方那是哦发啊</div>
+													<div class="s2_c_content">哈哈啊 啊生地方啊发生地方那是哦发啊</div>
 											</div>
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
@@ -148,14 +173,16 @@
 											</div>
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊 生地方啊啊发生地方那是哦发啊</div>
+													<div class="s2_c_content">哈哈啊 啊啊生地方发生地方那是哦发啊</div>
 											</div>
 											<div class="s2_c">
 													<div class="s2_c_radio"><input type="radio" ></div>
-													<div class="s2_c_content">哈哈啊撒旦法发生地方那是哦发啊</div>
+													<div class="s2_c_content">哈哈啊 啊啊发生生地方地方那是哦发啊</div>
 											</div>
 									</div>
 						</div>
+						
+						
 						<div id="s2_submit"><input type="button" style="border:0 solid red; width:63px; height:24px;  background:url(../images/survey/right_b_b_btn.jpg);" value="提交"></div>
 						
 						
