@@ -1,0 +1,7 @@
+CREATE TABLE `forbes`.`fb_survey_record2` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `record_id` INTEGER UNSIGNED NOT NULL,
+  `vote_id` INTEGER UNSIGNED NOT NULL,
+  `item_id` INTEGER UNSIGNED NOT NULL,
+  PRIMARY KEY (`id`)
+)
