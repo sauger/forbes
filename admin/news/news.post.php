@@ -66,7 +66,7 @@
 	$news->short_title = strtr($news->short_title,$table_change);	
 	$news->news_type= 1;
 	$news->publisher = $_SESSION['admin_user_id'];
-	$news->author = $_SESSION['admin_nick_name'];
+	if(!$news->author) $news->author = $_SESSION['admin_nick_name'];
 	if($news_id == ''){
 		//insert news
 		$news->created_at = date("Y-m-d H:i:s");
