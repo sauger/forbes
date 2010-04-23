@@ -53,6 +53,7 @@
 					编者的话
 				</div>
 				<div id=t_r_b>
+					<div id="t_r_pg">
 					<div id=t_r_b_l>
 						<div id=picture1>
 							<img width="169px" src="<?php echo $magazine_now->img_src2?>">
@@ -61,28 +62,26 @@
 							<a href="/column/column.php?id=">总编专栏</a>
 						</div>
 					</div>
-					<div id=t_r_b_r>
-						<div id=title2>
-							<?php echo $magazine_now->title;?>
-						</div>
-						<div id=text>
+					<div id="zhuanlan_top">标题啊 呵呵 艾丝凡阿斯多夫</div>
 							<?php echo $magazine_now->description;?>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id=m>
 			<div id=title2>
-				《福布斯》中文杂志 <?php echo $magazine_now->name;?>精华导读
+					<div id="title_f">
+					《福布斯》中文杂志 <?php echo $magazine_now->name;?>精华导读
+					</div>
 			</div>
 			<?php
 				$sql = "select t1.title,t1.short_title,t1.id,t1.description,t1.video_photo_src from fb_news t1 join fb_magazine_relation t2 on t1.id=t2.resource_id where t2.magazine_id={$id} order by t2.priority limit 4";
 				$magazine_news = $db->query($sql);
 				for($i=0;$i<count($magazine_news);$i++){
 			?>
+			<img src="upload/xsHzQbn2ZP.jpg" style=" border:1px solid red; width:200px; height:200px;">
 			<div class=m_l>
-				<div class=picture>
+					<div class=picture>
 					<img src="<?php if($magazine_news[$i]->video_photo_src!='')echo $magazine_news[$i]->video_photo_src;else echo $magazine_now->img_src;?>" width="150" height="190">
 				</div>
 				<div class=m_l_r>
