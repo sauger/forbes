@@ -55,7 +55,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #list_left{width:675px;}
 #list_left_top{width:600px; height:25px; margin-top:15px;}
-#list_left_top a{width:100px; height:25px; color:#246BB0; font-size:12px; line-height:25px; text-align:center; text-decoration:none; background:url('/images/lists/button.gif'); float:left; display:inline;}
+#list_left_top a{width:100px; height:25px; color:#246BB0; font-size:12px; line-height:25px; text-align:center; text-decoration:none; background:url('/images/list/button.gif'); float:left; display:inline;}
 #list_list_content{width:660px; margin-top:10px;}
 #list_list_content table{width:100%; text-align:center; background:#e7e7e7;}
 #list_list_content td{height:32px; text-align:center; padding:5px; word-break:break-all; word-wrap:break-word; font-size:12px; line-height:16px; background:#ffffff;}
@@ -99,7 +99,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #pic_list #pic_content #title a{color:#246bb0; text-decoration:none;}
 #pic_list #pic_content #content{width:239px; height:320px; margin-top:10px; line-height:20px; overflow:hidden;}
 #pic_list #pic_content #content a{color:#333333; text-decoration:none;}
-#pic_list #pic_recommend{width:236px; height:30px; margin-top:40px; margin-right:20px; background:url('/images/lists/r_b_title.jpg') no-repeat; float:right;}
+#pic_list #pic_recommend{width:236px; height:30px; margin-top:40px; margin-right:20px; background:url('/images/list/r_b_title.jpg') no-repeat; float:right;}
 #pic_list #pic_recommend #wz{width:96px; height:18px; line-height:18px; margin-top:8px; margin-left:40px; color:#236b9e; font-size:14px; font-weight:bold; }
 #pic_list .cl{width:215px; height:17px; margin-top:10px; margin-right:20px; line-height:17px; font-size:13px;  float:right;}
 #pic_list .cl a{color:#333333; text-decoration:none;}
