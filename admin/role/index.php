@@ -36,8 +36,8 @@
 				<td><?php echo $roles[$i]->nick_name;?></td>
 				<td><?php echo $roles[$i]->comment;?></td>
 				<td>	
-					<a href="edit.php?id=<?php echo $roles[$i]->id;?>" title="编辑" style="color:#000000; text-decoration:none"><img src="/images/btn_edit.png" border="0"></a>
-					<span name="<?php echo $roles[$i]->id;?>" class="del" title="删除" style="color:#000000; text-decoration:none"><img src="/images/btn_delete.png" border="0"></span> 
+					<a href="edit.php?id=<?php echo $roles[$i]->id;?>" title="编辑" style="color:#000000; text-decoration:none"><img src="/images/admin/btn_edit.png" border="0"></a>
+					<span name="<?php echo $roles[$i]->id;?>" class="del" title="删除" style="color:#000000; text-decoration:none"><img src="/images/admin/btn_delete.png" border="0"></span> 
 				</td>
 			</tr>
 			<? }?>

@@ -28,7 +28,7 @@ $record = $table->paginate('all',$conditons,'30');
 					</td>
 					
 					<td>
-						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="add_compay_info" name="<?php echo $record[$i]->id;?>" style="cursor:pointer"><img src="/images/btn_add.png" border="0" title="添加"></img></a>
+						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="add_compay_info" name="<?php echo $record[$i]->id;?>" style="cursor:pointer"><img src="/images/admin/btn_add.png" border="0" title="添加"></img></a>
 					</td>
 				</tr>
 		<?php
