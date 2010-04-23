@@ -79,11 +79,11 @@
 		</tr>
 		<tr class=tr4>
 			<td align="center">投票次数限制：</td>
-			<td align="left"><input type="text" name="vote[max_vote_count]" class="number" value="<?php echo $vote->max_vote_count?>">如果不填则无限制</td>
+			<td align="left"><input type="text" name="vote[max_vote_count]" class="number" value="<?php if($vote->max_vote_count!=0)echo $vote->max_vote_count?>">如果不填则无限制</td>
 		</tr>
 		<tr class=tr4>
 			<td align="center">投票选项限制：</td>
-			<td align="left"><input type="text" name="vote[max_item_count]" class="number" value="<?php echo $vote->max_item_count?>">如果不填则无限制</td>
+			<td align="left"><input type="text" name="vote[max_item_count]" class="number" value="<?php if($vote->max_item_count!=0)echo $vote->max_item_count?>">如果不填则无限制,如果前台页面想采用单选框请在此处填1</td>
 		</tr>
 		<tr class=tr4>
 			<td align="center">开始日期：</td>
@@ -112,10 +112,10 @@
 			<td align="left" id="single" <?php if($vote->vote_type=="more_vote"){?>style="display:none;"<?php }?>>
 				<input type="text" name="vote_item[title][]" style="width:300px" id="first_item">
 				<input type="file" name="vote_item[]" class="item_image" style="display:none;">
-				<a id="add_item" value="1" style="cursor:pointer;">继续添加</a>
+				<a id="add_item" value="1" style="cursor:pointer;" title="继续添加"><img src="/images/btn_add.png" border="0"></a>
 			</td>
 			<td align="left" <?php if($vote->vote_type!="more_vote"){?>style="display:none;"<?php }?> id="many">
-					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=600&width=560" class="thickbox" id="add_sub_vote">添加子投票</a>
+					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=600&width=560" class="thickbox" id="add_sub_vote" title="添加子投票"><img src="/images/btn_add.png" border="0"></a>
 			</td>
 		</tr>
 		<?php if($vote->vote_type=="more_vote"){?>
@@ -123,7 +123,7 @@
 			<tr class=tr4>
 				<td align="center">投票项目：</td>
 				<td align="left">
-					<div style="width:300px;" name="<?php echo $item[$k]->sub_vote_id;?>"><?php echo $item[$k]->title;?></div>　　<input type="hidden" name="old_vote_vote[title][]" value="<?php echo $item[$k]->title;?>"><input type="hidden" name="old_vote_vote[id][]" value="<?php echo $item[$k]->id;?>"><a class="thickbox" href="vote_add.ajax.php?id=<?php echo $item[$k]->sub_vote_id;?>&KeepThis=true&TB_iframe=true&height=600&width=560">点击查看</a><a class="del_old_vote" name="<?php echo $item[$k]->sub_vote_id;?>" style="cursor:pointer;margin-left:50px" title="删除"><img src="/images/btn_delete.png" border="0"></a>
+					<div style="width:300px;" name="<?php echo $item[$k]->sub_vote_id;?>"><?php echo $item[$k]->title;?></div>　　<input type="hidden" name="old_vote_vote[title][]" value="<?php echo $item[$k]->title;?>"><input type="hidden" name="old_vote_vote[id][]" value="<?php echo $item[$k]->id;?>"><a class="thickbox" href="vote_add.ajax.php?id=<?php echo $item[$k]->sub_vote_id;?>&KeepThis=true&TB_iframe=true&height=600&width=560" title="点击查看"><img src="/images/btn_edit.png" border="0"></a><a class="del_old_vote" name="<?php echo $item[$k]->sub_vote_id;?>" style="cursor:pointer;margin-left:50px" title="删除"><img src="/images/btn_delete.png" border="0"></a>
 				</td>
 			</tr>
 			<?php }?>
