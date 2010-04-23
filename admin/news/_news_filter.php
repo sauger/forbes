@@ -1,5 +1,6 @@
 <?php
 	require_once('../../frame.php');
+	judge_role();
 	$category = new category_class('news');
 	$key = urldecode($_REQUEST['key']);
 	$order = "";
@@ -36,7 +37,6 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>发布新闻</title>
 	<?php 
-		judge_role();
 		css_include_tag('admin');
 	?>
 </head>
