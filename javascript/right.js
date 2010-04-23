@@ -7,21 +7,15 @@ $(function(){
 	});
 	
 	$(".column_list").hover(function(){
-		$(".column_list").css({background:'none',color:'#999'});
-		$(this).css({
-			background: 'url(/images/right/background1.jpg)',
-			color: '#000'
-		});
+		$(".column_list").removeClass('selected');
+		$(this).addClass('selected');
 		$(".left_top").css('display','none');
-		$("#"+$(this).attr('name')).css('display','inline');
+		$("#"+$(this).attr('name')).show();
 	});
 	
 	$(".left_bottom_title").hover(function(){
-		$(".left_bottom_title").css({background:'none',color:'#999'});
-		$(this).css({
-			background: 'url(/images/right/background2.jpg)',
-			color:'#000'
-		});
+		$(".left_bottom_title").removeClass('selected');
+		$(this).addClass('selected');
 		$(".left_bottom").css('display','none');
 		$("#"+$(this).attr('name')).css('display','inline');
 	});

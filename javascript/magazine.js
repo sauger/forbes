@@ -7,9 +7,9 @@ $(function(){
 			$(ob).next().show();
 			$(ob).hide();
 			prev = true;
-			$("#prev").css('background', 'url(/images/html/magazine/prev2.gif)')
+			$("#prev").css('background', 'url(/images/magazine/prev2.gif)')
 			if ($(ob).next().next().attr('class') != 'top_picture') {
-				$("#next").css('background', 'url(/images/html/magazine/next2.gif)')
+				$("#next").css('background', 'url(/images/magazine/next2.gif)')
 				next = false;
 			}
 		}
@@ -21,9 +21,9 @@ $(function(){
 			$(ob).prev().show();
 			$(ob).hide();
 			next = true;
-			$("#next").css('background', 'url(/images/html/magazine/next.jpg)')
+			$("#next").css('background', 'url(/images/magazine/next.jpg)')
 			if ($(ob).prev().prev().attr('class') != 'top_picture') {
-				$("#prev").css('background', 'url(/images/html/magazine/prev.jpg)')
+				$("#prev").css('background', 'url(/images/magazine/prev.jpg)')
 				prev = false;
 			}
 		}

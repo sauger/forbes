@@ -1,6 +1,5 @@
-<div id="r_t_title">
-	<div id=wz><?php echo $catename[0]->name; ?>榜单</div>
-	<div id=more><a href=""><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
+<div class=right_title>
+	<div class=title_con><?php echo $catename[0]->name; ?>榜单</div>
 </div>
 <div class="right_box">
 	<?php
