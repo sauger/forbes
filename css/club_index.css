@@ -9,8 +9,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #bread a{color:#666666; text-decoration:none;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
 #club_left{width:635px; margin-top:10px; }
+#club_img{width:635px;}
 #club_l_t{width:635px; height:315px; background:#efefef; position:relative; }
-#club_l_t img{width:619px; height:299px; margin:8px;}
+#club_l_t .img{margin:8px;}
 #club_l_t #fd{width:615px; height:59px; top:248px; left:10px;  background:#7f7f7f; filter:alpha(opacity=50); -moz-opacity:0.5; opacity:0.5; position:absolute;}
 #club_l_t #fd_l{width:459px; height:34px; top:260px; left:30px; color:#ffffff; line-height:17px; overflow:hidden; position:absolute;}
 #club_l_t #fd_r{width:986x; height:20px; top:267px; right:20px; font-size:16px; font-family:黑体; line-height:20px; overflow:hidden; position:absolute;}
