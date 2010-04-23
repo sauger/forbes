@@ -39,7 +39,7 @@
 	<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread><a href="#">榜单</a></div>
 		<div id=bread_line></div>
-		<div id=phb_left>
+		<div id=pic_list>
 			<div id=p_flash>
 				<div id="control_panel">
 					<div id="btns">
@@ -51,12 +51,12 @@
 					<span id="speed">播放速度</span>
 				</div>
 				<div id="picture_content">
-					<img id="main_picture" width="359" height="359" src="<?php echo $items[0]->image;?>" />
+					<img id="main_picture" src="<?php echo $items[0]->image;?>" />
 				</div>
 				<div id="picture_list">
-					<img width="108" height="108" class="selected" src="<?php echo $items[0]->image;?>" />
-					<img width="108" height="108" src="<?php echo $items[1]->image;?>" />
-					<img width="108" height="108" src="<?php echo $items[2]->image;?>" />
+					<img class="selected" src="<?php echo $items[0]->image;?>" />
+					<img src="<?php echo $items[1]->image;?>" />
+					<img style="margin-right:0px;" src="<?php echo $items[2]->image;?>" />
 				</div>
 				 	
 			</div>
@@ -64,12 +64,11 @@
 					<div id=pic><a href=""><img border=0 src="/images/list/email.jpg"></a></div>
 					<div id=wz><a href="">分享给好友</a></div>
 			</div>
-			<div id=p_r_t>
+			<div id=pic_content>
 				<div id=title><a href=""><?php echo $items[0]->name?></a></div>
-				<div id=content><a href="">　　<?php echo $items[0]->comment?></a></div>
-				
+				<div id=content><a href=""><?php echo $items[0]->comment?></a></div>
 			</div>
-			<div id=p_r_b_title>
+			<div id=pic_recommend>
 				<div id=wz>图片榜单推荐</div>
 			</div>
 			<?php 
