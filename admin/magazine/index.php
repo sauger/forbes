@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  require_once( dirname(__FILE__) .'/../../frame.php');
 	judge_role();
 		
 	$search = $_REQUEST['search'];

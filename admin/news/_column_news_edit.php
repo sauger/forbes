@@ -61,13 +61,8 @@
 
 		<tr class=tr4>
 			<td class=td1>分类</td>
-			<td class="category_select"><span id="span_category"></span><a href="#" id="copy_news" style="color:blue">复制到其他分类</a></td>
+			<td class="category_select"><span id="span_category"></span></td>
 		</tr>
-		
-		<tr class=tr4 style="display:none;" id="tr_copy_news">
-			<td class=td1>复制到分类</td>
-			<td><span id="span_category_copy"></span><a href="#" id="delete_copy_news" style="color:blue">删除</a><input type="hidden" name="copy_news" id="hidden_copy_news" value="0"></input></td>
-		</tr>	
 			
 		<tr class=tr4>
 			<td class=td1>关键词</td>
@@ -94,72 +89,6 @@
 			<td class=td1>优先级</td>
 			<td><input type="text" name=news[priority] id="priority"  class="number" value="<?php echo $news->priority;?>">(0~100)</td>
 		</tr>
-		<!--
-		<tr class=tr4>
-			<td class=td1>头条新闻关联</td>
-			<td id="td_related_sub_headline">已关联　<span id="span_sub_headline"></span>　条新闻 <a href="#" id="a_sub_headline" style="color:blue">编辑</a></td>
-		</tr>
-		-->
-		
-		<tr class=tr4>
-			<td class=td1>相关新闻关联</td>
-			<td id="td_related_news">已关联　<span id="span_related_news"></span>　条新闻 <a href="#" id="a_related_news" style="color:blue">编辑</a></td>
-		</tr>
-		
-		<tr class=tr4>
-			<td class=td1>相关行业</td>
-			<td id="td_related_industry">
-				已关联　<span id="span_related_industry"></span>　个行业 <a href="<?php echo $news->id;?>" id="a_related_industry" style="color:blue">编辑</a>
-				<input type="hidden" id="hidden_related_industry" name="related_industry" value="<?php echo $news_industry;?>"></input>
-			</td>
-		</tr>
-		<tr class=tr4>
-			<td class=td1>上传PDF版</td>
-			<td>
-				<input type="file" name="pdf_src" id="pdf_src">
-				<?php if($news->pdf_src){?>
-				<a href="<?php echo $news->pdf_src?>" target="_blank">下载</a> <a href="#" id="a_delete_pdf">删除</a>
-				<?php }?>
-			</td>
-		</tr>
-		
-		<tr class=tr4>
-			<td class=td1>上传封面图片</td>
-			<td>
-				<input type="file" name="news_pic">
-				<?php if($news->video_photo_src){?>
-				<a href="<?php echo $news->video_photo_src?>" target="_blank">查看</a> <a href="#" id="a_delete_pic">删除</a>
-				<?php }?>
-				<span style="color:blue;">支持格式：jpg,png,gif，小于100K</span>
-			</td>
-		</tr>		
-		<?php if($id!=''){?>
-		
-		<tr class="tr4">
-			<td class=td1>英文版</td>
-			<td>
-			<?php if(!isset($english_id)) { ?>
-			<a id="add_english_news" href="news_edit.php?chinese_id=<?php echo $news->id;?>">添加</a>
-			<?php } else { ?>
-			<a id="edit_english_news" href="news_edit.php?id=<?php echo $english_id;?>">编辑</a> <a id="delete_english_news" href="<?php echo $english_id;?>">删除</a>
-			<?php } ?>
-			</td>
-		</tr>
-		<?php }?>
-		
-		<tr class="tr4">
-			<td  class=td1>放置广告</td>
-			<td><input style="width:20px;"  type="checkbox" id="news_ad_id" <?php if($news->ad_id == 1) echo "checked='checked'";?>><label for="news_ad_id">放置广告</label><input type="hidden" id="input_news_ad_id" name="news[ad_id]" value="<?php echo $news->ad_id;?>"></input></td>
-		</tr>
-
-		<tr class="tr4">
-			<td class=td1>禁止复制</td>
-			<td><input style="width:20px;"  type="checkbox" id="news_forbbide_copy" <?php if($news->forbbide_copy == 1) echo "checked='checked'";?>></input><label for="news_forbbide_copy">禁止复制</label><input type="hidden" id="input_news_forbbide_copy"  name="news[forbbide_copy]" value="<?php echo $news->forbbide_copy;?>"></input></td>
-		</tr>
-
-		<tr class="tr4">
-			<td class=td1>英文来源</td><td><?php show_fckeditor('news[top_info]','Admin',false,"100",$news->top_info);?></td>
-		</tr>
 		
 		<tr class="tr4">
 			<td  class=td1>简短描述</td><td><?php show_fckeditor('news[description]','Admin',false,"100",$news->description);?></td>
@@ -177,7 +106,8 @@
 				<input type="hidden" name="id" id="hidden_news_id" value="<?php echo $news->id; ?>">
 				<input type="hidden" name="news[related_news]" id="hidden_related_news" value="<?php echo $news->related_news ? $news->related_news : "";?>"></input>
 				<input type="hidden" name="news[sub_headline]" id="hidden_sub_headline" value="<?php echo $news->sub_headline ? $news->sub_headline : "";?>"></input>
-				<input type="hidden" name="news[is_adopt] value="<?php $news->is_adopt;?>"></input>	
+				<input type="hidden" name="news[is_adopt] value="<?php $news->is_adopt;?>"></input>
+				<input type="hidden" id="hidden_related_industry" name="related_industry" value="<?php echo $news_industry;?>"></input>	
 			</td>
 		</tr>	
 	</table>

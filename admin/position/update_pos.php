@@ -14,13 +14,13 @@ function update_pos($category_name,$limit,$position_name,$is_parent=false,$flag=
 		}
 		$ids = $category->children_map($category_id);
 		$ids = implode(",",$ids);
-		$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where 1=1 and is_adopt=1 and category_id in ($ids) order by created_at desc";
+		$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) order by created_at desc";
 	}else{
 		$category_id = $category->find_by_name($category_name)->id;
 		if(!$category_id){
 			return false;
 		}
-		$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where 1=1 and is_adopt=1 and category_id={$category_id} order by created_at desc";
+		$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id={$category_id} order by created_at desc";
 	}
 	//echo $sql;
 	$news = $db->query($sql);
@@ -71,12 +71,7 @@ function update_pos($category_name,$limit,$position_name,$is_parent=false,$flag=
 
 function update_column($type,$limit,$position_name,$news_limit='',$news_position='',$flag=true){
 	$db = get_db();
-	if($type=='author'){
-		$author_type = 2;
-	}else if($type == 'journalist'){
-		$author_type = 1;
-	}
-	$sql = "select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.author_id where t1.role_name='{$type}' and t2.author_type={$author_type} group by t1.id order by t2.created_at limit {$limit}";
+	$sql = "select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.author_id where t1.role_name='{$type}' group by t1.id order by t2.created_at limit {$limit}";
 	$column = $db->query($sql);
 	$count = $db->record_count;
 	for($i=0;$i<$count;$i++){
@@ -126,7 +121,7 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 	
 	if($news_limit!=''&&$news_position!=''){
 		for($k=0;$k<$count;$k++){
-			$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where 1=1 and is_adopt=1 and author_type={$author_type} and author_id={$column[$k]->id} order by created_at desc limit {$news_limit}";
+			$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and author_id={$column[$k]->id} order by created_at desc limit {$news_limit}";
 			$news = $db->query($sql);
 			$news_count = $db->record_count;
 			for($i=0;$i<$news_count;$i++){

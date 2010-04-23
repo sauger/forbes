@@ -35,6 +35,16 @@
 		$news->priority = 100;
 	}
 	
+	if(!empty($_POST['news']['block_endtime'])){
+		if(strtotime($_POST['news']['block_endtime'])){
+			$news->block_endtime = $_POST['news']['block_endtime'];
+		}else{
+			$news->block_endtime = null;
+		}
+	}else{
+		$news->block_endtime = null;
+	}	
+	
 	if($_FILES['pdf_src']['name'] != ''){
 		$upload = new upload_file_class();
 		$upload->save_dir = '/upload/news/';
@@ -50,29 +60,22 @@
 		$upload->save_dir = '/upload/news/';
 		$news->video_photo_src = '/upload/news/' .$upload->handle('news_pic','filter_pic');
 	}
-	if($_FILES['author_image']['name'] != ''){
-		$upload = new upload_file_class();
-		$upload->save_dir = '/upload/news/';
-		$news->author_image = '/upload/news/' .$upload->handle('author_image','filter_pic');
-	}
 	$table_change = array('<p>'=>'');
 	$table_change += array('</p>'=>'');
 	$news->title = strtr($news->title,$table_change);
 	$news->short_title = strtr($news->short_title,$table_change);	
 	$news->news_type= 1;
+	$news->publisher = $_SESSION['admin_user_id'];
+	$news->author = $_SESSION['admin_nick_name'];
 	if($news_id == ''){
 		//insert news
 		$news->created_at = date("Y-m-d H:i:s");
 		$news->last_edited_at = date("Y-m-d H:i:s");
-		$news->publisher = $_SESSION['admin_user_id'];
+
 		$news->click_count = 0;					
 		$news->save();
 	}else{
 		//update news
-		if(!$news->publisher){
-			$news->publisher = $_SESSION['admin_user_id'];			
-		}
-		$news->publisher = $_SESSION['admin_user_id'];
 		$news->last_edited_at = date("Y-m-d H:i:s");
 		$news->save();
 		if($old_pdf_src && $old_pdf_src != $news->pdf_src){
@@ -97,6 +100,7 @@
 	}
 	
 	//news saved
+	
 	if($news->is_adopt){
 		static_news($news);
 	}
