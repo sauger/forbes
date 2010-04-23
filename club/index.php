@@ -58,7 +58,7 @@
 			</div>
 			<div id="survey_content_right"></div>
 			<div class=survey_title_left></div>
-			<div class=survey_title_center>
+			<div class=survey_title_center>c
 				<div class=wz>礼品兑换</div>
 				<div class=more><a href="">more>></a></div>
 			</div>
