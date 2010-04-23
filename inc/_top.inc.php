@@ -43,7 +43,7 @@
 	
 	<?php
 		if($nav==""){	$nav=3;	}
-		$countnav=$db->query("select * from fb_navigation where parent_id=0 and (type='both' or type='top') order by priority asc");
+		$countnav=$db->query("select * from fb_navigation where parent_id=0 order by priority asc");
 		$navigation=$db->query('select name,id from fb_navigation where id='.$nav);
 	?>
   <div id=navigation>
@@ -80,7 +80,7 @@
 				<a href="<?php echo $countnav[7]->href; ?>"><div class="nav" param1="<?php echo $countnav[7]->id; ?>" id=piccity></div></a>
 			</div>
 			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="奢华"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
+			<div class="menu"  <?php if($navigation[0]->name=="生活"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
 				<a href="<?php echo $countnav[8]->href; ?>"><div class="nav" param1="<?php echo $countnav[8]->id; ?>" id=piclife></div></a>
 			</div>
 			<div class=vertical></div>
@@ -94,7 +94,7 @@
 	</div>
 	<div id=navigation2>
 			<?php for($i=0;$i<count($countnav);$i++){ 
-				$navigation2=$db->query('select name,target,href from fb_navigation where parent_id='.$countnav[$i]->id.' and (type="both" or type="top") order by priority asc'); ?>	
+				$navigation2=$db->query('select name,target,href from fb_navigation where parent_id='.$countnav[$i]->id.' order by priority asc'); ?>	
 				<div class="nav2" <?php if($countnav[$i]->id==$nav){?>style="display:inline;"<?php }?> id="nav<?php echo $countnav[$i]->id; ?>">
 					<?php for($j=0;$j<count($navigation2);$j++){ ?><a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $navigation2[$i]->href; ?>"><?php echo $navigation2[$j]->name; ?></a><?php if($j<(count($navigation2)-1)){ ?>　|　<?php }} ?>
 				</div>
