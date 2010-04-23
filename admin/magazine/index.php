@@ -1,6 +1,8 @@
 <?php
-	require_once('../../frame.php');
-	
+	session_start();
+  require_once('../../frame.php');
+	judge_role();
+		
 	$search = $_REQUEST['search'];
 	$year = $_REQUEST['year'];
 	$db = get_db();

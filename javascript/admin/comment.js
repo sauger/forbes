@@ -14,7 +14,7 @@ $(function(){
 	
 	$('.colorbox').click(function(e){
 		e.preventDefault();
-		$.fn.colorbox({
+		parent.$.fn.colorbox({
 			html:'<div style="width:600px;height:400px;padding:5px;">' +$(this).next().val() + '</div>',
 		});
 	});

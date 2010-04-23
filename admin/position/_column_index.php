@@ -1,7 +1,7 @@
 <?php
 $db = get_db();
 
-$items = $db->query("select publisher,b.nick_name,b.column_name,image_src from fb_news a left join fb_user b on a.publisher = b.id where author_type = 2 group by publisher order by created_at desc limit 4");
+$items = $db->query("select publisher,b.nick_name,b.column_name,image_src from fb_news a left join fb_user b on a.publisher = b.id where b.role_name='column_editor' group by publisher order by created_at desc limit 4");
 $len = count($items);
 $table = new table_class("fb_page_pos");
 $selected_news = array();

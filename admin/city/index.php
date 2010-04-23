@@ -1,6 +1,7 @@
 <?php
-	require_once('../../frame.php');
-	
+	session_start();
+	include_once('../../frame.php');
+	judge_role();	
 	$search = $_REQUEST['search'];
 	$level = $_REQUEST['level'];
 	$db = get_db();

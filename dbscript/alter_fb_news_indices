@@ -1,0 +1,2 @@
+ALTER TABLE `forbes`.`fb_news` DROP INDEX `Index_5`,
+ ADD INDEX `Index_5` (`publisher`);

@@ -1,5 +1,6 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+  require_once('../../frame.php');
 	judge_role();
 	$user_title="添加用户"; 
 	$db = get_db();
@@ -35,17 +36,17 @@
 		</tr>
 		<?php for($i=0;$i<$count;$i++){?>
 		<tr class="tr3" id="<?php echo $records[$i]->id;?>">
-			<td><?php echo $records[$i]->name;?></td>
+			<td><a href="/column/column.php?id=<?php echo $records[$i]->id;?>" target="_blank"><?php echo $records[$i]->name;?></a></td>
 			<td><?php echo $records[$i]->nick_name;?></td>
 			<td><?php echo $records[$i]->role_name;?></td>
 			<td>	
-				<a href="user_edit.php?id=<?php echo $records[$i]->id;?>" title="编辑" style="color:#000000; text-decoration:none"><img src="/images/btn_edit.png" border="0"></a> 
-				<span style="color:#ff0000; cursor:pointer" class="del" title="删除" name="<?php echo $records[$i]->id;?>"><img src="/images/btn_delete.png" border="0"></span>
+				<a href="user_edit.php?id=<?php echo $records[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border="0"></a> 
+				<span class="del" title="删除" name="<?php echo $records[$i]->id;?>"><img src="/images/btn_delete.png" border="0"></span>
 			</td>
 		</tr>
 		<? }?>
 	</table>
-	</div>
+</div>
 	<input type="hidden" id="db_table" value="<?php echo $tb_user;?>">
 </body>
 </html>

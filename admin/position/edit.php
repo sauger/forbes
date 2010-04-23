@@ -14,7 +14,6 @@
 	?>
 </head>
 <body>
-<body>
 <div id=pos_caption>
   <div id=title>位置管理</div>
 </div>

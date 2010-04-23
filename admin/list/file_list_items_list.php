@@ -1,5 +1,7 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+  require_once('../../frame.php');
+	judge_role();
 	$id = intval($_REQUEST['id']);
 	if($id <= 0){
 		alert('invalid request!');
@@ -39,7 +41,8 @@
 <body>
 <div id=icaption>
     <div id=title>榜单项管理</div>
-	  <a href="file_list_list.php" id=btn_back></a>
+	<a href="file_list_item_edit.php?list_id=<?php echo $id;?>" id=btn_add></a>
+	<a href="file_list_list.php" id=btn_back></a>
 </div>	
 	
 <div id=isearch>

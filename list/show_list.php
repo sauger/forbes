@@ -21,6 +21,10 @@
 	$desc = intval($_GET['desc']);
 	$list = new table_class('fb_custom_list_type');
 	$list->find($id);
+	if($list->list_type==4){
+		redirect('pic_list.php?id='.$id);
+		die();
+	}
 	if($list->tablename="")
 	{
 		die();
@@ -29,7 +33,7 @@
 	<div id=ibody>
 		<?php require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread><a href="#">榜单</a></div>
-		<div id=bread_line><
+		<div id=bread_line>
 		<div id="list_left">
 			<div id="list_left_top">
 				<a href="more.php?id=<?php echo $id;?>">查看详细</a>
@@ -38,20 +42,16 @@
 			<?php
 				if($list->table_name=="fb_famous_list_items"){
 			?>
-				<div id="list_content_top">
-					<table border="0" cellpadding="0" cellspacing="0" >
-						<tr id="list_top_tr">
-							<td valign="middle" style="border-left:0;" width="10%"><a href="show_list.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合<br>排名</a></td>
+				<table border="0" cellspacing="1">
+					<tr id="list_top_tr">
+							<td valign="middle" width="10%"><a href="show_list.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合<br>排名</a></td>
 							<td valign="middle" width="15%">姓名</td>
 							<td valign="middle" width="15%">职业</td>
 							<td valign="middle" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=fortune&desc=<?php echo ($order=='fortune')?!$desc:'1';?>">收入<br>（万人民币）</a></td>
 							<td valign="middle" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=fortune_order&desc=<?php echo ($order=='fortune_order')?!$desc:'0';?>">收入排名</a></td>
 							<td valign="middle" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=exposure_rate&desc=<?php echo ($order=='exposure_rate')?!$desc:'0';?>">曝光率指数</a></td>
-							<td valign="middle" style="border-right:0;" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=exposure_order&desc=<?php echo ($order=='exposure_order')?!$desc:'0';?>">曝光率排名</a></td>
-						</tr>
-					</table>
-				</div>
-				<table style="margin-left:25px;" border="0" cellpadding="0" cellspacing="0" >
+							<td valign="middle" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=exposure_order&desc=<?php echo ($order=='exposure_order')?!$desc:'0';?>">曝光率排名</a></td>
+					</tr>
 					<?php
 						if(empty($order)){
 							$order = "overall_order";
@@ -83,20 +83,16 @@
 					<?php }?>
 				</table>
 			<?php }else if($list->table_name=="fb_rich_list_items"){?>
-				<div id="list_content_top">
-					<table border="0" cellpadding="0" cellspacing="0" >
-						<tr id="list_top_tr">
-							<td valign="middle" style="border-left:0;" width="10%"><a href="more.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合排名</a></td>
+				<table border="0" cellspacing="1" >
+					<tr id="list_top_tr">
+							<td valign="middle" width="10%"><a href="more.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合排名</a></td>
 							<td valign="middle" width="15%">姓名</td>
 							<td valign="middle" width="15%">年龄</td>
 							<td valign="middle" width="15%"><a href="more.php?id=<?php echo $id;?>&order=fortune&desc=<?php echo ($order=='fortune')?!$desc:'1';?>">年收入<br>（<?php echo $list->unit;?>）</a></td>
 							<td valign="middle" width="15%">所属省市</td>
 							<td valign="middle" width="15%">公司名</td>
-							<td valign="middle" style="border-right:0;" width="15%">主要产业</td>
-						</tr>
-					</table>
-				</div>
-				<table style="margin-left:25px;" border="0" cellpadding="0" cellspacing="0" >
+							<td valign="middle" width="15%">主要产业</td>
+					</tr>
 					<?php
 						if(empty($order)){
 							$order = "overall_order";
@@ -128,9 +124,8 @@
 					<?php }?>
 				</table>
 			<?php }else{?>
-				<div id="list_content_top">
-					<table border="0" cellpadding="0" cellspacing="0" >
-						<tr id="list_top_tr">
+				<table border="0" cellspacing="1">
+					<tr id="list_top_tr">
 							<?php 
 								$fields = $db->query("show full fields FROM {$list->table_name}");
 								$count = $db->record_count;
@@ -138,7 +133,7 @@
 								$width = 100/$count;
 								for($i=1;$i<$count;$i++){
 							?>
-							<td <?php if($i==1){?>style="border-left:0;"<?php }?> <?php if($i==($count-1)){?>style="border-right:0;"<?php }?> width="<?php echo $width;?>%" valign="middle">
+						<td <?php if($i==1){?>style="border-left:0;"<?php }?> <?php if($i==($count-1)){?>style="border-right:0;"<?php }?> width="<?php echo $width;?>%" valign="middle">
 								<?php if($fields[$i]->Key=='MUL'){
 									echo "<a href='show_list.php?id=$id&order={$fields->Field}&desc=";
 									echo ($order==$fields->Field)?!$desc:'1';
@@ -148,12 +143,9 @@
 								if($fields[$i]->Key=='MUL'){
 									echo "</a>";
 								}?>
-							</td>
+						</td>
 							<?php }?>
-						</tr>
-					</table>
-				</div>
-				<table style="margin-left:25px;" border="0" cellpadding="0" cellspacing="0" >
+					</tr>
 					<?php
 						if(empty($order)){
 							$order = "id";
@@ -183,12 +175,18 @@
 				<?php paginate();?>
 			</div>
 		</div>
+
 		<div id="right_inc">
 			<?php require_once(dirname(__FILE__).'/../right/ad.php');?>
 			<?php require_once(dirname(__FILE__).'/../right/favor.php');?>
 			<?php require_once(dirname(__FILE__).'/../right/four.php');?>
 			<?php require_once(dirname(__FILE__).'/../right/magazine.php');?>
 		</div>
+
+
+
+
+
 		<?php require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 	</div>
 </body>

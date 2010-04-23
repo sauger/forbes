@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -37,7 +40,7 @@
 </div>
 <div id=isearch>
 		<input id="content" type="text" value="<? echo $_REQUEST['content']?>" >
-		<select id="type" style="width:90px" class="">
+		<select id="type">
 				<option value="name" <? if($_REQUEST['type']=="name"){?>selected="selected"<? }?> >名称</option>
 				<option value="province" <? if($_REQUEST['type']=="province"){?>selected="selected"<? }?> >省份</option>
 				<option value="city" <? if($_REQUEST['type']=="city"){?>selected="selected"<? }?> >城市</option>
@@ -45,12 +48,12 @@
 				<option value="website" <? if($_REQUEST['type']=="website"){?>selected="selected"<? }?> >网址</option>
 				<option value="stock_code" <? if($_REQUEST['type']=="stock_code"){?>selected="selected"<? }?> >上市公司代码</option>
 		</select>
-		<input type="button" value="搜索" id="search">
+		<input type="button" value="搜索" id="search_button">
 </div>
 <div id=itable>
 	<table cellspacing="1">	
 		<tr class="itable_title">
-			<td width="5%"><a href="#" id="a_select_all" style="color:blue;">选择</a></td><td width="25%">名称</td><td width="10%">国家</td><td width="10%">股票代码</td><td width="10%">交易所</td><td width="10%">股价</td><td width="15%">货币种类</td><td width="15%">操作</td>
+			<td width="5%"><a href="#" id="a_select_all" style="color:blue;">选择</a></td><td width="20%">名称</td><td width="7%">国家</td><td width="8%">股票代码</td><td width="8%">交易所</td><td width="7%">股价</td><td width="20%">更新时间</td><td width="10%">货币种类</td><td width="15%">操作</td>
 		</tr>
 		<?php
 			$len = count($record);
@@ -104,6 +107,9 @@
 						<?php echo $record[$i]->stock_value;?>
 					</td>
 					<td>
+						<?php echo $record[$i]->stock_update_time;?>
+					</td>
+					<td>
 						<?php
 							$hbzl = new table_class('fb_currency');
 							if ($record[$i]->hbid != '')
@@ -115,7 +121,7 @@
 					</td>
 					<td>
 						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>"  title="编辑"><img src="/images/btn_edit.png" border="0"></a>
-						<span style="cursor:pointer;" class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border="0"></span>
+						<span class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border="0"></span>
 					</td>
 				</tr>
 		<?php

@@ -1,5 +1,7 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+  require_once('../../frame.php');
+	judge_role();
 	$id = intval($_REQUEST['id']);
 	if($id <= 0){
 		alert('invalid request!');
@@ -40,6 +42,7 @@
 <div id=icaption>
     <div id=title>榜单项管理</div>
 	  <a href="picture_list_list.php" id=btn_back></a>
+	  <a href="picture_list_item_edit.php?list_id=<?php echo $id?>" id=btn_add></a>
 </div>	
 	
 <div id=isearch>
@@ -66,10 +69,17 @@
 		<?php
 			}
 		?>
-		<tr class="tr3">
-				<td colspan=6><input type="hidden" id="db_table" value="fb_custom_list_type"><button id="edit_priority">编辑优先级</button> <button id="clear_priority">清空优先级</button><?php paginate();?></td>
+		<tr class="btools">
+				<td colspan=10><?php paginate("",null,"page",true);?></td>
 		</tr>
-		<input type="hidden" id="list_id" name="id" value="<?php echo $id;?>"> 
+		<tr class="btools">
+				<td colspan=10>
+					<input type="hidden" id="list_id" name="id" value="<?php echo $id;?>"> 
+					<input type="hidden" id="db_table" value="fb_custom_list_type">
+					<button id="edit_priority">编辑优先级</button>
+					<button id="clear_priority">清空优先级</button>
+				</td>
+		</tr>
 	</table>
 </div>	
 </body>

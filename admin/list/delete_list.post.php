@@ -8,7 +8,7 @@ $errro ='fail to delete list';
 $db = get_db();
 if($list->list_type == 1){
 	$table_name = $list->table_name;
-	if(false === $db->execute("drop table `{$table_name}`")) die($errro);
+	if(false === $db->execute("drop table if exists `{$table_name}`")) die($errro);
 }else if($list->list_type == 2){
 	if($db->execute("delete from fb_rich_list_items where list_id={$list->id}")===false) die($errro);
 }else if($list->list_type == 3){
