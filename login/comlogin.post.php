@@ -1,4 +1,5 @@
 <?php
+session_start();
 if($_SESSION['login']!=$_POST['session']){
 		die();
 	}
@@ -34,19 +35,9 @@ if($_SESSION['login']!=$_POST['session']){
 		$err = "用户名或密码错误";
 		$last_url = $fail_url;
 	}
-?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-		<meta http-equiv=Content-Language content=zh-CN>
-	<title>福布斯中文网</title>
-	</head>
-	<body>
-		<?php 
-		 if($err){
+	
+	if($err){
 		 	alert($err);
-		 }
-		 redirect($last_url);
-		?>
-	</body>
-</html>
+	 }
+	 redirect($last_url);
+?>
