@@ -62,7 +62,7 @@
 				</div>
 				<?php for($i=0;$i<3;$i++){ $pos_name = $pos."column".$i;?>
 				<div class=column_container>
-					<img src="<?php echo $pos_items->$pos_name->image2; ?>" />
+					<img src="<?php echo $pos_items->$pos_name->image1; ?>" />
 					<div class=article>
 						<div class=common_list3 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name)?></div>
 						<div class=common_description3><?php echo $pos_items->$pos_name->description;?></div>
