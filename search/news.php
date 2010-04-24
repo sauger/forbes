@@ -6,9 +6,15 @@
 		redirect('error.html');
 		die();
 	}
-	$sql = "select * from fb_news where title like '%$key%' or short_title like '%$key%' or description like '%$key%' order by created_at desc";
-	$record = $db->paginate($sql,10);
-	$count = $db->record_count;
+	if(empty($key)){
+		$count = 0;
+		$page_record_count = 0;
+	}else{
+		$sql = "select * from fb_news where title like '%$key%' or short_title like '%$key%' or description like '%$key%' order by created_at desc";
+		$record = $db->paginate($sql,10);
+		$count = $db->record_count;
+	}
+	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

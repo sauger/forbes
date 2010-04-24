@@ -23,7 +23,7 @@ $(function(){
 		}else if(type=='news'){
 			window.location.href="/search/news.php?key="+encodeURI(text);
 		}else if(type=='author'){
-			window.location.href="/search/rich.php?name="+encodeURI(text);
+			window.location.href="/search/author.php?name="+encodeURI(text);
 		}else if(type=='rich'){
 			window.location.href="/search/rich.php?name="+encodeURI(text);
 		}	
