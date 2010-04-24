@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
     $type = $_REQUEST['post_type'];
 	$id = $_REQUEST['del_id'];
 	

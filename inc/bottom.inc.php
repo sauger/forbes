@@ -1,5 +1,5 @@
 <?php
-		require_once(dirname(__FILE__).'/../frame.php');
+		include_once(dirname(__FILE__).'/../frame.php');
 		init_page_items();
 		$db=get_db();
 ?>		

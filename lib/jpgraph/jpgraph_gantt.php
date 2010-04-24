@@ -9,9 +9,9 @@
  //========================================================================
  */
 
-require_once('jpgraph_plotband.php');
-require_once('jpgraph_iconplot.php');
-require_once('jpgraph_plotmark.inc.php');
+include_once('jpgraph_plotband.php');
+include_once('jpgraph_iconplot.php');
+include_once('jpgraph_plotmark.inc.php');
 
 // Maximum size for Automatic Gantt chart
 define('MAX_GANTTIMG_SIZE_W',8000);
@@ -1030,7 +1030,7 @@ class GanttGraph extends Graph {
             // Should we do any final image transformation
             if( $this->iImgTrans ) {
                 if( !class_exists('ImgTrans',false) ) {
-                    require_once('jpgraph_imgtrans.php');
+                    include_once('jpgraph_imgtrans.php');
                 }
 
                 $tform = new ImgTrans($this->img->img);

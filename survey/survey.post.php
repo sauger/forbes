@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    require_once('../frame.php');
+    include_once('../frame.php');
 	
 	$id = intval($_POST['vote_id']);
 	if($_SESSION['survey'.$id]!=$_POST['verify']||$_SESSION['survey'.$id]==''){

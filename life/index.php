@@ -1,5 +1,5 @@
 <?php 
-	require_once(dirname(__FILE__).'/../frame.php');
+	include_once(dirname(__FILE__).'/../frame.php');
 	$db = get_db();
 	$nav=$db->query('select id from fb_navigation where name="生活"');
 	$nav=$nav[0]->id;		
@@ -19,7 +19,7 @@
 </head>
 <body>
 <div id=ibody>
-<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 <div id=life_top>
 	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1000" height="540">
        <param name="movie" value="life1.swf">
@@ -244,6 +244,6 @@
 			
   </div>			
 </div>
-<? require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 </div>
 </body>

@@ -1431,7 +1431,7 @@ class PieGraph extends Graph {
             // Should we do any final image transformation
             if( $this->iImgTrans ) {
                 if( !class_exists('ImgTrans',false) ) {
-                    require_once('jpgraph_imgtrans.php');
+                    include_once('jpgraph_imgtrans.php');
                     //JpGraphError::Raise('In order to use image transformation you must include the file jpgraph_imgtrans.php in your script.');
                 }
 

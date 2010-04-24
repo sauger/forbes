@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$id = intval($_REQUEST['id']);
 	$comment_id = intval($_GET['comment_id']);
 	if(!empty($id)){

@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	
 	$id = $_REQUEST['id'];
 	$search = $_REQUEST['search'];

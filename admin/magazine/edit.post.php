@@ -5,11 +5,11 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>forbes</title>
 	<?php 
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 	?>
 </head>
 <?php
-    require_once('../../frame.php');
+    include_once('../../frame.php');
     #var_dump($_POST);
    
     $magazine = new table_class("fb_magazine");

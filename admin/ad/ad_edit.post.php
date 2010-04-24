@@ -7,7 +7,7 @@
 	</head>
 	<body>
 <?php
-    require_once('../../frame.php');
+    include_once('../../frame.php');
 
 	if(empty($_POST)){
 		alert('提交失败，可能是上传文件过大或发生未知错误，请检查后再提交');

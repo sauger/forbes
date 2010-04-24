@@ -6,8 +6,8 @@
 	<title></title>
 </head>
 <?php
-    require_once('../../frame.php');
-	require_once('../../inc/reader.php');
+    include_once('../../frame.php');
+	include_once('../../inc/reader.php');
 	$db = get_db();
 	
 	$id = intval($_POST['list_id']);

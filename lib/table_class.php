@@ -2,7 +2,7 @@
 /*            created by sauger at 20090213
 
 */
-require_once(dirname(__FILE__) .'/belongs_to_object_class.php');
+include_once(dirname(__FILE__) .'/belongs_to_object_class.php');
 
 class table_field_class{
 	public $name;
@@ -430,7 +430,7 @@ class table_class{
 	}
 	
 	public function has_many($object,$options = null){
-		require_once(dirname(__FILE__).'/has_many_object_class.php');
+		include_once(dirname(__FILE__).'/has_many_object_class.php');
 		$this->has_many_objects[$object] = new has_many_item($this,$object,$options);
 	}
 	

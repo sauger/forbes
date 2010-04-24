@@ -8,7 +8,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>公司编辑</title>
 	<?php 
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 		judge_role();
 		css_include_tag('admin','thickbox');
 		use_jquery();

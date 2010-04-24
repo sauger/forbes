@@ -8,14 +8,14 @@
 // Copyright (c) Aditus Consulting. All rights reserved.
 //========================================================================
 
-require_once('jpg-config.inc.php');
-require_once('jpgraph_gradient.php');
-require_once('jpgraph_errhandler.inc.php');
-require_once('jpgraph_ttf.inc.php');
-require_once('jpgraph_rgb.inc.php');
-require_once('jpgraph_text.inc.php');
-require_once('jpgraph_legend.inc.php');
-require_once('gd_image.inc.php');
+include_once('jpg-config.inc.php');
+include_once('jpgraph_gradient.php');
+include_once('jpgraph_errhandler.inc.php');
+include_once('jpgraph_ttf.inc.php');
+include_once('jpgraph_rgb.inc.php');
+include_once('jpgraph_text.inc.php');
+include_once('jpgraph_legend.inc.php');
+include_once('gd_image.inc.php');
 
 // Version info
 define('JPG_VERSION','3.0.7');
@@ -2152,7 +2152,7 @@ class Graph {
             // Should we do any final image transformation
             if( $this->iImgTrans ) {
                 if( !class_exists('ImgTrans',false) ) {
-                    require_once('jpgraph_imgtrans.php');
+                    include_once('jpgraph_imgtrans.php');
                     //JpGraphError::Raise('In order to use image transformation you must include the file jpgraph_imgtrans.php in your script.');
                 }
 

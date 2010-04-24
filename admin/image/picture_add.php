@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$role = judge_role();
 	$type = $_REQUEST['type'];
 	$dept_id = $_REQUEST['dept_id'];

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 	$menu_title="添加菜单主目录"; 
 	$menu_table=$tb_menu;

@@ -1,5 +1,5 @@
 ﻿<?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$title = urldecode($_REQUEST['title']);
 	$is_adopt = $_REQUEST['is_adopt'];
 	$ggw = $_REQUEST['ggw'];

@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$id = intval($_POST['id']);
 	$comment_id = intval($_POST['comment_id']);
 	$db = get_db();
