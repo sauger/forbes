@@ -35,7 +35,6 @@ foreach ($items as $v) { ?>
 </tr>
 <?php }?>
 </table>
-</div>
 <?php 
 $sql = "SELECT count(*) as icount,b.nick_name,c.name  FROM fb_news a left join fb_user b on a.publisher = b.id left join fb_category c on a.category_id = c.id";
 	if($c){
@@ -47,7 +46,6 @@ $sql = "SELECT count(*) as icount,b.nick_name,c.name  FROM fb_news a left join f
 <a id="detail" href="#">查看详细</a>
 
 <div id="div_detail" style="display:none;">
-<div id=itable>
 <table cellspacing=1 border="0">
 			<tr class="tr2">
 				<td width="40%">姓名</td><td  width="30%">文章分类</td><td width="30%">数量</td>
@@ -59,7 +57,7 @@ foreach ($items as $v) { ?>
 	<td><?php echo $v->name;?></td>
 	<td><?php echo $v->icount;?></td>
 </tr>
-</div>
 <?php }?>
 </table>
+</div>
 </div>
