@@ -9,7 +9,7 @@
 	if($search!=''){
 		$sql .= " and a.name = '$search'";
 	}
-	$records = $db->paginate($sql,20);
+	$records = $db->paginate($sql,30);
 	$count = count($records);
 ?>
 
