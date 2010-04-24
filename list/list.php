@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 	session_start();
 	require_once('../frame.php');
 	$db = get_db();
@@ -20,40 +20,40 @@
 		<div id=bread><a href="#">榜单</a></div>
 		<div id=bread_line></div>
 		<div id=sort_l>
-			<div id=sort_l_t1>
+			<div class=sort_l_t1>
 				常规榜
 			</div>
 			<div class=sort_l_l1 style="margin-top:10px;">
-				<a href="list.php?id=sort_1">富豪</a>
+				<a href="list.php?id=1">富豪</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=sort_2">投资</a>
+				<a href="list.php?id=2">投资</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=sort_3">公司</a>
+				<a href="list.php?id=3">公司</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=sort_4">城市</a>
+				<a href="list.php?id=4">城市</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=sort_5">名人</a>
+				<a href="list.php?id=5">名人</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=sort_6">体育</a>
+				<a href="list.php?id=6">体育</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=sort_7">科技</a>
+				<a href="list.php?id=7">科技</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=sort_8">教育</a>
+				<a href="list.php?id=8">教育</a>
 			</div>
-			<div id=sort_l_t1 style="margin-top:20px;">
+			<div class=sort_l_t1 style="margin-top:20px;">
 				<a class="sort_link2" href="list.php?id=9">图片榜</a>
 			</div>
-			<div id=sort_l_t1>
+			<div class=sort_l_t1>
 				<a class="sort_link2" href="list.php?id=10">专题榜</a>
 			</div>
-			<div id=sort_l_t1>
+			<div class=sort_l_t1>
 				按年份
 			</div>
 			<?php for($i=date('Y');$i>2004;$i--){?>
@@ -61,9 +61,7 @@
 				<a href="list.php?year=<?php echo $i;?>"><?php echo $i;?>年榜单</a>
 			</div>
 			<?php }?>
-			<div class=sort_l_l1>
-				<input type="text" id=sort_text ><input type="button" id=sort_button>
-			</div>
+			<input type="text" id=sort_text ><input type="button" id=sort_button>
 		</div>
 		<div id=sort_r>
 			<?php 
@@ -140,8 +138,7 @@
 						<div class=sort_r_b_l_t><a href="show_list.php"><?php echo $bd[$i]->name; ?></a></div>
 					<?php } ?>
 				</div>
-				<div id=sort_r_b_r>
-				</div>
+				<div id=sort_r_b_r></div>
 			</div>
 			<div id=sort_page><?php paginate();?></div>
 		</div>
