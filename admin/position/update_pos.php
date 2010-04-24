@@ -131,8 +131,8 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 					$pos->title = $column[$i]->nick_name;
 					$pos->image1 = $column[$i]->image_src;
 					$pos->description = $column[$i]->description;
-					$pos->href = '/column/column.php?id='.$column[$i]->id;
-					$pos->static_href = '/column/column.php?id='.$column[$i]->id;
+					$pos->href = "/column/{$column[$i]->name}";
+					$pos->static_href = "/column/{$column[$i]->name}";
 					$pos->save();
 					break;
 				}

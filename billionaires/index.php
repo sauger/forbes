@@ -30,22 +30,22 @@
 			?>
 			<div id=billionaires_head <?php show_page_pos($pos_name); ?>>
 				<div id=pic>
-					<img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"/>
+					<img border=0 src="<?php echo $pos_items->$pos_name->image1;?>" alt="<?php echo $pos_items->$pos_name->title;?>"/>
 					<div id=flash></div>
 					<div id=flash_t>
 						<div id=flash_t_l></div>
-						<div id=flash_t_r><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+						<div id=flash_t_r><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 					</div>
 					<div id=flash_b>
 						<div id=content>
-							 <a href="<?php echo $pos_items->$pos_name->href;?>">　　<?php echo $pos_items->$pos_name->description;?></a>	
+							 <a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a>	
 						</div>	
 					</div>
 				</div>
 			</div>	
-			<div id=billionaires_head_right></div>
-			<div id=billionaires_ranking>
-				<div class=ranking_top_title><a href="">动态富豪榜-富豪个人财富价值排名 1月31日</a></div>
+			<div id=billinaires_head_right></div>
+			<div id=billinaires_ranking>
+				<div class=ranking_top_title><a href="#">动态富豪榜-富豪个人财富价值排名 1月31日</a></div>
 				<div class=ranking_top_content>
 					<div id=c_title>
 						<div class=pm>排名</div><div class="sx">|</div><div class=name>姓名</div><div class="sx">|</div><div class=cfs>财富数（亿）</div><div class="sx">|</div><div class=sex>性别</div><div class="sx">|</div><div class=age>年龄</div><div class="sx">|</div><div class=cmpname>公司名</div>
@@ -75,7 +75,7 @@
 						?>
 							<div class=context <?php show_page_pos($pos_name)?>>
 								<div class=sj><img src="/images/fh/icon2.jpg"></div>
-								<div class=l_m_l_context><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+								<div class=l_m_l_context><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 							</div>
 						<?php } ?>
 					</div>
@@ -85,7 +85,7 @@
 						?>
 							<div class=context <?php show_page_pos($pos_name)?>>
 								<div class=sj><img src="/images/fh/icon2.jpg"></div>
-								<div class=l_m_l_context><a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+								<div class=l_m_l_context><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 							</div>
 						<?php } ?>
 					</div>
@@ -95,9 +95,9 @@
 							$pos_name = "richindex_picture_{$i}";
 						?>
 						<div class=ranking_image_content <?php show_page_pos($pos_name)?>>
-							<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>"><img border=0 src="<?php echo $pos_items->$pos_name->image1?>"></a></div>
+							<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1?>"></a></div>
 							<div class=piccontent>
-								<a href="<?php echo $pos_items->$pos_name->href;?>"><span style="font-weight:bold;"><?php echo $pos_items->$pos_name->display;?></span><br><?php echo $pos_items->$pos_name->description;?></a>	
+								<a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><span style="font-weight:bold;"><?php echo $pos_items->$pos_name->display;?></span><br><?php echo $pos_items->$pos_name->description;?></a>	
 							</div>
 						</div>
 						<?php } ?>	
@@ -183,9 +183,9 @@
 						$pos_name = "richindex_news_{$i}";
 					?>
 					<div class=content <?php show_page_pos($pos_name)?> <?php if($i>0) echo' style="margin-top:40px;"';?>>
-							<div class=content_title><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+							<div class=content_title><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 							<div class=content_jz>记者:<?php echo $pos_items->$pos_name->alias;?></div>
-							<div class=content_content><a href="<?php echo $pos_items->$pos_name->href;?>">　　<?php echo $pos_items->$pos_name->description;?></a></div>
+							<div class=content_content><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a></div>
 					</div>	
 					<?php }?>
 				</div>
@@ -195,9 +195,9 @@
 						$pos_name = "richindex_news_{$i}";
 					?>
 					<div class=content <?php show_page_pos($pos_name)?> <?php if($i>3) echo' style="margin-top:40px;"';?>>
-							<div class=content_title><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+							<div class=content_title><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 							<div class=content_jz>记者:<?php echo $pos_items->$pos_name->alias;?></div>
-							<div class=content_content><a href="<?php echo $pos_items->$pos_name->href;?>">　　<?php echo $pos_items->$pos_name->description;?></a></div>
+							<div class=content_content><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a></div>
 					</div>	
 					<?php }?>
 				</div>
@@ -208,10 +208,17 @@
 				<?php for($i=0;$i<3;$i++){ 
 					$pos_name = "richindex_news1_{$i}";
 				?>
+<<<<<<< HEAD:billinaires/index.php
+				<div class=billinaires_say_content <?php show_page_pos($pos_name)?>>
+					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"></a></div>
+					<div class=pictitle><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
+					<div class=piccontent><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a></div>
+=======
 				<div class=billionaires_say_content <?php show_page_pos($pos_name)?>>
 					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"></a></div>
 					<div class=pictitle><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></div>
 					<div class=piccontent><a href="">　　<?php echo $pos_items->$pos_name->description;?></a></div>
+>>>>>>> c864354d8d8c53af4367a3c76c3e57768d5e53ff:billionaires/index.php
 				</div>
 				<?php } ?>
 				<div id=billionaires_say_dash></div>

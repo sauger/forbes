@@ -25,7 +25,7 @@
     <div id=title><?php if($id){echo "修改SEO";}else{echo "添加SEO";}?></div>
 	  <a href="index.php" id=btn_back></a>
 </div>
-	<form id="picture_edit" enctype="multipart/form-data" action="seo.post.php" method="post"> 
+	<form id="seo_edit" enctype="multipart/form-data" action="seo.post.php" method="post"> 
 		<div id=itable>
 			<table cellspacing="1" align="center">
 				<tr class=tr4 align="center">
