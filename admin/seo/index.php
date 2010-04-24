@@ -17,8 +17,7 @@
 	<?php
 		css_include_tag('admin');
 		use_jquery();
-		js_include_tag('admin_pub','category_class');
-		$category->echo_jsdata();		
+		js_include_tag('admin_pub');		
 	?>
 </head>
 <body>
@@ -30,19 +29,18 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="40%">标题</td><td width="20%">关键词</td><td width="20%">说明</td><td width="20%">操作</td>
+			<td width="20%">标题</td><td width="20%">关键词</td><td width="40%">说明</td><td width="20%">操作</td>
 		</tr>
 		<?php
 			//--------------------
 			for($i=0;$i<count($record);$i++){
 		?>
 		<tr class=tr3 id=<?php echo $record[$i]->id;?> >
-			<td style="text-align:left; text-indent:12px;"><a href="<?php echo "/news/news.php?id={$record[$i]->id}";?>" target="_blank"><?php echo strip_tags($record[$i]->title);?></a></td>
-			<td><?php echo $record[$i]->author;?></td>
-			<td><a href="?category=<?php echo $record[$i]->category_id;?>" style="color:#0000FF"><?php echo $category->find($record[$i]->category_id)->name;?></a></td>
-			<td><?php echo $record[$i]->created_at;?></td>
+			<td style="text-align:left; text-indent:12px;"><?php echo strip_tags($record[$i]->title);?></td>
+			<td><?php echo $record[$i]->keywords;?></td>
+			<td><?php echo $record[$i]->description;?></td>
 			<td>
-				<a href="news_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a>
+				<a href="seo_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a>
 				<span style="cursor:pointer" class="del" name="<?php echo $record[$i]->id;?>"  title="删除"><img src="/images/admin/btn_delete.png" border="0"></span>
 			</td>
 		</tr>
@@ -53,6 +51,7 @@
 		<tr class="btools">
 			<td colspan=10>
 				<?php paginate("",null,"page",true);?>
+				<input type="hidden" id="db_table" value="fb_seo">
 			</td>
 		</tr>
   </table>
