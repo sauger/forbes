@@ -34,7 +34,7 @@
 			<td id="td_loading" style="display:none;">Loading.....<img src="/images/loading.gif"></img></td>
 		</tr>
 		</table>	
-		<div id="result"></div>
-</div>		
+</div>
+<div id="result"></div>
 </body>
 </html>

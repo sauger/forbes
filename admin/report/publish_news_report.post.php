@@ -47,17 +47,19 @@ $sql = "SELECT count(*) as icount,b.nick_name,c.name  FROM fb_news a left join f
 <a id="detail" href="#">查看详细</a>
 
 <div id="div_detail" style="display:none;">
-<table width="795" border="0">
+<div id=itable>
+<table cellspacing=1 border="0">
 			<tr class="tr2">
-				<td>姓名</td><td width="115">文章分类</td><td>数量</td>
+				<td width="40%">姓名</td><td  width="30%">文章分类</td><td width="30%">数量</td>
 			</tr>
 <?php 
 foreach ($items as $v) { ?>
-<tr class="tr4">
+<tr class="tr3">
 	<td><?php echo $v->nick_name;?></td>
 	<td><?php echo $v->name;?></td>
 	<td><?php echo $v->icount;?></td>
 </tr>
+</div>
 <?php }?>
 </table>
 </div>
