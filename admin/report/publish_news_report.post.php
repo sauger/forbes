@@ -22,18 +22,20 @@
 <?php if($db->record_count <= 0 || !$items){
 	die("没有找到记录");
 }?>
-<table width="795" border="0" id="list">
-			<tr class="tr2">
-				<td>姓名</td><td>数量</td>
+<div id=itable>
+<table cellspacing=1 border="0">
+			<tr class="itable_title">
+				<td width="50%">姓名</td><td width="50%">数量</td>
 			</tr>
 <?php 
 foreach ($items as $v) { ?>
-<tr class="tr4">
+<tr class="tr3">
 	<td><?php echo $v->nick_name;?></td>
 	<td><?php echo $v->icount;?></td>
 </tr>
 <?php }?>
 </table>
+</div>
 <?php 
 $sql = "SELECT count(*) as icount,b.nick_name,c.name  FROM fb_news a left join fb_user b on a.publisher = b.id left join fb_category c on a.category_id = c.id";
 	if($c){
