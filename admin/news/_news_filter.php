@@ -1,6 +1,4 @@
 <?php
-	require_once('../../frame.php');
-	judge_role();
 	$category = new category_class('news');
 	$key = urldecode($_REQUEST['key']);
 	$order = "";

@@ -1,5 +1,7 @@
 <?php 
-	require "../../frame.php";
+	session_start();
+	include_once('../../frame.php');
+	judge_role();
 	$news_id = $_POST['id'] ? $_POST['id'] : 0;
 	$ch_id = $_POST['chinese_id'];
 	if(!$ch_id){
