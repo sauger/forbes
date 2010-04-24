@@ -35,7 +35,7 @@
 	  <a href="edit.php" id=btn_add></a>
 </div>
 <div id=isearch>
-	<input class="sau_search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
+	<input id="search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
 	<select id="level" class="sau_search">
 	 	<option value=""></option>
 		<option <?php if($level==1)echo 'selected="selected"';?> value="1">直辖市</option>
