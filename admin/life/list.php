@@ -96,7 +96,7 @@
 							$rate_flag = false;
 							for($j=0;$j<$news_count;$j++){
 								if($images[$i]->id==$news[$j]->news_id){ $rate_flag=true;?>
-								<span style="cursor:pointer" class="revocation" name="<?php echo $news[$j]->id;?>" title="<img border=0 src="/images/admin/btn_delete.png">"><img src='/images/btn_delete.png' border='0'></span>
+								<span style="cursor:pointer" class="revocation" name="<?php echo $news[$j]->id;?>" title="<img border=0 src="/images/admin/btn_delete.png">"><img src='/images/admin/btn_delete.png' border='0'></span>
 								<input type="text" class="priority"  name="<?php echo $news[$j]->id;?>"  value="<?php echo $news[$j]->priority;?>" style="width:40px;">
 								<?php break;}?>
 						<?php }
