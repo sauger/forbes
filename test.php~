@@ -1,5 +1,0 @@
-<?php 
-require_once('frame.php');
-$url = "http://222.68.17.193:8080/qxt/jbs.jsp?phone=13482678134&content=" .urlencode(iconv('utf-8','gbk','番茄网80数据库宕机了请检查！')) ."&sign=1";
-	
-?>
