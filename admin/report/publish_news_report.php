@@ -19,9 +19,11 @@
 </head>
 
 <body>
-	<?php
-	?>
-	<table width="795" border="0">
+<div id=icaption>
+   <div id=title>文章发布统计</div>
+</div>
+<div id=itable>
+	<table cellspacing=1 border="0">
 		<tr class="tr1">
 			<td colspan="5">
 				<input type="text" id="start_time" class="date_jquery" value="<?php echo $start_time?>"></input>
@@ -35,6 +37,6 @@
 		</tr>
 		</table>	
 		<div id="result"></div>
-		
-	</body>
+</div>		
+</body>
 </html>
