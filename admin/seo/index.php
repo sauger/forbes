@@ -27,7 +27,7 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width=20%>名称</td>><td width="20%">标题</td><td width="20%">关键词</td><td width="20%">说明</td><td width="20%">操作</td>
+			<td width=20%>名称</td><td width="20%">标题</td><td width="20%">关键词</td><td width="20%">说明</td><td width="20%">操作</td>
 		</tr>
 		<?php
 			//--------------------
