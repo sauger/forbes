@@ -13,6 +13,17 @@ $(function(){
 		});
 	});
 	
+	
+	$(".search").click(function(){
+		var type = $(".iselect").val();
+		var text = $("#search_text").val();
+		
+		if(type=='list'){
+			window.location.href="/list/list.php?key="+encodeURI(text);
+		}else if(type='rich'){
+			window.location.href="/search/rich.php?name="+encodeURI(text);
+		}
+	});
 });
 
 

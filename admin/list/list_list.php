@@ -115,6 +115,7 @@
 		<script type="text/javascript">$('#s_list_position').val('<?php echo $_REQUEST['s_list_position'];?>');</script>
 		 <?php ?>
 		 <input type="button" value="搜索" id="search_button">
+		 <input type="hidden" id="file" value="list_list">
 </div>
 <div id=itable>
 	<table cellspacing="1" align="center">
