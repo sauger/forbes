@@ -29,9 +29,10 @@
 ?>
 <div id=ibody>
 		<?php require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=bread><a href="index.php">榜单</a></div>
+		<div id=bread><a href="index.php">榜单</a>><span style="color:#246BB0;"><?php echo $list->name;?></span></div>
 		<div id=bread_line></div>
 		<div id="list_list_content" style="width:1000px;">
+			<div id="list_title2"><?php echo $list->name;?></div>
 			<?php
 				if($list->table_name=="fb_famous_list_items"){
 			?>
@@ -126,7 +127,6 @@
 							<?php 
 								$fields = $db->query("show full fields FROM {$list->table_name}");
 								$count = $db->record_count;
-								if($count>8)$count=8;
 								$width = 100/$count;
 								for($i=1;$i<$count;$i++){
 							?>
