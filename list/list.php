@@ -127,6 +127,9 @@
 					$bdname = $year."年榜单";
 					$sql = "select * from fb_custom_list_type where created_at>'{$year}-01-01 00:00:00' and created_at<'{$year}-12-31 23:59:59' order by priority asc,created_at desc";
 				}
+				if($key){
+					
+				}
 				$bd=$db->paginate($sql,13);
 			?>
 			<div id=sort_r_t>

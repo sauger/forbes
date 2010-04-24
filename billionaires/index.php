@@ -209,12 +209,10 @@
 				<?php for($i=0;$i<3;$i++){ 
 					$pos_name = "richindex_news1_{$i}";
 				?>
-
-				<div class=billinaires_say_content <?php show_page_pos($pos_name)?>>
-					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>" width="100" height="100"></a></div>
-					<div class=pictitle><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
-					<div class=piccontent><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a></div>
-
+				<div class=billionaires_say_content <?php show_page_pos($pos_name)?>>
+					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"></a></div>
+					<div class=pictitle><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+					<div class=piccontent><a href="">　　<?php echo $pos_items->$pos_name->description;?></a></div>
 				</div>
 				<?php } ?>
 				<div id=billionaires_say_dash></div>
