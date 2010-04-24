@@ -19,8 +19,8 @@
 	?>
 </head>
 <body>
-	<div id=ibody>
-		<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+<div id=ibody>
+	<? include_once('../inc/top.inc.php');?>
 		<div id=bread><a href="#">专栏</a></div>
 		<div id=bread_line></div>
 		<div id=column_left>
