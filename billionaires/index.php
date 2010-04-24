@@ -43,9 +43,10 @@
 					</div>
 				</div>
 			</div>	
-			<div id=billinaires_head_right></div>
-			<div id=billinaires_ranking>
-				<div class=ranking_top_title><a href="#">动态富豪榜-富豪个人财富价值排名 1月31日</a></div>
+
+			<div id=billionaires_head_right></div>
+			<div id=billionaires_ranking>
+				<div class=ranking_top_title><a href="">动态富豪榜-富豪个人财富价值排名 1月31日</a></div>
 				<div class=ranking_top_content>
 					<div id=c_title>
 						<div class=pm>排名</div><div class="sx">|</div><div class=name>姓名</div><div class="sx">|</div><div class=cfs>财富数（亿）</div><div class="sx">|</div><div class=sex>性别</div><div class="sx">|</div><div class=age>年龄</div><div class="sx">|</div><div class=cmpname>公司名</div>
@@ -208,17 +209,12 @@
 				<?php for($i=0;$i<3;$i++){ 
 					$pos_name = "richindex_news1_{$i}";
 				?>
-<<<<<<< HEAD:billinaires/index.php
+
 				<div class=billinaires_say_content <?php show_page_pos($pos_name)?>>
-					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"></a></div>
+					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>" width="100" height="100"></a></div>
 					<div class=pictitle><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 					<div class=piccontent><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a></div>
-=======
-				<div class=billionaires_say_content <?php show_page_pos($pos_name)?>>
-					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"></a></div>
-					<div class=pictitle><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></div>
-					<div class=piccontent><a href="">　　<?php echo $pos_items->$pos_name->description;?></a></div>
->>>>>>> c864354d8d8c53af4367a3c76c3e57768d5e53ff:billionaires/index.php
+
 				</div>
 				<?php } ?>
 				<div id=billionaires_say_dash></div>
