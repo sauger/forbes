@@ -38,9 +38,9 @@
 	<?php $pos_name = "lifeindex_column"?>
 	<div id=life_middle_column <?php show_page_pos($pos_name)?>>
 		<div id=picture><img src="<?php echo $pos_items->$pos_name->image1;?>" width="120" height="120" border="0" /></div>
-		<div id=title><?php echo $pos_items->$pos_name->display;?></div>
+		<div id=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
 		<div id=text><?php echo $pos_items->$pos_name->description;?></div>
-		<div id=link><a href="<?php echo $pos_items->$pos_name->href;?>">进入专栏</a></div>
+		<div id=link><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">进入专栏</a></div>
 	</div>
 </div>	
 
@@ -62,44 +62,44 @@
  				<div class=life_caption>
 					<div class=captions>服饰钟表</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=服饰钟表" class=more target="_blank"></a>
 				</div>
 				
 				<?php $pos_name = "liftindex_news_1";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-							<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
 				</div>
-				<div class=title><?php echo $pos_items->$pos_name->display;?></div>
-				<div class=description><?php echo $pos_items->$pos_name->description?></div>
+				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>
       </div>
       
       <div class=life_box>
   			<div class=life_caption>
 					<div class=captions>豪车</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>      	
+					<a href="/news/news_list.php?cname=豪车" class=more></a>      	
 				</div>	
 				
 				<?php $pos_name = "liftindex_news_2";?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-						<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
 				</div>
-				<div class=title><?php echo $pos_items->$pos_name->display;?></div>
-				<div class=description><?php echo $pos_items->$pos_name->description?></div>
+				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>
       </div>
       
       <div class=life_box>
   			<div class=life_caption>
 					<div class=captions>游艇飞机</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=游艇飞机" class=more></a> 
 				</div>	
 				<?php $pos_name = "liftindex_news_3";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-							<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
 				</div>
-				<div class=title><?php echo $pos_items->$pos_name->display;?></div>
-				<div class=description><?php echo $pos_items->$pos_name->description?></div>				
+				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>				
       </div>            
 
 
@@ -107,18 +107,18 @@
   			<div class=life_caption>
 					<div class=captions>名利场</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=名利场" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_news_mlc"?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-						<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="500" height="200" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="500" height="200" /></a>
 				</div>
 				<div id=content <?php show_page_pos($pos_name)?>>
 						<div id=content_title>
-							<?php  echo $pos_items->$pos_name->display;?>
+							<?php show_page_href($pos_items,$pos_name,true,"_blank")?>
 						</div>
 						<div id=content_description>
-							<?php  echo $pos_items->$pos_name->description?>
+							<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a>
 						</div>
 				</div>
 			</div>
@@ -128,44 +128,44 @@
  				<div class=life_caption>
 					<div class=captions>美酒美食</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=美酒美食" class=more></a> 
 				</div>
 				
 				<?php $pos_name = "liftindex_news_4";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-							<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
 				</div>
-				<div class=title><?php echo $pos_items->$pos_name->display;?></div>
-				<div class=description><?php echo $pos_items->$pos_name->description?></div>
+				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>
       </div>
       
       <div class=life_box>
   			<div class=life_caption>
 					<div class=captions>体面</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>      	
+					<a href="/news/news_list.php?cname=体面" class=more></a>     	
 				</div>	
 				
 				<?php $pos_name = "liftindex_news_5";?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-						<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
 				</div>
-				<div class=title><?php echo $pos_items->$pos_name->display;?></div>
-				<div class=description><?php echo $pos_items->$pos_name->description?></div>
+				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>
       </div>
       
       <div class=life_box>
   			<div class=life_caption>
 					<div class=captions>文化娱乐</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=文化娱乐" class=more></a> 
 				</div>	
 				<?php $pos_name = "liftindex_news_6";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-							<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
 				</div>
-				<div class=title><?php echo $pos_items->$pos_name->display;?></div>
-				<div class=description><?php echo $pos_items->$pos_name->description?></div>				
+				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>			
       </div>      
   </div>
 
@@ -174,11 +174,11 @@
   			<div class=life_caption>
 					<div class=captions>旅游</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=旅游" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_ly";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-							<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" /></a>
 				</div>
       </div>
       
@@ -186,11 +186,11 @@
   			<div class=life_caption>
 					<div class=captions>豪宅</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=豪宅" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_hz";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-							<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" /></a>
 				</div>
       </div>     	
 			
@@ -198,7 +198,7 @@
   			<div class=life_caption>
 					<div class=captions>关注</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=关注" class=more></a> 
 				</div>
 				<div id=line></div>
 
@@ -207,7 +207,7 @@
 						$pos_name = "lifeindex".$i;
 				?>
 				<div id=list <?php show_page_pos($pos_name);?>>
-						<a href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a>
+					<?php show_page_href($pos_items,$pos_name,true,"_blank")?>
 				</div>
 				<?php }?>
 			</div>
@@ -217,26 +217,26 @@
   			<div class=life_caption>
 					<div class=captions>奢华专题</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=生活" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_zt";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-							<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" /></a>
 				</div>
-				<div class=title><?php echo $pos_items->$pos_name->display;?></div>
+				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
       </div>  
 
       <div class=life_box2>
   			<div class=life_caption>
 					<div class=captions>慈善</div>
 					<div class=line>|</div>
-					<a href="" class=more></a>
+					<a href="/news/news_list.php?cname=慈善" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_cs";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-							<img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" />
+					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" /></a>
 				</div>
-				<div class=title><?php echo $pos_items->$pos_name->display;?></div>
+				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
       </div>  
 			
   </div>			

@@ -3,6 +3,7 @@ p{margin:0; padding:0;}
 ul{margin:0; padding:0;}
 li{margin:0; padding:0;} 
 div{margin:0; padding:0; float:left; display:inline;}
+a{color:#000000; text-decoration:none;}
 
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 
