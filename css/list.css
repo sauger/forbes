@@ -54,7 +54,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #right_inc{width:225px; overflow:hidden; float:right;}
 
 #list_left{width:675px;}
-#list_left_top{width:600px; height:25px; margin-top:15px;}
+#list_left_top{width:114px; height:25px; margin-top:15px; float:right;}
 #list_left_top a{width:100px; height:25px; color:#246BB0; font-size:12px; line-height:25px; text-align:center; text-decoration:none; background:url('/images/list/button.gif'); float:left; display:inline;}
 #list_list_content{width:660px; margin-top:10px;}
 #list_list_content table{width:100%; text-align:center; background:#e7e7e7;}
