@@ -195,11 +195,11 @@ function show_page_pos($pos){
 	}	
 };
 
-function show_page_href($pos_items,$pos_name,$show_title=true){
+function show_page_href($pos_items,$pos_name,$show_title=true,$target=null){
 	if($show_title){
-		echo '<a href="'.$pos_items->$pos_name->href.'" title="'.$pos_items->$pos_name->title.'">'.$pos_items->$pos_name->display.'</a>';
+		echo '<a  href="'.$pos_items->$pos_name->href.'" title="'.$pos_items->$pos_name->title.'" '. ($target ? "target='$target'" : ''). '>'.$pos_items->$pos_name->display.'</a>';
 	}else{
-		echo '<a href="'.$pos_items->$pos_name->href.'">'.$pos_items->$pos_name->display.'</a>';
+		echo '<a href="'.$pos_items->$pos_name->href.'" '.$pos_items->$pos_name->title.'"'. ($target ? "target='$target'" : ''). '>'.$pos_items->$pos_name->display.'</a>';
 	}
 	
 }
