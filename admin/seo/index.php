@@ -2,8 +2,6 @@
 	session_start();
 	include_once('../../frame.php');
 	judge_role();
-	
-	$db = get_db();
 	$news = new table_class('fb_seo');
 	$record = $news->paginate('all','',30);
 ?>
