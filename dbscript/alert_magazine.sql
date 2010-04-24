@@ -1,0 +1,1 @@
+ALTER TABLE `forbes`.`fb_magazine` ADD COLUMN `url` VARCHAR(256) AFTER `img_src3`;

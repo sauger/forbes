@@ -2,7 +2,8 @@
 	session_start();
     require_once('../frame.php');
 	
-	if($_SESSION['survey']!=$_POST['verify']||$_SESSION['survey']==''){
+	$id = intval($_POST['vote_id']);
+	if($_SESSION['survey'.$id]!=$_POST['verify']||$_SESSION['survey'.$id]==''){
 		die("非法访问");
 	}
 	if(!is_post()){

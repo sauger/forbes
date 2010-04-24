@@ -5,7 +5,7 @@
 	
 	$year = intval($_POST['year']);
 	if(!empty($year)){
-		$magazine = $db->query("select * from fb_old_magazine where year={$year} order by priority");
+		$magazine = $db->query("select * from fb_magazine where publish_data like '%$year%' order by publish_data");
 		$count = $db->record_count;
 		for($i=0;$i<$count;$i++){
 	?>
