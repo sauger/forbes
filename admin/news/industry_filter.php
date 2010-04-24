@@ -1,5 +1,7 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+	include_once('../../frame.php');
+	judge_role();
 	$db = get_db();
 	$industry = $db->query("select * from fb_industry");
 	if(!$industry) $industry = array();

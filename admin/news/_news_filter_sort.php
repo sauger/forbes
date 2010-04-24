@@ -1,5 +1,7 @@
 <?php 		
-	require_once('../../frame.php');
+	session_start();
+	include_once('../../frame.php');
+	judge_role();
 	$selected_news = ($_REQUEST['selected_news']);
 	$selected_news_a = explode(',',$selected_news);
 	if(!$selected_news){
