@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	$selected_news = ($_REQUEST['selected_news']);
 	if($selected_news){
 		$selected_news = explode(',',$selected_news);

@@ -2,7 +2,36 @@
 include_once "../../frame.php";
 include "_listindex.php";
 include "_richindex.php";
+$category = new category_class('news');
+$pos_table = new table_class('fb_page_pos');
 
+function update_pos_news($pos_name,$category_name,$count=1,$has_children=false){
+	global $category;
+	global $pos_table;
+	$db = get_db();
+	$category_id = $category->find_by_name($category_name)->id;
+	if(!$category_id){
+		return false;
+	}
+	$ids = $has_children ? implode(',',$category->children_map($category_id)) : $category_id ;
+	$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) order by created_at desc limit {$count}";
+	$news = $db->query($sql);
+	$news_count = $db->record_count;
+	if($news_count <= 0 ) return false;
+	$positions = $pos_table->find("all",array("conditions" => " name like '{$pos_name}%' and (end_time <= now() or end_time is null)","limit" => $count));
+	$pos_count = count($positions);
+	for($i=0;$i<$pos_count;$i++){
+		$end_time = " end_time + INTERVAL 1 HOUR";
+		$positions[$i]->end_time = $end_time;
+		$positions[$i]->display = $news[$i]->title;
+		$positions[$i]->title = $news[$i]->title;
+		$positions[$i]->image1 = $news[$i]->video_photo_src;
+		$positions[$i]->description = $news[$i]->description;
+		$positions[$i]->href = dynamic_news_url($news[$i]);
+		$positions[$i]->static_href = static_news_url($news[$i]);
+		$positions[$i]->save();
+	}
+}
 
 function update_pos($category_name,$limit,$position_name,$is_parent=false,$flag=true){
 	$db = get_db();

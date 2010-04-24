@@ -88,10 +88,10 @@
 			<td align="left" id="single">
 				<input type="text" name="vote_item[title][]" style="width:300px" class="required" id="first_item">
 				<input type="file" name="vote_item[]" class="item_image" style="display:none;">
-				<a id="add_item" value="1" style="cursor:pointer;" title="继续添加"><img src="/images/btn_add.png" border="0"></a>
+				<a id="add_item" value="1" style="cursor:pointer;" title="继续添加"><img src="/images/admin/btn_add.png" border="0"></a>
 			</td>	
 			<td align="left" style="display:none;" id="many">
-					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=600&width=560" class="thickbox" id="add_sub_vote" title="添加子投票"><img src="/images/btn_add.png" border="0"></a>
+					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=600&width=560" class="thickbox" id="add_sub_vote" title="添加子投票"><img src="/images/admin/btn_add.png" border="0"></a>
 			</td>
 		</tr>
 		<tr class=btools>

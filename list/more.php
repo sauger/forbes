@@ -8,7 +8,7 @@
 		$db = get_db();
 		use_jquery();
 		js_include_tag('public');
-		css_include_tag('lists','public');
+		css_include_tag('list','public');
 	?>
 </head>
 <body>

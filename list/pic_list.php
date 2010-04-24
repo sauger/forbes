@@ -10,7 +10,7 @@
 	<?php
 		use_jquery_ui();
 		js_include_tag('public','picture_list/index','right');
-		css_include_tag('lists','jquery-ui','public','right_inc');
+		css_include_tag('list','jquery-ui','public','right_inc');
 		$db = get_db();
 		$id = intval($_GET['id']);
 		if(empty($id)){
