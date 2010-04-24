@@ -106,7 +106,7 @@
 						$db = get_db();
 						$items = $db->query("select * from fb_dynamic_fortune_list order by current_index asc limit 10");
 						for($i=0;$i<10;$i++) {
-							if($items[$i]->current_index < $items[$i]->last_index){
+							if($items[$i]->current_index < $items[$i]->last_index || $items[$i]->last_index == 0){
 								$word = '↑';
 								$class = 'up';
 							}else if($items[$i]->current_index > $items[$i]->last_index){
