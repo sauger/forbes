@@ -70,6 +70,7 @@ table{width:1026px; border:none; text-align:center; background:#e7e7e7;}
 .tr4 .td1{text-align:left; text-indent:24px;}
 .tr4 input{width:300px; float:left;}
 .tr4 select{width:306px; float:left;}
+.tr4 textarea{width:300px; float:left;}
 .tr4 .category_select select{width:206px; float:left;}
 
 .btools{height:35px; text-align:center; font-size:14px; line-height:25px; background:#ffffff;}
