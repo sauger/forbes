@@ -42,7 +42,7 @@ $(function(){
 		var str = '<tr class="tr3"><td>' + $(this).parent().parent().find('td:eq(0)').html()+'</td>'
 				+ '<td>' + $(this).parent().parent().find('td:eq(1)').html()+'</td>'
 				+ '<td><input type="text"  value="0"></input></td>'
-				+ '<td>	<a href="#" class="a_delete"><img src="/images/btn_delete.png" border="0"></a>'
+				+ '<td>	<a href="#" class="a_delete"><img src="/images/admin/btn_delete.png" border="0"></a>'
 				+ '<input type="hidden" class="c_hidden" value="0"></input>'
 				+ '<input type="hidden" value="'+ $(this).parent().parent().attr('id') +'"></input>'
 				+ '</td></tr>';
@@ -94,7 +94,7 @@ $(function(){
 		var str = '<tr class="tr3"><td><input type="text" class="news_fortune"></input>(请输入单位为亿人民币的数字)</td>'
 				+ '<td><input type="text" class="news_fortune_class"></input>(输入4位年份)</td>'
 				+ '<td><input type="text" class="news_fortune_order"></input></td>'
-				+ '<td><a class="f_delete"><img src="/images/btn_delete.png" border="0"></a>'
+				+ '<td><a class="f_delete"><img src="/images/admin/btn_delete.png" border="0"></a>'
 				+ '<input type="hidden" class="f_hidden" value="0"></input></td>'
 		
 		$("#fortune_box").after(str);

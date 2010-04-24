@@ -81,7 +81,7 @@
 				<img src="/images/admin/btn_delete.png" style="cursor:pointer; float:left;" id="delete_keyword" />
 				<input type="text" id="auto_keywords" />
 				<input type="hidden" name="news[keywords]" id="news_keywords"/>
-				<img id="add_keyword" style="cursor:pointer; float:left;" src="/images/btn_add.png" />
+				<img id="add_keyword" style="cursor:pointer; float:left;" src="/images/admin/btn_add.png" />
 			</td>
 		</tr>
 
