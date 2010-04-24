@@ -1,11 +1,17 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/Tr/1999/rEC-html401-19991224/loose.dtd">
+﻿<?
+	include_once(dirname(__FILE__).'/../frame.php');
+	$db = get_db();
+	$nav=$db->query('select id from fb_navigation where name="榜单"');
+	$nav=$nav[0]->id;	
+?>
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/Tr/1999/rEC-html401-19991224/loose.dtd">
 <head>
    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
 	<title>福布斯-榜单首页</title>
 	<?php
-		include_once(dirname(__FILE__).'/../frame.php');
-		$db = get_db();
 		use_jquery();
 		js_include_tag('public','index','right');
 		css_include_tag('list','public','right_inc');

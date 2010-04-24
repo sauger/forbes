@@ -20,9 +20,13 @@ $(function(){
 		
 		if(type=='list'){
 			window.location.href="/list/list.php?key="+encodeURI(text);
-		}else if(type='rich'){
+		}else if(type=='news'){
+			window.location.href="/search/news.php?key="+encodeURI(text);
+		}else if(type=='author'){
 			window.location.href="/search/rich.php?name="+encodeURI(text);
-		}
+		}else if(type=='rich'){
+			window.location.href="/search/rich.php?name="+encodeURI(text);
+		}	
 	});
 });
 

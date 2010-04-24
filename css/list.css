@@ -130,3 +130,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #sort_page{width:650px; height:30px; margin-top:20px; margin-left:30px; font-size:14px; line-height:30px; color:#666666; text-align:center; }
 #sort_page a{color:#246BB0; text-decoration:none;}
 .sort_link2{color:#ffffff; text-decoration:none;}
+
+#list_title{width:650px; margin-left:10px; margin-top:20px; overflow:hidden; font-size:30px; color:#1E448D; line-height:40px; font-weight:bold; font-family:微软雅黑,宋体; clear:both;}
+#list_title2{width:650px; margin-left:10px; padding-bottom:20px; overflow:hidden; font-size:30px; color:#1E448D; line-height:40px; font-weight:bold; font-family:微软雅黑,宋体; clear:both;}
+
