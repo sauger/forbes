@@ -4,11 +4,11 @@
 	judge_role();	
 	$search = $_REQUEST['search'];
 	$db = get_db();
-	$sql = "SELECT t1.id,t1.created_at,t2.year,t2.name,t3.name as uname FROM fb_magazine_order t1 join fb_old_magazine t2 on t1.magazine_id=t2.id join fb_yh t3 on t1.user_id=t3.id where 1=1";
+	$sql = "SELECT t1.id,t1.created_at,t2.publish_data,t2.name,t3.name as uname FROM fb_magazine_order t1 join fb_magazine t2 on t1.magazine_id=t2.id join fb_yh t3 on t1.user_id=t3.id where 1=1";
 	if($search!=''){
 		$sql .= " and t2.name like '%$search%'";
 	}
-	$sql .= " order by created_at desc";
+	$sql .= " order by t1.created_at desc";
 	$record = $db->paginate($sql,15);
 	$count = count($record);
 ?>
@@ -43,7 +43,7 @@
 			for($i=0;$i<$count;$i++){
 		?>
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
-					<td><?php echo $record[$i]->year;?>年-<?php echo $record[$i]->name;?></td>
+					<td><?php echo substr($record[$i]->publish_data,0,4)?>年-<?php echo $record[$i]->name;?></td>
 					<td><?php echo $record[$i]->created_at;?></td>
 					<td><?php echo $record[$i]->uname;?></td>
 					<td>

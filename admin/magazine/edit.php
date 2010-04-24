@@ -40,6 +40,12 @@
 			</td>
 		</tr>
 		<tr class=tr4>
+			<td  class=td1>电子版链接</td>
+			<td>
+				<input type="text" name="post[url]" value="<?php echo $record->url;?>">
+			</td>
+		</tr>
+		<tr class=tr4>
 			<td class=td1>发布日期</td>
 			<td>
 				<input type="text" class="date_jquery" readonly=readonly name="post[publish_data]" value="<?php echo $record->publish_data;?>">

@@ -15,7 +15,7 @@
 		use_jquery_ui();
 		validate_form("news_edit");
 		js_include_tag('category_class.js', 'admin/news_pub', 'admin/news_edit','jquery.colorbox-min.js','../ckeditor/ckeditor.js','pubfun');
-		$column_roles = array('column_editor');
+		$column_roles = array('column_editor','column_writer');
 	?>
 </head>
 <?php 

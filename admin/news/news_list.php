@@ -25,7 +25,7 @@
 	if($up!=''){
 		array_push($c, "set_up=$up");
 	}
-	if(role_name() == 'column_editor'){
+	if(role_name() == 'column_editor' || role_name()=='column_writer'){
 		$c[] = "publisher={$_SESSION['admin_user_id']}";
 	}
 	$news = new table_class($tb_news);

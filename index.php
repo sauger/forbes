@@ -106,7 +106,7 @@
 						$db = get_db();
 						$items = $db->query("select * from fb_dynamic_fortune_list order by current_index asc limit 10");
 						for($i=0;$i<10;$i++) {
-							if($items[$i]->current_index < $items[$i]->last_index){
+							if($items[$i]->current_index < $items[$i]->last_index || $items[$i]->last_index == 0){
 								$word = '↑';
 								$class = 'up';
 							}else if($items[$i]->current_index > $items[$i]->last_index){
@@ -476,7 +476,7 @@
 							<select id="old_magazine">
 								<option value=''></option>
 								<?php 
-									$magazine = $db->query("select year from fb_old_magazine group by year order by year desc");
+									$magazine = $db->query("SELECT substring(publish_data,1,4) as year FROM fb_magazine group by substring(publish_data,1,4)");
 									$year_count = $db->record_count;
 									for($i=0;$i<$year_count;$i++){
 								?>
