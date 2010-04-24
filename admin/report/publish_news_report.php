@@ -22,18 +22,16 @@
 <div id=icaption>
    <div id=title>文章发布统计</div>
 </div>
+<div id=isearch>
+		<input type="text" id="start_time" class="date_jquery" value="<?php echo $start_time?>"></input>
+		<input type="text" id="end_time" class="date_jquery" value="<?php echo $end_time?>"></input>
+		<button id="btn_ok">统计</button>
+</div>
+
 <div id=itable>
 	<table cellspacing=1 border="0">
-		<tr class="tr1">
-			<td colspan="5">
-				<input type="text" id="start_time" class="date_jquery" value="<?php echo $start_time?>"></input>
-				<input type="text" id="end_time" class="date_jquery" value="<?php echo $end_time?>"></input>
-				<button id="btn_ok">统计</button>
-			</td>
-		</tr>
 		<tr>
-		<td id="td_loading" style="display:none;">
-			Loading.....<img src="/images/loading.gif"></img></td>
+			<td id="td_loading" style="display:none;">Loading.....<img src="/images/loading.gif"></img></td>
 		</tr>
 		</table>	
 		<div id="result"></div>
