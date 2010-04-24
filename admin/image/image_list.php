@@ -41,7 +41,7 @@
 	  <a href="image_edit.php" id=btn_add></a>
 </div>
 <div id=isearch>
-		<input id=title type="text" value="<? echo $_REQUEST['title']?>"><span id="span_category"></span>
+		<input id="key" type="text" value="<? echo $_REQUEST['title']?>"><span id="span_category"></span>
 		<select id=adopt style="width:100px" class="select_new">
 					<option value="">发布状况</option>
 					<option value="1" <? if($_REQUEST['adopt']=="1"){?>selected="selected"<? }?>>已发布</option>
@@ -97,12 +97,31 @@
 			$('#category').val(id);
 			category_id = $('.category_select:last').val();
 			if (id == -1) {
-				window.location.href = "?title=" + $("#title").attr('value') +  "&category=&adopt=" + $("#adopt").attr('value');
+				window.location.href = "?title=" + encodeURI($("#key").val()) +  "&category=&adopt=" + $("#adopt").attr('value');
 			}
 			if (category_id != -1) {
-				window.location.href = "?title=" + $("#title").attr('value') +  "&category=" + $("#category").attr('value') + "&adopt=" + $("#adopt").attr('value');
+				window.location.href = "?title=" + encodeURI($("#key").val()) +  "&category=" + $("#category").attr('value') + "&adopt=" + $("#adopt").attr('value');
 			}
 		})
+		
+		$("#search_button").click(function(){
+			search();
+		});
+		
+		$('#key').keypress(function(e){
+			if(e.keyCode == 13){
+				search();
+			}
+		});
+		
+		$(".select_new").change(function(){
+			search();
+		});
+		
 	});
+	
+	function search(){
+		window.location.href = "?title=" + encodeURI($("#key").val()) +  "&category=" + $("#category").attr('value') + "&adopt=" + $("#adopt").attr('value');
+	}
 </script>
 

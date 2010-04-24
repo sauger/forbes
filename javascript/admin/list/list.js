@@ -3,7 +3,7 @@
  */
 function send_search(){
 	var s_text = $('#s_text').val();
-	var url = "list_list.php?s_text=" + encodeURI(s_text);
+	var url = $("#file").val()+".php?s_text=" + encodeURI(s_text);
 	if ($('#s_list_type').val() >=0){
 		url = url + '&s_list_type=' + $('#s_list_type').val();
 	}
@@ -13,7 +13,7 @@ function send_search(){
 	location.href = url;
 }
 $(function(){
-	$('#search_b').click(function(){
+	$('#search_button').click(function(){
 		send_search();
 	});
 	$('#s_text').keypress(function(e){

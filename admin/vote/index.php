@@ -33,7 +33,7 @@
 	<a href="vote_add.php" id=btn_add></a>
 </div>
 <div id=isearch>
-		<input id=title type="text" value="<?php echo $key?>">
+		<input id="key" type="text" value="<?php echo $key?>">
 		<select id=adopt style="width:100px">
 					<option value="">发布状况</option>
 					<option value="1" <? if($_REQUEST['adopt']=="1"){?>selected="selected"<? }?>>已发布</option>
@@ -119,7 +119,12 @@
 	$("#adopt").change(function(){
 		search();
 	});
+	$("#key").keypress(function(event){
+		if (event.keyCode == 13) {
+			search();
+		}
+	});
 	function search(){
-		window.location.href = "index.php?key="+encodeURI($("#title").val())+"&adopt="+$("#adopt").val();
+		window.location.href = "index.php?key="+encodeURI($("#key").val())+"&adopt="+$("#adopt").val();
 	}
 </script>

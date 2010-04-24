@@ -32,13 +32,13 @@
 			<div id=logo></div>
 			<div class=forbes_search>
 					<select name="selsearch" class="iselect">
-						<option>榜单</option>
-						<option>富豪</option>
-						<option>作者</option>
-						<option>文章</option>
+						<option value="list">榜单</option>
+						<option value="rich">富豪</option>
+						<option value="author">作者</option>
+						<option value="news">文章</option>
 					</select>
 			</div>
-			<input class="input">
+			<input id="search_text" class="input">
 			<button class=search>查 询</button>			
   </div>	
 	

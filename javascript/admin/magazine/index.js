@@ -1,5 +1,5 @@
 $(function(){
-	$('#search_b').click(function(){
+	$('#search_button').click(function(){
 		send_search();
 	});
 	$('#search').keypress(function(e){

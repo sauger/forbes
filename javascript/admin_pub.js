@@ -98,24 +98,7 @@ $(function(){
 		});
 		
 
-		$("#search_new").click(function(){
-			window.location.href="?title="+encodeURI($("#title").attr('value'))+"&category="+$("#category").attr('value')+"&adopt="+$("#adopt").attr('value');
-			
-		});
 		
-		$("#title").keypress(function(event){
-				if (event.keyCode == 13) {
-					window.location.href="?title="+encodeURI($("#title").attr('value'))+"&category="+$("#category").attr('value')+"&adopt="+$("#adopt").attr('value');
-				}
-		});
-		
-		$(".select_new").change(function(){
-				if($("#is_dept_list").attr('value')=='true'){
-					window.location.href="?title="+encodeURI($("#title").attr('value'))+"&recommend="+$("#recommend").attr('value')+"&category="+$("#category").attr('value')+"&adopt="+$("#adopt").attr('value');
-				}else{
-					window.location.href="?title="+encodeURI($("#title").attr('value'))+"&dept="+$("#dept").attr('value')+"&category="+$("#category").attr('value')+"&adopt="+$("#adopt").attr('value')+"&up="+$("#up").val()+'&flag=' + encodeURI($('#news_tag').val());
-				}
-		});
 		
 		$("#edit_priority").click(function(){
 			if(!window.confirm("编辑优先级")){return false;}
