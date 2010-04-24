@@ -220,7 +220,11 @@
 						$pos_name = "index_author".$i;
 				?>
 					<div class=content <?php show_page_pos($pos_name);?> name="<?php echo 'author'.$i;?>">
-						<div <?php if($i==0){?>style="filter:alpha(opacity=100); opacity:1;"<?php }?> class=cpic><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"></a></div>
+						<div <?php if($i==0){?>style="filter:alpha(opacity=100); opacity:1;"<?php }?> class=cpic>
+							<a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">
+								<img border=0 src="<?php echo $pos_items->$pos_name->image1;?>">
+							</a>
+						</div>
 						<div class=ccl><?php show_page_href($pos_items,$pos_name,false,"_blank");?></div>
 					</div>
 				<?php } ?>
