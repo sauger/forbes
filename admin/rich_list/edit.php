@@ -46,7 +46,7 @@
 	<form id="fbd_edit" enctype="multipart/form-data" action="edit.post.php" method="post"> 
 	<table width="795" border="0">
 		<tr class=tr1>
-			<td colspan="2" width="795">　　<?php if($id!=''){echo "编辑富豪榜单";}else{echo "添加富豪榜单";}?> <a href="<?php echo $href;?>"><img src="/images/btn_back.png" border=0></a></td>
+			<td colspan="2" width="795">　　<?php if($id!=''){echo "编辑富豪榜单";}else{echo "添加富豪榜单";}?> <a href="<?php echo $href;?>"><img src="/images/admin/btn_back.png" border=0></a></td>
 		</tr>
 		<tr class=tr4>
 			<td width="130">姓名</td>

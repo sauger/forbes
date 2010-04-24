@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	session_start();
 	require_once('../frame.php');
 	$_SESSION['login'] = rand_str();

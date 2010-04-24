@@ -48,15 +48,15 @@
 					<td><input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>"></td>
 					<td>
 						<?php if($record[$i]->is_adopt=="1"){?>
-						<span style="cursor:pointer" class="revocation" name="<?php echo $record[$i]->id;?>" title="撤销"><img src="/images/btn_apply.png" border="0"></span>
+						<span style="cursor:pointer" class="revocation" name="<?php echo $record[$i]->id;?>" title="撤销"><img src="/images/admin/btn_apply.png" border="0"></span>
 						<?php }?>
 						<?php	if($record[$i]->is_adopt=="0"){?>
-						<span style="cursor:pointer" class="publish" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/btn_unapply.png" border="0"></span>
+						<span style="cursor:pointer" class="publish" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border="0"></span>
 						<?php }	?>
-						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border="0"></a>
-						<a href="edit2.php?p_id=<?php echo $record[$i]->id;?>" title="添加题目"><img src="/images/btn_add.png" border="0"></a>
-						<a href="list.php?id=<?php echo $record[$i]->id;?>" title="查看题目"><img src="/images/btn_config2.png" border="0"></a>
-						<span style="cursor:pointer" class="del_problem" name="<?php echo $record[$i]->id;?>"  title="删除"><img src="/images/btn_delete.png" border="0"></span>
+						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a>
+						<a href="edit2.php?p_id=<?php echo $record[$i]->id;?>" title="添加题目"><img src="/images/admin/btn_add.png" border="0"></a>
+						<a href="list.php?id=<?php echo $record[$i]->id;?>" title="查看题目"><img src="/images/admin/btn_config2.png" border="0"></a>
+						<span style="cursor:pointer" class="del_problem" name="<?php echo $record[$i]->id;?>"  title="删除"><img src="/images/admin/btn_delete.png" border="0"></span>
 					</td>
 				</tr>
 		<?php

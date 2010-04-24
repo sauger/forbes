@@ -18,6 +18,7 @@
 			</div>
 			<div class=user_btn><a href="javascript:void(0)" onclick="myhomepage()" name="homepage">设为首页</a>　<a href="javascript:void(0)" onclick="addfavorite()">收藏本站</a></div>
 			<div id=magazine_title>本期杂志介绍</div>
+			<div id=magazine_title_more><a href="">更多杂志</a></div>
 			<?php 
 				$pos_name = "top_magazine";
 			?>
@@ -52,7 +53,7 @@
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="榜单"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[1]->href; ?>"><div class="nav" param1="<?php echo $countnav[1]->id; ?>" id=piclist></div></a>
+				<a href="<?php echo $countnav[1]->href; ?>"><div class="nav" param1="<?php echo $countnav[1]->id; ?>" id=piclists></div></a>
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="富豪"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
@@ -68,7 +69,7 @@
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="创业"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[5]->href; ?>"><div class="nav" param1="<?php echo $countnav[5]->id; ?>" id=picinitiate></div></a>
+				<a href="<?php echo $countnav[5]->href; ?>"><div class="nav" param1="<?php echo $countnav[5]->id; ?>" id=picentrepreneur></div></a>
 			</div>
 
 			<div class=vertical></div>

@@ -84,8 +84,8 @@
 						}
 					?>
 					<td>
-						<a href="custom_list_item_edit.php?list_id=<?php echo $id;?>&id=<?php echo $v->fields['id']->value;?>" class="edit" name="<?php echo $record[$i]->id;?>"><img src="/images/btn_edit.png" border=0></a>
-						<span class="del" name="<?php echo $v->fields['id']->value;?>"><img src="/images/btn_delete.png" border=0></span>
+						<a href="custom_list_item_edit.php?list_id=<?php echo $id;?>&id=<?php echo $v->fields['id']->value;?>" class="edit" name="<?php echo $record[$i]->id;?>"><img src="/images/admin/btn_edit.png" border=0></a>
+						<span class="del" name="<?php echo $v->fields['id']->value;?>"><img src="/images/admin/btn_delete.png" border=0></span>
 						<input type="hidden" id="db_table" value="<?php echo $table_name;?>">
 					</td>
 				</tr>

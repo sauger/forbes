@@ -46,8 +46,8 @@
 			<td><?php echo $record[$i]->name;?></td>
 			<td><input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:40px;"></td>
 			<td>
-				<a href="edit2.php?id=<?php echo $record[$i]->id;?>&p_id=<?php echo $id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border="0"></a>
-				<span style="cursor:pointer" class="del_problem" name="<?php echo $record[$i]->id;?>"  title="删除"><img src="/images/btn_delete.png" border="0"></span>
+				<a href="edit2.php?id=<?php echo $record[$i]->id;?>&p_id=<?php echo $id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a>
+				<span style="cursor:pointer" class="del_problem" name="<?php echo $record[$i]->id;?>"  title="删除"><img src="/images/admin/btn_delete.png" border="0"></span>
 			</td>
 		</tr>
 		<?php }?>

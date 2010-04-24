@@ -10,7 +10,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #top_function .user_btn{width:200px; height:23px; margin-top:1px; margin-left:15px; color:#ffffff; line-height:22px; overflow:hidden;}
 #top_function .user_btn a{margin-right:5px; font-size:12px; color:#ffffff; text-decoration:none; }
 #top_function .user_btn #uname_span{width:104px; height:22px; overflow:hidden;}
-#top_function #magazine_title{width:180px; height:16px; line-height:16px; margin-top:6px; margin-left:13px; color:#ffffff; font-size:14px; font-weight:bold;}
+#top_function #magazine_title{width:130px; height:16px; line-height:16px; margin-top:6px; margin-left:13px; color:#ffffff; font-size:14px; font-weight:bold;}
+#top_function #magazine_title_more{width:50px; height:14px; margin-top:8px; margin-right:15px; line-height:14px; float:right;}
+#top_function #magazine_title_more a{color:#ffffff; text-decoration:none;}
 #top_function #magazine_pic{width:72px; height:93px; margin-top:14px; margin-left:10px;}
 #top_function #magazine_description{width:122px; height:60px; margin-top:15px; margin-left:5px; color:#666666; line-height:20px; overflow:hidden;}
 #top_function #magazine_description .font1{color:#333333; font-weight:bold;}
@@ -29,10 +31,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 #navigation .nav{width:75px; height:35px; cursor:pointer;  background:none; margin:0 auto; margin-top:3px;}
 
 #navigation .menu #picindex{background:url(/images/public/m_index.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_index.png);}
-#navigation .menu #piclist{background:url(/images/public/m_list.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_list.png);}
+#navigation .menu #piclists{background:url(/images/public/m_lists.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_lists.png);}
 #navigation .menu #picbillinaires{background:url(/images/public/m_billinaires.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_billinaires.png);}
 #navigation .menu #picinvestment{background:url(/images/public/m_investment.png) no-repeat center! important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_investment.png);}
-#navigation .menu #picinitiate{background:url(/images/public/m_initiate.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_initiate.png);}
+#navigation .menu #picentrepreneur{background:url(/images/public/m_entrepreneur.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_entrepreneur.png);}
 #navigation .menu #picbusiness{background:url(/images/public/m_business.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_business.png);}
 #navigation .menu #pictech{background:url(/images/public/m_tech.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_tech.png);}
 #navigation .menu #piccity{background:url(/images/public/m_city.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_city.png);}

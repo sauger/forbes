@@ -68,7 +68,7 @@
 						<?php if("image_vote"==$vote->vote_type&&null!=$vote_item_record[$k]->photo_url){?><a href="<?php echo $vote_item_record[$k]->photo_url;?>" target="_blank">点击查看</a><?php }?>
 						<input name="old_item[]"  class="item_image"  type="file" <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
 						<input type="hidden" name="old_item[id][]" value="<?php echo $vote_item_record[$k]->id;?>">
-						<a class='del_old_item' name="<?php echo $vote_item_record[$k]->id;?>" style='cursor:pointer;' title="删除"><img src="/images/btn_delete.png" border="0"></a>
+						<a class='del_old_item' name="<?php echo $vote_item_record[$k]->id;?>" style='cursor:pointer;' title="删除"><img src="/images/admin/btn_delete.png" border="0"></a>
 					</td>
 				</tr>
 			<?php }?>
@@ -78,7 +78,7 @@
 			<td id="single">
 				<input type="text" name="vote_item[title][]" style="width:300px;" <?php if(empty($id)){?>class="required"<?php }?>>
 				<input name="vote_item[]"  class="item_image"  type="file"  <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
-				<a class="add_item" value="1" style="cursor:pointer;" title="继续添加"><img src="/images/btn_add.png" border="0"></a>
+				<a class="add_item" value="1" style="cursor:pointer;" title="继续添加"><img src="/images/admin/btn_add.png" border="0"></a>
 			</td>	
 		</tr>
 		<tr class=btools>
