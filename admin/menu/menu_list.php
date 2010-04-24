@@ -35,7 +35,7 @@
 	<div id="itable">
 		<table cellspacing="1" align="center">
 		<tr class="itable_title">
-			<td width=20%>菜单名称</td><td width=15%>优先级</td><td width=15%>链接</td><td width="35%">链接方式</td><td width=15%>操作</td>
+			<td width=20%>菜单名称</td><td width=15%>优先级</td><td width=35%>链接</td><td width="15%">链接方式</td><td width=15%>操作</td>
 		</tr>
 		<?php
 			$menu = new table_class($menu_table);
