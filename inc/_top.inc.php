@@ -18,6 +18,7 @@
 			</div>
 			<div class=user_btn><a href="javascript:void(0)" onclick="myhomepage()" name="homepage">设为首页</a>　<a href="javascript:void(0)" onclick="addfavorite()">收藏本站</a></div>
 			<div id=magazine_title>本期杂志介绍</div>
+			<div id=magazine_title_more><a href="">更多杂志</a></div>
 			<?php 
 				$pos_name = "top_magazine";
 			?>
