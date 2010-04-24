@@ -33,7 +33,7 @@
 	  <a href="edit.php" id=btn_add></a>
 </div>	
 <div id=isearch>
-	<input id="search" type="text" value="">
+	<input id="search" type="text" value="<?php echo $search;?>">
 	<input type="button" value="搜索" id="search_button">
 </div>	
 
@@ -76,7 +76,7 @@ $(function(){
 		}
 	});
 	
-	$('#search_b').click(function(){
+	$('#search_button').click(function(){
 		search();
 	})
 })

@@ -1,10 +1,15 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  	require_once('../../frame.php');
 	judge_role();
 	$user_title="添加用户"; 
 	$db = get_db();
-	$records = $db->query("select a.*,b.nick_name as role_name from fb_user a left join fb_role b on a.role_name = b.name");
+	$search  = $_GET['search'];
+	$sql = "select a.*,b.nick_name as role_name from fb_user a left join fb_role b on a.role_name = b.name where 1=1";
+	if($search!=''){
+		$sql .= " and a.name = '$search'";
+	}
+	$records = $db->paginate($sql,20);
 	$count = count($records);
 ?>
 
@@ -26,7 +31,7 @@
 	  <a href="user_edit.php" id=btn_add></a>
 	</div>
 	<div id=isearch>
-		<input class="sau_search" name="title" type="text" value="<? echo $_REQUEST['title']?>">
+		<input class="sau_search" id="search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
 		<input type="button" value="搜索" id="search_button">
 	</div>
 	<div id=itable>
@@ -36,7 +41,7 @@
 		</tr>
 		<?php for($i=0;$i<$count;$i++){?>
 		<tr class="tr3" id="<?php echo $records[$i]->id;?>">
-			<td><a href="/column/column.php?id=<?php echo $records[$i]->id;?>" target="_blank"><?php echo $records[$i]->name;?></a></td>
+			<td><?php echo $records[$i]->name;?></td>
 			<td><?php echo $records[$i]->nick_name;?></td>
 			<td><?php echo $records[$i]->role_name;?></td>
 			<td>	
@@ -45,9 +50,32 @@
 			</td>
 		</tr>
 		<? }?>
+		<tr class="btools">
+			<td colspan=10>
+				<?php paginate("",null,"page",true);?>
+			</td>
+		</tr>
 	</table>
 </div>
 	<input type="hidden" id="db_table" value="<?php echo $tb_user;?>">
 </body>
 </html>
 
+<script>
+$(function(){
+	$('#search_button').click(function(){
+		send_search();
+	});
+	$('#search').keypress(function(e){
+		if(e.keyCode == 13){
+			send_search();
+		}
+	});
+});
+
+function send_search(){
+	var search = $('#search').val();
+	var url = "user_list.php?search=" + encodeURI(search);
+	location.href = url;
+}
+</script>

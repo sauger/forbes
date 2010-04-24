@@ -32,9 +32,10 @@
 ?>
 	<div id=ibody>
 		<?php require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=bread><a href="index.php">榜单</a></div>
+		<div id=bread><a href="index.php">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
 		<div id=bread_line>
 		<div id="list_left">
+			<div id="list_title"><?php echo $list->name;?></div>
 			<div id="list_left_top">
 				<a href="more.php?id=<?php echo $id;?>">查看详细</a>
 			</div>

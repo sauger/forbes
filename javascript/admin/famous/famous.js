@@ -8,7 +8,7 @@ $(function(){
 		}
 	});
 	
-	$('#search_b').click(function(){
+	$('#search_button').click(function(){
 		search();
 	})
 })

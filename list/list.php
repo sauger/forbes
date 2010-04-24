@@ -67,6 +67,8 @@
 			<?php 
 				$bdid=intval($_GET['id']);
 				$year = intval($_GET['year']);
+				$key = $_GET['key'];
+				if(strlen($key)>20)$key='';
 				switch($bdid){
 					case "1":
 						$bdname="富豪榜";

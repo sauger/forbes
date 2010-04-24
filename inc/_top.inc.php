@@ -32,13 +32,13 @@
 			<div id=logo></div>
 			<div class=forbes_search>
 					<select name="selsearch" class="iselect">
-						<option>榜单</option>
-						<option>富豪</option>
-						<option>作者</option>
-						<option>文章</option>
+						<option value="list">榜单</option>
+						<option value="rich">富豪</option>
+						<option value="author">作者</option>
+						<option value="news">文章</option>
 					</select>
 			</div>
-			<input class="input">
+			<input id="search_text" class="input">
 			<button class=search>查 询</button>			
   </div>	
 	
@@ -57,7 +57,7 @@
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="富豪"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[2]->href; ?>"><div class="nav" param1="<?php echo $countnav[2]->id; ?>" id=picbillinaires></div></a>
+				<a href="<?php echo $countnav[2]->href; ?>"><div class="nav" param1="<?php echo $countnav[2]->id; ?>" id=picbillionaires></div></a>
 			</div>
 			<div class=vertical></div>
 			<div class="menu" <?php if($navigation[0]->name=="投资"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>

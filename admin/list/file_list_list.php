@@ -38,6 +38,7 @@
 <div id=isearch>
 		<input id="s_text" type="text" value="<? echo $_REQUEST['s_text'];?>">
 		<input type="button" value="搜索" id="search_button">
+		<input type="hidden" id="file" value="file_list_list">
 </div>
 <div id=itable>
 	<table cellspacing="1" align="center">

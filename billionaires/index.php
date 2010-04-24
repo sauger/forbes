@@ -1,5 +1,8 @@
 ﻿<?php 
 	require_once(dirname(__FILE__).'/../frame.php');
+	$db = get_db();
+	$nav=$db->query('select id from fb_navigation where name="富豪"');
+	$nav=$nav[0]->id;	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +13,7 @@
 	<?php
 		use_jquery();
 		js_include_tag('public','right');
-		css_include_tag('public','billinaires');
+		css_include_tag('public','billionaires');
 		init_page_items();
 	?>
 </head>
@@ -19,13 +22,13 @@
 	<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread><a href="#">富豪</a></div>
 		<div id=bread_line></div>
-		<div id=billinaires_left>
-			<div id=billinaires_head_left></div>
+		<div id=billionaires_left>
+			<div id=billionaires_head_left></div>
 			<?php 
 					$pos_name = "richindex_head";
 							
 			?>
-			<div id=billinaires_head <?php show_page_pos($pos_name); ?>>
+			<div id=billionaires_head <?php show_page_pos($pos_name); ?>>
 				<div id=pic>
 					<img border=0 src="<?php echo $pos_items->$pos_name->image1;?>" alt="<?php echo $pos_items->$pos_name->title;?>"/>
 					<div id=flash></div>
@@ -101,7 +104,7 @@
 					</div>
 				</div>
 			</div>
-				<div id=billinaires_search>
+				<div id=billionaires_search>
 					<div class="search_title">富豪检索</div>
 					<div class=search_content_l></div>
 					<div class="search_content_r">
@@ -120,8 +123,8 @@
 					</div>
 				</div>
 			</div>
-			<div id=billinaires_lists>
-				<div id=billinaires_lists_top>
+			<div id=billionaires_lists>
+				<div id=billionaires_lists_top>
 					<div class=title>
 						<div class=wz>富豪榜单</div>
 						<div class=more><a href=""><img border=0 src="/images/public/public_more1.jpg"></a></div>	
@@ -137,7 +140,7 @@
 						<?php } ?>
 					</div>
 				</div>
-				<div id=billinaires_lists_bottom>
+				<div id=billionaires_lists_bottom>
 					<div class=title>
 						<div class=wz>2009年度中国富豪榜</div>
 						<div class=more><a href=""><img border=0 src="/images/public/public_more1.jpg"></a></div>	
@@ -162,19 +165,19 @@
 						<div class=num<?php echo $i;?>></div>
 					</div>
 					<?php } ?>
-					<div id=billinaires_inventory>富豪清单　<select></select></div>
+					<div id=billionaires_inventory>富豪清单　<select></select></div>
 					<div id=lists>
 						<a href="" style="color:#0f78b0;">排名</a>　　<a href="">姓名</a>　　<a href="">名开头字母顺序</a>	
 						<a href="">年龄</a>　　<a href="">资产规则</a>　　<a href="">城市区域</a>	
 					</div>
 				</div>
 			</div>
-			<div id=billinaires_m>
+			<div id=billionaires_m>
 					<a href=""><img border=0 src="/images/fh/six.jpg"></a>
 			</div>
-			<div id=billinaires_report>
-				<div id=billinaires_report_title>富豪报道</div>
-				<div id=billinaires_report_left>
+			<div id=billionaires_report>
+				<div id=billionaires_report_title>富豪报道</div>
+				<div id=billionaires_report_left>
 					<?php 
 					for($i=0;$i<3;$i++){
 						$pos_name = "richindex_news_{$i}";
@@ -186,7 +189,7 @@
 					</div>	
 					<?php }?>
 				</div>
-				<div id=billinaires_report_right>
+				<div id=billionaires_report_right>
 					<?php 
 					for($i=3;$i<6;$i++){
 						$pos_name = "richindex_news_{$i}";
@@ -199,21 +202,28 @@
 					<?php }?>
 				</div>
 			</div>
-			<div id=billinaires_b_dash></div>
-			<div id=billinaires_say>
-				<div class=billinaires_say_title>创富者说</div>
+			<div id=billionaires_b_dash></div>
+			<div id=billionaires_say>
+				<div class=billionaires_say_title>创富者说</div>
 				<?php for($i=0;$i<3;$i++){ 
 					$pos_name = "richindex_news1_{$i}";
 				?>
+<<<<<<< HEAD:billinaires/index.php
 				<div class=billinaires_say_content <?php show_page_pos($pos_name)?>>
 					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"></a></div>
 					<div class=pictitle><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 					<div class=piccontent><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a></div>
+=======
+				<div class=billionaires_say_content <?php show_page_pos($pos_name)?>>
+					<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>"><img border=0 src="<?php echo $pos_items->$pos_name->image1;?>"></a></div>
+					<div class=pictitle><a href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+					<div class=piccontent><a href="">　　<?php echo $pos_items->$pos_name->description;?></a></div>
+>>>>>>> c864354d8d8c53af4367a3c76c3e57768d5e53ff:billionaires/index.php
 				</div>
 				<?php } ?>
-				<div id=billinaires_say_dash></div>
-				<div class=billinaires_say_title>评论定制</div>
-				<div id=billinaires_say_bottom_content>
+				<div id=billionaires_say_dash></div>
+				<div class=billionaires_say_title>评论定制</div>
+				<div id=billionaires_say_bottom_content>
 					<div id=content_t>
 						<div id=content_t_l>
 							订阅福布斯快闻　<input type="radio"><span style="font-size:12px; font-weight:normal; color:#666666;">我要定制</span>	
