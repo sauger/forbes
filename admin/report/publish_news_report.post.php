@@ -47,7 +47,7 @@ $sql = "SELECT count(*) as icount,b.nick_name,c.name  FROM fb_news a left join f
 
 <div id="div_detail" style="display:none;">
 <table cellspacing=1 border="0">
-			<tr class="tr2">
+			<tr class="itable_title">
 				<td width="40%">姓名</td><td  width="30%">文章分类</td><td width="30%">数量</td>
 			</tr>
 <?php 
