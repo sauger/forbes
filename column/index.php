@@ -43,7 +43,7 @@
 						<div class=column_recommend_top <?php show_page_pos($pos_name1);?>>
 							<div class=column_recommend_top_l>
 								<div class=picture>
-									<? show_page_img($pos_items,$pos_name1); ?>
+									<a href="<?php echo $pos_items->$pos_name1->reserve?>"><? show_page_img($pos_items,$pos_name1); ?></a>
 								</div>
 								<div class=n>
 									<? echo $pos_items->$pos_name1->reserve; ?>
@@ -132,7 +132,7 @@
 					</div>
 					<div class=column_special_top>
 						<div class=t1 <? show_page_pos('column_c_b_zk_'.$i); ?>>
-							<?php show_page_href($pos_items,'column_c_b_zk_'.$i); ?>
+							<a href="<?php echo $pos_items->$pos_name1->reserve?>"><?php show_page_href($pos_items,'column_c_b_zk_'.$i); ?></a>
 						</div>
 						<div class=t2>
 							<?php show_page_desc($pos_items,'column_c_b_zk_'.$i);?>
@@ -149,7 +149,7 @@
 									<?php show_page_img($pos_item,$pos_name); ?>
 								</div>
 								<div class=n>
-									<?php echo $pos_items->$pos_name->reserve;?>
+									<?php echo $pos_items->$pos_name->alias;?>
 								</div>
 							</div>
 							<div class=column_recommend_top_r>
@@ -190,7 +190,7 @@
 								<?php show_page_href($pos_items,$pos_name); ?>
 							</div>
 							<div class=t3>
-								—<?php echo $pos_items->$pos_name->reserve;?>
+								—<?php echo $pos_items->$pos_name->alias;?>
 							</div>
 						</div>
 						<div class=t4>
