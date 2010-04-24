@@ -470,7 +470,7 @@
 							<select id="old_magazine">
 								<option value=''></option>
 								<?php 
-									$magazine = $db->query("select year from fb_old_magazine group by year order by year desc");
+									$magazine = $db->query("SELECT substring(publish_data,1,4) as year FROM fb_magazine group by substring(publish_data,1,4)");
 									$year_count = $db->record_count;
 									for($i=0;$i<$year_count;$i++){
 								?>

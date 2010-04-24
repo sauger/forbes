@@ -1,9 +1,9 @@
 ﻿<?php 
 	session_start();
 	require_once('../frame.php');
-	$_SESSION['survey'] = rand_str(20);
 	$db = get_db();
 	$id = intval($_GET['id']);
+	$_SESSION['survey'.$id] = rand_str(20);
 	if(empty($id)){
 		redirect('/error.html');
 		die();
@@ -73,7 +73,7 @@
 				</div>
 			<?php }?>
 			<div id="s2_submit"><input type="submit" value="提交"></div>
-			<input type="hidden" name="verify" value="<?php echo $_SESSION['survey'];?>">
+			<input type="hidden" name="verify" value="<?php echo$_SESSION['survey'.$id];?>">
 			<input type="hidden" name="vote_id" value="<?php echo $id;?>">
 			</from>
 		</div>
