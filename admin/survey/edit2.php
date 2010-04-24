@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$id = intval($_REQUEST['id']);
 	$question = new table_class('fb_survey_question');
 	if(isset($id)){

@@ -9,7 +9,7 @@
  //========================================================================
  */
 
-require_once('jpgraph_plotmark.inc.php');
+include_once('jpgraph_plotmark.inc.php');
 
 //===================================================
 // CLASS RadarLogTicks
@@ -832,7 +832,7 @@ class RadarGraph extends Graph {
         // Should we do any final image transformation
         if( $this->iImgTrans && !$_csim ) {
             if( !class_exists('ImgTrans',false) ) {
-                require_once('jpgraph_imgtrans.php');
+                include_once('jpgraph_imgtrans.php');
             }
 
             $tform = new ImgTrans($this->img->img);

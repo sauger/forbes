@@ -5,7 +5,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>福布斯后台</title>
 	<?php
-		require_once('../frame.php');
+		include_once('../frame.php');
 		session_start();
 		if($_SESSION["fbsadmin"]==""){redirect("../admin/");}
   ?>

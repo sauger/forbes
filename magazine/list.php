@@ -1,5 +1,5 @@
 ﻿<?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<? require_once('../inc/top.inc.php');?>
+	<? include_once('../inc/top.inc.php');?>
 		<div id=bread>
 			<a href="/magazine/">杂志首页</a> > <span>杂志列表</span>		
 		</div>
@@ -68,12 +68,12 @@
 			<div class="paginate"><?php paginate();?></div>
 		</div>
 		<div id=right_inc>
-			<?php require_once('../right/ad.php');?>
-			<?php require_once('../right/favor.php');?>
-			<?php require_once('../right/four.php');?>
-			<?php require_once('../right/magazine.php');?>
+			<?php include_once('../right/ad.php');?>
+			<?php include_once('../right/favor.php');?>
+			<?php include_once('../right/four.php');?>
+			<?php include_once('../right/magazine.php');?>
 		</div>
-	<? require_once('../inc/bottom.inc.php');?>
+	<? include_once('../inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>

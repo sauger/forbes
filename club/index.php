@@ -1,5 +1,5 @@
 ﻿<?php
-	require_once(dirname(__FILE__).'/../frame.php');
+	include_once(dirname(__FILE__).'/../frame.php');
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+		<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread><a href="#">会员俱乐部</a></div>
 		<div id=bread_line></div>
 		<div id=club_left>
@@ -167,7 +167,7 @@
 			</div>	
 			<div id=customize_right></div>
 		</div>
-		<? require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+		<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>

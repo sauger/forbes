@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$key = $_GET['key'];
 	$db = get_db();
 	if(strlen($key)>20){

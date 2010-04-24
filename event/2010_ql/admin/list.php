@@ -5,7 +5,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>福布斯列表</title>
 	<?php
-		require_once('../frame.php');
+		include_once('../frame.php');
 		$db = get_db();
 		$record=$db->paginate('select id,company_name,created_at from subject_application2 order by created_at desc',25);
 	?>

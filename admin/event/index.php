@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	judge_role();
 	
 	$search = $_REQUEST['search'];

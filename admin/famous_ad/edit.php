@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$db = get_db();
 	$fid = $_REQUEST['f_id'];
 	$famous = new table_class('fb_mr');

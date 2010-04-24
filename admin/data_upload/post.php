@@ -1,6 +1,6 @@
 <?php
-    require_once('../../frame.php');
-	require_once('reader.php');
+    include_once('../../frame.php');
+	include_once('reader.php');
 	$db = get_db();
 	
 	$upload = new upload_file_class();

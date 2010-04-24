@@ -1,5 +1,5 @@
 ﻿<?php 
-	require_once( dirname(__FILE__) .'/frame.php');
+	include_once( dirname(__FILE__) .'/frame.php');
 	$db = get_db();
 	$nav=$db->query('select id from fb_navigation where name="首页"');
 	$nav=$nav[0]->id;	
@@ -18,7 +18,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<?php require_once('inc/top.inc.php');?>
+	<?php include_once('inc/top.inc.php');?>
 	<?php 
 		function get_news_url($news){
 			return dynamic_news_url($news);
@@ -497,7 +497,7 @@
 				<div class=public_bottom1></div>
 			</div>
 		</div>	
-	<?php require_once('inc/bottom.inc.php');?>
+	<?php include_once('inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>

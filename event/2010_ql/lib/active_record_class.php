@@ -3,7 +3,7 @@
 
 */
 
-require_once(dirname(__FILE__).'/database_connection_class.php');
+include_once(dirname(__FILE__).'/database_connection_class.php');
 class ActiveRecord{
 	private $_tablename = "";
 	private $fields_type = array();
@@ -139,7 +139,7 @@ class ActiveRecord{
 	}
 
 	public function has_many($object,$options = null){
-		require_once(dirname(__FILE__).'/has_many_object_class.php');
+		include_once(dirname(__FILE__).'/has_many_object_class.php');
 		$this->has_many_objects[$object] = new has_many_item($this,$object,$options);
 	}
 

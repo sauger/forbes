@@ -8,7 +8,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>forbes</title>
 	<?php 
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 		judge_role();
 		css_include_tag('jquery_ui','colorbox','admin');
 		use_jquery_ui();

@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	require_login();
 	$id = intval($_REQUEST['id']);
 	if(!empty($id)){

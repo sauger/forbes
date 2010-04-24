@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$cid = intval($_REQUEST['cid']);
 	if(empty($cid)){
 		redirect('error.html');

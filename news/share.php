@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$db = get_db();
 	$_SESSION['news_share'] = rand_str();
 	$news_id = intval($_GET['news_id']);

@@ -5,7 +5,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>编辑</title>
 	<?php 
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 		$db = get_db();
 		$id = intval($_REQUEST['id']);
 		$list_id = intval($_REQUEST['list_id']);

@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$id = intval($_REQUEST['id']);
 	if($id <= 0){
 		alert('invalid request!');

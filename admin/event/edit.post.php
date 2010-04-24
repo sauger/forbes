@@ -1,5 +1,5 @@
 <?php
-    require_once('../../frame.php');
+    include_once('../../frame.php');
     #var_dump($_POST);
    
     $activity = new table_class("fb_event");
