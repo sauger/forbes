@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$id = intval($_REQUEST['id']);
 	if(!empty($id)){
 		$news = new table_class('fb_news');

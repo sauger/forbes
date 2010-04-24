@@ -6,7 +6,7 @@
 	<title></title>
 </head>
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$question = new table_class('fb_survey_question');
 	$id = intval($_POST['id']);
 	

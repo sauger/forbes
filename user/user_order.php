@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	require_login();
 	$db = get_db();
 	$uid = $_SESSION['user_id'];

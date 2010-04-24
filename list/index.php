@@ -20,7 +20,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+		<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread><a href="#">榜单</a></div>
 		<div id=bread_line></div>
 		<div id="list_left">
@@ -140,7 +140,7 @@
 		  		<?php include dirname(__FILE__)."/../right/article.php";?>
 		 </div>
 		
-		<? require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+		<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>

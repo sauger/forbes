@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	
 	$id = $_GET['id'];
 	
@@ -20,7 +20,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<?php require_once('../inc/top.inc.php');?>
+	<?php include_once('../inc/top.inc.php');?>
 		<div id=bread>
 			<a href="/magazine/">杂志首页</a> > <span>杂志</span>		
 		</div>
@@ -134,7 +134,7 @@
 				</div>
 				<input type=button id=button>
 			</div>
-	<?php require_once('../inc/bottom.inc.php');?>
+	<?php include_once('../inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>

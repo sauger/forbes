@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$type = $_REQUEST['type'];
 	$id = $_REQUEST['id'];
 	$conditions = null;

@@ -7,7 +7,7 @@
 	</head>
 <body>
 <?php
-    require_once('../frame.php');
+    include_once('../frame.php');
 	
 	
 	if($_POST['session']!=$_SESSION['get_pwd']){

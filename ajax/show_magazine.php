@@ -1,6 +1,6 @@
 <option url="" value=""></option>
 <?php 
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$db = get_db();
 	
 	$year = intval($_POST['year']);

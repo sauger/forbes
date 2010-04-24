@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$type = $_POST['type'];
 	$db = get_db();
 	$fcontent = '<?xml version="1.0" encoding="utf-8" ?>';

@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	judge_role();
 	$db = get_db();
 	$news_id = $_POST['id'] ? $_POST['id'] : 0;

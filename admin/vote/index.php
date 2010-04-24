@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$key = $_REQUEST['key'];
 	$id_adopt = $_REQUEST['adopt'];
 	$db = get_db();

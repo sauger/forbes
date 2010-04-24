@@ -8,7 +8,7 @@
 		if(intval($_REQUEST['list_id']) <= 0) die('invalide request!');
 		$list_id = $_REQUEST['list_id'];
 		$id = intval($_REQUEST['id']);
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 		css_include_tag('admin');
 		use_jquery();
 		js_include_tag('admin_pub');

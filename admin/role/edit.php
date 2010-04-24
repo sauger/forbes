@@ -5,7 +5,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>福布斯中文网-角色管理</title>
 	<?
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 		css_include_tag('admin');
 		use_jquery();
 		js_include_tag('admin/role/edit');

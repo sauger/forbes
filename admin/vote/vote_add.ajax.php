@@ -1,5 +1,5 @@
 <?php 
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 		$id = $_REQUEST['id'];
 		if(isset($_REQUEST['id'])){
 			$vote = new table_class('fb_vote');

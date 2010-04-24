@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	
 	$search = $_REQUEST['search'];
 	$year = $_REQUEST['year'];

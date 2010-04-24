@@ -1,5 +1,5 @@
 ﻿<?php 
-	require_once(dirname(__FILE__).'/../frame.php');
+	include_once(dirname(__FILE__).'/../frame.php');
 	$db = get_db();
 	$nav=$db->query('select id from fb_navigation where name="富豪"');
 	$nav=$nav[0]->id;	
@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+	<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread><a href="#">富豪</a></div>
 		<div id=bread_line></div>
 		<div id=billionaires_left>
@@ -43,9 +43,10 @@
 					</div>
 				</div>
 			</div>	
-			<div id=billinaires_head_right></div>
-			<div id=billinaires_ranking>
-				<div class=ranking_top_title><a href="#">动态富豪榜-富豪个人财富价值排名 1月31日</a></div>
+
+			<div id=billionaires_head_right></div>
+			<div id=billionaires_ranking>
+				<div class=ranking_top_title><a href="">动态富豪榜-富豪个人财富价值排名 1月31日</a></div>
 				<div class=ranking_top_content>
 					<div id=c_title>
 						<div class=pm>排名</div><div class="sx">|</div><div class=name>姓名</div><div class="sx">|</div><div class=cfs>财富数（亿）</div><div class="sx">|</div><div class=sex>性别</div><div class="sx">|</div><div class=age>年龄</div><div class="sx">|</div><div class=cmpname>公司名</div>
@@ -237,7 +238,7 @@
 					</div>	
 				</div>
 			</div>
-			<? require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+			<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 		</div>
 	</body>
 </html>

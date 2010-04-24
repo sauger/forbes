@@ -1,6 +1,6 @@
 ﻿<?php 
 	session_start();
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$db = get_db();
 	$id = intval($_GET['id']);
 	$_SESSION['survey'.$id] = rand_str(20);

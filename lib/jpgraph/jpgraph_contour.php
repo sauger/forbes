@@ -8,7 +8,7 @@
 // Copyright (c) Aditus Consulting. All rights reserved.
 //========================================================================
 */
-require_once('jpgraph_meshinterpolate.inc.php');
+include_once('jpgraph_meshinterpolate.inc.php');
 define('HORIZ_EDGE',0);
 define('VERT_EDGE',1);
 

@@ -1,5 +1,5 @@
 <?php
-	require_once('../frame.php');
+	include_once('../frame.php');
 	function get_news_url($news){
 			return static_news_url($news);
 		}
