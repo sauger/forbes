@@ -43,7 +43,7 @@
 						<?php show_page_img($pos_items,$pos_name); ?>	
 					</div>
 					<div class=content_r>
-						<div class=title><?php show_page_href($pos_items,$pos_name); ?></div>
+						<div class=title><?php show_page_href(); ?></div>
 						<div class=context><?php show_page_desc($pos_items,$pos_name); ?></div>
 						<div class=dc><a href="<?php echo $pos_items->$pos_name->href; ?>">开始调查>></a></div>
 					</div>
@@ -78,7 +78,7 @@
 				</div>
 				<div id=Bulletin_c  <?php $pos_name='club_post'; show_page_pos($pos_name); ?>>
 					<div id=pic><a href="<?php echo $pos_items->$pos_name->href; ?>"><img border=0 src="<?php echo $pos_items->$pos_name->image1; ?>"></a></div>
-					<div id=pictitle><?php show_page_href($pos_items,$pos_name); ?></div>
+					<div id=pictitle><?php show_page_href(); ?></div>
 					<div id=piccontent><?php show_page_desc($pos_items,$pos_name); ?></div>
 				</div>
 				<div class="club_dash"></div>
@@ -87,7 +87,7 @@
 					<div class=cl <?php $pos_name='club_post_'.$i; show_page_pos($pos_name); ?>>
 						<div class=cl_l></div>
 						<div class=cl_r>
-							<?php show_page_href($pos_items,$pos_name); ?>	
+							<?php show_page_href(); ?>	
 						</div>	
 					</div>
 				<?php } ?>

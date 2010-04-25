@@ -6,15 +6,15 @@
 		<div id=bread_line></div>
 		<div id=l>
 		 <div id=common_head>	
-			<div id=common_head_title ><?php $pos_name = $pos.'hl'; show_page_href($pos_items,$pos_name,true,"_blank");?></div>
+			<div id=common_head_title ><?php $pos_name = $pos.'hl'; show_page_href();?></div>
 			<div id=common_head_title_pic>
-				<?php show_page_img($pos_items,$pos_name)?>
+				<?php show_page_img()?>
 			</div>
 			<div id=common_head_r>
-				<div id=common_head_description <?php show_page_pos($pos_name);?>><?php show_page_desc($pos_items,$pos_name)?></div>
+				<div id=common_head_description <?php show_page_pos($pos_name);?>><?php show_page_desc()?></div>
 				<div id=common_head_list>
 					<?php for($i=0; $i<2;$i++){ $pos_name = $pos_name.'_r'.$i?>
-						<div class=common_head_list <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name,true,"_blank");?></div>
+						<div class=common_head_list <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
 					<?php } ?>
 				</div>
 			</div>
@@ -27,11 +27,11 @@
 					<a href="/news/news_list.php?cname=<?php $catename[0]->name?>" target="_blank" class=more></a>
 				</div>
 				<?php for($i=0;$i<6;$i++){ $pos_name = $pos.'acticle'.$i;?>
-					<div class=common_article_lis1 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name,true,"_blank");?></div>
-					<div class=common_article_description1><?php show_page_desc($pos_items,$pos_name);?></div>
+					<div class=common_article_lis1 <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
+					<div class=common_article_description1><?php show_page_desc();?></div>
 				<? }?>
 				<?php  for($i=6;$i<15;$i++){ $pos_name = $pos.'acticle'.$i;?>
-					<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name,true,"_blank");?></div>
+					<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
 				<?php } ?>
 			</div>
 			
@@ -45,12 +45,12 @@
 				</div>
 				<?php for($i=0;$i<2;$i++){ $pos_name = $pos."them".$i;?>
 				<div class=common_subject <?php show_page_pos($pos_name)?>>
-					<div class=common_subject_pic><?php show_page_img($pos_items,$pos_name)?></div>
-					<div class=common_subject_list><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
-					<div class=common_subject_description><?php show_page_desc($pos_items,$pos_name)?></div>
+					<div class=common_subject_pic><?php show_page_img()?></div>
+					<div class=common_subject_list><?php show_page_href()?></div>
+					<div class=common_subject_description><?php show_page_desc()?></div>
 				</div>
 					<?php for($j=0;$j<2;$j++){ $pos_name = $pos."them".$i.$j;?>
-						<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+						<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>
 					<?php }?>
 				<?php }?>
 
@@ -62,10 +62,10 @@
 				</div>
 				<?php for($i=0;$i<3;$i++){ $pos_name = $pos."column".$i;?>
 				<div class=column_container>
-					<a href="<?php echo $pos_items->$pos_name->reserve?>" title="<?php echo $pos_items->$pos_name->title?>" target="_blank"><img src="<?php echo $pos_items->$pos_name->image1; ?>" border="0" /></a>
+					<?php show_page_img(null,null,null,'reserve');?>
 					<div class=article>
-						<div class=common_list3 <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
-						<div class=common_description3><?php echo $pos_items->$pos_name->description;?></div>
+						<div class=common_list3 <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>
+						<div class=common_description3><?php show_page_desc(null,null)?></div>
 						<div class=common_writer><?php if($pos_items->$pos_name->alias != ''){ echo "——".$pos_items->$pos_name->alias; }else echo "&nbsp;";?></div>
 					</div>
 				</div>

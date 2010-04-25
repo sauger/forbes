@@ -14,7 +14,7 @@ for($i=0;$i< $len;$i++){
 	$table->display = $news[0]->title;
 	$table->description = $news[0]->description;
 	$table->image1 = $items[$i]->image_src;
-	$table->alias = $items[$i]->column_name ? $items[$i]->column_name : $items[$i]->nick_name ."的";
+	$table->alias = $items[$i]->column_name ? $items[$i]->column_name : $items[$i]->nick_name;
 	$table->reserve = "/column/{$items[$i]->name}";
 	$table->href = dynamic_news_url($news[0]);
 	$table->static_href = static_news_url($news[0]);
@@ -28,12 +28,14 @@ for($i=0;$i< $len;$i++){
 		$table->href = dynamic_news_url($news[$j]);
 		$table->static_href = static_news_url($news[$j]);
 		$table->save();
-		$selected_news[] = $news[$j]->id;
+		if($news[$j]->id){
+			$selected_news[] = $news[$j]->id;	
+		}
 	}
 }
 
 $selected_news = implode(',',$selected_news);
-$news = $db->query("select title,a.id,a.created_at,a.description,b.nick_name from fb_news a left join fb_user b on a.publisher = b.id where b.role_name='$role' and a.id not in ({$selected_news}) order by created_at desc limit 11");
+$news = $db->query("select title,a.id,a.created_at,a.description,b.nick_name,b.name from fb_news a left join fb_user b on a.publisher = b.id where b.role_name='$role' and a.id not in ({$selected_news}) order by created_at desc limit 11");
 $len = count($news);
 for($i=0;$i<$len;$i++){
 	$pos = 'column_edit_t'.$i;	
@@ -41,7 +43,8 @@ for($i=0;$i<$len;$i++){
 	$table->name = $pos;
 	$table->display = $news[$i]->title;
 	$table->description = $news[$i]->description;
-	$table->reserve = $items[$i]->nick_name;
+	$table->alias = $news[$i]->nick_name;
+	$table->reserve =  "/column/{$news[$i]->name}";
 	$table->href = dynamic_news_url($news[$i]);
 	$table->static_href = static_news_url($news[$i]);
 	$table->save();
@@ -76,7 +79,9 @@ for($i=0;$i< $len;$i++){
 		$table->href = dynamic_news_url($news[$j]);
 		$table->static_href = static_news_url($news[$j]);
 		$table->save();
-		$selected_news[] = $news[$j]->id;
+		if($news[$j]->id){
+			$selected_news[] = $news[$j]->id;	
+		}
 	}
 }
 

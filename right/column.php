@@ -9,16 +9,16 @@
 	?>
 	<div class="column_box" <?php show_page_pos($pos_name)?>>
 		<div class="col_pic">
-			<?php show_page_img($pos_items,$pos_name)?>
+			<?php show_page_img()?>
 		</div>
 		<div class="clo_name">
-			<?php show_page_href($pos_items,$pos_name)?>
+			<?php show_page_href()?>
 		</div>
 		<div class="clo_des">
-			<?php show_page_desc($pos_items,$pos_name)?>
+			<?php show_page_desc()?>
 		</div>
 		<div class="clo_news" <?php show_page_pos($pos_news_name)?>>
-			<?php show_page_href($pos_items,$pos_news_name)?>
+			<?php show_page_href($pos_news_name)?>
 		</div>
 	</div>
 	<?php }?>
@@ -29,16 +29,16 @@
 	?>
 	<div class="column_box" <?php show_page_pos($pos_name)?>>
 		<div class="col_pic">
-			<?php show_page_img($pos_items,$pos_name)?>
+			<?php show_page_img()?>
 		</div>
 		<div class="clo_name">
-			<?php show_page_href($pos_items,$pos_name)?>
+			<?php show_page_href()?>
 		</div>
 		<div class="clo_des">
-			<?php show_page_desc($pos_items,$pos_name)?>
+			<?php show_page_desc()?>
 		</div>
 		<div class="clo_news" <?php show_page_pos($pos_news_name)?>>
-			<?php show_page_href($pos_items,$pos_news_name)?>
+			<?php show_page_href($pos_news_name)?>
 		</div>
 	</div>
 	<?php }?>

@@ -29,11 +29,11 @@
 					<div class=wz>杂志展示</div>
 				</div>
 				<div class=l_pic>
-					<?php show_page_img($pos_items,$pos_name);?>
+					<?php show_page_img();?>
 				</div>
 				<div id=r_t>
-					<div id=title <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name);?></div>
-					<div id=content><a href="">出版日期：<?php show_page_desc($pos_items,$pos_name);?><br>封面专题</a></div>
+					<div id=title <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
+					<div id=content><a href="">出版日期：<?php show_page_desc();?><br>封面专题</a></div>
 				</div>
 				<?php
 					for($i=0;$i<3;$i++){$pos_name = '$magazine_index_news'.$i;
@@ -41,10 +41,10 @@
 				<div class=r_b>
 					<div class=title>
 						<div class=jt></div>
-						<div class=wz  <?php show_page_pos($pos_name)?>><?php show_page_href($pos_items,$pos_name);?></div>
+						<div class=wz  <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
 					</div>
 					<div class=content>
-						<?php show_page_desc($pos_items,$pos_name);?>
+						<?php show_page_desc();?>
 					</div>
 					<div class=r_b_dash></div>
 				</div>
@@ -66,14 +66,14 @@
 				?>
 				<div class=imgandtitle <?php show_page_pos($pos_name)?>>
 					<div class=pic>
-						<?php show_page_img($pos_items,$pos_name);?>
+						<?php show_page_img();?>
 					</div>
-					<div class=pictitle><?php show_page_href($pos_items,$pos_name);?></div>
+					<div class=pictitle><?php show_page_href();?></div>
 					<?php
 						for($j=0;$j<3;$j++){ $pos_name2 = 'magazine_list'.$i.'_r'.$j;
 					?>
 					<div class=piccontent <?php show_page_pos($pos_name2)?>>
-						<?php show_page_href($pos_items,$pos_name2);?>
+						<?php show_page_href();?>
 					</div>
 					<?php
 						}

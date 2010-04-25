@@ -40,10 +40,10 @@
 	<div id=life_middle_bg></div>
 	<?php $pos_name = "lifeindex_column"?>
 	<div id=life_middle_column <?php show_page_pos($pos_name)?>>
-		<div id=picture><img src="<?php echo $pos_items->$pos_name->image1;?>" width="120" height="120" border="0" /></div>
-		<div id=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+		<div id=picture><?php show_page_img(120,120,0);?></div>
+		<div id=title><?php show_page_href()?></div>
 		<div id=text><?php echo $pos_items->$pos_name->description;?></div>
-		<div id=link><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">进入专栏</a></div>
+		<div id=link><a href="<?php echo $pos_items->$pos_name->reserve;?>" target="_blank">进入专栏</a></div>
 	</div>
 </div>	
 
@@ -70,10 +70,10 @@
 				
 				<?php $pos_name = "liftindex_news_1";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
+					<?php show_page_img(210,160)?>
 				</div>
-				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
-				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>
+				<div class=title><?php show_page_href()?></div>
+				<div class=description><?php show_page_desc()?></div>
       </div>
       
       <div class=life_box>
@@ -85,10 +85,10 @@
 				
 				<?php $pos_name = "liftindex_news_2";?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
+					<?php show_page_img(210,160)?>
 				</div>
-				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
-				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>
+				<div class=title><?php show_page_href()?></div>
+				<div class=description><?php show_page_desc()?></div>
       </div>
       
       <div class=life_box>
@@ -99,10 +99,10 @@
 				</div>	
 				<?php $pos_name = "liftindex_news_3";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
+					<?php show_page_img(210,160)?>
 				</div>
-				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
-				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>				
+				<div class=title><?php show_page_href()?></div>
+				<div class=description><?php show_page_desc()?></div>				
       </div>            
 
 
@@ -114,14 +114,14 @@
 				</div>	
 				<?php $pos_name = "lifeindex_news_mlc"?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="500" height="200" /></a>
+					<?php show_page_img(500,200)?>
 				</div>
 				<div id=content <?php show_page_pos($pos_name)?>>
 						<div id=content_title>
-							<?php show_page_href($pos_items,$pos_name,true,"_blank")?>
+							<?php show_page_href()?>
 						</div>
 						<div id=content_description>
-							<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a>
+							<?php show_page_desc()?>
 						</div>
 				</div>
 			</div>
@@ -136,10 +136,10 @@
 				
 				<?php $pos_name = "liftindex_news_4";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
+					<?php show_page_img(210,160)?>
 				</div>
-				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
-				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>
+				<div class=title><?php show_page_href()?></div>
+				<div class=description><?php show_page_desc()?></div>
       </div>
       
       <div class=life_box>
@@ -151,10 +151,10 @@
 				
 				<?php $pos_name = "liftindex_news_5";?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
+					<?php show_page_img(210,160)?>
 				</div>
-				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
-				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>
+				<div class=title><?php show_page_href()?></div>
+				<div class=description><?php show_page_desc()?></div>
       </div>
       
       <div class=life_box>
@@ -165,10 +165,10 @@
 				</div>	
 				<?php $pos_name = "liftindex_news_6";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="210" height="160" /></a>
+					<?php show_page_img(210,160)?>
 				</div>
-				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
-				<div class=description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"> <?php echo $pos_items->$pos_name->description?></a></div>			
+				<div class=title><?php show_page_href()?></div>
+				<div class=description><?php show_page_desc()?></div>			
       </div>      
   </div>
 
@@ -181,7 +181,7 @@
 				</div>	
 				<?php $pos_name = "lifeindex_ly";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" /></a>
+					<?php show_page_img(246,160)?>
 				</div>
       </div>
       
@@ -193,7 +193,7 @@
 				</div>	
 				<?php $pos_name = "lifeindex_hz";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" /></a>
+					<?php show_page_img(246,160)?>
 				</div>
       </div>     	
 			
@@ -210,7 +210,7 @@
 						$pos_name = "lifeindex".$i;
 				?>
 				<div id=list <?php show_page_pos($pos_name);?>>
-					<?php show_page_href($pos_items,$pos_name,true,"_blank")?>
+					<?php show_page_href()?>
 				</div>
 				<?php }?>
 			</div>
@@ -224,9 +224,9 @@
 				</div>	
 				<?php $pos_name = "lifeindex_zt";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" /></a>
+					<?php show_page_img(246,160)?>
 				</div>
-				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+				<div class=title><?php show_page_href()?></div>
       </div>  
 
       <div class=life_box2>
@@ -237,9 +237,9 @@
 				</div>	
 				<?php $pos_name = "lifeindex_cs";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
-					<a href="<?php echo $pos_items->$pos_name->href?>" target="_blank" title="<?php echo $pos_items->$pos_name->title?>"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="246" height="160" /></a>
+					<?php show_page_img(246,160)?>
 				</div>
-				<div class=title><?php show_page_href($pos_items,$pos_name,true,"_blank")?></div>
+				<div class=title><?php show_page_href()?></div>
       </div>  
 			
   </div>			

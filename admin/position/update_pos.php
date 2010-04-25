@@ -324,4 +324,4 @@ include "./_index.php";
 #include "./_fiveindex.php";
 #include "./_right.php";
 #include "./_life.php";
-#include "./_column_index.php";
+include "./_column_index.php";

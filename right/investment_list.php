@@ -5,7 +5,7 @@
 	<?php
 		for($i=0;$i<4;$i++){$pos_name = $pos."list".$i;
 	?>
-		<div class=content <?php show_page_pos($pos_name)?>><li><?php show_page_href($pos_items,$pos_name);?></li></div>
+		<div class=content <?php show_page_pos($pos_name)?>><li><?php show_page_href();?></li></div>
 	<?php } ?>
 </div>
 <div class="bottom_line"></div>
