@@ -137,15 +137,15 @@
 						<?php echo $record[$i]->recommend_priority;?>
 					</td>
 					<td>
-						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" title="关联"><img border=0 src="/images/btn_relation.png"></a>
-						<a href="custom_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img border=0 src="/images/btn_edit.png"></a>
+						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" title="关联"><img border=0 src="/images/admin/btn_relation.png"></a>
+						<a href="custom_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img border=0 src="/images/admin/btn_edit.png"></a>
 						<a href="data_upload.php?id=<?php echo $record[$i]->id;?>" title="数据导入"><img src="/images/admin/btn_import.png" border=0></a>
 						<?php if($record[$i]->list_type == 1){?>
-						<a href="custom_list_item_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/btn_item.png"></a>
+						<a href="custom_list_item_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/admin/btn_item.png"></a>
 						<?php }elseif($record[$i]->list_type == 2){?>
-						<a href="rich_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/btn_item.png"></a>
+						<a href="rich_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/admin/btn_item.png"></a>
 						<?php }elseif($record[$i]->list_type == 3){?>
-						<a href="famous_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/btn_item.png"></a>
+						<a href="famous_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/admin/btn_item.png"></a>
 						<?php }?>
 						<span class="del1" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png"></span>
 						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:40px;">

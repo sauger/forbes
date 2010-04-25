@@ -105,7 +105,7 @@
 		
 		
 		$(".add_item").click(function(){
-			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='item_image' style='display:"+displayed+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/btn_delete.png' border='0'></a></td></tr>");
+			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='item_image' style='display:"+displayed+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a></td></tr>");
 		});
 	
 		$("#vote_type").change(function(){

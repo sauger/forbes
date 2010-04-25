@@ -1,13 +1,11 @@
-﻿﻿body {font-size:12px; font-family:宋体,Arial; color:#000000; margin:0 auto; padding:0;}
+﻿body {font-size:12px; font-family:宋体,Arial; color:#000000; margin:0 auto; padding:0;}
 p{margin:0; padding:0;}
 ul{margin:0; padding:0;}
 li{margin:0; padding:0;} 
 div{margin:0; padding:0; float:left; display:inline;}
-
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 
-#title1 a:link{text-decoration:none;}
-#title1 a:visited{text-decoration:none;}
+#title1 a{text-decoration:none;}
 #column_recommend_b a:link{color:#333385; text-decoration:none;}
 #column_recommend_b a:visited{color:#333385; text-decoration:none;}
 #column_edit_recommend #t2 a:link{color:#333385; text-decoration:none;}

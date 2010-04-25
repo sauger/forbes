@@ -50,9 +50,9 @@
 				$str .= "' style='width:30px;'></td>";
 				$str .= "<td>{$record->level}</td>";
 				$level = $record->level+1;
-				$str .= "<td><a title='添加子类别' href='category_edit.php?parent_id={$record->id}&type={$type}&level={$level}'><img src='/images/btn_add.png' border='0'></a>　";
-				$str .= "<a href='category_edit.php?id={$record->id}&type={$type}' title='编辑' target='admin_iframe'><img src='/images/btn_edit.png' border='0'></a>　";
-				$str .= "<a class='del_cate' name='{$record->id}' title='删除' style='cursor:pointer'><img src='/images/btn_delete.png' border='0'></a></td>";
+				$str .= "<td><a title='添加子类别' href='category_edit.php?parent_id={$record->id}&type={$type}&level={$level}'><img src='/images/admin/btn_add.png' border='0'></a>　";
+				$str .= "<a href='category_edit.php?id={$record->id}&type={$type}' title='编辑' target='admin_iframe'><img src='/images/admin/btn_edit.png' border='0'></a>　";
+				$str .= "<a class='del_cate' name='{$record->id}' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a></td>";
 				$str .= "</tr>";
 				echo $str;
 				$num = $num2+1;
