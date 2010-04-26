@@ -158,7 +158,7 @@
 												<div id="chr_c_right"><a href="#">A</a> <a href="#">B</a> <a href="#">C</a> <a href="#">D</a> <a href="#">E</a> <a href="#">F</a> <a href="#">G</a> <a href="#">H</a> <a href="#">I</a> <a href="#">J</a> <a href="#">K</a> <a href="#">L</a> <a href="#">M</a> <a href="#">N</a> <a href="#">O</a> <a href="#">P</a> <a href="#">Q</a> <a href="#">R</a> <a href="#">S</a> <a href="#">T</a> <a href="#">U</a> <a href="#">V</a> <a href="#">W</a> <a href="#">X</a> <a href="#">Y</a> <a href="#">Z</a></div>	
 										</div>
 										<div id="chr_sousuo">
-												按照投资行业索引：  <select name="select" style="width:200px; border:1px solid #B4B4BE;"></select>
+												按照投资行业索引：  <select name="select" style="width:240px; border:1px solid #B4B4BE;"></select>
 										<input type="button" name="str"  style="width:114px; height:37px; border:0px solid red; margin-left:60px; background:url(../images/search/button.gif) no-repeat;">
 										</div>							
 								

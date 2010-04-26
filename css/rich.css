@@ -62,7 +62,7 @@ a{text-decoration: none; color:#246BB0}
 #christcross_left{width:6px; height:85px; background:url(../images/rich/info_left.jpg) no-repeat; float:left; display:inline;}
 #christcross_right{width:6px; height:85px; background:url(../images/rich/info_right.jpg) no-repeat; float:left; display:inline;}
 #christcross_middle{width:646px; height:85px;  background:#F3F3F3; border-right:0px solid blue; border-top:1px solid #E5E5E5; border-bottom:1px solid #E5E5E5;  float:left; display:inline;}
-#chr_christcross{width:500px; height:30px; margin-left:20px; margin-top:5px; line-height:30px; font-size:13px; font-weight:bold; color:#666666; float:left; display:inline;}
+#chr_christcross{width:600px; height:30px; margin-left:20px; margin-top:5px; line-height:30px; font-size:13px; font-weight:bold; color:#666666; float:left; display:inline;}
 #chr_sousuo{width:600px;height:30px; line-height:30px; margin-left:20px;  font-size:13px; font-weight:bold; color:#666666;  float:left; display:inline;}
 
 
@@ -95,9 +95,11 @@ a{text-decoration: none; color:#246BB0}
 #essay_div{width:313px; height:130px; border-left:1px solid #DFDFDF; border-right:1px solid #DFDFDF; margin-top:0x solid red; float:left; display:inline;}
 #essay_a{width:312px; margin-top:10px; float:left; display:inline;}
 #essay_b{width:270px; height:28px; margin-left:15px; line-height:25px;color:#11579E; font-weight:bold; margin-top:5px; font-size:14px; float:left; display:inline;}
-#essay_c_left{width:226px; height:28px;word-wrap: break-word; word-break: normal; margin-left:15px; line-height:25px; float:left; display:inline;}
+#essay_c_left{width:226px; height:28px; word-wrap: break-word; word-break: normal; margin-left:15px; line-height:25px; float:left; display:inline;}
 #essay_c_right{width:70px; height:28px;  line-height:25px; color:#11579E; float:right; display:inline;}
 .essay_rdo{width:60px; height:20px; margin-top:3px; line-height:25px;  float:left; display:inline;}
 .essay_rd{width:27px; height:15px; margin-top:3px;  float:left; display:inline;}
 #essay_bottom{width:322px; height:8px; background:url(../images/rich/bottom.jpg) no-repeat; float:left; display:inline;}
 #essay_btn{width:70px; height:28px; line-height:25px; color:#11579E; float:right; display:inline;}
+
+#chr_c_right{width:470px; height:20px; word-spacing:5px; float:left; display:inline;}
