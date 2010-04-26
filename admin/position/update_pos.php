@@ -35,7 +35,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true){
 		$pos_table->href = dynamic_news_url($news[$fill_count]);
 		$pos_table->static_href = static_news_url($news[$fill_count]);
 		$pos_table->save();
-		echo $fill_count;
+		$fill_count++;
 	}
 }
 /*
