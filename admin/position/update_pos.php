@@ -1,7 +1,5 @@
 <?php
 include_once "../../frame.php";
-include "_listindex.php";
-include "_richindex.php";
 $category = new category_class('news');
 $pos_table = new table_class('fb_page_pos');
 
@@ -37,7 +35,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true){
 		$pos_table->href = dynamic_news_url($news[$fill_count]);
 		$pos_table->static_href = static_news_url($news[$fill_count]);
 		$pos_table->save();
-		$fill_count++;
+		echo $fill_count;
 	}
 }
 /*
@@ -321,7 +319,9 @@ function update_news_column($category_name,$limit,$type,$position_name){
 }
 
 include "./_index.php";
-#include "./_fiveindex.php";
-#include "./_right.php";
-#include "./_life.php";
+include "_listindex.php";
+include "_richindex.php";
+include "./_fiveindex.php";
+include "./_right.php";
+include "./_life.php";
 include "./_column_index.php";

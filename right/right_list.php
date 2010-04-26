@@ -68,7 +68,7 @@
 	<div class="inc_list_item_content" style="display:block;">
 		<ul>
 		<?php for($i=0;$i<4;$i++){$pos_name = "right_dining_list".$i;?>
-			<li <?php show_page_pos($pos_name);?>>&nbsp;<?php show_page_href($)?></li>
+			<li <?php show_page_pos($pos_name);?>>&nbsp;<?php show_page_href()?></li>
 		<?php }?>
 		</ul>
 	</div>
