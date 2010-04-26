@@ -3,6 +3,8 @@
 	$db = get_db();
 	$nav=$db->query('select id from fb_navigation where name="富豪"');
 	$nav=$nav[0]->id;	
+	$seo=$db->query('select * from fb_seo where name="富豪首页"');	
+	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -49,7 +51,7 @@
 				<div class=ranking_top_title><a href="top.php" target="_blank">动态富豪榜-富豪个人财富价值排名 <?php echo date('n月j日',strtotime("-1 day"))?></a></div>
 				<div class=ranking_top_content>
 					<div id=c_title>
-						<div class=pm>排名</div><div class="sx">|</div><div class=name>姓名</div><div class="sx">|</div><div class=cfs>财富数（亿）</div><div class="sx">|</div><div class=sex>性别</div><div class="sx">|</div><div class=age>年龄</div><div class="sx">|</div><div class=cmpname>公司名</div>
+						<div class=pm>排名</div><div class="sx"></div><div class=name>姓名</div><div class="sx"></div><div class=cfs>财富（亿）</div><div class="sx"></div><div class=sex>性别</div><div class="sx"></div><div class=age>年龄</div><div class="sx"></div><div class=cmpname>公司名</div>
 					</div>
 					<div class=c_content>
 						<?php
@@ -114,13 +116,13 @@
 					<div class=search_content_l></div>
 					<div class="search_content_r">
 						<div class=content>
-							<div class=search_content_r_l>富豪姓名：</div>
+							<div class=search_content_r_l>富豪姓名</div>
 							<div class=search_content_r_r>
 								<input type="text" id="name" />
 							</div>
 						</div>
 						<div class=content>
-							<div class=search_content_r_l>年 龄 段：</div>
+							<div class=search_content_r_l>年 龄 段</div>
 							<div class=search_content_r_r>
 								<select id="year">
 									<option value=""></option>
@@ -135,7 +137,7 @@
 							</div>
 						</div>
 						<div class=content>
-							<div class=search_content_r_l>资产规模：</div>
+							<div class=search_content_r_l>资产规模</div>
 							<div class=search_content_r_r>
 									<select id="asset">
 										<option value=""></option>
@@ -149,7 +151,7 @@
 							</div>
 						</div>
 						<div class=content>
-							<div class=search_content_r_l>国　　籍：</div>
+							<div class=search_content_r_l>国　　籍</div>
 							<div class=search_content_r_r>
 								<select id="nationality">
 									<option value=""></option>
@@ -164,7 +166,7 @@
 							</div>
 						</div>
 						<div class=content>
-							<div class=search_content_r_l>行　　业：</div>
+							<div class=search_content_r_l>行　　业</div>
 							<div class=search_content_r_r>
 								<select id="industry">
 									<option value=""></option>
