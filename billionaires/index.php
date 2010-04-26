@@ -146,25 +146,28 @@
 				</div>
 				<div id=billionaires_lists_bottom>
 					<div class=title>
-						<div class=wz>2009年度中国富豪榜</div>
+						<div class=wz>2008年度中国富豪榜</div>
 						<div class=more><a href=""><img border=0 src="/images/public/public_more1.jpg"></a></div>	
 					</div>
-					<div class=content1>
+					<?php $pos_name = "richindex_list_0";?>
+					<div class=content1 <?php show_page_pos($pos_name,'rich')?>>
 						<div class=pic1>
-							<a href=""><img border=0 src="/images/fh/five.jpg"></a>
+							<?php show_page_img();?>
 						</div>
-						<div class=piccontent1>
-							<a href=""><span style="font-weight:bold; color:#333333;">刘永行</span><br>东方希望集团<br>30亿</a>	
+						<div class=piccontent1 >
+							<a href=""><span style="font-weight:bold; color:#333333;"><?php echo $pos_items->$pos_name->display?></span><br><?php echo $pos_items->$pos_name->description?><br><?php echo $pos_items->$pos_name->alias?></a>	
 						</div>
 						<div class=num1></div>
 					</div>
-					<?php for($i=2;$i<16;$i++){ ?>
+					<?php for($i=2;$i<16;$i++){ 
+						$pos_name = "richindex_list_{$i}";
+					?>
 					<div class=content2>
 						<div class=name>
-							刘永行
+							<?php echo $pos_items->$pos_name->display?>
 						</div>
 						<div class=zc>
-							30亿美元
+							<?php echo $pos_items->$pos_name->alias;?>
 						</div>
 						<div class=num<?php echo $i;?>></div>
 					</div>
