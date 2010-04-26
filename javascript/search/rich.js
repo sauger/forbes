@@ -11,7 +11,7 @@ function search(){
 	var nationality = encodeURI($("#nationality").val());
 	var industry = encodeURI($("#industry").val());
 	
-	var url = "rich.php?";
+	var url = "/search/rich.php?";
 	if(name!=''){
 		url = url+"&name="+name;
 	}

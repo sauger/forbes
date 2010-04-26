@@ -12,8 +12,8 @@
 	<title>福布斯-富豪首页</title>
 	<?php
 		use_jquery();
-		js_include_tag('public','right');
-		css_include_tag('public','billionaires');
+		js_include_tag('public','right','search/rich');
+		css_include_tag('public','billionaires','right_inc');
 		init_page_items();
 	?>
 </head>
@@ -46,7 +46,7 @@
 
 			<div id=billionaires_head_right></div>
 			<div id=billionaires_ranking>
-				<div class=ranking_top_title><a href="">动态富豪榜-富豪个人财富价值排名 <?php echo date('n月j日',strtotime("-1 day"))?></a></div>
+				<div class=ranking_top_title><a href="top.php" target="_blank">动态富豪榜-富豪个人财富价值排名 <?php echo date('n月j日',strtotime("-1 day"))?></a></div>
 				<div class=ranking_top_content>
 					<div id=c_title>
 						<div class=pm>排名</div><div class="sx">|</div><div class=name>姓名</div><div class="sx">|</div><div class=cfs>财富数（亿）</div><div class="sx">|</div><div class=sex>性别</div><div class="sx">|</div><div class=age>年龄</div><div class="sx">|</div><div class=cmpname>公司名</div>
@@ -56,15 +56,16 @@
 						$db = get_db();
 						$gender = array("女","男","未知");
 						$items = $db->query("select a.richer_id,a.fortune,a.name,b.gender,b.birthday,d.company_id,group_concat(c.name SEPARATOR '、') as company from fb_dynamic_fortune_list a left join fb_rich b on a.richer_id = b.id left join fb_rich_company d on a.richer_id=d.rich_id left join fb_company c on d.company_id = c.id group by a.richer_id order by current_index asc limit 4");
-						
 						for($i=0;$i<$db->record_count;$i++){
+							$year = intval(substr($items[$i]->birthday,0,4));
+							$age = $year > 0 ? date('Y') - $year : '未知';
 						?>
-						<div class=pm><?php echo $i+1;?>.</div><div class="sx"></div><div class=name><?php echo $items[$i]->name;?></div><div class="sx"></div><div class=cfs><?php echo $items[$i]->fortune;?></div><div class="sx"></div><div class=sex><?php echo $gender[$items[$i]->gender]?></div><div class="sx"></div><div class=age>62</div><div class="sx"></div><div class=cmpname><?php echo $items[$i]->company?></div>
+						<div class=pm><?php echo $i+1;?>.</div><div class="sx"></div><div class=name><?php echo $items[$i]->name;?></div><div class="sx"></div><div class=cfs><?php echo $items[$i]->fortune;?></div><div class="sx"></div><div class=sex><?php echo $gender[$items[$i]->gender]?></div><div class="sx"></div><div class=age><?php echo $age;?></div><div class="sx"></div><div class=cmpname><?php echo $items[$i]->company?></div>
 						<div class=dash></div>
 						<?php }?>
 					</div>
 					<div id=moreinfo>
-						<button></button>	
+						<a href="top.php" target="_blank"><button></button></a>
 					</div>
 					<div class=ranking_dash></div>
 					<div class=ranking_bottom_title>
@@ -112,12 +113,72 @@
 					<div class="search_title">富豪检索</div>
 					<div class=search_content_l></div>
 					<div class="search_content_r">
-						<div class=content><div class=search_content_r_l>富豪姓名：</div><div class=search_content_r_r><input type="text" /></div></div>
-						<div class=content><div class=search_content_r_l>年 龄 段：</div><div class=search_content_r_r><select></select></div></div>
-						<div class=content><div class=search_content_r_l>资产规模：</div><div class=search_content_r_r><select></select></div></div>
-						<div class=content><div class=search_content_r_l>国　　籍：</div><div class=search_content_r_r><select></select></div></div>
-						<div class=content><div class=search_content_r_l>行　　业：</div><div class=search_content_r_r><select></select></div></div>
-						<div class=content><button></button></div>
+						<div class=content>
+							<div class=search_content_r_l>富豪姓名：</div>
+							<div class=search_content_r_r>
+								<input type="text" id="name" />
+							</div>
+						</div>
+						<div class=content>
+							<div class=search_content_r_l>年 龄 段：</div>
+							<div class=search_content_r_r>
+								<select id="year">
+									<option value=""></option>
+									<option value="1">20岁以下</option>
+									<option value="2">20-30岁</option>
+									<option value="3">30-40岁</option>
+									<option value="4">40-50岁</option>
+									<option value="5">50-60岁</option>
+									<option value="6">60-80岁</option>
+									<option value="7">80岁以上</option>
+								</select>
+							</div>
+						</div>
+						<div class=content>
+							<div class=search_content_r_l>资产规模：</div>
+							<div class=search_content_r_r>
+									<select id="asset">
+										<option value=""></option>
+										<option value="1">5000万人民币以下</option>
+										<option value="2">0.5-1亿人民币</option>
+										<option value="3">1-10亿人民币</option>
+										<option value="4">10-50亿人民币</option>
+										<option value="5">50-100亿人民币</option>
+										<option value="6">100亿人民币以上</option>
+									</select>
+							</div>
+						</div>
+						<div class=content>
+							<div class=search_content_r_l>国　　籍：</div>
+							<div class=search_content_r_r>
+								<select id="nationality">
+									<option value=""></option>
+									<?php 
+										$country = $db->query("select country from fb_rich group by country");
+										$count = $db->record_count;
+										for($i=0;$i<$count;$i++){
+									?>
+									<option value="<?php echo $country[$i]->country;?>"><?php echo $country[$i]->country;?></option>
+									<?php }?>
+								</select>
+							</div>
+						</div>
+						<div class=content>
+							<div class=search_content_r_l>行　　业：</div>
+							<div class=search_content_r_r>
+								<select id="industry">
+									<option value=""></option>
+									<?php 
+										$industry = $db->query("select * from fb_industry");
+										$count = $db->record_count;
+										for($i=0;$i<$count;$i++){
+									?>
+									<option value="<?php echo $industry[$i]->name;?>"><?php echo $industry[$i]->name;?></option>
+									<?php }?>
+								</select>
+							</div>
+						</div>
+						<div class=content><button id="search"></button></div>
 					</div>
 					<div id=search_pic1>
 						<a href=""><img border=0 src="/images/fh/three.jpg"></a>	
@@ -131,7 +192,7 @@
 				<div id=billionaires_lists_top>
 					<div class=title>
 						<div class=wz>富豪榜单</div>
-						<div class=more><a href=""><img border=0 src="/images/public/public_more1.jpg"></a></div>	
+						<div class=more><a href="/list/list.php?id=1" target="_blank"><img border=0 src="/images/public/public_more1.jpg"></a></div>	
 					</div>
 					<div id=content>
 						<?php for($i=0; $i<8; $i++){
@@ -147,7 +208,7 @@
 				<div id=billionaires_lists_bottom>
 					<div class=title>
 						<div class=wz>2008年度中国富豪榜</div>
-						<div class=more><a href=""><img border=0 src="/images/public/public_more1.jpg"></a></div>	
+						<div class=more><a href="/list/list.php?id=1" target="_blank"><img border=0 src="/images/public/public_more1.jpg"></a></div>	
 					</div>
 					<?php $pos_name = "richindex_list_0";?>
 					<div class=content1 <?php show_page_pos($pos_name,'rich')?>>
@@ -222,27 +283,10 @@
 				</div>
 				<?php } ?>
 				<div id=billionaires_say_dash></div>
-				<div class=billionaires_say_title>评论定制</div>
-				<div id=billionaires_say_bottom_content>
-					<div id=content_t>
-						<div id=content_t_l>
-							订阅福布斯快闻　<input type="radio"><span style="font-size:12px; font-weight:normal; color:#666666;">我要定制</span>	
-						</div>
-						<div id=content_t_r>
-							<button>定制</button>	
-						</div>	
-					</div>
-					<div id=content_b>
-						<div id=content_b_l>
-							<span style="font-size:13px; color:#000000; font-weight:bold;">订阅分类文章</span>
-							<div class=cl><input type="radio">富豪　<input type="radio">创业　<input type="radio">商业</div>
-							<div class=cl><input type="radio">科技　<input type="radio">投资　<input type="radio">生活</div>
-						</div>
-						<div id=content_b_r>
-							<button>定制</button>	
-						</div>	
-					</div>	
-				</div>
+				<div id="right_inc" style="margin-top:10px;">
+				  		<?php include dirname(__FILE__)."/../right/article.php";?>
+				 </div>
+				
 			</div>
 			<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 		</div>
