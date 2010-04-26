@@ -279,7 +279,7 @@
 												<div id="essay_title">订阅福布斯快闻</div>
 												<div id="essay_redio"><input type="radio" name="radiobutton" value="radiobutton" /></div>
 												<div id="essay_rc">我要定制</div>
-												<div id="essay_button"><input type="button" name="sousuo" style="width:60px; height:28px; border:0px solid red; background:url(../images/rich/btn_bg.jpg) no-repeat; " value="定制"></div>
+												<div id="essay_btn"><input type="button" name="sousuo" style="width:60px; height:28px; border:0px solid red; background:url(../images/rich/btn_bg.jpg) no-repeat; " value="定制"></div>
 									</div>
 									<div id="essay_b">订阅分类文章</div>
 									<div id="essay_c">
