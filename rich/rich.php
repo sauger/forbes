@@ -22,7 +22,7 @@
 	<div id=ibody>
 		<?php include "../inc/top.inc.php";?>
 		<div id=bread>
-				<span>福布斯中文网</span>
+				<span>福布斯中文网 > <font style="color:#246BB0;">富豪检索结果</font></span>
 		</div>
 		<div id="hr_top"></div>
 		
