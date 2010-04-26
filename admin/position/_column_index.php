@@ -59,7 +59,7 @@ $table = new table_class("fb_page_pos");
 $selected_news = array();
 for($i=0;$i< $len;$i++){
 	$news = $db->query("select title,id,created_at,description from fb_news where publisher = {$items[$i]->publisher} order by created_at desc limit 3");
-	$pos = 'column_recommend_top_l_'.$i;
+	$pos = 'column_r_t_l'.$i;
 	$table->find('first',array("conditions" => "name = '{$pos}'"));
 	$table->name = $pos;
 	$table->display = $news[0]->title;
@@ -72,7 +72,7 @@ for($i=0;$i< $len;$i++){
 	$table->save();
 	$selected_news[] = $news[0]->id;
 	for($j=1;$j<3;$j++){
-		$pos = 'column_recommend_b_'.$i.'_'.$j;
+		$pos = 'column_recommend_top_r_t2_'.$i.'_'.$j;
 		$table->find('first',array("conditions" => "name = '{$pos}'"));
 		$table->name = $pos;
 		$table->display = $news[$j]->title;
@@ -89,7 +89,7 @@ $selected_news = implode(',',$selected_news);
 $news = $db->query("select title,a.id,a.created_at,a.description,b.nick_name,b.name from fb_news a left join fb_user b on a.publisher = b.id where b.role_name='$role' and a.id not in ({$selected_news}) order by created_at desc limit 11");
 $len = count($news);
 for($i=0;$i<$len;$i++){
-	$pos = 'column_edit_t'.$i;	
+	$pos = 'column_edit_edit_t2_'.$i;	
 	$table->find('first',array("conditions" => "name = '{$pos}'"));
 	$table->name = $pos;
 	$table->display = $news[$i]->title;
