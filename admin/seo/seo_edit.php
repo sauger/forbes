@@ -35,10 +35,10 @@
 					<td class=td1>标　题</td><td align="left"><input id="title" type="text" name="seo[title]" value="<?php echo $seo->title;?>" /></td>
 				</tr>
 				<tr class=tr4 align="center">
-					<td class=td1>关键词</td><td align="left"><input type="text" size="50" name="seo[keywords]" value="<?php echo $seo->keywords;?>"><span style="font-size:14px;">(请用半角逗号：","分隔开关键词,比如:高考,升学)</span></td>
+					<td class=td1>关键词</td><td align="left"><input type="text" size="50" name="seo[keywords]" value="<?php echo $seo->keywords;?>">请用半角逗号：","分隔开关键词,比如:高考,升学</span></td>
 				</tr>
 				<tr align="center" class=tr4>
-					<td class=td1>说　明</td><td align="left"><textarea name="seo[description]"><?php echo $seo->description;?></textarea></td>
+					<td class=td1>说　明</td><td align="left"><textarea name="seo[description]" style="height:100px;"><?php echo $seo->description;?></textarea></td>
 				</tr>
 				<tr class=btools>
 					<td colspan="10" align="center"><input id="submit" type="submit" value="发布"></td>

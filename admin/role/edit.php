@@ -18,7 +18,7 @@
 			public $type;
 			public $cat_name;
 		}
-		$rights = $db->query("select a.*,c.name as cat_name from fb_rights a left join fb_admin_menu b on a.name = b.id left join fb_admin_menu c on b.parent_id = c.id order by c.priority asc, cat_name desc");
+		$rights = $db->query("select a.*,c.name as cat_name from fb_rights a left join fb_admin_menu b on a.name = b.id left join fb_admin_menu c on b.parent_id = c.id order by c.parent_id asc, c.priority asc, cat_name desc");
 		foreach($rights as $val){
 			$right = new Right();
 			$right->id = $val->id;
