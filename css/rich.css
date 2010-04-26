@@ -36,19 +36,19 @@ p{margin:0; padding:0}
 .i_c_trade{width:100px; height:15px; text-align:center; margin-left:40px; overflow:hidden; float:Left; display:inline;}
 .i_c_capx{width:100px; height:15px;  text-align:center; margin-left:45px; overflow:hidden; float:Left; display:inline;}
 
-
+a{text-decoration: none; color:#246BB0}
 .c_hr{width:600px; height:2px; margin-left:25px; font-size:0px;  margin-top:15px; background:url(../images/rich/hr.gif) repeat-x; line-height:0px; float:left; display:inline;}
 
 #career_z{width:655px; overflow:hidden; margin-top:25px; float:left; display:inline;}
 #career{width:632px; height:30px; margin-left:20px; overflow:hidden; line-height:30px; font-size:14px; font-weight:bold; float:left; display:inline;}
 #career_title{width:632px; height:40px; margin-left:20px; overflow:hidden; line-height:30px; font-size:13px; font-weight:bold; color:#21609E;  float:left; display:inline;}
-#employer{width:100px; height:30px; text-align:center; overflow:hidden; float:Left; display:inline;}
+#employer{width:200px; height:30px; text-align:center; overflow:hidden; float:Left; display:inline;}
 #task{width:100px; height:30px; text-align:center; overflow:hidden; margin-left:40px; float:Left; display:inline;}
-#time{width:100px; height:30px; text-align:center; overflow:hidden; margin-left:40px; float:Left; display:inline;}
+#time{width:200px; height:30px; text-align:center; overflow:hidden; margin-left:40px; float:Left; display:inline;}
 #careet_connect{width:632px; height:15px; margin-left:20px; margin-bottom:10px; line-height:15px; overflow:hidden; font-size:12px;  float:left; display:inline;}
-.employer{width:100px; height:15px; text-align:center; float:left; overflow:hidden; display:inline;}
+.employer{width:200px; height:15px; text-align:center; float:left; overflow:hidden; display:inline;}
 .task{width:100px; height:15px; text-align:center; margin-left:40px; overflow:hidden; float:Left; display:inline;}
-.time{width:100px; height:15px; text-align:center; margin-left:40px; overflow:hidden; float:Left; display:inline;}
+.time{width:200px; height:15px; text-align:center; margin-left:40px; overflow:hidden; float:Left; display:inline;}
 
 
 #investment_c{width:655px; margin-bottom:25px; overflow:hidden; margin-top:25px; float:left; display:inline;}
@@ -89,13 +89,13 @@ p{margin:0; padding:0}
 #made{width:315px; margin-top:20px; float:left; display:inline;}
 #essay_top{width:315px; height:30px; background:url(../images/rich/top.jpg) no-repeat; float:left; display:inline;}
 #essay_con{width:265px; height:28px; margin-left:15px; font-size:14px; color:#999999; font-weight:bold; line-height:30px; float:left; displaY:inline;}
-#essay_title{width:130px; height:28px; color:#11579E; font-weight:bold; line-height:25px; margin-left:15px; font-size:14px; float:left; display:inline;}
+#essay_title{width:119px; height:28px; color:#11579E; font-weight:bold; line-height:25px; margin-left:15px; font-size:14px; float:left; display:inline;}
 #essay_rc{width:70px; height:28px; line-height:25px; float:Left; display:inline;}
-#essay_redio{width:17px; height:20px; margin-top:3px; float:left; display:inline;}
+#essay_redio{width:25px; height:20px; margin-top:3px; float:left; display:inline;}
 #essay_div{width:313px; height:130px; border-left:1px solid #DFDFDF; border-right:1px solid #DFDFDF; margin-top:0x solid red; float:left; display:inline;}
 #essay_a{width:312px; margin-top:10px; float:left; display:inline;}
 #essay_b{width:270px; height:28px; margin-left:15px; line-height:25px;color:#11579E; font-weight:bold; margin-top:5px; font-size:14px; float:left; display:inline;}
-#essay_c_left{width:220px; height:28px; margin-left:15px; line-height:25px; float:left; display:inline;}
+#essay_c_left{width:215px; height:28px; margin-left:15px; line-height:25px; float:left; display:inline;}
 #essay_c_right{width:70px; height:28px;  line-height:25px; color:#11579E; float:right; display:inline;}
 .essay_rdo{width:60px; height:20px; margin-top:3px; line-height:25px;  float:left; display:inline;}
 .essay_rd{width:27px; height:15px; margin-top:3px;  float:left; display:inline;}

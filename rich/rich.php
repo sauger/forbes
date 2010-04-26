@@ -22,7 +22,7 @@
 	<div id=ibody>
 		<?php include "../inc/top.inc.php";?>
 		<div id=bread>
-				<span>读者高见</span>
+				<span>福布斯中文网</span>
 		</div>
 		<div id="hr_top"></div>
 		
@@ -86,8 +86,8 @@
 											</div>
 											<div class="b_c">
 													<div class="careet_connect">
-															<div class="employer">洪山资本</div>
-															<div class="task">投资顾问</div>
+															<div class="employer">洪洪山资本山洪山资本洪山资洪山资本本洪山资本洪山资本资本</div>
+															<div class="task">投洪山资本资洪山资本洪山资本顾问</div>
 															<div class="time">2009-2010</div>
 													</div>
 											</div>
@@ -155,7 +155,7 @@
 								<div id="christcross_middle">
 										<div id="chr_christcross">
 												<div id="chr_c_left">点击按字母排序：</div>
-												<div id="chr_c_right"><font style="color:#246BB0;">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</font></div>	
+												<div id="chr_c_right"><a href="#">A</a> <a href="#">B</a> <a href="#">C</a> <a href="#">D</a> <a href="#">E</a> <a href="#">F</a> <a href="#">G</a> <a href="#">H</a> <a href="#">I</a> <a href="#">J</a> <a href="#">K</a> <a href="#">L</a> <a href="#">M</a> <a href="#">N</a> <a href="#">O</a> <a href="#">P</a> <a href="#">Q</a> <a href="#">R</a> <a href="#">S</a> <a href="#">T</a> <a href="#">U</a> <a href="#">V</a> <a href="#">W</a> <a href="#">X</a> <a href="#">Y</a> <a href="#">Z</a></div>	
 										</div>
 										<div id="chr_sousuo">
 												按照投资行业索引：  <select name="select" style="width:200px; border:1px solid #B4B4BE;"></select>
@@ -279,7 +279,7 @@
 												<div id="essay_title">订阅福布斯快闻</div>
 												<div id="essay_redio"><input type="radio" name="radiobutton" value="radiobutton" /></div>
 												<div id="essay_rc">我要定制</div>
-												<div id="essay_button"><input type="button" name="sousuo" style="width:60px; height:28px; border:0px solid red; background:url(../images/zz/btn_bg.jpg) no-repeat; " value="定制"></div>
+												<div id="essay_button"><input type="button" name="sousuo" style="width:60px; height:28px; border:0px solid red; background:url(../images/rich/btn_bg.jpg) no-repeat; " value="定制"></div>
 									</div>
 									<div id="essay_b">订阅分类文章</div>
 									<div id="essay_c">
@@ -290,7 +290,7 @@
 											<div class="essay_rdo"><div class="essay_rd"><input type="radio" name="radiobutton" value="radiobutton" /></div>富豪</div>
 											<div class="essay_rdo"><div class="essay_rd"><input type="radio" name="radiobutton" value="radiobutton" /></div>富豪</div>
 									</div>
-									<div id="essay_c_right"><input type="button" name="sousuo" style="width:60px; height:28px; border:0px solid red; background:url(../images/zz/btn_bg.jpg) no-repeat; " value="定制"></div>
+									<div id="essay_c_right"><input type="button" name="sousuo" style="width:60px; height:28px; border:0px solid red; background:url(../images/rich/btn_bg.jpg) no-repeat; " value="定制"></div>
 									</div>
 						 		</div>
 						 		<div id="essay_bottom"></div>
