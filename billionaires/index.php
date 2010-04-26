@@ -34,11 +34,11 @@
 					<div id=flash></div>
 					<div id=flash_t>
 						<div id=flash_t_l></div>
-						<div id=flash_t_r><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
+						<div id=flash_t_r><?php show_page_href('index_hl_0');?></div>
 					</div>
 					<div id=flash_b>
 						<div id=content>
-							 <a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a>	
+							 <?php show_page_desc();?>	
 						</div>	
 					</div>
 				</div>
@@ -46,19 +46,22 @@
 
 			<div id=billionaires_head_right></div>
 			<div id=billionaires_ranking>
-				<div class=ranking_top_title><a href="">动态富豪榜-富豪个人财富价值排名 1月31日</a></div>
+				<div class=ranking_top_title><a href="">动态富豪榜-富豪个人财富价值排名 <?php echo date('n月j日',strtotime("-1 day"))?></a></div>
 				<div class=ranking_top_content>
 					<div id=c_title>
 						<div class=pm>排名</div><div class="sx">|</div><div class=name>姓名</div><div class="sx">|</div><div class=cfs>财富数（亿）</div><div class="sx">|</div><div class=sex>性别</div><div class="sx">|</div><div class=age>年龄</div><div class="sx">|</div><div class=cmpname>公司名</div>
 					</div>
 					<div class=c_content>
-						<div class=pm>1.</div><div class="sx"></div><div class=name>刘家豪</div><div class="sx"></div><div class=cfs>150</div><div class="sx"></div><div class=sex>男</div><div class="sx"></div><div class=age>62</div><div class="sx"></div><div class=cmpname>东方希望、民生</div>
+						<?php
+						$db = get_db();
+						$gender = array("女","男","未知");
+						$items = $db->query("select a.richer_id,a.fortune,a.name,b.gender,b.birthday,d.company_id,group_concat(c.name SEPARATOR '、') as company from fb_dynamic_fortune_list a left join fb_rich b on a.richer_id = b.id left join fb_rich_company d on a.richer_id=d.rich_id left join fb_company c on d.company_id = c.id group by a.richer_id order by current_index asc limit 4");
+						
+						for($i=0;$i<$db->record_count;$i++){
+						?>
+						<div class=pm><?php echo $i+1;?>.</div><div class="sx"></div><div class=name><?php echo $items[$i]->name;?></div><div class="sx"></div><div class=cfs><?php echo $items[$i]->fortune;?></div><div class="sx"></div><div class=sex><?php echo $gender[$items[$i]->gender]?></div><div class="sx"></div><div class=age>62</div><div class="sx"></div><div class=cmpname><?php echo $items[$i]->company?></div>
 						<div class=dash></div>
-						<div class=pm>2.</div><div class="sx"></div><div class=name>刘家豪</div><div class="sx"></div><div class=cfs>150</div><div class="sx"></div><div class=sex>男</div><div class="sx"></div><div class=age>62</div><div class="sx"></div><div class=cmpname>东方希望、民生</div>
-						<div class=dash></div>
-						<div class=pm>3.</div><div class="sx"></div><div class=name>刘家豪</div><div class="sx"></div><div class=cfs>150</div><div class="sx"></div><div class=sex>男</div><div class="sx"></div><div class=age>62</div><div class="sx"></div><div class=cmpname>东方希望、民生</div>
-						<div class=dash></div>
-						<div class=pm>4.</div><div class="sx"></div><div class=name>刘家豪</div><div class="sx"></div><div class=cfs>150</div><div class="sx"></div><div class=sex>男</div><div class="sx"></div><div class=age>62</div><div class="sx"></div><div class=cmpname>东方希望、民生</div>
+						<?php }?>
 					</div>
 					<div id=moreinfo>
 						<button></button>	

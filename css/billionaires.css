@@ -28,12 +28,12 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_ranking .ranking_top_title a{color:#000000; text-decoration:none;}
 #billionaires_ranking .ranking_top_content{margin-top:10px;}
 #billionaires_ranking .ranking_top_content #c_title{height:28px; font-size:13px; font-weight:bold;}
-#billionaires_ranking .ranking_top_content .pm{width:50px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .name{width:62px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .cfs{width:132px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .sex{width:62px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .age{width:67px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .cmpname{width:122px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .pm{width:40px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .name{width:132px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .cfs{width:92px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .sex{width:42px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .age{width:37px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .cmpname{width:152px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
 #billionaires_ranking .ranking_top_content .sx{width:1px; height:20px; margin-top:2px; line-height:20px; font-weight:normal; color:#e4e4e4;}
 #billionaires_ranking .ranking_top_content .c_content{line-height:28px; font-size:13px; color:#666666;}
 #billionaires_ranking .ranking_top_content .dash{width:486px; height:1px; margin-left:10px; background:url('/images/billionaires/billionaires_index_dash.jpg') no-repeat; overflow:hidden;}
