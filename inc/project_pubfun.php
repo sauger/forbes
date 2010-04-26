@@ -268,7 +268,24 @@ function get_page_display(){
 	
 }
 
+function adjust_user_score($user_id,$score,$reason){
+	$db = get_db();
+	$db->execute("update fb_yh set score=score + {$score} where id = {$user_id}");
+	$table = new table_class("fb_user_score_history");
+	$table->user_id = $user_id;
+	$table->score = $score;
+	$table->reason = $reason;
+	$table->created_at = "now()";
+	$table->save();
+}
 
+function front_user_id(){
+	$db = get_db();
+	if(empty($_COOKIE['cache_name'])) return false;
+	$db->query("select id from fb_yh where cache_name='{$_COOKIE['cache_name']}'");
+	if($db->record_count <= 0 ) return false;
+	return $db->field_by_name('id');	
+}
 
 
 ?>

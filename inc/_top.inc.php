@@ -8,14 +8,18 @@
 	</div>
 	<div id=top_function>
 			<div class=user_btn>
-				<?php init_page_items(); if(!$_SESSION['name']){?>
-				<a href="/login">登陆</a>　<a href="/register/">注册</a>
-				<?php }else{?>
-				<div id="uname_span"><?php echo $_SESSION['name'];?>,你好</div>
-				<a href="javascript:void(0)" id="logout">登出</a>
-				<a href="/user" id="">会员中心</a>
-				<?php }?>
 			</div>
+			<?php js_include_tag('jquery.cookie')?>
+			<script>
+				if($.cookie('cache_name') && $.cookie('name')){
+					var str = '<div id="uname_span">'+$.cookie('name')+',你好</div>'
+							+ '<a href="javascript:void(0)" id="logout">登出</a>'
+							+ '<a href="/user">会员中心</a>';
+					$('.user_btn').html(str);
+				}else{
+					$('.user_btn').html('<a href="/login">登陆</a>　<a href="/register/">注册</a>');
+				}
+			</script>
 			<div class=user_btn><a href="javascript:void(0)" onclick="myhomepage()" name="homepage">设为首页</a>　<a href="javascript:void(0)" onclick="addfavorite()">收藏本站</a></div>
 			<div id=magazine_title>本期杂志介绍</div>
 			<div id=magazine_title_more><a href="">更多杂志</a></div>

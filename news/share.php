@@ -12,6 +12,7 @@
 	<title>福布斯-新闻分享</title>
 	<?php
 		use_jquery();
+		require_login();
 		js_include_tag('public','right','news/share');
 		css_include_tag('news','public','right_inc');
 	?>

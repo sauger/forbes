@@ -19,6 +19,7 @@
 		}else{
 			$id = $db->field_by_name('id');
 			$db->execute("update fb_yh set authenticated=1 where id={$id}");
+			adjust_user_score($id,50,"用户激活");
 			alert('恭喜您，激活成功，感谢您注册成为福布斯中文网会员！');
 			redirect('/login/');
 		}

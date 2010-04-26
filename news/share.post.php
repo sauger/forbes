@@ -39,7 +39,9 @@
 			$content = $_POST['name'][$i]."，你好<br/>您的好友'".$share->user."'想与您分享福布斯中文网的文章《".$news->title."》，您可以点击<a href='http://61.129.115.239".static_news_url($news)."'>http://61.129.115.239".static_news_url($news)."</a>来阅读<br><br>福布斯中文网";
 			send_mail('smtp.163.com','sauger','auden6666','sauger@163.com',$_POST['mail'][$i],'福布斯中文网',$content);
 		}
-		alert("已成功分享！");
-		redirect('share.php?news_id='.$news_id);
 	}
+	$user_id = front_user_id();
+	adjust_user_score($user_id,30,'推荐文章给好友');
+	alert("已成功分享！");
+	redirect('share.php?news_id='.$news_id);
 ?>
