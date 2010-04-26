@@ -31,6 +31,9 @@
 				<tr class=tr4 align="center">
 					<td class=td1 width=15%>礼品名称</td><td align="left"><input id="title" type="text" name="gift[name]" value="<?php echo $gift->name;?>"></td>
 				</tr>
+				<tr class=tr4 align="center">
+					<td class=td1 width=15%>所需积分</td><td align="left"><input id="title" type="text" name="gift[score]" value="<?php echo $gift->score;?>"></td>
+				</tr>
 				<tr align="center" class=tr4>
 					<td class=td1>礼品数量</td><td align="left"><input id="title" type="text" name="total_count" value="<?php echo $gift->total_count;?>" /></td>
 				</tr>
