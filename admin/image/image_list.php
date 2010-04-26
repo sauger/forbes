@@ -17,6 +17,9 @@
 	if($is_adopt!=''){
 		array_push($c, "is_adopt=$is_adopt");
 	}
+	if(role_name() == 'column_editor' || role_name()=='column_writer'){
+		$c[] = "publisher={$_SESSION['admin_user_id']}";
+	}
 	$image = new table_images_class();
 	$images = $image->paginate('all',array('conditions' => implode(' and ', $c),'order' => 'priority asc,created_at desc'),12);
 ?>

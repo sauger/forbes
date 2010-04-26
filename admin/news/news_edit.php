@@ -22,6 +22,12 @@
 //initialize the categroy;
 	$category = new category_class('news');
 	$category->echo_jsdata();
+	if(role_name() == 'column_editor' || role_name()=='column_writer'){ ?>
+	<script>
+		var uncheck_keyword = true;
+	</script>		
+<?php
+	}
 ?>
 <body>
 	<?php 
