@@ -1,6 +1,7 @@
 <?php 
 	js_include_tag('right');
 	$catename=$db->query('SELECT name FROM fb_category where id='.$cid); 
+	$category = new category_class('news');
 ?>
 		<div id=bread><a href="#"><?php echo $catename[0]->name; ?></div>
 		<div id=bread_line></div>
@@ -24,7 +25,7 @@
 				<div class=caption>
 					<div class=captions><?php echo $catename[0]->name; ?>热点</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=<?php $catename[0]->name?>" target="_blank" class=more></a>
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name($catename[0]->name)->id?>" target="_blank" class=more></a>
 				</div>
 				<?php for($i=0;$i<6;$i++){ $pos_name = $pos.'acticle'.$i;?>
 					<div class=common_article_lis1 <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
@@ -41,7 +42,7 @@
 				<div class=caption>
 					<div class=captions><?php echo $catename[0]->name; ?>专题</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=<?php $catename[0]->name?>" target="_blank" class=more></a>
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name($catename[0]->name)->id?>" target="_blank" class=more></a>
 				</div>
 				<?php for($i=0;$i<2;$i++){ $pos_name = $pos."them".$i;?>
 				<div class=common_subject <?php show_page_pos($pos_name)?>>

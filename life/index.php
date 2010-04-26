@@ -15,6 +15,7 @@
 		js_include_tag('public');
 		css_include_tag('public','right','life');
 		init_page_items();
+		$category = new category_class('news');
 	?>
 </head>
 <body>
@@ -65,7 +66,7 @@
  				<div class=life_caption>
 					<div class=captions>服饰钟表</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=服饰钟表" class=more target="_blank"></a>
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("服饰钟表")->id?>" class=more target="_blank"></a>
 				</div>
 				
 				<?php $pos_name = "liftindex_news_1";	?>
@@ -80,7 +81,7 @@
   			<div class=life_caption>
 					<div class=captions>豪车</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=豪车" class=more></a>      	
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("豪车")->id?>" class=more></a>      	
 				</div>	
 				
 				<?php $pos_name = "liftindex_news_2";?>
@@ -95,7 +96,7 @@
   			<div class=life_caption>
 					<div class=captions>游艇飞机</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=游艇飞机" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("游艇飞机")->id?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "liftindex_news_3";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
@@ -110,7 +111,7 @@
   			<div class=life_caption>
 					<div class=captions>名利场</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=名利场" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo  $category->find_by_name("名利场")->id?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_news_mlc"?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
@@ -131,7 +132,7 @@
  				<div class=life_caption>
 					<div class=captions>美酒美食</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=美酒美食" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("美酒美食")->id?>" class=more></a> 
 				</div>
 				
 				<?php $pos_name = "liftindex_news_4";	?>
@@ -146,7 +147,7 @@
   			<div class=life_caption>
 					<div class=captions>体面</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=体面" class=more></a>     	
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("体面")->id?>" class=more></a>     	
 				</div>	
 				
 				<?php $pos_name = "liftindex_news_5";?>
@@ -161,7 +162,7 @@
   			<div class=life_caption>
 					<div class=captions>文化娱乐</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=文化娱乐" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("文化娱乐")->id?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "liftindex_news_6";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
@@ -177,7 +178,7 @@
   			<div class=life_caption>
 					<div class=captions>旅游</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=旅游" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("旅游")->id?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_ly";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
@@ -189,7 +190,7 @@
   			<div class=life_caption>
 					<div class=captions>豪宅</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=豪宅" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("豪宅")->id?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_hz";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
@@ -201,7 +202,7 @@
   			<div class=life_caption>
 					<div class=captions>关注</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=关注" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("关注")->id?>" class=more></a> 
 				</div>
 				<div id=line></div>
 
@@ -220,7 +221,7 @@
   			<div class=life_caption>
 					<div class=captions>奢华专题</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=生活" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("生活")->id?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_zt";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>
@@ -233,7 +234,7 @@
   			<div class=life_caption>
 					<div class=captions>慈善</div>
 					<div class=line>|</div>
-					<a href="/news/news_list.php?cname=慈善" class=more></a> 
+					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name("慈善")->id?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_cs";	?>
 				<div id=picture <?php show_page_pos($pos_name)?>>

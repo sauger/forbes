@@ -24,6 +24,7 @@
 			return dynamic_news_url($news);
 		}
 		//$pos_items = get_page_items('index2');
+		$category = new category_class('news');
 		init_page_items();
 	?>
 		<div id=forbes_tlt>
@@ -69,7 +70,7 @@
 			
 		 <div id=forbes_tltb>	
 			 <div id=lujiazui>
-  		 	 <div id=lujiazui_caption><a href="/news/news_list.php?cname=陆家嘴早餐" title="陆家嘴早餐" target="_blank">陆家嘴早餐</a><span>Lujiazui Breakfast</span></div>
+  		 	 <div id=lujiazui_caption><a href="/news/news_list.php?cid=<?php echo $category->find_by_name("陆家嘴早餐")->id?>" title="陆家嘴早餐" target="_blank">陆家嘴早餐</a><span>Lujiazui Breakfast</span></div>
   		 	 	<?php for($i=0;$i<3;$i++){
   		 	 		$pos_name = "index_bf".$i;
   		 	 	?>
