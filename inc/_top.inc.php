@@ -8,20 +8,25 @@
 	</div>
 	<div id=top_function>
 			<div class=user_btn>
-				<?php init_page_items(); if(!$_SESSION['name']){?>
-				<a href="/login">登陆</a>　<a href="/register/">注册</a>
-				<?php }else{?>
-				<div id="uname_span"><?php echo $_SESSION['name'];?>,你好</div>
-				<a href="javascript:void(0)" id="logout">登出</a>
-				<a href="/user" id="">会员中心</a>
-				<?php }?>
 			</div>
+			<?php js_include_tag('jquery.cookie')?>
+			<script>
+				if($.cookie('cache_name') && $.cookie('name')){
+					var str = '<div id="uname_span">'+$.cookie('name')+',你好</div>'
+							+ '<a href="javascript:void(0)" id="logout">登出</a>'
+							+ '<a href="/user">会员中心</a>';
+					$('.user_btn').html(str);
+				}else{
+					$('.user_btn').html('<a href="/login">登陆</a>　<a href="/register/">注册</a>');
+				}
+			</script>
 			<div class=user_btn><a href="javascript:void(0)" onclick="myhomepage()" name="homepage">设为首页</a>　<a href="javascript:void(0)" onclick="addfavorite()">收藏本站</a></div>
 			<div id=magazine_title>本期杂志介绍</div>
+			<div id=magazine_title_more><a href="">更多杂志</a></div>
 			<?php 
 				$pos_name = "top_magazine";
 			?>
-			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img($pos_items,$pos_name,1,75,95)?></div>
+			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img(75,95,1)?></div>
 			<div id=magazine_description><span class=font1><?php echo $pos_items->$pos_name->display;?></span><br><?php echo $pos_items->$pos_name->description;?></div>
 			<div id=magazine_btn><a href="<?php echo $pos_items->$pos_name->href;?>"><img src="/images/public/magazine_btn.jpg" border=0></a></div>
 
@@ -31,13 +36,13 @@
 			<div id=logo></div>
 			<div class=forbes_search>
 					<select name="selsearch" class="iselect">
-						<option>榜单</option>
-						<option>富豪</option>
-						<option>作者</option>
-						<option>文章</option>
+						<option value="list">榜单</option>
+						<option value="rich">富豪</option>
+						<option value="author">作者</option>
+						<option value="news">文章</option>
 					</select>
 			</div>
-			<input class="input">
+			<input id="search_text" class="input">
 			<button class=search>查 询</button>			
   </div>	
 	
@@ -52,11 +57,11 @@
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="榜单"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[1]->href; ?>"><div class="nav" param1="<?php echo $countnav[1]->id; ?>" id=piclist></div></a>
+				<a href="<?php echo $countnav[1]->href; ?>"><div class="nav" param1="<?php echo $countnav[1]->id; ?>" id=piclists></div></a>
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="富豪"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[2]->href; ?>"><div class="nav" param1="<?php echo $countnav[2]->id; ?>" id=picbillinaires></div></a>
+				<a href="<?php echo $countnav[2]->href; ?>"><div class="nav" param1="<?php echo $countnav[2]->id; ?>" id=picbillionaires></div></a>
 			</div>
 			<div class=vertical></div>
 			<div class="menu" <?php if($navigation[0]->name=="投资"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
@@ -68,7 +73,7 @@
 			</div>
 			<div class=vertical></div>
 			<div class="menu"  <?php if($navigation[0]->name=="创业"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[5]->href; ?>"><div class="nav" param1="<?php echo $countnav[5]->id; ?>" id=picinitiate></div></a>
+				<a href="<?php echo $countnav[5]->href; ?>"><div class="nav" param1="<?php echo $countnav[5]->id; ?>" id=picentrepreneur></div></a>
 			</div>
 
 			<div class=vertical></div>

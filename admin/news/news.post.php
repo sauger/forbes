@@ -1,5 +1,7 @@
 <?php 
-	require "../../frame.php";
+	session_start();
+	include_once('../../frame.php');
+	judge_role();
 	$db = get_db();
 	$news_id = $_POST['id'] ? $_POST['id'] : 0;
 	$news = new table_class($tb_news);
@@ -9,13 +11,6 @@
 	$old_pdf_src = $news->pdf_src;
 	$old_video_photo_src = $news->video_photo_src;
 	$news->update_attributes($_POST['news'],false);
-	#var_dump($news);	
-	/*
-	$news->content = str_replace("'",'\"',$news->content); //mysql_escape_string($news->content);
-	$news->description = str_replace("'",'\"',$news->description);//$news->description = mysql_escape_string($news->description);
-	$news->keywords = str_replace('　',' ',$news->keywords);
-	$news->top_info = str_replace("'",'\"',$news->top_info);
-	*/
 	$pos = strpos(strtolower($news->content), '<img ');
 	if($pos !== false){
 		$pos_end = strpos(strtolower($news->content), '>',$pos);

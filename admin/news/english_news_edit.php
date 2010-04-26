@@ -1,5 +1,6 @@
 <?php
-	require_once('../../frame.php');
+	session_start();
+	include_once('../../frame.php');
 	judge_role();
 	$ch_id = $_REQUEST['chinese_id'];
 	$ch_news = new table_class($tb_news);

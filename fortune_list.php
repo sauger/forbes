@@ -1,5 +1,5 @@
 <?php 
-	require_once( dirname(__FILE__) .'/frame.php');
+	include_once( dirname(__FILE__) .'/frame.php');
 	$db = get_db();
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 		
-	<?php require_once('inc/bottom.inc.php');?>
+	<?php include_once('inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>		

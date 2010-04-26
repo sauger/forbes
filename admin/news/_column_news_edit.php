@@ -63,27 +63,6 @@
 			<td class=td1>分类</td>
 			<td class="category_select"><span id="span_category"></span></td>
 		</tr>
-			
-		<tr class=tr4>
-			<td class=td1>关键词</td>
-			<td>
-				<select multiple="multiple" id="sel_keywords">
-					<?php $keywords = explode('||',$news->keywords);
-						if(!empty($keywords)){
-							foreach($keywords as $key){ 
-								if(empty($key)) continue;
-								?>
-							<option value="<?php echo $key?>"><?php echo $key?></option>			
-						<?php }
-						}
-					?>
-				</select>
-				<img src="/images/btn_delete.png" style="cursor:pointer; float:left;" id="delete_keyword" />
-				<input type="text" id="auto_keywords" />
-				<input type="hidden" name="news[keywords]" id="news_keywords"/>
-				<img id="add_keyword" style="cursor:pointer; float:left;" src="/images/btn_add.png" />
-			</td>
-		</tr>
 
 		<tr class=tr4 style="display:none">
 			<td class=td1>优先级</td>
@@ -107,7 +86,8 @@
 				<input type="hidden" name="news[related_news]" id="hidden_related_news" value="<?php echo $news->related_news ? $news->related_news : "";?>"></input>
 				<input type="hidden" name="news[sub_headline]" id="hidden_sub_headline" value="<?php echo $news->sub_headline ? $news->sub_headline : "";?>"></input>
 				<input type="hidden" name="news[is_adopt] value="<?php $news->is_adopt;?>"></input>
-				<input type="hidden" id="hidden_related_industry" name="related_industry" value="<?php echo $news_industry;?>"></input>	
+				<input type="hidden" id="hidden_related_industry" name="related_industry" value="<?php echo $news_industry;?>"></input>
+				<input type="hidden" name="news[keywords]" value="<?php echo $news->keywords?>"/>	
 			</td>
 		</tr>	
 	</table>

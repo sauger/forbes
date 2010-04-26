@@ -491,7 +491,7 @@ class FlagCache {
     
     static function GetFlagImgByName($aSize,$aName) {
         global $_gFlagCache;
-        require_once('jpgraph_flags.php');
+        include_once('jpgraph_flags.php');
         if( $_gFlagCache[$aSize] === null ) {
             $_gFlagCache[$aSize] = new FlagImages($aSize);
         }

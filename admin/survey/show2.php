@@ -1,5 +1,5 @@
 <?php
-    require_once('../frame.php');
+    include_once('../frame.php');
 	$db = get_db();
 	$id = intval($_REQUEST['id']);
 	$page_index = isset($_REQUEST['page']) ? ($_REQUEST['page']-1) : 0;

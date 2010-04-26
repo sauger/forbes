@@ -5,7 +5,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>福布斯中文网-角色管理</title>
 	<?
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 		css_include_tag('admin');
 		use_jquery();
 		js_include_tag('admin/role/edit');
@@ -18,7 +18,7 @@
 			public $type;
 			public $cat_name;
 		}
-		$rights = $db->query("select a.*,c.name as cat_name from fb_rights a left join fb_admin_menu b on a.name = b.id left join fb_admin_menu c on b.parent_id = c.id order by cat_name desc");
+		$rights = $db->query("select a.*,c.name as cat_name from fb_rights a left join fb_admin_menu b on a.name = b.id left join fb_admin_menu c on b.parent_id = c.id order by c.parent_id asc, c.priority asc, cat_name desc");
 		foreach($rights as $val){
 			$right = new Right();
 			$right->id = $val->id;

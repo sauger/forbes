@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$key = $_REQUEST['key'];
 	$id_adopt = $_REQUEST['adopt'];
 	$db = get_db();
@@ -33,7 +33,7 @@
 	<a href="vote_add.php" id=btn_add></a>
 </div>
 <div id=isearch>
-		<input id=title type="text" value="<?php echo $key?>">
+		<input id="key" type="text" value="<?php echo $key?>">
 		<select id=adopt style="width:100px">
 					<option value="">发布状况</option>
 					<option value="1" <? if($_REQUEST['adopt']=="1"){?>selected="selected"<? }?>>已发布</option>
@@ -86,10 +86,10 @@
 					<td><?php echo substr($record[$i]->created_at, 0, 10);?></td>
 					<td><?php echo substr($record[$i]->ended_at, 0, 10);?></td>
 					<td>
-						<?php if($record[$i]->is_adopt=="1"){?><span style="color:#FF0000;cursor:pointer" class="revocation" name="<?php echo $record[$i]->id;?>" title="撤销"><img src="/images/btn_apply.png" border="0"></span><? }?>
-						<?php if($record[$i]->is_adopt=="0"){?><span style="color:#0000FF;cursor:pointer" class="publish" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/btn_unapply.png" border="0"></span><? }?>
-						<a href="vote_edit.php?id=<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border="0"></a>
-						<a class="del_vote" name="<?php echo $record[$i]->id;?>" style="color:#ff0000; cursor:pointer;" title="删除"><img src="/images/btn_delete.png" border="0"></a>
+						<?php if($record[$i]->is_adopt=="1"){?><span style="color:#FF0000;cursor:pointer" class="revocation" name="<?php echo $record[$i]->id;?>" title="撤销"><img src="/images/admin/btn_apply.png" border="0"></span><? }?>
+						<?php if($record[$i]->is_adopt=="0"){?><span style="color:#0000FF;cursor:pointer" class="publish" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border="0"></span><? }?>
+						<a href="vote_edit.php?id=<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a>
+						<a class="del_vote" name="<?php echo $record[$i]->id;?>" style="color:#ff0000; cursor:pointer;" title="删除"><img src="/images/admin/btn_delete.png" border="0"></a>
 						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:20px;">
 					</td>
 				</tr>
@@ -119,7 +119,12 @@
 	$("#adopt").change(function(){
 		search();
 	});
+	$("#key").keypress(function(event){
+		if (event.keyCode == 13) {
+			search();
+		}
+	});
 	function search(){
-		window.location.href = "index.php?key="+encodeURI($("#title").val())+"&adopt="+$("#adopt").val();
+		window.location.href = "index.php?key="+encodeURI($("#key").val())+"&adopt="+$("#adopt").val();
 	}
 </script>

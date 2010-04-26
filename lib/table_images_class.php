@@ -1,6 +1,6 @@
 <?php
-require_once(dirname(__FILE__) ."/table_class.php");
-require_once(dirname(__FILE__) ."/image_handler_class.php");
+include_once(dirname(__FILE__) ."/table_class.php");
+include_once(dirname(__FILE__) ."/image_handler_class.php");
 
 class table_images_class extends table_class
 {

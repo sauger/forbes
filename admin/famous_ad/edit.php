@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$db = get_db();
 	$fid = $_REQUEST['f_id'];
 	$famous = new table_class('fb_mr');
@@ -25,7 +25,7 @@
 	<form id="famous_edit" enctype="multipart/form-data" action="edit.post.php" method="post"> 
 	<table width="795" border="0">
 		<tr class=tr1>
-			<td colspan="2" width="795">　 <?php if($id!=''){echo "编辑名人代言";}else{echo "添加名人代言";}?> <a href="/admin/famous/index.php"><img src="/images/btn_back.png" border=0></a> <span id="add_item" type="button" title="添加项目" style="cursor:pointer"><img src="/images/btn_add.png" border=0></span></td>
+			<td colspan="2" width="795">　 <?php if($id!=''){echo "编辑名人代言";}else{echo "添加名人代言";}?> <a href="/admin/famous/index.php"><img src="/images/admin/btn_back.png" border=0></a> <span id="add_item" type="button" title="添加项目" style="cursor:pointer"><img src="/images/admin/btn_add.png" border=0></span></td>
 		</tr>
 		<tr class=tr4>
 			<td class=td1>姓名</td>

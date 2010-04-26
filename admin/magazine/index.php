@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once( dirname(__FILE__) .'/../../frame.php');
+  include_once( dirname(__FILE__) .'/../../frame.php');
 	judge_role();
 		
 	$search = $_REQUEST['search'];
@@ -51,10 +51,10 @@
 			<td><?php echo $record[$i]->name;?></td>
 			<td><?php echo substr($record[$i]->publish_data,0,10);?></td>
 			<td>
-			<a href="img_list.php?id=<?php echo $record[$i]->id;?>" title="管理图片"><img src="/images/btn_add.png" border="0"></a>
-			<a href="list_edit.php?id=<?php echo $record[$i]->id;?>" title="关联文章"><img src="/images/btn_config2.png" border="0"></a>
-			<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" title="编辑" style="cursor:pointer"><img src="/images/btn_edit.png" border="0"></a>
-			<span style="cursor:pointer;color:#FF0000" class="del" title="删除" name="<?php echo $record[$i]->id;?>"><img src="/images/btn_delete.png" border="0"></span>
+			<a href="img_list.php?id=<?php echo $record[$i]->id;?>" title="管理图片"><img src="/images/admin/btn_add.png" border="0"></a>
+			<a href="list_edit.php?id=<?php echo $record[$i]->id;?>" title="关联文章"><img src="/images/admin/btn_config2.png" border="0"></a>
+			<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" title="编辑" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
+			<span style="cursor:pointer;color:#FF0000" class="del" title="删除" name="<?php echo $record[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
 			</td>
 		</tr>
 		<?php

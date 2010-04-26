@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 ?>	
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -46,7 +46,7 @@
 	<form id="news_edit" enctype="multipart/form-data" action="file_list_item_edit.post.php" method="post"> 
 	<table cellspacing=1 border="0">
 		<tr class=tr1>
-			<td colspan="2" width="795">　　发布榜单项 <a href="<?php echo "file_list_items_list.php?id={$list_id}";?>"><img src="/images/btn_back.png" border=0></a></td>
+			<td colspan="2" width="795">　　发布榜单项 <a href="<?php echo "file_list_items_list.php?id={$list_id}";?>"><img src="/images/admin/btn_back.png" border=0></a></td>
 		</tr>
 		<tr class=tr4>
 			<td width="130">标题</td>

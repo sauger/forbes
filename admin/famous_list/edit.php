@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$db = get_db();
 	$id = $_REQUEST['id'];
 	$f_id = $_REQUEST['f_id'];
@@ -41,7 +41,7 @@
 	<table width="795" border="0">
 		<tr class=tr1>
 			<td colspan="2" width="795">　 <?php if($id!=''){echo "编辑名人榜单";}else{echo "添加名人榜单";}?>
-			<?php if ($f_id != ''){?><a href="/admin/famous/index.php"><img src="/images/btn_back.png" border=0></a>	<?php }?>
+			<?php if ($f_id != ''){?><a href="/admin/famous/index.php"><img src="/images/admin/btn_back.png" border=0></a>	<?php }?>
 			<?php if ($year != ''){?><a href="detail.php?year=<?php echo $year; ?>">返回<?php echo $list->year?></a>	<?php }?>		
 			<?php if ($id != ''){?><a href="index.php">返回榜单列表</a>	<?php }?>
 			</td>

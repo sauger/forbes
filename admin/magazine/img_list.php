@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 	
 	$id = $_GET['id'];
@@ -36,8 +36,8 @@
 			<td height=60><a href="<?php echo $images[$i]->src;?>" target="_blank"><img src="<?php echo $images[$i]->src;?>" width="50" height="50" border="0"></a></td>
 			<td><?php echo $images[$i]->created_at;?></td>
 			<td>
-				<a href="image_edit.php?id=<?php echo $images[$i]->id;?>" style="color:#000000; text-decoration:none"><img src="/images/btn_edit.png" border="0"></a> 
-				<span style="cursor:pointer; color:#FF0000" class="del" name="<?php echo $images[$i]->id;?>"><img src="/images/btn_delete.png" border="0"></span>
+				<a href="image_edit.php?id=<?php echo $images[$i]->id;?>" style="color:#000000; text-decoration:none"><img src="/images/admin/btn_edit.png" border="0"></a> 
+				<span style="cursor:pointer; color:#FF0000" class="del" name="<?php echo $images[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
 				<input type="text" class="priority" name="<?php echo $images[$i]->id;?>" value="<?php if($images[$i]->priority!=100){echo $images[$i]->priority;}?>" style="width:40px;">
 				<input type="hidden" id="priorityh<? echo $p;?>" value="<?php echo $images[$i]->id;?>" style="width:40px;">	
 			</td>

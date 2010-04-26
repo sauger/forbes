@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	
 	$search = $_REQUEST['search'];
 	$db = get_db();
@@ -45,7 +45,7 @@
 					<td><?php echo $record[$i]->created_at;?></td>
 					<td><input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>"></td>
 					<td>
-						<a href="show2.php?id=<?php echo $record[$i]->id;?>" title="查看统计结果"><img src="/images/btn_config1.png" border="0"></a>
+						<a href="show2.php?id=<?php echo $record[$i]->id;?>" title="查看统计结果"><img src="/images/admin/btn_config1.png" border="0"></a>
 					</td>
 				</tr>
 		<?php

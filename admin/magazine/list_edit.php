@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 	
 	$id = $_REQUEST['id'];
@@ -108,18 +108,18 @@
 							for($j=0;$j<$news_count;$j++){
 								if($record[$i]->id==$news[$j]->resource_id){ $rate_flag=true;?>
 								<?php if($news[$j]->is_show=="1"){?>
-								<span style="cursor:pointer" class="set_down" name="<?php echo $news[$j]->id;?>" title="取消置于封面"><img src="/images/btn_up.png" border="0"></span>
+								<span style="cursor:pointer" class="set_down" name="<?php echo $news[$j]->id;?>" title="取消置于封面"><img src="/images/admin/btn_up.png" border="0"></span>
 								<?php }?>
 								<?php if($news[$j]->is_show=="0"){?>
-								<span style="cursor:pointer" class="set_up" name="<?php echo $news[$j]->id;?>" title="置于封面"><img src="/images/btn_unup.png" border="0"></span>
+								<span style="cursor:pointer" class="set_up" name="<?php echo $news[$j]->id;?>" title="置于封面"><img src="/images/admin/btn_unup.png" border="0"></span>
 								<?php }?>
-								<span style="cursor:pointer" class="revocation" name="<?php echo $news[$j]->id;?>" title="删除"><img src='/images/btn_delete.png' border='0'></span>
+								<span style="cursor:pointer" class="revocation" name="<?php echo $news[$j]->id;?>" title="删除"><img src='/images/admin/btn_delete.png' border='0'></span>
 								<input type="text" class="priority"  name="<?php echo $news[$j]->id;?>"  value="<?php echo $news[$j]->priority;?>" style="width:40px;">
 								<?php }?>
 						<?php }
 							if(!$rate_flag){
 						?>
-						<span style="cursor:pointer" class="publish" name="<?php echo $record[$i]->id;?>" title="加入"><img src='/images/btn_add.png' border='0'></span>
+						<span style="cursor:pointer" class="publish" name="<?php echo $record[$i]->id;?>" title="加入"><img src='/images/admin/btn_add.png' border='0'></span>
 						<?php }?>
 					</td>
 				</tr>

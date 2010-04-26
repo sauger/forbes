@@ -10,7 +10,7 @@
 	<?php
 		use_jquery_ui();
 		js_include_tag('public','picture_list/index','right');
-		css_include_tag('lists','jquery-ui','public','right_inc');
+		css_include_tag('list','jquery-ui','public','right_inc');
 		$db = get_db();
 		$id = intval($_GET['id']);
 		if(empty($id)){
@@ -36,7 +36,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+	<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread><a href="#">榜单</a></div>
 		<div id=bread_line></div>
 		<div id=pic_list>
@@ -85,7 +85,7 @@
 		 		<?php include "../right/four.php";?>
 		 		<?php include "../right/magazine.php";?>
 		</div>
-	<? require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+	<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>

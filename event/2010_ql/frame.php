@@ -3,13 +3,13 @@
 	define(ROOT_DIR_NONE, dirname(__FILE__));	
 	define(ROOT_DIR,CURRENT_DIR);
 	require('config/config.php');
-	require_once(CURRENT_DIR ."lib/pubfun.php");
-	require_once(CURRENT_DIR ."lib/database_connection_class.php");
-	require_once(CURRENT_DIR ."lib/table_class.php");
+	include_once(CURRENT_DIR ."lib/pubfun.php");
+	include_once(CURRENT_DIR ."lib/database_connection_class.php");
+	include_once(CURRENT_DIR ."lib/table_class.php");
 	
 	function get_config($var,$path=''){
 		if(empty($path)){$path = LIB_PATH .'../config/config.php';}
-		require_once($path);
+		include_once($path);
 		global $$var;
 		return $$var;
 	}	

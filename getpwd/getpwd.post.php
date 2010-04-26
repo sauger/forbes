@@ -7,7 +7,7 @@
 	</head>
 <body>
 <?php
-    require_once('../frame.php');
+    include_once('../frame.php');
 	
 	if($_POST['yzm']!=$_SESSION['getpwd']){
 		alert('验证码不正确！');

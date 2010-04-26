@@ -1,5 +1,5 @@
 <?php
-	require_once('../frame.php');
+	include_once('../frame.php');
 	$lasturl = isset($_REQUEST['last_url']) ? $_REQUEST['last_url'] : '';
 ?>
 

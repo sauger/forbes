@@ -1,5 +1,5 @@
 ﻿<?php
-  require_once('../frame.php');
+  include_once('../frame.php');
 	
 	if('del_total'== $_POST['post_type']){
 		$db = get_db();

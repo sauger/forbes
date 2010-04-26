@@ -9,7 +9,7 @@
 	if($search!=''){
 		$sql .= " where name like '%".$search."%'";
 	}
-	$record = $db->paginate($sql,15);
+	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
 
@@ -32,7 +32,7 @@
 	  <a href="edit.php" id=btn_add></a>
 	</div>
 	<div id=isearch>
-		<input class="sau_search" name="title" type="text" value="<? echo $search;?>">
+		<input class="sau_search" id="search" name="title" type="text" value="<? echo $search;?>">
 		<input type="button" value="搜索" id="search_button">
 </div>
 <div id=itable>
@@ -47,8 +47,8 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><?php echo $record[$i]->name;?></a></td>
 					<td>
-						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer"><img border=0 src="/images/btn_edit.png"></a>
-						<span style="cursor:pointer;color:#FF0000" class="del" name="<?php echo $record[$i]->id;?>"><img border=0 src="/images/btn_delete.png"></span>
+						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
+						<span style="cursor:pointer;color:#FF0000" class="del" name="<?php echo $record[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
 					</td>
 				</tr>
 		<?php
@@ -59,7 +59,7 @@
 				<td colspan=10><?php paginate("",null,"page",true);?></td>
 			</tr>
 		</table>	
-</div>
+	</div>
 	</body>
 </html>
 <script>
@@ -70,7 +70,7 @@ $(function(){
 		}
 	});
 	
-	$('#search_b').click(function(){
+	$('#search_button').click(function(){
 		search();
 	})
 })

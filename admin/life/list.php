@@ -57,8 +57,8 @@
 				<?php if($images[$i]->is_adopt=="0"){?>
 					<span style="color:#0000FF;cursor:pointer" class="publish" name="<?php echo $images[$i]->id;?>">发布</span>
 				<?php }?>
-				<a href="edit.php?id=<?php echo $images[$i]->id;?>&type=<?php echo $type; ?>" style="color:#000000; text-decoration:none"><img border=0 src="/images/btn_edit.png"></a> 
-				<span style="cursor:pointer; color:#FF0000" class="del" name="<?php echo $images[$i]->id;?>"><img border=0 src="/images/btn_delete.png"></span>
+				<a href="edit.php?id=<?php echo $images[$i]->id;?>&type=<?php echo $type; ?>" style="color:#000000; text-decoration:none"><img border=0 src="/images/admin/btn_edit.png"></a> 
+				<span style="cursor:pointer; color:#FF0000" class="del" name="<?php echo $images[$i]->id;?>"><img border=0 src="/images/admin/btn_delete.png"></span>
 				<input type="text" class="priority" name="<?php echo $images[$i]->id;?>" value="<?php if($images[$i]->priority!=100){echo $images[$i]->priority;}?>" style="width:40px;">
 				<input type="hidden" id="priorityh<? echo $p;?>" value="<?php echo $images[$i]->id;?>" style="width:40px;">	
 			</td>
@@ -96,14 +96,14 @@
 							$rate_flag = false;
 							for($j=0;$j<$news_count;$j++){
 								if($images[$i]->id==$news[$j]->news_id){ $rate_flag=true;?>
-								<span style="cursor:pointer" class="revocation" name="<?php echo $news[$j]->id;?>" title="<img border=0 src="/images/btn_delete.png">"><img src='/images/btn_delete.png' border='0'></span>
+								<span style="cursor:pointer" class="revocation" name="<?php echo $news[$j]->id;?>" title="<img border=0 src="/images/admin/btn_delete.png">"><img src='/images/admin/btn_delete.png' border='0'></span>
 								<input type="text" class="priority"  name="<?php echo $news[$j]->id;?>"  value="<?php echo $news[$j]->priority;?>" style="width:40px;">
 								<?php break;}?>
 						<?php }
 							if(!$rate_flag){
 						?>
-							<a href="edit.php?id=<?php echo $images[$i]->id;?>&type=<?php echo $type; ?>" style="color:#000000; text-decoration:none"><img border=0 src="/images/btn_edit.png"></a> 
-							<span style="cursor:pointer; color:#FF0000" class="del" name="<?php echo $images[$i]->id;?>"><img border=0 src="/images/btn_delete.png"></span>
+							<a href="edit.php?id=<?php echo $images[$i]->id;?>&type=<?php echo $type; ?>" style="color:#000000; text-decoration:none"><img border=0 src="/images/admin/btn_edit.png"></a> 
+							<span style="cursor:pointer; color:#FF0000" class="del" name="<?php echo $images[$i]->id;?>"><img border=0 src="/images/admin/btn_delete.png"></span>
 							<input type="text" class="priority" name="<?php echo $images[$i]->id;?>" value="<?php if($images[$i]->priority!=100){echo $images[$i]->priority;}?>" style="width:40px;">
 						<?php }?>
 					</td>

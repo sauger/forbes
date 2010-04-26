@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 ?>	
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -38,6 +38,7 @@
 <div id=isearch>
 		<input id="s_text" type="text" value="<? echo $_REQUEST['s_text'];?>">
 		<input type="button" value="搜索" id="search_button">
+		<input type="hidden" id="file" value="file_list_list">
 </div>
 <div id=itable>
 	<table cellspacing="1" align="center">
@@ -50,10 +51,10 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><a href="/list/show_list.php?id=<?php echo $record[$i]->id;?>" target="_blank"><?php echo $record[$i]->name;?></a></td>
 					<td>
-						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" title="关联"><img border=0 src="/images/btn_relation.png"></a>
-						<a href="file_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img border=0 src="/images/btn_edit.png"></a>
-						<a href="file_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/btn_item.png"></a>
-						<span style="cursor:pointer;color:#FF0000" class="del1" name="<?php echo $record[$i]->id;?>"><img border=0 src="/images/btn_delete.png"></span>
+						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" title="关联"><img border=0 src="/images/admin/btn_relation.png"></a>
+						<a href="file_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img border=0 src="/images/admin/btn_edit.png"></a>
+						<a href="file_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/admin/btn_item.png"></a>
+						<span style="cursor:pointer;color:#FF0000" class="del1" name="<?php echo $record[$i]->id;?>"><img border=0 src="/images/admin/btn_delete.png"></span>
 						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:40px;">
 					</td>
 				</tr>

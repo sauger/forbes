@@ -1,9 +1,9 @@
 ﻿<?php 
 	session_start();
-	require_once('../frame.php');
-	$_SESSION['survey'] = rand_str(20);
+	include_once('../frame.php');
 	$db = get_db();
 	$id = intval($_GET['id']);
+	$_SESSION['survey'.$id] = rand_str(20);
 	if(empty($id)){
 		redirect('/error.html');
 		die();
@@ -29,12 +29,10 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title><?php echo strip_tags($news->short_title);?>-福布斯中文网</title>
-	<meta name="Keywords" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
-	<meta name="Description" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
+	<title>福布斯中文网</title>
 	<?php
 		use_jquery();
-		js_include_tag('public');
+		js_include_tag('public','right','survey');
 		css_include_tag('public','survey','right_inc');
 	?>
 </head>
@@ -44,38 +42,42 @@
 		<div id=bread>
 			<span>在线问卷</span>
 		</div>
-		<div id="hr_top"></div>
-		<div id="questions_div">
-			<div id="questions_top"></div>
-				<div id="questions_n">
-					<div id="question_menu">在线问卷<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '(已经结束)';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "(还未开始)";else $flag=1;?></div>
-					<?php if($flag==1){?>
-					<div id="questions__top">
-						<form action="survey.post.php" method="post">
-						<?php for($i=0;$i<$count;$i++){?>
-						<div class="answer_title<?php if($record[$i]->max_item_count>1)echo ' limit_item'?>" <?php if($record[$i]->max_item_count>1)echo "limit=".$record[$i]->max_item_count;?>>问题<?php echo $i+1?>：<?php echo $record[$i]->title;?></div>
-						<div class="answer_dd">
-							<input type="hidden" name="record_id[]" value="<?php echo $record[$i]->id;?>">
-							<?php for($j=0;$j<$item_count;$j++){
-								if($item[$j]->vid==$record[$i]->id){
-							?>
-							<div class="answer_z">
-								<div class="answer_select"><input type="<?php echo $in_type;?>" id="checkbox<?php echo $item[$j]->id;?>" name="<?php echo $record[$i]->id;?>[]" value="<?php echo $item[$j]->id;?>" /></DIV>
-								<div class="answer"><label for="checkbox<?php echo $item[$j]->id;?>"><?php echo $item[$j]->title;?></label></div>
+		<div id=bread_line></div>
+		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '(已经结束)';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "(还未开始)";else $flag=1;?>
+		<?php if($flag==1){?>
+		<div id="question_div">
+			<form action="survey.post.php" method="post">
+			<?php for($i=0;$i<$count;$i++){?>
+				<div class="survey2_z <?php if($record[$i]->max_item_count>1)echo ' limit_item'?>" <?php if($record[$i]->max_item_count>1)echo "limit=".$record[$i]->max_item_count;?>>
+					<div class="s2_top">
+						<div class="top_lpg"></div>
+							<div class="top_pg">
+								<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
+								<div class="s2_title">
+									<?php echo $record[$i]->title;?>
+								</div>
 							</div>
-							<?php }}?>
-						</div>
-						<?php }?>
-						<div id="answer_hr"></div>
-						<div id="submit_div"><input type="submit" value="提&nbsp;交" id="submit"></div>
-						<input type="hidden" name="verify" value="<?php echo $_SESSION['survey'];?>">
-						<input type="hidden" name="vote_id" value="<?php echo $id;?>">
-						</form>
+						<div class="top_rpg"></div>
 					</div>
-					<?php }?>
+					<div class="s2_content">
+						<input type="hidden" name="record_id[]" value="<?php echo $record[$i]->id;?>">
+						<?php for($j=0;$j<$item_count;$j++){
+							if($item[$j]->vid==$record[$i]->id){
+						?>
+							<div class="s2_c">
+								<div class="s2_c_radio"><input type="<?php echo $in_type;?>" id="checkbox<?php echo $item[$j]->id;?>" name="<?php echo $record[$i]->id;?>[]" value="<?php echo $item[$j]->id;?>" /></div>
+								<div class="s2_c_content"><label for="checkbox<?php echo $item[$j]->id;?>"><?php echo $item[$j]->title;?></label></div>
+							</div>
+						<?php }}?>
+					</div>
 				</div>
-			<div id="questions_bottom"></div>
+			<?php }?>
+			<div id="s2_submit"><input type="submit" value="提交"></div>
+			<input type="hidden" name="verify" value="<?php echo$_SESSION['survey'.$id];?>">
+			<input type="hidden" name="vote_id" value="<?php echo $id;?>">
+			</from>
 		</div>
+		<?php }?>
 		<div id="right_inc">
 		 		<?php include "../right/ad.php";?>
 		 		<?php include "../right/favor.php";?>

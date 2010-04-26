@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	judge_role();
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -103,7 +103,7 @@
 				<td><?php echo $v->stock_code?></td>
 				<td><input type="text"  value="<?php echo $v->stock_count;?>"></input></td>
 				<td>
-					<a style="cursor:pointer;" class="a_delete"><img src="/images/btn_delete.png" border="0"></a>
+					<a style="cursor:pointer;" class="a_delete"><img src="/images/admin/btn_delete.png" border="0"></a>
 					<input type="hidden" class="c_hidden" value="<?php echo $v->id;?>"></input>
 					<input type="hidden" value="<?php echo $v->company_id;?>"></input>
 				</td>
@@ -147,7 +147,7 @@
 					<td><input type="text" class="fortune_class" value="<?php echo $v->fortune_year;?>"></input>(输入4位年份)</td>
 					<td><input type="text" class="fortune_order" value="<?php echo $v->fortune_order;?>"></input></td>
 					<td>
-						<a style="cursor:pointer;" class="f_delete"><img src="/images/btn_delete.png" border="0"></a>
+						<a style="cursor:pointer;" class="f_delete"><img src="/images/admin/btn_delete.png" border="0"></a>
 						<input type="hidden" value="<?php echo $v->id;?>"></input>
 					</td>
 				</tr>	

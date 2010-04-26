@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 	$menu_title="添加菜单主目录"; 
 	$menu_table=$tb_menu;
@@ -35,7 +35,7 @@
 	<div id="itable">
 		<table cellspacing="1" align="center">
 		<tr class="itable_title">
-			<td width=40%>菜单名称</td><td width=15%>优先级</td><td width=15%>链接</td><td width="15%">链接方式</td><td width=15%>操作</td>
+			<td width=30%>菜单名称</td><td width=15%>优先级</td><td width=25%>链接</td><td width="15%">链接方式</td><td width=15%>操作</td>
 		</tr>
 		<?php
 			$menu = new table_class($menu_table);
@@ -58,7 +58,7 @@
 					<td><?php echo $record[$i]->href;?></td>
 					<td><?php echo display_target($record[$i]->target);?></td>
 					<?php } ?>
-					<td><a href="menu_edit.php?parent_id=<?php echo $record[$i]->id;?>" title="添加子菜单"><img src="/images/btn_add.png" border="0"></a>　<a href="menu_edit.php?id=<?php echo $record[$i]->id;?>&type=<?php echo $type?>" target="admin_iframe" title="编辑"><img src="/images/btn_edit.png" border="0"></a>　<a class="del" name="<?php echo $record[$i]->id;?>" style="color:#ff0000; cursor:pointer" title="删除"><img src="/images/btn_delete.png" border="0"></a></td>
+					<td><a href="menu_edit.php?parent_id=<?php echo $record[$i]->id;?>" title="添加子菜单"><img src="/images/admin/btn_add.png" border="0"></a>　<a href="menu_edit.php?id=<?php echo $record[$i]->id;?>&type=<?php echo $type?>" target="admin_iframe" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a>　<a class="del" name="<?php echo $record[$i]->id;?>" style="color:#ff0000; cursor:pointer" title="删除"><img src="/images/admin/btn_delete.png" border="0"></a></td>
 				</tr>
 				<?php
 				//----------
@@ -70,7 +70,7 @@
 					<td><input type="text" class="priority" name="<?php echo $record2[$j]->id;?>" value="<?php if($record2[$j]->priority!=100){echo $record2[$j]->priority;}?>" style="width:30px;"></td>
 					<td><?php echo $record2[$j]->href;?></td>
 					<td><?php echo display_target($record2[$j]->target);?></td>
-					<td><a href="menu_edit.php?id=<?php echo $record2[$j]->id;?>&type=<?php echo $type?>" target="admin_iframe" title="编辑"><img src="/images/btn_edit.png" border="0"></a>　<a class="del" name="<?php echo $record2[$j]->id;?>" style="color:#ff0000; cursor:pointer" title="删除"><img src="/images/btn_delete.png" border="0"></a></td>
+					<td><a href="menu_edit.php?id=<?php echo $record2[$j]->id;?>&type=<?php echo $type?>" target="admin_iframe" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a>　<a class="del" name="<?php echo $record2[$j]->id;?>" style="color:#ff0000; cursor:pointer" title="删除"><img src="/images/admin/btn_delete.png" border="0"></a></td>
 				</tr>
 		<?php
 				}

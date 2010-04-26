@@ -3,13 +3,13 @@
 	define(ROOT_DIR_NONE, dirname(__FILE__));	
 	define(ROOT_DIR,CURRENT_DIR);
 	require('config/config.php');
-	require_once(CURRENT_DIR ."lib/pubfun.php");
-	require_once(CURRENT_DIR ."lib/database_connection_class.php");
-	require_once(CURRENT_DIR ."lib/database_connection_mssql_class.php");
-	require_once(CURRENT_DIR ."lib/table_class.php");
-	require_once(CURRENT_DIR ."lib/category_class.php");
-	require_once(CURRENT_DIR ."lib/table_images_class.php");
-	require_once(CURRENT_DIR ."lib/upload_file_class.php");
+	include_once(CURRENT_DIR ."lib/pubfun.php");
+	include_once(CURRENT_DIR ."lib/database_connection_class.php");
+	include_once(CURRENT_DIR ."lib/database_connection_mssql_class.php");
+	include_once(CURRENT_DIR ."lib/table_class.php");
+	include_once(CURRENT_DIR ."lib/category_class.php");
+	include_once(CURRENT_DIR ."lib/table_images_class.php");
+	include_once(CURRENT_DIR ."lib/upload_file_class.php");
 	require_once CURRENT_DIR ."lib/image_handler_class.php";
 	if(file_exists(ROOT_DIR ."inc/project_pubfun.php")){
 		require_once CURRENT_DIR ."inc/project_pubfun.php";
@@ -17,7 +17,7 @@
 	
 	function get_config($var,$path=''){
 		if(empty($path)){$path = LIB_PATH .'../config/config.php';}
-		require_once($path);
+		include_once($path);
 		global $$var;
 		return $$var;
 	}	
@@ -181,8 +181,8 @@
 	}
 	
 	function show_fckeditor($name,$toolbarset='Admin',$expand_toolbar=true,$height="200",$value="",$width = null) {
-		require_once(ROOT_DIR . 'ckeditor/ckeditor_php5.php');
-		require_once(ROOT_DIR . 'ckfinder/ckfinder.php');
+		include_once(ROOT_DIR . 'ckeditor/ckeditor_php5.php');
+		include_once(ROOT_DIR . 'ckfinder/ckfinder.php');
 		$editor = new CKEditor(ROOT_DIR . 'ckeditor');
 		$editor->config['toolbar'] = $toolbarset;
 		$editor->config['toolbarStartupExpanded'] = $expand_toolbar;

@@ -1,6 +1,5 @@
-﻿<?php 
-	session_start();
-	require_once(dirname(__FILE__).'/../frame.php');
+﻿<?php
+	include_once(dirname(__FILE__).'/../frame.php');
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,20 +9,20 @@
 	<title>福布斯-会员俱乐部</title>
 	<?php
 		use_jquery();
-		js_include_tag('select2css','public');
+		js_include_tag('public','right');
 		css_include_tag('club_index','public');
 		init_page_items();
 	?>
 </head>
 <body>
 	<div id=ibody>
-		<? require_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+		<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread><a href="#">会员俱乐部</a></div>
 		<div id=bread_line></div>
 		<div id=club_left>
 			<div id=club_img <?php $pos_name='club_img'; show_page_pos($pos_name); ?>>
 				<div id=club_l_t>
-					<img src="<?php echo $pos_items->$pos_name->image1; ?>">
+					<img src="<?php echo $pos_items->$pos_name->image1;?>">
 					<div id=fd>
 					</div>
 					<div id=fd_l ><?php echo $pos_items->$pos_name->description; ?></div>
@@ -44,7 +43,7 @@
 						<?php show_page_img($pos_items,$pos_name); ?>	
 					</div>
 					<div class=content_r>
-						<div class=title><?php show_page_href($pos_items,$pos_name); ?></div>
+						<div class=title><?php show_page_href(); ?></div>
 						<div class=context><?php show_page_desc($pos_items,$pos_name); ?></div>
 						<div class=dc><a href="<?php echo $pos_items->$pos_name->href; ?>">开始调查>></a></div>
 					</div>
@@ -78,30 +77,20 @@
 					<div class=wz>会员公告</div>
 				</div>
 				<div id=Bulletin_c  <?php $pos_name='club_post'; show_page_pos($pos_name); ?>>
-					<div id=pic><a href=""><img border=0 src="<></img"></a></div>
-					<div id=pictitle><a href="">中国最富有的女富豪</a></div>
-					<div id=piccontent><a href="">其加薪理由是在危机期间未接作家沃尔夫各央行应将通胀目标从2%提高至4%...</a></div>
+					<div id=pic><a href="<?php echo $pos_items->$pos_name->href; ?>"><img border=0 src="<?php echo $pos_items->$pos_name->image1; ?>"></a></div>
+					<div id=pictitle><?php show_page_href(); ?></div>
+					<div id=piccontent><?php show_page_desc($pos_items,$pos_name); ?></div>
 				</div>
 				<div class="club_dash"></div>
 				<div id=Bulletin_b>
-					<div class=cl>
+				<?php for($i=0; $i<3; $i++){?>
+					<div class=cl <?php $pos_name='club_post_'.$i; show_page_pos($pos_name); ?>>
 						<div class=cl_l></div>
 						<div class=cl_r>
-							<a href="">中国的出口优势不在汇势不在汇不在汇不在率中</a>	
+							<?php show_page_href(); ?>	
 						</div>	
 					</div>
-					<div class=cl>
-						<div class=cl_l></div>
-						<div class=cl_r>
-							<a href="">中国的出口优势不在汇势不在汇不在汇不在率中</a>	
-						</div>	
-					</div>
-					<div class=cl>
-						<div class=cl_l></div>
-						<div class=cl_r>
-							<a href="">中国的出口优势不在汇势不在汇不在汇不在率中</a>	
-						</div>	
-					</div>
+				<?php } ?>
 				</div>
 			</div>
 			<div class=club_right_content_bottom></div>
@@ -133,30 +122,24 @@
 					<div class=wz>读者高见</div>
 				</div>
 				<div class=Bulletin_c>
-					<div class=idea_c>
-						<div class=idea_c_t><a href="">中信保给宏盛的保险依赖保给宏盛的保险依赖保给宏盛的保险依赖保给宏盛的保险依赖于龙长生之妹龙长虹的INT和IRC两家公司（即美国的经销商）在美国口提供担保... ...</a></div>
-						<div class=idea_c_b><a href="">--XXXDDD</a></div>
-					</div>
-					<div class="idea_dash"></div>
-					<div class=idea_c>
-						<div class=idea_c_t><a href="">中信保给宏盛的保险依赖保给宏盛的保险依赖保给宏盛的保险依赖保给宏盛的保险依赖于龙长生之妹龙长虹的INT和IRC两家公司（即美国的经销商）在美国口提供担保... ...</a></div>
-						<div class=idea_c_b><a href="">--XXXDDD</a></div>
-					</div>
-					<div class="idea_dash"></div>
-					<div class=idea_c>
-						<div class=idea_c_t><a href="">中信保给宏盛的保险依赖保给宏盛的保险依赖保给宏盛的保险依赖保给宏盛的保险依赖于龙长生之妹龙长虹的INT和IRC两家公司（即美国的经销商）在美国口提供担保... ...</a></div>
-						<div class=idea_c_b><a href="">--XXXDDD</a></div>
-					</div>
-					<div class="idea_dash"></div>
-					<div class=idea_c>
-						<div class=idea_c_t><a href="">中信保给宏盛的保险依赖保给宏盛的保险依赖保给宏盛的保险依赖保给宏盛的保险依赖于龙长生之妹龙长虹的INT和IRC两家公司（即美国的经销商）在美国口提供担保... ...</a></div>
-						<div class=idea_c_b><a href="">--XXXDDD</a></div>
-					</div>
+					<?php
+						$comments = $db->query("select * from fb_comment where resource_type='news' order by created_at desc limit 4");
+						$news = new table_class('fb_news');
+						for($i=0;$i<4;$i++){
+						$news->find($comments[$i]->resource_id);
+					?>
+						<div class=idea_c>
+							<div class=idea_c_t><a href=""><?php echo $comments[$i]->comment?></a></div>
+							<div class=idea_c_b><a href="">--<?php echo $comments[$i]->nick_name;?></a></div>
+						</div>
+						<?php if($i<3){ ?>
+						<div class="idea_dash"></div>
+					<?php }}?>
 				</div>
 			</div>
 			<div class=club_right_content_bottom></div>
 			<div id=customize_title>
-				<div id=wz>评论定制</div>
+				<div id=wz>福布斯精华文章定制</div>
 				<div id=more><a href=""><img border=0 src="/images/index/c_r_t_more.gif"></a></div>	
 			</div>
 			<div id=customize_left></div>
@@ -164,26 +147,27 @@
 				<div id=content>
 					<div id=content_t>
 						<div id=content_t_l>
-							订阅福布斯快闻　<input type="radio"><span style="font-size:12px; font-weight:normal; color:#666666;">我要定制</span>	
+							订阅福布斯快闻　<input id="order_news" type="radio"><span style="font-size:12px; font-weight:normal; color:#666666;">我要定制</span>	
 						</div>
 						<div id=content_t_r>
-							<button>定制</button>	
+							<button disabled="disabled" id="news_order">定制</button>	
 						</div>	
 					</div>
 					<div id=content_b>
-						<div id=content_b_l>
+						<div id=customize_b_l>
 							<span style="font-size:14px; color:#11579e; font-weight:bold;">订阅分类文章</span>
-							<div class=cl><input type="radio">富豪　<input type="radio">创业　<input type="radio">商业</div>
-							<div class=cl><input type="radio">投资　<input type="radio">生活</div>
+							<div class=cl><input class="order_article" name="rich" type="checkbox">富豪　<input class="order_article" name="create" type="checkbox">创业　<input class="order_article" name="business" type="checkbox">商业</div>
+							<div class=cl><input class="order_article" name="invest" type="checkbox">投资　<input class="order_article" name="life" type="checkbox">生活</div><input class="order_article" type="hidden" name="type" value="article">
 						</div>
-						<div id=content_b_r>
-							<button>定制</button>	
-						</div>	
+						<div id=customize_b_r>
+							<button id="article_order" disabled="disabled" >定制</button>	
+						</div>
 					</div>	
 				</div>	
-			</div>
+			</div>	
+			<div id=customize_right></div>
 		</div>
-		<? require_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+		<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 	</div>
 </body>
 </html>

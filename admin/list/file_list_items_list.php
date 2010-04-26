@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 	$id = intval($_REQUEST['id']);
 	if($id <= 0){
@@ -62,8 +62,8 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><?php echo $record[$i]->title;?></td>
 					<td>
-						<a href="file_list_item_edit.php?id=<?php echo $record[$i]->id;?>&list_id=<?php echo $id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border=0></a>
-						<span class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border=0></span>
+						<a href="file_list_item_edit.php?id=<?php echo $record[$i]->id;?>&list_id=<?php echo $id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border=0></a>
+						<span class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png" border=0></span>
 						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:40px;">
 					</td>
 				</tr>

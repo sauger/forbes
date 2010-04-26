@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	judge_role();
 	
 	$title = $_REQUEST['title'];
@@ -16,6 +16,9 @@
 	}
 	if($is_adopt!=''){
 		array_push($c, "is_adopt=$is_adopt");
+	}
+	if(role_name() == 'column_editor' || role_name()=='column_writer'){
+		$c[] = "publisher={$_SESSION['admin_user_id']}";
 	}
 	$image = new table_images_class();
 	$images = $image->paginate('all',array('conditions' => implode(' and ', $c),'order' => 'priority asc,created_at desc'),12);
@@ -41,7 +44,7 @@
 	  <a href="image_edit.php" id=btn_add></a>
 </div>
 <div id=isearch>
-		<input id=title type="text" value="<? echo $_REQUEST['title']?>"><span id="span_category"></span>
+		<input id="key" type="text" value="<? echo $_REQUEST['title']?>"><span id="span_category"></span>
 		<select id=adopt style="width:100px" class="select_new">
 					<option value="">发布状况</option>
 					<option value="1" <? if($_REQUEST['adopt']=="1"){?>selected="selected"<? }?>>已发布</option>
@@ -62,13 +65,13 @@
 			<td><?php echo $images[$i]->created_at;?></td>
 			<td>
 				<?php if($images[$i]->is_adopt=="1"){?>
-					<span class="revocation" name="<?php echo $images[$i]->id;?>" title="撤消"><img src="/images/btn_unapply.png" border=0></span>
+					<span class="revocation" name="<?php echo $images[$i]->id;?>" title="撤消"><img src="/images/admin/btn_unapply.png" border=0></span>
 				<?php }?>
 				<?php if($images[$i]->is_adopt=="0"){?>
-					<span class="publish" name="<?php echo $images[$i]->id;?>" title="发布"><img src="/images/btn_apply.png" border=0></span>
+					<span class="publish" name="<?php echo $images[$i]->id;?>" title="发布"><img src="/images/admin/btn_apply.png" border=0></span>
 				<?php }?>
-				<a href="image_edit.php?id=<?php echo $images[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border=0></a> 
-				<span class="del" name="<?php echo $images[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border=0></span>
+				<a href="image_edit.php?id=<?php echo $images[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border=0></a> 
+				<span class="del" name="<?php echo $images[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png" border=0></span>
 				<input type="hidden" class="priority" name="<?php echo $images[$i]->id;?>" value="<?php if($images[$i]->priority!=100){echo $images[$i]->priority;}?>" style="width:40px;">
 				<input type="hidden" id="priorityh<? echo $p;?>" value="<?php echo $images[$i]->id;?>" style="width:40px;">	
 			</td>
@@ -97,12 +100,31 @@
 			$('#category').val(id);
 			category_id = $('.category_select:last').val();
 			if (id == -1) {
-				window.location.href = "?title=" + $("#title").attr('value') +  "&category=&adopt=" + $("#adopt").attr('value');
+				window.location.href = "?title=" + encodeURI($("#key").val()) +  "&category=&adopt=" + $("#adopt").attr('value');
 			}
 			if (category_id != -1) {
-				window.location.href = "?title=" + $("#title").attr('value') +  "&category=" + $("#category").attr('value') + "&adopt=" + $("#adopt").attr('value');
+				window.location.href = "?title=" + encodeURI($("#key").val()) +  "&category=" + $("#category").attr('value') + "&adopt=" + $("#adopt").attr('value');
 			}
 		})
+		
+		$("#search_button").click(function(){
+			search();
+		});
+		
+		$('#key').keypress(function(e){
+			if(e.keyCode == 13){
+				search();
+			}
+		});
+		
+		$(".select_new").change(function(){
+			search();
+		});
+		
 	});
+	
+	function search(){
+		window.location.href = "?title=" + encodeURI($("#key").val()) +  "&category=" + $("#category").attr('value') + "&adopt=" + $("#adopt").attr('value');
+	}
 </script>
 

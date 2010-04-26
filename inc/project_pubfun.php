@@ -187,23 +187,70 @@ function init_page_items(){
 	}
 }
 
-function show_page_pos($pos){
+function show_page_pos($pos,$name='default'){
 	global $page_type;
 	$page_type = $page_type ? $page_type : $_REQUEST['page_type'];
 	if($page_type == 'admin'){
-		echo " pos=\"{$pos}\"";
+		echo " pos=\"{$pos}\" pos_tag='{$name}'";
 	}	
 };
 
-function show_page_href($pos_items,$pos_name,$show_title=true){
-	if($show_title){
-		echo '<a href="'.$pos_items->$pos_name->href.'" title="'.$pos_items->$pos_name->title.'">'.$pos_items->$pos_name->display.'</a>';
+function show_page_href($pos=null,$title='title',$target="_blank"){
+	global $pos_items;
+	if(empty($pos)){
+		global $pos_name;
+		$pos = $pos_name;
+	}
+	$_title = $title ? strip_tags($pos_items->$pos->$title ? $pos_items->$pos->$title : $pos_items->$pos->display) : '';
+	echo "<a href='{$pos_items->$pos->href}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$pos_items->$pos->display}</a>";
+}
+
+function show_page_desc($pos=null,$link="href",$title='description',$target="_blank"){
+	global $pos_items;
+	if(empty($pos)){
+		global $pos_name;
+		$pos = $pos_name;
+	}
+	if($link){
+		$_title = $title ? strip_tags($pos_items->$pos->$title) : '';
+		echo "<a href='{$pos_items->$pos->$link}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$pos_items->$pos->description}</a>";
 	}else{
-		echo '<a href="'.$pos_items->$pos_name->href.'">'.$pos_items->$pos_name->display.'</a>';
+		echo $pos_items->$pos->description;
+	}
+}
+
+function show_page_img($width=null,$height=null,$border=0,$src="image1",$pos=null,$link="href",$title='title',$target="_blank"){
+	global $pos_items;
+	if(empty($pos)){
+		global $pos_name;
+		$pos = $pos_name;
+	}
+	$attr = " src=\"{$pos_items->$pos->$src}\"";
+	if(intval($width)>0) $attr .=" width=\"{$width}\"";
+	if(intval($height)>0) $attr .=" height=\"{$height}\"";
+	if(intval($border)>=0 && !is_null($border)) $attr .=" border=\"{$border}\"";
+	if($link){
+		$_title = $title ? strip_tags($pos_items->$pos->$title) : '';
+		echo "<a href='{$pos_items->$pos->$link}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") ."><img {$attr} /></a>";
+	}else{
+		echo "<img {$attr} />";
+	}
+}
+/*
+function show_page_href($pos_items,$pos_name,$show_title=true,$target=null){
+	if($show_title){
+		echo '<a  href="'.$pos_items->$pos_name->href.'" title="'.$pos_items->$pos_name->title.'" '. ($target ? "target='$target'" : ''). '>'.$pos_items->$pos_name->display.'</a>';
+	}else{
+		echo '<a href="'.$pos_items->$pos_name->href.'" '. ($target ? "target='$target'" : ''). '>'.$pos_items->$pos_name->display.'</a>';
 	}
 	
 }
-
+function show_page_desc($pos_items,$pos_name,$show_title=false){
+	if($show_title){
+		echo '<a href="'.$pos_items->$pos_name->href.'" title="'.$pos_items->$pos_name->description.'">'.$pos_items->$pos_name->description.'</a>';
+	}else{
+		echo '<a href="'.$pos_items->$pos_name->href.'">'.$pos_items->$pos_name->description.'</a>';
+	}
 function show_page_img($pos_items,$pos_name,$index='1',$width='',$height=''){
 	$image = 'image'.$index;
 	echo '<a href="'.$pos_items->$pos_name->href.'"><img border=0 src="'.($pos_items->$pos_name->$image ? $pos_items->$pos_name->$image : '\\').'"';
@@ -212,20 +259,32 @@ function show_page_img($pos_items,$pos_name,$index='1',$width='',$height=''){
 	if($height) echo 'height="'.$height.'"';
 	echo '></a>';
 	
+}	
+	
 }
+*/
 
-function show_page_desc($pos_items,$pos_name,$show_title=false){
-	if($show_title){
-		echo '<a href="'.$pos_items->$pos_name->href.'" title="'.$pos_items->$pos_name->description.'">'.$pos_items->$pos_name->description.'</a>';
-	}else{
-		echo '<a href="'.$pos_items->$pos_name->href.'">'.$pos_items->$pos_name->description.'</a>';
-	}
+function get_page_display(){
 	
 }
 
-function get_menu_rights(){
+function adjust_user_score($user_id,$score,$reason){
 	$db = get_db();
-	$items = $db->query("select * from fb_admin_menu where is ");
+	$db->execute("update fb_yh set score=score + {$score} where id = {$user_id}");
+	$table = new table_class("fb_user_score_history");
+	$table->user_id = $user_id;
+	$table->score = $score;
+	$table->reason = $reason;
+	$table->created_at = "now()";
+	$table->save();
+}
+
+function front_user_id(){
+	$db = get_db();
+	if(empty($_COOKIE['cache_name'])) return false;
+	$db->query("select id from fb_yh where cache_name='{$_COOKIE['cache_name']}'");
+	if($db->record_count <= 0 ) return false;
+	return $db->field_by_name('id');	
 }
 
 

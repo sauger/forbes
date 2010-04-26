@@ -1,9 +1,44 @@
 <?php
 include_once "../../frame.php";
-include "_listindex.php";
-include "_richindex.php";
+$category = new category_class('news');
+$pos_table = new table_class('fb_page_pos');
 
-
+function update_pos($category_name,$count=1,$pos_name,$has_children=true){
+	global $category;
+	global $pos_table;
+	$db = get_db();
+	$category_id = $category->find_by_name($category_name)->id;
+	if(!$category_id){
+		return false;
+	}
+	$ids = $has_children ? implode(',',$category->children_map($category_id)) : $category_id ;
+	$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) order by created_at desc limit {$count}";
+	$news = $db->query($sql);
+	$news_count = $db->record_count;
+	if($news_count <= 0 ) return false;
+	#$positions = $pos_table->find("all",array("conditions" => " name like '{$pos_name}%' and (end_time <= now() or end_time is null)","limit" => $count));
+	#$pos_count = count($positions);
+	$fill_count = 0;
+	for($i=0;$i<$news_count;$i++){
+		$pos = $count == 1 ? $pos_name : $pos_name .$i;
+		$pos_table->find("first",array("conditions" => "name = '$pos'"));
+		if($pos_table->id && $pos_table->end_time > date(now())){
+			continue;
+		}
+		$pos_table->name = $pos;
+		$end_time = " end_time + INTERVAL 1 HOUR";
+		$pos_table->end_time = $end_time;
+		$pos_table->display = $news[$fill_count]->title;
+		$pos_table->title = $news[$fill_count]->title;
+		$pos_table->image1 = $news[$fill_count]->video_photo_src;
+		$pos_table->description = $news[$fill_count]->description;
+		$pos_table->href = dynamic_news_url($news[$fill_count]);
+		$pos_table->static_href = static_news_url($news[$fill_count]);
+		$pos_table->save();
+		$fill_count++;
+	}
+}
+/*
 function update_pos($category_name,$limit,$position_name,$is_parent=false,$flag=true){
 	$db = get_db();
 	$category = new category_class();
@@ -68,10 +103,11 @@ function update_pos($category_name,$limit,$position_name,$is_parent=false,$flag=
 		}
 	}
 }
+*/
 
 function update_column($type,$limit,$position_name,$news_limit='',$news_position='',$flag=true){
 	$db = get_db();
-	$sql = "select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.author_id where t1.role_name='{$type}' group by t1.id order by t2.created_at limit {$limit}";
+	$sql = "select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.publisher where t1.role_name='{$type}' group by t1.id order by t2.created_at limit {$limit}";
 	$column = $db->query($sql);
 	$count = $db->record_count;
 	for($i=0;$i<$count;$i++){
@@ -93,8 +129,8 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 					$pos->title = $column[$i]->nick_name;
 					$pos->image1 = $column[$i]->image_src;
 					$pos->description = $column[$i]->description;
-					$pos->href = '/column/column.php?id='.$column[$i]->id;
-					$pos->static_href = '/column/column.php?id='.$column[$i]->id;
+					$pos->href = "/column/{$column[$i]->name}";
+					$pos->static_href = "/column/{$column[$i]->name}";
 					$pos->save();
 					break;
 				}
@@ -283,6 +319,8 @@ function update_news_column($category_name,$limit,$type,$position_name){
 }
 
 include "./_index.php";
+include "_listindex.php";
+include "_richindex.php";
 include "./_fiveindex.php";
 include "./_right.php";
 include "./_life.php";

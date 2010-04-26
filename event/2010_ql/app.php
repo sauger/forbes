@@ -7,7 +7,7 @@
 	<title>专题报名详情</title>
 </head>
 <body style="line-height:0px;">
-<?php require_once('frame.php');
+<?php include_once('frame.php');
 if($_REQUEST['id']=="")
 {
 	redirect('application.php');	

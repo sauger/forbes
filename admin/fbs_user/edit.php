@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$db = get_db();
 	$id = $_REQUEST['id'];
 	if($id!=''){

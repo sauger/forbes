@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$menu_table="fb_ad_ggw";
 ?>
 

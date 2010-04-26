@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 ?>
 
@@ -37,6 +37,12 @@
 			<td class=td1 width=15%>杂志名称</td>
 			<td width=85%>
 				<input type="text" name="post[name]" value="<?php echo $record->name;?>">
+			</td>
+		</tr>
+		<tr class=tr4>
+			<td  class=td1>电子版链接</td>
+			<td>
+				<input type="text" name="post[url]" value="<?php echo $record->url;?>">
 			</td>
 		</tr>
 		<tr class=tr4>

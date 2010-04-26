@@ -1,5 +1,5 @@
 <?php
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	$key = urldecode($_REQUEST['key']);
 	$filter_adopt = $_REQUEST['filter_adopt'];
 	$related = $_REQUEST['related'];

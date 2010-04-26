@@ -1,6 +1,6 @@
 <?php
 	session_start();
-  require_once('../../frame.php');
+  include_once('../../frame.php');
 	judge_role();
 	$id=$_SESSION['admin_user_id'];
 	$user1 = new table_class($tb_user);

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	judge_role()
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -58,7 +58,7 @@
 				<?php if($id){?>
 				<input name="mlist[list_type]" value="<?php echo $record->list_type;?>" type="hidden"></input>
 				<?php }?>
-				<span style="cursor:pointer;margin-left:5px;line-height:30px;" id="add_attribute" <?php if($record->list_type != 1) echo "style='display:none;'"?> title="添加一列"><img src="/images/btn_add.png" border=0></span>
+				<span style="cursor:pointer;margin-left:5px;line-height:30px;" id="add_attribute" <?php if($record->list_type != 1) echo "style='display:none;'"?> title="添加一列"><img src="/images/admin/btn_add.png" border=0></span>
 			</td>
 		</tr>
 		<tr class=tr4>

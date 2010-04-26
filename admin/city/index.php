@@ -35,7 +35,7 @@
 	  <a href="edit.php" id=btn_add></a>
 </div>
 <div id=isearch>
-	<input class="sau_search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
+	<input id="search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
 	<select id="level" class="sau_search">
 	 	<option value=""></option>
 		<option <?php if($level==1)echo 'selected="selected"';?> value="1">直辖市</option>
@@ -70,9 +70,9 @@
 						?>
 					</td>
 					<td>
-						<a href="edit.php?id=<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border=0></a>
-						<span style="cursor:pointer;" class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border=0></span>
-						<a href="/admin/comment/comment.php?id=<?php echo $record[$i]->id;?>&type=city" title="查看评论"><img src="/images/btn_comment.png" border=0></a>
+						<a href="edit.php?id=<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border=0></a>
+						<span style="cursor:pointer;" class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png" border=0></span>
+						<a href="/admin/comment/comment.php?id=<?php echo $record[$i]->id;?>&type=city" title="查看评论"><img src="/images/admin/btn_comment.png" border=0></a>
 					</td>
 				</tr>
 		<?php

@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	judge_role();
 	$id = $_GET['id'];
 ?>
@@ -124,13 +124,13 @@
 							$rate_flag = false;
 							for($j=0;$j<$news_count;$j++){
 								if($record[$i]->id==$news[$j]->rela_id){ $rate_flag=true;?>
-								<span style="cursor:pointer" class="revocation" name="<?php echo $news[$j]->id;?>" title="删除"><img src='/images/btn_delete.png' border='0'></span>
+								<span style="cursor:pointer" class="revocation" name="<?php echo $news[$j]->id;?>" title="删除"><img src='/images/admin/btn_delete.png' border='0'></span>
 								<input type="text" class="priority"  name="<?php echo $news[$j]->id;?>"  value="<?php echo $news[$j]->priority;?>" style="width:40px;">
 								<?php break;}?>
 						<?php }
 							if(!$rate_flag){
 						?>
-						<span style="cursor:pointer" class="publish" name="<?php echo $record[$i]->id;?>" title="加入"><img src='/images/btn_add.png' border='0'></span>
+						<span style="cursor:pointer" class="publish" name="<?php echo $record[$i]->id;?>" title="加入"><img src='/images/admin/btn_add.png' border='0'></span>
 						<?php }?>
 					</td>
 				</tr>

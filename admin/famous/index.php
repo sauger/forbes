@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	require_once('../../frame.php');
+	include_once('../../frame.php');
 	judge_role();
 	$search = $_REQUEST['search'];
 	
@@ -52,9 +52,9 @@
 			<td><?php echo $record[$i]->xb;?></td>
 			<td>
 				<a href="/admin/famous_ad/edit.php?f_id=<?php echo $record[$i]->id;?>" class="edit">编辑名人代言</a>
-				<a href="/admin/famous_list/edit.php?f_id=<?php echo $record[$i]->id;?>" title="加入榜单"><img src="/images/btn_add.png" border="0"></a>
-				<a href="edit.php?id=<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/btn_edit.png" border="0"></a>
-				<span class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/btn_delete.png" border="0"></span>
+				<a href="/admin/famous_list/edit.php?f_id=<?php echo $record[$i]->id;?>" title="加入榜单"><img src="/images/admin/btn_add.png" border="0"></a>
+				<a href="edit.php?id=<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a>
+				<span class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png" border="0"></span>
 			</td>
 		</tr>
 		<?php

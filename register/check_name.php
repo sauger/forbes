@@ -1,5 +1,5 @@
 <?php 
-	require_once('../frame.php'); 
+	include_once('../frame.php'); 
 	
 	$name = $_POST['name'];
 	

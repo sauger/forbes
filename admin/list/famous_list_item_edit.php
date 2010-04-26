@@ -5,7 +5,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>编辑</title>
 	<?php 
-		require_once('../../frame.php');
+		include_once('../../frame.php');
 		$db = get_db();
 		$id = intval($_REQUEST['id']);
 		$list_id = intval($_REQUEST['list_id']);
@@ -30,7 +30,7 @@
 	<form id="fbd_edit" enctype="multipart/form-data" action="famous_list_item.post.php" method="post"> 
 	<table width="795" border="0">
 		<tr class=tr1>
-			<td colspan="2" width="795">　　<?php if($id){echo "编辑名人榜单";}else{echo "添加名人榜单";}?> <a href="javascript:history.go(-1)"><img src="/images/btn_back.png" border=0></a></td>
+			<td colspan="2" width="795">　　<?php if($id){echo "编辑名人榜单";}else{echo "添加名人榜单";}?> <a href="javascript:history.go(-1)"><img src="/images/admin/btn_back.png" border=0></a></td>
 		</tr>
 		<tr class=tr4>
 			<td width="130">姓名</td>

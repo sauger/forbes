@@ -5,7 +5,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>福布斯登陆</title>
 	<?php
-	require_once('../frame.php');
+	include_once('../frame.php');
 	?>
 	﻿<script type="text/javascript" language="javascript" src="../javascript/jquery-1.3.2.min.js"></script><link href="../css/admin.css" rel="stylesheet" type="text/css">
 	

@@ -1,4 +1,5 @@
 <?php
+session_start();
 if($_SESSION['login']!=$_POST['session']){
 		die();
 	}
@@ -17,16 +18,19 @@ if($_SESSION['login']!=$_POST['session']){
 	$record = $db->query($sql);
 	if($db->record_count==1)
 	{
+		$user_id = $db->field_by_name('id');
+		$cache_name = sprintf('%06s',$user_id) .rand_str(24);
+		$db->execute("update fb_yh set cache_name='{$cache_name}' where id={$user_id}");
 		if($_POST['time']!='')
 		{
 			$limit=$_POST['time']*3600*24;
 			setcookie("name",$name,time()+$limit,'/');
-			setcookie("login_name",$name,time()+$limit,'/');
+			setcookie("cache_name",$cache_name,time()+$limit,'/');
 			setcookie("password",$_POST['password'],time()+$limit,'/');
+		}else{
+			setcookie("login_name",$cache_name,time()+3600*24,'/');
 		}
-		$_SESSION['user_id']=$record[0]->id;
-		$_SESSION['name']=$name;
-		$db->execute("insert into fb_yh_log (yh_id,time) values ({$_SESSION['user_id']},now())");
+		$db->execute("insert into fb_yh_log (yh_id,time) values ({$user_id},now())");
 		$last_url = $suess_url;
 	}
 	else
@@ -35,18 +39,20 @@ if($_SESSION['login']!=$_POST['session']){
 		$last_url = $fail_url;
 	}
 ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-		<meta http-equiv=Content-Language content=zh-CN>
-	<title>福布斯中文网</title>
+		<meta http-equiv=Content-Language content=zh-cn>
 	</head>
 	<body>
-		<?php 
-		 if($err){
+	<?
+	
+	if($err){
 		 	alert($err);
-		 }
-		 redirect($last_url);
-		?>
+	 }
+	 #echo $_COOKIE['cache_name'];
+	 redirect($last_url);
+	?>
 	</body>
 </html>

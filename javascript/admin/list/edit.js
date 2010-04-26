@@ -55,7 +55,7 @@ $(function(){
 			+'  </div>'
 			+'	<div style="float:left"><input name="new_columns[' + field_index +'][key]" value="MUL" type="checkbox" style="width:20px;" />排序</div>'
 			+'	<div style="float:left"><input name="new_columns[' + field_index +'][key]" value="UNI"  type="checkbox" style="width:20px;" />唯一</div>'
-			+'	<img alt="删除" title="删除" src="/images/btn_delete.png" style="cursor:pointer;" class="del_column">'
+			+'	<img alt="删除" title="删除" src="/images/admin/btn_delete.png" style="cursor:pointer;" class="del_column">'
 			+'</td>'
 			+'</tr>';
 		$('tr.tr4:last').after(str);
