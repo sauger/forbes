@@ -11,4 +11,5 @@ $len = count($items);
 for($i=0;$i<$len; $i++){
 	$result[]['value'] = $items[$i]->name;
 }
+if(empty($result)) die('{}');
 echo json_encode($result);

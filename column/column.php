@@ -3,11 +3,17 @@
 	$id = intval($_GET['id']);
 	$date=$_GET['date'];
 	if(empty($id)){
-		die();
-	}else{
-		$column = new table_class('fb_user');
-		$column->find($id);
+		$name = $_GET['name'];
+		if(empty($name)){
+			die();
+		}
+		$db = get_db();
+		$db->query("select id from fb_user where name='{$name}'");
+		if($db->record_count <= 0) die();
+		$id = $db->field_by_name('id');
 	}
+	$column = new table_class('fb_user');
+	$column->find($id);
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

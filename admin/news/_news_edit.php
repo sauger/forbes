@@ -14,9 +14,8 @@
 		if($db->move_first()){
 			$news_industry = $db->field_by_name('ids');
 		}
-	}else{
-		$category_id = -1;
 	}
+	if(empty($category_id)) $category_id = -1;
 	if (!$news->news_type){
 		$news->news_type = 1;
 	}

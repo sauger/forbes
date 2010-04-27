@@ -1,3 +1,4 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <div class=right_title>
 	<div class=title_con><?php echo $catename[0]->name; ?>榜单</div>
 </div>

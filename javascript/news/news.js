@@ -38,7 +38,7 @@ $(function(){
 	
 	$('#a_collect').click(function(e){
 		e.preventDefault();
-		$.post('/user/user_collect.php',{'resource_type':'fb_news','resource_id':$(this).attr('href')},function(data){
+		$.post('/ajax/user_collect.php',{'resource_type':'fb_news','resource_id':$(this).attr('href')},function(data){
 			if(data!='请先登录!'){
 				alert(data);
 			}else{

@@ -321,7 +321,8 @@ function print_news_static_page($content,$symbol='fck_pageindex'){
 }
 
 function print_fck_pages2($str,$url="",$symbol='fck_pageindex'){
-	if(basename($_SERVER['PHP_SELF']) == 'static_news.php'){
+	global $page_type;
+	if($page_type=='static'){
 		print_news_static_page($str, $symbol);
 		return;
 	}

@@ -17,18 +17,15 @@
 		use_jquery();
 		js_include_tag('public','index');
 		css_include_tag('public','index');
+		$category = new category_class('news');
 	?>
 </head>
 <body>
 	<div id=ibody>
-	<?php include_once('inc/top.inc.php');?>
 	<?php 
-		function get_news_url($news){
-			return dynamic_news_url($news);
-		}
-		//$pos_items = get_page_items('index2');
-		$category = new category_class('news');
-		init_page_items();
+	init_page_items();
+	include_top();
+	
 	?>
 		<div id=forbes_tlt>
   		<div id=headline>
@@ -498,7 +495,9 @@
 				<div class=public_bottom1></div>
 			</div>
 		</div>	
-	<?php include_once('inc/bottom.inc.php');?>
+	<?php 
+	 include_bottom();
+	?>
 	</div>
 </body>
 </html>
