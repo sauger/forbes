@@ -13,12 +13,13 @@
 		}while($db->move_next());
 
 	}
+	$comments_url = strpos($_SERVER['HTTP_REFERER'],'.shtml') > 0? $_SERVER['HTTP_REFERER'] .'/comments' : "comment_list.php?id=$id";
 ?>
 	<div id=comment_caption>
 		<div id=comment_title>读者评论</div>
 		<div id=comment_count>(共<?php echo $count;?>条)</div>
 		<button id=comment_btn></button>
-		<a href="comment_list.php?id=<?php echo $id;?>" id=comment_more>查看所有评论</a>
+		<a href="<?php echo $comments_url;?>" id=comment_more>查看所有评论</a>
 	</div>
 	
 	<?php if($comment_id!=-1){?>
