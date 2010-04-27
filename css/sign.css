@@ -1,0 +1,64 @@
+body {font-size:12px; font-family:Arial,ËÎÌו; color:#000;  margin:0 auto; padding:0;}
+p{margin:0; padding:0}
+#ibody{width:1000px; margin:0 auto;}
+#hr_top{width:1000px; height:20px; background:url(../images/survey/zh_hr.jpg) no-repeat;  float:left; dislay:inline;}
+
+#f_z{width:642px;  float:left; display:inline;}
+.f_title{width:640px; height:30px; float:left; display:inline;}
+.f_title_left{width:3px;height:30px; background:url(../images/club/l_title_left.jpg) no-repeat; float:left; display:inline;}
+.f_title_middle{width:634px; height:28px; background:url(../images/club/l_title_center_bg.jpg) repeat-x; line-height:28px; no-repeat; border-top:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6;  float:left; dislay:inline;}
+.f_title_right{width:3px; height:30px; background:url(../images/club/l_title_right.jpg) no-repeat; float:left; display:inline;}
+.title_z{width:100px; height:28px; margin-left:10px;font-size:14px; font-weight:bold; color:#2FA3CC; float:left; display:inline;}
+#f_content{width:638px; border-left:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6; border-right:1px solid #E6E6E6; float:left; display:inline;}
+
+
+.fc_title_pg{width:8px; height:15px; margin-top:7px; margin-left:10px; background:url(../images/index/column_btnr.jpg); float:left; display:inline;}
+#fc_a{width:626px; height:30px; line-height:30px; margin-left:10px; font-size:14px; font-weight:bold; float:left; display::inline;}
+.fc_title{width:300px; height:30px; margin-left:5px; font-size:13px; font-weight:bold; line-height:30px; float:left; display:inline;}
+.fc_c{width:600px; height:30px;  margin-left:20px; line-height:30px; float:left; display:inline;}
+.fc_c_left{width:100px; height:30px; margin-left:20px; font-size:13px; font-weight:bold; float:left; display:inline;}
+.fc_c_right{width:420px; height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#fc_c_redio{width: 150px; height:30px; margin-left:20px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#fc_c_right{width:370px; height:30px;  font-size:13px; float:left; display:inline;}
+.f_x{width:80px; height:28px;  margin-left:2px; font-size:13px; float:left; display:inline;}
+#moneyvalue{width:250px;  line-height:23px; font-size:13px; float:left; display:inline;}
+#fc_money{width:600px; height:50px; margin-left:20px; line-height:30px; float:left; display:inline;}
+#fc_c_money{width:100px; height:50px; line-height:50px; margin-left:20px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#money_input{width:200px; height:30px; margin-top:8px;  font-size:13px; font-weight:bold; float:left; display:inline;}
+#fc_trae{width:635px; height:220px; font-size:13px; float:left; display:inline;}
+
+#trae_left{width:100px; height:200px;  margin-top:5px; margin-left:40px; font-weight:bold; float:left; display:inline;}
+#fc_open{width:400px; height:30px;  font-size:13px; float:left; display:inline;}
+#f_hr{width:630px; height:1px; margin-left:5px; margin-top:20px;	 background:url(../images/rich/hr.gif) repeat-x; font-size:0px; line-height:0px; float:left; display:inline;}
+#fc_c_bottom{width:640px; height:20px; margin-top:15px; font-weight:bold; font-size:13px; text-align:center; float:left; display:inline;}
+
+.n{width:10px; height:10px; float:left ; display:inline;}
+#company_a{width:635px; height:90px;  float:left ; display:inline;}
+#company_b{width:635px; height:90px;  float:left ; display:inline;}
+.com_a{ width:90px; height:90px; margin-left:50px; line-height:90px; font-size:13px; font-weight:bold;  float:left; display:inline;}
+.com_c{ width:140px; height:90px; margin-left:3px; 	 font-size:13px; font-size:13px; font-weight:bold; float:left; display:inline;}
+.year_a{width:90px; height:45px;  line-height:50px; float:left; display:inline;}
+.year_d{width:70px; height:45px; line-height:40px; float:left; diaplay:inline;}
+.com_d{width:70px; height:90px; float:left; display:inline;}
+.money_b{margin-top:5px; overflow:hidden; float:left; display:inline;}
+.com_e{width:90px; height:90px; text-align:center; float:left; display:inline;}
+.com_f{width:138px; height:80px; font-size:12px; margin-top:5px; margin-left:5px; border:1px solid #999999; float:left; display:inline;}
+
+.company_left{width:100px; height:30px; margin-left:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#comany_add{width:130px; height:30px; margin-left:20px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#fc_m{width:600px; height:50px; margin-left:20px; line-height:30px; float:left; display:inline;}
+#fc_c_ma{width:90px; line-height:20px; margin-left:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#money_i{width:200px; height:30px; margin-top:8px;  font-size:13px; font-weight:bold; float:left; display:inline;}
+#money_v{width:250px;  line-height:45px; margin-left:5px; font-size:13px; float:left; display:inline;}
+#fc_v{width:600px;  margin-left:20px; margin-top:5px; text-align:left; line-height:30px; float:left; display:inline;}
+
+
+.linkman_a{width:630px; height:30px;  float:left; display:inline;}
+.linkman_name{width:100px; height:30px; margin-left:42px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#linkman_phone{width:80px; height:30px; margin-left:12px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#linkman_qq{width:80px; height:30px;  margin-left:21px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+
+#linkman_name{width:125px; height:30px; margin-left:42px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#linkman_msn{width:85px; height:30px;  margin-left:36px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+
+#kong{width:600px; height:15px; float:left; display:inline;}
