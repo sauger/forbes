@@ -57,7 +57,7 @@ switch ($type) {
 		echo '静态化右侧成功!';
 		break;
 	case 'sub_index':
-		$a = array('investment','business','entrepreneur');
+		$a = array('investment','business','entrepreneur','tech','city');
 		foreach($a as $v){
 			if(!static_sub_index($v)){
 				die("静态化二级首页'{$v}'失败");
