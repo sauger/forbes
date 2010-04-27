@@ -87,15 +87,18 @@ function static_index() {
 	return write_to_file("{$static_dir}/review/index.shtml",$content,'w');
 }
 
+function static_sub_index($name) {
+	global $static_dir;
+	global $static_url;
+	$content = file_get_contents("{$static_url}/{$name}/index.php?page_type=static");
+	return write_to_file("{$static_dir}/review/{$name}/index.shtml",$content,'w');
+}
+
 function static_top(){
 	global $static_dir;
 	global $static_url;
 	$content = file_get_contents("{$static_url}/inc/top.inc.php?page_type=static");
 	return write_to_file("{$static_dir}/review/inc/top.inc.shtml",$content,'w');
-}
-
-function get_news_list_url(){
-	
 }
 
 function static_bottom() {
@@ -105,6 +108,12 @@ function static_bottom() {
 	return write_to_file("{$static_dir}/review/inc/bottom.inc.shtml",$content,'w');
 }
 
+function static_right($name){
+	global $static_dir;
+	global $static_url;
+	$content = file_get_contents("{$static_url}/right/{$name}.php?page_type=static");
+	return write_to_file("{$static_dir}/review/inc/right_{$name}.inc.shtml",$content,'w');
+}
 function static_news($news,$symbol='fck_pageindex',$en = false){
 	if(!$news){
 		return false;
@@ -175,6 +184,16 @@ function include_bottom(){
 	}else{
 		include_once(dirname(__FILE__).'/bottom.inc.php');
 	}
+}
+
+function include_right($name){
+	global $page_type;
+	global $pos_items;
+	if($page_type == 'static'){
+		echo '<!--#include  virtual="/review/inc/right_'.$name .'.inc.shtml"  -->';
+	}else{
+		include_once(dirname(__FILE__)."/../right/{$name}.php");
+	}	
 }
 
 class PosItemClass{

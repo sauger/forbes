@@ -1,3 +1,4 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <?php init_page_items();?>
 <div class="left_title">
 	<div class="left_bottom_title selected" name="create">创业</div>

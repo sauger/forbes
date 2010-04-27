@@ -1,3 +1,4 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <div id=r_c_title><?php echo $catename[0]->name; ?>活动</div>
 <div id=r_c_l></div>
 <div id=r_c_c>

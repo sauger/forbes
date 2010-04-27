@@ -47,6 +47,24 @@ switch ($type) {
 			echo '静态化顶部失败!';
 		}
 		break;
+	case 'right':
+		$a = array('activities','ad','article','column_c','column','favor','forum','four','investment_list','magazine','rich','right_list');
+		foreach($a as $v){
+			if(!static_right($v)){
+				die("静态化右侧'{$v}'失败");
+			}	
+		}
+		echo '静态化右侧成功!';
+		break;
+	case 'sub_index':
+		$a = array('investment','business','entrepreneur');
+		foreach($a as $v){
+			if(!static_sub_index($v)){
+				die("静态化二级首页'{$v}'失败");
+			}	
+		}
+		echo '静态化二级首页成功!';
+		break;
 	default:
 		;
 	break;

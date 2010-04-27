@@ -1,3 +1,4 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <?php init_page_items();?>
 <div class=right_title>
 	<div class=title_con>福布斯论坛</div>
