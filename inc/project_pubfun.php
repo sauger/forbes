@@ -48,6 +48,11 @@ function get_news_by_pos($pos,$page='') {
 	return $db->query($sql); 
 } 
 
+
+function dynamic_news_url($news){
+	return "/news/news.php?id={$news->id}";
+}
+
 function static_news_url($news,$index = 1){
 	$date = date('Ym',strtotime($news->created_at));
 	$dir  = "/review/{$date}";
@@ -74,9 +79,6 @@ function get_news_en_static_url($news,$index = 1) {
 		return $file;;
 }
 
-function dynamic_news_url($news){
-	return "/news/news.php?id={$news->id}";
-}
 
 function static_index() {
 	global $static_dir;
@@ -88,8 +90,8 @@ function static_index() {
 function static_top(){
 	global $static_dir;
 	global $static_url;
-	$content = file_get_contents("{$static_url}/inc/top.inc.static.php");
-	return write_to_file("{$static_dir}/inc/top.inc.shtml",$content,'w');
+	$content = file_get_contents("{$static_url}/inc/top.inc.php?page_type=static");
+	return write_to_file("{$static_dir}/review/inc/top.inc.shtml",$content,'w');
 }
 
 function get_news_list_url(){
@@ -99,8 +101,8 @@ function get_news_list_url(){
 function static_bottom() {
 	global $static_dir;
 	global $static_url;
-	$content = file_get_contents("{$static_url}/inc/bottom.inc.static.php");
-	return write_to_file("{$static_dir}/inc/bottom.inc.shtml",$content,'w');
+	$content = file_get_contents("{$static_url}/inc/bottom.inc.php?page_type=static");
+	return write_to_file("{$static_dir}/review/inc/bottom.inc.shtml",$content,'w');
 }
 
 function static_news($news,$symbol='fck_pageindex',$en = false){
@@ -109,7 +111,7 @@ function static_news($news,$symbol='fck_pageindex',$en = false){
 	};
 	global $static_dir;
 	global $static_url;
-	$url = "{$static_url}/news/static_news.php?id={$news->id}";
+	$url = "{$static_url}/news/news.php?id={$news->id}&page_type=static";
 	if($en) $url .= "&lang=en";
 	$content = file_get_contents($url);
 	$date = date('Ym',strtotime($news->created_at));
@@ -126,7 +128,7 @@ function static_news($news,$symbol='fck_pageindex',$en = false){
 	$page_count = get_fck_page_count($news->content);
 	if ($page_count > 1){
 		for($i=2;$i<= $page_count;$i++){
-			$url = "{$static_url}/news/static_news.php?id={$news->id}&{$symbol}={$i}";
+			$url = "{$static_url}/news/news.php?id={$news->id}&{$symbol}={$i}&page_type=static";
 			if($en) $url .= "&lang=en";
 			$content = file_get_contents($url);
 			$file = "$dir/{$news_id}_{$i}.shtml";
@@ -148,6 +150,31 @@ function static_news($news,$symbol='fck_pageindex',$en = false){
 	}
 	
 	return true;
+}
+
+function include_top(){
+	global $page_type;
+	if($page_type == 'static'){
+		function get_news_url($news){
+			return static_news_url($news);
+		}
+		echo '<!--#include virtual="/review/inc/top.inc.shtml"  -->';
+	}else{
+		function get_news_url($news){
+			return dynamic_news_url($news);
+		}
+		include_once(dirname(__FILE__).'/top.inc.php');
+	}
+}
+
+function include_bottom(){
+	global $page_type;
+	global $pos_items;
+	if($page_type == 'static'){
+		echo '<!--#include  virtual="/review/inc/bottom.inc.shtml"  -->';
+	}else{
+		include_once(dirname(__FILE__).'/bottom.inc.php');
+	}
 }
 
 class PosItemClass{
