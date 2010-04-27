@@ -26,7 +26,7 @@ else
 	$sql='';
 }
 if($type=="news"){
-	$news=$db->paginate('select * from fb_news where author_id='.$id.' and author_type=1 '.$sql.' order by priority asc, created_at desc',4);
+	$news=$db->paginate('select * from fb_news where publisher='.$id.$sql.' order by priority asc, created_at desc',4);
 	for($i=0;$i<count($news);$i++){ ?>
 <div class=r_content>
 	<div class=r_title>
