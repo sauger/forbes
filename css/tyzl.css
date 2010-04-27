@@ -1,6 +1,6 @@
 ﻿body {font-size:12px;  font-family:Arial,宋体; color:#000;  margin:0 auto; padding:0;}
 
-#ibody{width:1000px; margin:0 auto;}
+#ibody{width:1000px; margin:0 auto; float:none; display:block;}
 #cyindex{width:72px; height:19px; cursor:pointer; background-image:url(/images/tyzl/chuangye.png)!important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/tyzl/chuangye.png"); margin-top:10px; float:left; display:inline;}
 #cytitle{width:494px; height:16px; margin-top:13px; margin-left:20px; line-height:16px; float:left; display:inline;}
 #cytitle a{color:#246bb0; text-decoration:none;}
@@ -18,10 +18,8 @@
 .cy_content{width:635px; margin-top:15px; float:left; display:inline;}
 .cy_content .pic{width:92px; height:92px; margin-left:10px; border:1px solid #999999; float:left; display:inline;}
 .cy_content .pic img{width:90px; height:90px; margin-top:1px; margin-left:1px; float:left; display:inline;}
-.cy_content .pictitle{width:482px; height:20px; margin-left:10px; line-height:20px; font-size:14px; font-weight:bold; overflow:hidden; float:left; display:inline;}
-.cy_content .pictitle a{color:#0d4471; text-decoration:none;}
-.cy_content .piccontent{width:482px; height:52px; margin-top:10px; margin-left:10px; line-height:14px; overflow:hidden; float:left; display:inline;}
-.cy_content .piccontent a{color:#666666; text-decoration:none;}
+.cy_content .pictitle{width:482px; height:20px; margin-left:10px; color:#0d4471; line-height:20px; font-size:14px; font-weight:bold; overflow:hidden; float:left; display:inline;}
+.cy_content .piccontent{width:482px; height:56px; margin-top:10px; margin-left:10px; color:#666666; line-height:14px; overflow:hidden; float:left; display:inline;}
 .newarticle{width:635px; margin-top:10px; float:left; display:inline;}
 .newarticle .wz{width:96px; height:18px; margin-left:10px; margin-bottom:10px; font-size:14px; line-height:18px; font-weight:bold; float:left; display:inline;}
 .newarticle .wx{width:518px; height:16px; margin-top:1px; background:url(/images/tyzl/wx.jpg) no-repeat; line-height:16px; float:right; display:inline;}
@@ -33,4 +31,5 @@
 .newarticle .content .context a{color:#0d447e; text-decoration:none;}
 .newarticle .content_dash{width:615px; height:1px; margin-top:5px; margin-bottom:5px; margin-left:10px;  background:url('/images/tyzl/newarticle_content_dash.jpg') no-repeat; overflow:hidden; float:left; display:inline;}
 .cy_dash{width:635px; height:1px; margin-top:10px; background:url('/images/tyzl/cy_dash.jpg') no-repeat; overflow:hidden; float:left; display:inline;}
-#cy_paginate{width:635px; height:20px; text-align:center; float:left; display:inline;}
+#paginage{width:650px; height:30px; margin-top:20px; font-size:14px; line-height:30px; color:#666666; text-align:center;}
+#paginage a{color:#246BB0; text-decoration:none;}

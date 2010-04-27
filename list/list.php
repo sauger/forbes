@@ -71,37 +71,37 @@
 				if(strlen($key)>20)$key='';
 				switch($bdid){
 					case "1":
-						$bdname="富豪榜";
+						$bdname="您选择的富豪榜";
 						break;
 					case "2":
-						$bdname="投资榜";
+						$bdname="您选择的投资榜";
 						break;
 					case "3":
-						$bdname="公司榜";
+						$bdname="您选择的公司榜";
 						break;
 					case "4":
-						$bdname="城市榜";
+						$bdname="您选择的城市榜";
 						break;
 					case "5":
-						$bdname="名人榜";
+						$bdname="您选择的名人榜";
 						break;
 					case "6":
-						$bdname="体育榜";
+						$bdname="您选择的体育榜";
 						break;
 					case "7":
-						$bdname="科技榜";
+						$bdname="您选择的科技榜";
 						break;
 					case "8":
-						$bdname="教育榜";
+						$bdname="您选择的教育榜";
 						break;
 					case "9":
-						$bdname="图片榜";
+						$bdname="您选择的图片榜";
 						break;
 					case "10":
-						$bdname="专题榜";
+						$bdname="您选择的专题榜";
 						break;
 					default: 
-			    	$bdname="常规榜"; 
+			    	$bdname="您选择的常规榜"; 
 			    	break; 
 				}
 				if($bdid=="")
@@ -124,23 +124,24 @@
 					
 				}
 				if($year){
-					$bdname = $year."年榜单";
+					$bdname = "您选择的".$year."年榜单";
 					$sql = "select * from fb_custom_list_type where created_at>'{$year}-01-01 00:00:00' and created_at<'{$year}-12-31 23:59:59' order by priority asc,created_at desc";
 				}
 				if($key){
-					
+					$bdname = '您搜索的关键字"'.$key.'"榜单';
+					$sql = "select * from fb_custom_list_type where name like '%$key%'";
 				}
 				$bd=$db->paginate($sql,13);
 			?>
 			<div id=sort_r_t>
-				<div style="width:420px;float:left;display:inline;">您选择的<?php echo $bdname; ?>共有<?php echo $page_record_count; ?>条记录，分别如下：</div>
+				<div style="width:420px;float:left;display:inline;"><?php echo $bdname; ?>共有<?php echo $page_record_count; ?>条记录，分别如下：</div>
 			</div>
 			<div id=sort_r_m>
 			</div>
 			<div id=sort_r_b>
 				<div id=sort_r_b_l>
 					<?php for($i=0;$i<count($bd);$i++){ ?>
-						<div class=sort_r_b_l_t><a href="show_list.php"><?php echo $bd[$i]->name; ?></a></div>
+						<div class=sort_r_b_l_t><a href="show_list.php?id=<?php echo $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
 					<?php } ?>
 				</div>
 				<div id=sort_r_b_r></div>

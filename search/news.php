@@ -10,7 +10,7 @@
 		$count = 0;
 		$page_record_count = 0;
 	}else{
-		$sql = "select * from fb_news where title like '%$key%' or short_title like '%$key%' or description like '%$key%' order by created_at desc";
+		$sql = "select * from fb_news where title like '%$key%' or short_title like '%$key%' or description like '%$key%' or keywords like '%$key%' order by created_at desc";
 		$record = $db->paginate($sql,10);
 		$count = $db->record_count;
 	}

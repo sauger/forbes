@@ -16,7 +16,8 @@
 </head>
 <body>
 	<div id=ibody>
-	<? include_once('../inc/top.inc.php');
+	<?php 
+		include_once('../inc/top.inc.php');
 	?>
 		<div id=cyindex></div>
 		<div id=cytitle><a style="color:#666666;" href="">福布斯中文网　＞　</a><a href="">城市首页</a></div>
