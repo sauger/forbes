@@ -24,11 +24,11 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-城市首页</title>
+	<title>福布斯-专栏作者检索</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/author');
-		css_include_tag('tyzl','public','right_inc');
+		css_include_tag('search/author','public','right_inc');
 	?>
 </head>
 <body>
