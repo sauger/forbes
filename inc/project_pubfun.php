@@ -111,7 +111,7 @@ function static_news($news,$symbol='fck_pageindex',$en = false){
 	};
 	global $static_dir;
 	global $static_url;
-	$url = "{$static_url}/news/static_news.php?id={$news->id}";
+	$url = "{$static_url}/news/news.php?id={$news->id}&page_type=static";
 	if($en) $url .= "&lang=en";
 	$content = file_get_contents($url);
 	$date = date('Ym',strtotime($news->created_at));
@@ -128,7 +128,7 @@ function static_news($news,$symbol='fck_pageindex',$en = false){
 	$page_count = get_fck_page_count($news->content);
 	if ($page_count > 1){
 		for($i=2;$i<= $page_count;$i++){
-			$url = "{$static_url}/news/static_news.php?id={$news->id}&{$symbol}={$i}";
+			$url = "{$static_url}/news/news.php?id={$news->id}&{$symbol}={$i}&page_type=static";
 			if($en) $url .= "&lang=en";
 			$content = file_get_contents($url);
 			$file = "$dir/{$news_id}_{$i}.shtml";
@@ -150,6 +150,31 @@ function static_news($news,$symbol='fck_pageindex',$en = false){
 	}
 	
 	return true;
+}
+
+function include_top(){
+	global $page_type;
+	if($page_type == 'static'){
+		function get_news_url($news){
+			return static_news_url($news);
+		}
+		echo '<!--#include virtual="/review/inc/top.inc.shtml"  -->';
+	}else{
+		function get_news_url($news){
+			return dynamic_news_url($news);
+		}
+		include_once(dirname(__FILE__).'/top.inc.php');
+	}
+}
+
+function include_bottom(){
+	global $page_type;
+	global $pos_items;
+	if($page_type == 'static'){
+		echo '<!--#include  virtual="/review/inc/bottom.inc.shtml"  -->';
+	}else{
+		include_once(dirname(__FILE__).'/bottom.inc.php');
+	}
 }
 
 class PosItemClass{

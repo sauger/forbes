@@ -24,17 +24,7 @@
 	<div id=ibody>
 	<?php 
 	init_page_items();
-	if($page_type == 'static'){
-		function get_news_url($news){
-			return static_news_url($news);
-		}
-		echo '<!--#include virtual="/review/inc/top.inc.shtml"  -->';
-	}else{
-		function get_news_url($news){
-			return dynamic_news_url($news);
-		}
-		include_once('inc/top.inc.php');
-	}
+	include_top();
 	
 	?>
 		<div id=forbes_tlt>
@@ -505,13 +495,9 @@
 				<div class=public_bottom1></div>
 			</div>
 		</div>	
-	<?php ?>
 	<?php 
-	if($page_type == 'static'){
-		echo '<!--#include  virtual="/review/inc/bottom.inc.shtml"  -->';
-	}else{
-		include_once('inc/bottom.inc.php');
-	}?>
+	 include_bottom();
+	?>
 	</div>
 </body>
 </html>

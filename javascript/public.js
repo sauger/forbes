@@ -7,12 +7,6 @@ $(function(){
 		$(this).parent().parent().css('background',"url('/images/public/bg_menu.jpg') repeat-x");
 	});
 	
-	$("#logout").click(function(){
-		$.post('/login/logout.php',function(data){
-			location.reload();
-		});
-	});
-	
 	
 	$(".search").click(function(){
 		top_search()

@@ -1,6 +1,7 @@
 <?php
 		include_once(dirname(__FILE__).'/../frame.php');
 		$db=get_db();
+		init_page_items();
 ?>
 	<div id=top_>
 		<div id=top_banner>
@@ -24,6 +25,12 @@
 				}else{
 					$('.user_btn').html('<a href="/login">登陆</a>　<a href="/register/">注册</a>');
 				}
+				$(function(){
+					$("#logout").click(function(){
+						$.cookie('cache_name','');
+						location.reload();
+					});
+				});
 			</script>
 			<div class=user_btn><a href="javascript:void(0)" onclick="myhomepage()" name="homepage">设为首页</a>　<a href="javascript:void(0)" onclick="addfavorite()">收藏本站</a></div>
 			<div id=magazine_title>本期杂志介绍</div>
@@ -31,7 +38,7 @@
 			<?php 
 				$pos_name = "top_magazine";
 			?>
-			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img(75,95,1)?></div>
+			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img(75,95,1,'image1','top_magazine')?></div>
 			<div id=magazine_description><span class=font1><?php echo $pos_items->$pos_name->display;?></span><br><?php echo $pos_items->$pos_name->description;?></div>
 			<div id=magazine_btn><a href="<?php echo $pos_items->$pos_name->href;?>"><img src="/images/public/magazine_btn.jpg" border=0></a></div>
 
