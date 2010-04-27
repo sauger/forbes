@@ -134,7 +134,7 @@
 											<div class="money_d"><select name="select" style="width:70px; margin-top:7Px;"></select></div>
 										</div>
 										<div class="com_e">
-												<input type="button" style="margin-top:15px;" value="添加输入"/>
+												<input type="button" style="margin-top:15px; " value="添加输入"/>
 												<input  type="button" style="margin-top:10px;"  value="删除输入"/>
 										</div>
 										<textarea class="com_f">
