@@ -3,13 +3,10 @@
 	$db=get_db();
 	$key = $_GET['key'];
 	$type = $_GET['type'];
-	if(empty($type)){
-		$type = "created_at";
-	}
 	if(strlen($key)>20){
 		$key = '';
 	}
-	if(strlen($type)>20){
+	if($type!='created_at'&&$type!='click_count'){
 		$type = "created_at";
 	}
 	if($key){
@@ -21,7 +18,6 @@
 		$page_record_count = 0;
 	}
 	
-	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -31,7 +27,7 @@
 	<title>福布斯-城市首页</title>
 	<?php
 		use_jquery();
-		js_include_tag('public','right');
+		js_include_tag('public','right','search/author');
 		css_include_tag('tyzl','public','right_inc');
 	?>
 </head>
@@ -40,11 +36,12 @@
 	<?php
 		include_once('../inc/top.inc.php');
 	?>
-		<div id=cyindex></div>
-		<div id=cytitle><a style="color:#666666;" href="">福布斯中文网　＞　</a><a href="">城市首页</a></div>
-		<div id=cyline></div>
+		<div id=bread>
+			<span>专栏作者检索</span>
+		</div>
+		<div id=bread_line></div>
 		<div id=cy_left>
-			<div id=search>专栏搜索：<select></select><input type="text"><button>搜索</button></div>
+			<div id=search>专栏搜索：<select id="type"><option></option><option <?php if($type=='created_at')echo 'selected="selected"'?> value="created_at">按最新发布文章排序</option><option <?php if($type=='click_count')echo 'selected="selected"'?> value="click_count">按最多点击文章排序</option></select><input type="text" value="<?php echo $key;?>" id="author_text"><button id="author_search">搜索</button></div>
 			<div id=cy_title>
 				<div id=title_left></div>
 				<div id=title_center>
