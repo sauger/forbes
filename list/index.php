@@ -3,14 +3,18 @@
 	$db = get_db();
 	$nav=$db->query('select id from fb_navigation where name="榜单"');
 	$nav=$nav[0]->id;	
+	$seo=$db->query('select * from fb_seo where name="榜单首页"');	
+	
 ?>
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/Tr/1999/rEC-html401-19991224/loose.dtd">
 <head>
-   <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<title><?php echo $seo[0]->title ?></title>
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-榜单首页</title>
+	<meta name="keywords" content="<?php echo $seo[0]->keywords ?>" />
+	<meta name="description" content="<?php echo $seo[0]->description ?>" />
 	<?php
 		use_jquery();
 		js_include_tag('public','index','right');
@@ -26,13 +30,13 @@
 		<div id="list_left">
 			<div id=lists_headline>
 				<div id=headline>
-					<div class=headline_pic id=headline_pic_0><a href="<?php echo $pos_items->listindex_hl_0->href; ?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_0->image1; ?>"></a></div>
-					<div class=headline_pic id=headline_pic_1 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_1->href; ?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_1->image1; ?>"></a></div>
-					<div class=headline_pic id=headline_pic_2 style="display:none;"><a href="<?php echo $pos_items->listindex_hl_2->href; ?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 width=300 height=200 src="<?php echo $pos_items->listindex_hl_2->image1; ?>"></a></div>
+					<div class=headline_pic id=headline_pic_0><?php $pos_name = "listindex_hl_0";show_page_img(300,200)?></div>
+					<div class=headline_pic id=headline_pic_1 style="display:none;"><?php $pos_name = "listindex_hl_1";show_page_img(300,200)?></div>
+					<div class=headline_pic id=headline_pic_2 style="display:none;"><?php $pos_name = "listindex_hl_2";show_page_img(300,200)?></div>
 					<div id=headline_content>
-						<div class=headline_title id=headline_title_0 <?php show_page_pos('listindex_hl_0')?>><a href="<?php echo $pos_items->listindex_hl_0->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->listindex_hl_0->display; ?></a></div>
-						<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos('listindex_hl_1')?>><a href="<?php echo $pos_items->listindex_hl_1->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->listindex_hl_1->display; ?></a></div>
-						<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos('listindex_hl_2')?>><a href="<?php echo $pos_items->listindex_hl_2->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->listindex_hl_2->display; ?></a></div>
+						<div class=headline_title id=headline_title_0 <?php show_page_pos('listindex_hl_0')?>><?php show_page_href('listindex_hl_0')?></div>
+						<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos('listindex_hl_1')?>><?php show_page_href('listindex_hl_0')?></div>
+						<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos('listindex_hl_2')?>><?php show_page_href('listindex_hl_0')?></div>
 						<div class=headline_description id=headline_description_0><?php echo $pos_items->listindex_hl_0->description; ?></div>
 						<div class=headline_description id=headline_description_1 style="display:none;"><?php echo $pos_items->listindex_hl_1->description; ?></div>
 						<div class=headline_description id=headline_description_2 style="display:none;"><?php echo $pos_items->listindex_hl_2->description; ?></div>
@@ -47,7 +51,7 @@
 							//		  if(count($rela_list)<1){break;}
 								$pos_name = "listindex_hl_{$j}_{$i}";
 								?>
-									<div class=list <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
+									<div class=list <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>
 							<?php 	}
 							//}
 						?>				
@@ -78,7 +82,7 @@
 					?>
 					<div class="recommend_p" <?php show_page_pos($pos_name)?>>
 						<div class=recommend_pic><img width="94" height="94" src="<?php echo $pos_items->$pos_name->image1;?>"></div>
-						<div class="recommend_list"><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
+						<div class="recommend_list"><?php show_page_href();?></div>
 					</div>
 					<?php }?>
 			</div>
@@ -105,7 +109,7 @@
 							<?php for($i=0;$i<4;$i++){
 								$pos_name = "listindex_{$key}_{$i}"; 
 							?>
-								<li <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></li>
+								<li <?php show_page_pos($pos_name)?>><?php show_page_href();?></li>
 							<?php } ?>
 						</div>
 					</div>
@@ -126,7 +130,7 @@
 							<?php for($i=0;$i<4;$i++){
 								$pos_name = "listindex_{$key}_{$i}"; 
 							?>
-								<li <?php show_page_pos($pos_name)?>><a href="<?php echo $pos_items->$pos_name->href?>" target=_blank><?php echo $pos_items->$pos_name->display;?></a></li>
+								<li <?php show_page_pos($pos_name)?>><?php show_page_href();?></li>
 							<?php } ?>
 						</div>
 					</div>

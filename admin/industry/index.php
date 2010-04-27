@@ -9,7 +9,7 @@
 	if($search!=''){
 		$sql .= " where name like '%".$search."%'";
 	}
-	$record = $db->paginate($sql,15);
+	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
 

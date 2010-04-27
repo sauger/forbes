@@ -1,7 +1,5 @@
 <?php
 include_once "../../frame.php";
-include "_listindex.php";
-include "_richindex.php";
 $category = new category_class('news');
 $pos_table = new table_class('fb_page_pos');
 
@@ -321,7 +319,9 @@ function update_news_column($category_name,$limit,$type,$position_name){
 }
 
 include "./_index.php";
-#include "./_fiveindex.php";
-#include "./_right.php";
-#include "./_life.php";
-#include "./_column_index.php";
+include "_listindex.php";
+include "_richindex.php";
+include "./_fiveindex.php";
+include "./_right.php";
+include "./_life.php";
+include "./_column_index.php";

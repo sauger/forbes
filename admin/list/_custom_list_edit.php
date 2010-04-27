@@ -19,7 +19,7 @@
 				<div style="float:left"><input name="list[<?php echo $k;?>][key]" value="MUL" type="checkbox" style="width:20px;" <?php if($v->key == 'MUL') echo "checked='checked'"?>></input>排序</div>
 				<div style="float:left"><input name="list[<?php echo $k;?>][key]" value="UNI"  type="checkbox" style="width:20px;" <?php if($v->key == 'UNI') echo "checked='checked'"?>></input>唯一</div>
 				<input type="hidden" value="<?php echo $k;?>"></input>
-				<img alt="删除" title="删除" src="/images/btn_delete.png" style="cursor:pointer;" class="del_old del_column">
+				<img alt="删除" title="删除" src="/images/admin/btn_delete.png" style="cursor:pointer;" class="del_old del_column">
 			</td>
 		</tr>
 		<?php }}?>

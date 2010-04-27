@@ -27,14 +27,15 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="20%">标题</td><td width="20%">关键词</td><td width="40%">说明</td><td width="20%">操作</td>
+			<td width=20%>名称</td><td width="20%">标题</td><td width="20%">关键词</td><td width="20%">说明</td><td width="20%">操作</td>
 		</tr>
 		<?php
 			//--------------------
 			for($i=0;$i<count($record);$i++){
 		?>
 		<tr class=tr3 id=<?php echo $record[$i]->id;?> >
-			<td style="text-align:left; text-indent:12px;"><?php echo strip_tags($record[$i]->title);?></td>
+			<td><?php echo strip_tags($record[$i]->name);?></td>
+			<td><?php echo strip_tags($record[$i]->title);?></td>
 			<td><?php echo $record[$i]->keywords;?></td>
 			<td><?php echo $record[$i]->description;?></td>
 			<td>

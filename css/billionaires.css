@@ -17,10 +17,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_head #flash{width:215px; height:214px; left:525px; background:#000000; filter:alpha(opacity=40); -moz-opacity:0.4; opacity:0.4; position:absolute;}
 #billionaires_head #flash_t{width:182px; height:23px; top:20px; left:535px; overflow:hidden; position:absolute;}
 #billionaires_head #flash_t #flash_t_l{width:34px; height:23px; background:url(/images/billionaires/jt.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/billionaires/jt.png");}
-#billionaires_head #flash_t #flash_t_r{width:126px; height:20px; margin-top:2px; font-family:黑体; font-weight:bold; font-size:16px; float:right;}
+#billionaires_head #flash_t #flash_t_r{width:126px; height:20px; margin-top:2px; font-family:黑体; font-weight:bold; font-size:16px; line-height:20px; float:right;}
 #billionaires_head #flash_t #flash_t_r a{color:#ffffff; text-decoration:none;}
-#billionaires_head #flash_b{width:182px; height:112px; top:60px; left:535px; overflow:hidden; position:absolute;}
-#billionaires_head #flash_b #content{width:182px; height:112px; line-height:22px; font-weight:bold;}
+#billionaires_head #flash_b{width:19tpx; height:112px; top:60px; left:535px; overflow:hidden; position:absolute;}
+#billionaires_head #flash_b #content{width:195px; height:112px; line-height:22px; font-size:13px;}
 #billionaires_head #flash_b #content a{color:#ffffff; text-decoration:none;}
 #billionaires_head_right{width:3px; height:236px; background:url('/images/billionaires/billionaires_head_right.jpg') no-repeat; overflow:hidden;}
 #billionaires_ranking{width:530px; margin-top:20px;}
@@ -28,12 +28,12 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_ranking .ranking_top_title a{color:#000000; text-decoration:none;}
 #billionaires_ranking .ranking_top_content{margin-top:10px;}
 #billionaires_ranking .ranking_top_content #c_title{height:28px; font-size:13px; font-weight:bold;}
-#billionaires_ranking .ranking_top_content .pm{width:50px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .name{width:62px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .cfs{width:132px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .sex{width:62px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .age{width:67px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
-#billionaires_ranking .ranking_top_content .cmpname{width:122px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .pm{width:40px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .name{width:132px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .cfs{width:92px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .sex{width:42px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .age{width:37px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
+#billionaires_ranking .ranking_top_content .cmpname{width:165px; height:28px; line-height:28px; text-align:center; overflow:hidden;}
 #billionaires_ranking .ranking_top_content .sx{width:1px; height:20px; margin-top:2px; line-height:20px; font-weight:normal; color:#e4e4e4;}
 #billionaires_ranking .ranking_top_content .c_content{line-height:28px; font-size:13px; color:#666666;}
 #billionaires_ranking .ranking_top_content .dash{width:486px; height:1px; margin-left:10px; background:url('/images/billionaires/billionaires_index_dash.jpg') no-repeat; overflow:hidden;}
@@ -66,8 +66,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_search .search_content_r{width:206px; height:179px; text-align:center; margin-top:10px; color:#666666; float:right;}
 #billionaires_search .search_content_r_l{width:60px;}
 #billionaires_search .search_content_r_r{width:140px; float:right;}
-#billionaires_search .search_content_r_r input{width:109px; height:16px;}
-#billionaires_search .search_content_r_r select{width:113px; height:21px;}
+#billionaires_search .search_content_r_r input{width:117px; height:16px;}
+#billionaires_search .search_content_r_r select{width:123px; height:21px;}
 #billionaires_search .search_content_r button{width:76px; height:22px; margin-right:15px; border:0px; cursor:pointer; background:url('/images/billionaires/btn_js.jpg') no-repeat; float:right;}
 #billionaires_search .search_content_r .content{width:208px; height:30px; line-height:30px;}
 #billionaires_search #search_pic1{width:228px; height:113px; margin-top:23px; border:1px solid #cccccc; overflow:hidden;}

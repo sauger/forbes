@@ -21,7 +21,7 @@ $(function() {
 		
 		
 		$("#add_item").click(function(){
-			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='"+empty+"' style='display:"+display+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/btn_delete.png' border='0'></a></td></tr>");
+			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='"+empty+"' style='display:"+display+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a></td></tr>");
 		});
 		//添加一个投票项目
 		/*
@@ -102,7 +102,7 @@ $(function() {
 });
 
 function remove_tb(vote_id,vote_name){
-	$(".btools").before('<tr class="tr4 sub_vote"><td align="center">投票项目：</td><td><div style="width:300px;" name='+vote_id+'>'+vote_name+'</div>　　<input type="hidden" name="vote_vote[title][]" value="'+vote_name+'"><input type="hidden" name="vote_vote[id][]" value="'+vote_id+'"><a id="thickbox'+vote_id+'" href="vote_add.ajax.php?id='+vote_id+'&KeepThis=true&TB_iframe=true&height=600&width=560" title="点击查看"><img src="/images/btn_edit.png" border="0"></a><a class="del_vote" name="'+vote_id+'" style="cursor:pointer;margin-left:50px" title="删除"><img src="/images/btn_delete.png" border="0"></a></td></tr>');
+	$(".btools").before('<tr class="tr4 sub_vote"><td align="center">投票项目：</td><td><div style="width:300px;" name='+vote_id+'>'+vote_name+'</div>　　<input type="hidden" name="vote_vote[title][]" value="'+vote_name+'"><input type="hidden" name="vote_vote[id][]" value="'+vote_id+'"><a id="thickbox'+vote_id+'" href="vote_add.ajax.php?id='+vote_id+'&KeepThis=true&TB_iframe=true&height=600&width=560" title="点击查看"><img src="/images/admin/btn_edit.png" border="0"></a><a class="del_vote" name="'+vote_id+'" style="cursor:pointer;margin-left:50px" title="删除"><img src="/images/admin/btn_delete.png" border="0"></a></td></tr>');
 	tb_remove(); //关闭弹出窗口
 	tb_init('#thickbox'+vote_id); //注册thickbox
 }

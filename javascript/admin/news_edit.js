@@ -132,7 +132,7 @@ $(function(){
 			keywords.push($(this).val());
 		});
 		$('#news_keywords').val(keywords.join('||'));
-		if($('#news_keywords').val()==''){
+		if(!uncheck_keyword && $('#news_keywords').val()==''){
 			alert("请输入关键字!");
 			return false;
 		}
