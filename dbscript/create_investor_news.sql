@@ -1,6 +1,8 @@
 CREATE TABLE `forbes`.`fb_investor_news` (
-  `investro_id` integer  NOT NULL,
-  `news_id` integer  NOT NULL,
-  INDEX `new_index`(`news_id`),
-  INDEX `new_index1`(`investro_id`)
-);
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `investor_id` INTEGER UNSIGNED NOT NULL,
+  `news_id` INTEGER UNSIGNED NOT NULL,
+   INDEX `new_index`(`news_id`),
+  INDEX `new_index1`(`investor_id`),
+  PRIMARY KEY (`id`)
+)
