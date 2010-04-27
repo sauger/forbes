@@ -5,7 +5,7 @@ stmt = my.prepare("delete from fb_dynamic_fortune_list")
 stmt.execute
 index = 0
 stmt = my.prepare("delete from fb_dynamic_fortune_history where date(regdate) = date(now())")
-stmt.execute index,id
+stmt.execute
 my.query("select d.id,d.name,sum(a.stock_value*c.rate*b.stock_count) as fortune from fb_company a right join fb_rich_company b on a.id = b.company_id left join fb_currency c on a.hbid= c.id left join fb_rich d on b.rich_id = d.id where d.id is not null group by b.rich_id  order by fortune desc").each do |id, name, count| 
 	count = count.to_i / 100000000
 	index += 1	
