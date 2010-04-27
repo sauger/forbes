@@ -81,8 +81,8 @@ function dynamic_news_url($news){
 function static_index() {
 	global $static_dir;
 	global $static_url;
-	$content = file_get_contents("{$static_url}/index_static.php");
-	return write_to_file("{$static_dir}/index.shtml",$content,'w');
+	$content = file_get_contents("{$static_url}/index.php?page_type=static");
+	return write_to_file("{$static_dir}/review/index.shtml",$content,'w');
 }
 
 function static_top(){

@@ -132,9 +132,9 @@ $(function(){
 			keywords.push($(this).val());
 		});
 		$('#news_keywords').val(keywords.join('||'));
-		if(!uncheck_keyword && $('#news_keywords').val()==''){
-			alert("请输入关键字!");
-			return false;
+		if($('#news_keywords').val()==''){
+			//alert("请输入关键字!");
+			//return false;
 		}
 		var title = $('#news_title').val();
 		if(title==""){
@@ -168,6 +168,7 @@ $(function(){
 				category_id = $('.category_select:eq('+ (category_count - 2) + ')').val();
 			}
 		}
+		$('#category_id').val(category_id);
 		/* fitler words
 		 */
 		for(i=0;i< filte_len; i++){
@@ -192,7 +193,6 @@ $(function(){
 				return false;
 			}
 		};
-		$('#category_id').val(category_id);
 		//handle the news_copy
 		if($('#tr_copy_news').css('display') != 'none'){
 			var copy_cateogry_id = $('.category_select_copy:last').val();
