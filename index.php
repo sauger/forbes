@@ -17,18 +17,25 @@
 		use_jquery();
 		js_include_tag('public','index');
 		css_include_tag('public','index');
+		$category = new category_class('news');
 	?>
 </head>
 <body>
 	<div id=ibody>
-	<?php include_once('inc/top.inc.php');?>
 	<?php 
+	init_page_items();
+	if($page_type == 'static'){
+		function get_news_url($news){
+			return static_news_url($news);
+		}
+		echo '<!--#include virtual="/review/inc/top.inc.shtml"  -->';
+	}else{
 		function get_news_url($news){
 			return dynamic_news_url($news);
 		}
-		//$pos_items = get_page_items('index2');
-		$category = new category_class('news');
-		init_page_items();
+		include_once('inc/top.inc.php');
+	}
+	
 	?>
 		<div id=forbes_tlt>
   		<div id=headline>
@@ -498,7 +505,13 @@
 				<div class=public_bottom1></div>
 			</div>
 		</div>	
-	<?php include_once('inc/bottom.inc.php');?>
+	<?php ?>
+	<?php 
+	if($page_type == 'static'){
+		echo '<!--#include  virtual="/review/inc/bottom.inc.shtml"  -->';
+	}else{
+		include_once('inc/bottom.inc.php');
+	}?>
 	</div>
 </body>
 </html>
