@@ -2,7 +2,7 @@
 	include_once('../frame.php');
 	$key = $_GET['key'];
 	$db = get_db();
-	if(strlen($key)>20){
+	if(strlen($key)>50){
 		redirect('error.html');
 		die();
 	}
@@ -30,7 +30,7 @@
 </head>
 <body <?php if($news->forbbide_copy == 1){ ?> oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="return false" oncopy="return false" onbeforecopy="return false" onmouseup="return false" <?php }?>>
 <div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>
 			<span>新闻检索</span>
 		</div>
@@ -54,13 +54,13 @@
 			</div>
 		</div>	
 		<div id="right_inc">
-			<?php include "../right/ad.php";?>
-			<?php include "../right/favor.php";?>
-			<?php include "../right/four.php";?>
-			<?php include "../right/forum.php";?>
-			<?php include "../right/magazine.php";?>
+			<?php include_right("ad");?>
+			<?php include_right("favor");?>
+			<?php include_right("four");?>
+			<?php include_right("forum");?>
+			<?php include_right("magazine");?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 </div>
 </body>
 <html>

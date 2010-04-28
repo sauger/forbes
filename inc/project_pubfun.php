@@ -342,5 +342,15 @@ function get_newslist_url($cid){
 	}
 }
 
+function get_news_serach_url($key){
+	global $page_type;
+	$key = urlencode($key);
+	if($page_type == 'static'){
+		return "/search/news/key/{$key}";
+	}else{
+		return "/search/news.php?key={$key}";
+	}
+}
+
 
 ?>
