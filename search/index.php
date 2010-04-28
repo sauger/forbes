@@ -24,7 +24,7 @@
 		
 		<div id=bread>
 			
-				<span>关于我们</span>
+				<span></span>
 				
 		</div>
 		
