@@ -76,7 +76,7 @@
 							<div class="fc_c_right">
 									<div id="fc_open">
 										<input type="text" name="input" style="border:1px solid #999999; width:200px; margin-top:5px; height:20px;">
-										<input type="button" style="width:60px; margin-left:30px; font-size:14px; font-weight:bold;  height:28px; border:0px solid red; background:url(../images/zz/btn_bg.jpg) no-repeat;" value="浏 览"/><input type="button" style="margin-left:10px; font-size:14px; font-weight:bold; width:60px; height:28px; border:0px solid red; background:url(../images/zz/btn_bg.jpg) no-repeat;"  value="上 传"/>
+										<input type="button" style="width:63px; margin-left:30px; font-size:14px; font-weight:bold;  height:24px; border:0px solid red; background:url(../images/right/right_b_b_btn.jpg) no-repeat;" value="浏 览"/><input type="button" style="margin-left:10px; font-size:14px; font-weight:bold; width:63px; height:24px; border:0px solid red; background:url(../images/right/right_b_b_btn.jpg) no-repeat;"  value="上 传"/>
 									</div>
 							</div>
 					</div>
@@ -113,8 +113,8 @@
 											<div class="money_d"><select name="select" style="width:70px; margin-top:7Px;"></select></div>
 										</div>
 										<div class="com_e">
-												<input type="button" style="margin-top:15px;" value="添加输入"/>
-												<input  type="button" style="margin-top:10px;"  value="删除输入"/>
+												<input type="button" style="width:70px; height:24px; border:0px solid red; margin-top:15px; background:url(../images/sign/right_b_b_btn.jpg) no-repeat;" value="添加输入"/>
+												<input  type="button" style="width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:10px;"  value="删除输入"/>
 										</div>
 										<textarea class="com_f">
 										</textarea>
@@ -134,8 +134,8 @@
 											<div class="money_d"><select name="select" style="width:70px; margin-top:7Px;"></select></div>
 										</div>
 										<div class="com_e">
-												<input type="button" style="margin-top:15px; " value="添加输入"/>
-												<input  type="button" style="margin-top:10px;"  value="删除输入"/>
+												<input type="button" style="width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:15px; " value="添加输入"/>
+												<input  type="button" style="width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:10px;"  value="删除输入"/>
 										</div>
 										<textarea class="com_f">
 										</textarea>
