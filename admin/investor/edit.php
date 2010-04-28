@@ -8,13 +8,13 @@
 	if($id!=''){
 		$record->find($id);
 		$sel_industry = explode(',',$record->invest_zone);
-		$industry = $db->query("select * from fb_invest_industry");
-		$count = $db->record_count;
 		$item = $db->query("select * from fb_invest_items where investor_id=$id");
 		$item_count = $db->record_count;
 		$job = $db->query("select * from fb_investor_job_history where investor_id=$id");
 		$job_count = $db->record_count;
 	}
+	$industry = $db->query("select * from fb_invest_industry");
+	$count = $db->record_count;
 	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
