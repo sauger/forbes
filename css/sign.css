@@ -3,6 +3,9 @@ p{margin:0; padding:0}
 #ibody{width:1000px; margin:0 auto;}
 #hr_top{width:1000px; height:20px; background:url(../images/survey/zh_hr.jpg) no-repeat;  float:left; dislay:inline;}
 
+.select:hover {border:1px solid #666666;}
+.select{border:1px solid #cccccc; float: left; display: inline;}
+
 #f_z{width:642px;  float:left; display:inline;}
 .f_title{width:640px; height:30px; float:left; display:inline;}
 .f_title_left{width:3px;height:30px; background:url(../images/club/l_title_left.jpg) no-repeat; float:left; display:inline;}
