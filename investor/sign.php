@@ -13,7 +13,8 @@
 	<meta name="Description" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
 	<?php
 		use_jquery();
-		css_include_tag('public','comments','right_inc','sign','colorbox');
+		js_include_tag('public','right');
+		css_include_tag('public','right_inc','sign');
 	?>
 </head>
 
