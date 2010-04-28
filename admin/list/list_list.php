@@ -147,6 +147,7 @@
 						<?php }elseif($record[$i]->list_type == 3){?>
 						<a href="famous_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/admin/btn_item.png"></a>
 						<?php }?>
+						<a title="静态页面" href="<?php echo $static_site ."/list/{$record[$i]->id}";?>" target="_blank"><img src="/images/admin/btn_static.png" border="0"></a>
 						<span class="del1" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png"></span>
 						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:40px;">
 					</td>

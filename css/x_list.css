@@ -7,17 +7,24 @@ div{margin:0; padding:0; float:left; display:inline;}
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 #hr_top{width:1000px; height:20px; background:url(../images/comments/zh_hr.jpg) no-repeat;  float:left; dislay:inline;}
 
-#left_content{width:660px; height:500px; border:1px solid red; float:left; display:inline;}
-#title{width:500px; height:20px; margin-top:5px;  border:1px solid blue; float:left; display:inline;}
+#left_content{width:660px; height:500px; float:left; display:inline;}
+#title{width:630px; height:20px; margin-top:5px; float:left; display:inline;}
 #title_a{width:7px; height:7px; margin-left:5px; margin-top:5px; background:#999999; float:left; display:inline;}
 #title_b{width:60px; height:20px; margin-left:10px; line-height:20px; color:#444444; font-size:14px; font-weight:bold; float:left; display:inline;}
 #title_num{width:100px; height:20px; margin-left:5px; line-height:20px; font-size:12px; float:left; display:inline;}
+#t_left{width:10px; height:30px; background:url(../images/survey/t_l.jpg) no-repeat; float:left; display:inline;}
+#t_right{width:10px; height:30px; background:url(../images/survey/t_r.jpg) no-repeat; float:left; display:inline;}
+#t_c{width:640px; height:30px; background:#F3F3F3; float:left; display:inline;}
+#content{width:650px; float:left; display:inline;}
+#c_c{width:600px; height:20px; margin-left:30px; margin-top:10px; float:left; display:inline;}
+#c_bottom{width:590px;  margin-left:40px; margin-top:20px; line-height:20px; font-size:12px; overflow:hidden;  float:left; display:inline;}
+#c_title{width:150px; height:20px; overflow:hidden; font-size:14px; font-weight:bold;  float:left; display:inline;}
+#c_title a{ text-decoration:none; color:#246BB0; }
+#time{width:180px; height:20px; font-size:12px; float:right; display:inline;}
+#author{width:260px; height:20px; text-align:right;  font-size:12px; float:left; display:inline;}
+.hr{width:640px; margin-left:5px; margin-top:10px; margin-bottom:10px; background:url(../images/right/dash4.gif) repeat-x; height:1px; font-size:0px; line-height:0xp; float:left; display:inline;}
+#page{width:550px; margin-left:45px; height:20px; font-size:13px;  margin-top:10px; text-align:center; float:left; display:inline;}
+#up{width:21px; height:17px; margin-left:150px; background:url(../images/contact/up.jpg) no-repeat; float:left; display:inline;}
+#next{width:21px; height:15px; margin-top:2px; background:url(../images/contact/next.jpg) no-repeat; float:left; display:inline;}
 
-#content{width:650px; border:1px solid red; float:left; display:inline;}
-#c_c{width:600px; height:20px; margin-left:30px; margin-top:10px; border:1px solid blue; float:left; display:inline;}
-#c_bottom{width:590px;  margin-left:40px; margin-top:20px; line-height:20px; font-size:12px; overflow:hidden; border:1px solid red; float:left; display:inline;}
-#c_title{width:150px; height:20px; overflow:hidden; font-size:14px; color:#246BB0; font-weight:bold; border:1px solid red;  float:left; display:inline;}
-.c_left_t{width:45px; height:20; font-size:14px; font-weight:bold; border:1px solid blue; float:left; display:inline;}
-#time{width:130px; height:20px; font-size:12px; border:1px solid red; float:right; display:inline;}
-#author{width:260px; height:20px; text-align:right;  font-size:12px; border:1px solid blue; float:left; display:inline;}
-.hr{width:640px; margin-left:5px; margin-top:5px; background:url(../images/right/dash4.gif) repeat-x; height:1px; font-size:0px; line-height:0xp; float:left; display:inline;}
+#number a{margin-left:5px;}

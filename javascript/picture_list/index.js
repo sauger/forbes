@@ -51,7 +51,7 @@ function timeout_func(){
 	change_images(1);
 }
 $(function(){
-	$.getJSON("/list/json.php?id=" + $('#list_id').val(),function(data){
+	$.getJSON("/ajax/json.php?id=" + $('#list_id').val(),function(data){
 		items = data;
 		timeout_handler = setTimeout("timeout_func()",interval);
 	});
