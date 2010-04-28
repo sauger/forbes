@@ -37,10 +37,10 @@ p{margin:0; padding:0}
 #company_b{width:635px; height:90px;  float:left ; display:inline;}
 .com_a{ width:90px; height:90px; margin-left:50px; line-height:90px; font-size:13px; font-weight:bold;  float:left; display:inline;}
 .com_c{ width:140px; height:90px; margin-left:3px; 	 font-size:13px; font-size:13px; font-weight:bold; float:left; display:inline;}
-.year_a{width:90px; height:45px;  line-height:50px; float:left; display:inline;}
+.year_a{width:130px; height:20px; margin-top:17px;  line-height:20px; float:left; display:inline;}
 .year_d{width:70px; height:45px; line-height:40px; float:left; diaplay:inline;}
 .com_d{width:70px; height:90px; float:left; display:inline;}
-.money_b{margin-top:5px; overflow:hidden; float:left; display:inline;}
+.money_b{width:140px; height:20px; margin-top:15px; overflow:hidden; float:left; display:inline;}
 .com_e{width:90px; height:90px; text-align:center; float:left; display:inline;}
 .com_f{width:138px; height:80px; font-size:12px; margin-top:5px; margin-left:5px; border:1px solid #999999; float:left; display:inline;}
 
