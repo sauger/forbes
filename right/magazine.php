@@ -1,3 +1,4 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <div class=right_title>
 	<div class=title_con>福布斯杂志</div>
 	<div class=more><a href="/magazine/"><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
@@ -12,6 +13,7 @@
 			<select id="old_magazine">
 				<option value=''></option>
 				<?php
+					$db = get_db();
 					$magazine = $db->query("SELECT substring(publish_data,1,4) as year FROM fb_magazine group by substring(publish_data,1,4)");
 					$year_count = $db->record_count;
 					for($i=0;$i<$year_count;$i++){

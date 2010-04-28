@@ -1,4 +1,6 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <?php
+		$db=get_db();
 		if($industry_id){
 		$sql  = "select t1.* from fb_rich t1 join fb_rich_company t2 on t1.id=t2.rich_id where t2.company_id in(select group_concat(company_id separator ',') from fb_company_industry where industry_id in ($industry_id))";
 		$rich = $db->query($sql);

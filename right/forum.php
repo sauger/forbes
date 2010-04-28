@@ -1,10 +1,11 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <?php init_page_items();?>
 <div class=right_title>
 	<div class=title_con>福布斯论坛</div>
 	<div class=more><a href=""><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
 </div>
 <div id="forum_box">
-	<div class=pic><?php show_page_img($pos_items,"right_forum_news0")?></div>
+	<div class=pic><?php show_page_img(null,null,0,"right_forum_news0")?></div>
 	<div <?php show_page_pos("right_forum_news0")?> class=pictitle><?php show_page_href("right_forum_news0")?></div>
  	<div id=forum_dash></div>
 	<?php

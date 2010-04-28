@@ -1,3 +1,4 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <div class=right_title>
 	<div class=title_con>专栏文章文类</div>
 </div>

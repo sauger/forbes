@@ -62,10 +62,10 @@
 					<a href="/column/" class=more target="_blank"></a>
 				</div>
 				<?php for($i=0;$i<3;$i++){ $pos_name = $pos."column".$i;?>
-				<div class=column_container>
-					<?php show_page_img(null,null,null,'reserve');?>
+				<div class=column_container<?php show_page_pos($pos_name,'column_full')?>>
+					<?php show_page_img(null,null,0,'image1',null,'reserve');?>
 					<div class=article>
-						<div class=common_list3 <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>
+						<div class=common_list3 ><?php show_page_href()?></div>
 						<div class=common_description3><?php show_page_desc(null,null)?></div>
 						<div class=common_writer><?php if($pos_items->$pos_name->alias != ''){ echo "——".$pos_items->$pos_name->alias; }else echo "&nbsp;";?></div>
 					</div>

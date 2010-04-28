@@ -105,11 +105,11 @@
 				<div id=comment_paginate><?php paginate()?></div>
 		</div>
 	 	<div id=right_inc>
-	 		<?php include "../right/ad.php";?>
-	 		<?php include "../right/favor.php";?>
-	 		<?php include "../right/four.php";?>
-	 		<?php include "../right/rich.php";?>
-	 		<?php include "../right/magazine.php";?>
+	 		<?php include_right( "ad");?>
+	 		<?php include_right( "favor");?>
+	 		<?php include_right( "four");?>
+	 		<?php include_right( "rich");?>
+	 		<?php include_right( "magazine");?>
 	 	</div>
 
 		<?php include_bottom();?>

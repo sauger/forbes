@@ -1,3 +1,4 @@
+<?php include_once(dirname(__FILE__).'/../frame.php');?>
 <?php init_page_items();?>
 <div class="left_title">
 	<div  name="favor" class="left_top_title article_list selected">最受欢迎</div>

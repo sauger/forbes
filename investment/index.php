@@ -26,9 +26,9 @@
 		<?php
 			$pos = "invest_";
 			init_page_items();
-			include_once(dirname(__FILE__).'/../inc/top.inc.php');
+			include_top();
 			include(dirname(__FILE__).'/../_index.php');
-		 	include_once(dirname(__FILE__).'/../inc/bottom.inc.php');
+		 	include_bottom();
 		?>
 	</div>
 </body>
