@@ -4,7 +4,7 @@
 	<meta http-equiv=Content-Language content=zh-cn>
 	<title>福布斯-榜单首页</title>
 	<?php
-		include_once(dirname(__FILE__).'/../frame.php');
+		include_once("../frame.php");
 		$db = get_db();
 		use_jquery();
 		js_include_tag('public');
@@ -28,8 +28,8 @@
 	}
 ?>
 <div id=ibody>
-		<?php include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=bread><a href="index.php">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
+		<?php include_top();?>
+		<div id=bread><a href="/list">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
 		<div id=bread_line></div>
 		<div id="list_list_content" style="width:1000px;">
 			<div id="list_title2"><?php echo $list->name;?></div>
@@ -132,14 +132,17 @@
 							?>
 							<td <?php if($i==1){?>style="border-left:0;"<?php }?> <?php if($i==($count-1)){?>style="border-right:0;"<?php }?> width="<?php echo $width;?>%" valign="middle">
 								<?php if($fields[$i]->Key=='MUL'){
-									echo "<a href='more.php?id=$id&order={$fields->Field}&desc=";
-									echo ($order==$fields->Field)?!$desc:'1';
-									echo "'>";
+									$desc1 = ($order==$fields[$i]->Field)?!$desc:'1';
+									if($page_type=='static'){
+										$url = "/list/{$id}/more/{$fields[$i]->Field}/{$desc1}";
+									}else{
+										$url = "more.php?id={$id}&order={$fields[$i]->Field}&desc={$desc1}";
+									}
+									echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
+								}else{
+									echo $fields[$i]->Comment;	
 								}
-								echo $fields[$i]->Comment;
-								if($fields[$i]->Key=='MUL'){
-									echo "</a>";
-								}?>
+								?>
 							</td>
 							<?php }?>
 					</tr>
@@ -171,6 +174,6 @@
 			<div id="more_paginate">
 				<?php paginate();?>
 			</div>
-		<?php include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+		<?php include_bottom();?>
 	</div>
 </body>

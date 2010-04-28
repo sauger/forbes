@@ -31,13 +31,17 @@
 	}
 ?>
 	<div id=ibody>
-		<?php include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=bread><a href="index.php">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
+		<?php include_top();?>
+		<div id=bread><a href="/list">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
 		<div id=bread_line>
 		<div id="list_left">
 			<div id="list_title"><?php echo $list->name;?></div>
 			<div id="list_left_top">
+				<?php if($page_type=='static'){?>
+				<a href="/list/<?php echo $id?>/more">查看详细</a>
+				<?php }else{?>
 				<a href="more.php?id=<?php echo $id;?>">查看详细</a>
+				<?php }?>
 			</div>
 			<div id="list_list_content">
 			<?php
@@ -136,14 +140,17 @@
 							?>
 						<td <?php if($i==1){?>style="border-left:0;"<?php }?> <?php if($i==($count-1)){?>style="border-right:0;"<?php }?> width="<?php echo $width;?>%" valign="middle">
 								<?php if($fields[$i]->Key=='MUL'){
-									echo "<a href='show_list.php?id=$id&order={$fields->Field}&desc=";
-									echo ($order==$fields->Field)?!$desc:'1';
-									echo "'>";
+									$desc1 = ($order==$fields[$i]->Field)?!$desc:'1';
+									if($page_type=='static'){
+										$url = "/list/{$id}/{$fields[$i]->Field}/{$desc1}";
+									}else{
+										$url = "show_list.php?id={$id}&order={$fields[$i]->Field}&desc={$desc1}";
+									}
+									echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
+								}else{
+									echo $fields[$i]->Comment;	
 								}
-								echo $fields[$i]->Comment;
-								if($fields[$i]->Key=='MUL'){
-									echo "</a>";
-								}?>
+								?>
 						</td>
 							<?php }?>
 					</tr>
@@ -178,16 +185,17 @@
 		</div>
 
 		<div id="right_inc">
-			<?php include_once(dirname(__FILE__).'/../right/ad.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/favor.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/four.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/magazine.php');?>
+			<?php include_right( "ad");?>
+	 		<?php include_right( "favor");?>
+	 		<?php include_right( "four");?>
+	 		<?php include_right( "rich");?>
+	 		<?php include_right( "magazine");?>
 		</div>
 
 
 
 
 
-		<?php include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+		<?php include_bottom();?>
 	</div>
 </body>
