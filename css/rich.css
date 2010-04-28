@@ -5,7 +5,7 @@ p{margin:0; padding:0}
 #bread a{color:#666666; text-decoration:none;}
 #hr_top{width:1000px; height:20px; background:url(../images/survey/zh_hr.jpg) no-repeat;  float:left; dislay:inline;}
 
-
+#chr_c_right{word-spacing:6px; float:left; display:inline;}
 
 #info_top{width:660px; height:30px; background:url(../images/rich/info_top.jpg) no-repeat; float:left; display:inline;}
 #info_bottom{width:659px; height:9px; background:url(../images/rich/info_bottom.jpg) no-repeat; float:left; display:inline;}

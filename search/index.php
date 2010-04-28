@@ -47,7 +47,8 @@
 								<div id="christcross_right"></div>
 						</div>
 					<div class=zh_left_c>
-								<div class=zh_left_c_left><img src="../images/search/1.jpg"></div>
+								<div class=zh_left_c_left>
+									<img src="../images/search/1.jpg"></div>
 								<div class=zh_left_c_right>
 									<div  class=zh_left_name><strong>张默默</strong></div>
 											
@@ -64,101 +65,6 @@
 									<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
 								</div>
 					</div>
-					<div class="c_hr"></div>
-								<div class=zh_left_c>
-										<div class=zh_left_c_left><img src="../images/search/1.jpg"></div>
-										<div class=zh_left_c_right>
-											<div  class=zh_left_name><strong>张默默</strong></div>
-													
-												<div class=zh_left_com>
-													<div  class=zh_left_CompanyName>北极光风险投资</div>
-													<div  class=zh_left_TypeofBusiness>合伙人</div>
-													</div>
-													<div class=zh_left_ii>
-													<div class=zh_left_investmentdirection>投资方向</div> 
-													<div  class=zh_left_investmentdirectioncontent>生物医药 电子商务 制造</div>
-													</div>
-											<div  class=zh_left_Newsofinvestment>投资动态</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-										</div>
-									</div>
-					<div class="c_hr"></div>
-								<div class=zh_left_c>
-										<div class=zh_left_c_left><img src="../images/search/1.jpg"></div>
-										<div class=zh_left_c_right>
-											<div  class=zh_left_name><strong>张默默</strong></div>
-													
-												<div class=zh_left_com>
-													<div  class=zh_left_CompanyName>北极光风险投资</div>
-													<div  class=zh_left_TypeofBusiness>合伙人</div>
-													</div>
-													<div class=zh_left_ii>
-													<div class=zh_left_investmentdirection>投资方向</div> 
-													<div  class=zh_left_investmentdirectioncontent>生物医药 电子商务 制造</div>
-													</div>
-											<div  class=zh_left_Newsofinvestment>投资动态</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-										</div>
-									</div>
-					<div class="c_hr"></div>
-								<div class=zh_left_c>
-										<div class=zh_left_c_left><img src="../images/search/1.jpg"></div>
-										<div class=zh_left_c_right>
-											<div  class=zh_left_name><strong>张默默</strong></div>
-													
-												<div class=zh_left_com>
-													<div  class=zh_left_CompanyName>北极光风险投资</div>
-													<div  class=zh_left_TypeofBusiness>合伙人</div>
-													</div>
-													<div class=zh_left_ii>
-													<div class=zh_left_investmentdirection>投资方向</div> 
-													<div  class=zh_left_investmentdirectioncontent>生物医药 电子商务 制造</div>
-													</div>
-											<div  class=zh_left_Newsofinvestment>投资动态</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-										</div>
-									</div>
-					<div class="c_hr"></div>
-								<div class=zh_left_c>
-										<div class=zh_left_c_left><img src="../images/search/1.jpg"></div>
-										<div class=zh_left_c_right>
-											<div  class=zh_left_name><strong>张默默</strong></div>
-													
-												<div class=zh_left_com>
-													<div  class=zh_left_CompanyName>北极光风险投资</div>
-													<div  class=zh_left_TypeofBusiness>合伙人</div>
-													</div>
-													<div class=zh_left_ii>
-													<div class=zh_left_investmentdirection>投资方向</div> 
-													<div  class=zh_left_investmentdirectioncontent>生物医药 电子商务 制造</div>
-													</div>
-											<div  class=zh_left_Newsofinvestment>投资动态</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-										</div>
-									</div>
-					<div class="c_hr"></div>
-								<div class=zh_left_c>
-										<div class=zh_left_c_left><img src="../images/search/1.jpg"></div>
-										<div class=zh_left_c_right>
-											<div  class=zh_left_name><strong>张默默</strong></div>
-													
-												<div class=zh_left_com>
-													<div  class=zh_left_CompanyName>北极光风险投资</div>
-													<div  class=zh_left_TypeofBusiness>合伙人</div>
-													</div>
-													<div class=zh_left_ii>
-													<div class=zh_left_investmentdirection>投资方向</div> 
-													<div  class=zh_left_investmentdirectioncontent>生物医药 电子商务 制造</div>
-													</div>
-											<div  class=zh_left_Newsofinvestment>投资动态</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-											<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-										</div>
-									</div>
 					<div class="c_hr"></div>
 					<div id="page">
 						<div id="up"></div>
