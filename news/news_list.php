@@ -21,7 +21,7 @@
 </head>
 <body <?php if($news->forbbide_copy == 1){ ?> oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="return false" oncopy="return false" onbeforecopy="return false" onmouseup="return false" <?php }?>>
 <div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>
 				<?php
 					$category = new category_class('news');
@@ -32,7 +32,7 @@
 					for($i=$len-1;$i>0;$i--){
 						$item = $category->find($parent_ids[$i]);
 				?>
-				<a href="news_list.php?cid=<?php echo $parent_ids[$i];?>"><?php echo $item->name;?></a>
+				<a href="<?php echo get_newslist_url($parent_ids[$i]);?>"><?php echo $item->name;?></a>
 				<?php
 					}
 					$item = $category->find($parent_ids[0]);
@@ -70,7 +70,7 @@
 					for($i=0;$i<$count;$i++){
 					?>
 					<div class=list_box>
-							<div class=title><a title="<?php echo $record[$i]->title;?>" href="<?php echo static_news_url($record[$i]);?>"><?php echo $record[$i]->title?></a></div>
+							<div class=title><a title="<?php echo $record[$i]->title;?>" href="<?php echo get_news_url($record[$i]);?>"><?php echo $record[$i]->title?></a></div>
 							<div class=info>《福布斯》　记者：<?php echo $record[$i]->author;?>　发布于：<?php echo substr($record[$i]->created_at,0,10);?></div>
 							<div class=description ><?php echo $record[$i]->description;?></div>
 					</div>
@@ -79,13 +79,13 @@
 			</div>
 		</div>	
 		<div id="right_inc">
-			<?php include "../right/ad.php";?>
-			<?php include "../right/favor.php";?>
-			<?php include "../right/four.php";?>
-			<?php include "../right/forum.php";?>
-			<?php include "../right/magazine.php";?>
+			<?php include_right("ad");?>
+			<?php include_right("favor");?>
+			<?php include_right("four");?>
+			<?php include_right("forum");?>
+			<?php include_right("magazine");?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 </div>
 </body>
 <html>

@@ -74,8 +74,9 @@
 				$len = count($parent_ids);
 				for($i=$len-1;$i>=0;$i--){
 					$item = $category->find($parent_ids[$i]);
+					$curl = $page_type == 'static' ? "/review/list/{$parent_ids[$i]}/cid" :"news_list.php?cid={$parent_ids[$i]}";
 			?>
-				<a href="news_list.php?cid=<?php echo $parent_ids[$i];?>"><?php echo $item->name;?></a> > 
+				<a href="<?php echo get_newslist_url($parent_ids[$i]);?>"><?php echo $item->name;?></a> > 
 			<?php }	?>
 			<span style="color:#246BB0;"><?php echo strip_tags($news->title);?></span>				
 		</div>

@@ -50,10 +50,10 @@
 					</div>
 					<div class="fc_c">
 							<div id="fc_c_redio">*  希望的投资类型：</div>
-							<div id="fc_c_right">
-									<input type="radio" name="radiobutton" style="margin-top:8px; float:left; display:inline;" value="radiobutton" /><div class="f_x">风险投资</div>
-									<input type="radio" name="radiobutton" style="margin-top:8px; margin-left:10px; float:left; display:inline;" value="radiobutton"/><div  class="f_x">出售企业</div>
-									<input type="radio" name="radiobutton" style="margin-top:8px; margin-left:10px; float:left; display:inline;" value="radiobutton" /><div  class="f_x">天使投资</div>
+							<div id="fc_x_right">
+									<input type="radio" name="radiobutton" style="float:left; display:inline;" value="radiobutton" /><div class="f_xx">风险投资</div>
+									<input type="radio" name="radiobutton" style="margin-left:10px; float:left; display:inline;" value="radiobutton"/><div  class="f_xx">出售企业</div>
+									<input type="radio" name="radiobutton" style="margin-left:10px; float:left; display:inline;" value="radiobutton" /><div  class="f_xx">天使投资</div>
 							</div>
 					</div>
 					<div id="fc_money">
@@ -76,7 +76,7 @@
 							<div class="fc_c_right">
 									<div id="fc_open">
 										<input type="text" name="input" style="border:1px solid #999999; width:200px; margin-top:5px; height:20px;">
-										<input type="button" style="width:60px; margin-left:30px; font-size:14px; font-weight:bold;  height:28px; border:0px solid red; background:url(../images/zz/btn_bg.jpg) no-repeat;" value="浏 览"/><input type="button" style="margin-left:10px; font-size:14px; font-weight:bold; width:60px; height:28px; border:0px solid red; background:url(../images/zz/btn_bg.jpg) no-repeat;"  value="上 传"/>
+										<input type="button" style="width:63px; margin-left:30px; font-size:14px; font-weight:bold;  height:24px; border:0px solid red; background:url(../images/right/right_b_b_btn.jpg) no-repeat;" value="浏 览"/><input type="button" style="margin-left:10px; font-size:14px; font-weight:bold; width:63px; height:24px; border:0px solid red; background:url(../images/right/right_b_b_btn.jpg) no-repeat;"  value="上 传"/>
 									</div>
 							</div>
 					</div>
@@ -113,8 +113,8 @@
 											<div class="money_d"><select name="select" style="width:70px; margin-top:7Px;"></select></div>
 										</div>
 										<div class="com_e">
-												<input type="button" style="margin-top:15px;" value="添加输入"/>
-												<input  type="button" style="margin-top:10px;"  value="删除输入"/>
+												<input type="button" style="width:70px; height:24px; border:0px solid red; margin-top:15px; background:url(../images/sign/right_b_b_btn.jpg) no-repeat;" value="添加输入"/>
+												<input  type="button" style="width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:10px;"  value="删除输入"/>
 										</div>
 										<textarea class="com_f">
 										</textarea>
@@ -134,8 +134,8 @@
 											<div class="money_d"><select name="select" style="width:70px; margin-top:7Px;"></select></div>
 										</div>
 										<div class="com_e">
-												<input type="button" style="margin-top:15px; " value="添加输入"/>
-												<input  type="button" style="margin-top:10px;"  value="删除输入"/>
+												<input type="button" style="width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:15px; " value="添加输入"/>
+												<input  type="button" style="width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:10px;"  value="删除输入"/>
 										</div>
 										<textarea class="com_f">
 										</textarea>
@@ -145,7 +145,7 @@
 						<div class="fc_c">
 							<div class="company_left">公司成立时间：</div>
 							<div class="fc_c_right">
-											<select name="select" style="width:70px; margin-left:20px; margin-top:6px;"></select>
+											<select name="select" style="width:70px; margin-left:20px; margin-top:6px; "></select>
 											<select name="select" style="width:70px; margin-left:5px;"></select>						
 							</div>
 						</div>
@@ -185,19 +185,19 @@
 							<div id="linkman_phone">* 联系人电话</div>
 							<input type="text"  style="border:1px solid #999999;  width:30px; margin-top:5px; height:20px; margin-left:13px;" name="text"/>
 							<input type="text"  style="border:1px solid #999999;  width:80px; margin-top:5px; height:20px; margin-left:3px;" name="text"/>
-							<input type="text"  style="border:1px solid #999999;  width:30px; margin-top:5px; height:20px; margin-left:3px;" name="text"/>
+							<input type="text"  style="border:1px solid #999999;  width:27px; margin-top:5px; height:20px; margin-left:3px;" name="text"/>
 					</div>
 					<div class="linkman_a">
 							<div class="linkman_name">* 联系人邮件：</div>
 							<div class="linkman_input"><input type="text" style="border:1px solid #999999;  width:190px; margin-top:5px; height:20px; margin-left:8px;" name="text"/></div>
 							<div id="linkman_qq">联系人QQ：</div>
-							<input type="text" style="border:1px solid #999999;  width:155px; margin-top:5px; margin-left:4px; height:20px;" name="text"/>
+							<input type="text" style="border:1px solid #999999;  width:157px; margin-top:5px; margin-left:4px; height:20px;" name="text"/>
 					</div>
 					<div class="linkman_a">
 							<div id="linkman_name">* 联系人职位信息：</div>
-							<div class="linkman_input"><input type="text" style="border:1px solid #999999;  width:150px; margin-top:5px; height:20px; margin-left:8px;" name="text"/></div>
+							<div class="linkman_input"><input type="text" style="border:1px solid #999999;  width:165px; margin-top:5px; height:20px; margin-left:8px;" name="text"/></div>
 							<div id="linkman_msn">联系人MSN：</div>
-							<input type="text" style="border:1px solid #999999;  width:155px; margin-top:5px; height:20px;" name="text"/>
+							<input type="text" style="border:1px solid #999999;  width:156px; margin-top:5px; height:20px;" name="text"/>
 					</div>
 					<div id="kong"></div>
 			</div>

@@ -333,5 +333,14 @@ function front_user_id(){
 	return $db->field_by_name('id');	
 }
 
+function get_newslist_url($cid){
+	global $page_type;
+	if($page_type == 'static'){
+		return "/review/list/{$cid}/cid";
+	}else{
+		return "/news/news_list.php?cid={$cid}";
+	}
+}
+
 
 ?>
