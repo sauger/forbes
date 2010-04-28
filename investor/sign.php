@@ -195,7 +195,7 @@
 					</div>
 					<div class="linkman_a">
 							<div id="linkman_name">* 联系人职位信息：</div>
-							<div class="linkman_input"><input type="text" style="border:1px solid #999999;  width:150px; margin-top:5px; height:20px; margin-left:8px;" name="text"/></div>
+							<div class="linkman_input"><input type="text" style="border:1px solid #999999;  width:165px; margin-top:5px; height:20px; margin-left:8px;" name="text"/></div>
 							<div id="linkman_msn">联系人MSN：</div>
 							<input type="text" style="border:1px solid #999999;  width:155px; margin-top:5px; height:20px;" name="text"/>
 					</div>

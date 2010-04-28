@@ -20,7 +20,7 @@ p{margin:0; padding:0}
 .fc_c_right{width:420px; height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
 #fc_c_redio{width: 150px; height:30px; margin-left:20px; font-size:13px; font-weight:bold; float:left; display:inline;}
 #fc_c_right{width:370px; height:30px;  font-size:13px; float:left; display:inline;}
-.f_x{width:80px; height:28px;  margin-left:2px; font-size:13px; float:left; display:inline;}
+.f_x{width:80px; height:20px;  margin-left:2px; margin-top:5px; line-height:20px;  font-size:13px; float:left; display:inline;}
 #moneyvalue{width:250px;  line-height:23px; font-size:13px; float:left; display:inline;}
 #fc_money{width:600px; height:50px; margin-left:20px; line-height:30px; float:left; display:inline;}
 #fc_c_money{width:100px; height:50px; line-height:50px; margin-left:20px; font-size:13px; font-weight:bold; float:left; display:inline;}
@@ -59,6 +59,6 @@ p{margin:0; padding:0}
 #linkman_qq{width:80px; height:30px;  margin-left:21px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
 
 #linkman_name{width:125px; height:30px; margin-left:42px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
-#linkman_msn{width:85px; height:30px;  margin-left:36px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#linkman_msn{width:85px; height:30px;  margin-left:21px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
 
 #kong{width:600px; height:15px; float:left; display:inline;}
