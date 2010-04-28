@@ -79,7 +79,7 @@
 	$(function(){
 		
 		$("#submit").click(function(){
-			var title = $("#title").val();
+			var title = $("input#title").val();
 			if(title==""){
 				alert("请输入标题！");
 				return false;
