@@ -1,4 +1,5 @@
-﻿<?php
+<?php
+	ob_start();
 	session_start();
 	include_once('../../frame.php');
 	judge_role();
@@ -34,8 +35,8 @@
 </div>	
 	
 <div id=itable>
+<form id="picture_edit" enctype="multipart/form-data" action="image.post.php" method="post"> 
 	<table cellspacing="1"  align="center">
-	<form id="picture_edit" enctype="multipart/form-data" action="image.post.php" method="post"> 
 		<tr class=tr4>
 			<td width="15%" class=td1>标　题</td>
 			<td width="85%"><input id="title" type="text" name="image[title]" value="<?php echo $image->title;?>"></td>
@@ -78,7 +79,7 @@
 	$(function(){
 		
 		$("#submit").click(function(){
-			var title = $(input "#title").val();
+			var title = $("input#title").val();
 			if(title==""){
 				alert("请输入标题！");
 				return false;
