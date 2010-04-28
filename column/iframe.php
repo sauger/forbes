@@ -19,7 +19,7 @@ $type=$_REQUEST['type'];
 $date=$_REQUEST['date'];
 if($date!="")
 {
-	$sql='and concat(left(created_at,7))="'.$date.'"';
+	$sql=' and concat(left(created_at,7))="'.$date.'"';
 }
 else
 {
@@ -36,7 +36,7 @@ if($type=="news"){
 	<?php $comment=$db->query('select count(*) as num from fb_comment where resource_id='.$news[$i]->id);?>
 	<div class=r_read>阅读数 （<?php echo $news[$i]->click_count;?>）    评论 （<?php echo $comment[0]->num;?>）</div>
 	<div class=r_context>
-		<a href="/news/news.php?id=<?php echo $news[$i]->id;?>>"><?php echo get_fck_content($news[$i]->description); ?></a>	
+		<a target="_top" href="/news/news.php?id=<?php echo $news[$i]->id;?>>"><?php echo get_fck_content($news[$i]->description); ?></a>	
 	</div>
 	<div class=r_dash></div>
 </div>
@@ -48,7 +48,7 @@ if($type=="news"){
 	for($i=0;$i<count($images);$i++){
 ?>
 	<div class=column_image style="border:1px solid #000000;">
-		<a class=color param="<?php echo $images[$i]->id; ?>" href=""><img border=0 src="<?php echo $images[$i]->src2; ?>" /></a>
+		<a target="_top" class=color param="<?php echo $images[$i]->id; ?>" href=""><img border=0 src="<?php echo $images[$i]->src2; ?>" /></a>
 	</div>
 <?php } ?>
 <script>

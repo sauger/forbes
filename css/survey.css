@@ -9,11 +9,11 @@ body {font-size:12px;  color:#000000; margin:0 auto; padding:0;}
 
 
 
-#question_div{width:658px; margin-top:10px;line;}
+#questions2_div{width:658px; margin-top:10px;line;}
 .top_lpg{width:10px; height:30px; background:url(/images/survey/t_l.jpg) no-repeat;}
 .top_rpg{width:8px; height:30px; background:url(/images/survey/t_r.jpg) no-repeat;}
 .top_pg{width:640px; height:30px;  background:#F3F3F3; float:left; display:inline;}
-.survey2_z{margin-top:10px; padding-bottom:20px;}
+.survey2_z{width:640px; margin-top:10px; padding-bottom:20px;}
 .s2_content{margin-top:5px;}
 .title_pic{width:19px; height:21px; margin-top:3px;  float:left; display:inline;}
 .s2_title{width:500px; height:20px; margin-top:5px; line-height:20px; font-size:15px; font-weight:bolder; overflow:hidden; color:#246BB0;  margin-left:5px; float:left; display:inline;}
