@@ -50,10 +50,10 @@
 					</div>
 					<div class="fc_c">
 							<div id="fc_c_redio">*  希望的投资类型：</div>
-							<div id="fc_c_right">
-									<input type="radio" name="radiobutton" style="margin-top:8px; float:left; display:inline;" value="radiobutton" /><div class="f_x">风险投资</div>
-									<input type="radio" name="radiobutton" style="margin-top:8px; margin-left:10px; float:left; display:inline;" value="radiobutton"/><div  class="f_x">出售企业</div>
-									<input type="radio" name="radiobutton" style="margin-top:8px; margin-left:10px; float:left; display:inline;" value="radiobutton" /><div  class="f_x">天使投资</div>
+							<div id="fc_x_right">
+									<input type="radio" name="radiobutton" style="float:left; display:inline;" value="radiobutton" /><div class="f_xx">风险投资</div>
+									<input type="radio" name="radiobutton" style="margin-left:10px; float:left; display:inline;" value="radiobutton"/><div  class="f_xx">出售企业</div>
+									<input type="radio" name="radiobutton" style="margin-left:10px; float:left; display:inline;" value="radiobutton" /><div  class="f_xx">天使投资</div>
 							</div>
 					</div>
 					<div id="fc_money">
@@ -145,7 +145,7 @@
 						<div class="fc_c">
 							<div class="company_left">公司成立时间：</div>
 							<div class="fc_c_right">
-											<select name="select" style="width:70px; margin-left:20px; margin-top:6px;"></select>
+											<select name="select" style="width:70px; margin-left:20px; margin-top:6px; "></select>
 											<select name="select" style="width:70px; margin-left:5px;"></select>						
 							</div>
 						</div>
