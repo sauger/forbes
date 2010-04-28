@@ -22,11 +22,10 @@
 				<span>问卷调查</span>				
 		</div>
 		<div id="hr_top"></div>
-		
-				<?php 
+				<?php
 					if($news_count>=1)
 					{
-							$sql="SELECT f.name,f.description,f.created_at FROM forbes.fb_vote f order by f.description desc ";
+							$sql="SELECT f.id,f.name,f.description,f.created_at FROM forbes.fb_vote f order by f.description desc ";
 				?>
 				<div id="left_content">
 				<div id="t_left"></div>
@@ -41,14 +40,13 @@
 				for($i=0;$i<$count;$i++){
 				?>
 			<div id="content">
-					<div id="c_c"><div class="c_left_t">标题：</div>
-							<div id="c_title"><?php echo $value[$i]->name;?></div><div id="time">发布于：<?php echo $value[$i]->created_at ?></div>
+					<div id="c_c">
+							<div id="c_title"><a href="survey.php?id=<?php echo $value[$i]->id;?>"><?php echo $value[$i]->name;?></a></div><div id="time">发布于：<?php echo $value[$i]->created_at ?></div>
 					</div>
 					<div id="c_bottom"><?php echo $value[$i]->description?></div>
 			</div>
 			<div class="hr"></div>
 			<?php
-			
 				}
 			?>
 				<div id="page"><?php paginate();?></div>
