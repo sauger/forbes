@@ -157,7 +157,8 @@
 								$keywords = explode('||',$news->keywords);
 									for($i=0;$i<count($keywords);$i++){
 										if (empty($keywords[$i])) continue;
-										$out[]="<a href=\"news_list.php?keyword=" .urlencode($keywords[$i])."\">{$keywords[$i]}</a>";
+										$surl = get_news_serach_url($keywords[$i]);
+										$out[]="<a href='{$surl}'>{$keywords[$i]}</a>";
 									}
 								echo implode('、',$out);
 						?>
