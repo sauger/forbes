@@ -5,7 +5,7 @@
 	<div class=more><a href=""><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
 </div>
 <div id="forum_box">
-	<div class=pic><?php show_page_img(null,null,0,"right_forum_news0")?></div>
+	<div class=pic><?php show_page_img(null,null,0,"image1","right_forum_news0")?></div>
 	<div <?php show_page_pos("right_forum_news0")?> class=pictitle><?php show_page_href("right_forum_news0")?></div>
  	<div id=forum_dash></div>
 	<?php
