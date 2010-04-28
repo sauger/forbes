@@ -185,19 +185,19 @@
 							<div id="linkman_phone">* 联系人电话</div>
 							<input type="text"  style="border:1px solid #999999;  width:30px; margin-top:5px; height:20px; margin-left:13px;" name="text"/>
 							<input type="text"  style="border:1px solid #999999;  width:80px; margin-top:5px; height:20px; margin-left:3px;" name="text"/>
-							<input type="text"  style="border:1px solid #999999;  width:30px; margin-top:5px; height:20px; margin-left:3px;" name="text"/>
+							<input type="text"  style="border:1px solid #999999;  width:27px; margin-top:5px; height:20px; margin-left:3px;" name="text"/>
 					</div>
 					<div class="linkman_a">
 							<div class="linkman_name">* 联系人邮件：</div>
 							<div class="linkman_input"><input type="text" style="border:1px solid #999999;  width:190px; margin-top:5px; height:20px; margin-left:8px;" name="text"/></div>
 							<div id="linkman_qq">联系人QQ：</div>
-							<input type="text" style="border:1px solid #999999;  width:155px; margin-top:5px; margin-left:4px; height:20px;" name="text"/>
+							<input type="text" style="border:1px solid #999999;  width:157px; margin-top:5px; margin-left:4px; height:20px;" name="text"/>
 					</div>
 					<div class="linkman_a">
 							<div id="linkman_name">* 联系人职位信息：</div>
 							<div class="linkman_input"><input type="text" style="border:1px solid #999999;  width:165px; margin-top:5px; height:20px; margin-left:8px;" name="text"/></div>
 							<div id="linkman_msn">联系人MSN：</div>
-							<input type="text" style="border:1px solid #999999;  width:155px; margin-top:5px; height:20px;" name="text"/>
+							<input type="text" style="border:1px solid #999999;  width:156px; margin-top:5px; height:20px;" name="text"/>
 					</div>
 					<div id="kong"></div>
 			</div>
