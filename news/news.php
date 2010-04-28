@@ -76,7 +76,7 @@
 					$item = $category->find($parent_ids[$i]);
 					$curl = $page_type == 'static' ? "/review/list/{$parent_ids[$i]}/cid" :"news_list.php?cid={$parent_ids[$i]}";
 			?>
-				<a href="<?php echo $curl?>"><?php echo $item->name;?></a> > 
+				<a href="<?php echo get_newslist_url($parent_ids[$i]);?>"><?php echo $item->name;?></a> > 
 			<?php }	?>
 			<span style="color:#246BB0;"><?php echo strip_tags($news->title);?></span>				
 		</div>
@@ -157,7 +157,8 @@
 								$keywords = explode('||',$news->keywords);
 									for($i=0;$i<count($keywords);$i++){
 										if (empty($keywords[$i])) continue;
-										$out[]="<a href=\"news_list.php?keyword=" .urlencode($keywords[$i])."\">{$keywords[$i]}</a>";
+										$surl = get_news_serach_url($keywords[$i]);
+										$out[]="<a href='{$surl}'>{$keywords[$i]}</a>";
 									}
 								echo implode('、',$out);
 						?>

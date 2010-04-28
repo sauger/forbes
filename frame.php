@@ -196,6 +196,7 @@
 
 function paginate($url="",$ajax_dom=null,$page_var="page",$force_show = false)
 {
+	global $page_type;
 	$pageindextoken = empty($page_var) ? "page" : $page_var;
 	$record_count_token = $pageindextoken . "_record_count";	
 
@@ -205,23 +206,35 @@ function paginate($url="",$ajax_dom=null,$page_var="page",$force_show = false)
 	global $$record_count_token;
 	$pageindex = isset($_REQUEST[$pageindextoken]) ? $_REQUEST[$pageindextoken] : 1;
 	$pagecount = isset($_REQUEST[$pagecounttoken]) ? $_REQUEST[$pagecounttoken] : $$pagecounttoken;
+	if ($pagecount <= 1 && !$force_show) return;
 	if(empty($url)){
 		$url = $_SERVER['PHP_SELF'] ."?";
-		
-
 	}
-			parse_str($_SERVER['QUERY_STRING'], $params);
+	if($page_type=='static'){
+		$url = $_SERVER['PHP_SELF'];
+		$pattern = '/(.+)\/page\/(\d+)/';
+		if(preg_match($pattern,$url)){
+			$url = preg_replace($pattern,'$1',$url);
+		}
+		$pagefirst = $url . "/page/1";
+		$pagenext = $url ."/page/" .($pageindex + 1);
+		$pageprev = $url ."/page/" .($pageindex-1);
+		$pagelast = $url ."/page/" .($pagecount);
+		
+	}else{
+		parse_str($_SERVER['QUERY_STRING'], $params);
 		unset($params[$pageindextoken]);
 		
 		foreach ($params as $k => $v) {
 			$url .= "&" .$k . "=" . urlencode($v);
-		}	
-	if ($pagecount <= 1 && !$force_show) return;
+		}
+		$pagefirst = $url . "&$pageindextoken=1";
+		$pagenext = $url ."&$pageindextoken=" .($pageindex + 1);
+		$pageprev = $url ."&$pageindextoken=" .($pageindex-1);
+		$pagelast = $url ."&$pageindextoken=" .($pagecount);
+	}
 	
-	$pagefirst = $url . "&$pageindextoken=1";
-	$pagenext = $url ."&$pageindextoken=" .($pageindex + 1);
-	$pageprev = $url ."&$pageindextoken=" .($pageindex-1);
-	$pagelast = $url ."&$pageindextoken=" .($pagecount);
+	
 	if ($pageindex == 1 || $pageindex ==null || $pageindex == "")
 	{?>
 	  <span>[首页]</span> 
@@ -266,8 +279,13 @@ function paginate($url="",$ajax_dom=null,$page_var="page",$force_show = false)
 	<script>
 			function jumppage(urlprex,pageindex)
 			{
+				<?php if($page_type=='static'){?>
+				var surl='<?php echo $url ."/page/";?>' + pageindex;
+				<?php }else{?>
 				var surl=urlprex+pageindex;
-				<?php if($ajax_dom){
+				<?php 
+				}
+				if($ajax_dom){
 					echo "$('#{$ajax_dom}').load(surl);";
 				}else{ 
 					echo "window.location.href=surl;";
