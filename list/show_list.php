@@ -1,35 +1,39 @@
+<?php
+		include_once(dirname(__FILE__).'/../frame.php');
+		$db = get_db();
+		$id = intval($_GET['id']);
+		$order = $_GET['order'];
+		if(strlen($order)>20||$id==""){
+			die();
+		}
+		$desc = intval($_GET['desc']);
+		$list = new table_class('fb_custom_list_type');
+		$list->find($id);
+		if($list->list_type==4){
+			if($page_type=='static'){
+				redirect('/pic_list/'.$id,'header');
+			}else{
+				redirect('pic_list.php?id='.$id,'header');			
+			}
+			die();
+		}
+		if($list->tablename="")
+		{
+			die();
+		}		
+	?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <head>
    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
 	<title>福布斯-榜单首页</title>
-	<?php
-		include_once(dirname(__FILE__).'/../frame.php');
-		$db = get_db();
+	<?php 
 		use_jquery();
 		js_include_tag('public','right');
 		css_include_tag('list','public','right_inc');
 	?>
 </head>
 <body>
-<?php
-	$id = intval($_GET['id']);
-	$order = $_GET['order'];
-	if(strlen($order)>20||$id==""){
-		die();
-	}
-	$desc = intval($_GET['desc']);
-	$list = new table_class('fb_custom_list_type');
-	$list->find($id);
-	if($list->list_type==4){
-		redirect('pic_list.php?id='.$id);
-		die();
-	}
-	if($list->tablename="")
-	{
-		die();
-	}
-?>
 	<div id=ibody>
 		<?php include_top();?>
 		<div id=bread><a href="/list">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
@@ -191,11 +195,6 @@
 	 		<?php include_right( "rich");?>
 	 		<?php include_right( "magazine");?>
 		</div>
-
-
-
-
-
 		<?php include_bottom();?>
 	</div>
 </body>
