@@ -90,7 +90,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #column_person_left_content .c_b_content a{color:#3075b9; text-decoration:none;}
 #column_person_left_content .b_b_left{width:66px; height:90px; margin-top:8px; margin-left:15px;}
 #column_person_left_content .b_b_right{width:66px; height:90px; margin-top:8px; margin-right:15px; float:right;}
-#column_person_left_content .b_pic{width:64px; height:64px; border:1px solid #cccccc;}
+#column_person_left_content .b_pic{width:64px; height:84px; border:1px solid #cccccc;}
 #column_person_left_content .b_pic img{width:62px; height:62px; margin:1px;}
 #column_person_left_content .b_pictitle{width:66px; height:40px; margin-top:5px; line-height:20px; text-align:center; overflow:hidden;}
 #column_person_left_content .b_pictitle a{color:#333333;}
