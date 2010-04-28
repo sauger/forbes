@@ -81,27 +81,10 @@ a{text-decoration: none; color:#246BB0}
 
 #people_connect{width:313px;  text-align:center; margin-top:4px; font-size:12px; line-height:20px; float:left; display:inline;}
 .people_c{width:310px; height:20px;  margin-top:5px;  float:left; display:inline;}
-.c_people{width:60px; height:20px;  float:left; display:inline;}
-.c_type{width:70px;  height:20px; margin-left:10px;  float:left; display:inline;}
-.people_enterprise{width:45px;  height:20px; margin-left:30px;  float:left; display:inline;}
-.c_money{width:70px;  height:20px; float:right; display:inline;}
+.c_people{width:60px; height:20px;  overflow:hidden; float:left; display:inline;}
+.c_type{width:85px;  height:20px; overflow:hidden; float:left; display:inline;}
+.people_enterprise{width:95px; height:20px; overflow:hidden;  float:left; display:inline;}
+.c_money{width:70px; overflow:hidden; height:20px; float:right; display:inline;}
 
 
 
-#made{width:315px; margin-top:20px; float:left; display:inline;}
-#essay_top{width:315px; height:30px; background:url(../images/rich/top.jpg) no-repeat; float:left; display:inline;}
-#essay_con{width:265px; height:28px; margin-left:15px; font-size:14px; color:#999999; font-weight:bold; line-height:30px; float:left; displaY:inline;}
-#essay_title{width:119px; height:28px; color:#11579E; font-weight:bold; line-height:25px; margin-left:15px; font-size:14px; float:left; display:inline;}
-#essay_rc{width:70px; height:28px; line-height:25px; float:Left; display:inline;}
-#essay_redio{width:25px; height:20px; margin-top:3px; float:left; display:inline;}
-#essay_div{width:313px; height:130px; border-left:1px solid #DFDFDF; border-right:1px solid #DFDFDF; margin-top:0x solid red; float:left; display:inline;}
-#essay_a{width:312px; margin-top:10px; float:left; display:inline;}
-#essay_b{width:270px; height:28px; margin-left:15px; line-height:25px;color:#11579E; font-weight:bold; margin-top:5px; font-size:14px; float:left; display:inline;}
-#essay_c_left{width:226px; height:28px; word-wrap: break-word; word-break: normal; margin-left:15px; line-height:25px; float:left; display:inline;}
-#essay_c_right{width:70px; height:28px;  line-height:25px; color:#11579E; float:right; display:inline;}
-.essay_rdo{width:60px; height:20px; margin-top:3px; line-height:25px;  float:left; display:inline;}
-.essay_rd{width:27px; height:15px; margin-top:3px;  float:left; display:inline;}
-#essay_bottom{width:322px; height:8px; background:url(../images/rich/bottom.jpg) no-repeat; float:left; display:inline;}
-#essay_btn{width:70px; height:28px; line-height:25px; color:#11579E; float:right; display:inline;}
-
-#chr_c_right{width:470px; height:20px; word-spacing:5px; float:left; display:inline;}
