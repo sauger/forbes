@@ -31,10 +31,10 @@
 		<div id="hr_top"></div>
 		
 			<div id="left">
-					<div id="christcross">
-								<div id="christcross_left"></div>
-								<div id="christcross_middle">
-										<div id="chr_christcross">
+					<div id="c_top">
+								<div id="c_left"></div>
+								<div id="c_middle">
+										<div id="chr_c">
 												<div id="chr_c_left">点击按字母排序：</div>
 												<div id="chr_c_right"><a href="#">A</a> <a href="#">B</a> <a href="#">C</a> <a href="#">D</a> <a href="#">E</a> <a href="#">F</a> <a href="#">G</a> <a href="#">H</a> <a href="#">I</a> <a href="#">J</a> <a href="#">K</a> <a href="#">L</a> <a href="#">M</a> <a href="#">N</a> <a href="#">O</a> <a href="#">P</a> <a href="#">Q</a> <a href="#">R</a> <a href="#">S</a> <a href="#">T</a> <a href="#">U</a> <a href="#">V</a> <a href="#">W</a> <a href="#">X</a> <a href="#">Y</a> <a href="#">Z</a></div>	
 										</div>
@@ -44,25 +44,25 @@
 										</div>							
 								
 								</div>
-								<div id="christcross_right"></div>
+								<div id="c_right"></div>
 						</div>
 					<div class=zh_left_c>
-								<div class=zh_left_c_left>
+								<div class=zc_left>
 									<img src="../images/search/1.jpg"></div>
-								<div class=zh_left_c_right>
-									<div  class=zh_left_name><strong>张默默</strong></div>
+								<div class="z_title">
+									<div  class=name><strong>张默默</strong></div>
 											
-										<div class=zh_left_com>
-											<div  class=zh_left_CompanyName>北极光风险投资</div>
-											<div  class=zh_left_TypeofBusiness>合伙人</div>
+										<div class=com>
+											<div  class=zh_left_co>北极光风险投资</div>
+											<div  class=zh_left_of>合伙人</div>
 											</div>
-											<div class=zh_left_ii>
-											<div class=zh_left_investmentdirection>投资方向</div> 
-											<div  class=zh_left_investmentdirectioncontent>生物医药 电子商务 制造</div>
+											<div class=zh_left_z>
+											<div class=zh_left_i>投资方向</div> 
+											<div  class=zh_left_in>生物医药 电子商务 制造</div>
 											</div>
-									<div  class=zh_left_Newsofinvestment>投资动态</div>
-									<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
-									<div class=zh_left_InvestmentVehicle>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
+									<div  class=zh_left_ne>投资动态</div>
+									<div class=zh_left_inv>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
+									<div class=zh_left_inv>曹国伟酸雨不算精准把握；曹国伟酸雨不算精准把握</div>
 								</div>
 					</div>
 					<div class="c_hr"></div>
