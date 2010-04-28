@@ -36,7 +36,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+	<? include_top();?>
 		<div id=bread><a href="#">榜单</a></div>
 		<div id=bread_line></div>
 		<div id=pic_list>
@@ -80,12 +80,12 @@
 		</div>
 		<input type="hidden" id="list_id" value="<?php echo $id;?>" />
 		<div id="right_inc">
-		 		<?php include "../right/ad.php";?>
-		 		<?php include "../right/favor.php";?>
-		 		<?php include "../right/four.php";?>
-		 		<?php include "../right/magazine.php";?>
+		 	<?php include_right( "ad");?>
+	 		<?php include_right( "favor");?>
+	 		<?php include_right( "four");?>
+	 		<?php include_right( "magazine");?>
 		</div>
-	<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+	<? include_bottom();?>
 	</div>
 </body>
 </html>

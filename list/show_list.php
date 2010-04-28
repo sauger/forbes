@@ -1,43 +1,51 @@
+<?php
+		include_once(dirname(__FILE__).'/../frame.php');
+		$db = get_db();
+		$id = intval($_GET['id']);
+		$order = $_GET['order'];
+		if(strlen($order)>20||$id==""){
+			die();
+		}
+		$desc = intval($_GET['desc']);
+		$list = new table_class('fb_custom_list_type');
+		$list->find($id);
+		if($list->list_type==4){
+			if($page_type=='static'){
+				redirect('/pic_list/'.$id,'header');
+			}else{
+				redirect('pic_list.php?id='.$id,'header');			
+			}
+			die();
+		}
+		if($list->tablename="")
+		{
+			die();
+		}		
+	?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <head>
    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
 	<title>福布斯-榜单首页</title>
-	<?php
-		include_once(dirname(__FILE__).'/../frame.php');
-		$db = get_db();
+	<?php 
 		use_jquery();
 		js_include_tag('public','right');
 		css_include_tag('list','public','right_inc');
 	?>
 </head>
 <body>
-<?php
-	$id = intval($_GET['id']);
-	$order = $_GET['order'];
-	if(strlen($order)>20||$id==""){
-		die();
-	}
-	$desc = intval($_GET['desc']);
-	$list = new table_class('fb_custom_list_type');
-	$list->find($id);
-	if($list->list_type==4){
-		redirect('pic_list.php?id='.$id);
-		die();
-	}
-	if($list->tablename="")
-	{
-		die();
-	}
-?>
 	<div id=ibody>
-		<?php include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=bread><a href="index.php">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
+		<?php include_top();?>
+		<div id=bread><a href="/list">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
 		<div id=bread_line>
 		<div id="list_left">
 			<div id="list_title"><?php echo $list->name;?></div>
 			<div id="list_left_top">
+				<?php if($page_type=='static'){?>
+				<a href="/list/<?php echo $id?>/more">查看详细</a>
+				<?php }else{?>
 				<a href="more.php?id=<?php echo $id;?>">查看详细</a>
+				<?php }?>
 			</div>
 			<div id="list_list_content">
 			<?php
@@ -136,14 +144,17 @@
 							?>
 						<td <?php if($i==1){?>style="border-left:0;"<?php }?> <?php if($i==($count-1)){?>style="border-right:0;"<?php }?> width="<?php echo $width;?>%" valign="middle">
 								<?php if($fields[$i]->Key=='MUL'){
-									echo "<a href='show_list.php?id=$id&order={$fields->Field}&desc=";
-									echo ($order==$fields->Field)?!$desc:'1';
-									echo "'>";
+									$desc1 = ($order==$fields[$i]->Field)?!$desc:'1';
+									if($page_type=='static'){
+										$url = "/list/{$id}/{$fields[$i]->Field}/{$desc1}";
+									}else{
+										$url = "show_list.php?id={$id}&order={$fields[$i]->Field}&desc={$desc1}";
+									}
+									echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
+								}else{
+									echo $fields[$i]->Comment;	
 								}
-								echo $fields[$i]->Comment;
-								if($fields[$i]->Key=='MUL'){
-									echo "</a>";
-								}?>
+								?>
 						</td>
 							<?php }?>
 					</tr>
@@ -178,16 +189,12 @@
 		</div>
 
 		<div id="right_inc">
-			<?php include_once(dirname(__FILE__).'/../right/ad.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/favor.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/four.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/magazine.php');?>
+			<?php include_right( "ad");?>
+	 		<?php include_right( "favor");?>
+	 		<?php include_right( "four");?>
+	 		<?php include_right( "rich");?>
+	 		<?php include_right( "magazine");?>
 		</div>
-
-
-
-
-
-		<?php include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+		<?php include_bottom();?>
 	</div>
 </body>
