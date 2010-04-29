@@ -189,10 +189,10 @@
                       <option value="7.市场 销售 运营总监">7市场/销售/运营总监</option>
                       <option value="8.总工程师 高级工程师">8.总工程师/高级工程师</option>
                       <option value="9.部门经理">9.部门经理</option>
-                       <option value="01.专业人士 会计师 律师 经济师 教授等">01.专业人士（会计师，律师，经济师，教授等）</option>
+                       <option value="10.专业人士 会计师 律师 经济师 教授等">10.专业人士（会计师，律师，经济师，教授等）</option>
 
-                      <option value="12.政府机构官员"1>12.政府机构官员</option>
-                      <option value="23.其他"213.其他</option>
+                      <option value="11.政府机构官员">11.政府机构官员</option>
+                      <option value="12.其他">12.其他</option>
                   </select></td>
                 </tr>
                 <tr>
