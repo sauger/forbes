@@ -206,7 +206,7 @@
 							<div id="linkman_msn">联系人MSN：</div>
 							<input type="text" id="msn" name="post[msn]"/>
 					</div>
-					<div id="kong"><input type="button" id="sumbit" value="完成"/></div>
+					<div id="kong"><input type="button" id="sumbit" value="完  成"/></div>
 			</div>
 			<input type="hidden" name="income1" id="h_income1"><input type="hidden" name="income2" id="h_income2"><input type="hidden" name="session" value="<?php echo $_SESSION['sign'];?>">
 			</form>

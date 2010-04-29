@@ -78,7 +78,7 @@ p{margin:0; padding:0}
 #q_input{border:1px solid #999999;  width:156px; margin-top:5px; margin-left:6px; height:20px;}
 #add_income2{width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:15px;}
 #del_income2{width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:10px;}
-#fc_open input{margin-top:5px;}
+#fc_open input{margin-top:5px; }
 #msn{border:1px solid #999999;  width:156px; margin-top:5px; height:20px;}
 .rdo{margin-left:10px; float:left; display:inline;}
 #rdo_a{float:left; display:inline;}
@@ -91,7 +91,7 @@ p{margin:0; padding:0}
 #year2{width:70px; margin-top:18px;}
 #income2{width:70px; margin-top:7Px;}
 #kong{width:635px; height:80px; text-align:center; float:left; display:inline;}
-#kong input{width:70px; height:24px; margin-top:30px;  border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; }
+#kong input{width:100px; height:28px; text-align:center; margin-top:30px;  border:0px solid red; background:url(../images/sign/right_b_b_btn1.jpg) no-repeat; }
 #money_input input{border:1px solid #999999;  width:190px; margin-top:5px; height:20px;}
 .fc_c_right input{border:1px solid #999999; width:400px; margin-top:5px; height:20px;}
 #cr_t{border:1px solid #999999; margin-left:20px; width:414px; margin-top:5px; height:20px;}
