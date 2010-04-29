@@ -120,8 +120,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_report .content_title{width:290px; height:17px; font-size:13px; line-height:17px; font-weight:bold; overflow:hidden;} 
 #billionaires_report .content_title a{color:#003295; text-decoration:none;}
 #billionaires_report .content_jz{width:290px; height:16px; margin-top:5px; line-height:16px; color:#999999;}
-#billionaires_report .content_content{width:290px; height:92px; margin-top:10px; line-height:23px; overflow:hidden;}
-#billionaires_report .content_content a{color:#666666; text-decoration:none; text-indent:24px;}
+#billionaires_report .content_content{width:290px; height:92px; margin-top:10px; font-size:13px; line-height:23px; overflow:hidden;}
+#billionaires_report .content_content a{color:#666666; text-decoration:none; text-indent:2em;}
 #billionaires_report_left{width:290px; margin-top:10px;}
 #billionaires_report_right{width:290px; margin-top:10px; float:right;}
 #billionaires_b_dash{width:1px; height:562px; margin-top:45px; margin-left:45px; background:url('/images/billionaires/s_dash.jpg') no-repeat; overflow:hidden;}
