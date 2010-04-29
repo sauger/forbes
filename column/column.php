@@ -29,7 +29,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<? include_once('../inc/top.inc.php');?>
+		<? include_top();?>
 		<div id=bread><a href="#">专栏</a></div>
 		<div id=bread_line></div>
 		<div id=column_person_left>
@@ -80,7 +80,7 @@
 			</div>
 			<iframe scrolling="no" id="iframesrc" border=0  frameborder="no" width=100% height=100% src="iframe.php?type=news&id=<?php echo $id;?>&date=<?php echo $date; ?>"></iframe>
 		</div>
-		<? include_once('../inc/bottom.inc.php');?>
+		<? include_bottom();?>
 	</div>
 </body>
 </html>
