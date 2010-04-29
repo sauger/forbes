@@ -182,9 +182,6 @@
 						</div>
 						<div class=content><button id="search"></button></div>
 					</div>
-					<div id=search_pic1>
-						<a href=""><img border=0 src="/images/fh/three.jpg"></a>	
-					</div>
 					<div id=search_pic2>
 						<a href=""><img border=0 src="/images/fh/four.jpg"></a>	
 					</div>
@@ -255,7 +252,7 @@
 					<div class=content <?php show_page_pos($pos_name)?> <?php if($i>0) echo' style="margin-top:40px;"';?>>
 							<div class=content_title><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 							<div class=content_jz>记者:<?php echo $pos_items->$pos_name->alias;?></div>
-							<div class=content_content><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a></div>
+							<div class=content_content><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->description;?></a></div>
 					</div>	
 					<?php }?>
 				</div>
@@ -267,7 +264,7 @@
 					<div class=content <?php show_page_pos($pos_name)?> <?php if($i>3) echo' style="margin-top:40px;"';?>>
 							<div class=content_title><a href="<?php echo $pos_items->$pos_name->href?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 							<div class=content_jz>记者:<?php echo $pos_items->$pos_name->alias;?></div>
-							<div class=content_content><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank">　　<?php echo $pos_items->$pos_name->description;?></a></div>
+							<div class=content_content><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><?php echo $pos_items->$pos_name->description;?></a></div>
 					</div>	
 					<?php }?>
 				</div>
