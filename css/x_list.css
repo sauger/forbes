@@ -18,8 +18,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #content{width:650px; float:left; display:inline;}
 #c_c{width:600px; height:20px; margin-left:30px; margin-top:10px; float:left; display:inline;}
 #c_bottom{width:590px;  margin-left:40px; margin-top:20px; line-height:20px; font-size:12px; overflow:hidden;  float:left; display:inline;}
-#c_title{width:150px; height:20px; overflow:hidden; font-size:14px; color:#246BB0; font-weight:bold;  float:left; display:inline;}
-.c_left_t{width:45px; height:20; font-size:14px; font-weight:bold; float:left; display:inline;}
+#c_title{width:150px; height:20px; overflow:hidden; font-size:14px; font-weight:bold;  float:left; display:inline;}
+#c_title a{ text-decoration:none; color:#246BB0; }
 #time{width:180px; height:20px; font-size:12px; float:right; display:inline;}
 #author{width:260px; height:20px; text-align:right;  font-size:12px; float:left; display:inline;}
 .hr{width:640px; margin-left:5px; margin-top:10px; margin-bottom:10px; background:url(../images/right/dash4.gif) repeat-x; height:1px; font-size:0px; line-height:0xp; float:left; display:inline;}
