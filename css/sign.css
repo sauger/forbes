@@ -13,9 +13,10 @@ p{margin:0; padding:0}
 .f_title_left{width:3px;height:30px; background:url(../images/club/l_title_left.jpg) no-repeat; float:left; display:inline;}
 .f_title_middle{width:634px; height:28px; background:url(../images/club/l_title_center_bg.jpg) repeat-x; line-height:28px; no-repeat; border-top:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6;  float:left; dislay:inline;}
 .f_title_right{width:3px; height:30px; background:url(../images/club/l_title_right.jpg) no-repeat; float:left; display:inline;}
-.title_z{width:100px; height:28px; margin-left:10px;font-size:14px; font-weight:bold; color:#2FA3CC; float:left; display:inline;}
+.title_z{width:100px; height:28px; margin-left:10px;font-size:14px; font-weight:bold; color:#246BB0; float:left; display:inline;}
 #f_content{width:638px; border-left:1px solid #E6E6E6; border-bottom:1px solid #E6E6E6; border-right:1px solid #E6E6E6; float:left; display:inline;}
 
+#file{  float:left; display:inline;}
 
 .f_xx{width:80px; height:15px;  margin-left:2px; line-height:20px;  font-size:13px; float:left; display:inline;}
 #fc_x_right{width:400px; height:20px; margin-top:4px; float:left; display:inline;}
@@ -54,18 +55,45 @@ p{margin:0; padding:0}
 .company_left{width:100px; height:30px; margin-left:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
 #comany_add{width:130px; height:30px; margin-left:20px; font-size:13px; font-weight:bold; float:left; display:inline;}
 #fc_m{width:600px; height:50px; margin-left:20px; line-height:30px; float:left; display:inline;}
-#fc_c_ma{width:90px; line-height:20px; margin-left:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#fc_c_ma{width:120px; line-height:20px; margin-left:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
 #money_i{width:200px; height:30px; margin-top:8px;  font-size:13px; font-weight:bold; float:left; display:inline;}
-#money_v{width:250px;  line-height:48px; margin-left:5px; font-size:13px; float:left; display:inline;}
-#fc_v{width:600px;  margin-left:20px; margin-top:5px; text-align:left; line-height:30px; float:left; display:inline;}
-
-
+#money_i input{border:1px solid #999999;  width:190px; margin-top:5px; height:20px;}
+#money_v{width:140px; height:50px; line-height:50px; margin-left:5px; font-size:13px; float:left; display:inline;}
+#fc_v{width:600px; height:50px;  margin-left:20px; margin-top:5px; text-align:left; line-height:30px; float:left; display:inline;}
+#post_input{border:1px solid #999999; margin-left:30px; width:100px; margin-top:5px; height:20px;}
+#add_income1{width:70px; height:24px; border:0px solid red; margin-top:15px; background:url(../images/sign/right_b_b_btn.jpg) no-repeat;}
+#del_income1{width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:10px;}
+#year1{width:70px; margin-top:18px;}
+#income1{width:70px; margin-top:7Px;}
+#re_a{border:1px solid #999999; width:444px; margin-top:5px; height:20px;}
+#re_b{border:1px solid #999999; width:444px; margin-top:5px; height:20px;}
 .linkman_a{width:630px; height:30px;  float:left; display:inline;}
 .linkman_name{width:100px; height:30px; margin-left:42px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
 #linkman_phone{width:80px; height:30px; margin-left:12px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#phone_a{border:1px solid #999999;  width:30px; margin-top:5px; height:20px; margin-left:15px;}
+#phone_b{border:1px solid #999999;  width:83px; margin-top:5px; height:20px; margin-left:3px;}
+#phone_c{border:1px solid #999999;  width:27px; margin-top:5px; height:20px; margin-left:3px;}
+#address{border:1px solid #999999; width:414px; margin-top:5px; height:20px;}
 #linkman_qq{width:80px; height:30px;  margin-left:21px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
-
+#q_input{border:1px solid #999999;  width:156px; margin-top:5px; margin-left:6px; height:20px;}
+#add_income2{width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:15px;}
+#del_income2{width:70px; height:24px; border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; margin-top:10px;}
+#fc_open input{margin-top:5px;}
+#msn{border:1px solid #999999;  width:156px; margin-top:5px; height:20px;}
+.rdo{margin-left:10px; float:left; display:inline;}
+#rdo_a{float:left; display:inline;}
 #linkman_name{width:125px; height:30px; margin-left:42px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
 #linkman_msn{width:85px; height:30px;  margin-left:21px; line-height:30px; font-size:13px; font-weight:bold; float:left; display:inline;}
-
-#kong{width:600px; height:15px; float:left; display:inline;}
+#linkman_name_input input{border:1px solid #999999;  width:169px; margin-top:5px; height:20px; margin-left:29px;}
+.linkman_input input{border:1px solid #999999;  width:169px; margin-top:5px; height:20px; margin-left:29px;}
+#p_info{border:1px solid #999999;  width:170px; margin-top:5px; height:20px; margin-left:4px;}
+#req{width:150px; margin-top:6px;}
+#year2{width:70px; margin-top:18px;}
+#income2{width:70px; margin-top:7Px;}
+#kong{width:635px; height:80px; text-align:center; float:left; display:inline;}
+#kong input{width:70px; height:24px; margin-top:30px;  border:0px solid red; background:url(../images/sign/right_b_b_btn.jpg) no-repeat; }
+#money_input input{border:1px solid #999999;  width:190px; margin-top:5px; height:20px;}
+.fc_c_right input{border:1px solid #999999; width:400px; margin-top:5px; height:20px;}
+#cr_t{border:1px solid #999999; margin-left:20px; width:414px; margin-top:5px; height:20px;}
+#www_r{border:1px solid #999999; width:450px; margin-top:5px; height:20px;}
+#r_textarea{width:450px;  margin-top:5px; height:200px;}

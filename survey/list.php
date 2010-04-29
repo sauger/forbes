@@ -19,7 +19,7 @@
 <div id=ibody>
 		<?php include "../inc/top.inc.php";?>
 		<div id=bread>			
-				<span>问卷调查</span>				
+				<span>问卷调查</span>
 		</div>
 		<div id="hr_top"></div>
 				<?php
@@ -30,7 +30,10 @@
 				<div id="left_content">
 				<div id="t_left"></div>
 					<div id="t_c">
-					<div id="title"><div id="title_a"></div><div id="title_b">问卷调查</div> <div id="title_num">共<?php echo $v=$news_count[0]->num;?>篇</div>
+					<div id="title">
+								<div id="title_a"></div>
+								<div id="title_b">问卷调查</div>
+								<div id="title_num">共<?php echo $v=$news_count[0]->num;?>篇</div>
 					</div>
 				</div>
 				<div id="t_right"></div>
