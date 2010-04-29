@@ -14,9 +14,11 @@ div{margin:0; padding:0; float:left; display:inline;}
 #top_function #magazine_title_more{width:50px; height:14px; margin-top:8px; margin-right:15px; line-height:14px; float:right;}
 #top_function #magazine_title_more a{color:#ffffff; text-decoration:none;}
 #top_function #magazine_pic{width:72px; height:93px; margin-top:14px; margin-left:10px;}
-#top_function #magazine_description{width:122px; height:60px; margin-top:15px; margin-left:5px; color:#666666; line-height:20px; overflow:hidden;}
-#top_function #magazine_description .font1{color:#333333; font-weight:bold;}
+#top_function #magazine_description{width:122px; height:60px; margin-top:15px; margin-left:8px; color:#898989; line-height:20px; overflow:hidden;}
+#magazine_description a{color:#727272;text-decoration:none; font-weight:bold;}
 #top_function #magazine_btn{width:122px; height:23px; margin-top:5px; margin-left:5px;}
+#top_function #magazine_btn a{float:left; display:inline;}
+
 
 #top_logo{width:785px; height:90px; margin-top:3px; background:url(/images/public/bg1.jpg) repeat-x;}
 #top_logo #border{width:2px; height:90px; background:url(/images/public/border.jpg) no-repeat;}
@@ -42,7 +44,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #navigation .menu #piccolumn{background:url(/images/public/m_column.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_column.png);}
 
 #navigation #top_function2{width:214px; height:29px; margin-top:5px; background:url(/images/public/bg3.jpg) no-repeat; background-position:bottom; float:right;}
-#navigation #member{width:52px; height:12px; margin-top:12px; margin-left:40px; cursor:pointer; background:url(/images/public/member.png) no-repeat;}
+#navigation #member{width:52px; height:12px; margin-top:12px; margin-left:40px; cursor:pointer; background:url(/images/public/member.png) no-repeat;float:left;}
 #navigation #magazine{width:52px; height:12px; margin-top:12px; margin-right:10px; cursor:pointer; background:url(/images/public/magazine.png); float:right;}
 
 #navigation2{width:1000px; height:27px; background:#C1E1EE;}

@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<?php include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+		<?php include_top();?>
 		<div id=bread><a href="index.php">富豪</a> > <span style="color:#246BB0;">动态排名</span></div>
 		<div id=bread_line>
 		<div id="list_left">
@@ -23,7 +23,7 @@
 			<div id="list_list_content">
 				<table border="0" cellspacing="1" >
 					<tr id="list_top_tr">
-							<td valign="middle" width="5%"><a href="more.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">排名</a></td>
+							<td valign="middle" width="5%">排名</td>
 							<td valign="middle" width="25%">姓名</td>
 							<td valign="middle" width="10%">年龄</td>
 							<td valign="middle" width="15%">财富(亿RMB)</td>
@@ -66,16 +66,16 @@
 		</div>
 
 		<div id="right_inc">
-			<?php include_once(dirname(__FILE__).'/../right/ad.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/favor.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/four.php');?>
-			<?php include_once(dirname(__FILE__).'/../right/magazine.php');?>
+			<?php include_right( "ad");?>
+	 		<?php include_right( "favor");?>
+	 		<?php include_right( "four");?>
+	 		<?php include_right( "magazine");?>
 		</div>
 
 
 
 
 
-		<?php include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+		<?php include_bottom();?>
 	</div>
 </body>

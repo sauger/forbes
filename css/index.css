@@ -211,7 +211,7 @@ span.down{color:#33CC00;}
 .inventory_content{width:298px; border-left:1px solid #dfdfdf; border-right:1px solid #dfdfdf; overflow:hidden;}
 .inventory_title{width:270px; height:20px; margin-top:5px; margin-left:20px; padding-top:5px; padding-left:25px; background:url(/images/index/arrow2.jpg) no-repeat 0 8px; line-height:18px; overflow:hidden;}
 .inventory_title a{font-weight:bold; font-size:13px; color:#000000; text-decoration:none;}
-.inventory_list{width:270px; height:40px; margin-top:5px; margin-left:20px; font-size:13px; color:#999999; line-height:18px; overflow:hidden;}
+.inventory_list{width:270px; height:40px; margin-top:5px; margin-left:20px; font-size:13px; color:#999999; line-height:20px; overflow:hidden;}
 .inventory_dash{width:270px; height:1px; margin-top:10px; margin-left:15px; background:url(/images/index/dashed2.jpg) no-repeat;}
 .inventory_button{width:66px; height:22px; margin-right:15px; background:url(/images/index/btn1.jpg) no-repeat; float:right;}
 

@@ -151,7 +151,7 @@
 						<?php }?>
 						
 						<div class=info_dash></div>
-	
+						<?php if($news->keywords!=''){?>
 						<div class=info_keywords>
 						<?php 
 								$keywords = explode('||',$news->keywords);
@@ -166,6 +166,7 @@
 							<div id=info_keywords_bottom>
 								<div class=info_title>文章的关键字</div>
 							</div>
+						<?php }?>
 				</div>
 									
 				<?php if($news->ad_id){?>

@@ -1,4 +1,6 @@
 $(function(){
+	$(".colorbox").colorbox();
+	
 	
 	$("#user_name").blur(function(){
 		userName();
@@ -121,7 +123,7 @@ function userName(){
 			});
 		}
 	}else{
-		$(".user_check").css('display','none');
+		$(".name_check").css('display','none');
 		$("#user1").css('display','inline');
 	}
 }
@@ -217,7 +219,7 @@ function isNumberOrLetter2(s){//判断是否是数字或字母及少量特殊符
 
 
 function isEmail( str ){ 
-	var myReg = /^[-_A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
+	var myReg = /^[-_.A-Za-z0-9]+@([-_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
 	if(myReg.test(str)) return true; 
 	return false; 
 } 
