@@ -39,7 +39,7 @@
 			<?php 
 				$pos_name = "top_magazine";
 			?>
-			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img(72,93,1,'image1','top_magazine')?></div>
+			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img(72,93,0,'image1','top_magazine')?></div>
 			<div id=magazine_description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a><br><?php echo $pos_items->$pos_name->description;?></div>
 			<div id=magazine_btn><a href="<?php echo $pos_items->$pos_name->href?>"><img src="/images/public/magazine_btn.jpg" border=0></a></div>
 
