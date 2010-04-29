@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include_once('../frame.php');
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,31 +10,27 @@
 	<title>用户注册</title>
 </head>
 <?php 
-	require "../frame.php";
 	if(!is_post()){
-		die();
-	}
-	if($_SESSION['register']!=$_POST['session']){
 		die();
 	}
 	if($_POST['rvcode'] != (string)$_SESSION['register_pic']){
 		alert('验证码错误!');
-		redirect('register.php');
+		redirect('index.php');
 		die();
 	}
 	if(strlen($_POST['user']['name']) > 20){
 		alert('用户名过长！请重新输入！');
-		redirect('register.php');
+		redirect('index.php');
 		die();
 	}
 	if(strlen($_POST['user']['name']) < 4){
 		alert('用户名过短！请重新输入！');
-		redirect('register.php');
+		redirect('index.php');
 		die();
 	}
 	if(strlen($_POST['user']['password']) > 20){
 		alert('密码过长！请重新输入！');
-		redirect('register.php');
+		redirect('index.php');
 		die();
 	}
 	$user = new table_class('fb_yh');
@@ -81,12 +81,20 @@
 		$order->sh=0;
 	}
 	if($order->save()){
-		$content = "感谢您注册福布斯中文网<br/>您的账号是：<b>{$user->name}</b><br/>密码是<b>{$_POST['user']['password']}</b><br/>请妥善管理您的账号!<br/>请点击<a href=\"http://61.129.115.239/register/active.php?name={$user->name}&key={$user->authenticate_string}\">这里</a>激活您的账号。";
+		$content = "感谢您注册福布斯中文网<br/>您的账号是：<b>{$user->name}</b><br/>密码是<b>{$_POST['user']['password']}</b><br/>请妥善管理您的账号!<br/>请点击<a href=\"http://www.forbeschina.com/register/active.php?name={$user->name}&key={$user->authenticate_string}\">这里</a>激活您的账号。";
 		send_mail('smtp.163.com','sauger','auden6666','sauger@163.com','sauger@163.com','福布斯中文网',$content);
 		alert('注册成功，系统已经将激活链接发送到您的注册邮箱中，请查收邮件并激活您的账号');
 	};
-	$_SESSION['user_id']=$user->id;
-	$_SESSION['name']=$user->name;
-	redirect('/user');
+	#$_SESSION['user_id']=$user->id;
+	#$_SESSION['name']=$user->name;
+	$name = $user->name;
+	$user_id = $user->id;
+	$password = $user->password;
+	$cache_name = sprintf('%06s',$user_id) .rand_str(24);
+	$limit=3600*24;
+	setcookie("name",$name,time()+$limit,'/');
+	setcookie("cache_name",$cache_name,time()+$limit,'/');
+	setcookie("password",$password,time()+$limit,'/');
+	redirect('/');
 ?>
 </html>

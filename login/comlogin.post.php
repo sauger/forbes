@@ -6,7 +6,7 @@ if($_SESSION['login']!=$_POST['session']){
 	$name=$_POST['name'];
 	$password=$_POST['password'];
 	include("../frame.php");
-	$suess_url =   $_POST['last_url'] ? $_POST['last_url'] :'/user/user_info.php';
+	$suess_url =   $_POST['last_url'] ? $_POST['last_url'] :'/';
 	$fail_url = $_POST['last_url'] ?"index.php?last_url=" .$_POST['last_url'] :"index.php";
 	if(strlen($name)>20 || strlen($password)>20){
 		$err = "用户名或密码错误";
