@@ -30,13 +30,13 @@ if($type=="news"){
 	for($i=0;$i<count($news);$i++){ ?>
 <div class=r_content>
 	<div class=r_title>
-		<div class=wz>·<?php echo get_fck_content($news[$i]->title);?></div>
+		<div class=wz>·<a target="_blank" href="<?php echo static_news_url($news[$i])?>"><?php echo get_fck_content($news[$i]->title);?></a></div>
 		<div class=subtime>发表于：<?php echo substr($news[$i]->created_at,0,10); ?></div>	
 	</div>
 	<?php $comment=$db->query('select count(*) as num from fb_comment where resource_id='.$news[$i]->id);?>
 	<div class=r_read>阅读数 （<?php echo $news[$i]->click_count;?>）    评论 （<?php echo $comment[0]->num;?>）</div>
 	<div class=r_context>
-		<a target="_top" href="/news/news.php?id=<?php echo $news[$i]->id;?>>"><?php echo get_fck_content($news[$i]->description); ?></a>	
+		<a target="_blank" target="_top" href="<?php echo static_news_url($news[$i])?>"><?php echo get_fck_content($news[$i]->description); ?></a>	
 	</div>
 	<div class=r_dash></div>
 </div>

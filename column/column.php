@@ -37,7 +37,7 @@
 			<div id=column_person_left_content>
 					<div id=top>
 						<div id=pic><a href=""><img border=0 src="<?php echo $column->image_src;?>"></a></div>
-						<div id=pictitle_left><a href="column.php?id=<?php echo $id;?>"><?php echo $column->nick_name;?></a></div>
+						<div id=pictitle_left><a><?php echo $column->nick_name;?></a></div>
 						<div id=pictitle_right><button></button></div>
 					</div>
 					<div class=c_title>
@@ -51,20 +51,20 @@
 					</div>
 					<?php
 					$db=get_db();
-					$datetime=$db->query('select distinct(concat(left(created_at,7))) as date from fb_news where author_id='.$id.' and author_type=1 and is_adopt=1 order by created_at desc limit 5');
+					$datetime=$db->query('select distinct(concat(left(created_at,7))) as date from fb_news where publisher='.$id.' order by created_at desc limit 5');
 					 for($i=0;$i<count($datetime);$i++){ ?>
-						<div class=c_b_content><a href="column.php?id=<?php echo $id; ?>&date=<?php echo $datetime[$i]->date; ?>"><?php echo $datetime[$i]->date; ?></a></div>
+						<div class=c_b_content><a href="/column/<?php echo $name;?>/date/<?php echo $datetime[$i]->date;?>"><?php echo $datetime[$i]->date; ?></a></div>
 					<?php } ?>
 					<div class=c_title>
 						<div class=wz>其他特约专栏作家</div>
 					</div>
 					<?php
 					
-					$othercolumn=$db->query('select image_src,nick_name,id from fb_user where id<>'.$id.' order by id desc limit 6');
+					$othercolumn=$db->query('select image_src,nick_name,id,name from fb_user where id<>'.$id.' order by id desc limit 6');
 					for($i=0;$i<count($othercolumn);$i++){ ?>
 						<div class=b_b_left>
-							<div class=b_pic><a href="column.php?id=<?php echo $ohtercolumn[$i]->id;?>>"><img border=0 src="<?php echo $othercolumn[$i]->image_src; ?>></img>"></a></div>
-							<div class=b_pictitle><a href="column.php?id=<?php echo $ohtercolumn[$i]->id;?>"><?php echo $othercolumn[$i]->nick_name; ?></a></div>
+							<div class=b_pic><a href="/column/<?php echo $othercolumn[$i]->name;?>"><img border=0 src="<?php echo $othercolumn[$i]->image_src; ?>"></a></div>
+							<div class=b_pictitle><a href="/column/<?php echo $othercolumn[$i]->name;?>"><?php echo $othercolumn[$i]->nick_name; ?></a></div>
 						</div>
 					<?php } ?>
 			</div>

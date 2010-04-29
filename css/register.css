@@ -40,7 +40,8 @@ button{width:154px; height:26px; line-height:26px; font-size:14px; border:0px; f
 #submit{width:840px; height:40px; line-height:40px; text-align:center; }
 
 #register_info{width:810px; height:200px; margin-top:20px; margin-left:40px; padding-left:10px; padding-right:10px; line-height:22px; border:1px solid #efefef; overflow-y:scroll; font-size:13px; color:#333333; }
-#register_info p{margin-top:10px;}
+#register_info p{margin-top:10px; text-indent:2em;}
+
 .red{color:#ff0000;}
 .gray{color:#666666; font-size:12px;}
 #chang_pic{ cursor:pointer; color:#246BB0; margin-left:15px;}

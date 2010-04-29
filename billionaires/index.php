@@ -70,11 +70,10 @@
 						<a href="<?php echo $url;?>" target="_blank"><button></button></a>
 					</div>
 					<div class=ranking_dash></div>
-					<div class=ranking_bottom_title>
-						<div class=pic></div>
-						<div class=wz>图片富豪榜</div>
-						<div class=l_b_sx>|</div>
-						<div class=more><a href=""><img border=0 src="/images/index/more.jpg"></a></div>
+					<div class=caption>
+						<div class=captions>图片富豪榜</div>
+						<div class=line>|</div>
+						<a href="" target="_blank" class=more></a>
 					</div>
 					<div class=ranking_bottom_left_content>
 						<?php for($i=0;$i<3;$i++){
@@ -243,7 +242,9 @@
 					<a href=""><img border=0 src="/images/fh/six.jpg"></a>
 			</div>
 			<div id=billionaires_report>
-				<div id=billionaires_report_title>富豪报道</div>
+				<div class=caption>
+					<div class=captions>财富报道</div>
+				</div>
 				<div id=billionaires_report_left>
 					<?php 
 					for($i=0;$i<3;$i++){
@@ -271,7 +272,9 @@
 			</div>
 			<div id=billionaires_b_dash></div>
 			<div id=billionaires_say>
-				<div class=billionaires_say_title>创富者说</div>
+				<div class=caption>
+					<div class=captions>创富者说</div>
+				</div>
 				<?php for($i=0;$i<3;$i++){ 
 					$pos_name = "richindex_news1_{$i}";
 				?>
