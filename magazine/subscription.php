@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-杂志列表</title>
+	<title>福布斯-杂志赠阅</title>
 	<?php
 		use_jquery();
 		js_include_tag('magazine/subscription','public','jquery.colorbox-min.js');
