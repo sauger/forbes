@@ -309,7 +309,7 @@
 			<div id=dictionary>
 				<div id=dictionary_t>
 					<div id=dictionary_tl <?php show_page_pos("index_dict0");?>><?php show_page_href("index_dict0");?></div>
-					<div id=dictionary_tr><span <?php show_page_pos("index_dict1");?>><?php show_page_href("index_dict1");?></span>  |  <span <?php show_page_pos("index_dict2");?>><?php show_page_href("index_dict2");?></span></div>
+					<div id=dictionary_tr><span><a href="<?php echo get_newslist_url($category->find_by_name("实用商业词汇")->id);?>" target="_blank">实用商业词汇</a></span>  |  <span><a href="<?php echo get_newslist_url($category->find_by_name("实用财经词汇")->id);?>" target="_blank">实用财经词汇</a></span></div>
 				</div>
 				<div id=dictionary_bl <?php show_page_pos("index_dict3");?>><?php show_page_href("index_dict3");?></div>
 				<div id=dictionary_br <?php show_page_pos("index_dict4");?>><?php show_page_href("index_dict4");?></div>
@@ -414,20 +414,20 @@
 				</div>
 
 				<div class=inventory_content>
-					<div class=inventory_title><a href="" target="_blank">中国顶尖的NBA问卷调查</a></div>
-					<div class=inventory_list>
-							参与调查者有机会获得全年《福布斯》杂志
-							<br>参与调查者有机会获得全年《福布斯》杂志
+					<?php $pos_name = "index_survey_0"?>
+					<div class=inventory_title<?php show_page_pos($pos_name,'survey')?>><?php show_page_href();?></div>
+					<div class=inventory_list<?php show_page_pos($pos_name,'survey')?>>
+						<?php show_page_desc(null,null);?>
 					</div>
-					<a href="" class=inventory_button></a>
+					<a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank" class=inventory_button></a>
 					<div class=inventory_dash></div>
 
-					<div class=inventory_title><a href="" target="_blank">中国顶尖的NBA问卷调查</a></div>
-					<div class=inventory_list>
-							参与调查者有机会获得全年《福布斯》杂志
-							<br>参与调查者有机会获得全年《福布斯》杂志
+					<?php $pos_name = "index_survey_1"?>
+					<div class=inventory_title<?php show_page_pos($pos_name,'survey')?>><?php show_page_href();?></div>
+					<div class=inventory_list<?php show_page_pos($pos_name,'survey')?>>
+						<?php show_page_desc(null,null);?>
 					</div>
-					<a href="" class=inventory_button target="_blank"></a>
+					<a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank" class=inventory_button></a>
    			</div>
 
 
