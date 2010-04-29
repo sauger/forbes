@@ -48,7 +48,7 @@
 
 			<div id=billionaires_head_right></div>
 			<div id=billionaires_ranking>
-				<div class=ranking_top_title><a href="top.php" target="_blank">动态富豪榜-富豪个人财富价值排名 <?php echo date('n月j日',strtotime("-1 day"))?></a></div>
+				<div class=ranking_top_title><?php $url = ($page_type == 'static')? '/billionaires/top': 'top.php' ?><a href="<?php echo $url;?>" target="_blank">动态富豪榜-富豪个人财富价值排名 <?php echo date('n月j日',strtotime("-1 day"))?></a></div>
 				<div class=ranking_top_content>
 					<div id=c_title>
 						<div class=pm>排名</div><div class="sx"></div><div class=name>姓名</div><div class="sx"></div><div class=cfs>财富（亿）</div><div class="sx"></div><div class=sex>性别</div><div class="sx"></div><div class=age>年龄</div><div class="sx"></div><div class=cmpname>公司名</div>
@@ -67,7 +67,7 @@
 						<?php }?>
 					</div>
 					<div id=moreinfo>
-						<a href="top.php" target="_blank"><button></button></a>
+						<a href="<?php echo $url;?>" target="_blank"><button></button></a>
 					</div>
 					<div class=ranking_dash></div>
 					<div class=ranking_bottom_title>
