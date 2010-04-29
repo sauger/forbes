@@ -60,8 +60,6 @@
 		alert("对不起！调查问卷中暂时无内容！");
 	}
 	?>
-		
-		
 		<div id="right_inc">
 			<?php include "../right/ad.php";?>
 			<?php include "../right/favor.php";?>
