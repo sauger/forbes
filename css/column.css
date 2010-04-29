@@ -88,8 +88,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #column_person_left_content #c_b_title #wz{height:18px; margin-top:6px; margin-left:10px; line-height:18px; font-size:14px; color:#A8A8A8; font-weight:bold;}
 #column_person_left_content .c_b_content{width:158px; height:16px; margin-top:10px; margin-left:21px; line-height:16px; overflow:hidden;}
 #column_person_left_content .c_b_content a{color:#3075b9; text-decoration:none;}
-#column_person_left_content .b_b_left{width:66px; height:90px; margin-top:8px; margin-left:15px;}
-#column_person_left_content .b_b_right{width:66px; height:90px; margin-top:8px; margin-right:15px; float:right;}
+#column_person_left_content .b_b_left{width:66px; margin-top:8px; margin-left:15px;}
 #column_person_left_content .b_pic{width:64px; height:84px; border:1px solid #cccccc;}
 #column_person_left_content .b_pic img{width:62px; height:62px; margin:1px;}
 #column_person_left_content .b_pictitle{width:66px; height:40px; margin-top:5px; line-height:20px; text-align:center; overflow:hidden;}
@@ -101,12 +100,14 @@ div{margin:0; padding:0; float:left; display:inline;}
 .r_content{width:754px; margin-top:20px; margin-left:17px; padding-bottm:10px;}
 .r_content .r_title{width:754px; height:30px;  background:#f0f0f0;}
 .r_content .r_title .wz{height:18px; margin-top:6px; margin-left:10px; line-height:18px; color:#303082; font-weight:bold;}
+.r_content .r_title .wz a{color:#303082; text-decoration:none;}
 .r_content .r_title .subtime{height:16px; margin-top:7px;  margin-right:10px; line-height:16px; color:#999999; float:right;}
 .r_content .r_read{width:200px; height:16px; margin-top:10px; font-size:12px; line-height:16px; color:#055c99; text-align:right; float:right;}
 .r_content .r_context{width:716px; height:114px; margin-top:10px; margin-left:19px; line-height:24px; font-size:13px;}
 .r_content .r_context a{color:#A8A8A8; text-decoration:none;}
 .r_content .r_dash{width:740px; height:1px; margin-left:7px; overflow:hidden; background:url('/images/column/r_dash.jpg') no-repeat;}
-.page{width:788px; margin-top:10px; line-height:20px; text-align:center;}
+.page{width:788px; height:30px; margin-top:20px; font-size:14px; line-height:30px; color:#666666; text-align:center;}
+.page a{color:#246BB0; text-decoration:none;}
 .r_content .column_image{width:100px; height:100px; margin-top:10px; margin-left:7px;}
 .r_content .column_image img{width:100px; height:100px;}
 .r_content .column_content{width:716px; margin-top:10px; margin-left:19px; line-height:20px;}
