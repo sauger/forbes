@@ -1,4 +1,6 @@
 $(function(){
+	$(".colorbox").colorbox();
+	
 	
 	$("#user_name").blur(function(){
 		userName();
@@ -121,7 +123,7 @@ function userName(){
 			});
 		}
 	}else{
-		$(".user_check").css('display','none');
+		$(".name_check").css('display','none');
 		$("#user1").css('display','inline');
 	}
 }
