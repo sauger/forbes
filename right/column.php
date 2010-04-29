@@ -1,45 +1,52 @@
 <?php include_once(dirname(__FILE__).'/../frame.php');?>
-<?php init_page_items();?>
 <div class="left_title">
 	<div name="column" class="left_top_title column_list selected">最受欢迎专栏</div>
 	<div style="margin-left:1px;" name="journalist" class="left_top_title column_list">最受欢迎智库专栏</div>
 </div>
 <div id="column" class="right_box left_top">
 	<?php
-	for($i=0;$i<5;$i++){ $pos_name = "right_popcolumn".$i;$pos_news_name = "right_pcnews".$i;
+	$db = get_db();
+	$sql = "SELECT t1.*,sum(t2.click_count) num,t2.* FROM fb_user t1 join (select click_count,publisher,title,created_at,id from fb_news order by created_at desc) t2 on t1.id=t2.publisher  where t1.role_name='column_writer' group by t1.id order by num limit 5";
+	$record = $db->query($sql);
+	$count = $db->record_count;
+	for($i=0;$i<$count;$i++){
 	?>
-	<div class="column_box" <?php show_page_pos($pos_name)?>>
+	<div class="column_box">
 		<div class="col_pic">
-			<?php show_page_img()?>
+			<img src="<?php echo $record[$i]->image_src;?>">
 		</div>
 		<div class="clo_name">
-			<?php show_page_href()?>
+			<a href="/column/<?php echo $record[$i]->name;?>"><?php echo $record[$i]->nick_name;?></a>
 		</div>
 		<div class="clo_des">
-			<?php show_page_desc()?>
+			<?php echo $record[$i]->description;?>
 		</div>
-		<div class="clo_news" <?php show_page_pos($pos_news_name)?>>
-			<?php show_page_href($pos_news_name)?>
+		<div class="clo_news">
+			<a href="<?php echo static_news_url($record[$i])?>"><?php echo $record[$i]->title;?></a>
 		</div>
 	</div>
 	<?php }?>
 </div>
 <div id="journalist" style="display:none;" class="right_box left_top">
 	<?php
-	for($i=0;$i<5;$i++){ $pos_name = "right_recocolumn".$i;$pos_news_name = "right_rcnews".$i;
+	$db = get_db();
+	$sql = "SELECT t1.*,sum(t2.click_count) num,t2.* FROM fb_user t1 join (select click_count,publisher,title,created_at,id from fb_news order by created_at desc) t2 on t1.id=t2.publisher  where t1.role_name='column_editor' group by t1.id order by num limit 5";
+	$record = $db->query($sql);
+	$count = $db->record_count;
+	for($i=0;$i<$count;$i++){
 	?>
-	<div class="column_box" <?php show_page_pos($pos_name)?>>
+	<div class="column_box">
 		<div class="col_pic">
-			<?php show_page_img()?>
+			<img src="<?php echo $record[$i]->image_src;?>">
 		</div>
 		<div class="clo_name">
-			<?php show_page_href()?>
+			<a href="/column/<?php echo $record[$i]->name;?>"><?php echo $record[$i]->nick_name;?></a>
 		</div>
 		<div class="clo_des">
-			<?php show_page_desc()?>
+			<?php echo $record[$i]->description;?>
 		</div>
-		<div class="clo_news" <?php show_page_pos($pos_news_name)?>>
-			<?php show_page_href($pos_news_name)?>
+		<div class="clo_news">
+			<a href="<?php echo static_news_url($record[$i])?>"><?php echo $record[$i]->title;?></a>
 		</div>
 	</div>
 	<?php }?>
