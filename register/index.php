@@ -83,7 +83,7 @@
 				<td class=td2><a href="/images/news.jpg" class="colorbox">查看快闻板式</a></td>
 			</tr>
 			<tr>
-				<td class=td6><input type="checkbox" name="fh" id="order3" checked=checked><label for="order3">富豪</label><input id="order4" type="checkbox" name="cy" class="ck"><label for="order4">创业</label><input type="checkbox" name="sy" id="order5" class="ck"><label for="order5">商业</label><input type="checkbox" id="order6" name="kj" class="ck"><label for="order6">科技</label><input name="tz" id="order7" type="checkbox" class="ck"><label for="order7">投资</label><input id="order8" type="checkbox" name="sh" class="ck"><label for="order8">生活</label></td>
+				<td class=td6><input type="checkbox" class="n_order" name="fh" id="order3" checked=checked><label for="order3">富豪</label><input id="order4" type="checkbox" name="cy" class="ck n_order"><label for="order4">创业</label><input type="checkbox" name="sy" id="order5" class="ck n_order"><label for="order5">商业</label><input type="checkbox" id="order6" name="kj" class="ck n_order"><label for="order6">科技</label><input name="tz" id="order7" type="checkbox" class="ck n_order"><label for="order7">投资</label><input id="order8" type="checkbox" name="sh" class="ck n_order"><label for="order8">生活</label><input id="order9" class="ck" type="checkbox"><label for="order9">不，暂时不考虑</label></td>
 			</tr>
 		</table>
 		<div class="dash"></div>
