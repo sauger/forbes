@@ -163,6 +163,7 @@ function static_news($news,$symbol='fck_pageindex',$en = false){
 
 function include_top(){
 	global $page_type;
+	global $page_items;
 	if($page_type == 'static'){
 		function get_news_url($news){
 			return static_news_url($news);
