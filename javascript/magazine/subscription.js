@@ -30,20 +30,8 @@ $(function(){
 		}
 	});
 	
-	$("#order9").click(function(){
-		if($(this).attr('checked')==true){
-			$(".n_order").attr('checked',false);
-		}
-	});
-	
-	$(".n_order").click(function(){
-		if($(this).attr('checked')==true){
-			$("#order9").attr('checked',false);
-		}
-	});
-	
 	$("#chang_pic").click(function(){
-		$("#pic").attr('src','yz.php?reload='+Math.round(Math.random()*10000));
+		$("#pic").attr('src','../register/yz.php?reload='+Math.round(Math.random()*10000));
 	})
 	
 	$("#tj").click(function(){

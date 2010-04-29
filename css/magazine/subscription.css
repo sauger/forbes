@@ -1,0 +1,21 @@
+body {font-size:12px;  font-family:Arial,ËÎÌו; color:#000;  margin:0 auto; padding:0;}
+p{margin:0; padding:0}
+
+#ibody{width:1000px; margin:0 auto; float:none; display:block;}
+#bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(../../../images/public/bread.jpg) no-repeat 10px 0;}
+#bread a{color:#666666; text-decoration:none;}
+.con_left { float:left;width:570px; }
+
+.bc{width:294px;}
+
+.subscription {line-height:20px;}
+.subscription table { border-collapse:collapse}
+.subscription table tr td { padding:2px;}
+#su_bottom{margin-left:250px;}
+#chang_pic{ cursor:pointer; color:#246BB0; margin-left:15px;}
+.subscription select { width:300px;}
+.subscription input { padding:2px;}
+td input,select{border:1px solid #999999;}
+#su_bottom{width:100px; height:30px; }
+#ch_img{float:left; display:inline;}
+#rvcode{float:left; display:inline;}
