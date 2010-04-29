@@ -8,7 +8,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #title1 a{text-decoration:none;}
 #column_recommend_b a{color:#003899; text-decoration:none;}
 #column_edit_recommend .t2 a{color:#003899; text-decoration:none;}
-#column_edit_b .t1 a{color:#666666; text-decoration:none;}
+#column_edit_b t1 a{color:#666666; text-decoration:none;}
 
 #bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
 #bread a{color:#666666; text-decoration:none;}
@@ -50,6 +50,11 @@ div{margin:0; padding:0; float:left; display:inline;}
 #column_edit_recommend .t1 a{color:#323284; text-decoration:none;}
 #column_edit_recommend .t2{width:228px; height:20px; overflow:hidden; font-size:14px; font-weight:bold; line-height:20px; margin-left:5px;}
 #column_edit_recommend .t3{width:72px; height:20px; font-size:12px; color:#666666; font-weight:normal; overflow:hidden; line-height:20px; margin-left:5px;}
+
+.caption{width:200px; height:18px;}
+.captions{height:18px; margin-top:5px; padding-left:18px; line-height:18px; font-size:14px; color:#666666; font-weight:bold;  background:url(/images/public/square.jpg) no-repeat 0 5px;}
+.line{width:1px; height:10px; margin-top:9px; margin-left:10px; font-size:10px; line-height:10px;}
+.more{width:38px; height:8px; margin-top:10px; margin-left:15px; background:url(/images/public/more.jpg) no-repeat; float:left;}
 
 #column_edit_b{width:310px; margin-left:5px; margin-top:10px;}
 #column_edit_b .t1{width:310px; height:18px; margin-top:8px;}
