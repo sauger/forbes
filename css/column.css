@@ -7,8 +7,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #title1 a{text-decoration:none;}
 #column_recommend_b a{color:#003899; text-decoration:none;}
-#column_edit_recommend #t2 a{color:#003899; text-decoration:none;}
-#column_edit_b #t1 a{color:#666666; text-decoration:none;}
+#column_edit_recommend .t2 a{color:#003899; text-decoration:none;}
+#column_edit_b .t1 a{color:#666666; text-decoration:none;}
 
 #bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
 #bread a{color:#666666; text-decoration:none;}
