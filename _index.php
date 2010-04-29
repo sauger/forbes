@@ -46,9 +46,9 @@
 				</div>
 				<?php for($i=0;$i<2;$i++){ $pos_name = $pos."them".$i;?>
 				<div class=common_subject <?php show_page_pos($pos_name)?>>
-					<div class=common_subject_pic><?php show_page_img()?></div>
-					<div class=common_subject_list><?php show_page_href()?></div>
-					<div class=common_subject_description><?php show_page_desc()?></div>
+					<div class=common_subject_pic><?php show_page_img();?></div>
+					<div class=common_subject_list><?php show_page_href();?></div>
+					<div class=common_subject_description><?php show_page_desc();?></div>
 				</div>
 					<?php for($j=0;$j<2;$j++){ $pos_name = $pos."them".$i.$j;?>
 						<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>

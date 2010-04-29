@@ -260,9 +260,9 @@ function show_page_desc($pos=null,$link="href",$title='description',$target="_bl
 	}
 	if($link){
 		$_title = $title ? strip_tags($pos_items->$pos->$title) : '';
-		echo "<a href='{$pos_items->$pos->$link}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$pos_items->$pos->description}</a>";
+		echo "<a href='{$pos_items->$pos->$link}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">".strip_tags($pos_items->$pos->description)."</a>";
 	}else{
-		echo $pos_items->$pos->description;
+		echo strip_tags($pos_items->$pos->description);
 	}
 }
 
