@@ -1,4 +1,5 @@
-<?php include_once(dirname(__FILE__).'/../frame.php');?>
+<?php include_once(dirname(__FILE__).'/../frame.php');
+global $pos_name;?>
 <div class=right_title>
 	<div class=title_con>福布斯杂志</div>
 	<div class=more><a href="/magazine/"><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
