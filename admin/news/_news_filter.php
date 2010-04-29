@@ -1,4 +1,5 @@
 <?php
+	include_once('../../frame.php');
 	$category = new category_class('news');
 	$key = urldecode($_REQUEST['key']);
 	$order = "";
@@ -122,7 +123,7 @@
 		$('#button_cancel').click(function(){
 			$.fn.colorbox.close();
 		});	
-		$('#subject_search').click(function(){
+		$('#subject_search,#search_button').click(function(){
 			send_search();
 		});
 		

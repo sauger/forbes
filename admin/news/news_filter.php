@@ -17,6 +17,8 @@ var call_back = '<?php echo $_REQUEST['call_back'];?>';
 ?>
 <?php }?>
 </script>
+<div id="result_box">
 <?php
 	include "_news_filter.php";
 ?>
+</div>
