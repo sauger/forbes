@@ -49,7 +49,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #column_edit_recommend .t1{width:310px; height:20px; font-weight:bold; margin-top:7px; text-indent:5px; background:url(/images/column/tar1.jpg) no-repeat 0 8px; *background:url(/images/column/tar1.jpg) no-repeat 0 7px;}
 #column_edit_recommend .t1 a{color:#323284; text-decoration:none;}
 #column_edit_recommend .t2{width:228px; height:20px; overflow:hidden; font-size:14px; font-weight:bold; line-height:20px; margin-left:5px;}
-#column_edit_recommend .t3{width:72px; height:20px; font-size:12px; color:#003899; font-weight:normal; overflow:hidden; line-height:20px; margin-left:5px;}
+#column_edit_recommend .t3{width:72px; height:20px; font-size:12px; color:#666666; font-weight:normal; overflow:hidden; line-height:20px; margin-left:5px;}
 
 #column_edit_b{width:310px; margin-left:5px; margin-top:10px;}
 #column_edit_b .t1{width:310px; height:18px; margin-top:8px;}
