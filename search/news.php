@@ -2,7 +2,7 @@
 	include_once('../frame.php');
 	$key = $_GET['key'];
 	$db = get_db();
-	if(strlen($key)>50){
+	if(strlen($key)>100){
 		redirect('error.html');
 		die();
 	}
@@ -24,7 +24,7 @@
 	<title>福布斯-新闻列表</title>
 	<?php
 		use_jquery();
-		js_include_tag('public','right');
+		js_include_tag('public','right','search/news_highlight.js');
 		css_include_tag('news','public','right_inc');
 	?>
 </head>
@@ -38,7 +38,7 @@
 		
 		<div id=l>
 			<div class=news_caption>
-					<div class=captions>搜索关键字“<?php echo $key;?>”的新闻<span>共<?php echo $page_record_count;?>篇</span></div>
+					<div class=captions>搜索关键字<span id="span_key">“<?php echo $key;?>”</span>的新闻<span>共<?php echo $page_record_count;?>篇</span></div>
 			</div>
 			<div id=list_content>
 				<?php

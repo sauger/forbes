@@ -1,4 +1,5 @@
 <?php
+	include_once('../../frame.php');
 	$category = new category_class('news');
 	$key = urldecode($_REQUEST['key']);
 	$order = "";
