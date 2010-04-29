@@ -30,9 +30,8 @@
 		<div id=column_left>
 			<div class=column_left_top>
 				<div class=column_special>
-					<div class="t">
-						<div class="t_title">特约专栏</div><a href="#" class=more></a>
-					</div>
+					<div class=captions>特约专栏</div>
+					<a href="#" target="_blank" class=more></a>
 					<?php $pos_name = "column_special_t";?>
 					<div class=column_special_top <?php show_page_pos($pos_name,'base');?>>
 						<div class=t1 >
@@ -81,9 +80,8 @@
 					
 				</div>
 				<div id=column_edit>
-					<div class="t">
-						<div style="width:120px;float:left; display:inline;">专栏文章推荐</div><a class=more></a>
-					</div>
+					<div class=captions>专栏文章推荐</div>
+					<a href="#" target="_blank" class=more></a>
 					<?php
 						for($i=0;$i<3;$i++){
 							$pos_name = 'column_edit_t'.$i;
@@ -119,8 +117,9 @@
 					</div>
 					<div class="dash2"></div>
 					<div id=column_edit_b>
-						<div class=t>
-							<div class="t_title">专栏列表</div><a class=more></a>
+						<div class=caption>
+							<div class=captions>专栏列表</div>
+							<a href="#" target="_blank" class=more></a>
 						</div>
 						<?php
 							for($i=0;$i<14;$i++){
@@ -136,9 +135,8 @@
 			<div class="dash1"></div>
 			<div class=column_left_top style="margin-top:30px;border:0px; ">
 				<div class=column_special>
-					<div class="t">
-						<div class="t_title">采编智库</div><a class=more href=""></a>
-					</div>
+					<div class=captions>采编智库</div>
+					<a href="#" target="_blank" class=more></a>
 					<div class=column_special_top>
 						<?php $pos_name = 'column_c_b_zk_'.$i ?>
 						<div class=t1 <?php show_page_pos($pos_name,'base');?>>
@@ -187,9 +185,8 @@
 					
 				</div>
 				<div id=column_edit>
-					<div class="t">
-						<div style="width:150px;float:left; display:inline;">采编智库文章推荐</div><a class=more></a>
-					</div>
+					<div class=captions>采编智库文章推荐</div>
+					<a href="#" target="_blank" class=more></a>
 					<?php
 						for($i=0;$i<3;$i++){
 							$pos_name = "column_edit_edit_t2_{$i}";
@@ -225,8 +222,9 @@
 					</div>
 					<div class="dash2"></div>
 					<div id=column_edit_b>
-						<div class=t>
-							<div class="t_title">专栏列表</div><a class=more></a>
+						<div class=caption>
+							<div class=captions>专栏列表</div>
+							<a href="#" target="_blank" class=more></a>
 						</div>
 						<?php
 							for($i=0;$i<14;$i++){
