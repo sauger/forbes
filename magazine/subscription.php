@@ -233,7 +233,6 @@
                       <option value="1.100人以下">1.&nbsp; 100人以下</option>
                       <option value="2.101 - 250">2.&nbsp; 101 - 250</option>
                       <option value="3.251 - 500">3.&nbsp; 251 - 500</option>
-
                       <option value="4.501 - 1000">4.&nbsp; 501 - 1,000</option>
                       <option value="5.1001 - 5000">5.&nbsp; 1001 - 5,000</option>
                       <option value="6.5001 - 10000">6.&nbsp; 5,001 - 10,000</option>
@@ -268,22 +267,19 @@
                   <td>* 贵公司所制造的产品：</td>
                   <td><select  name="Product  id="Product"  size="1">
                       <option value=""> </option>
-                      <option value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</option>
-
+                      <option value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</option>
                       <option value="2.电子元器件 电阻 电容 半导体等零部件 ">2.电子元器件（电阻、电容、半导体等零部件）</option>
                       <option value="3.电子消费类产品">3.电子消费类产品</option>
                       <option value="4.通讯 电力 网络等硬件设备">4.通讯、电力、网络等硬件设备</option>
                       <option value="5.汽车及汽车用品">5.汽车及汽车用品</option>
                       <option value="6.工业机械设备">6.工业机械设备</option>
                       <option value="7.建筑及家居装饰材料">7.建筑及家居装饰材料</option>
-
                       <option value="8.纸业 包装印刷及包装印刷器材">8.纸业、包装印刷及包装印刷器材</option>
                       <option value="9.五金制品">9.五金制品</option>
                       <option value="10.食品 食品加工及饲料">10.食品、食品加工及饲料</option>
                       <option value="11.化工产品">11.化工产品</option>
                       <option value="12.日用化工 化妆品 香料 肥皂类及其它)">12.日用化工(化妆品、香料、肥皂类及其它)</option>
                       <option value="13.生物工程 药品及医疗器械">13.生物工程、药品及医疗器械</option>
-
                       <option value="14.服装及饰品 纺织 皮革">14.服装及饰品、纺织、皮革</option>
                       <option value="15.钟表 相机及精密仪表">15.钟表、相机及精密仪表</option>
                       <option value="16.礼品 玩具 珠宝及文教体育用品">16.礼品、玩具、珠宝及文教体育用品</option>
@@ -298,7 +294,6 @@
                       <option value="1.500万以下">1. 500万以下</option>
                       <option value="2.501万--1000万">2. 501万--1,000万</option>
                       <option value="3.1001万--5000万">3. 1,001万--5,000万</option>
-
                       <option value="4.5001万--1亿">4. 5,001万--1亿</option>
                       <option value="5.1亿零1万--50亿">5. 1亿零1万--50亿</option>
                       <option value="6.50亿零1万--100亿">6. 50亿零1万--100亿</option>
@@ -306,32 +301,27 @@
                   </select></td>
                 </tr>
                 <tr>
-
                   <td>&nbsp;&nbsp;您的年收入（可选）：</td>
                   <td><select  name="Earning" id="Earning"  size="1">
                       <option value="0"> </option>
                       <option value="1.10万元人民币以内">1. 10万元人民币以内</option>
                       <option value="2.10万-299999元人民币">2. 10万-299,999元人民币</option>
                       <option value="3.30万-499999元人民币">3. 30万-499,999元人民币</option>
-
                       <option value="4.50万-999999元人民币">4. 50万-999,999元人民币</option>
                       <option value="5.100万人民币及以上">5. 100万人民币及以上</option>
                   </select></td>
                 </tr>
 				<tr>
                   <td>&nbsp;* 验证码：</td>
-                  <td>&nbsp;<input id="rvcode" name="rvcode" class="txt" type="text">
+                  <td><input id="rvcode" name="rvcode" class="txt" type="text">
                   	<div id=yzm><img id="pic" src="../register/yz.php"></div>
                   	<div id="chang_pic">看不清楚？换张图片</div>
                   </td>
 
                 </tr>
-				<tr>
-                  <td>&nbsp;</td>
-                  <td>&nbsp</td>
-                </tr>
+
                 <tr>
-                  <td id="status" style="font-size:14px;">&nbsp;</td>
+                  <td>&nbsp;</td>
                   <td>&nbsp;</td>
                 </tr>
 
