@@ -98,12 +98,15 @@
 				<div class="list_list">
 				<?php 							
 					$type = array('rich' => '富豪','company' => '公司','famous' => '名人','tech' => '科技');
+					$j=1;
 					foreach($type as $key => $val){
 				?>
 					<div class="list_box">
 						<div class="list_title">
 							<div class="title"><?php echo $val;?></div>
-							<div class="title_line"></div>
+							<div class="title_line1"></div>
+							<div class="title_line2"><a href="list.php?id=<?php echo $j;?>">更多>></a></div>
+							<div class="title_line3"></div>
 						</div>
 						<div class="list_li_box">
 							<?php for($i=0;$i<4;$i++){
@@ -113,18 +116,21 @@
 							<?php } ?>
 						</div>
 					</div>
-					<?php }?>
+					<?php $j=$j+2;}?>
 				</div>
 				<div id=list_dash></div>
 				<div class="list_list">
 					<?php $type= array('invest' => '投资','city' => '城市','sport' => '体育','edu' => '教育')?>
-					<?php 							
+					<?php
+					$j=2;			
 					foreach($type as $key => $val){
 					?>
 					<div class="list_box">
 						<div class="list_title">
 							<div class="title"><?php echo $val;?></div>
-							<div class="title_line"></div>
+							<div class="title_line1"></div>
+							<div class="title_line2"><a href="list.php?id=<?php echo $j;?>">更多>></a></div>
+							<div class="title_line3"></div>
 						</div>
 						<div class="list_li_box">
 							<?php for($i=0;$i<4;$i++){
@@ -134,7 +140,7 @@
 							<?php } ?>
 						</div>
 					</div>
-					<?php }?>
+					<?php $j=$j+2;}?>
 				</div>
 			</div>
 		</div>

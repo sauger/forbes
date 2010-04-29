@@ -45,7 +45,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 .list_box{width:300px; height:120px; margin-top:20px;}
 .list_title{width:300px; height:20px; font-size:14px; color:#003A7B; font-weight:bold; line-height:20px;}
 .list_title .title{width:40px; height:20px;}
-.list_title .title_line{width:240px; height:8px; margin-left:5px; margin-top:7px; line-height:0; font-size:0; background:#E5E5E5;}
+.list_title .title_line1{width:180px; height:8px; margin-left:5px; margin-top:7px; line-height:0; font-size:0; background:#E5E5E5;}
+.list_title .title_line2{width:50px; height:20px; line-height:20px; font-weight:normal; text-align:center; font-size:12px;}
+.list_title .title_line2 a{color:#003A7B; text-decoration:none;}
+.list_title .title_line3{width:10px; height:8px; margin-top:7px; line-height:0; font-size:0; background:#E5E5E5;}
 .list_li_box{width:300px; height:100px; margin-top:5px; line-height:20px;}
 .list_li_box li{width:285px; height:25px; margin-left:5px; padding-left:10px; list-style-position:outside; list-style-type:none; font-size:14px; line-height:25px; background:url(/images/public/circle1.jpg) no-repeat 0 10px; overflow:hidden;}
 .list_li_box li a{color:#003A7B; text-decoration:none;}
