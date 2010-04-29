@@ -151,10 +151,9 @@
 						<?php }?>
 						
 						<div class=info_dash></div>
-	
+						<?php if($news->keywords!=''){?>
 						<div class=info_keywords>
 						<?php 
-							if($news->keywords!=''){
 								$keywords = explode('||',$news->keywords);
 									for($i=0;$i<count($keywords);$i++){
 										if (empty($keywords[$i])) continue;
