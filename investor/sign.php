@@ -92,8 +92,6 @@
 					<div id="fc_c_bottom">注：请使用word\PPT\PDF文档，文件大小不要超过2M</div>
 					<div id="f_hr">
 					</div>
-			
-				
 					<div class="fc_b">
 							<div class="fc_title_pg"></div>
 							<div class="fc_title">公司信息</div>
@@ -149,8 +147,6 @@
 										<select multiple="multiple" id="income2_s" class="com_f"></select>
 										</textarea>
 							</div>
-						
-						
 						<div class="fc_c">
 							<div class="company_left">公司成立时间：</div>
 							<div class="fc_c_right">
@@ -176,8 +172,6 @@
 					
 					<div id="f_hr">
 					</div>
-			
-				
 					<div class="fc_b">
 							<div class="fc_title_pg"></div>
 							<div class="fc_title">联系人信息</div>
