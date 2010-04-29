@@ -1,5 +1,4 @@
 <?php include_once(dirname(__FILE__).'/../frame.php');?>
-<?php init_page_items();?>
 <div class="left_title">
 	<div name="column" class="left_top_title column_list selected">最受欢迎专栏</div>
 	<div style="margin-left:1px;" name="journalist" class="left_top_title column_list">最受欢迎智库专栏</div>

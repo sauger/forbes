@@ -154,6 +154,7 @@
 	
 						<div class=info_keywords>
 						<?php 
+							if($news->keywords!=''){
 								$keywords = explode('||',$news->keywords);
 									for($i=0;$i<count($keywords);$i++){
 										if (empty($keywords[$i])) continue;
@@ -166,6 +167,7 @@
 							<div id=info_keywords_bottom>
 								<div class=info_title>文章的关键字</div>
 							</div>
+						<?php }?>
 				</div>
 									
 				<?php if($news->ad_id){?>

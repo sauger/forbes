@@ -100,7 +100,16 @@
 			</div>
 			<div id="info">搜索结果如下</div>
 			<div id="result">
-				<table width="600" border="0" cellspacing="0" cellpadding="0">
+				<table width="645" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td valign="middle" width="3%"></td>
+						<td valign="middle" width="20%">姓名</td>
+						<td valign="middle" width="12%">财富（亿）</td>
+						<td valign="middle" width="15%">国籍</td>
+						<td valign="middle" width="10%">年龄</td>
+						<td valign="middle" width="20%">公司</td>
+						<td valign="middle" width="20%">行业</td>
+					</tr>
 				<?php
 					$sql = "SELECT r1.country,r1.name,r1.birthday,group_concat(i2.name) as iname,r2.fortune,group_concat(c2.name) as cname  FROM fb_rich r1  left join fb_rich_company c1 on r1.id=c1.rich_id left join fb_company c2 on c1.company_id=c2.id left join fb_company_industry i1 on c2.id=i1.company_id left join fb_industry i2 on i1.industry_id=i2.id left join fb_rich_fortune r2 on r1.id=r2.rich_id where (r2.fortune_year is null or r2.fortune_year=".date('Y').")";
 					if($name){$sql .= " and r1.name like '%$name%'";}
@@ -128,18 +137,18 @@
 						}
 					}
 					$sql .=" group by r1.id";
-					$rich = $db->paginate($sql,25);
+					$rich = $db->paginate($sql,20);
 					$count = count($rich);
 					for($i=0;$i<$count;$i++){
 				?>
-					<tr>
-						<td valign="middle" width="5%"><img src="/images/search/icon.gif"></td>
-						<td valign="middle" width="15%"><?php echo $rich[$i]->name;?></td>
-						<td valign="middle" width="15%"><?php if($rich[$i]->fortune!='')echo $rich[$i]->fortune.'亿人民币';else echo '未知';?></td>
+					<tr class="tr2">
+						<td valign="middle" width="3%"><img src="/images/search/icon.gif"></td>
+						<td valign="middle" width="20%"><?php echo $rich[$i]->name;?></td>
+						<td valign="middle" width="12%"><?php if($rich[$i]->fortune!='')echo $rich[$i]->fortune.'亿人民币';else echo '未知';?></td>
 						<td valign="middle" width="15%"><?php echo $rich[$i]->country;?></td>
 						<td valign="middle" width="10%"><?php $year = intval($rich[$i]->birthday);if(empty($year))echo "未知";else echo (date('Y')-$year).'岁';?></td>
-						<td valign="middle" width="15%"><?php echo $rich[$i]->cname;?></td>
-						<td valign="middle" width="15%"><?php echo $rich[$i]->iname;?></td>
+						<td valign="middle" width="20%"><?php echo $rich[$i]->cname;?></td>
+						<td valign="middle" width="20%"><?php echo $rich[$i]->iname;?></td>
 					</tr><?php }?>
 				</table>
 				<div class="paginate"><?php paginate()?></div>
