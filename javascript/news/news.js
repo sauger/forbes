@@ -130,6 +130,9 @@ $(function(){
 			alert("评论内容过长！");
 			return false;
 		}
+		if(content.length==0){
+			return false;
+		}
 		$("input[name='nick_name']").each(function(){
 			if($(this).attr('checked')){
 				if($(this).val()=='hidden'){
