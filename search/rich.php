@@ -62,8 +62,8 @@
 						<option value="5">50-100亿人民币</option>
 						<option value="6">100亿人民币以上</option>
 					</select>
-				</span><br>
-				<span class="div1">　国　籍</span>
+				</span>
+				<span class="div3">国　籍</span>
 				<span class="div2">
 					<select id="nationality">
 						<option value=""></option>
@@ -75,7 +75,7 @@
 						<option value="<?php echo $country[$i]->country;?>"><?php echo $country[$i]->country;?></option>
 						<?php }?>
 					</select></span>
-				<span class="div3">行　业</span>
+				<span class="div1">行　　业</span>
 				<span class="div2">
 					<select id="industry">
 						<option value=""></option>
@@ -128,7 +128,7 @@
 						}
 					}
 					$sql .=" group by r1.id";
-					$rich = $db->paginate($sql,20);
+					$rich = $db->paginate($sql,25);
 					$count = count($rich);
 					for($i=0;$i<$count;$i++){
 				?>
