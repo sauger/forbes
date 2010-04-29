@@ -25,9 +25,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 .c_join{width:630px; margin-top:2px; float:left; display:inline;}
 
 .join_top{width:625px; height:15px; font-weight:bold; font-size:14px; float:left; display:inline;}
+.join_top div{line-height:18px;}
 .name{width:100px; height:18px; float:left; display:inline;}
-.time{width:150px; height:18px; float:left; display:inline;}
-.issues{width:200px; height:18px; float:left; display:inline; overflow:hidden;}
+.time{width:160px; height:18px; float:left; display:inline;}
+.issues{width:325px; height:18px; float:left; display:inline; overflow:hidden;}
 .title{width:100px; height:18px; margin-left:10px; float:left; display:inline;}
 .content{width:627px; margin-top:8px; background:#EAEAEA;letter-spacing:1pt; word-spacing:2mm; line-height:20px; float:left; display:inline;}
 
