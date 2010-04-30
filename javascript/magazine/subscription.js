@@ -1,6 +1,26 @@
 $(function(){
 	$(".colorbox").colorbox();
+	$(".ApplyType").click(function(){
+		$('#applyvalue').attr('value',$(this).val());
+		if($(this).val()==1)
+		{
+			$('#xdtable').css('display','inline');
+		}
+		else
+		{
+			$('#xdtable').css('display','none');
+		}
+	})
 	$("#su_bottom").click(function(){
+		if($('#applyvalue').val()==1)
+		{
+			if($('#ReaderNo').val()=="")
+			{
+				alert('请输入读者编号！');
+				$('#ReaderNo').focus();
+				return false;
+			}
+		}
 		$(".required").each(function(){
 			if($(this).val()==''){                 
 				flag = false;                 

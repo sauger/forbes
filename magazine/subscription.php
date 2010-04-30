@@ -25,13 +25,13 @@
 			<form id="subscriptionform" name="subscriptionform" action="subscription.post.php" method="post">
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td><input name="sub[ApplyType]" type="radio" value="0" checked />初次申请</td>
-                  <td><input name="sub[ApplyType]" type="radio" value="1" />申请续订</td>
-                  <td width="300">&nbsp;</td>
+                  <td><input name="sub[ApplyType]" class="ApplyType" type="radio" value="0" checked />初次申请</td>
+                  <td><input name="sub[ApplyType]" class="ApplyType" type="radio" value="1" />申请续订</td>
+                  <td width="300"><input type="hidden" id="applyvalue" value="0">&nbsp;</td>
                 </tr>
               </table>
 
-			  <table border="0" cellpadding="0" cellspacing="0" style="display:none">
+			  <table border="0" cellpadding="0" cellspacing="0" id="xdtable" style="display:none">
                 <tr>
                   <td>重新申请的读者请注意：为更好地处理您的申请，及保持您的订阅的持续性，请填写您个人的读者编号。您的读者编号是在我们给您邮寄杂志信封上的标签的右下角，它是一个由Q开头的九位条形码的号码，号码在条形码的下方。(*为必填项)</td>
                 </tr>
@@ -39,15 +39,14 @@
                   <td height="170" align="center"><img src="/images/magazine/pic_09.jpg" width="303" height="150" /></td>
                 </tr>
                 <tr>
-
                   <td align="center">您的读者编号 Q：<input type="text" name="sub[ReaderNo]" id="ReaderNo" maxlength="50"/></td>
                 </tr>
               </table>
 			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>我希望收到《福布斯》中文版！
-                      <input type="radio" name="sub[ChineseMagazine]" id="ChineseMagazine" value="1" checked/>是
-                      <input type="radio" name="sub[ChineseMagazine]" id="ChineseMagazine" value="0" />否</td>
+                      <input type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="1" checked/>是
+                      <input type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="0" />否</td>
                 </tr>
 
                 <tr>
