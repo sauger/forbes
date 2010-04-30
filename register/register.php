@@ -102,7 +102,7 @@
 				<td class=td2><a href="">查看协议</a></td>
 			</tr>
 			<tr>
-				<td class=td5 ><button id="tj" disabled="ture" type="button">确认并注册</button></td>
+				<td class=td5 ><button id="tj" disabled="true" type="button">确认并注册</button></td>
 				<td class=td2></td>
 			</tr>
 		</table>

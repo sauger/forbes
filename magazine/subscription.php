@@ -22,32 +22,31 @@
 		<div class="con_left">
 			<div class="subscription">
 
-			<form id="subscriptionform" name="subscriptionform" action="http://www.forbeschinamagazine.com/do.php?action=subscription&op=submit" method="post">
+			<form id="subscriptionform" name="subscriptionform" action="subscription.post.php" method="post">
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td><input name="ApplyType" type="radio" value="0" checked />初次申请</td>
-                  <td><input name="ApplyType" type="radio" value="1" />申请续订</td>
-                  <td width="300">&nbsp;</td>
+                  <td><input name="sub[ApplyType]" class="ApplyType" type="radio" value="0" checked />初次申请</td>
+                  <td><input name="sub[ApplyType]" class="ApplyType" type="radio" value="1" />申请续订</td>
+                  <td width="300"><input type="hidden" id="applyvalue" value="0">&nbsp;</td>
                 </tr>
               </table>
 
-			  <table border="0" cellpadding="0" cellspacing="0" style="display:none">
+			  <table border="0" cellpadding="0" cellspacing="0" id="xdtable" style="display:none">
                 <tr>
                   <td>重新申请的读者请注意：为更好地处理您的申请，及保持您的订阅的持续性，请填写您个人的读者编号。您的读者编号是在我们给您邮寄杂志信封上的标签的右下角，它是一个由Q开头的九位条形码的号码，号码在条形码的下方。(*为必填项)</td>
                 </tr>
                 <tr>
-                  <td height="170" align="center"><img src="http://www.forbeschinamagazine.com/images/pic_09.jpg" width="303" height="150" /></td>
+                  <td height="170" align="center"><img src="/images/magazine/pic_09.jpg" width="303" height="150" /></td>
                 </tr>
                 <tr>
-
-                  <td align="center">您的读者编号 Q：<input type="text" name="ReaderNo" id="ReaderNo" maxlength="50"/></td>
+                  <td align="center">您的读者编号 Q：<input type="text" name="sub[ReaderNo]" id="ReaderNo" maxlength="50"/></td>
                 </tr>
               </table>
 			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>我希望收到《福布斯》中文版！
-                      <input type="radio" name="ChineseMagazine" id="ChineseMagazine" value="1" checked/>是
-                      <input type="radio" name="ChineseMagazine" id="ChineseMagazine" value="0" />否</td>
+                      <input type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="1" checked/>是
+                      <input type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="0" />否</td>
                 </tr>
 
                 <tr>
@@ -57,16 +56,16 @@
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td width="90">* 出 生 地：</td>
-                  <td><input name="BirthPlace" id="BirthPlace" class=bc type="text" onblur="checkBirthPlace()" maxlength="20"/><span id="checkbirthplace">&nbsp;</span><br />请输入您的出生地作为个人标志，本资料仅供确认您订阅的有效性，不会用于其他用途。</td>
+                  <td><input name="sub[BirthPlace]" id="BirthPlace" class=bc type="text"  maxlength="20" class="required"/><span id="checkbirthplace">&nbsp;</span><br />请输入您的出生地作为个人标志，本资料仅供确认您订阅的有效性，不会用于其他用途。</td>
 
                 </tr>
                 <tr>
                   <td width="90">* 姓　　名：</td>
-                  <td><input name="RealName" id="RealName" type="text" size="35" class=bc onblur="checkRealName()" maxlength="6"/><span id="checkrealname">&nbsp;</span></td>
+                  <td><input name="sub[RealName]" id="RealName" type="text" size="35" class=bc maxlength="6" class="required"/><span id="checkrealname">&nbsp;</span></td>
                 </tr>
                 <tr>
                   <td>* 性　　别：</td>
-                  <td><select name="Sex" id="Sex">
+                  <td><select name="sub[Sex]" id="Sex" class="required">
 
                       <option value="男">先生</option>
                       <option value="女">女士</option>
@@ -76,20 +75,20 @@
                 <tr>
                   <td>* 工作单位：</td>
 
-                  <td><input name="Company" id="Company" class=bc type="text" size="35" onblur="checkCompany()" maxlength="20"/><span id="checkcompany">&nbsp;</span></td>
+                  <td><input name="sub[Company]" id="Company" class=bc type="text" size="35"  maxlength="20" class="required"/><span id="checkcompany">&nbsp;</span></td>
                 </tr>
                 <tr>
                   <td>* 部　　门：</td>
-                  <td><input name="Department" class=bc id="Department" type="text" size="35" onblur="checkDepartment()" maxlength="20"/><span id="checkdepartment">&nbsp;</span></td>
+                  <td><input name="sub[Department]" class=bc id="Department" type="text" size="35" maxlength="20" class="required"/><span id="checkdepartment">&nbsp;</span></td>
                 </tr>
                 <tr>
                   <td>* 职　　位：</td>
 
-                  <td><input name="Position2" class=bc id="Position2" type="text" size="35" onblur="checkPosition2()" maxlength="20"/><span id="checkPosition2">&nbsp;</span></td>
+                  <td><input name="sub[Position2]" class=bc id="Position2" type="text" size="35" maxlength="20" class="required"/><span id="checkPosition2">&nbsp;</span></td>
                 </tr>
                 <tr>
                   <td>* 省/直辖市：</td>
-                  <td><select  name="Province" id="Province"  size="1">
+                  <td><select  name="sub[Province]" id="Province"  size="1" class="required">
                       <option value=""> </option>
                       <option value="北京">北京</option>
 
@@ -133,32 +132,32 @@
                 </tr>
                 <tr>
                   <td>* 邮　　编：</td>
-                  <td><input name="zipcode" id="zipcode" type="text"  class=bc onblur="checkzipcode()" maxlength="6"/><span id="checkzipcode">&nbsp;</span></td>
+                  <td><input name="sub[zipcode]" id="zipcode" type="text"  class=bc maxlength="6" class="required"/><span id="checkzipcode">&nbsp;</span></td>
                 </tr>
                 <tr>
 
                   <td>* 单位地址：</td>
-                  <td><input name="CompanyAddress" id="CompanyAddress" type="text" class=bc onblur="checkCompanyAddress()" maxlength="40"/><span id="checkcompanyaddress">&nbsp;</span></td>
+                  <td><input name="sub[CompanyAddress]" id="CompanyAddress" type="text" class=bc maxlength="40" class="required"/><span id="checkcompanyaddress">&nbsp;</span></td>
                 </tr>
                 <tr>
                   <td>* 电　　话：</td>
                   <td>
-                    <input name="Tel" id="Tel" type="text"  class=bc maxlength="14" onblur="checkTel()" /><span id="checktel">&nbsp;</span>
+                    <input name="sub[Tel]" id="Tel" type="text"  class=bc maxlength="14" class="required" /><span id="checktel">&nbsp;</span>
                   </td>
 
                 </tr>
                 <tr>
                   <td>* 手　　机：</td>
-                  <td><input name="Mobile" id="Mobile" type="text"  class=bc onblur="checkMobile()" maxlength="13"/><span id="checkmobile">&nbsp;</span></td>
+                  <td><input name="sub[Mobile]" id="Mobile" type="text"  class=bc maxlength="13" class="required"/><span id="checkmobile">&nbsp;</span></td>
                 </tr>
                 <tr>
                   <td>* 传　　真：</td>
-                  <td><input name="Fax" id="Fax" type="text"  class=bc onblur="checkFax()" maxlength="13"/><span id="checkfax">&nbsp;</span></td>
+                  <td><input name="sub[Fax]" id="Fax" type="text"  class=bc maxlength="13" class="required"/><span id="checkfax">&nbsp;</span></td>
 
                 </tr>
                 <tr>
                   <td>* 电子邮件：</td>
-                  <td><input name="Email" id="Email" type="text"  class=bc onblur="checkEmail()" maxlength="40"/><span id="checkemail">&nbsp;</span></td>
+                  <td><input name="sub[Email]" id="Email" type="text"  class=bc maxlength="40" class="required"/><span id="checkemail">&nbsp;</span></td>
                 </tr>
               </table>
 			  <p style="color:#FF0000">正确填写电话或手机号码将有助于您更快通过审核及获得更多优惠资讯</p>
@@ -166,7 +165,7 @@
 
                 <tr>
                   <td width="150">* 您的学历是：</td>
-                  <td><select  name="Degree" id="Degree"  size="1">
+                  <td><select  name="sub[Degree]" id="Degree"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.博士">1.博士</option>
                       <option value="2.硕士">2.硕士</option>
@@ -177,8 +176,7 @@
                 </tr>
 				<tr>
                   <td>* 职　　位：</td>
-                  <td><select  name="Position"  id="Position"  size="1">
-
+                  <td><select  name="sub[Position]"  id="Position"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.董事长 总裁 行政总裁 首席执行官 董事">1.董事长/总裁/行政总裁/首席执行官/董事</option>
                       <option value="2.副总裁 执行董事">2.副总裁/执行董事</option>
@@ -197,7 +195,7 @@
                 </tr>
                 <tr>
                   <td>* 贵公司的行业类型：</td>
-                  <td><select  name="Industry  id="Industry"  size="1">
+                  <td><select  name="sub[Industry]"  id="Industry"  size="1" class="required">
 
                       <option value=""> </option>
                       <option value="1.制造业">1.制造业</option>
@@ -228,7 +226,7 @@
                 <tr>
                   <td>* 贵公司的职工人数是：</td>
 
-                  <td><select  name="Employeeamount" id="Employeeamount"  size="1">
+                  <td><select  name="sub[Employeeamount]" id="Employeeamount"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.100人以下">1.&nbsp; 100人以下</option>
                       <option value="2.101 - 250">2.&nbsp; 101 - 250</option>
@@ -242,10 +240,9 @@
                 </tr>
                 <tr>
                   <td>* 贵公司的类型是：</td>
-                  <td><select  name="CompanyType" id="CompanyType"  size="1">
+                  <td><select  name="sub[CompanyType]" id="CompanyType"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.国有企业 集体企业">1.国有企业/集体企业</option>
-
                       <option value="2.外商独资企业">2.外商独资企业</option>
                       <option value="3.合资 合作企业">3.合资/合作企业</option>
                       <option value="4.民营企业">4.民营企业</option>
@@ -256,7 +253,7 @@
                 </tr>
                 <tr>
                   <td>* 贵公司是否是上市公司：</td>
-                  <td><select  name="StockCompany" id="StockCompany"  size="1">
+                  <td><select  name="sub[StockCompany]" id="StockCompany"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1">1.是</option>
                       <option value="0">2.否</option>
@@ -265,9 +262,9 @@
                 </tr>
                 <tr>
                   <td>* 贵公司所制造的产品：</td>
-                  <td><select  name="Product  id="Product"  size="1">
+                  <td><select  name="sub[Product]"  id="Product"  size="1" class="required">
                       <option value=""> </option>
-                      <option value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</option>
+                      <option value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</option>
                       <option value="2.电子元器件 电阻 电容 半导体等零部件 ">2.电子元器件（电阻、电容、半导体等零部件）</option>
                       <option value="3.电子消费类产品">3.电子消费类产品</option>
                       <option value="4.通讯 电力 网络等硬件设备">4.通讯、电力、网络等硬件设备</option>
@@ -289,8 +286,8 @@
                 <tr>
 
                   <td>&nbsp; 贵公司年营业额（可选）：</td>
-                  <td><select  name="turnove " id="turnover"  size="1">
-                      <option value="0"> </option>
+                  <td><select  name="sub[turnove]" id="turnover"  size="1">
+                      <option value=""> </option>
                       <option value="1.500万以下">1. 500万以下</option>
                       <option value="2.501万--1000万">2. 501万--1,000万</option>
                       <option value="3.1001万--5000万">3. 1,001万--5,000万</option>
@@ -302,8 +299,8 @@
                 </tr>
                 <tr>
                   <td>&nbsp;&nbsp;您的年收入（可选）：</td>
-                  <td><select  name="Earning" id="Earning"  size="1">
-                      <option value="0"> </option>
+                  <td><select  name="sub[Earning]" id="Earning"  size="1">
+                      <option value=""> </option>
                       <option value="1.10万元人民币以内">1. 10万元人民币以内</option>
                       <option value="2.10万-299999元人民币">2. 10万-299,999元人民币</option>
                       <option value="3.30万-499999元人民币">3. 30万-499,999元人民币</option>
@@ -314,7 +311,7 @@
 				<tr>
                   <td>&nbsp;* 验证码：</td>
                   <td><input id="rvcode" name="rvcode" class="txt" type="text">
-                  	<div id=yzm><img id="pic" src="../register/yz.php"></div>
+                  	<div id=yzm><img id="pic" src="yz.php"></div>
                   	<div id="chang_pic">看不清楚？换张图片</div>
                   </td>
 
@@ -327,13 +324,14 @@
 
               </table>
 			  <input type="hidden" id="subscriptionsubmit" name="subscriptionsubmit" value="申请赠阅" />
-			  <input type="submit" id="su_bottom" value=" 提 交 " onclick="checkform('subscriptionform');return false;"/>
+			  <input type="button" id="su_bottom" value=" 提 交 "/>
 			  </form>
 			  </div>
 		</div>
-		
-
-
+		<div id="right_inc">
+			<?php include_once( dirname(__FILE__) .'/../right/ad.php');?>
+			<?php include_once( dirname(__FILE__) .'/../right/magazine.php');?>
+		</div>
 	<? include_once('../inc/bottom.inc.php');?>
 	</div>
 </body>

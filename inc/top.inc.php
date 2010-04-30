@@ -42,7 +42,6 @@
 			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img(72,93,0,'image1','top_magazine')?></div>
 			<div id=magazine_description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a><br><?php echo $pos_items->$pos_name->description;?></div>
 			<div id=magazine_btn><a href="<?php echo $pos_items->$pos_name->href?>"><img src="/images/public/magazine_btn.jpg" border=0></a></div>
-
 	</div>
   <div id=top_logo>
 			<div id=border></div>
@@ -58,219 +57,56 @@
 			<input id="search_text" class="input">
 			<button class=search>查 询</button>			
   </div>
-  <script>
-	  /* top select */
-	  var selects = document.getElementsByName('selsearch');
-	  var isIE = (document.all && window.ActiveXObject && !window.opera) ? true : false;
-	  function gebid(id) {	return document.getElementById(id);}
-	  function stopBubbling (ev) {		ev.stopPropagation();}
-	  function rSelects() {
-	  	for (i=0;i<selects.length;i++){
-	  		selects[i].style.display = 'none';
-	  		select_tag = document.createElement('div');
-	  			select_tag.id = 'select_' + selects[i].name;
-	  			select_tag.className = 'select_box';
-	  		selects[i].parentNode.insertBefore(select_tag,selects[i]);
-	
-	  		select_info = document.createElement('div');	
-	  			select_info.id = 'select_info_' + selects[i].name;
-	  			select_info.className='tag_select';
-	  			select_info.style.cursor='pointer';
-	  		select_tag.appendChild(select_info);
-	
-	  		select_ul = document.createElement('ul');	
-	  			select_ul.id = 'options_' + selects[i].name;
-	  			select_ul.className = 'tag_options';
-	  			select_ul.style.position='absolute';
-	  			select_ul.style.display='none';
-	  			select_ul.style.zIndex='999';
-	  		select_tag.appendChild(select_ul);
-	
-	  		rOptions(i,selects[i].name);
-	  		mouseSelects(selects[i].name);
-	
-	  		if (isIE){
-	  			selects[i].onclick = new Function("clickLabels3('"+selects[i].name+"');window.event.cancelBubble = true;");
-	  		}
-	  		else if(!isIE){
-	  			selects[i].onclick = new Function("clickLabels3('"+selects[i].name+"')");
-	  			selects[i].addEventListener("click", stopBubbling, false);
-	  		}		
-	  	}
-	  }
-	
-	
-	  function rOptions(i, name) {
-	  	var options = selects[i].getElementsByTagName('option');
-	  	var options_ul = 'options_' + name;
-	  	for (n=0;n<selects[i].options.length;n++){	
-	  		option_li = document.createElement('li');
-	  			option_li.style.cursor='pointer';
-	  			option_li.className='open';
-	  		gebid(options_ul).appendChild(option_li);
-	
-	  		option_text = document.createTextNode(selects[i].options[n].text);
-	  		option_li.appendChild(option_text);
-	
-	  		option_selected = selects[i].options[n].selected;
-	
-	  		if(option_selected){
-	  			option_li.className='open_selected';
-	  			option_li.id='selected_' + name;
-	  			gebid('select_info_' + name).appendChild(document.createTextNode(option_li.innerHTML));
-	  		}
-	  		
-	  		option_li.onmouseover = function(){	this.className='open_hover';}
-	  		option_li.onmouseout = function(){
-	  			if(this.id=='selected_' + name){
-	  				this.className='open_selected';
-	  			}
-	  			else {
-	  				this.className='open';
-	  			}
-	  		} 
-	  	
-	  		option_li.onclick = new Function("clickOptions("+i+","+n+",'"+selects[i].name+"')");
-	  	}
-	  }
-	
-	  function mouseSelects(name){
-	  	var sincn = 'select_info_' + name;
-	
-	  	gebid(sincn).onmouseover = function(){ if(this.className=='tag_select') this.className='tag_select_hover'; }
-	  	gebid(sincn).onmouseout = function(){ if(this.className=='tag_select_hover') this.className='tag_select'; }
-	
-	  	if (isIE){
-	  		gebid(sincn).onclick = new Function("clickSelects('"+name+"');window.event.cancelBubble = true;");
-	  	}
-	  	else if(!isIE){
-	  		gebid(sincn).onclick = new Function("clickSelects('"+name+"');");
-	  		gebid('select_info_' +name).addEventListener("click", stopBubbling, false);
-	  	}
-	
-	  }
-	
-	  function clickSelects(name){
-	  	var sincn = 'select_info_' + name;
-	  	var sinul = 'options_' + name;	
-	
-	  	for (i=0;i<selects.length;i++){	
-	  		if(selects[i].name == name){				
-	  			if( gebid(sincn).className =='tag_select_hover'){
-	  				gebid(sincn).className ='tag_select_open';
-	  				gebid(sinul).style.display = '';
-	  			}
-	  			else if( gebid(sincn).className =='tag_select_open'){
-	  				gebid(sincn).className = 'tag_select_hover';
-	  				gebid(sinul).style.display = 'none';
-	  			}
-	  		}
-	  		else{
-	  			gebid('select_info_' + selects[i].name).className = 'tag_select';
-	  			gebid('options_' + selects[i].name).style.display = 'none';
-	  		}
-	  	}
-	
-	  }
-	
-	  function clickOptions(i, n, name){		
-	  	var li = gebid('options_' + name).getElementsByTagName('li');
-	
-	  	gebid('selected_' + name).className='open';
-	  	gebid('selected_' + name).id='';
-	  	li[n].id='selected_' + name;
-	  	li[n].className='open_hover';
-	  	gebid('select_' + name).removeChild(gebid('select_info_' + name));
-	
-	  	select_info = document.createElement('div');
-	  		select_info.id = 'select_info_' + name;
-	  		select_info.className='tag_select';
-	  		select_info.style.cursor='pointer';
-	  	gebid('options_' + name).parentNode.insertBefore(select_info,gebid('options_' + name));
-	
-	  	mouseSelects(name);
-	
-	  	gebid('select_info_' + name).appendChild(document.createTextNode(li[n].innerHTML));
-	  	gebid( 'options_' + name ).style.display = 'none' ;
-	  	gebid( 'select_info_' + name ).className = 'tag_select';
-	  	selects[i].options[n].selected = 'selected';
-	
-	  }
-	
-	  window.onload = function(e) {
-	  	bodyclick = document.getElementsByTagName('body').item(0);
-	  	rSelects();
-	  	bodyclick.onclick = function(){
-	  		for (i=0;i<selects.length;i++){	
-	  			gebid('select_info_' + selects[i].name).className = 'tag_select';
-	  			gebid('options_' + selects[i].name).style.display = 'none';
-	  		}
-	  	}
-	  }
-	  
-
-	  $(".iselect").css('display','inline');
-	  /* top select */ 
- </script>
 	
 	<?php
 		if($nav==""){	$nav=3;	}
 		$countnav=$db->query("select * from fb_navigation where parent_id=0 order by priority asc");
-		$navigation=$db->query('select name,id from fb_navigation where id='.$nav);
+		$navigation=$db->query('select name,id,parent_id from fb_navigation where id='.$nav);
 	?>
   <div id=navigation>
-			<div class="menu" <?php if($navigation[0]->name=="首页"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[0]->href; ?>"><div class="nav" param1="<?php echo $countnav[0]->id; ?>" id=picindex></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="榜单"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[1]->href; ?>"><div class="nav" param1="<?php echo $countnav[1]->id; ?>" id=piclists></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="富豪"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[2]->href; ?>"><div class="nav" param1="<?php echo $countnav[2]->id; ?>" id=picbillionaires></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu" <?php if($navigation[0]->name=="投资"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[3]->href; ?>"><div class="nav" param1="<?php echo $countnav[3]->id; ?>" id=picinvestment></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="商业"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[4]->href; ?>"><div class="nav" param1="<?php echo $countnav[4]->id; ?>" id=picbusiness></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="创业"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[5]->href; ?>"><div class="nav" param1="<?php echo $countnav[5]->id; ?>" id=picentrepreneur></div></a>
-			</div>
-
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="科技"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[6]->href; ?>"><div class="nav" param1="<?php echo $countnav[6]->id; ?>" id=pictech></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="城市"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[7]->href; ?>"><div class="nav" param1="<?php echo $countnav[7]->id; ?>" id=piccity></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="生活"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[8]->href; ?>"><div class="nav" param1="<?php echo $countnav[8]->id; ?>" id=piclife></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="专栏"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[9]->href; ?>"><div class="nav" param1="<?php echo $countnav[9]->id; ?>" id=piccolumn></div></a>
-			</div>
+  <?php foreach($countnav as $v){?>
+  		<div class="menu">
+			<a href="<?php echo $v->href; ?>" id="<?php echo $v->id; ?>"><div class="nav" id="<?php echo $v->id_name;?>"></div></a>
+		</div>
+  <?php }?>
 			<div id=top_function2>
 				<a href="/club" id=member></a>
 				<a href="#" id=magazine></a>
 			</div>
+			
 	</div>
 	<div id=navigation2>
-			<?php for($i=0;$i<count($countnav);$i++){ 
+			<?php
+				global $category;
+				if(empty($category)){
+					$category = new category_class('news');
+				} 
+				for($i=0;$i<count($countnav);$i++){ 
 				$navigation2=$db->query('select name,target,href from fb_navigation where parent_id='.$countnav[$i]->id.' order by priority asc'); ?>	
-				<div class="nav2" <?php if($countnav[$i]->id==$nav){?>style="display:inline;"<?php }?> id="nav<?php echo $countnav[$i]->id; ?>">
-					<?php for($j=0;$j<count($navigation2);$j++){ ?><a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $navigation2[$i]->href; ?>"><?php echo $navigation2[$j]->name; ?></a><?php if($j<(count($navigation2)-1)){ ?>　|　<?php }} ?>
+				<div class="nav2" id="nav<?php echo $countnav[$i]->id; ?>">
+					<?php 
+						$except = array("picindex","piclist","picbillionaires","piclife","piccolumn");
+						for($j=0;$j<count($navigation2);$j++){ 
+						$url = !in_array($countnav[$i]->id_name,$except) ? get_newslist_url($category->find_by_name($navigation2[$j]->name)->id) : $navigation2[$j]->href;
+					?>
+						<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $url; ?>"><?php echo $navigation2[$j]->name; ?></a><?php if($j<(count($navigation2)-1)){ ?>　|　<?php } ?>
+					<?php } ?>
 				</div>
 			<?php } ?>
 	</div>
-</div>		
+</div>	
+<script>
+	var url_path = location.pathname.replace(/\/\s*/g,"");
+	$(".nav").hover(function(){
+		var num=$(this).parent().attr("id");
+		
+		$(".nav2").hide();
+		$("#nav"+num).show();
+		$(".nav").parent().parent().css("background","none");
+		$(this).parent().parent().css('background',"url('/images/public/bg_menu.jpg') repeat-x");
+	},function(){});
+	
+	$('#pic'+url_path).hover();
+	
+</script>	
 		

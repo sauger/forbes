@@ -19,7 +19,7 @@
 	?>
 </head>
 <body>
-	<div id=ibody>
+	<div id="ibody">
 	<?php include_once('../inc/top.inc.php');?>
 		<div id=bread>
 			<a href="/magazine/">杂志首页</a> > <span>杂志</span>		
@@ -89,7 +89,7 @@
 					<div class=title3>
 						<?php echo $magazine_news[$i]->short_title;?>
 					</div>
-					<div classs=text>
+					<div class="text">
 						<?php echo $magazine_news[$i]->description;?>
 					</div>
 				</div>	
@@ -134,6 +134,7 @@
 				</div>
 				<input type=button id=button>
 			</div>
+		</div>
 	<?php include_once('../inc/bottom.inc.php');?>
 	</div>
 </body>

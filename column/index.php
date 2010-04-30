@@ -202,7 +202,7 @@
 								<?php show_page_href(); ?>
 							</div>
 							<div class=t3>
-								—<?php echo $pos_items->$pos_name->alias;?>
+								——<?php echo $pos_items->$pos_name->alias;?>
 							</div>
 						</div>
 						<div class=t4>
