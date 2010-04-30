@@ -6,7 +6,7 @@
 		global $pos_name;
 		for($i=0;$i<5;$i++){$pos_name = $pos."activity".$i;
 	?>
-	<div class=content <?php show_page_pos($pos_name)?>>
+	<div class=content <?php show_page_pos($pos_name,'activity')?>>
 		<div class=pic><?php show_page_img();?></div>
 		<div class=pictitle><?php show_page_href();?></div>
 	</div>
