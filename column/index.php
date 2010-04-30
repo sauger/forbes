@@ -31,6 +31,7 @@
 			<div class=column_left_top>
 				<div class=column_special>
 					<div class=captions>特约专栏</div>
+					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
 					<?php $pos_name = "column_special_t";?>
 					<div class=column_special_top <?php show_page_pos($pos_name,'base');?>>
@@ -81,6 +82,7 @@
 				</div>
 				<div id=column_edit>
 					<div class=captions>专栏文章推荐</div>
+					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
 					<?php
 						for($i=0;$i<3;$i++){
@@ -119,6 +121,7 @@
 					<div id=column_edit_b>
 						<div class=caption>
 							<div class=captions>专栏列表</div>
+							<div class=line>|</div>
 							<a href="#" target="_blank" class=more></a>
 						</div>
 						<?php
@@ -136,6 +139,7 @@
 			<div class=column_left_top style="margin-top:30px;border:0px; ">
 				<div class=column_special>
 					<div class=captions>采编智库</div>
+					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
 					<div class=column_special_top>
 						<?php $pos_name = 'column_c_b_zk_'.$i ?>
@@ -186,6 +190,7 @@
 				</div>
 				<div id=column_edit>
 					<div class=captions>采编智库文章推荐</div>
+					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
 					<?php
 						for($i=0;$i<3;$i++){
@@ -224,6 +229,7 @@
 					<div id=column_edit_b>
 						<div class=caption>
 							<div class=captions>专栏列表</div>
+							<div class=line>|</div>
 							<a href="#" target="_blank" class=more></a>
 						</div>
 						<?php
