@@ -32,7 +32,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .column_recommend_top_r .t2{width:195px; height:20px; margin-top:7px; font-size:14px; font-weight:bold; overflow:hidden; color:#003899; line-height:20px;}
 .column_recommend_top_r .t3{width:195px; height:60px; font-size:12px; overflow:hidden; line-height:20px;}
 .column_recommend_top_r .t3 a{color:#666666; text-decoration:none;}
-.column_recommend_b{width:300px; height:20px; font-size:14px; font-weight:bold; overflow:hidden; text-indent:10px; line-height:20px; background:url(/images/public/circle1.jpg) no-repeat 0 8px;}
+.column_recommend_b{width:300px; height:20px; font-size:14px; overflow:hidden; text-indent:14px; line-height:20px; background:url(/images/public/circle1.jpg) no-repeat 0 8px;}
 #column_edit{width:320px; margin-left:5px;}
 .column_edit_t{width:310px; margin-top:11px;}
 .column_edit_t a{text-decoration:none;}
@@ -46,10 +46,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 #column_edit_recommend{width:310px; line-height:20px;}
 #column_edit_recommend a{text-decoration:none;}
 #column_edit_recommend .t1{width:310px; height:20px; font-weight:bold; margin-top:7px; text-indent:5px; background:url(/images/public/circle1.jpg) no-repeat 0 8px; *background:url(/images/public/circle1.jpg) no-repeat 0 8px;}
-#column_edit_recommend .t1 a{color:#323284; text-decoration:none;}
-#column_edit_recommend .t2{width:228px; height:20px; overflow:hidden; font-size:14px; font-weight:bold; line-height:20px; margin-left:5px;}
-#column_edit_recommend .t2 a{color:#003899; text-decoration:none;}
-#column_edit_recommend .t3{width:72px; height:20px; font-size:12px; color:#666666; font-weight:normal; overflow:hidden; line-height:20px; margin-left:5px;}
+#column_edit_recommend .t1 a{color:#323284;}
+#column_edit_recommend .t2{width:228px; height:20px; overflow:hidden; font-size:14px; line-height:20px; margin-left:7px;}
+#column_edit_recommend .t2 a{color:#003899; font-weight:normal;}
+#column_edit_recommend .t3{width:72px; height:20px; font-size:12px; color:#666666; font-weight:normal; overflow:hidden; line-height:20px; margin-left:3px;}
 
 .caption{width:200px; height:28px;}
 .captions{height:18px; margin-top:5px; padding-left:18px; line-height:18px; font-size:14px; color:#666666; font-weight:bold;  background:url(/images/public/square.jpg) no-repeat 0 5px;}
