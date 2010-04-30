@@ -209,7 +209,7 @@
 	  }
 	  
 
-	  document.getElementByName('selsearch').style.display='inline';
+	  $(".iselect").css('display','inline');
 	  /* top select */ 
  </script>
 	
