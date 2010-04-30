@@ -107,7 +107,7 @@ function update_pos($category_name,$limit,$position_name,$is_parent=false,$flag=
 
 function update_column($type,$limit,$position_name,$news_limit='',$news_position='',$flag=true){
 	$db = get_db();
-	$sql = "select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.publisher where t1.role_name='{$type}' group by t1.id order by t2.created_at limit {$limit}";
+	$sql = "select t1.* from fb_user t1 join (select * from fb_news order by created_at desc) t2 on t1.id=t2.publisher where t1.role_name='{$type}' group by t1.id order by t2.created_at limit {$limit}";
 	$column = $db->query($sql);
 	$count = $db->record_count;
 	for($i=0;$i<$count;$i++){
@@ -200,6 +200,64 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 						$pos->save();
 						break;
 					}
+				}
+			}
+		}
+	}
+}
+
+function update_column($type,$limit,$position_name,$news_limit,$news_position,$flag=true){
+	$db = get_db();
+	
+	for($k=0;$k<$limit;$k++){
+		$pos_name = $position_name.$k;
+		$column = $db->query("select t2.id,t2.name from fb_page_pos t1 join fb_user on t1.alias=t2.name where t1.name='{$pos_name}' and t2.role_name='{$type}'");
+		if($db->record_count==1){
+			$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where author_id={$column[0]->id} order by created_at desc limit {$news_limit}";
+			$news = $db->query($sql);
+			$news_count = $db->record_count;
+		}else{
+			$news_count = 0;
+		}
+		
+		for($i=0;$i<$news_count;$i++){
+			for($j=0;$j<$news_limit;$j++){
+				if($flag){
+					$pos_name = $position_name.$k.$news_position.$j;
+				}else{
+					$pos_name = $news_position.$k;
+				}
+				
+				$record = $db->query("select id,end_time from fb_page_pos where name='{$pos_name}'");
+				if($db->record_count==1){
+					if($record[0]->end_time>now()){
+					}else{
+						$pos = new table_class('fb_page_pos');
+						$pos->find($record[0]->id);
+						$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
+						$pos->end_time = $end_time;
+						$pos->display = $news[$i]->title;
+						$pos->title = $news[$i]->title;
+						$pos->image1 = $news[$i]->video_photo_src;
+						$pos->description = $news[$i]->description;
+						$pos->href = dynamic_news_url($news[$i]);
+						$pos->static_href = column_article_url($column[0]->name,$news[$i]->id);
+						$pos->save();
+						break;
+					}
+				}else{
+					$pos = new table_class('fb_page_pos');
+					$pos->name = $pos_name;
+					$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
+					$pos->end_time = $end_time;
+					$pos->display = $news[$i]->short_title;
+					$pos->title = $news[$i]->title;
+					$pos->image1 = $news[$i]->video_photo_src;
+					$pos->description = $news[$i]->description;
+					$pos->href = dynamic_news_url($news[$i]);
+					$pos->static_href = column_article_url($column[0]->name,$news[$i]->id);
+					$pos->save();
+					break;
 				}
 			}
 		}
