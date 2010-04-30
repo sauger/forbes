@@ -10,20 +10,29 @@
 	$category = new category_class('news');
 	?>
 	<style type="text/css">
-		.items{float:left;margin-top:5px;width:590px;}
-		.item1{width:320px;float:left;overflow: hidden;}
-		.item2{width:150px;float:left;overflow: hidden;}
-		.item3{width:90px;float:left;overflow: hidden;}
+		.items{line-height:28px;height:28px;float:left;background:#ffffff;width:100%;border:1px solid #666666}
+		.item1{width:40%;float:left;overflow: hidden;}
+		.item2{width:30%;float:left;overflow: hidden;}
+		.item3{width:29%;float:left;overflow: hidden;}
 	</style>
-	<table width="600" border="0" id="list" style="boder:1px solid">
-		<tr class="tr2">
-			<td width="250">短标题</td><td width="200">发表时间</td><td width="100">所属类别</td>
-		</tr>
+	<div id=itable>
+	<table id="list" style="boder:1px solid">
 		<tr class="tr2">
 			<td colspan="4" align="left">
 				<span style="color:blue">请直接拖动，调整新闻排序</span>
 			</td>
 		</tr>
+		<tr class="tr2">
+			<td colspan="4">
+				<div>
+					<span class="items">
+						<span class="item1">短标题</span>
+						<span class="item2">发表时间</span>
+						<span class="item3">所属类别</span>
+					</span>
+				</div>
+			</td>
+		</tr>		
 		<tr >
 			<td colspan="4">
 				<div id="sortable">
@@ -59,6 +68,7 @@
 				</td>
 		</tr>		
 	</table>
+	</div>
 	<script type="text/javascript">
 		$(function(){
 			$('#button_back').click(function(){

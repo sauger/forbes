@@ -48,9 +48,9 @@
 						<a href="edit_order.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer">查看用户订阅</a>　
 						<a href="edit_info.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer">编辑用户个人信息</a>　
 						<span style="cursor:pointer;color:#FF0000" class="del" name="<?php echo $record[$i]->id;?>">删除</span>
+						<input type="hidden" id="db_table" value="fb_yh">
 					</td>
 				</tr>
-				<input type="hidden" id="db_table" value="fb_yh">
 		<?php
 			}
 		?>
