@@ -1,6 +1,6 @@
 <table cellspacing="1">
 		<tr class="itable_title">
-			<td width="8%">留言人</td><td width="10%">IP</td><td width="15%">文章标题</td><td width="%10">杂志刊号</td><td width="30%">留言内容</td><td width="12%">留言时间</td><td width="5%">操作</td>
+			<td width="8%">留言人</td><td width="10%">IP</td><td width="15%">文章标题</td><td width="%10">杂志刊号</td><td width="25%">留言内容</td><td width="12%">留言时间</td><td width="10%">操作</td>
 		</tr>
 		<?php
 			$comment = new table_class("fb_comment");
@@ -29,12 +29,15 @@
 						<span style="cursor:pointer" class="approve" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border="0"></span>
 						<?php }?>				
 						<span style="cursor:pointer" class="del" name="<?php echo $record[$i]->id;?>"  title="删除"><img src="/images/admin/btn_delete.png" border="0"></span>					
+						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:25px;">
 					</td>
 				</tr>
 
 			<?php }?>
 			<tr class="btools">
 				<td colspan=10>
+					<button id=clear_priority>清空优先级</button>
+					<button id=edit_priority>编辑优先级</button>
 					<?php paginate("",null,"page",true);?>
 				</td>
 			</tr>

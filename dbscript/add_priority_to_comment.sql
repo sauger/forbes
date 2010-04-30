@@ -1,0 +1,1 @@
+ALTER TABLE `forbes`.`fb_comment` ADD COLUMN `priority` INTEGER UNSIGNED COMMENT 'сеох╪╤' AFTER `is_approve`;

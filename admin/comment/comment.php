@@ -11,9 +11,9 @@
 	if($_GET['s_text']){ $conditions[]='nick_name  like "%'.trim($_REQUEST['s_text']).'%"' ." or comment like '%{$_GET['s_text']}%'";}
 	if($conditions!=null){
 		$conditions = implode(' and ',$conditions);
-		$conditions = array("conditions" => $conditions, "order" => "created_at desc");
+		$conditions = array("conditions" => $conditions, "order" => "priority asc,created_at desc");
 	}else{
-		$conditions = array("order" => "created_at desc");
+		$conditions = array("order" => "priority asc,created_at desc");
 	}
 	
 ?>

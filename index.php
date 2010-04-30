@@ -37,9 +37,9 @@
 				<div class=headline_pic id="headline_pic_<?php echo $i;?>" style="display:none;"><?php show_page_img(300,200,0)?></div>
 				<?php }?>
 				<div id=headline_content>
-					<div class=headline_title id=headline_title_0 <?php $pos_name ="index_hl_0"; show_page_pos($pos_name)?>><?php show_page_href();?></div>
-					<div class=headline_title id=headline_title_1 style="display:none;" <?php $pos_name ="index_hl_1"; show_page_pos($pos_name)?>><?php show_page_href();?></div>
-					<div class=headline_title id=headline_title_2 style="display:none;" <?php $pos_name ="index_hl_2"; show_page_pos($pos_name)?>><?php show_page_href();?></div>
+					<div class=headline_title id=headline_title_0 <?php $pos_name ="index_hl_0"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
+					<div class=headline_title id=headline_title_1 style="display:none;" <?php $pos_name ="index_hl_1"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
+					<div class=headline_title id=headline_title_2 style="display:none;" <?php $pos_name ="index_hl_2"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
 					<div class=headline_description id=headline_description_0><?php echo $pos_items->index_hl_0->description; ?></div>
 					<div class=headline_description id=headline_description_1 style="display:none;"><?php echo $pos_items->index_hl_1->description; ?></div>
 					<div class=headline_description id=headline_description_2 style="display:none;"><?php echo $pos_items->index_hl_2->description; ?></div>
@@ -50,7 +50,7 @@
 							for($i=0;$i<2;$i++)
 							{$pos_name = "index_hl".$j."_r".$i;
 					?>
-					<div class=list <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
+					<div class=list <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
 					<?php
 							}
 					?>				
@@ -74,7 +74,7 @@
   		 	 	<?php for($i=0;$i<3;$i++){
   		 	 		$pos_name = "index_bf".$i;
   		 	 	?>
-			 	 <div class=lujiazui_list <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
+			 	 <div class=lujiazui_list <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
 			 	 <?php }?>
 			 </div>
 			 <? /* lujiazui-end */?>
@@ -82,7 +82,7 @@
 			 <div id=subject>
 			 	 <div id=subject_btnl></div>
 			 	 <?php for($i=0;$i<8;$i++){ $pos_name = "index_sub".$i;?>
-			 	 <div <?php show_page_pos($pos_name)?> class=subject_content id=subject_content_<?php echo $i?> <?php if($i>2){echo "style='display:none'";}?>>
+			 	 <div <?php show_page_pos($pos_name,'link_img')?> class=subject_content id=subject_content_<?php echo $i?> <?php if($i>2){echo "style='display:none'";}?>>
 			 			<div class=subject_pic><?php show_page_img();?></div>
 			 			<div class=subject_list><?php show_page_href();?></div>
 			 	 </div>
@@ -131,7 +131,7 @@
 					</div>
 				</div>
 				<?php $pos_name = "index_ipo"?>
-				<div id="rt_tab2" class="rt_tab" <?php show_page_pos($pos_name)?>>
+				<div id="rt_tab2" class="rt_tab" <?php show_page_pos($pos_name,'base_img')?>>
 					<div id=rt_tab2_box>
 						<div id="ipo_img">
 							<?php show_page_img(50,50);?>
@@ -152,7 +152,7 @@
 					<?php for($i=0;$i<2;$i++){
 						$pos_name = "index_dyn_list{$i}"; 
 						?>
-						<div class=bottom_list<?php show_page_pos($pos_name);?>><?php show_page_href()?></div>
+						<div class=bottom_list<?php show_page_pos($pos_name,'link');?>><?php show_page_href()?></div>
 					<?php } ?>
 				</div>
 			</div>
@@ -167,11 +167,11 @@
 			</div>
 			<div class=forbes_l_content>
 				<div class=list1>
-					<div class=list1_title <?php $pos_name ="index_business0"; show_page_pos($pos_name)?>><?php show_page_href();?></div>
+					<div class=list1_title <?php $pos_name ="index_business0"; show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
 					<div class=list1_description><?php show_page_desc();?></div>
 				</div>
 				<?php for($i=0;$i<4;$i++){ $pos_name="index_business".($i+1);?>
-					<div class=list2 <? if($i==0){?>style="margin-top:10px;"<?php } ?> <?php show_page_pos($pos_name);?>><?php show_page_href();?></div>
+					<div class=list2 <? if($i==0){?>style="margin-top:10px;"<?php } ?> <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
 				<?php } ?>
 			</div>
 			<div class=dashed></div>
@@ -182,12 +182,12 @@
 			</div>
 			<div class=forbes_l_content>
 				<div class=list1>
-					<div class=list1_title <?php show_page_pos("index_bus0")?>><?php show_page_href("index_bus0");?></div>
+					<div class=list1_title <?php show_page_pos("index_bus0",'base')?>><?php show_page_href("index_bus0");?></div>
 					<div class=list1_description><?php show_page_desc("index_bus0");?></div>
 				</div>
 				<?php
 				for($i=0;$i<3;$i++){ $pos_name = "index_bus".($i+1);?>
-					<div class=list2 <? if($i==0){?>style="margin-top:10px;"<?php } ?> <?php show_page_pos($pos_name);?>><?php show_page_href();?></div>
+					<div class=list2 <? if($i==0){?>style="margin-top:10px;"<?php } ?> <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
 				<?php } ?>
 			</div>
 			<div class=dashed></div>
@@ -199,11 +199,11 @@
 			</div>
 			<div class=forbes_l_content>
 				<div class=list1>
-					<div class=list1_title <?php $pos_name = "index_tech0";show_page_pos($pos_name);?>><?php show_page_href();?></div>
+					<div class=list1_title <?php $pos_name = "index_tech0";show_page_pos($pos_name,'base');?>><?php show_page_href();?></div>
 					<div class=list1_description><?php show_page_desc()?></div>
 				</div>
 				<?php for($i=0;$i<4;$i++){ $pos_name="index_tech".($i+1);?>
-					<div class=list2 <? if($i==0){?>style="margin-top:10px;"<?php } ?> <?php show_page_pos($pos_name);?>><?php show_page_href();?></div>
+					<div class=list2 <? if($i==0){?>style="margin-top:10px;"<?php } ?> <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
 				<?php } ?>
 			</div>
 			<div class=dashed></div>
@@ -218,10 +218,10 @@
 				<div id=column_btnl style="background:none; cursor:auto;"></div>
 				<div id="column_box">
 				<?php 
-					for($i=0;$i<5;$i++){ 
+					for($i=0;$i<8;$i++){ 
 						$pos_name = "index_author".$i;
 				?>
-					<div class=content <?php show_page_pos($pos_name);?> name="<?php echo 'author'.$i;?>">
+					<div class=content <?php show_page_pos($pos_name,'index_column');?> name="<?php echo 'author'.$i;?>">
 						<div <?php if($i==0){?>style="filter:alpha(opacity=100); opacity:1;"<?php }?> class=cpic>
 							<?php show_page_img();?>
 						</div>
@@ -232,17 +232,17 @@
 				<div id=column_btnr></div>
 				
 				<?php 
-					for($i=0;$i<5;$i++){
+					for($i=0;$i<8;$i++){
 				?>
 				<div name="<?php echo 'author'.$i;?>" <?php if($i==0){?>style="display:inline"<?php }?> class="cloumn_news_box">
 					<div class=list1>
-						<div class=list1_title <?php show_page_pos('index_author'.$i.'_r0');?>><?php show_page_href('index_author'.$i.'_r0');?></div>
+						<div class=list1_title <?php #show_page_pos('index_author'.$i.'_r0');?>><?php show_page_href('index_author'.$i.'_r0');?></div>
 					</div>
 					<?php 
 						for($j=1;$j<4;$j++){
 							$pos_name = 'index_author'.$i.'_r'.$j;
 					?>
-						<div class=list2 <?php show_page_pos($pos_name);?>><?php show_page_href();?></div>
+						<div class=list2 <?php #show_page_pos($pos_name);?>><?php show_page_href();?></div>
 					<?php } ?>
 				</div>
 				<?php }?>
@@ -256,7 +256,7 @@
 				<a href="/comments/comments.php" class=more target="_blank"></a>
 			</div>
 			<?php 
-				$comments = $db->query("select * from fb_comment where resource_type='news' order by created_at desc limit 4");
+				$comments = $db->query("select * from fb_comment where resource_type='news' and is_approve=1 order by priority asc,created_at desc limit 4");
 				$news = new table_class('fb_news');
 				for($i=0;$i<4;$i++){
 					$news->find($comments[$i]->resource_id);
@@ -274,12 +274,12 @@
 			</div>
 			<div id=forbes_l_content>
 			 	<div class=list1 >
-					<div class=list1_title <?php $pos_name ="index_invest0"; show_page_pos($pos_name)?>><?php show_page_href();?></div>
+					<div class=list1_title <?php $pos_name ="index_invest0"; show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
 					<div class=list1_description2>
 						<a class=list1_pic href="<?php echo $pos_items->index_invest0->href;?>" target="_blank"><img border=0 width=70 height=70 src="<?php echo $pos_items->index_invest0->image1;?>"></a><p style="width:10px; height:51px; float:left;"></p><?php show_page_desc('index_invest0');?></a>
 					</div>
 					<?php for($i=1;$i<=5;$i++){ $pos_name = "index_invest".$i;?>
-						<div class=list2 style="margin-left:3px;" <?php show_page_pos($pos_name);?>><?php show_page_href();?></div>
+						<div class=list2 style="margin-left:3px;" <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
 					<?php } ?>
 				</div>
 			</div>	
@@ -291,12 +291,12 @@
 				<a href="/life/" class=more target="_blank"></a>
 			</div>
 			<div class=list1>
-					<div <?php $pos_name ="index_luxu0"; show_page_pos($pos_name);?> class=image><?php show_page_img(150,130)?></div>
+					<div <?php $pos_name ="index_luxu0"; show_page_pos($pos_name,'base_img');?> class=image><?php show_page_img(150,130)?></div>
 					<div class=image_content style="margin-left:15px;">
 						<div class=image_list><?php show_page_href()?></div>
 						<div class=image_description><?php show_page_desc()?></div>
 					</div>
-					<div  <?php $pos_name ="index_luxu1"; show_page_pos($pos_name);?> class=image_content style="margin-top:20px;">
+					<div  <?php $pos_name ="index_luxu1"; show_page_pos($pos_name,'base_img');?> class=image_content style="margin-top:20px;">
 						<div class=image_list><?php show_page_href()?></div>
 						<div class=image_description><?php show_page_desc()?></div>
 					</div>
@@ -311,8 +311,8 @@
 					<div id=dictionary_tl <?php show_page_pos("index_dict0");?>><?php show_page_href("index_dict0");?></div>
 					<div id=dictionary_tr><span><a href="<?php echo get_newslist_url($category->find_by_name("实用商业词汇")->id);?>" target="_blank">实用商业词汇</a></span>  |  <span><a href="<?php echo get_newslist_url($category->find_by_name("实用财经词汇")->id);?>" target="_blank">实用财经词汇</a></span></div>
 				</div>
-				<div id=dictionary_bl <?php show_page_pos("index_dict3");?>><?php show_page_href("index_dict3");?></div>
-				<div id=dictionary_br <?php show_page_pos("index_dict4");?>><?php show_page_href("index_dict4");?></div>
+				<div id=dictionary_bl <?php show_page_pos("index_dictb0",'link');?>><?php show_page_href("index_dictb0");?></div>
+				<div id=dictionary_br <?php show_page_pos("index_dictb1",'link');?>><?php show_page_href("index_dictb1");?></div>
 			</div>
 
 			<div id=activity>
@@ -320,14 +320,12 @@
 					<div class=public_caption1>论坛活动<span>Conferences</span></div>
 					<a href="event/list.php" target=_blank class=public_more1></a>
 				</div>
-				<div class=public_box1>
-				<?php
-					$record_show = $db->query("select * from fb_event order by id desc limit 1");
-				?>
-					<div id=images><img src="<?php echo $record_show[0]->image?>" width="260" height="90"/></div>
+				<?php $pos_name = 'index_event';?>
+				<div class=public_box1 <?php show_page_pos($pos_name,'index_event');?>>
+					<div id=images><img src="<?php echo $pos_items->$pos_name->image1;?>" width="260" height="90"/></div>
 					<div id=context>
-						<span style="font-size:13px; font-weight:bold; color:#333385"><?php echo $record_show[0]->title;?></span><br>举办日期：<?php echo $record_show[0]->time?><br>地点：<?php echo $record_show[0]->place?></div>
-						<div id=info><a target="_blank" href="<?php echo $record_show[0]->url?>" target="_blank">查看详细</a></div>	
+						<span style="font-size:13px; font-weight:bold; color:#333385"><?php echo $pos_items->$pos_name->display;?></span><br>举办日期：<?php echo $pos_items->$pos_name->reserve;?><br>地点：<?php echo $pos_items->$pos_name->title;?></div>
+						<div id=info><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">查看详细</a></div>	
 				</div>
 				<div class=public_bottom1></div>
 			</div>
@@ -335,21 +333,22 @@
 			<div id=club>
 					<div class=club_caption1>增长俱乐部<span>Up Club</span></div>
 					<a href="/club/" class=club_more1 target="_blank"></a>
-					<div class=content <?php show_page_pos("index_club0")?>>
+					<?php $pos_name = 'index_club0';?>
+					<div class=content <?php show_page_pos("$pos_name",'base_img');?>>
 						<div class=pic>
-							<?php show_page_img('index_club0')?>
+							<?php show_page_img()?>
 						</div>	
 						<div class=pictitle>
-							<?php show_page_href('index_club0')?>
+							<?php show_page_href()?>
 						</div>
 						<div class=piccontent>
-							<?php show_page_desc('index_club0')?>
+							<?php show_page_desc()?>
 						</div>
 					</div>
 					<div class=bottom>
-						<div class=bottom_l <?php show_page_pos("index_club1");?>><?php show_page_href('index_club1')?></div>
-						<div class=bottom_r <?php show_page_pos("index_club2");?>>
-							<?php show_page_href('index_club2')?>
+						<div class=bottom_l><a href='/investor/sign.php'>我要报名</a></div>
+						<div class=bottom_r>
+							<a href='/search/investor.php'>VC/PE/天使人投资人数据库</a>
 						</div>	
 					</div>
 			</div>
@@ -359,21 +358,23 @@
 			<div id=city>
 					<div class=city_caption1>城市<span>Best Cities</span></div>
 					<a href="/city/" class=city_more1 target="_blank"></a>
-					<div class=content <?php show_page_pos("index_city0");?>>
+					<?php $pos_name = 'index_city0';?>
+					<div class=content <?php show_page_pos($pos_name,'base_img');?>>
 						<div class=pic>
-							<?php show_page_img('index_city0')?>
+							<?php show_page_img()?>
 						</div>	
 						<div class=pictitle>
-							<?php show_page_href('index_city0')?>
+							<?php show_page_href()?>
 						</div>
 						<div class=piccontent>
-							<?php show_page_desc('index_city0')?>
+							<?php show_page_desc()?>
 						</div>
 					</div>
 					<div class=bottom>
-						<div class=bottom_l <?php show_page_pos("index_city1");?>><?php show_page_href('index_city1')?></div>
-						<div class=bottom_r <?php show_page_pos("index_city2");?>>
-							<?php show_page_href('index_city2')?>
+						<div class=bottom_l><a href="">城市榜</a></div>
+						<?php $pos_name = 'index_city2';?>
+						<div class=bottom_r <?php show_page_pos($pos_name,'link');?>>
+							<?php show_page_href();?>
 						</div>	
 					</div>
 			</div>
@@ -393,13 +394,13 @@
 		</div>
 		<div id="div_caption1">
 			<?php for($i=0;$i<6;$i++){ $pos_name = "index_pop".$i;?>
-					<div class=list3 <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>
+					<div class=list3 <?php show_page_pos($pos_name,'link')?>><?php show_page_href()?></div>
 			<?php } ?>
 			<div class=dashed></div>
 		</div>
 		<div id="div_caption2" style="display:none;">
 			<?php for($i=0;$i<6;$i++){ $pos_name = "index_reco".$i;?>
-					<div class=list3 <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>
+					<div class=list3 <?php show_page_pos($pos_name,'link')?>><?php show_page_href()?></div>
 			<?php } ?>
 			<div class=dashed></div>
 		</div>
@@ -416,7 +417,7 @@
 				<div class=inventory_content>
 					<?php $pos_name = "index_survey_0"?>
 					<div class=inventory_title<?php show_page_pos($pos_name,'survey')?>><?php show_page_href();?></div>
-					<div class=inventory_list<?php show_page_pos($pos_name,'survey')?>>
+					<div class=inventory_list>
 						<?php show_page_desc(null,null);?>
 					</div>
 					<a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank" class=inventory_button></a>
@@ -424,7 +425,7 @@
 
 					<?php $pos_name = "index_survey_1"?>
 					<div class=inventory_title<?php show_page_pos($pos_name,'survey')?>><?php show_page_href();?></div>
-					<div class=inventory_list<?php show_page_pos($pos_name,'survey')?>>
+					<div class=inventory_list>
 						<?php show_page_desc(null,null);?>
 					</div>
 					<a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank" class=inventory_button></a>
@@ -444,7 +445,7 @@
 			</div>
 				<?php 
 				for($i=0;$i<8;$i++){ $pos_name = "index_jour".$i;?>
-					<div class=writer <?php show_page_pos($pos_name)?>>
+					<div class=writer <?php show_page_pos($pos_name,'index_column2')?>>
 						<div class=writer_pic><?php show_page_img()?></div>
 						<div class=writer_name>
 							<a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">
@@ -464,10 +465,11 @@
 					<div class=public_caption1 style="color:#4990B9;">福布斯杂志<span>Magazine Archive</span></div>
 					<a href="/magazine/" class=public_more1 target="_blank"></a>
 				</div>
-				<div id=mag_content  <?php show_page_pos("index_magazine");?>>
-						<div class=pic><?php show_page_img("index_magazine")?></div>
-						<div class=pictitle><?php show_page_href("index_magazine")?></div>
-						<div class=context><?php show_page_desc("index_magazine")?></div>	
+				<?php $pos_name='index_magazine';?>
+				<div id=mag_content  <?php show_page_pos($pos_name,'magazine');?>>
+						<div class=pic><?php show_page_img()?></div>
+						<div class=pictitle><?php show_page_href()?></div>
+						<div class=context><?php show_page_desc()?></div>	
 
 			 			 <div id=mag_dash></div>
 
