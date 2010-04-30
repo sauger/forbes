@@ -337,7 +337,7 @@ function front_user_id(){
 function get_newslist_url($cid){
 	global $page_type;
 	if($page_type == 'static'){
-		return "/review/list/{$cid}/cid";
+		return "/review/list/{$cid}";
 	}else{
 		return "/news/news_list.php?cid={$cid}";
 	}
