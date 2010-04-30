@@ -48,8 +48,8 @@
 				
 				<div class="join_top">
 					<div class="title"><?php echo $items[$i]->nick_name;?></div>
-					<div class="time"><?php echo $items[$i]->created_at;?></div>
 					<div class="issues" title="<?php echo $title?>">评论：<?php echo $title?></div>
+					<div class="time"><?php echo $items[$i]->created_at;?></div>
 				</div>
 				
 				<div class="content">
