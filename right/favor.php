@@ -1,5 +1,9 @@
 <?php include_once(dirname(__FILE__).'/../frame.php');?>
-<?php init_page_items();?>
+<?php
+	global $pos_items; 
+	global $pos_name;
+	init_page_items();
+?>
 <div class="left_title">
 	<div  name="favor" class="left_top_title article_list selected">最受欢迎</div>
 	<div style="margin-left:1px;" name="comm" class="left_top_title article_list">编辑推荐</div>

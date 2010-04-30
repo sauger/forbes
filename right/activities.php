@@ -3,6 +3,7 @@
 <div id=r_c_l></div>
 <div id=r_c_c>
 	<?php
+		global $pos_name;
 		for($i=0;$i<5;$i++){$pos_name = $pos."activity".$i;
 	?>
 	<div class=content <?php show_page_pos($pos_name)?>>

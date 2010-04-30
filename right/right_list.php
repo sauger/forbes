@@ -59,7 +59,8 @@
 	
 </style>
 <?php include_once dirname(__FILE__) .'/../frame.php'?>
-<?php use_jquery();init_page_items();?>
+<?php use_jquery();init_page_items();
+global $pos_name;?>
 <div class="inc_right_list_main">
 	<!--  title -->
 	<div class="inc_list_top_border"></div>

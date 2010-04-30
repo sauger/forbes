@@ -97,7 +97,7 @@
 <script>
 		$(function(){
 			//initilize checkbox_status
-			$('#list input:checkbox').click(function(){
+			$('.tr3 input:checkbox').click(function(){
 			if($(this).attr('checked')){
 				if($.inArray($(this).attr('id'),selected_news) == -1){
 					selected_news.push($(this).attr('id'));
@@ -108,7 +108,7 @@
 		});
 		
 		$('#cancel_all').click(function(){
-			$('#list input:checkbox').each(function(){
+			$('.tr3 input:checkbox').each(function(){
 				$(this).attr('checked',false);
 			});
 			selected_news.length = 0;
@@ -116,6 +116,7 @@
 		
 		$('#button_ok').click(function(){
 			var func = call_back + "('" + selected_news.join(',') + "');";
+			alert(func);
 			eval(func);
 			$.fn.colorbox.close();
 		});	
@@ -145,7 +146,7 @@
 			$('#result_box').load('_news_filter_sort.php',{'selected_news':selected_news.join(',')});
 		});
 		
-		$('#list input:checkbox').each(function(){
+		$('.tr3 input:checkbox').each(function(){
 				if($.inArray($(this).attr('id'),selected_news) != -1){
 					$(this).attr('checked',true);
 				}
