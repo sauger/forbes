@@ -66,6 +66,17 @@ function static_news_url($news,$index = 1){
 	return $file;
 }
 
+function column_article_url($writer,$news){
+	$news_id = is_object($news) ? $news->id : $news;
+	global $page_type;
+	if($page_type == "static"){
+		return "/column/{$writer}/{$news_id}";	
+	}else{
+		return "/news/news.php?id={$news_id}";
+	}
+	
+}
+
 function get_news_en_static_url($news,$index = 1) {
 		$news_id = str_pad($news->id,7,'0',STR_PAD_LEFT);
 		$date = date('Ym',strtotime($news->created_at));
