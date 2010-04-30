@@ -131,6 +131,7 @@ $(function(){
 			return false;
 		}
 		if(content.length==0){
+			alert("留言内容不能为空！");
 			return false;
 		}
 		$("input[name='nick_name']").each(function(){

@@ -1,66 +1,85 @@
-<?php
-	include_once('../frame.php');
+<?php 
+	session_start();
+	include_once('../../frame.php');
+	judge_role();
 	$db = get_db();
-	$id = $_REQUEST['id'];
-	$key = $_REQUEST['key'];
-	$sql = "select * from hoau_question_record where 1=1 and problem_id=$id";
-	$sql = $sql." order by created_at";
-	$record = $db->query($sql);
-	$count = count($record);
+	$id = intval($_GET['id']);
+	$vote = new table_class("fb_vote");
+	$vote->find($id);
+	$item = $db->query("select * from fb_vote_item where vote_id=$id");
+	$item_count = $db->record_count;
+	if($vote->vote_type!='more_vote'){
+		$record = $db->query("select * from fb_vote where id=$id");
+		$count = 1;
+	}else{
+		$record = $db->query("SELECT t1.id,t1.name,t1.max_item_count FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id where t2.vote_id=$id");
+		$count = $item_count;
+		$item = $db->query("SELECT t1.id as vote_id,t3.title,t3.id FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id join fb_vote_item t3 on t1.id=t3.vote_id where t2.vote_id=$id");
+		$item_count = $db->record_count;
+	}
+	#$in_type = "radio";
 ?>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-	<meta http-equiv=Content-Language content=zh-CN>
-	<title>问卷调查</title>
-	<?php 
-		css_include_tag('admin');
+	<meta http-equiv=Content-Language content=zh-cn>
+	<title>福布斯中文网</title>
+	<?php
 		use_jquery();
-		js_include_tag('admin_pub');
-		rights($_SESSION["hoaurights"],'7');
+		css_include_tag('public','survey','admin');
 	?>
 </head>
-<body style="background:#E1F0F7">
-	<table width="795" border="0">
-		<tr class="tr1">
-			<td colspan="5" width="795">
-			 <a href="result.php">返回</a>
-			</td>
-		</tr>
-		<tr class="tr2">
-			<td width="400">创建时间</td><td width="350">操作</td>
-		</tr>
-		<? for($i=0;$i<$count;$i++){?>
-		<tr class="tr3" id="<?php echo $record[$i]->id;?>">
-			<td><?php echo date_format($record[$i]->created_at,'Y-m-d');?></td>
-			<td>
-				<a href="info.php?id=<?php echo $id;?>&r_id=<?php echo $record[$i]->id?>" style="color:#000000; text-decoration:none">查看</a>
-			</td>
-		</tr>
-		<?  }?>
-	</table>
-	<div class="div_box">
-		<table width="795" border="0">
-			<tr colspan="5" class=tr3>
-				<td><?php paginate();?></td>
-			</tr>
-		</table>
+<body>
+	<div id=ibody>
+		<div id=icaption>
+		    <div id=title><?php echo $vote->name;?></div>
+			  <a href="result.php" id=btn_back></a>
+		</div>
+		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '(已经结束)';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "(还未开始)";else $flag=1;?>
+		<div id="question_div2">
+			<?php for($i=0;$i<$count;$i++){
+				$total = 0;
+			    $result = $db->query("select count(item_id) as num,item_id from fb_survey_record2 where vote_id={$record[$i]->id} group by item_id");
+				for($k=0;$k<count($result);$k++){
+					$total = $total+$result[$k]->num;
+				}	
+			?>
+				<div class="survey2_z2">
+					<div class="s2_top2">
+						<div class="top_lpg"></div>
+							<div class="top_pg2">
+								<div class="title_pic"><img src="/images/survey/top2_redio.jpg"></div>
+								<div class="s2_title">
+									<?php echo $record[$i]->name;?>
+								</div>
+							</div>
+						<div class="top_rpg"></div>
+					</div>
+					<div class="s2_content">
+						<input type="hidden" name="record_id[]" value="<?php echo $record[$i]->id;?>">
+						<?php for($j=0;$j<$item_count;$j++){
+							if($item[$j]->vote_id==$record[$i]->id){
+						?>
+							<div class="s2_c2">
+								<div class="s2_c_content2">
+									<?php
+										$flag = 0;
+										for($k=0;$k<count($result);$k++){
+											if($result[$k]->item_id==$item[$j]->id){
+												echo round($result[$k]->num/$total,3)*100; 
+												$flag = 1;
+											}
+										}
+										if($flag==0)echo '0';
+									?>%　　
+									<?php echo $item[$j]->title;?></div>
+							</div>
+						<?php }}?>
+					</div>
+				</div>
+			<?php }?>
+		</div>
 	</div>
 </body>
-</html>
-
-<script>
-	
-	$("#project_search").click(function(){
-				window.location.href="?key="+$("#search_text1").attr('value');
-	});
-	
-	$('#search_text1').keydown(function(e){
-		if(e.keyCode == 13){
-			window.location.href="?key="+$("#search_text1").attr('value');
-		}
-	});
-	
-</script>
+<html>
