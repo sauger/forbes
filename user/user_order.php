@@ -21,7 +21,7 @@
 		<?php include "../inc/top.inc.php";?>
 		<div id=top>
 			<div id=top>
-			 <div id=bread><a href="/user/">用户中心</a><a>订阅信息</a></div>
+			 <div id=bread><a href="/user/">用户中心</a> > <a>订阅信息</a></div>
 	 	 <div id=bread_line></div>
 		</div>
 		<div id=left>
@@ -30,35 +30,35 @@
 			</div>
 			<div class="left_list">
 				<div class="icon">
-					<img src="/images/html/user/c1a.gif">
-					<img style="display:none" src="/images/html/user/c1b.gif">
+					<img src="/images/user/c1a.gif">
+					<img style="display:none" src="/images/user/c1b.gif">
 				</div>
 				<div class="left_text"><a href="user_info.php">个人基本信息</a></div>
-				<div class="icon2"><img src="/images/html/user/coin.gif"></div>
+				<div class="icon2"><img src="/images/user/coin.gif"></div>
 			</div>
 			<div class="left_list2">
 				<div class="iconb">
-					<img style="display:none" src="/images/html/user/c2a.gif">
-					<img style="display:inline" src="/images/html/user/c2b.gif">
+					<img style="display:none" src="/images/user/c2a.gif">
+					<img style="display:inline" src="/images/user/c2b.gif">
 				</div>
 				<div class="left_text"><a href="user_order.php">订阅信息</a></div>
-				<div class="icon2" style="display:inline"><img src="/images/html/user/coin.gif"></div>
+				<div class="icon2" style="display:inline"><img src="/images/user/coin.gif"></div>
 			</div>
 			<div class="left_list">
 				<div class="icon">
-					<img src="/images/html/user/c3a.gif">
-					<img style="display:none" src="/images/html/user/c3b.gif">
+					<img src="/images/user/c3a.gif">
+					<img style="display:none" src="/images/user/c3b.gif">
 				</div>
 				<div class="left_text"><a href="user_favorites.php">我的收藏</a></div>
-				<div class="icon2"><img src="/images/html/user/coin.gif"></div>
+				<div class="icon2"><img src="/images/user/coin.gif"></div>
 			</div>
 			<div class="left_list">
 				<div class="icon">
-					<img src="/images/html/user/c4a.gif">
-					<img style="display:none" src="/images/html/user/c4b.gif">
+					<img src="/images/user/c4a.gif">
+					<img style="display:none" src="/images/user/c4b.gif">
 				</div>
 				<div class="left_text"><a href="user_password.php">修改登录密码</a></div>
-				<div class="icon2"><img src="/images/html/user/coin.gif"></div>
+				<div class="icon2"><img src="/images/user/coin.gif"></div>
 			</div>
 		</div>
 		<div class=right>

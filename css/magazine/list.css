@@ -2,9 +2,9 @@ body {font-size:12px;  font-family:Arial,宋体; color:#000;  margin:0 auto; pad
 p{margin:0; padding:0}
 
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
-#bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(../../../images/public/bread.jpg) no-repeat 10px 0;}
+#bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
 #bread a{color:#666666; text-decoration:none;}
-#bread_line{width:1000px; height:8px; margin-top:2px; background:url('../../../images/public/bread_line.jpg') no-repeat;}
+#bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
 
 #zzleft{width:660px; float:left; display:inline;}
 #zzleft #l_t_content{width:658px; float:left; display:inline;}
@@ -23,7 +23,7 @@ p{margin:0; padding:0}
 #zzleft .r_b .content a{color:#666666; text-decoration:none;}
 #zzleft .r_b .moreinfo{width:100px; height:16px; margin-top:10px; float:right; display:inline;}
 #zzleft .r_b .moreinfo a{color:#246bb0;}
-#zzleft .l_dash{width:623px; height:2px; margin-top:20px; margin-left:25px; background:url('../../../images/zz/l_dash.jpg') no-repeat; overflow:hidden; float:left; display:inline;}
+#zzleft .l_dash{width:623px; height:2px; margin-top:20px; margin-left:25px; background:url('/images/magazine/l_dash.jpg') no-repeat; overflow:hidden; float:left; display:inline;}
 #zzleft .l_b_content{width:658px; margin-top:20px; float:left; display:inline;}
 #zzleft .l_b_content .pic{width:131px; height:167px; margin-left:25px; float:left; display:inline;}
 #zzleft .l_b_content .pic img{width:131px; height:167px;}

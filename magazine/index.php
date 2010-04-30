@@ -50,12 +50,12 @@
 				</div>
 				<?php }?>
 				<div class="l_b">
-					<div class="btn_ck" <?php show_page_pos('magazine_index_link1')?>><a href="<?php echo $pos_items->magazine_index_link1->href;?>"><img border="0" src="/images/zz/btn_ck.jpg"></a></div>
-					<div class="btn_readonline" <?php show_page_pos('magazine_index_link2')?>><a href="<?php echo $pos_items->magazine_index_link2->href;?>"><img border="0" src="/images/zz/btn_readonline.jpg"></a></div>
+					<div class="btn_ck" <?php show_page_pos('magazine_index_link1')?>><a href="<?php echo $pos_items->magazine_index_link1->href;?>"><img border="0" src="/images/magazine/btn_ck.jpg"></a></div>
+					<div class="btn_readonline" <?php show_page_pos('magazine_index_link2')?>><a href="<?php echo $pos_items->magazine_index_link2->href;?>"><img border="0" src="/images/magazine/btn_readonline.jpg"></a></div>
 				</div>
 			</div>
 			<div class=l_t_bottom></div>
-			<a style="margin-top:10px; float:left; display:inline;" href=""><img border=0 src="/images/zz/one.jpg"></a>
+			<a style="margin-top:10px; float:left; display:inline;" href=""><img border=0 src="/images/magazine/one.jpg"></a>
 			<div class=l_t_top></div>
 			<div id=l_b_content>
 				<div class=l_title>

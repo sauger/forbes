@@ -31,7 +31,7 @@ $(function(){
 	$(".right_title4").hover(function(){
 		$(".right_title4").css('background','');
 		$(".right_title4").css('color','#fff');
-		$(this).css('background','url(/images/html/user/right_title.jpg)');
+		$(this).css('background','url(/images/user/right_title.jpg)');
 		$(this).css('color','#055C99');
 		$(".right_text").css('display','none');
 		$("#"+$(this).attr('name')).css('display','inline');

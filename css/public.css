@@ -52,8 +52,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #navigation2 .nav2 a{color:#000000; text-decoration:underline;}
 #navigation2 .nav2 a:hover{color:#0000CC;}
 
+
 .forbes_search{width:102px; height:28px; font-size:12px; background:url(/images/public/tm2008-select.gif) no-repeat 0 0; margin-top:36px; margin-left:73px; overflow:hidden;}
-.forbes_search .iselect{width:102px; height:28px;}
+.forbes_search .iselect{width:102px; height:28px; display:none;}
 
 .forbes_search div.tag_select{width:82px; height:27px; padding:0 10px; color:#000; line-height:26px; background:url(/images/public/tm2008-select.gif) no-repeat 0 0;  display:block;}
 .forbes_search div.tag_select_hover{width:82px; height:28px;  padding:0 10px; color:#000; line-height:28px; background:url(/images/public/tm2008-select.gif) no-repeat 0 -28px;  display:block;}
