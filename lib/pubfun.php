@@ -31,7 +31,7 @@ function send_mail($smtp_server,$smtp_user,$smtp_pwd,$from,$to,$title,$content){
 				<BODY style="MARGIN: 10px; FONT-FAMILY: verdana; FONT-SIZE: 10pt">';
 		$body = $body.$content;
 		$body = $body.'</BODY></HTML>';
-		$subject = $title;
+		$subject = "=?UTF-8?B?".base64_encode($title)."?=";
 		$loc_host = "mail.server"; //发信计算机名，可随意  
 		$smtp_acc = $smtp_user; //Smtp认证的用户名  
 		$smtp_pass=$smtp_pwd; //Smtp认证的密码，一般等同pop3密码  
