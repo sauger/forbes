@@ -85,7 +85,7 @@
 				$navigation2=$db->query('select name,target,href from fb_navigation where parent_id='.$countnav[$i]->id.' order by priority asc'); ?>	
 				<div class="nav2" id="nav<?php echo $countnav[$i]->id; ?>">
 					<?php 
-						$except = array("picindex","piclists","picbillionaires","piclife","piccolumn");
+						$except = array("picindex","piclist","picbillionaires","piclife","piccolumn");
 						for($j=0;$j<count($navigation2);$j++){ 
 						$url = !in_array($countnav[$i]->id_name,$except) ? get_newslist_url($category->find_by_name($navigation2[$j]->name)->id) : $navigation2[$j]->href;
 					?>
