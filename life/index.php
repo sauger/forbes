@@ -186,14 +186,16 @@
   <div id=life_bottom_right>
       <div class=life_box2>
   			<div class=life_caption>
-					<div class=captions>旅游</div>
-					<div class=line>|</div>
+				<div class=captions>旅游</div>
+				<div class=line>|</div>
 					<?php $url = get_newslist_url($category->find_by_name("旅游")->id)?>
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_ly";	?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div class="right_picture" <?php show_page_pos($pos_name)?>>
 					<?php show_page_img(246,160)?>
+					<div></div>
+					<span><?php show_page_href();?></span>
 				</div>
       </div>
       
@@ -205,8 +207,10 @@
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_hz";	?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div class="right_picture" <?php show_page_pos($pos_name)?>>
 					<?php show_page_img(246,160)?>
+					<div></div>
+					<span><?php show_page_href();?></span>
 				</div>
       </div>     	
 			
