@@ -1,8 +1,9 @@
 $(function(){
 	$(".nav").hover(function(){
-		var num=$(this).attr("param1");
-		$(".nav2").css('display','none');
-		$("#nav"+num).css('display','inline');
+		var num=$(this).parent().attr("id");
+		
+		$(".nav2").hide();
+		$("#nav"+num).show();
 		$(".nav").parent().parent().css("background","none");
 		$(this).parent().parent().css('background',"url('/images/public/bg_menu.jpg') repeat-x");
 	});
