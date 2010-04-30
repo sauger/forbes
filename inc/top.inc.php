@@ -207,7 +207,9 @@
 	  		}
 	  	}
 	  }
-	
+	  
+
+	  $(".iselect").css('display','inline');
 	  /* top select */ 
  </script>
 	
