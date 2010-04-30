@@ -72,10 +72,11 @@ ul{list-style:none; padding:0; margin:0;}
 #right_inc #forum_box .content li{width:260px; height:20px; padding-left:14px; line-height:20px; font-size:13px; background:url(/images/right/tar5.gif) no-repeat 0 8px; overflow:hidden;  float:left; display:inline;}
 #right_inc #forum_box .content a{color:#003899; text-decoration:none;}
 
-#right_inc .column_box{width:300px; height:90px; margin-left:15px; margin-top:20px; float:left; display:inline;}
+#right_inc .column_box{width:300px; margin-left:15px; margin-top:20px; float:left; display:inline;}
 #right_inc .column_box .col_pic{width:60px;  margin-left:3px; margin-top:3px; float:left; display:inline;}
 #right_inc .column_box .col_pic img{width:60px;}
 #right_inc .column_box .clo_name{width:217px; height:20px; font-size:14px; line-height:20px; font-weight:bold; margin-left:10px; float:left; display:inline;}
+#right_inc .column_box .clo_name a{color:#000000; text-decoration:none;}
 #right_inc .column_box .clo_des{width:217px; height:40px; margin-top:2px; margin-left:10px; color:#666666; line-height:20px; font-size:12px; overflow:hidden; float:left; display:inline;}
 #right_inc .column_box .clo_news{width:270px; height:18px; padding-left:15px; line-height:18px; font-size:13px; overflow:hidden; font-weight:bold; line-height:18px; margin-left:3px; margin-top:7px; background:url(/images/right/tar3.gif) no-repeat 0 6px; float:left; display:inline;}
 
