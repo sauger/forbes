@@ -42,7 +42,6 @@
 			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img(72,93,0,'image1','top_magazine')?></div>
 			<div id=magazine_description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a><br><?php echo $pos_items->$pos_name->description;?></div>
 			<div id=magazine_btn><a href="<?php echo $pos_items->$pos_name->href?>"><img src="/images/public/magazine_btn.jpg" border=0></a></div>
-
 	</div>
   <div id=top_logo>
 			<div id=border></div>
@@ -62,61 +61,52 @@
 	<?php
 		if($nav==""){	$nav=3;	}
 		$countnav=$db->query("select * from fb_navigation where parent_id=0 order by priority asc");
-		$navigation=$db->query('select name,id from fb_navigation where id='.$nav);
+		$navigation=$db->query('select name,id,parent_id from fb_navigation where id='.$nav);
 	?>
   <div id=navigation>
-			<div class="menu" <?php if($navigation[0]->name=="首页"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[0]->href; ?>"><div class="nav" param1="<?php echo $countnav[0]->id; ?>" id=picindex></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="榜单"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[1]->href; ?>"><div class="nav" param1="<?php echo $countnav[1]->id; ?>" id=piclists></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="富豪"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[2]->href; ?>"><div class="nav" param1="<?php echo $countnav[2]->id; ?>" id=picbillionaires></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu" <?php if($navigation[0]->name=="投资"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[3]->href; ?>"><div class="nav" param1="<?php echo $countnav[3]->id; ?>" id=picinvestment></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="商业"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[4]->href; ?>"><div class="nav" param1="<?php echo $countnav[4]->id; ?>" id=picbusiness></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="创业"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[5]->href; ?>"><div class="nav" param1="<?php echo $countnav[5]->id; ?>" id=picentrepreneur></div></a>
-			</div>
-
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="科技"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[6]->href; ?>"><div class="nav" param1="<?php echo $countnav[6]->id; ?>" id=pictech></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="城市"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[7]->href; ?>"><div class="nav" param1="<?php echo $countnav[7]->id; ?>" id=piccity></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="生活"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[8]->href; ?>"><div class="nav" param1="<?php echo $countnav[8]->id; ?>" id=piclife></div></a>
-			</div>
-			<div class=vertical></div>
-			<div class="menu"  <?php if($navigation[0]->name=="专栏"){?>style="background:url('/images/public/bg_menu.jpg') repeat-x;"<?php } ?>>
-				<a href="<?php echo $countnav[9]->href; ?>"><div class="nav" param1="<?php echo $countnav[9]->id; ?>" id=piccolumn></div></a>
-			</div>
+  <?php foreach($countnav as $v){?>
+  		<div class="menu">
+			<a href="<?php echo $v->href; ?>" id="<?php echo $v->id; ?>"><div class="nav" id="<?php echo $v->id_name;?>"></div></a>
+		</div>
+  <?php }?>
 			<div id=top_function2>
 				<a href="/club" id=member></a>
 				<a href="#" id=magazine></a>
 			</div>
+			
 	</div>
 	<div id=navigation2>
-			<?php for($i=0;$i<count($countnav);$i++){ 
+			<?php
+				global $category;
+				if(empty($category)){
+					$category = new category_class('news');
+				} 
+				for($i=0;$i<count($countnav);$i++){ 
 				$navigation2=$db->query('select name,target,href from fb_navigation where parent_id='.$countnav[$i]->id.' order by priority asc'); ?>	
-				<div class="nav2" <?php if($countnav[$i]->id==$nav){?>style="display:inline;"<?php }?> id="nav<?php echo $countnav[$i]->id; ?>">
-					<?php for($j=0;$j<count($navigation2);$j++){ ?><a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $navigation2[$i]->href; ?>"><?php echo $navigation2[$j]->name; ?></a><?php if($j<(count($navigation2)-1)){ ?>　|　<?php }} ?>
+				<div class="nav2" id="nav<?php echo $countnav[$i]->id; ?>">
+					<?php 
+						$except = array("picindex","piclist","picbillionaires","piclife","piccolumn");
+						for($j=0;$j<count($navigation2);$j++){ 
+						$url = !in_array($countnav[$i]->id_name,$except) ? get_newslist_url($category->find_by_name($navigation2[$j]->name)->id) : $navigation2[$j]->href;
+					?>
+						<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $url; ?>"><?php echo $navigation2[$j]->name; ?></a><?php if($j<(count($navigation2)-1)){ ?>　|　<?php } ?>
+					<?php } ?>
 				</div>
 			<?php } ?>
 	</div>
-</div>		
+</div>	
+<script>
+	var url_path = location.pathname.replace(/\/\s*/g,"");
+	$(".nav").hover(function(){
+		var num=$(this).parent().attr("id");
+		
+		$(".nav2").hide();
+		$("#nav"+num).show();
+		$(".nav").parent().parent().css("background","none");
+		$(this).parent().parent().css('background',"url('/images/public/bg_menu.jpg') repeat-x");
+	},function(){});
+	
+	$('#pic'+url_path).hover();
+	
+</script>	
 		

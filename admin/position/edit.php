@@ -13,12 +13,15 @@
 		$pos->find_by_name($_GET['pos_name']);
 		$fields['link'] = array("标题","","mouseover","链接","静态链接","","","过期时间","","","说明");
 		$fields['base'] = array("标题","描述","mouseover","链接","静态链接","","","过期时间","","","说明");
+		$fields['only_title']=array("标题","","","","","","","","","","");
 		$fields['default']=array("标题","描述","mouseover","链接","静态链接","图片一","","过期时间","备用字段","备用字段2","说明");
 		$fields['column_full']=array("文章标题","文章描述","mouseover","链接","静态链接","作者照片","","过期时间","专栏作者","专栏链接","说明");
 		$fields['column_with_author']=array("文章标题","文章描述","mouseover","链接","静态链接","","","过期时间","专栏作者","专栏链接","说明");
 		$fields['column_simple']=array("文章标题","","mouseover","链接","静态链接","","","过期时间","专栏作者","专栏链接","说明");
 		$fields['rich']=array("富豪","公司","mouseover","链接","静态链接","富豪照片","","过期时间","财富数（亿）","","说明");
+		$fields['rich_pic']=array("富豪","公司","mouseover","","","富豪照片","","","财富数（亿）","","说明");
 		$fields['survey']=array("调查标题","描述","mouseover","链接","静态链接","","","","","","说明");
+		
 		$names = array_key_exists($_GET['name'],$fields) ?  $fields[$_GET['name']] : $fields['default'];  
 		
 	?>

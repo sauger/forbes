@@ -64,6 +64,10 @@
 				</select>				
 			</td>
 		</tr>	
+		<tr class="tr4">
+			<td class=td1>标识</td>
+			<td><input type="text" name="post[id_name]" id="priority" value="<?php echo $menu->id_name;?>"></td>
+		</tr>
 		<tr class=tr4>
 			<td class=td1>优先级</td>
 			<td><input type="text" name="post[priority]" id="priority" value="<?php echo $menu->priority;?>" class="number"></td>

@@ -100,10 +100,10 @@
 						<?php for($i=0;$i<5;$i++){ 
 							$pos_name = "richindex_picture_{$i}";
 						?>
-						<div class=ranking_image_content <?php show_page_pos($pos_name)?>>
-							<div class=pic><a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1?>"></a></div>
+						<div class=ranking_image_content <?php show_page_pos($pos_name,'rich_pic')?>>
+							<div class=pic><a href="#" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><img border=0 src="<?php echo $pos_items->$pos_name->image1?>"></a></div>
 							<div class=piccontent>
-								<a href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->index_hl_0->title;?>" target="_blank"><span style="font-weight:bold;"><?php echo $pos_items->$pos_name->display;?></span><br><?php echo $pos_items->$pos_name->description;?></a>	
+								<a href="#?>" title="<?php echo $pos_items->index_hl_0->title;?>"><span style="font-weight:bold;"><?php echo $pos_items->$pos_name->display;?></span><br/><?php echo $pos_items->$pos_name->description?><br><?php echo $pos_items->$pos_name->alias;?></a>	
 							</div>
 						</div>
 						<?php } ?>	
@@ -205,7 +205,7 @@
 				</div>
 				<div id=billionaires_lists_bottom>
 					<div class=title>
-						<div class=wz>2008年度中国富豪榜</div>
+						<div class=wz <?php $pos_name = "richindex_richlist_title"; show_page_pos("richindex_richlist_title",'only_title')?>><?php echo $pos_items->$pos_name->display;?></div>
 						<div class=more><a href="/list/list.php?id=1" target="_blank"><img border=0 src="/images/public/public_more1.jpg"></a></div>	
 					</div>
 					<?php $pos_name = "richindex_list_0";?>
@@ -221,7 +221,7 @@
 					<?php for($i=2;$i<16;$i++){ 
 						$pos_name = "richindex_list_{$i}";
 					?>
-					<div class=content2>
+					<div class=content2 <?php show_page_pos($pos_name,'rich');?>>
 						<div class=name>
 							<?php echo $pos_items->$pos_name->display?>
 						</div>
