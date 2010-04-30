@@ -1,11 +1,13 @@
 <?php
+	session_start();
 	include_once('../../frame.php');
+	judge_role();
 	
 	$search = $_REQUEST['search'];
 	$db = get_db();
-	$sql = "select * from fb_survey";
+	$sql = "select * from fb_vote where is_sub_vote=0";
 	if($search!=''){
-		$sql .= " where name like '%".$search."%'";
+		$sql .= " and name like '%".$search."%'";
 	}
 	$sql .= " order by priority asc,created_at desc";
 	$record = $db->paginate($sql,15);
@@ -35,7 +37,7 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="50%">问卷名称</td><td width="20%">发布时间</td><td width="10%">优先级</td><td width="20%">操作</td>
+			<td width="55%">问卷名称</td><td width="25%">发布时间</td><td width="20%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
@@ -43,9 +45,8 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><?php echo $record[$i]->name;?></td>
 					<td><?php echo $record[$i]->created_at;?></td>
-					<td><input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>"></td>
 					<td>
-						<a href="show2.php?id=<?php echo $record[$i]->id;?>" title="查看统计结果"><img src="/images/admin/btn_config1.png" border="0"></a>
+						<a href="show.php?id=<?php echo $record[$i]->id;?>" title="查看统计结果"><img src="/images/admin/btn_config1.png" border="0"></a>
 					</td>
 				</tr>
 		<?php

@@ -13,12 +13,10 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-CN>
-	<title>天地华宇-中国公路快运领导者</title><meta name="Keywords" content="天地华宇,天地华宇物流,天地华宇物流查询,华宇,华宇物流,华宇物流查询,天地华宇俱乐部,华宇俱乐部"/><meta name="Description" content="天地华宇-中国公路快运领导者"/>
+	<title>forbes</title>
 	<?php
-		css_include_tag('drd/wjdc2','breadcom');
 		use_jquery();
-		js_include_tag('top');
-		rights($_SESSION["hoaurights"],'7');
+		css_include_tag('public','survey');
 	?>
 </head>
 <body  style="background:#ffffff">

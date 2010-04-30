@@ -17,9 +17,9 @@
 		$record = $db->query("select * from fb_vote where id=$id");
 		$count = 1;
 	}else{
-		$record = $db->query("SELECT t1.id,t2.title,t1.max_item_count FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id where t2.vote_id=$id");
+		$record = $db->query("SELECT t1.id,t1.name,t1.max_item_count FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id where t2.vote_id=$id");
 		$count = $item_count;
-		$item = $db->query("SELECT t1.id as vid,t3.title,t3.id FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id join fb_vote_item t3 on t1.id=t3.vote_id where t2.vote_id=$id");
+		$item = $db->query("SELECT t1.id as vote_id,t3.title,t3.id FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id join fb_vote_item t3 on t1.id=t3.vote_id where t2.vote_id=$id");
 		$item_count = $db->record_count;
 	}
 	#$in_type = "radio";
@@ -54,7 +54,7 @@
 							<div class="top_pg">
 								<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
 								<div class="s2_title">
-									<?php echo $record[$i]->title;?>
+									<?php echo $record[$i]->name;?>
 								</div>
 							</div>
 						<div class="top_rpg"></div>
@@ -62,7 +62,7 @@
 					<div class="s2_content">
 						<input type="hidden" name="record_id[]" value="<?php echo $record[$i]->id;?>">
 						<?php for($j=0;$j<$item_count;$j++){
-							if($item[$j]->vid==$record[$i]->id){
+							if($item[$j]->vote_id==$record[$i]->id){
 						?>
 							<div class="s2_c">
 								<div class="s2_c_radio"><input type="<?php echo $in_type;?>" id="checkbox<?php echo $item[$j]->id;?>" name="<?php echo $record[$i]->id;?>[]" value="<?php echo $item[$j]->id;?>" /></div>

@@ -39,5 +39,5 @@
 	}
 	
 	alert("感谢您的参与!");
-	redirect("/");
+	redirect("/survey/");
 ?>
