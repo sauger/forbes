@@ -207,7 +207,9 @@
 	  		}
 	  	}
 	  }
-	
+	  
+
+	  document.getElementByName('selsearch').style.display='inline';
 	  /* top select */ 
  </script>
 	
