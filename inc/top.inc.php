@@ -42,7 +42,6 @@
 			<div id=magazine_pic <?php show_page_pos($pos_name)?>><?php show_page_img(72,93,0,'image1','top_magazine')?></div>
 			<div id=magazine_description><a href="<?php echo $pos_items->$pos_name->href?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a><br><?php echo $pos_items->$pos_name->description;?></div>
 			<div id=magazine_btn><a href="<?php echo $pos_items->$pos_name->href?>"><img src="/images/public/magazine_btn.jpg" border=0></a></div>
-
 	</div>
   <div id=top_logo>
 			<div id=border></div>
@@ -95,5 +94,19 @@
 				</div>
 			<?php } ?>
 	</div>
-</div>		
+</div>	
+<script>
+	var url_path = location.pathname.replace(/\/\s*/g,"");
+	$(".nav").hover(function(){
+		var num=$(this).parent().attr("id");
+		
+		$(".nav2").hide();
+		$("#nav"+num).show();
+		$(".nav").parent().parent().css("background","none");
+		$(this).parent().parent().css('background',"url('/images/public/bg_menu.jpg') repeat-x");
+	},function(){});
+	
+	$('#pic'+url_path).hover();
+	
+</script>	
 		

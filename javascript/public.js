@@ -1,14 +1,4 @@
 $(function(){
-	$(".nav").hover(function(){
-		var num=$(this).parent().attr("id");
-		
-		$(".nav2").hide();
-		$("#nav"+num).show();
-		$(".nav").parent().parent().css("background","none");
-		$(this).parent().parent().css('background',"url('/images/public/bg_menu.jpg') repeat-x");
-	});
-	
-	
 	$(".search").click(function(){
 		top_search()
 	});
