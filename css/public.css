@@ -59,11 +59,11 @@ div{margin:0; padding:0; float:left; display:inline;}
 .forbes_search div.tag_select_hover{width:82px; height:28px;  padding:0 10px; color:#000; line-height:28px; background:url(/images/public/tm2008-select.gif) no-repeat 0 -28px;  display:block;}
 .forbes_search div.tag_select_open{width:82px; height:27px; padding:0 10px; color:#000; line-height:26px; background:url(/images/public/tm2008-select.gif) no-repeat 0 -56px;  float:none; display:block;}
 
-.forbes_search ul.tag_options{width:80px; margin:0; padding:0 0 1px; list-style:none; background:url(/images/public/tm2008-select.gif) no-repeat left bottom; position:absolute;}
-.forbes_search ul.tag_options li{width:61px; height:26px; padding:0 10px; color:#000; line-height:26px; text-decoration:none;  background:url(/images/index/tm2008-select.gif) repeat-y -102px 0; float:none; display:block;}
+.forbes_search ul.tag_options{width:80px; margin-left:1px; padding:0 0 0; list-style:none; background:url(/images/public/tm2008-select.gif) no-repeat -103px 0; border-bottom:1px solid #56A2D1; position:absolute;}
+.forbes_search ul.tag_options li{width:60px; height:26px; padding:0 10px; color:#000; line-height:26px; text-decoration:none;  background:url(/images/index/tm2008-select.gif) repeat-y -102px 0; float:none; display:block;}
 
-.forbes_search ul.tag_options li.open_hover{color:#000; background:url(/images/public/tm2008-select.gif) no-repeat 0 -113px;}
-.forbes_search ul.tag_options li.open_selected{color:#19555F; background:url(/images/public/tm2008-select.gif) no-repeat 0 -84px;}
+.forbes_search ul.tag_options li.open_hover{color:#000; background:url(/images/public/tm2008-select.gif) no-repeat -1px -113px;}
+.forbes_search ul.tag_options li.open_selected{color:#19555F; background:url(/images/public/tm2008-select.gif) no-repeat -1px -84px;}
 
 #ibottom{width:1000px; height:184px; margin-top:20px; font-size:12px;  background:url(/images/public/bottom_bg.jpg) repeat-x;}
 #ibottom a{color:#ffffff; text-decoration:none;}
