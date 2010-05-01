@@ -26,7 +26,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true){
 			continue;
 		}
 		$pos_table->name = $pos;
-		$end_time = " end_time + INTERVAL 1 HOUR";
+		$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 		$pos_table->end_time = $end_time;
 		$pos_table->display = $news[$fill_count]->title;
 		$pos_table->title = $news[$fill_count]->title;
@@ -206,14 +206,15 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 	}
 }
 
-function update_column($type,$limit,$position_name,$news_limit,$news_position,$flag=true){
+function update_column2($type,$limit,$position_name,$news_limit,$news_position,$flag=true){
 	$db = get_db();
 	
 	for($k=0;$k<$limit;$k++){
 		$pos_name = $position_name.$k;
-		$column = $db->query("select t2.id,t2.name from fb_page_pos t1 join fb_user on t1.alias=t2.name where t1.name='{$pos_name}' and t2.role_name='{$type}'");
+		$column = $db->query("select t2.id,t2.name from fb_page_pos t1 join fb_user t2 on t1.alias=t2.name where t1.name='{$pos_name}' and t2.role_name='{$type}'");
 		if($db->record_count==1){
-			$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where author_id={$column[0]->id} order by created_at desc limit {$news_limit}";
+			$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where publisher={$column[0]->id} order by created_at desc limit {$news_limit}";
+			echo $sql;
 			$news = $db->query($sql);
 			$news_count = $db->record_count;
 		}else{

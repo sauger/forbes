@@ -12,10 +12,10 @@
 				<?php show_page_img()?>
 			</div>
 			<div id=common_head_r>
-				<div id=common_head_description <?php show_page_pos($pos_name);?>><?php show_page_desc()?></div>
+				<div id=common_head_description <?php show_page_pos($pos_name,'base_img');?>><?php show_page_desc()?></div>
 				<div id=common_head_list>
 					<?php for($i=0; $i<2;$i++){ $pos_name = $pos_name.'_r'.$i?>
-						<div class=common_head_list <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
+						<div class=common_head_list <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
 					<?php } ?>
 				</div>
 			</div>
@@ -28,11 +28,11 @@
 					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name($catename[0]->name)->id?>" target="_blank" class=more></a>
 				</div>
 				<?php for($i=0;$i<6;$i++){ $pos_name = $pos.'acticle'.$i;?>
-					<div class=common_article_lis1 <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
+					<div class=common_article_lis1 <?php show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
 					<div class=common_article_description1><?php show_page_desc();?></div>
 				<? }?>
 				<?php  for($i=6;$i<15;$i++){ $pos_name = $pos.'acticle'.$i;?>
-					<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
+					<div class=common_article_lis2 <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
 				<?php } ?>
 			</div>
 			
@@ -45,13 +45,13 @@
 					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name($catename[0]->name)->id?>" target="_blank" class=more></a>
 				</div>
 				<?php for($i=0;$i<2;$i++){ $pos_name = $pos."them".$i;?>
-				<div class=common_subject <?php show_page_pos($pos_name)?>>
+				<div class=common_subject <?php show_page_pos($pos_name,'base_img')?>>
 					<div class=common_subject_pic><?php show_page_img();?></div>
 					<div class=common_subject_list><?php show_page_href();?></div>
 					<div class=common_subject_description><?php show_page_desc();?></div>
 				</div>
 					<?php for($j=0;$j<2;$j++){ $pos_name = $pos."them".$i.$j;?>
-						<div class=common_article_lis2 <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>
+						<div class=common_article_lis2 <?php show_page_pos($pos_name,'link')?>><?php show_page_href()?></div>
 					<?php }?>
 				<?php }?>
 

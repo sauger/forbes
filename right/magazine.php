@@ -4,10 +4,10 @@ global $pos_name;?>
 	<div class=title_con>福布斯杂志</div>
 	<div class=more><a href="/magazine/"><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
 </div>
-<div id="mag_content" <?php show_page_pos("right_magazine") ?>>
-		<div class=pic><?php show_page_img("right_magazine")?></div>
-		<div class=pictitle><?php show_page_href("right_magazine")?></div>
-		<div class=context><?php show_page_desc("right_magazine")?></div>	
+<div id="mag_content" <?php $pos_name='right_magazine'; show_page_pos($pos_name,'magazine');?>>
+		<div class=pic><?php show_page_img()?></div>
+		<div class=pictitle><?php show_page_href()?></div>
+		<div class=context><?php show_page_desc()?></div>	
 		<div id=mag_dash></div>
 		<div id=search>往期杂志查阅</div>
 		<div id=sel>
