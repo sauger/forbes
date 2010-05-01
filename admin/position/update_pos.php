@@ -157,7 +157,7 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 	
 	if($news_limit!=''&&$news_position!=''){
 		for($k=0;$k<$count;$k++){
-			$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and author_id={$column[$k]->id} order by created_at desc limit {$news_limit}";
+			$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where publisher={$column[$k]->id} order by created_at desc limit {$news_limit}";
 			$news = $db->query($sql);
 			$news_count = $db->record_count;
 			for($i=0;$i<$news_count;$i++){
@@ -214,7 +214,6 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 		$column = $db->query("select t2.id,t2.name from fb_page_pos t1 join fb_user t2 on t1.alias=t2.name where t1.name='{$pos_name}' and t2.role_name='{$type}'");
 		if($db->record_count==1){
 			$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where publisher={$column[0]->id} order by created_at desc limit {$news_limit}";
-			echo $sql;
 			$news = $db->query($sql);
 			$news_count = $db->record_count;
 		}else{
@@ -384,3 +383,4 @@ include "./_fiveindex.php";
 include "./_right.php";
 include "./_life.php";
 include "./_column_index.php";
+include "./_magazine.php";

@@ -24,7 +24,7 @@
 		<div id=zzleft>
 			<div class=l_t_top></div>
 			<div id=l_t_content>
-				<?php $pos_name = 'magazine_index0';?>
+				<?php $pos_name = 'magazine_index';?>
 				<div class=l_title>
 					<div class=wz>杂志展示</div>
 				</div>
@@ -32,16 +32,16 @@
 					<?php show_page_img();?>
 				</div>
 				<div id=r_t>
-					<div id=title <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
-					<div id=content><a href="">出版日期：<?php show_page_desc();?><br>封面专题</a></div>
+					<div id=title <?php show_page_pos($pos_name,'magazine_index')?>><?php show_page_href();?></div>
+					<div id=content><a href="">出版日期：<?php echo $pos_items->$pos_name->title;?><br>封面专题</a></div>
 				</div>
 				<?php
-					for($i=0;$i<3;$i++){$pos_name = '$magazine_index_news'.$i;
+					for($i=0;$i<3;$i++){$pos_name = 'magazine_index_news'.$i;
 				?>
 				<div class=r_b>
 					<div class=title>
 						<div class=jt></div>
-						<div class=wz  <?php show_page_pos($pos_name)?>><?php show_page_href();?></div>
+						<div class=wz  <?php show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
 					</div>
 					<div class=content>
 						<?php show_page_desc();?>
@@ -50,8 +50,8 @@
 				</div>
 				<?php }?>
 				<div class="l_b">
-					<div class="btn_ck" <?php show_page_pos('magazine_index_link1')?>><a href="<?php echo $pos_items->magazine_index_link1->href;?>"><img border="0" src="/images/magazine/btn_ck.jpg"></a></div>
-					<div class="btn_readonline" <?php show_page_pos('magazine_index_link2')?>><a href="<?php echo $pos_items->magazine_index_link2->href;?>"><img border="0" src="/images/magazine/btn_readonline.jpg"></a></div>
+					<div class="btn_ck" <?php show_page_pos('magazine_index_link1','only_link')?>><a href="<?php echo $pos_items->magazine_index_link1->href;?>"><img border="0" src="/images/magazine/btn_ck.jpg"></a></div>
+					<div class="btn_readonline" <?php show_page_pos('magazine_index_link2','only_link')?>><a href="<?php echo $pos_items->magazine_index_link2->href;?>"><img border="0" src="/images/magazine/btn_readonline.jpg"></a></div>
 				</div>
 			</div>
 			<div class=l_t_bottom></div>
@@ -64,15 +64,15 @@
 				<?php 
 					for($i=0;$i<8;$i++){ $pos_name = 'magazine_list'.$i;
 				?>
-				<div class=imgandtitle <?php show_page_pos($pos_name)?>>
+				<div class=imgandtitle <?php show_page_pos($pos_name,'simple_magazine')?>>
 					<div class=pic>
 						<?php show_page_img();?>
 					</div>
 					<div class=pictitle><?php show_page_href();?></div>
 					<?php
-						for($j=0;$j<3;$j++){ $pos_name2 = 'magazine_list'.$i.'_r'.$j;
+						for($j=0;$j<3;$j++){ $pos_name = 'magazine_list'.$i.'_r'.$j;
 					?>
-					<div class=piccontent <?php show_page_pos($pos_name2)?>>
+					<div class=piccontent <?php show_page_pos($pos_name,'link')?>>
 						<?php show_page_href();?>
 					</div>
 					<?php
