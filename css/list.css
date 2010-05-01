@@ -111,7 +111,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .sort_l_l1 a{color:#246BB0; text-decoration:underline;}
 .sort_r_b_l_t a{color:#246BB0; text-decoration:none;}
 
-#sort_l{width:180px; height:675px; margin-top:5px; background-image:url(/images/list/l.jpg);}
+#sort_l{width:180px; height:675px; margin-top:5px; background-image:url(/images/list/l.jpg); overflow:hidden;}
 .sort_l_t1{width:178px; height:30px; font-size:14px; color:#FFFFFF; line-height:30px; text-indent:30px; margin-top:1px; margin-left:1px; background-image:url(/images/list/l_t1.jpg); }
 .sort_l_l1{width:165px; height:20px; font-size:12px; line-height:20px; text-indent:25px; margin-top:5px; margin-left:8px; background:url(/images/list/sort_tar.jpg) no-repeat left center; }
 #sort_r{width:790px; height:673px; margin-top:5px; margin-left:20px; border-style:solid; border-width:1px; border-color:#BDCBD7; }
