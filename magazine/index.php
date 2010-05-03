@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<? include_once( dirname(__FILE__) .'/../inc/top.inc.php');?>
+	<?php include_top();?>
 		<div id=bread>
 			<span>杂志首页</span>
 		</div>
@@ -84,10 +84,10 @@
 			<div class=l_t_bottom></div>
 		</div>
 		<div id="right_inc">
-			<?php include_once( dirname(__FILE__) .'/../right/ad.php');?>
-			<?php include_once( dirname(__FILE__) .'/../right/magazine.php');?>
+			<?php include_right("ad")?>
+			<?php include_right("magazine")?>
 		</div>
-	<? include_once( dirname(__FILE__) .'/../inc/bottom.inc.php');?>
+	<?php include_bottom();?>
 	</div>
 </body>
 </html>
