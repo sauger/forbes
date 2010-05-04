@@ -1,6 +1,6 @@
 $(function(){
 	$(".search").click(function(){
-		top_search()
+		top_search();
 	});
 	
 	$('#search_text').keypress(function(e){
@@ -10,20 +10,6 @@ $(function(){
 	});
 });
 
-function top_search(){
-	var type = $(".iselect").val();
-	var text = $("#search_text").val();
-	
-	if(type=='list'){
-		window.location.href="/list/list.php?key="+encodeURI(text);
-	}else if(type=='news'){
-		window.location.href="/search/news.php?key="+encodeURI(text);
-	}else if(type=='author'){
-		window.location.href="/search/author.php?key="+encodeURI(text);
-	}else if(type=='rich'){
-		window.location.href="/search/rich.php?name="+encodeURI(text);
-	}	
-}
 
 /* top select */
 var selects = document.getElementsByName('selsearch');
