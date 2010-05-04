@@ -25,7 +25,7 @@
 							+ '<a href="/user">会员中心</a>';
 					$('.user_btn').html(str);
 				}else{
-					$('.user_btn').html('<a href="/login">登陆</a>　<a href="/register/">注册</a>');
+					$('.user_btn').html('<a href="/login">登录</a>　<a href="/register/">注册</a>');
 				}
 				$(function(){
 					$("#logout").click(function(){
