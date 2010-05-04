@@ -92,8 +92,7 @@
 				<td class=td2>
 					<a style="cursor:pointer;" id="chang_pic">看不清楚？换张图片</a>
 				</td>
-				<div id="pic_value">
-				</div>
+				<div id="pic_value"></div>
 			</tr>
 		</table>
 		<table width="100%">

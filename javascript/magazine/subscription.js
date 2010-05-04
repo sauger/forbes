@@ -11,6 +11,9 @@ $(function(){
 			$('#xdtable').css('display','none');
 		}
 	})
+	$("#chang_pic").click(function(){
+		$("#pic").attr('src','yz.php?reload='+Math.round(Math.random()*10000));
+	});
 	$("#su_bottom").click(function(){
 		if($('#applyvalue').val()==1)
 		{
