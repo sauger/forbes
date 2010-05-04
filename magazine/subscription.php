@@ -16,9 +16,8 @@
 <body>
 	<div id=ibody>
 	<? include_once('../inc/top.inc.php');?>
-		<div id=bread>
-			<a href="/magazine/">杂志赠阅</a>
-		</div>
+		<div id=bread><a href="#">杂志赠阅</a></div>
+		<div id=bread_line></div>
 		<div class="con_left">
 			<div class="subscription">
 
@@ -310,9 +309,10 @@
                 </tr>
 				<tr>
                   <td>&nbsp;* 验证码：</td>
-                  <td><input id="rvcode" name="rvcode" class="txt" type="text">
+                  <td>
+                  	<div id="rvcode"><input  name="rvcode" class="txt" type="text"></div>
                   	<div id=yzm><img id="pic" src="yz.php"></div>
-                  	<div style="cursor:pointer;" id="chang_pic">看不清楚？换张图片</div>
+                  	<div id="chang_pic">看不清楚？换张图片</div>
                   </td>
 
                 </tr>
