@@ -312,7 +312,7 @@
                   <td>&nbsp;* 验证码：</td>
                   <td><input id="rvcode" name="rvcode" class="txt" type="text">
                   	<div id=yzm><img id="pic" src="yz.php"></div>
-                  	<div id="chang_pic">看不清楚？换张图片</div>
+                  	<div style="cursor:pointer;" id="chang_pic">看不清楚？换张图片</div>
                   </td>
 
                 </tr>
