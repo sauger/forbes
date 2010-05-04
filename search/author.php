@@ -34,7 +34,7 @@
 <body>
 	<div id=ibody>
 	<?php
-		include_once('../inc/top.inc.php');
+		include_top();
 	?>
 		<div id=bread>
 			<span>专栏作者检索</span>
@@ -86,13 +86,13 @@
 			<div id=paginage><?php paginate(''); ?></div>
 		</div>
 		<div id="right_inc">
-			<?php include_once('../right/ad.php');?>
-			<?php include_once('../right/favor.php');?>
-			<?php include_once('../right/four.php');?>
-			<?php include_once('../right/forum.php');?>
-			<?php include_once('../right/magazine.php');?>
+			<?php include_right("ad");?>
+			<?php include_right("favor");?>
+			<?php include_right("four");?>
+			<?php include_right("forum");?>
+			<?php include_right("magazine");?>
 		</div>
-		<?php include_once('../inc/bottom.inc.php');?>
+		<?php include_bottom();?>
 	</div>
 </body>
 </html>

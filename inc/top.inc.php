@@ -1,5 +1,6 @@
 <?php
-		include_once(dirname(__FILE__).'/../frame.php');
+		if(!function_exists("get_config"))
+			include_once(dirname(__FILE__).'/../frame.php');
 		$db=get_db();
 		global $pos_items;
 		init_page_items();
@@ -24,7 +25,7 @@
 							+ '<a href="/user">会员中心</a>';
 					$('.user_btn').html(str);
 				}else{
-					$('.user_btn').html('<a href="/login">登陆</a>　<a href="/register/">注册</a>');
+					$('.user_btn').html('<a href="/login">登录</a>　<a href="/register/">注册</a>');
 				}
 				$(function(){
 					$("#logout").click(function(){
@@ -97,6 +98,7 @@
 </div>	
 <script>
 	var url_path = location.pathname.replace(/\/\s*/g,"");
+	if(url_path == "") url_path = 'index';
 	$(".nav").hover(function(){
 		var num=$(this).parent().attr("id");
 		
@@ -107,6 +109,29 @@
 	},function(){});
 	
 	$('#pic'+url_path).hover();
-	
+	<?php 
+	global $page_type;
+	if($page_type == 'static'){?>
+	function top_search(){
+		var type = $(".iselect").val();
+		var text = $("#search_text").val();
+		window.location.href="/search/" + type +"/key/"+encodeURI(text);
+	}
+	<?php }else{?>
+	function top_search(){
+		var type = $(".iselect").val();
+		var text = $("#search_text").val();
+		
+		if(type=='list'){
+			window.location.href="/list/list.php?key="+encodeURI(text);
+		}else if(type=='news'){
+			window.location.href="/search/news.php?key="+encodeURI(text);
+		}else if(type=='author'){
+			window.location.href="/search/author.php?key="+encodeURI(text);
+		}else if(type=='rich'){
+			window.location.href="/search/rich.php?name="+encodeURI(text);
+		}
+	}
+	<?php }?>;
 </script>	
 		

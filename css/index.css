@@ -13,7 +13,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .headline_title{width:351px; height:28px; margin-top:16px; line-height:28px; overflow:hidden;}
 .headline_title a{font-weight:bold; font-size:24px; font-family:微软雅黑,黑体; color:#003399; text-decoration:none;}
 .headline_title a:hover{color:#94000B;}
-.headline_description{width:336px; height:66px; margin-top:10px; margin-left:2px; margin-bottom:8px; text-indent:28px; line-height:22px; font-size:14px; overflow:hidden;}
+.headline_description{width:336px; height:66px; margin-top:10px; margin-left:2px; margin-bottom:8px; text-indent:2em; line-height:22px; font-size:14px; overflow:hidden;}
 .headline_related{width:350px; height:48px; overflow:hidden;}
 #headline .list{width:224px; height:24px; padding-left:13px; line-height:22px; background:url(/images/public/circle1.jpg) no-repeat 0 8px; overflow:hidden;}
 #headline .list a{font-size:14px; color:#003399; text-decoration:none;}

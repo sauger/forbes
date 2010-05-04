@@ -279,12 +279,13 @@ function paginate($url="",$ajax_dom=null,$page_var="page",$force_show = false)
 	<script>
 			function jumppage(urlprex,pageindex)
 			{
-				<?php if($page_type=='static'){?>
-				var surl='<?php echo $url ."/page/";?>' + pageindex;
-				<?php }else{?>
-				var surl=urlprex+pageindex;
-				<?php 
+			<?php 
+				if($page_type=='static'){
+					$str = "'{$url}/page/' + pageindex;";	
+				}else{
+					$str = "urlprex + pageindex;";
 				}
+				echo "var surl = $str";
 				if($ajax_dom){
 					echo "$('#{$ajax_dom}').load(surl);";
 				}else{ 

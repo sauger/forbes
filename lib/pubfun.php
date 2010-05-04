@@ -288,14 +288,25 @@ function print_news_static_page($content,$symbol='fck_pageindex'){
 	$page_index = $page_index >= 1 ? $page_index : 1;
 	$page_prev = $page_index - 1;
 	$page_next = $page_index + 1;
-	function static_url($index){
-		global $news;
-		if($_GET['lang'] == 'en'){
-			return get_news_en_static_url($news,$index);
-		}else{
-			return static_news_url($news,$index);
-		}
-	};
+	if($_GET['page_type'] != 'static'){
+		function static_url($index){
+			$url = $_SERVER['PHP_SELF'];
+			$pattern = '/(.+)\/page\/(\d+)/';
+			if(preg_match($pattern,$url)){
+				$url = preg_replace($pattern,'$1',$url);
+			}
+			return $url . "/page/{$index}";
+		};
+	}else{
+		function static_url($index){
+			global $news;
+			if($_GET['lang'] == 'en'){
+				return get_news_en_static_url($news,$index);
+			}else{
+				return static_news_url($news,$index);
+			}
+		};		
+	}
 	$page_str = "";
 	if($page_prev <= 0){
 		$page_str .= "<span class='paginate_botton'>上页</span>";
@@ -325,6 +336,9 @@ function print_fck_pages2($str,$url="",$symbol='fck_pageindex'){
 	if($page_type=='static'){
 		print_news_static_page($str, $symbol);
 		return;
+	}else if($page_type=='static1'){
+		print_news_static_page($str, $symbol,'static1');
+		return; 
 	}
 	$start = strpos($str, '<div style="page-break-after');
 	if($start===false){

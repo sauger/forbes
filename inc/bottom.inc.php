@@ -1,5 +1,6 @@
 <?php
-		include_once(dirname(__FILE__).'/../frame.php');
+		if(!function_exists("get_config"))
+			include_once(dirname(__FILE__).'/../frame.php');
 		init_page_items();
 		$db=get_db();
 ?>		

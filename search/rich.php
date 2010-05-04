@@ -3,6 +3,7 @@
 	$db = get_db();
 	
 	$name = $_GET['name'];
+	if($_GET['key']) $name = $_GET['key'];
 	$year = intval($_GET['year']);
 	$asset = intval($_GET['asset']);
 	$nationality = $_GET['nationality'];
@@ -31,7 +32,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		 <div id=bread><span>富豪检索</span></div>
 	 	 <div id=bread_line></div>
 		<div id="left">
@@ -155,13 +156,13 @@
 			</div>
 		</div>
 		<div id="right_inc">
-			<?php include "../right/ad.php";?>
-			<?php include "../right/favor.php";?>
-			<?php include "../right/four.php";?>
-			<?php include "../right/forum.php";?>
-			<?php include "../right/magazine.php";?>
+			<?php include_right("ad");?>
+			<?php include_right("favor");?>
+			<?php include_right("four");?>
+			<?php include_right("forum");?>
+			<?php include_right("magazine");?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 	</div>
 </body>
 </html>

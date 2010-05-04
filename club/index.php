@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+		<? include_top();?>
 		<div id=bread><a href="#">会员俱乐部</a></div>
 		<div id=bread_line></div>
 		<div id=club_left>
@@ -167,7 +167,7 @@
 			</div>	
 			<div id=customize_right></div>
 		</div>
-		<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
+		<? include_bottom();?>
 	</div>
 </body>
 </html>
