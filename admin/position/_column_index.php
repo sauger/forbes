@@ -20,7 +20,7 @@ for($i=0;$i< $len;$i++){
 	$table->alias = $items[$i]->column_name ? $items[$i]->column_name : $items[$i]->nick_name;
 	$table->reserve = "/column/{$items[$i]->name}";
 	$table->href = dynamic_news_url($news[0]);
-	$table->static_href = column_article_url($news[0]->name,$news[0]);
+	$table->static_href = column_article_url($news[0]->name,$news[0],'static');
 	$table->save();
 	$selected_news[] = $news[0]->id;
 	for($j=1;$j<3;$j++){
@@ -32,7 +32,7 @@ for($i=0;$i< $len;$i++){
 		$table->name = $pos;
 		$table->display = $news[$j]->title;
 		$table->href = dynamic_news_url($news[$j]);
-		$table->static_href = column_article_url($news[$j]->name,$news[$j]);
+		$table->static_href = column_article_url($news[$j]->name,$news[$j],'static');
 		$table->save();
 		if($news[$j]->id){
 			$selected_news[] = $news[$j]->id;	
@@ -55,7 +55,7 @@ for($i=0;$i<$len;$i++){
 	$table->alias = $news[$i]->nick_name;
 	$table->reserve =  "/column/{$news[$i]->name}";
 	$table->href = dynamic_news_url($news[$i]);
-	$table->static_href = column_article_url($news[$i]->name,$news[$i]);
+	$table->static_href = column_article_url($news[$i]->name,$news[$i],'static');
 	$table->save();
 }
 
@@ -80,7 +80,7 @@ for($i=0;$i< $len;$i++){
 	$table->alias = $items[$i]->column_name ? $items[$i]->column_name : $items[$i]->nick_name;
 	$table->reserve = "/column/{$items[$i]->name}";
 	$table->href = dynamic_news_url($news[0]);
-	$table->static_href = column_article_url($news[0]->name,$news[0]);
+	$table->static_href = column_article_url($news[0]->name,$news[0],'static');
 	$table->save();
 	$selected_news[] = $news[0]->id;
 	for($j=1;$j<3;$j++){
@@ -92,7 +92,7 @@ for($i=0;$i< $len;$i++){
 		$table->name = $pos;
 		$table->display = $news[$j]->title;
 		$table->href = dynamic_news_url($news[$j]);
-		$table->static_href = column_article_url($news[$j]->name,$news[$j]);
+		$table->static_href = column_article_url($news[$j]->name,$news[$j],'static');
 		$table->save();
 		if($news[$j]->id){
 			$selected_news[] = $news[$j]->id;	
@@ -115,6 +115,6 @@ for($i=0;$i<$len;$i++){
 	$table->alias = $news[$i]->nick_name;
 	$table->reserve =  "/column/{$news[$i]->name}";
 	$table->href = dynamic_news_url($news[$i]);
-	$table->static_href = column_article_url($news[$i]->name,$news[$i]);
+	$table->static_href = column_article_url($news[$i]->name,$news[$i],'static');
 	$table->save();
 }
