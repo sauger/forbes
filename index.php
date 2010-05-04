@@ -58,11 +58,11 @@
 				  <? }?>	
 	
 					<div id=btn>
-						<div class=headline_btn1 id=l style="background:url(/images/index/slideshow_back.gif) no-repeat;"></div>
-						<div class=headline_btn2 id=0 style="background:url(/images/index/slideshow_active.gif) no-repeat"></div>
-						<div class=headline_btn2 id=1 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
-						<div class=headline_btn2 id=2 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
-						<div class=headline_btn1 id=r style="background:url(/images/index/slideshow_next.gif) no-repeat"></div>
+						<div class=headline_btn1 id=l param=l style="background:url(/images/index/slideshow_back.gif) no-repeat;"></div>
+						<div class=headline_btn2 id=b0 param=0 style="background:url(/images/index/slideshow_active.gif) no-repeat"></div>
+						<div class=headline_btn2 id=b1 param=1 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
+						<div class=headline_btn2 id=b2 param=2 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
+						<div class=headline_btn1 id=r param=r  style="background:url(/images/index/slideshow_next.gif) no-repeat"></div>
 					</div>
 				</div>
 			</div>
