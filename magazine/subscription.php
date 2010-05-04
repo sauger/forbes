@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<? include_once('../inc/top.inc.php');?>
+	<? include_top();?>
 		<div id=bread><a href="#">杂志赠阅</a></div>
 		<div id=bread_line></div>
 		<div class="con_left">
@@ -329,10 +329,10 @@
 			  </div>
 		</div>
 		<div id="right_inc">
-			<?php include_once( dirname(__FILE__) .'/../right/ad.php');?>
-			<?php include_once( dirname(__FILE__) .'/../right/magazine.php');?>
+			<?php include_right('ad');?>
+			<?php include_right('magazine');?>
 		</div>
-	<? include_once('../inc/bottom.inc.php');?>
+	<? include_bottom();?>
 	</div>
 </body>
 </html>

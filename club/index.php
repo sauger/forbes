@@ -95,7 +95,7 @@
 			</div>
 			<div class=club_right_content_bottom></div>
 			<div id=zy>
-				<div id=btn><button></button></div>	
+				<div id=btn><a href="/magazine/subscription.php"><button></button></a></div>	
 			</div>
 			<div class=club_right_title_top></div>
 			<div id="idea">
@@ -123,6 +123,7 @@
 				</div>
 				<div class=Bulletin_c>
 					<?php
+						$db = get_db();
 						$comments = $db->query("select * from fb_comment where resource_type='news' order by created_at desc limit 4");
 						$news = new table_class('fb_news');
 						for($i=0;$i<4;$i++){

@@ -2,6 +2,7 @@
 	include_once('../frame.php');
 	
 	$id = $_GET['id'];
+	if(!intval($id)) die();
 	
 	$magazine_now = new table_class("fb_magazine");
 	$magazine_now->find($id);
@@ -29,6 +30,7 @@
 			<div id=t_l>
 				<div id=t_l_t>
 					<?php
+						$db = get_db();
 						$sql = "select * from fb_magazine_image where magazine_id=$id order by priority limit 4";
 						$image = $db->query($sql);
 						for($i=0;$i<count($image);$i++){
@@ -63,7 +65,7 @@
 							<a href="/column/column.php?id=">总编专栏</a>
 						</div>
 					</div>
-					<div id="zhuanlan_top">标题啊 呵呵 艾丝凡阿斯多夫</div>
+					<div id="zhuanlan_top"><?php echo $magazine_now->name;?></div>
 							<?php echo $magazine_now->description;?>
 					</div>
 				</div>
@@ -87,7 +89,7 @@
 				</div>
 				<div class=m_l_r>
 					<div class=title3>
-						<?php echo $magazine_news[$i]->short_title;?>
+						<a href="<?php echo get_news_url($magazine_news[$i]);?>"><?php echo $magazine_news[$i]->short_title;?></a>
 					</div>
 					<div class="text">
 						<?php echo $magazine_news[$i]->description;?>
@@ -124,7 +126,7 @@
 					<a href="">申请成为《福布斯》</a>
 				</div>
 				<div id=text style="font-size:16px; font-family:微软简标宋;">
-					<a href=''>会员俱乐部</a>
+					<a href='/club'>会员俱乐部</a>
 				</div>
 				<div id=text style="font-size:16px;">
 					<a href="" style="color:#FFCC00;">免费阅读全年</a>
