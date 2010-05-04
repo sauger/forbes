@@ -45,7 +45,7 @@
 		}while($db->move_next());
 
 	}
-	$page_type= $_GET[page_type];
+	$page_type= $_GET[page_type] ? $_GET[page_type] : $page_type;
 	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -174,19 +174,19 @@
 				<div id=ad_box><img src="/images/news/picture6.jpg"></div>
 				<?php }?>								
 		
-				<div id=news_content><?php echo get_fck_content($content);?></div>
-				<div id=news_paginate><?php print_fck_pages2($content,'news.php?id='.$news->id."&lang={$_GET['lang']}");?></div>
+				<div id=news_content><?php echo get_fck_content($content,'page');?></div>
+				<div id=news_paginate><?php print_fck_pages2($content,'news.php?id='.$news->id."&lang={$_GET['lang']}",'page');?></div>
 	    </div>
 			<div id=news_comment></div>
 			<input type="hidden" value="<?php echo $id;?>" id=newsid></input>
 					
 	</div>
 		<div id="right_inc">
-		 		<?php include "../right/ad.php";?>
-		 		<?php include "../right/favor.php";?>
-		 		<?php include "../right/four.php";?>
-		 		<?php include "../right/rich.php";?>
-		 		<?php include "../right/magazine.php";?>
+		 	<?php include_right("ad");?>
+			<?php include_right("favor");?>
+			<?php include_right("four");?>
+			<?php include_right("forum");?>
+			<?php include_right("magazine");?>
 		</div>
 		<?php include_bottom();?>
 	</div>

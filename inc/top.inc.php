@@ -98,6 +98,7 @@
 </div>	
 <script>
 	var url_path = location.pathname.replace(/\/\s*/g,"");
+	if(url_path == "") url_path = 'index';
 	$(".nav").hover(function(){
 		var num=$(this).parent().attr("id");
 		

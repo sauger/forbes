@@ -281,21 +281,27 @@ function get_fck_page_count($content){
 	return substr_count($content,'<div style="page-break-after') + 1;
 }
 
-function print_news_static_page($content,$symbol='fck_pageindex'){
+function print_news_static_page($content,$symbol='fck_pageindex',$static_type = 'static'){
 	$page_count = get_fck_page_count($content);
 	if ($page_count <= 1) return ;	
 	$page_index = intval($_REQUEST[$symbol]);
 	$page_index = $page_index >= 1 ? $page_index : 1;
 	$page_prev = $page_index - 1;
 	$page_next = $page_index + 1;
-	function static_url($index){
-		global $news;
-		if($_GET['lang'] == 'en'){
-			return get_news_en_static_url($news,$index);
-		}else{
-			return static_news_url($news,$index);
-		}
-	};
+	if($static_type=='static1'){
+		function static_url($index){
+			return get_current_url();
+		};
+	}else{
+		function static_url($index){
+			global $news;
+			if($_GET['lang'] == 'en'){
+				return get_news_en_static_url($news,$index);
+			}else{
+				return static_news_url($news,$index);
+			}
+		};		
+	}
 	$page_str = "";
 	if($page_prev <= 0){
 		$page_str .= "<span class='paginate_botton'>上页</span>";
@@ -325,6 +331,9 @@ function print_fck_pages2($str,$url="",$symbol='fck_pageindex'){
 	if($page_type=='static'){
 		print_news_static_page($str, $symbol);
 		return;
+	}else if($page_type=='static1'){
+		print_news_static_page($str, $symbol,'static1');
+		return; 
 	}
 	$start = strpos($str, '<div style="page-break-after');
 	if($start===false){
