@@ -10,6 +10,9 @@ for($i=0;$i< $len;$i++){
 	$news = $db->query("select a.title,a.id,a.created_at,a.description,b.name from fb_news a left join fb_user b on a.publisher = b.id where publisher = {$items[$i]->publisher} order by created_at desc limit 3");
 	$pos = 'column_recommend_top_l_'.$i;
 	$table->find('first',array("conditions" => "name = '{$pos}'"));
+	if(strtotime($table->end_time) && strtotime($table->end_time) >= time()){
+		continue;
+	}
 	$table->name = $pos;
 	$table->display = $news[0]->title;
 	$table->description = $news[0]->description;
@@ -23,6 +26,9 @@ for($i=0;$i< $len;$i++){
 	for($j=1;$j<3;$j++){
 		$pos = 'column_recommend_b_'.$i.'_'.$j;
 		$table->find('first',array("conditions" => "name = '{$pos}'"));
+		if(strtotime($table->end_time) && strtotime($table->end_time) >= time()){
+			continue;
+		}
 		$table->name = $pos;
 		$table->display = $news[$j]->title;
 		$table->href = dynamic_news_url($news[$j]);
@@ -40,6 +46,9 @@ $len = count($news);
 for($i=0;$i<$len;$i++){
 	$pos = 'column_edit_t'.$i;	
 	$table->find('first',array("conditions" => "name = '{$pos}'"));
+	if(strtotime($table->end_time) && strtotime($table->end_time) >= time()){
+		continue;
+	}
 	$table->name = $pos;
 	$table->display = $news[$i]->title;
 	$table->description = $news[$i]->description;
@@ -61,6 +70,9 @@ for($i=0;$i< $len;$i++){
 	$news = $db->query("select a.title,a.id,a.created_at,a.description,b.name from fb_news a left join fb_user b on a.publisher = b.id where publisher = {$items[$i]->publisher} order by created_at desc limit 3");
 	$pos = 'column_r_t_l'.$i;
 	$table->find('first',array("conditions" => "name = '{$pos}'"));
+	if(strtotime($table->end_time) && strtotime($table->end_time) >= time()){
+		continue;
+	}
 	$table->name = $pos;
 	$table->display = $news[0]->title;
 	$table->description = $news[0]->description;
@@ -74,6 +86,9 @@ for($i=0;$i< $len;$i++){
 	for($j=1;$j<3;$j++){
 		$pos = 'column_recommend_top_r_t2_'.$i.'_'.$j;
 		$table->find('first',array("conditions" => "name = '{$pos}'"));
+		if(strtotime($table->end_time) && strtotime($table->end_time) >= time()){
+			continue;
+		}
 		$table->name = $pos;
 		$table->display = $news[$j]->title;
 		$table->href = dynamic_news_url($news[$j]);
@@ -91,6 +106,9 @@ $len = count($news);
 for($i=0;$i<$len;$i++){
 	$pos = 'column_edit_edit_t2_'.$i;	
 	$table->find('first',array("conditions" => "name = '{$pos}'"));
+	if(strtotime($table->end_time) && strtotime($table->end_time) >= time()){
+		continue;
+	}
 	$table->name = $pos;
 	$table->display = $news[$i]->title;
 	$table->description = $news[$i]->description;
