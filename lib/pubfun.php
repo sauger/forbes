@@ -281,16 +281,21 @@ function get_fck_page_count($content){
 	return substr_count($content,'<div style="page-break-after') + 1;
 }
 
-function print_news_static_page($content,$symbol='fck_pageindex',$static_type = 'static'){
+function print_news_static_page($content,$symbol='fck_pageindex'){
 	$page_count = get_fck_page_count($content);
 	if ($page_count <= 1) return ;	
 	$page_index = intval($_REQUEST[$symbol]);
 	$page_index = $page_index >= 1 ? $page_index : 1;
 	$page_prev = $page_index - 1;
 	$page_next = $page_index + 1;
-	if($static_type=='static1'){
+	if($_GET['page_type'] != 'static'){
 		function static_url($index){
-			return get_current_url();
+			$url = $_SERVER['PHP_SELF'];
+			$pattern = '/(.+)\/page\/(\d+)/';
+			if(preg_match($pattern,$url)){
+				$url = preg_replace($pattern,'$1',$url);
+			}
+			return $url . "/page/{$index}";
 		};
 	}else{
 		function static_url($index){
