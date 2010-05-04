@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,7 +10,7 @@
 <?php
 include '../../frame.php';
 $user = new table_class('fb_user');
-$user = $user->find($_SESSION['admin_user_id']);
+$user->find($_SESSION['admin_user_id']);
 if($_POST['new_password']){
 	if($_POST['old_password'] != $user->password){
 		alert('原有密码错误！请重新输入！');
