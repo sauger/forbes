@@ -89,7 +89,7 @@
 				</div>
 				<div class=m_l_r>
 					<div class=title3>
-						<?php echo $magazine_news[$i]->short_title;?>
+						<a href="<?php echo get_news_url($magazine_news[$i]);?>"><?php echo $magazine_news[$i]->short_title;?></a>
 					</div>
 					<div class="text">
 						<?php echo $magazine_news[$i]->description;?>
