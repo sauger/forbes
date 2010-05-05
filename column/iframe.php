@@ -26,7 +26,6 @@ else
 }
 if($type=="news"){
 	$news=$db->paginate('select a.*,b.name from fb_news a left join fb_user b on a.publisher = b.id where publisher='.$id.$sql.' order by priority asc, created_at desc',4);
-	echo count($news);
 	for($i=0;$i<count($news);$i++){ ?>
 <div class=r_content>
 	<div class=r_title>
