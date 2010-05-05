@@ -6,8 +6,13 @@
 	if($date==''){
 		$date = date("Y-m-d");
 	}
-	$sql = "SELECT t1.date_time,t1.source_id,t1.ad_name,t1.count,t2.count as click_count FROM forbes_ad.fb_ad_result t1 left join forbes_ad.fb_ad_result t2 on t1.source_id=t2.source_id and t2.type='ad_click' where t1.type='ad' and date_time='$date'";
-	$record = $db->query($sql);
+	$key = $_GET['key'];
+	$sql = "SELECT t1.date_time,t1.source_id,t1.ad_name,t1.count,t2.count as click_count FROM forbes_ad.fb_ad_result t1 left join forbes_ad.fb_ad_result t2 on t1.source_id=t2.source_id and t2.type='ad_click' and t1.date_time=t2.date_time where t1.type='ad' and t1.	date_time='$date'";
+	if($key!=''){
+		$sql .= " and t1.ad_name like '%$key%'";
+	}
+	$db = get_db();
+	$record = $db->paginate($sql,20);
 	$count = $db->record_count;
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -18,8 +23,7 @@
 	<title>迅傲信息</title>
 	<?php
 		css_include_tag('admin');
-		use_jquery();
-		js_include_tag('admin_pub');
+		use_jquery_ui();
 	?>
 </head>
 <body>
@@ -27,43 +31,31 @@
     <div id=title>广告统计</div>
 </div>
 <div id=isearch>
-		<input id="key" type="text" value="<?php echo $key?>"><span id="span_category"></span>
+		<input id="key" type="text" value="<?php echo $key?>">
+		<input type="text" class="date_jquery" value="<?php echo $date;?>">
 		<input type="button" value="搜索" id="search_button">
 </div>
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="30%">广告名</td><td width="25%">广告类型</td><td width="25%">广告代码</td><td width="20%">操作</td>
+			<td width="30%">广告名</td><td width="20%">展示次数</td><td width="20%">有效次数</td><td width="15%">有效率</td><td width="15%">操作</td>
 		</tr>
 		<?php
-			$db = get_db();
-			if($key!=''){
-				$ad = $db->query("select * from forbes_ad.fb_ad where banner_id=$bid and channel_id=$cid and name like '%$key%'");
-			}else{
-				$ad = $db->query("select * from forbes_ad.fb_ad where banner_id=$bid and channel_id=$cid");
-			}
-			$count = $db->record_count;
 			for($i=0;$i<$count;$i++){
+				$click_count = ($record[$i]->click_count=='')?0:$record[$i]->click_count;
 		?>
 		<tr class=tr3 id="<?php echo $ad[$i]->id;?>">
-			<td><?php echo $ad[$i]->name;?></td>
-			<td><?php echo $ad[$i]->ad_type?></td>
-			<td><?php echo $ad[$i]->code?></td>
+			<td><?php echo $record[$i]->ad_name;?></td>
+			<td><?php echo $record[$i]->count?></td>
+			<td><?php echo ($record[$i]->click_count=='')?0:$record[$i]->click_count;?></td>
+			<td><?php echo round($click_count/$record[$i]->count,3)*100;?>%</td>
 			<td>
-				<?php if($ad[$i]->is_adopt=="1"){?>
-					<span class="revocation" name="<?php echo $ad[$i]->id;?>" title="撤消"><img src="/images/admin/btn_apply.png" border=0></span>
-				<?php }?>
-				<?php if($ad[$i]->is_adopt=="0"){?>
-					<span class="publish" name="<?php echo $ad[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border=0></span>
-				<?php }?>
-				<a href="ad_edit.php?id=<?php echo $ad[$i]->id;?>&url=list" class="edit" title="编辑" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
-				<span style="cursor:pointer;color:#FF0000" class="del" title="删除" name="<?php echo $ad[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
+				<a href="more_result.php?id=<?php echo $record[$i]->source_id;?>&url=list" class="edit" title="详细" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
 			</td>
 		</tr>
 		<?php }?>
 		<tr class="btools">
 			<td colspan=10><?php paginate("",null,"page",true);?></td>
-			<input type="hidden" id="db_table" value="forbes_ad.fb_ad">
 		</tr>
 	</table>
 </body>
@@ -79,6 +71,17 @@
 		}
 	});
 	function search(){
-		window.location.href = "ad_list.php?key="+encodeURI($("#key").val())+"&bid=<?php echo $bid;?>&cid=<?php echo $cid;?>";
+		window.location.href = "result.php?key="+encodeURI($("#key").val())+"&date="+$(".date_jquery").val();
 	}
+	
+	$(".date_jquery").datepicker(
+	{
+		changeMonth: true,
+		changeYear: true,
+		monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+		dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dayNamesMin:["日","一","二","三","四","五","六"],
+		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dateFormat: 'yy-mm-dd'
+	});
 </script>
