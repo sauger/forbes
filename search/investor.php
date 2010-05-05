@@ -39,9 +39,7 @@
 </head>
 <body>
 	<div id=ibody>
-		
 		<?php include_top();?>
-		
 		<div id=bread>
 			<a>投资人检索</a>
 		</div>

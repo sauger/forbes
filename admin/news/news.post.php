@@ -60,7 +60,8 @@
 	$news->title = strtr($news->title,$table_change);
 	$news->short_title = strtr($news->short_title,$table_change);	
 	$news->news_type= 1;
-	$news->publisher = $_SESSION['admin_user_id'];
+	if(!$news->publisher)
+		$news->publisher = $_SESSION['admin_user_id'];
 	if(!$news->author) $news->author = $_SESSION['admin_nick_name'];
 	if($news_id == ''){
 		//insert news

@@ -53,7 +53,7 @@
 			<div id=list_top>
 					<div id=picture><img width="300" height="200"  src="<?php echo $top_news[0]->video_photo_src?>"></div>
 					<div id=title><a href="news.php?id=<?php echo $top_news[0]->id;?>"><?php echo $top_news[0]->title;?></a></div>
-					<div id=description><?php echo $top_news[0]->description;?></div>
+					<div id=description><?php echo mb_substr($top_news[0]->description,0,200,'utf8');?></div>
 					<div id=info>《福布斯》　记者：<?php echo $top_news[0]->author;?>　发布于：<?php echo substr($top_news[0]->created_at,0,10);?></div>
 			</div>
 			<?php }?>
@@ -72,7 +72,7 @@
 					<div class=list_box>
 							<div class=title><a title="<?php echo $record[$i]->title;?>" href="<?php echo get_news_url($record[$i]);?>"><?php echo $record[$i]->title?></a></div>
 							<div class=info>《福布斯》　记者：<?php echo $record[$i]->author;?>　发布于：<?php echo substr($record[$i]->created_at,0,10);?></div>
-							<div class=description ><?php echo $record[$i]->description;?></div>
+							<div class=description ><?php echo mb_substr($record[$i]->description,0,200,'utf8');?></div>
 					</div>
 					<?php }?>
 					<div id=page><?php paginate();?></div>
