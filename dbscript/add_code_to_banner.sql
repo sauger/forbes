@@ -1,0 +1,1 @@
+﻿ALTER TABLE `forbes_ad`.`fb_banner` ADD COLUMN `code` VARCHAR(45) COMMENT '标识' AFTER `ad_size`;

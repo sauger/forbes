@@ -1,0 +1,1 @@
+﻿ALTER TABLE `forbes_ad`.`fb_ad` ADD COLUMN `ad_type` VARCHAR(10) COMMENT '广告类型' AFTER `is_adopt`;
