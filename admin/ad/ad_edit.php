@@ -79,7 +79,7 @@
 
 		</tr>
 		<tr class=tr4>
-			<td class=td1>定时播放</td><td><select name=ad[start_hour] id="start_hour" value="<?php echo $ad->start_hour;?>"><option value=''></option><?php for($i=0;$i<25;$i++){?><option value='<?php echo $i;?>'><?php echo $i;?>时</option><?php }?></select><div>－</div><select name=ad[end_hour] id="end_hour"><option value=''></option><?php for($i=0;$i<25;$i++){?><option value='<?php echo $i;?>'><?php echo $i;?>时</option><?php }?></select></td>
+			<td class=td1>定时播放</td><td><select name=ad[start_hour] id="start_hour" value="<?php echo $ad->start_hour;?>"><option value='0'></option><?php for($i=0;$i<25;$i++){?><option value='<?php echo $i;?>'><?php echo $i;?>时</option><?php }?></select><div>－</div><select name=ad[end_hour] id="end_hour"><option value='24'></option><?php for($i=0;$i<25;$i++){?><option value='<?php echo $i;?>'><?php echo $i;?>时</option><?php }?></select></td>
 		</tr>
 		<tr class=tr4>
 			<td class=td1>千次展示</td><td><input type="text" size="50" name=ad[show_price] value="<?php echo $ad->show_price;?>">(元)</td>

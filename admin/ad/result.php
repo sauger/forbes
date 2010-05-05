@@ -2,11 +2,13 @@
 	session_start();
 	include_once('../../frame.php');
 	judge_role();
-	$cid = intval($_GET['cid']);
-	$bid = intval($_GET['bid']);
-	$key = $_GET['key'];
-	
-	$sql = "SELECT t1.date_time,t1.source_id,t1.ad_name,t1.count,t2.count as click_count FROM forbes_ad.fb_ad_result t1 left join forbes_ad.fb_ad_result t2 on t1.source_id=t2.source_id and t2.type='ad_click' where t1.type='ad'";
+	$date = $_GET['date'];
+	if($date==''){
+		$date = date("Y-m-d");
+	}
+	$sql = "SELECT t1.date_time,t1.source_id,t1.ad_name,t1.count,t2.count as click_count FROM forbes_ad.fb_ad_result t1 left join forbes_ad.fb_ad_result t2 on t1.source_id=t2.source_id and t2.type='ad_click' where t1.type='ad' and date_time='$date'";
+	$record = $db->query($sql);
+	$count = $db->record_count;
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
