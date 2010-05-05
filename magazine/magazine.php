@@ -123,16 +123,16 @@
 			</div>
 			<div id=b_r>
 				<div id=text>
-					<a href="">申请成为《福布斯》</a>
+					<a href="/register">申请成为《福布斯》</a>
 				</div>
 				<div id=text style="font-size:16px; font-family:微软简标宋;">
-					<a href='/club'>会员俱乐部</a>
+					<a href='/register'>会员俱乐部</a>
 				</div>
 				<div id=text style="font-size:16px;">
-					<a href="" style="color:#FFCC00;">免费阅读全年</a>
+					<a href="/register" style="color:#FFCC00;">免费阅读全年</a>
 				</div>
 				<div id=text>
-					<a href="">《福布斯》中文杂志</a>
+					<a href="/register">《福布斯》中文杂志</a>
 				</div>
 				<input type=button id=button>
 			</div>
