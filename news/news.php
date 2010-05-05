@@ -171,7 +171,7 @@
 									
 				<?php if($news->ad_id){?>
 				<div id=ad_roll></div>
-				<div id=ad_box><img src="/images/news/picture6.jpg"></div>
+				<div id="news_banner" class="ad_banner"><img src="/images/news/picture6.jpg"></div>
 				<?php }?>								
 		
 				<div id=news_content><?php echo get_fck_content($content,'page');?></div>

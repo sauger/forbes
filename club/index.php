@@ -68,7 +68,7 @@
 				<?php } ?>
 			</div>
 			<div id="gift_content_right"></div>
-			<div id="club_l_b"><a href=""><img border=0 src="/images/club/four.jpg"></a></div>
+			<div id="club_banner" class="ad_banner"><a href=""><img border=0 src="/images/club/four.jpg"></a></div>
 		</div>
 		<div id=club_right>
 			<div class=club_right_title_top></div>

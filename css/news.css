@@ -43,7 +43,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #info_keywords_bottom{width:180px; height:20px; margin-left:5px; padding-top:10px; background:url(/images/news/keywords.gif) no-repeat;}
 
 #ad_roll{width:1px; height:200px;}
-#ad_box{clear:left; width:230px; height:210px; margin-top:20px; margin-right:20px;}
+#news_banner{clear:left; width:230px; height:210px; margin-top:20px; margin-right:20px;}
 
 #news_content{width:640px; font-size:14px; line-height:25px; float:none;}
 #news_content p{text-indent:0px; margin-bottom:15px;}

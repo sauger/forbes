@@ -381,7 +381,7 @@
 		</div>
 		
 		
-		<div class=c_r_img>
+		<div class="c_r_img ad_banner" id="index_middle_banner">
 			<a href="" target="_blank"><img border=0 src="images/other/bannwe-for.jpg"></a>
 		</div>
 		
