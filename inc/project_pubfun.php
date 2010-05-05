@@ -365,5 +365,4 @@ function get_news_serach_url($key){
 	}
 }
 
-
 ?>
