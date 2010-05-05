@@ -37,9 +37,9 @@
 				<div class=headline_pic id="headline_pic_<?php echo $i;?>" style="display:none;"><?php show_page_img(300,200,0)?></div>
 				<?php }?>
 				<div id=headline_content>
-					<div class=headline_title id=headline_title_0 <?php $pos_name ="index_hl_0"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
-					<div class=headline_title id=headline_title_1 style="display:none;" <?php $pos_name ="index_hl_1"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
-					<div class=headline_title id=headline_title_2 style="display:none;" <?php $pos_name ="index_hl_2"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
+					<div class=headline_title id=headline_title_0 <?php $pos_name ="index_hl_0"; show_page_pos($pos_name,'base_img_withoutime')?>><?php show_page_href();?></div>
+					<div class=headline_title id=headline_title_1 style="display:none;" <?php $pos_name ="index_hl_1"; show_page_pos($pos_name,'base_img_withoutime')?>><?php show_page_href();?></div>
+					<div class=headline_title id=headline_title_2 style="display:none;" <?php $pos_name ="index_hl_2"; show_page_pos($pos_name,'base_img_withoutime')?>><?php show_page_href();?></div>
 					<div class=headline_description id=headline_description_0><?php echo $pos_items->index_hl_0->description; ?></div>
 					<div class=headline_description id=headline_description_1 style="display:none;"><?php echo $pos_items->index_hl_1->description; ?></div>
 					<div class=headline_description id=headline_description_2 style="display:none;"><?php echo $pos_items->index_hl_2->description; ?></div>
@@ -50,7 +50,7 @@
 							for($i=0;$i<2;$i++)
 							{$pos_name = "index_hl".$j."_r".$i;
 					?>
-					<div class=list <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
+					<div class=list <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 					<?php
 							}
 					?>				

@@ -12,10 +12,10 @@
 				<?php show_page_img()?>
 			</div>
 			<div id=common_head_r>
-				<div id=common_head_description <?php show_page_pos($pos_name,'base_img');?>><?php show_page_desc()?></div>
+				<div id=common_head_description <?php show_page_pos($pos_name,'base_img_withoutime');?>><?php show_page_desc()?></div>
 				<div id=common_head_list>
 					<?php for($i=0; $i<2;$i++){ $pos_name = $pos_name.'_r'.$i?>
-						<div class=common_head_list <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
+						<div class=common_head_list <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 					<?php } ?>
 				</div>
 			</div>

@@ -102,12 +102,12 @@ div{margin:0; padding:0; float:left; display:inline;}
 .r_content .r_title .wz a{color:#303082; text-decoration:none;}
 .r_content .r_title .subtime{height:16px; margin-top:7px;  margin-right:10px; line-height:16px; color:#999999; float:right;}
 .r_content .r_read{width:200px; height:16px; margin-top:10px; font-size:12px; line-height:16px; color:#055c99; text-align:right; float:right;}
-.r_content .r_context{width:716px; height:114px; margin-top:10px; margin-left:19px; line-height:24px; font-size:13px;}
+.r_content .r_context{width:716px; height:100px; margin-top:10px; margin-left:19px; line-height:20px; font-size:13px; overflow: hidden;}
 .r_content .r_context a{color:#A8A8A8; text-decoration:none;}
-.r_content .r_dash{width:740px; height:1px; margin-left:7px; overflow:hidden; background:url('/images/column/r_dash.jpg') no-repeat;}
+.r_content .r_dash{width:740px; height:1px; margin-left:7px; margin-top:5px; overflow:hidden; background:url('/images/column/r_dash.jpg') no-repeat;}
 .page{width:788px; height:30px; margin-top:20px; font-size:14px; line-height:30px; color:#666666; text-align:center;}
 .page a{color:#246BB0; text-decoration:none;}
-.r_content .column_image{width:100px; height:100px; margin-top:10px; margin-left:7px;}
-.r_content .column_image img{width:100px; height:100px;}
+.r_content .column_image{width:150px; margin-top:10px; margin-left:20px;float:left;}
+.r_content .column_image img{width:150px;}
 .r_content .column_content{width:716px; margin-top:10px; margin-left:19px; line-height:20px;}
 
