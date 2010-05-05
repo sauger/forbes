@@ -36,7 +36,6 @@
 		    <div id=title><?php echo $vote->name;?></div>
 			  <a href="result.php" id=btn_back></a>
 		</div>
-		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '(已经结束)';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "(还未开始)";else $flag=1;?>
 		<div id="question_div2">
 			<?php for($i=0;$i<$count;$i++){
 				$total = 0;
