@@ -172,7 +172,7 @@ $(function(){
 		/* fitler words
 		 */
 		for(i=0;i< filte_len; i++){
-			if(filte_words.length <= 0) continue;
+			if(filte_words[i].length <= 0) continue;
 			if(title.indexOf(filte_words[i])!=-1){
 				if(confirm('标题中包含敏感词"' + filte_words[i]+'",是否忽略敏感词？') === false)
 				return false;
