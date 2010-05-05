@@ -1,5 +1,5 @@
 ﻿CREATE TABLE  `forbes_ad`.`fb_ad_result` (
-  `id` int(10) unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `source_id` int(10) unsigned DEFAULT NULL,
   `type` varchar(20) DEFAULT NULL,
   `date_time` char(10) DEFAULT NULL,
