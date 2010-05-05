@@ -32,7 +32,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 .lujiazui_list{width:238px; height:18px; margin-top:5px; margin-left:10px; padding-left:18px; background:url(/images/index/arrow1.png) no-repeat 0 7px; line-height:20px; overflow:hidden;}
 .lujiazui_list a{color:#2555a7; font-size:14px; text-decoration:none;}
 .lujiazui_list a:hover{color:#94000B;} 
-#lujiazui_coffee{width:50px; height:34px; margin-top:-5px; background-image:url(/images/index/coffee.png)!important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/index/coffee.png");}
+#lujiazui_coffee{width:50px; height:34px; margin-top:40px; background:url(/images/index/coffee.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/index/coffee.png"); float:right;}
+
+
+
 
 #subject{width:351px; float:right;}
 #subject_btnl{width:5px; height:99px; margin-top:45px; margin-left:10px; background:url(/images/index/subject_btnl.jpg) no-repeat; cursor:pointer;}
