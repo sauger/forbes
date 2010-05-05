@@ -17,14 +17,13 @@
 	
 	
 	$id = $_REQUEST['id'];
-	$ad = new table_class('fb_ad');
+	$ad = new table_class('forbes_ad.fb_ad');
 	if($id!=''){
 		$ad->find($id);
 		$ad->update_attributes($_POST['ad'],false);
 	}else{
 		$ad->update_attributes($_POST['ad'],false);
 		$ad->is_adopt = 1;
-		$ad->created_at = date("Y-m-d H:i:s");
 	}
 	if($_FILES['image']['name']!=null){
 		if($_FILES['image']['size']>2000000){
@@ -44,7 +43,7 @@
 		$ad->image = "/upload/ad/{$img}";
 	}
 	if($_FILES['video']['name']!=null){
-		var_dump($_FILES);
+		#var_dump($_FILES);
 		if($_FILES['video']['size']>5000000){
 			alert('上传视频不得大于5M，请重新上传 !');
 			redirect($_SERVER['HTTP_REFERER']);
@@ -79,7 +78,12 @@
 		$ad->flash = "/upload/ad/{$flash}";
 	}
 	$ad->save();
-	redirect('index.php');
+	if(!$_POST['url']){
+		redirect('channel.php');
+	}else{
+		redirect('ad_list.php?bid='.$ad->banner_id.'&cid='.$ad->channel_id);
+	}
+	
 ?>
 </body>
 </html>

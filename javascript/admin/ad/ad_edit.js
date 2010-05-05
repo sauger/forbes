@@ -1,22 +1,19 @@
-
-
-function add_related_ad(id){
-	related_ad.push(id);
-	$('#hidden_related_ad').attr('value',related_ad.join(','));
-}
-
-function remove_related_ad(id){
-	icount = related_ad.length;
-	for(i=0;i<icount;i++){
-		if(related_ad[i] == id){
-			related_ad.splice(i,1);
-		}
-	}
-	$('#hidden_related_ad').attr('value',related_ad.join(','));
-}	
-function display_related_ad(){
-	$('#add_related_ad').html("已关联相关新闻 " + related_ad.length + " 条 " + '编辑');
-	ad_href = old_href+"&related="+$('#hidden_related_ad').val()
-	$('#add_related_ad').colorbox({href:ad_href});
-	//alert(ad_href);
-};
+$(function(){
+	$(".color").colorbox();
+	
+	$(".date_jquery").datepicker(
+	{
+		changeMonth: true,
+		changeYear: true,
+		monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+		dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dayNamesMin:["日","一","二","三","四","五","六"],
+		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dateFormat: 'yy-mm-dd'
+	});
+	
+	$("#select_upload").change(function(){
+		$(".ad_upload").hide();
+		$("#ad_"+$(this).val()).show();
+	});
+})
