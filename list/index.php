@@ -34,9 +34,9 @@
 					<div class=headline_pic id=headline_pic_1 style="display:none;"><?php $pos_name = "listindex_hl_1";show_page_img(300,200)?></div>
 					<div class=headline_pic id=headline_pic_2 style="display:none;"><?php $pos_name = "listindex_hl_2";show_page_img(300,200)?></div>
 					<div id=headline_content>
-						<div class=headline_title id=headline_title_0 <?php show_page_pos('listindex_hl_0')?>><?php show_page_href('listindex_hl_0')?></div>
-						<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos('listindex_hl_1')?>><?php show_page_href('listindex_hl_0')?></div>
-						<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos('listindex_hl_2')?>><?php show_page_href('listindex_hl_0')?></div>
+						<div class=headline_title id=headline_title_0 <?php show_page_pos('listindex_hl_0','list_head')?>><?php show_page_href('listindex_hl_0')?></div>
+						<div class=headline_title id=headline_title_1 style="display:none;" <?php show_page_pos('listindex_hl_1','list_head')?>><?php show_page_href('listindex_hl_0')?></div>
+						<div class=headline_title id=headline_title_2 style="display:none;" <?php show_page_pos('listindex_hl_2','list_head')?>><?php show_page_href('listindex_hl_0')?></div>
 						<div class=headline_description id=headline_description_0><?php echo $pos_items->listindex_hl_0->description; ?></div>
 						<div class=headline_description id=headline_description_1 style="display:none;"><?php echo $pos_items->listindex_hl_1->description; ?></div>
 						<div class=headline_description id=headline_description_2 style="display:none;"><?php echo $pos_items->listindex_hl_2->description; ?></div>
@@ -51,7 +51,7 @@
 							//		  if(count($rela_list)<1){break;}
 								$pos_name = "listindex_hl_{$j}_{$i}";
 								?>
-									<div class=list <?php show_page_pos($pos_name)?>><?php show_page_href()?></div>
+									<div class=list <?php show_page_pos($pos_name,'list_head')?>><?php show_page_href()?></div>
 							<?php 	}
 							//}
 						?>				
@@ -80,7 +80,7 @@
 					for($i=0;$i<5;$i++){
 						$pos_name = "listindex_recommend_{$i}";
 					?>
-					<div class="recommend_p" <?php show_page_pos($pos_name)?>>
+					<div class="recommend_p" <?php show_page_pos($pos_name,'list_head')?>>
 						<div class=recommend_pic><img width="94" height="94" src="<?php echo $pos_items->$pos_name->image1;?>"></div>
 						<div class="recommend_list"><?php show_page_href();?></div>
 					</div>
@@ -112,7 +112,7 @@
 							<?php for($i=0;$i<4;$i++){
 								$pos_name = "listindex_{$key}_{$i}"; 
 							?>
-								<li <?php show_page_pos($pos_name)?>><?php show_page_href();?></li>
+								<li <?php show_page_pos($pos_name,'list_common')?>><?php show_page_href();?></li>
 							<?php } ?>
 						</div>
 					</div>
