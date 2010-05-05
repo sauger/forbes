@@ -1,1 +1,2 @@
-ALTER TABLE `forbes`.`fb_investor` MODIFY COLUMN `description` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT '投资人简介';
+ALTER TABLE `forbes`.`fb_investor_news` CHANGE COLUMN `investro_id` `investor_id` INTEGER  NOT NULL;
+eneral_ci DEFAULT NULL COMMENT '投资人简介';

@@ -73,9 +73,9 @@
 			</div>
 			<?php 
 			$db = get_db();
-			$lists = $db->query("select name from fb_custom_list_type where list_type=4 and id != {$id} order by id desc limit 3");
+			$lists = $db->query("select a.name,a.id from fb_custom_list_type a left join fb_list_relation b  on a.id = b.rela_id where b.list_id = {$id} order by b.id desc limit 3");
 			for($i=0;$i<3;$i++){ ?>
-			<div class=cl><a href="">·<?php echo $lists[$i]->name;?></a></div>
+			<div class=cl><a href="<?php echo "$static_site/list/{$lists[$i]->id}"?>">·<?php echo $lists[$i]->name;?></a></div>
 			<?php } ?>
 		</div>
 		<input type="hidden" id="list_id" value="<?php echo $id;?>" />
