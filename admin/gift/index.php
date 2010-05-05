@@ -1,5 +1,7 @@
 <?php
+	session_start();
 	include_once('../../frame.php');
+	judge_role();
 	$search = $_GET['search'];
 	
 	$db = get_db();
@@ -32,11 +34,11 @@
 	</div>
 	<div id=isearch>
 			<input id="search" type="text" value="<? echo $_REQUEST['search']?>">
-			<input type="button" value="搜索" id="search_b" style="border:1px solid #0000ff; height:21px">
+			<input type="button" value="搜索" id="search_b">
 	</div>
 	<div id=itable>
-	<table width="795" border="0" id="list">
-		<tr class="tr2">
+	<table border="0" cellspacing=1>
+		<tr class="itable_title">
 			<td width="20%">礼品名称</td><td width="10%">礼品数量</td><td width="20%">开始日期</td><td width="20%">结束日期</td><td width="30%">操作</td>
 		</tr>
 		<?php
@@ -56,8 +58,8 @@
 		<?php
 			}
 		?>
-		<tr class="tr3">
-			<td colspan=5><?php paginate();?></td>
+		<tr class="btools">
+			<td colspan=10><?php paginate();?></td>
 		</tr>
 	</table>
 	</div>	
