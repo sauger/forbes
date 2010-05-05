@@ -20,7 +20,23 @@ $db->move_first();
 $banner_id = $db->field_by_name('id');
 $ads = $db->query("select * from forbes_ad.fb_ad where is_adopt=1 and channel_id={$channel_id} and banner_id={$banner_id} and (start_date=0 or start_date < now()) and (end_date=0 or end_date > now())");
 if ($db->record_count <= 0) die();
-foreach($ads){
+$hour = get_date();
+$hour = intval($hour['hour']);
+foreach ($ads as $ad) {
+	$start_hour = intval($ad->start_hour);
+	$end_hour = intval($ad->end_hour);
 	
+	if($start_hour < $end_hour){
+		if($hour < $start_hour || $hour > $end_hour){
+			continue;
+		}
+	}else if($start_hour > $end_hour){
+		if(($hour < $start_hour && $hour > $end_hour)){
+			continue;
+		}
+	}
+	$valid_ads[]=$ad;
 }
+$len = count($valid_ads);
+echo $len;
 ?>
