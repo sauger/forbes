@@ -4,6 +4,7 @@
 	judge_role();
 	$cid = intval($_GET['cid']);
 	$bid = intval($_GET['bid']);
+	$key = $_GET['key'];
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,7 +25,7 @@
 	<a href="ad_edit.php?cid=<?php echo $cid;?>&bid=<?php echo $bid;?>&url=list" id=btn_add></a>
 </div>
 <div id=isearch>
-		<input id="key" type="text" value="<? echo $_REQUEST['title']?>"><span id="span_category"></span>
+		<input id="key" type="text" value="<?php echo $key?>"><span id="span_category"></span>
 		<input type="button" value="搜索" id="search_button">
 </div>
 <div id=itable>
@@ -34,13 +35,17 @@
 		</tr>
 		<?php
 			$db = get_db();
-			$ad = $db->query("select * from forbes_ad.fb_ad where banner_id=$bid and channel_id=$cid");
+			if($key!=''){
+				$ad = $db->query("select * from forbes_ad.fb_ad where banner_id=$bid and channel_id=$cid and name like '%$key%'");
+			}else{
+				$ad = $db->query("select * from forbes_ad.fb_ad where banner_id=$bid and channel_id=$cid");
+			}
 			$count = $db->record_count;
 			for($i=0;$i<$count;$i++){
 		?>
 		<tr class=tr3 id="<?php echo $ad[$i]->id;?>">
 			<td><?php echo $ad[$i]->name;?></td>
-			<td><?php echo $ad[$i]->type?></td>
+			<td><?php echo $ad[$i]->ad_type?></td>
 			<td><?php echo $ad[$i]->code?></td>
 			<td>
 				<a href="ad_edit.php?id=<?php echo $ad[$i]->id;?>&url=list" class="edit" title="编辑" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
@@ -55,3 +60,17 @@
 	</table>
 </body>
 </html>
+
+<script>
+	$("#search_button").click(function(){
+		search();
+	});
+	$("#key").keypress(function(event){
+		if (event.keyCode == 13) {
+			search();
+		}
+	});
+	function search(){
+		window.location.href = "ad_list.php?key="+encodeURI($("#key").val())+"&bid=<?php echo $bid;?>&cid=<?php echo $cid;?>";
+	}
+</script>

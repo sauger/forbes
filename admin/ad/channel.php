@@ -18,12 +18,13 @@
 <body>
 <div id=icaption>
     <div id=title>广告频道管理</div>
-	  <a href="channel_edit.php" id=btn_add></a>
 </div>
+<!--
 <div id=isearch>
 		<input id="key" type="text" value="<? echo $_REQUEST['title']?>"><span id="span_category"></span>
 		<input type="button" value="搜索" id="search_button">
 </div>
+-->
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
@@ -57,7 +58,7 @@
 			</td>
 		</tr>
 		<?php }}}?>
-		<input type="hidden" id="db_table" value="forbes_ad.fb_channel">
+		<input type="hidden" id="db_table" value="forbes_ad.fb_channel">	
 	</table>
 </body>
 </html>
