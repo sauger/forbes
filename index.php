@@ -70,7 +70,7 @@
 			
 		 <div id=forbes_tltb>	
 			 <div id=lujiazui>
-  		 	 <div id=lujiazui_caption><a href="/news/news_list.php?cid=<?php echo $category->find_by_name("陆家嘴早餐")->id?>" title="陆家嘴早餐" target="_blank">陆家嘴早餐</a><span>Lujiazui Breakfast</span></div>
+  		 	 <div id=lujiazui_caption <?php show_page_pos('lujiazui','only_link')?>><a href="<?php echo $pos_items->lujiazui->href;?>" title="<?php echo $pos_items->lujiazui->title;?>" target="_blank">陆家嘴早餐</a><span>Lujiazui Breakfast</span></div>
   		 	 	<?php for($i=0;$i<3;$i++){
   		 	 		$pos_name = "index_bf".$i;
   		 	 	?>
