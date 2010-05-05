@@ -54,10 +54,13 @@
 		<input type="hidden" name="session" value="<?php echo $_SESSION['login'];?>">
 	  </form>
 	</div>
-	  <div id=right>
-	  	<div id=rightp>
-	  		 <div id=right-title>欢迎您登陆福布斯中文网！</div>
-	  		 <div id=right-font>《福布斯》杂志的前瞻性报道为企业高层决策者引导投资方向，提供商业机会，被誉为“美国经济的晴雨表”。</div>
+	  <div id="right">
+	  	<div id="rightp">
+	  		 <div id="login_banner" class="ad_banner"><img src="../images/comlogin/4.jpg"></div>
+	  		 	<div id="content_c">
+			  		 <div id="right-title">欢迎您登陆福布斯中文网！</div>
+			  		 <div id="right-font">《福布斯》杂志的前瞻性报道为企业高层决策者引导投资方向，提供商业机会，被誉为“美国经济的晴雨表”。</div>
+	  			</div>
 	  	</div>
 	  </div>
 	<?php 
