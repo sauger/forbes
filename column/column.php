@@ -78,7 +78,7 @@
 				<div param=2 id="othertitle2" param1="pic" class=other_title>专栏照片</div>
 				<div param=3 id="othertitle3" param1="other" class=other_title>专栏作者详细介绍</div>	
 			</div>
-			<iframe scrolling="no" id="iframesrc"  frameborder="no" width=100% height=900 src="iframe.php?type=news&id=<?php echo $id;?>&date=<?php echo $date; ?>"></iframe>
+			<iframe scrolling="no" id="iframesrc"  frameborder="no" width=100% height=909 src="iframe.php?type=news&id=<?php echo $id;?>&date=<?php echo $date; ?>"></iframe>
 		</div>
 		<? include_bottom();?>
 	</div>
