@@ -52,11 +52,11 @@ foreach ($ads as $ad) {
 	$end_hour = intval($ad->end_hour);
 	
 	if($start_hour < $end_hour){
-		if($hour < $start_hour || $hour > $end_hour){
+		if($hour <= $start_hour || $hour >= $end_hour){
 			continue;
 		}
 	}else if($start_hour > $end_hour){
-		if(($hour < $start_hour && $hour > $end_hour)){
+		if(($hour <= $start_hour && $hour >= $end_hour)){
 			continue;
 		}
 	}
