@@ -5,7 +5,6 @@ li{margin:0; padding:0;}
 div{margin:0; padding:0; float:left; display:inline;}
 
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
-.radio{border:none}
 #bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
 #bread a{color:#666666; text-decoration:none;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
@@ -23,3 +22,4 @@ div{margin:0; padding:0; float:left; display:inline;}
 td input,select{border:1px solid #999999;}
 #su_bottom{width:100px; height:30px; }
 #yzm{width:60px; height:25px; margin-left:10px; font-size:16px; font-weight:bold; line-height:25px; }
+.inputradio{border:none;}

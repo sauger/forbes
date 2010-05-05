@@ -24,8 +24,8 @@
 			<form id="subscriptionform" name="subscriptionform" action="subscription.post.php" method="post">
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td><input name="sub[ApplyType]" class="ApplyType" type="radio" class="radio" value="0" checked />初次申请</td>
-                  <td><input name="sub[ApplyType]" class="ApplyType" type="radio" class="radio" value="1" />申请续订</td>
+                  <td><input class="inputradio" name="sub[ApplyType]" class="ApplyType" type="radio"  value="0" checked />初次申请</td>
+                  <td><input class="inputradio" name="sub[ApplyType]" class="ApplyType" type="radio"  value="1" />申请续订</td>
                   <td width="300"><input type="hidden" id="applyvalue" value="0">&nbsp;</td>
                 </tr>
               </table>
@@ -44,8 +44,8 @@
 			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>我希望收到《福布斯》中文版！
-                      <input type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="1" class="radio" checked/>是
-                      <input type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="0" class="radio" />否</td>
+                      <input class="inputradio" type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="1" checked/>是
+                      <input class="inputradio" type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="0"/>否</td>
                 </tr>
 
                 <tr>
