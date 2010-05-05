@@ -48,6 +48,12 @@
 			<td><?php echo $ad[$i]->ad_type?></td>
 			<td><?php echo $ad[$i]->code?></td>
 			<td>
+				<?php if($ad[$i]->is_adopt=="1"){?>
+					<span class="revocation" name="<?php echo $ad[$i]->id;?>" title="撤消"><img src="/images/admin/btn_unapply.png" border=0></span>
+				<?php }?>
+				<?php if($ad[$i]->is_adopt=="0"){?>
+					<span class="publish" name="<?php echo $ad[$i]->id;?>" title="发布"><img src="/images/admin/btn_apply.png" border=0></span>
+				<?php }?>
 				<a href="ad_edit.php?id=<?php echo $ad[$i]->id;?>&url=list" class="edit" title="编辑" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
 				<span style="cursor:pointer;color:#FF0000" class="del" title="删除" name="<?php echo $ad[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
 			</td>
