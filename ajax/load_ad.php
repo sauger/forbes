@@ -9,7 +9,6 @@ if(!in_array($_GET['channel'],$channels) || !in_array($_GET['banner'],$banners))
 	die();
 }
 $db = get_db();
-$db->echo_sql= true;
 $db->query("select id from forbes_ad.fb_channel where parttern='$channel'");
 if($db->record_count <= 0) die('1');
 $db->move_first();
@@ -18,9 +17,35 @@ $db->query("select id from forbes_ad.fb_banner where code='$banner'");
 if($db->record_count <= 0) die();
 $db->move_first();
 $banner_id = $db->field_by_name('id');
-$ads = $db->query("select * from forbes_ad.fb_ad where is_adopt=1 and channel_id={$channel_id} and banner_id={$banner_id} and (start_date=0 or start_date < now()) and (end_date=0 or end_date > now())");
+$ads = $db->query("select a.*,b.ad_size from forbes_ad.fb_ad a left join forbes_ad.fb_banner b on a.banner_id = b.id where is_adopt=1 and channel_id={$channel_id} and banner_id={$banner_id} and (start_date=0 or start_date is null or start_date < now()) and (end_date is null or end_date=0 or end_date > now())");
 if ($db->record_count <= 0) die();
-$hour = get_date();
+function generate_ad($ad){
+	$size = explode('*',$ad->ad_size);
+	switch ($ad->ad_type) {
+		case 'flash':
+			$str = "<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\" width=\"{$size[0]}\" height=\"{$size[1]}\">
+				        <param name=\"movie\" value=\"{$ad->flash}\">
+				        <param name=\"quality\" value=\"high\">
+				        <PARAM NAME=\"WMode\" VALUE=\"Opaque\">
+				        <embed src=\"{$ad->flash}\" quality=\"high\" WMode=\"Opaque\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" width=\"{$size[0]}\" height=\"{$size[1]}\"></embed>
+				     </object>";
+		break;
+		case 'image':
+			$str = "<a id='{$ad->code}' href='{$ad->target_url}' target='_blank'><img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' /></a>";
+		break;
+		case 'video':
+		;
+		break;
+		
+		default:
+			;
+		break;
+	}
+	return $str;
+	
+}
+
+$hour = getdate();
 $hour = intval($hour['hour']);
 foreach ($ads as $ad) {
 	$start_hour = intval($ad->start_hour);
@@ -38,5 +63,7 @@ foreach ($ads as $ad) {
 	$valid_ads[]=$ad;
 }
 $len = count($valid_ads);
-echo $len;
+$index = mt_rand(0,$len-1);
+insert_ad_record($valid_ads[$index]);
+echo generate_ad($valid_ads[$index]);
 ?>
