@@ -14,7 +14,7 @@
 		$fields['link'] = array("标题","","mouseover","链接","静态链接","","","过期时间","","","说明");
 		$fields['link_withouttime'] = array("标题","","mouseover","链接","静态链接","","","","","","说明");
 		$fields['link_img'] = array("标题","","mouseover","链接","静态链接","图片","","过期时间","","","说明");
-		$fields['base_img_withoutime'] = array("标题","","mouseover","链接","静态链接","图片","","","","","说明");
+		$fields['base_img_withoutime'] = array("标题","描述","mouseover","链接","静态链接","图片","","","","","说明");
 		$fields['base'] = array("标题","描述","mouseover","链接","静态链接","","","过期时间","","","说明");
 		$fields['base_img'] = array("标题","描述","mouseover","链接","静态链接","图片","","过期时间","","","说明");
 		$fields['index_column'] = array("专栏名","","mouseover","链接","静态链接","图片","","过期时间","用户名","","说明");
