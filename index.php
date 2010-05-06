@@ -275,7 +275,7 @@
 			</div>
 			<div id=forbes_l_content>
 			 	<div class=list1 >
-					<div class=list1_title <?php $pos_name ="index_invest0"; show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
+					<div class=list1_title <?php $pos_name ="index_invest0"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
 					<div class=list1_description2>
 						<a class=list1_pic href="<?php echo $pos_items->index_invest0->href;?>" target="_blank"><img border=0 width=70 height=70 src="<?php echo $pos_items->index_invest0->image1;?>"></a><p style="width:10px; height:51px; float:left;"></p><?php show_page_desc('index_invest0');?></a>
 					</div>
