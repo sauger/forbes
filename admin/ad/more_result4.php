@@ -8,7 +8,7 @@
 		$date = date("Y-m-d");
 	}
 	$type = $_GET['type'];
-	$sql = "SELECT t1.date_time,t1.source_id,t1.ad_name,t1.count,t2.count as click_count FROM forbes_ad.fb_ad_result t1 left join forbes_ad.fb_ad_result t2 on t1.source_id=t2.source_id and t2.type='channel_click' and t1.date_time=t2.date_time where t1.type='channel' and t1.source_id=$id";
+	$sql = "SELECT t1.date_time,t1.source_id,t1.ad_name,t1.count,t2.count as click_count FROM forbes_ad.fb_ad_result t1 left join forbes_ad.fb_ad_result t2 on t1.source_id=t2.source_id and t2.type='banner_click' and t1.date_time=t2.date_time where t1.type='banner' and t1.source_id=$id";
 	if($type==''){
 		$sql .= " and week(t1.date_time)=week('$date')";
 	}elseif($type=='month'){
@@ -50,7 +50,7 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="25%">日期</td><td width="25%">展示次数</td><td width="25%">有效次数</td><td width="25%">有效率</td>
+			<td width="25%">广告位名</td><td width="25%">展示次数</td><td width="25%">有效次数</td><td width="25%">有效率</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
@@ -80,7 +80,7 @@
 		}
 	});
 	function search(){
-		window.location.href = "more_result2.php?id=<?php echo $id;?>&date="+$(".date_jquery").val()+"&type="+$("#date_type").val();
+		window.location.href = "more_result4.php?id=<?php echo $id;?>&date="+$(".date_jquery").val()+"&type="+$("#date_type").val();
 	}
 	
 	$(".date_jquery").datepicker(
