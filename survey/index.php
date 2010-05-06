@@ -19,7 +19,7 @@
 </head>
 <body>
 <div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>			
 				<span>问卷调查</span>
 		</div>
@@ -56,7 +56,7 @@
 			<?php include "../right/forum.php";?>
 			<?php include "../right/magazine.php";?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 </div>
 </body>
 <html>

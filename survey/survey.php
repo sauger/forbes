@@ -38,7 +38,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>
 			<span>在线问卷</span>
 		</div>
@@ -85,7 +85,7 @@
 		 		<?php include "../right/rich.php";?>
 		 		<?php include "../right/magazine.php";?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 	</div>
 </body>
 <html>

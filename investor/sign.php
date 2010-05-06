@@ -24,7 +24,7 @@
 
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>
 				<span>增长俱乐部首页 > 报名加入创业者数据库</span>
 		</div>
@@ -215,7 +215,7 @@
 		 		<?php include "../right/rich.php";?>
 		 		<?php include "../right/magazine.php";?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 		
 	</div>
 	

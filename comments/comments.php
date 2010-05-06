@@ -23,7 +23,7 @@
 
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>
 				<span>读者高见</span>
 		</div>
@@ -78,7 +78,7 @@
 		 		<?php include "../right/rich.php";?>
 		 		<?php include "../right/magazine.php";?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 		
 	</div>
 	

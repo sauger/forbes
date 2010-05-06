@@ -16,8 +16,8 @@
 </head>
 <body>
  <div id="ibody">		
-	<?php include "../inc/top.inc.php";?>
-	<div id=bread><a href="">注册</a></div>
+	<?php include_top();?>
+	<div id=bread><a href="#">注册</a></div>
 	<div id=bread_line></div>
 	<div id=register>
 		<form id="re_form" action="register.post.php" method="post">
@@ -240,7 +240,7 @@
 		</form>
 	</div>
 	<?php 
-		include "../inc/bottom.inc.php";
+		include_bottom();
 	?>
 	 </div>
 </body>

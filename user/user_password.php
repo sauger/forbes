@@ -18,7 +18,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 			 <div id=bread><a href="/user/">用户中心</a> > <a>修改登录密码</a></div>
 	 	 <div id=bread_line></div>
 		<div id=left>
@@ -72,6 +72,6 @@
 				<button class="user_b" id="pass_b" type="button">设定</button>
 			</div>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 	</div>
 </body>

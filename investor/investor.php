@@ -33,7 +33,7 @@
 
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>
 				<span>福布斯中文网 > <a>投资人</a></span>
 		</div>
@@ -156,7 +156,7 @@
 		 		<?php include "../right/article.php";?>
 	</div>
 
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 		
 </body>
 <html>
