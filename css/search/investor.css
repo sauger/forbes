@@ -35,6 +35,6 @@ body {font-size:12px;  color:#000000; margin:0 auto; padding:0;}
 #c_top{width:660px; margin-top:10px; overflow:hidden; float:left; display:inline;}
 #c_left{width:6px; height:85px; background:url(/images/rich/info_left.jpg) no-repeat; float:left; display:inline;}
 #c_middle{width:646px; height:85px;  background:#F3F3F3; border-right:0px solid blue; border-top:1px solid #E5E5E5; border-bottom:1px solid #E5E5E5;  float:left; display:inline;}
-#chr_c{width:600px; height:30px; margin-left:20px; margin-top:5px; line-height:30px; font-size:13px; font-weight:bold; color:#666666; float:left; display:inline;}
+#chr_c{width:620px; height:30px; margin-left:20px; margin-top:5px; line-height:30px; font-size:13px; font-weight:bold; color:#666666; float:left; display:inline;}
 #chr_c_right a{margin-left:9px; text-decoration: none; color:#246BB0}
 #chr_sousuo{width:600px;height:30px; line-height:30px; margin-left:20px;  font-size:13px; font-weight:bold; color:#666666;  float:left; display:inline;}
