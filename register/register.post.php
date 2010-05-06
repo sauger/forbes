@@ -81,10 +81,12 @@
 		$order->sh=0;
 	}
 	if($order->save()){
+		$mail = $user->email;
 		$content = "感谢您注册福布斯中文网<br/>您的账号是：<b>{$user->name}</b><br/>密码是<b>{$_POST['user']['password']}</b><br/>请妥善管理您的账号!<br/>请点击<a href=\"http://www.forbeschina.com/register/active.php?name={$user->name}&key={$user->authenticate_string}\">这里</a>激活您的账号。";
-		send_mail('smtp.163.com','sauger','auden6666','sauger@163.com','sauger@163.com','福布斯中文网',$content);
+		send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$mail,'福布斯中文网',$content);
 		alert('注册成功，系统已经将激活链接发送到您的注册邮箱中，请查收邮件并激活您的账号');
 	};
+	/*
 	#$_SESSION['user_id']=$user->id;
 	#$_SESSION['name']=$user->name;
 	$name = $user->name;
@@ -95,6 +97,7 @@
 	setcookie("name",$name,time()+$limit,'/');
 	setcookie("cache_name",$cache_name,time()+$limit,'/');
 	setcookie("password",$password,time()+$limit,'/');
+	*/
 	redirect('/');
 ?>
 </html>

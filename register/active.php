@@ -13,8 +13,9 @@
 		$db->query("select name,id from fb_yh where name='{$user}' and authenticate_string='{$key}'");
 		
 		if(!$db->move_first()){
-			alert('对不起，您的验证码不正确，无法完成激活！');
-			redirect('/');
+			#alert('对不起，您的验证码不正确，无法完成激活！');
+			echo "select name,id from fb_yh where name='{$user}' and authenticate_string='{$key}'";
+			#redirect('/');
 			die();
 		}else{
 			$id = $db->field_by_name('id');
