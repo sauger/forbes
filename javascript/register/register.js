@@ -123,9 +123,11 @@ $(function(){
 			});
 		}
 	});
-	
+	var checked = $("#sure_check").attr('checked');
+	$("#tj").attr('disabled',!checked);
 	$("#sure_check").click(function(){
-		$("#tj").attr('disabled',!$("#tj").attr('disabled'));
+		var checked = $("#sure_check").attr('checked');
+		$("#tj").attr('disabled',!checked);
 	});
 });
 
