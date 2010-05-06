@@ -1,14 +1,17 @@
 <?php
 include_once("../frame.php");
 $id = $_GET['id'];
-if(!is_int($id)) die();
+if(!is_numeric($id)) die();
 $db = get_db();
 $db->query("select * from fb_custom_list_type where id={$id} and list_type=5");
 if($db->record_count <=0) die();
-$news = $db->query("select * from fb_file_list_item where list_id={$id}");
+$news = $db->query("select * from fb_file_list_items where list_id={$id}");
 if(empty($news)){
 	die();
 }
+$news = $news[0];
+$title = $news->title;
+$content = $news->content;
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,18 +31,6 @@ if(empty($news)){
 	<div id=ibody>
 		<?php include_top();?>
 		<div id=bread>
-			<?php
-				$category = new category_class('news');
-				$parent_ids = $category->tree_map($news->category_id);
-			?>
-			<?php
-				$len = count($parent_ids);
-				for($i=$len-1;$i>=0;$i--){
-					$item = $category->find($parent_ids[$i]);
-					$curl = $page_type == 'static' ? "/review/list/{$parent_ids[$i]}/cid" :"news_list.php?cid={$parent_ids[$i]}";
-			?>
-				<a href="<?php echo get_newslist_url($parent_ids[$i]);?>"><?php echo $item->name;?></a> > 
-			<?php }	?>
 			<span style="color:#246BB0;"><?php echo strip_tags($news->title);?></span>				
 		</div>
 		<div id=bread_line></div>
