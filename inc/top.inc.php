@@ -71,7 +71,7 @@
 		</div>
   <?php }?>
 			<div id=top_function2>
-				<a href="/search/investor.php" id=member></a>
+				<a href="/club" id=member></a>
 				<a href="/magazine/subscription.php" id=magazine></a>
 			</div>
 			

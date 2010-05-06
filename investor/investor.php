@@ -124,7 +124,7 @@
 		
 		
 		<div id="right_inc">
-		 		<?php include "../right/ad.php";?>
+		 		<?php include_right('ad');?>
 		 		<div id="money"><input type="button" style="width:111px; height:26px; margin-top:50px; margin-left:180px;	 background:url(../../images/rich/btn_data.jpg) no-repeat; border:0px solid red;"></div>
 		
 				<div class=right_title>
@@ -153,7 +153,7 @@
 					</div>
 				</div>
 		 		<div class="bottom_line"></div>
-		 		<?php include "../right/article.php";?>
+		 		<?php include_right("article");?>
 	</div>
 
 		<?php include_bottom();?>
