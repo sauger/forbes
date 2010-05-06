@@ -1,0 +1,22 @@
+body{ 
+margin:0 auto; 
+} 
+.graph{ 
+width:300px; 
+border:1px solid #cccccc; 
+height:14px;
+padding:1px;
+overflow:hidden;
+float:left; display:inline;
+} 
+#bar{
+display:inline; 
+background:url('/images/error/err_progress.jpg'); 
+float:left; 
+height:14px;
+overflow:hidden;
+text-align:center; 
+}
+#alert{width:122px; height:113px; margin-right:50px; background:url('/images/error/alert.jpg') no-repeat; float:left; display:inline;}
+#content{width:600px; margin:0 auto; margin-top:200px; }
+#sorry{width:400px; margin-bottom:5px; color:#000000; font-family:ËÎÌו; line-height:30px; font-size:12px; text-align:left;}
