@@ -14,7 +14,7 @@ if($_SESSION['login']!=$_POST['session']){
 	}
 	$password = md5($password);
 	$db = get_db();
-	$sql = "select * from fb_yh where name = '{$name}' and password = '{$password}'";
+	$sql = "select * from fb_yh where name = '{$name}' and password = '{$password}' and authenticated=1";
 	$record = $db->query($sql);
 	if($db->record_count==1)
 	{
