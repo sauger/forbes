@@ -1,11 +1,13 @@
 <?php
+	session_start();
 	include_once('../../frame.php');
-	$search = $_REQUEST['search'];
+	$role = judge_role();
 	
+	$key = $_GET['key'];
 	$db = get_db();
 	$sql = "select * from fb_yh where 1=1";
-	if($search!=''){
-		$sql .= " and (name like '%{$search}%' or email like '%{$search}%')";
+	if($key!=''){
+		$sql .= " and (name like '%{$key}%' or email like '%{$key}%')";
 	}
 	
 	$record = $db->paginate($sql,15);
@@ -21,21 +23,22 @@
 	<?php
 		css_include_tag('admin');
 		use_jquery();
-		js_include_tag('admin_pub','admin/famous/famous');
+		js_include_tag('admin_pub');
 	?>
 </head>
 
 <body>
-	<table width="795" border="0" id="list">
-		<tr class="tr1">
-			<td colspan="5">
-				　　搜索　
-				 <input id="search" type="text" value="<? echo $_REQUEST['search']?>">
-				<input type="button" value="搜索" id="search_b" style="border:1px solid #0000ff; height:21px">
-			</td>
-		</tr>
-		<tr class="tr2">
-			<td width="215">用户名</td><td width="210">邮箱</td><td width="340">操作</td>
+<div id=icaption>
+    <div id=title>会员管理</div>
+</div>
+<div id=isearch>
+		<input id="key" type="text" value="<?php echo $key;?>">
+		<input type="button" value="搜索" id="search_button">
+</div>
+<div id=itable>
+	<table cellspacing="1" align="center">
+		<tr class=itable_title>
+			<td width="35%">用户名</td><td width="35%">邮箱</td><td width="30%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
@@ -44,10 +47,9 @@
 					<td><?php echo $record[$i]->name;?></td>
 					<td><?php echo $record[$i]->email;?></td>
 					<td>
-						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer">编辑</a>　
-						<a href="edit_order.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer">查看用户订阅</a>　
-						<a href="edit_info.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer">编辑用户个人信息</a>　
-						<span style="cursor:pointer;color:#FF0000" class="del" name="<?php echo $record[$i]->id;?>">删除</span>
+						<a href="edit_order.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer" title="查看用户订阅"><img src="/images/admin/btn_config1.png" border="0"></a>　
+						<a href="edit_info.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer" title="查看用户个人信息"><img src="/images/admin/btn_edit.png" border="0"></a>　
+						<span style="cursor:pointer;color:#FF0000" class="del_yh" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png" border="0"></span>
 						<input type="hidden" id="db_table" value="fb_yh">
 					</td>
 				</tr>
@@ -60,3 +62,28 @@
 	</table>
 </body>
 </html>
+<script>
+	$("#search_button").click(function(){
+		search();
+	});
+	$("#key").keypress(function(event){
+		if (event.keyCode == 13) {
+			search();
+		}
+	});
+	function search(){
+		window.location.href = "?key="+encodeURI($("#key").val());
+	}
+	
+	$(".del_yh").click(function(){
+		if (!window.confirm("确定要删除吗")) {
+			return false;
+		}
+		else {
+			$.post('del.php', {
+				'id': $(this).attr('name')
+			});
+			$(this).parent().parent().remove();
+		}
+	})
+</script>

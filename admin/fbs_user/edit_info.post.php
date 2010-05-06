@@ -1,9 +1,21 @@
 <?php 
-	require "../../frame.php";
-	$id = $_POST['id'];
+	session_start();
+	include_once('../../frame.php');
+	$role = judge_role();
+	
+	
+	$yh_id = intval($_POST['id']);
+	
+	$db = get_db();
+	$info = $db->query("select id from fb_yh_xx where yh_id=$yh_id");
+	if($db->record_count==1){
+		$id = $info[0]->id;
+	}else{
+		$id = 0;
+	}
 	
 	$info = new table_class('fb_yh_xx');
-	if($id!=''){
+	if($id!=0){
 		$info->find($id);
 	}
 	$info->update_attributes($_POST['info'],false);
@@ -18,6 +30,7 @@
 		}
 		$info->tx = "/upload/user/{$img}";
 	}
+	$info->yh_id = $yh_id;
 	$info->save();
 	redirect('index.php');
 ?>

@@ -12,7 +12,6 @@ global $pos_name;?>
 		<div id=search>往期杂志查阅</div>
 		<div id=sel>
 			<select id="old_magazine">
-				<option value=''></option>
 				<?php
 					$db = get_db();
 					$magazine = $db->query("SELECT substring(publish_data,1,4) as year FROM fb_magazine group by substring(publish_data,1,4)");
@@ -24,6 +23,15 @@ global $pos_name;?>
 			</select>
 			<select id="show_magazine">
 				<option value=""></option>
+				<?php 
+					$magazine = $db->query("select * from fb_magazine where publish_data like '%{$magazine[0]->year}%' order by publish_data");
+					$count = $db->record_count;
+					for($i=0;$i<$count;$i++){
+				?>
+					<option url="<?php echo $magazine[$i]->url;?>" value="<?php echo $magazine[$i]->id;?>"><?php echo $magazine[$i]->name;?></option>
+				<?php			
+					}
+				?>
 			</select>
 		</div>
 		<a id="btnonline"></a>

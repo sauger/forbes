@@ -70,6 +70,7 @@
 </div>
 <div id=isearch>
 		<input class="sau_search" name="title" type="text" value="<? echo $_REQUEST['title']?>">
+		<span id="span_category"></span>
 		<select id="language_tag" name="language_tag" class="sau_search">					
 				<option value="0" <? if($_REQUEST['language_tag']=="0"){?>selected="selected"<? }?>>中文</option>
 				<option value="1" <? if($_REQUEST['language_tag']=="1"){?>selected="selected"<? }?>>English</option>
