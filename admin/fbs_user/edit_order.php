@@ -1,5 +1,9 @@
 <?php
+	session_start();
 	include_once('../../frame.php');
+	$role = judge_role();
+	
+	
 	$id = $_REQUEST['id'];
 	if($id!=''){
 		$user = new table_class('fb_yh');
@@ -14,46 +18,49 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-CN>
-	<title>富豪编辑</title>
+	<title></title>
 	<?php 
 		css_include_tag('admin');
 		use_jquery();
 		//validate_form("famous_edit");
 	?>
 </head>
-<body style="background:#E1F0F7">
+<body>
+	<div id=icaption>
+	    <div id=title>查看用户订阅</div>
+		 <a href="index.php" id=btn_back></a>
+	</div>
 	<form id="famous_edit" action="edit_order.post.php" method="post"> 
-	<table width="795" border="0">
-		<tr class=tr1>
-			<td colspan="2" width="795">　　编辑用户</td>
-		</tr>
+	<div id=itable>
+	<table cellspacing="1" align="center">
 		<tr class=tr4>
-			<td width="130">用户名</td>
-			<td width="695" align="left">
+			<td class=td1 width="15%">用户名</td>
+			<td width="85%">
 				<?php echo $user->name;?>
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td>精华推荐</td>
-			<td align="left">
-			    订阅<input name="jhtj" <?php if($order[0]->jhtj==1)echo 'checked="checked"'?> type="checkbox">
+			<td class=td1>精华推荐</td>
+			<td>
+			    <div>订阅</div><input name="jhtj"  style="width:30px;" <?php if($order[0]->jhtj==1)echo 'checked="checked"'?> type="checkbox">
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td>分类文章</td>
-			<td align="left">
-			    富豪<input name="fh" <?php if($order[0]->fh==1)echo 'checked="checked"'?> type="checkbox">
-				创业<input name="cy" <?php if($order[0]->cy==1)echo 'checked="checked"'?> type="checkbox">
-				商业<input name="sy" <?php if($order[0]->sy==1)echo 'checked="checked"'?> type="checkbox">
-				科技<input name="kj" <?php if($order[0]->kj==1)echo 'checked="checked"'?> type="checkbox">
-				投资<input name="tz" <?php if($order[0]->tz==1)echo 'checked="checked"'?> type="checkbox">
-				生活<input name="sh" <?php if($order[0]->sh==1)echo 'checked="checked"'?> type="checkbox">
+			<td class=td1>分类文章</td>
+			<td>
+			    <div>富豪</div><input style="width:30px;" name="fh" <?php if($order[0]->fh==1)echo 'checked="checked"'?> type="checkbox">
+				<div>创业</div><input style="width:30px;" name="cy" <?php if($order[0]->cy==1)echo 'checked="checked"'?> type="checkbox">
+				<div>商业</div><input style="width:30px;" name="sy" <?php if($order[0]->sy==1)echo 'checked="checked"'?> type="checkbox">
+				<div>科技</div><input style="width:30px;" name="kj" <?php if($order[0]->kj==1)echo 'checked="checked"'?> type="checkbox">
+				<div>投资</div><input style="width:30px;" name="tz" <?php if($order[0]->tz==1)echo 'checked="checked"'?> type="checkbox">
+				<div>生活</div><input style="width:30px;" name="sh" <?php if($order[0]->sh==1)echo 'checked="checked"'?> type="checkbox">
 			</td>
 		</tr>
-		<tr class="tr3">
+		<tr class="btools">
 			<td colspan="2" width="795" align="center"><input id="submit" type="submit" value="完成"></td>
 		</tr>	
 	</table>
+	</div>
 		<input type="hidden" name="id" value="<?php echo $order[0]->id;?>">
 	</form>
 </body>

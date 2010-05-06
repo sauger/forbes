@@ -1,5 +1,8 @@
 <?php
+	session_start();
 	include_once('../../frame.php');
+	$role = judge_role();
+	
 	$db = get_db();
 	$id = $_REQUEST['id'];
 	if($id!=''){
