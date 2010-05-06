@@ -1,6 +1,5 @@
 <?php
 	include '../frame.php';
-	use_jquery();
 	$user = $_GET['user'];
 	$key = $_GET['key'];
 	$db = get_db();
