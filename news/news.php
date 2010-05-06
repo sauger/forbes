@@ -121,7 +121,7 @@
 								if(count($record)>0){
 						?>
 						<div class=info_title style="margin-top:15px;">该作者的其他文章</div>
-						<div class=info_more><a href="news_list.php?news_id=<?php echo $id?>&type=author"><img src="/images/news/more.png" border=0></a></div>
+						<div class=info_more><a href="<?php echo "{$static_site}/review/list/{$id}/author"?>"><img src="/images/news/more.png" border=0></a></div>
 						<div class=info_list>
 							<ul>
 								<?php for($i=0;$i<count($record);$i++){?>

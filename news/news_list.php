@@ -1,7 +1,8 @@
 <?php 
 	include_once('../frame.php');
-	$cid = intval($_REQUEST['cid']);
-	if(empty($cid)){
+	$cid = intval($_GET['cid']);
+	$news_id = intval($_GET['news_id']);
+	if(empty($cid) && empty($news_id)){
 		redirect('error.html');
 		die();
 	}
@@ -23,31 +24,42 @@
 <div id=ibody>
 		<?php include_top();?>
 		<div id=bread>
-				<?php
-					$category = new category_class('news');
-					$parent_ids = $category->tree_map($cid);
-					$c_id = $category->children_map($cid);
-					$c_id = implode(',',$c_id);
-					$len = count($parent_ids);
-					for($i=$len-1;$i>0;$i--){
-						$item = $category->find($parent_ids[$i]);
-				?>
-				<a href="<?php echo get_newslist_url($parent_ids[$i]);?>"><?php echo $item->name;?></a>
-				<?php
-					}
-					$item = $category->find($parent_ids[0]);
-				?>
-				><span style="color:#246BB0; margin-left:8px;"><?php echo $item->name;?></span>		
+			<?php
+			$condition = " is_adopt=1";
+			if($cid){
+				$category = new category_class('news');
+				$parent_ids = $category->tree_map($cid);
+				$c_id = $category->children_map($cid);
+				$c_id = implode(',',$c_id);
+				$len = count($parent_ids);
+				for($i=$len-1;$i>0;$i--){
+					$item = $category->find($parent_ids[$i]);
+			?>
+			<a href="<?php echo get_newslist_url($parent_ids[$i]);?>"><?php echo $item->name;?></a>
+			<?php
+				}
+				$item = $category->find($parent_ids[0]);
+				$condition .= " and category_id in ({$c_id})";
+			?>
+			><span style="color:#246BB0; margin-left:8px;"><?php echo $item->name;?></span>
+			<?php }else{
+				$item = $db->query("select author as name from fb_news where id={$news_id}");
+				if(empty($item)) die();
+				$item = $item[0];
+				$condition .= " and author = '{$item->name}'";
+			?>
+			
+			<?php }?>		
 		</div>
 		<div id=bread_line></div>
 		
 		<div id=l>
 			<div class=news_caption>
-					<?php $news_count = $db->query("select count(id) as num from fb_news where category_id in ($c_id)");?>
+					<?php $news_count = $db->query("select count(id) as num from fb_news where {$condition}");?>
 					<div class=captions><?php echo $item->name;?><span>共<?php echo $news_count[0]->num;?>篇</span></div>
 			</div>
 			<?php
-					$top_news = $db->query("select * from fb_news where category_id in ($c_id) and video_photo_src!='' and set_up=1 order by priority asc,created_at desc limit 1");
+					$top_news = $db->query("select * from fb_news where{$condition} and video_photo_src!='' and set_up=1 order by priority asc,created_at desc limit 1");
 					if($db->record_count==1&&(empty($_REQUEST['page'])||($_REQUEST['page']==1))){
 				?>
 			<div id=list_top>
@@ -61,9 +73,9 @@
 			<div id=list_content>
 					<?php
 					if($db->record_count==1){
-						$sql = "select id,author,created_at,title,description from fb_news where category_id=$cid and id!={$top_news[0]->id} order by priority asc,created_at desc";
+						$sql = "select id,author,created_at,title,content from fb_news where {$condition} and id!={$top_news[0]->id} order by priority asc,created_at desc";
 					}else{
-						$sql = "select id,author,created_at,title,description from fb_news where category_id=$cid order by priority asc,created_at desc";
+						$sql = "select id,author,created_at,title,content from fb_news where {$condition} order by priority asc,created_at desc";
 					}
 					$record = $db->paginate($sql,8);
 					$count = count($record);
@@ -72,7 +84,7 @@
 					<div class=list_box>
 							<div class=title><a title="<?php echo $record[$i]->title;?>" href="<?php echo get_news_url($record[$i]);?>"><?php echo $record[$i]->title?></a></div>
 							<div class=info>《福布斯》　记者：<?php echo $record[$i]->author;?>　发布于：<?php echo substr($record[$i]->created_at,0,10);?></div>
-							<div class=description ><?php echo mb_substr($record[$i]->description,0,200,'utf8');?></div>
+							<div class=description ><?php echo mb_substr(strip_tags($record[$i]->content,'<p>'),0,200,'utf8');?></div>
 					</div>
 					<?php }?>
 					<div id=page><?php paginate();?></div>
