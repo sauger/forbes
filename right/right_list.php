@@ -56,7 +56,8 @@
 
 	.inc_list_item_content ul li a:link{color:#003A7B; text-decoration:none;}
 	.inc_list_item_content ul li a:visited{color:#003A7B; text-decoration:none;}
-	
+	.inc_list_news_title{width:240px; height:18px; line-height:18px; overflow:hidden; margin-left:10px;}
+	.inc_list_news_title a{color:#999999; text-decoration:none;}
 </style>
 <?php include_once dirname(__FILE__) .'/../frame.php'?>
 <?php use_jquery();init_page_items();
@@ -64,70 +65,12 @@ global $pos_name;?>
 <div class="inc_right_list_main">
 	<!--  title -->
 	<div class="inc_list_top_border"></div>
-	<div class="inc_list_title">生活和专题榜</div>
-	<div class="inc_list_item_title inc_list_item_title_selected">餐饮</div>
-	<div class="inc_list_item_content" style="display:block;">
-		<ul>
-		<?php for($i=0;$i<4;$i++){$pos_name = "right_dining_list".$i;?>
-			<li <?php show_page_pos($pos_name,'link');?>>&nbsp;<?php show_page_href()?></li>
-		<?php }?>
-		</ul>
-	</div>
-	<div class="inc_list_item_title">健康</div>
-	<div class="inc_list_item_content">
-		<ul>
-		<?php for($i=0;$i<4;$i++){$pos_name = "right_health_list".$i;?>
-			<li <?php show_page_pos($pos_name,'link');?>>&nbsp;<?php show_page_href()?></li>
-		<?php }?>
-		</ul>
-	</div>
-	<div class="inc_list_item_title">固定不动产</div>
-	<div class="inc_list_item_content">
-		<ul>
-		<?php for($i=0;$i<4;$i++){$pos_name = "right_immo_list".$i;?>
-			<li <?php show_page_pos($pos_name,'link');?>>&nbsp;<?php show_page_href()?></li>
-		<?php }?>
-		</ul>
-	</div>
-	<div class="inc_list_item_title">时尚</div>
-	<div class="inc_list_item_content">
-		<ul>
-		<?php for($i=0;$i<4;$i++){$pos_name = "right_fashion_list".$i;?>
-			<li <?php show_page_pos($pos_name,'link');?>>&nbsp;<?php show_page_href()?></li>
-		<?php }?>
-		</ul>
-	</div>
-	<div class="inc_list_item_title">旅游</div>
-	<div class="inc_list_item_content">
-		<ul>
-		<?php for($i=0;$i<4;$i++){$pos_name = "right_travel_list".$i;?>
-			<li <?php show_page_pos($pos_name,'link');?>>&nbsp;<?php show_page_href()?></li>
-		<?php }?>
-		</ul>
-	</div>
-	<div class="inc_list_item_title">汽车</div>
-	<div class="inc_list_item_content">
-		<ul>
-		<?php for($i=0;$i<4;$i++){$pos_name = "right_auto_list".$i;?>
-			<li <?php show_page_pos($pos_name,'link');?>>&nbsp;<?php show_page_href()?></li>
-		<?php }?>
-		</ul>
-	</div>
-	<div class="inc_list_item_title">腕表</div>
-	<div class="inc_list_item_content">
-		<ul>
-		<?php for($i=0;$i<4;$i++){$pos_name = "right_watch_list".$i;?>
-			<li <?php show_page_pos($pos_name,'link');?>>&nbsp;<?php show_page_href()?></li>
-		<?php }?>
-		</ul>
-	</div>
+	<div class="inc_list_title">文章榜</div>
+	<div class="inc_list_item_title"><div>餐饮</div><div class="inc_list_news_title" <?php $pos_name='right_list1'; show_page_pos($pos_name,'link')?>><?php show_page_href()?>1</div></div>
+	<div class="inc_list_item_title"><div>游艇</div><div class="inc_list_news_title" <?php $pos_name='right_list2'; show_page_pos($pos_name,'link')?>><?php show_page_href()?></div></div>
+	<div class="inc_list_item_title"><div>艺术品</div><div class="inc_list_news_title" <?php $pos_name='right_list3'; show_page_pos($pos_name,'link')?>><?php show_page_href()?></div></div>
+	<div class="inc_list_item_title"><div>时尚</div><div class="inc_list_news_title" <?php $pos_name='right_list4'; show_page_pos($pos_name,'link')?>><?php show_page_href()?></div></div>
+	<div class="inc_list_item_title"><div>职业</div><div class="inc_list_news_title" <?php $pos_name='right_list5'; show_page_pos($pos_name,'link')?>><?php show_page_href()?></div></div>
+	<div class="inc_list_item_title"><div>投资</div><div class="inc_list_news_title" <?php $pos_name='right_list6'; show_page_pos($pos_name,'link')?>><?php show_page_href()?></div></div>
 	<div class="inc_list_bottom_border"></div>
 </div>
-<script>
-	$('div.inc_list_item_title').hover(function(){
-		$('div.inc_list_item_title').removeClass('inc_list_item_title_selected');
-		$(this).addClass('inc_list_item_title_selected');
-		$('div.inc_list_item_content').not($(this).next()).hide();
-		$(this).next().show();
-	});
-</script>
