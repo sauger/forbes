@@ -37,6 +37,7 @@
 					<div id="email1" class="display1 email_check">邮箱作为您找回密码的唯一凭证，请填写真实有效地邮箱地址并妥善保管！</div>
 					<div id="email2" class="display2 email_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">邮箱填写正确</div></div>
 					<div id="email3" class="display3 email_check"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">邮箱格式不正确请重新填写</div></div>
+					<div id="email4" class="display3 email_check"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">该邮箱已经注册过，请重新设置</div></div>
 				</td>
 			</tr>
 			<tr>
