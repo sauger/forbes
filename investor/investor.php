@@ -104,7 +104,7 @@
 							<div id="christcross_middle">
 									<div id="chr_christcross">
 											<div id="chr_c_left">点击按字母排序：</div>
-											<div id="chr_c_right"><?php for($i='A';$i<'Z';$i++){?><a <?php if($key==$i)echo 'style="color:#94000B;"';?> href="/search/investor.php?key=<?php echo $i;?>"><?php echo $i;?></a><?php }?><a <?php if($key=='Z')echo 'style="color:#94000B;"';?> href="/search/investor.php?key=Z">Z</a></div>	
+											<div id="chr_c_right"><?php for($i='A';$i<'Z';$i++){?><a <?php if($key==$i)echo 'style="color:#94000B;"';?> href="/investor?key=<?php echo $i;?>"><?php echo $i;?></a><?php }?><a <?php if($key=='Z')echo 'style="color:#94000B;"';?> href="/search/investor.php?key=Z">Z</a></div>	
 									</div>
 									<div id="chr_sousuo"><?php
 									$industry = $db->query("select * from fb_invest_industry");
@@ -125,7 +125,7 @@
 		
 		<div id="right_inc">
 		 		<?php include_right('ad');?>
-		 		<div id="money"><input type="button" style="width:111px; height:26px; margin-top:50px; margin-left:180px;	 background:url(../../images/rich/btn_data.jpg) no-repeat; border:0px solid red;"></div>
+		 		<div id="money"><a href="sign.php"><input type="button" style="width:111px; height:26px; margin-top:50px; margin-left:180px;	 background:url(../../images/rich/btn_data.jpg) no-repeat; border:0px solid red;"></a></div>
 		
 				<div class=right_title>
 					<div class=title_con>投资人动态</div>	
