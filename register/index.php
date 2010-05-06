@@ -230,7 +230,7 @@
 <p>本协议版权由福布斯中文网所有，福布斯中文网保留一切解释权利。</p></div>
 		<table>
 			<tr>
-				<td class=td5 style="color:#999999;"><input id="sure_check" type="checkbox"><label for="sure_check"></lable>我接受福布斯中文网用户注册和使用协议</td>
+				<td class=td5><input id="sure_check" type="checkbox"><label for="sure_check"></lable>我接受福布斯中文网用户注册和使用协议</td>
 			</tr>
 			<tr>
 				<td class=td5><button id="tj" disabled="ture" type="button">确认并注册</button></td>
