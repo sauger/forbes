@@ -98,6 +98,6 @@
 	setcookie("cache_name",$cache_name,time()+$limit,'/');
 	setcookie("password",$password,time()+$limit,'/');
 	*/
-	redirect('/');
+	#redirect('/');
 ?>
 </html>
