@@ -98,7 +98,7 @@
 	//news saved
 	
 	if($news->is_adopt){
-		static_news($news);
+		static_news($news,'page');
 	}
 	//handle the keywords
 	$keywords = explode(' ', $news->keywords);
