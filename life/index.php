@@ -43,7 +43,7 @@
 	</div>
 	<div id=life_middle_bg></div>
 	<?php $pos_name = "lifeindex_column"?>
-	<div id=life_middle_column <?php show_page_pos($pos_name)?>>
+	<div id=life_middle_column <?php show_page_pos($pos_name,'life_index_column')?>>
 		<div id=picture><?php show_page_img(120,120,0);?></div>
 		<div id=title><?php show_page_href()?></div>
 		<div id=text><?php echo $pos_items->$pos_name->description;?></div>
@@ -74,7 +74,7 @@
 				</div>
 				
 				<?php $pos_name = "liftindex_news_1";	?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(210,160)?>
 				</div>
 				<div class=title><?php show_page_href()?></div>
@@ -90,7 +90,7 @@
 				</div>	
 				
 				<?php $pos_name = "liftindex_news_2";?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(210,160)?>
 				</div>
 				<div class=title><?php show_page_href()?></div>
@@ -105,7 +105,7 @@
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "liftindex_news_3";	?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(210,160)?>
 				</div>
 				<div class=title><?php show_page_href()?></div>
@@ -121,10 +121,10 @@
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_news_mlc"?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(500,200)?>
 				</div>
-				<div id=content <?php show_page_pos($pos_name)?>>
+				<div id=content <?php show_page_pos($pos_name,'list_index')?>>
 						<div id=content_title>
 							<?php show_page_href()?>
 						</div>
@@ -144,7 +144,7 @@
 				</div>
 				
 				<?php $pos_name = "liftindex_news_4";	?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(210,160)?>
 				</div>
 				<div class=title><?php show_page_href()?></div>
@@ -160,7 +160,7 @@
 				</div>	
 				
 				<?php $pos_name = "liftindex_news_5";?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(210,160)?>
 				</div>
 				<div class=title><?php show_page_href()?></div>
@@ -175,7 +175,7 @@
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "liftindex_news_6";	?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(210,160)?>
 				</div>
 				<div class=title><?php show_page_href()?></div>
@@ -192,7 +192,7 @@
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_ly";	?>
-				<div class="right_picture" <?php show_page_pos($pos_name)?>>
+				<div class="right_picture" <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(246,160)?>
 					<div></div>
 					<span><?php show_page_href();?></span>
@@ -207,7 +207,7 @@
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_hz";	?>
-				<div class="right_picture" <?php show_page_pos($pos_name)?>>
+				<div class="right_picture" <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(246,160)?>
 					<div></div>
 					<span><?php show_page_href();?></span>
@@ -227,7 +227,7 @@
 					for($i=0;$i<3;$i++ ){
 						$pos_name = "lifeindex".$i;
 				?>
-				<div id=list <?php show_page_pos($pos_name);?>>
+				<div id=list <?php show_page_pos($pos_name,'list_index');?>>
 					<?php show_page_href()?>
 				</div>
 				<?php }?>
@@ -242,7 +242,7 @@
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_zt";	?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'list_index')?>>
 					<?php show_page_img(246,160)?>
 				</div>
 				<div class=title><?php show_page_href()?></div>
@@ -256,7 +256,7 @@
 					<a href="<?php echo $url?>" class=more></a> 
 				</div>	
 				<?php $pos_name = "lifeindex_cs";	?>
-				<div id=picture <?php show_page_pos($pos_name)?>>
+				<div id=picture <?php show_page_pos($pos_name,'life_index')?>>
 					<?php show_page_img(246,160)?>
 				</div>
 				<div class=title><?php show_page_href()?></div>
