@@ -333,7 +333,7 @@
 			
 			<div id=club>
 					<div class=club_caption1>增长俱乐部<span>Up Club</span></div>
-					<a href="/club/" class=club_more1 target="_blank"></a>
+					<a href="/investor" class=club_more1 target="_blank"></a>
 					<?php $pos_name = 'index_club0';?>
 					<div class=content <?php show_page_pos("$pos_name",'base_img');?>>
 						<div class=pic>
