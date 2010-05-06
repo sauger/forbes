@@ -98,7 +98,7 @@
 			</div>
 			<?php }?>
 		</div>
-		<div id=ad>
+		<div id="magazine_banner2" class="ad_banner">
 		</div>
 		<div id=b>
 			<div id=b_l>

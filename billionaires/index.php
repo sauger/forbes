@@ -181,7 +181,7 @@
 						</div>
 						<div class=content><button id="search"></button></div>
 					</div>
-					<div id=search_pic2>
+					<div id=rich_banner1 class="ad_banner">
 						<a href=""><img border=0 src="/images/fh/four.jpg"></a>	
 					</div>
 				</div>
@@ -238,7 +238,7 @@
 					</div>
 				</div>
 			</div>
-			<div id=billionaires_m>
+			<div id=billionaires_m class="ad_banner">
 					<a href=""><img border=0 src="/images/fh/six.jpg"></a>
 			</div>
 			<div id=billionaires_report>

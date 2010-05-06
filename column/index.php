@@ -161,7 +161,7 @@
 									<?php show_page_img(null,null,0,"image1",null,"reserve"); ?>
 								</div>
 								<div class=n>
-									<?php echo $pos_items->$pos_name->alias;?>
+									<a href="<?php echo $pos_items->$pos_name->reserve?>" title="<?php echo $pos_items->$pos_name->alias?>" target="_blank"><? echo $pos_items->$pos_name->alias; ?></a>
 								</div>
 							</div>
 							<div class=column_recommend_top_r<?php show_page_pos($pos_name,'column_full');?>>

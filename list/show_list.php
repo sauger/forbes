@@ -17,6 +17,14 @@
 			}
 			die();
 		}
+		if($list->list_type==5){
+			if($page_type=='static'){
+				redirect('/file_list/'.$id,'header');
+			}else{
+				redirect('file_list.php?id='.$id,'header');			
+			}
+			die();
+		}
 		if($list->tablename="")
 		{
 			die();

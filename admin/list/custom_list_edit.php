@@ -79,7 +79,7 @@
 					<option value="4">城市</option>
 					<option value="5">名人</option>
 					<option value="6">体育</option>
-					<option value="7">科技</option>
+					<option value="7">生活</option>
 					<option value="8">教育</option>
 				</select>
 				<script type="text/javascript">$('#list_position').val('<?php echo $record->position;?>');</script>

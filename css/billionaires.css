@@ -72,8 +72,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_search .search_content_r .content{width:215px; line-height:30px;}
 #billionaires_search #search_pic1{width:228px; height:113px; margin-top:23px; border:1px solid #cccccc; overflow:hidden;}
 #billionaires_search #search_pic1 img{width:226px; height:111px; margin:1px;}
-#billionaires_search #search_pic2{width:228px; height:154px; margin-top:22px; border:1px solid #cccccc; overflow:hidden;}
-#billionaires_search #search_pic2 img{width:226px; height:152px; margin:1px;}
+#billionaires_search #rich_banner1{width:228px; height:154px; margin-top:22px; border:1px solid #cccccc; overflow:hidden;}
+#billionaires_search #rich_banner1 img{width:226px; height:152px; margin:1px;}
 #billionaires_lists{width:227px; margin-top:10px; float:right;}
 #billionaires_lists_top{width:225px; height:234px; border:1px solid #dfdfdf;}
 #billionaires_lists .title{width:225px; height:28px; border-bottom:1px solid #dfdfdf; background:url('/images/billionaires/billionaires_lists_title.jpg') repeat-x;}
@@ -112,8 +112,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_lists_bottom #billionaires_inventory select{width:118px; height:22px;}
 #billionaires_lists_bottom #lists{width:195px; margin-top:5px; margin-left:10px; line-height:20px;}
 #billionaires_lists_bottom #lists a{color:#666666;}
-#billionaires_m{width:998px; height:102px; margin-top:10px; border:1px solid #cccccc; overflow:hidden;}
-#billionaires_m img{width:996px; height:100px; margin:1px;}
+#rich_banner2{width:998px; height:102px; margin-top:10px; border:1px solid #cccccc; overflow:hidden;}
+#rich_banner2 img{width:996px; height:100px; margin:1px;}
 #billionaires_report{width:605px;}
 #billionaires_report_title{width:605px; height:18px; margin-top:20px; font-size:14px; color:#7a7a7a; font-weight:bold; line-height:18px;}
 #billionaires_report .content{width:290px; margin-top:20px;}

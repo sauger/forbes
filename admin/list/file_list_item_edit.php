@@ -42,71 +42,59 @@
 		$category_id = -1;
 	}
 ?>
+<div id=icaption>
+    <div id=title>发布新闻榜单</div>
+	  <a href="<?php echo "file_list_items_list.php?id={$list_id}";?>" id=btn_back></a>
+</div>
 <div id=itable>
 	<form id="news_edit" enctype="multipart/form-data" action="file_list_item_edit.post.php" method="post"> 
 	<table cellspacing=1 border="0">
-		<tr class=tr1>
-			<td colspan="2" width="795">　　发布榜单项 <a href="<?php echo "file_list_items_list.php?id={$list_id}";?>"><img src="/images/admin/btn_back.png" border=0></a></td>
-		</tr>
 		<tr class=tr4>
-			<td width="130">标题</td>
-			<td width="695" align="left">
+			<td  class=td1>标题</td>
+			<td  align="left">
 				<input type="text" style="width:400px" name="news[title]" id="news_title" value="<?php echo strip_tags($news->title);?>">
 			</td>
 		</tr>
 
 		<tr class=tr4>
-			<td width="130">短标题</td>
-			<td width="695" align="left">
+			<td  class=td1>短标题</td>
+			<td align="left">
 				<input type="text" style="width:400px" name="news[short_title]" id="news_short_title" value="<?php echo strip_tags($news->short_title);?>"></input>
 			</td>
 		</tr>
 		
 		<tr class=tr4>
-			<td width="130">wap标题</td>
-			<td width="695" align="left">
+			<td  class=td1>wap标题</td>
+			<td align="left">
 				<input type="text" style="width:400px" name="news[wap_title]" id="news_wap_title" value="<?php echo strip_tags($news->wap_title);?>"></input>
 			</td>
 		</tr>		
 
 		<tr class=tr4>
-			<td>分　类</td>
+			<td class=td1>分　类</td>
 			<td align="left" class="newsselect1" >
 				<span id="span_category"></span>
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td>作　者</td>
-			<td align="left" class="newsselect1" >
-				<input style="width:200px" type="text" name="news[author]" id="news_author" value="<?php echo ($news->author ? $news->author : $_SESSION['admin_nick_name']);?>"></input>
-				<select name="news[author_type]" id="news_author_type">
-					<option value="1" <?php if($news->author_type == 1) echo " selected='selected'"?>>采编智库</option>
-					<option value="2" <?php if($news->author_type == 2||(empty($id)&&$_SESSION["role_name"]=='author')) echo " selected='selected'"?>>特约作者</option>
-					<option value="3" <?php if($news->author_type == 3) echo " selected='selected'"?>>网站编辑</option>
-				</select>
-				头像:<input type="file" name="author_image">
-				<?php if($news->author_image){?>
-				<a href="<?php echo $news->author_image;?>" target="_blank">查看</a>
-				<?php }?>
-				<span>(40*40最佳)</span>
-				<input type="hidden" name="news[author_id]" id="news_author_id" value="<?php if(empty($id)) echo $_SESSION['admin_user_id'];else echo $news->author_id;?>"></input>
-			</td>
+			<td class=td1>作者名</td>
+			<td><input type="text" name="news[author]" id="news_short_title" value="<?php echo strip_tags($news->author ? $news->author : $_SESSION['admin_nick_name']);?>"></input></td>
 		</tr>
 		<tr class=tr4>
-			<td>关键词</td>
+			<td class=td1>关键词</td>
 			<td align="left">
 				<input type="text" style="width:400px" name=news[keywords]  id="news_keywords"  value="<?php echo $news->keywords;?>">(空格分隔) 
 			</td>
 		</tr>
 
 		<tr class=tr4 style="display:none">
-			<td>优先级</td>
+			<td class=td1>优先级</td>
 			<td align="left">
 				<input type="text" style="width:400px" name=news[priority] id="priority"  class="number" value="<?php echo $news->priority;?>">(0~100)
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td>上传PDF版</td>
+			<td class=td1>上传PDF版</td>
 			<td align="left">
 				<input type="file" name="pdf_src" id="pdf_src">
 				<?php if($news->pdf_src){?>
@@ -115,7 +103,7 @@
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td>上传封面图片</td>
+			<td class=td1>上传封面图片</td>
 			<td align="left">
 				<input type="file" name="news_pic">
 				<?php if($news->video_photo_src){?>
@@ -125,27 +113,27 @@
 			</td>
 		</tr>		
 		<tr class="tr4">
-			<td>放置广告</td>
+			<td class=td1>放置广告</td>
 			<td align="left">
 				<input type="checkbox" id="news_ad_id" <?php if($news->ad_id == 1) echo "checked='checked'";?>><label for="news_ad_id">放置广告</label><input type="hidden" id="input_news_ad_id" name="news[ad_id]" value="<?php echo $news->ad_id;?>"></input>
 			</td>
 		</tr>
 
 		<tr class="tr4">
-			<td>禁止复制</td>
+			<td class=td1>禁止复制</td>
 			<td align="left">
 				<input type="checkbox" id="news_forbbide_copy" <?php if($news->forbbide_copy == 1) echo "checked='checked'";?>></input><label for="news_forbbide_copy">禁止复制</label><input type="hidden" id="input_news_forbbide_copy"  name="news[forbbide_copy]" value="<?php echo $news->forbbide_copy;?>"></input>
 			</td>
 		</tr>
 
 		<tr id=newsshow1  class="normal_news tr4">
-			<td  height=100>英文来源</td><td><?php show_fckeditor('news[top_info]','Admin',false,"80",$news->top_info);?></td>
+			<td  class=td1  height=100>英文来源</td><td><?php show_fckeditor('news[top_info]','Admin',false,"80",$news->top_info);?></td>
 		</tr>
 		<tr id=newsshow1  class="normal_news tr4">
-			<td  height=100>简短描述</td><td><?php show_fckeditor('news[description]','Admin',false,"80",$news->description);?></td>
+			<td  class=td1  height=100>简短描述</td><td><?php show_fckeditor('news[description]','Admin',false,"80",$news->description);?></td>
 		</tr>
 		<tr id=newsshow1 class="normal_news tr4">
-			<td height=215>新闻内容</td><td><?php show_fckeditor('news[content]','Admin',false,"215",$news->content);?></td>
+			<td  class=td1 height=215>新闻内容</td><td><?php show_fckeditor('news[content]','Admin',false,"215",$news->content);?></td>
 		</tr>
 		<tr class="tr3">
 			<td colspan="2" width="795" align="center"><input id="submit" type="submit" value="发布新闻"></td>

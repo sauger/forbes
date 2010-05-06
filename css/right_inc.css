@@ -11,7 +11,7 @@ ul{list-style:none; padding:0; margin:0;}
 #right_inc .left_top_title{width:157px; height:36px; font-size:15px;  font-weight:bold; text-align:center; line-height:25px; float:left; display:inline;}
 .left_top_title.selected{color:#000; background: url(/images/right/background1.jpg);}
 
-#right_inc #right_ad{width:320px; height:265px; float:left; display:inline;}
+#right_inc #right_banner{width:320px; height:265px; float:left; display:inline;}
 
 #right_inc .right_box li{width:260px; height:19px; margin-top:6px; margin-left:15px; padding-left:14px; font-size:13px; background:url(/images/right/tar3.gif) no-repeat 0 6px; overflow:hidden; line-height:19px; float:left; display:inline;}
 #right_inc .right_box a{color:#003899; text-decoration:none;}

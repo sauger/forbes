@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			<div class=l_t_bottom></div>
-			<a style="margin-top:10px; float:left; display:inline;" href=""><img border=0 src="/images/magazine/one.jpg"></a>
+			<div id="magazine_banner1" class="ad_banner"><a href=""><img border=0 src="/images/magazine/one.jpg"></a></div>
 			<div class=l_t_top></div>
 			<div id=l_b_content>
 				<div class=l_title>

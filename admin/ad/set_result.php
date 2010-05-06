@@ -1,6 +1,6 @@
 <?php
     include_once('../../frame.php');
-	
+	set_time_limit(600);
 	$db = get_db();
 	$date = date("Y-m-d");
 	$date = '2010-05-05';

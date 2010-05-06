@@ -144,7 +144,7 @@
 						<div class=sort_r_b_l_t><a href="show_list.php?id=<?php echo $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
 					<?php } ?>
 				</div>
-				<div id=sort_r_b_r></div>
+				<div id="list_banner"></div>
 			</div>
 			<div id=sort_page><?php paginate();?></div>
 		</div>

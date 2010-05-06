@@ -6,6 +6,7 @@ p{margin:0; padding:0}
 #bread a{color:#666666; text-decoration:none;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
 
+#magazine_banner1 {margin-top:10px; float:left; display:inline;}
 #zzleft{width:660px; float:left; display:inline;}
 #zzleft .l_t_top{width:660px; height:2px; margin-top:10px; background:url('/images/magazine/left_top.jpg') no-repeat; overflow:hidden; float:left; display:inline;}
 #zzleft .l_t_bottom{width:660px; height:3px; background:url('/images/magazine/left_bottom.jpg') no-repeat; overflow:hidden; float:left; display:inline;}

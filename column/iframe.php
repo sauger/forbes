@@ -49,20 +49,10 @@ if($type=="news"){
 		$img_src = $images[$i]->src2 ? $images[$i]->src2 : $images[$i]->src;
 ?>
 	<div class=column_image >
-		<a target="_top" class=color param="<?php echo $images[$i]->id; ?>" href="#"><img border=0 src="<?php echo $img_src; ?>" /></a>
+		<div><img border=0 src="<?php echo $img_src; ?>" /></div>
+		<div style="margin-top:5px;"><?php echo $images[$i]->title;?></div>
 	</div>
 <?php } ?>
-<script>
-	$('.color').click(function(e){
-		e.preventDefault();
-		$this = $(this);
-		parent.$.fn.colorbox({
-			href:function(){
-				return 'column_img.php?id='+$this.attr('param');
-			}
-		});
-	});
-</script>
 </div>
 <div class=page><?php paginate();?></div>
 <?php }else{

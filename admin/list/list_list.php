@@ -57,7 +57,7 @@
 					return "体育";
 				break;	
 				case 7:
-					return "科技";
+					return "生活";
 				break;	
 				case 8:
 					return "教育";
@@ -108,7 +108,7 @@
 					<option value="4">城市</option>
 					<option value="5">名人</option>
 					<option value="6">体育</option>
-					<option value="7">科技</option>
+					<option value="7">生活</option>
 					<option value="8">教育</option>
 		</select>
 		<?php if($_REQUEST['s_list_position'])?>

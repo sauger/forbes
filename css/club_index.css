@@ -42,7 +42,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #gift_content_center .content .pictitle{width:111px; height:16px; text-align:center; margin-top:3px; line-height:16px; font-weight:bold; overflow:hidden; }
 #gift_content_center .content .pictitle a{color:#333333; text-decoration:none;}
 #gift_content_right{width:3px; height:324px; background:url('/images/club/l_content2_right.jpg') no-repeat; float:right;}
-#club_l_b{width:635px; height:186px; margin-top:10px; }
+#club_banner{width:635px; height:186px; margin-top:10px; }
+#club_banner{width:635px; height: 186px;}
 #club_right{width:341px; margin-top:10px; float:right;}
 .club_right_title_top{width:341px; height:3px; background:url('/images/club/right_title_top.jpg') no-repeat; overflow:hidden; }
 .club_right_content_bottom{width:341px; height:3px; background:url('/images/club/right_content_bottom.jpg') no-repeat; overflow:hidden; }
