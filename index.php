@@ -75,7 +75,7 @@
   		 	 	<?php for($i=0;$i<3;$i++){
   		 	 		$pos_name = "index_bf".$i;
   		 	 	?>
-			 	 <div class=lujiazui_list <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
+			 	 <div class=lujiazui_list <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 			 	 <?php }?>
 			 </div>
 			 <? /* lujiazui-end */?>
@@ -83,7 +83,7 @@
 			 <div id=subject>
 			 	 <div id=subject_btnl></div>
 			 	 <?php for($i=0;$i<8;$i++){ $pos_name = "index_sub".$i;?>
-			 	 <div <?php show_page_pos($pos_name,'link_img')?> class=subject_content id=subject_content_<?php echo $i?> <?php if($i>2){echo "style='display:none'";}?>>
+			 	 <div <?php show_page_pos($pos_name,'link_img_withouttime')?> class=subject_content id=subject_content_<?php echo $i?> <?php if($i>2){echo "style='display:none'";}?>>
 			 			<div class=subject_pic><?php show_page_img();?></div>
 			 			<div class=subject_list><?php show_page_href();?></div>
 			 	 </div>
@@ -185,7 +185,7 @@
 					</table>
 				</div>
 				<div id="rt_tab4" class="rt_tab">
-				<table cellspacing="0">
+					<table cellspacing="0">
 						<tr>
 							<th width="10%" nowrap>排名</th>
 							<th width="60%" nowrap>主营业务</th>
@@ -351,12 +351,12 @@
 				<a href="/life/" class=more target="_blank"></a>
 			</div>
 			<div class=list1>
-					<div <?php $pos_name ="index_luxu0"; show_page_pos($pos_name,'base_img');?> class=image><?php show_page_img(150,130)?></div>
+					<div <?php $pos_name ="index_luxu0"; show_page_pos($pos_name,'base_img_withoutime');?> class=image><?php show_page_img(150,130)?></div>
 					<div class=image_content style="margin-left:15px;">
 						<div class=image_list><?php show_page_href()?></div>
 						<div class=image_description><?php show_page_desc()?></div>
 					</div>
-					<div  <?php $pos_name ="index_luxu1"; show_page_pos($pos_name,'base_img');?> class=image_content style="margin-top:20px;">
+					<div  <?php $pos_name ="index_luxu1"; show_page_pos($pos_name,'base_img_withoutime');?> class=image_content style="margin-top:20px;">
 						<div class=image_list><?php show_page_href()?></div>
 						<div class=image_description><?php show_page_desc()?></div>
 					</div>
@@ -394,7 +394,7 @@
 					<div class=club_caption1>增长俱乐部<span>Up Club</span></div>
 					<a href="/investor" class=club_more1 target="_blank"></a>
 					<?php $pos_name = 'index_club0';?>
-					<div class=content <?php show_page_pos("$pos_name",'base_img');?>>
+					<div class=content <?php show_page_pos("$pos_name",'base_img_withoutime');?>>
 						<div class=pic>
 							<?php show_page_img()?>
 						</div>	
@@ -419,7 +419,7 @@
 					<div class=city_caption1>城市<span>Best Cities</span></div>
 					<a href="/city/" class=city_more1 target="_blank"></a>
 					<?php $pos_name = 'index_city0';?>
-					<div class=content <?php show_page_pos($pos_name,'base_img');?>>
+					<div class=content <?php show_page_pos($pos_name,'base_img_withoutime');?>>
 						<div class=pic>
 							<?php show_page_img()?>
 						</div>	
