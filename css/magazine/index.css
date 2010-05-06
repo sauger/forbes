@@ -35,7 +35,7 @@ p{margin:0; padding:0}
 #zzleft #l_b_content .imgandtitle{width:134px; height:275px; margin-top:25px; margin-left:25px; float:left; display:inline;}
 #zzleft #l_b_content .pic{width:134px; height:173px; float:left; display:inline;}
 #zzleft #l_b_content .pic img{width:134px; height:173px;}
-#zzleft #l_b_content .pictitle{width:134px; height:20px; margin-top:5px; margin-bottom:5px; font-size:14px; line-height:20px; float:left; display:inline;}
+#zzleft #l_b_content .pictitle{width:134px; height:20px; margin-top:5px; margin-bottom:5px; font-size:14px; line-height:20px; overflow:hidden; float:left; display:inline;}
 #zzleft #l_b_content .pictitle a{color:#246bb0; text-decoration:none;}
 #zzleft #l_b_content .piccontent{width:134px; height:20px; margin-top:5px; line-height:20px; overflow:hidden; float:left; display:inline;}
 #zzleft #l_b_content .piccontent a{color:#666666; text-decoration:none;}
