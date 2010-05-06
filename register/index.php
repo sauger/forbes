@@ -7,7 +7,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>注册</title>
+	<title>注册-福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('register/register','public','jquery.colorbox-min.js');
@@ -29,7 +29,7 @@
 					<div id="user1" class="display1 name_check">4-20位，包含英文大小写字母和数字组成</div>
 					<div id="user2" class="display2 name_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">用户名可用</div></div>
 					<div id="user3" class="display3 name_check"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">用户名已存在请重新设置用户名</div></div>
-					<div id="user4" class="display3 name_check"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">位数超出限制</div></div>
+					<div id="user4" class="display3 name_check"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">4-20位，包含英文大小写字母和数字组成</div></div>
 					<div id="user5" class="display3 name_check"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">只能包含英文大小写字母和数字</div></div>
 				</td>
 			</tr>
@@ -73,14 +73,14 @@
 		<table>
 			<tr>
 				<td class=td5>是否愿意订阅福布斯精华推荐（一周发送一次）</td>
-				<td class=td2><a href="/images/email.jpg" class="colorbox">查看快闻板式</a></td>
+				<td class=td2><a href="/images/register/email.jpg" class="colorbox">查看快闻板式</a></td>
 			</tr>
 			<tr>
 				<td class=td6><input type="checkbox" name="jhtj" id="order1"><label for="order1">我愿意订阅</label><input id="order2" class="ck" type="checkbox"><label for="order2">不，暂时不考虑</label></td>
 			</tr>
 			<tr>
 				<td class=td5>是否愿意订阅福布斯分类文章（一周发送一次）</td>
-				<td class=td2><a href="/images/news.jpg" class="colorbox">查看快闻板式</a></td>
+				<td class=td2><a href="/images/register/news.jpg" class="colorbox">查看快闻板式</a></td>
 			</tr>
 			<tr>
 				<td class=td6><input type="checkbox" class="n_order" name="fh" id="order3" checked=checked><label for="order3">富豪</label><input id="order4" type="checkbox" name="cy" class="ck n_order"><label for="order4">创业</label><input type="checkbox" name="sy" id="order5" class="ck n_order"><label for="order5">商业</label><input type="checkbox" id="order6" name="kj" class="ck n_order"><label for="order6">科技</label><input name="tz" id="order7" type="checkbox" class="ck n_order"><label for="order7">投资</label><input id="order8" type="checkbox" name="sh" class="ck n_order"><label for="order8">生活</label><input id="order9" class="ck" type="checkbox"><label for="order9">不，暂时不考虑</label></td>
