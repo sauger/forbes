@@ -37,7 +37,7 @@
 				</div>
 				<div id=r_t>
 					<div id=title><?php echo $magazine[0]->name;?></div>
-					<div id=content><a href="">出版日期：<?php echo $magazine[0]->publish_data;?><br>封面专题</a></div>
+					<div id=content><a href="">出版日期：<?php echo substr($magazine[0]->publish_data,0,10);?><br>封面专题</a></div>
 				</div>
 				<?php
 					$news = $db->query("select t1.title,t1.id,t1.created_at,t1.description from fb_news t1 join fb_magazine_relation t2 on t1.id=t2.resource_id where t2.magazine_id={$magazine[0]->id} order by t2.priority limit 3");
