@@ -45,7 +45,7 @@
 	  		 <input type="hidden" name="last_url" value="<?php echo $_REQUEST['last_url'];?>"></input>
 	  		 <?php }?>
 	  		</div>
-	  		<div><input type="submit"  id="login" value="登录"></button></div>
+	  		<div><input type="submit"  id="login" value="登 录"></button></div>
 	  		<div style="width:300px;">
 	  		  <div id=left-bottom1><a href="/register/">新用户注册</a></div>
 	  		  <div id=left-bottom2><a href="/getpwd/">忘记密码？</a></div>
