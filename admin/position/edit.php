@@ -26,6 +26,8 @@
 		$fields['only_link'] = array("","","mouseover","链接","静态链接","","","","","","说明");
 		$fields['only_title']=array("标题","","","","","","","","","","");
 		$fields['default']=array("标题","描述","mouseover","链接","静态链接","图片一","","过期时间","备用字段","备用字段2","说明");
+		$fields['life_index']=array("标题","描述","mouseover","链接","静态链接","图片","","","","","说明");
+		$fields['life_index_column']=array("标题","描述","mouseover","链接","静态链接","图片","","","","专栏链接","说明");
 		$fields['column_full']=array("文章标题","文章描述","mouseover","链接","静态链接","作者照片","","过期时间","专栏作者","专栏链接","说明");
 		$fields['column_with_author']=array("文章标题","文章描述","mouseover","链接","静态链接","","","过期时间","专栏作者","专栏链接","说明");
 		$fields['column_simple']=array("文章标题","","mouseover","链接","静态链接","","","过期时间","专栏作者","专栏链接","说明");
