@@ -8,7 +8,7 @@ if(empty($id)){
 $news = new table_class('fb_news');
 $news->find($id);
 if($type=='publish'){
-	$result = static_news($news);
+	$result = static_news($news,'page');
 	if($result){
 		$news->is_adopt = 1;
 		$news->save();
