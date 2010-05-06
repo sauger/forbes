@@ -20,7 +20,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #left-font2{width:70px; height:20px; margin-left:37px; margin-top:20px; font-size:14px; float:left; display:inline;}
 #left-font3{width:70px; height:20px; margin-left:37px; margin-top:20px; font-size:14px; float:left; display:inline;}
 #yz_img{height:20px; margin-top:20px; margin-left:10px; float:left; display:inline;}
-#login{width:100px; height:22px; margin-left:100px; margin-top:25px; line-height:22px; border:1px solid #666666; cursor:pointer; float:left; display:inline;}
+#login{width:120px; margin-left:100px; margin-top:25px;  padding-top:3px; padding-bottom:0px; font-weight:bold; border:1px solid #66BCE6; background:#D3EFFF; color:#3C7FB1; cursor:pointer; float:left;}
 #left-bottom1{width:66px; height:16px; margin-left:100px; margin-top:30px; font-size:12px; float:left; display:inline;}
 #left-bottom1 a{color:#3C7FB1;}
 #left-bottom2{width:66px; height:16px; margin-left:20px; margin-top:30px; font-size:12px; float:left; display:inline;}
