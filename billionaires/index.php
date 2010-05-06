@@ -49,18 +49,18 @@
 			<div id=billionaires_head_right></div>
 			<div id=billionaires_ranking>
 				<div id=ranking_top>
-					<?php for($i=0;$i<3;$i++){ ?>
-					<div class="piccontent">
-						<div class=pic><a href=""><img src="" /></a></div>
-						<div class=pictitle><a href=""></a></div>
+					<?php for($i=0;$i<3;$i++){ $pos_name = "richindex_top_img".$i;?>
+					<div class="piccontent" <?php echo show_page_pos($pos_name,'link_img');?>>
+						<div class=pic><?php show_page_img();?></div>
+						<div class=pictitle><?php show_page_href();?></div>
 					</div>
 					<?php }?>
 				</div>
 				<div id=ranking_bottom>
-					<?php for($i=0;$i<10;$i++){ ?>
-					<div class="piccontent">
-						<div class=pic><a href=""><img src="" /></a></div>
-						<div class=pictitle><a href=""></a></div>
+					<?php for($i=0;$i<10;$i++){ $pos_name = "richindex_middle_img".$i;?>
+					<div class="piccontent" <?php echo show_page_pos($pos_name,'link_img');?>>
+						<div class=pic><?php show_page_img();?></div>
+						<div class=pictitle><?php show_page_href();?></div>
 					</div>
 					<?php }?>
 				</div>

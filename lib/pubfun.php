@@ -37,7 +37,7 @@ function send_mail($smtp_server,$smtp_user,$smtp_pwd,$from,$to,$title,$content){
 		$smtp_pass=$smtp_pwd; //Smtp认证的密码，一般等同pop3密码  
 		$smtp_host=$smtp_server; //SMTP服务器地址，类似 smtp.tom.com  
 		$from=$from; //发信人Email地址，你的发信信箱地址  
-		$deliver=$smtp_acc; //回复到指定邮箱  
+		$deliver=$from; //回复到指定邮箱  
 		$headers = "Content-Type: text/html; charset=\"utf-8\"\r\nContent-Transfer-Encoding: base64";  
 		$lb="\r\n"; //linebreak   
 		$hdr = explode($lb,$headers); //解析后的hdr  
