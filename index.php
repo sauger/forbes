@@ -97,52 +97,63 @@
 		 
 		 
 		<div id=forbes_trt>
-			<div class="title selected">富豪榜</div>
+			<div class="title selected">09全球富豪</div>
 			<div class=title>财富过山车</div>	
 			<div class=title>名人榜</div>	
 			<div class=title>城市榜</div>
 			<div id=phb>
 				<div id="rt_tab1" class="rt_tab" style="display:inline;">
-					<div id=ph>
-						<span class="span1">排名</span><span  class="span2">姓名</span><span  class="span3">财富（亿）</span><span  class="span4">变动</span>
-					</div>
-					<div id=phname>
+					<table cellspacing="0">
+						<tr>
+							<th width="10%" nowrap>排名</th>
+							<th width="40%" nowrap>姓名</th>
+							<th width="30%" nowrap>资产(亿美元)</th>
+							<th width="20%" nowrap>国家</th>
+						</tr>
 						<?php 
-						$db = get_db();
-						$items = $db->query("select * from fb_dynamic_fortune_list order by current_index asc limit 10");
-						for($i=0;$i<10;$i++) {
-							if($items[$i]->current_index < $items[$i]->last_index || $items[$i]->last_index == 0){
-								$word = '↑';
-								$class = 'up';
-							}else if($items[$i]->current_index > $items[$i]->last_index){
-								$word = '↓';
-								$class = 'down';
-							}else{
-								$word = '-';
-								$class = '';
-							}
+							$list_id = 237;
+							$list = $db->query("select table_name from fb_custom_list_type where id=$list_id");
+							$table_name = $list[0]->table_name;
+							$items = $db->query("select * from {$table_name} limit 10");
+							
+							for($i=0;$i < 10; $i++){
 						?>
-						<div class=content>
-							<span class="span1"><?php echo $i+1;?>.</span>
-							<span class="span2"><a style="margin-left:0px;" href="#" title="<?php echo $items[$i]->name;?>"><?php echo $items[$i]->name;?></a></span>
-							<span class="span3"><?php echo $items[$i]->fortune;?></span>
-							<span class="<?php echo $class;?> span4"><?php echo $word;?></span>
-						</div>
+							<tr>
+								<?php for($j=1;$j<5;$j++){
+									$field = "field_{$j}";
+								?>
+								<td align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<?php }?>
+							</tr>						
 						<?php }?>
-					</div>
+					</table>
 				</div>
 				<?php $pos_name = "index_ipo"?>
 				<div id="rt_tab2" class="rt_tab" <?php show_page_pos($pos_name,'base_img')?>>
-					<div id=rt_tab2_box>
-						<div id="ipo_img">
-							<?php show_page_img(50,50);?>
-						</div>
-						
-						<div id=ipo_title><?php show_page_href();?></div>
-						<div id=ipo_content><?php show_page_desc();?></div>
-					</div>
-					<div id=ipo_info>单位:亿元人民币</div>
-					<img id=ipo_src src="/upload/ipo.png" />
+					<table cellspacing="0">
+						<tr>
+							<th width="10%" nowrap>排名</th>
+							<th width="40%" nowrap>姓名</th>
+							<th width="30%" nowrap>资产(亿美元)</th>
+							<th width="20%" nowrap>国家</th>
+						</tr>
+						<?php 
+							$list_id = 237;
+							$list = $db->query("select table_name from fb_custom_list_type where id=$list_id");
+							$table_name = $list[0]->table_name;
+							$items = $db->query("select * from {$table_name} limit 10");
+							
+							for($i=0;$i < 10; $i++){
+						?>
+							<tr>
+								<?php for($j=1;$j<5;$j++){
+									$field = "field_{$j}";
+								?>
+								<td align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<?php }?>
+							</tr>						
+						<?php }?>
+					</table>
 				</div>
 				<div id="rt_tab3" class="rt_tab">
 				</div>

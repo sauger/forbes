@@ -9,6 +9,7 @@
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/Tr/1999/rEC-html401-19991224/loose.dtd">
+<html>
 <head>
 	<title><?php echo $seo[0]->title ?></title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
@@ -97,7 +98,7 @@
 			<div id="normal_list">
 				<div class="list_list">
 				<?php 							
-					$type = array('rich' => '富豪','company' => '公司','famous' => '名人','tech' => '科技');
+					$type = array('rich' => '富豪','company' => '公司','famous' => '名人','tech' => '生活');
 					$j=1;
 					foreach($type as $key => $val){
 				?>

@@ -46,17 +46,17 @@ function generate_ad($ad){
 }
 
 $hour = getdate();
-$hour = intval($hour['hour']);
+$hour = intval($hour['hours']);
 foreach ($ads as $ad) {
 	$start_hour = intval($ad->start_hour);
 	$end_hour = intval($ad->end_hour);
 	
 	if($start_hour < $end_hour){
-		if($hour <= $start_hour || $hour >= $end_hour){
+		if($hour < $start_hour || $hour > $end_hour){
 			continue;
 		}
 	}else if($start_hour > $end_hour){
-		if(($hour <= $start_hour && $hour >= $end_hour)){
+		if(($hour < $start_hour && $hour > $end_hour)){
 			continue;
 		}
 	}
