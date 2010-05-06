@@ -36,7 +36,9 @@ $(function(){
 		});
 		
 		if(input1&input2){
-			$("form").submit();
+			//$("form").submit();
+			$.getScript('/php/share.post.php?'+ $('#share_form').serialize());
+			return false;
 		}
 	});
 });

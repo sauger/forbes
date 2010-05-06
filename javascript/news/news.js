@@ -31,6 +31,9 @@
       }   
 }
 $(function(){
+	//add view count;
+	$.post('/ajax/add_news_click.php?id=' + $('#newsid').val());
+	
 	if($("#is_comment").val()!='1'){
 		$("#news_comment").load('/ajax/news_comment.php',{'id':$("#newsid").val()});
 	}
