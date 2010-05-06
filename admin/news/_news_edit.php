@@ -65,7 +65,7 @@
 
 		<tr class=tr4>
 			<td class=td1>分类</td>
-			<td class="category_select"><span id="span_category"></span><a href="#" id="copy_news" style="color:blue">复制到其他分类</a></td>
+			<td><span id="span_category"></span><a href="#" id="copy_news" style="color:blue">复制到其他分类</a></td>
 		</tr>
 		
 		<tr class=tr4 style="display:none;" id="tr_copy_news">

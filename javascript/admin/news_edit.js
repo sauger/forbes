@@ -121,7 +121,7 @@ $(function(){
 			$('#publish_schedule').val($(this).data('save_time'));
 		}
 	});
-	$('#news_edit').submit(function(){		
+	$('#news_edit').submit(function(){	
 		var video_array = new Array('flv','wmv','wav','mp3','mp4','avi','rm');
 		var pic_array = new Array('jpg','png','bmp','gif','icon');
 		/*
@@ -166,6 +166,10 @@ $(function(){
 				return false;	
 			}else{
 				category_id = $('.category_select:eq('+ (category_count - 2) + ')').val();
+				if(category_id == -1){
+					alert('请选择分类!');
+					return false;	
+				}
 			}
 		}
 		$('#category_id').val(category_id);
