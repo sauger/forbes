@@ -21,7 +21,7 @@
 			<script>
 				if($.cookie('cache_name') && $.cookie('name')){
 					var str = '<div id="uname_span">'+$.cookie('name')+',你好</div>'
-							+ '<a href="javascript:void(0)" id="logout">登出</a>'
+							+ '<a href="javascript:void(0)" id="logout">退出</a>'
 							+ '<a href="/user">会员中心</a>';
 					$('.user_btn').html(str);
 				}else{
