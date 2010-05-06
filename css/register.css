@@ -44,5 +44,5 @@ button{width:154px; height:26px; line-height:26px; font-size:14px; border:0px; f
 
 .red{color:#ff0000;}
 .gray{color:#666666; font-size:12px;}
-#chang_pic{ cursor:pointer; color:#246BB0; margin-left:15px;}
+#chang_pic{width:110px; cursor:pointer; color:#246BB0; margin-left:15px;}
 .dash{width:900px; height:1px; margin-top:10px; font-size:0; line-height:0; border-bottom:1px dotted #999999;}
