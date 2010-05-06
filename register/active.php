@@ -18,12 +18,6 @@
 			die();
 		}else{
 			$id = $db->field_by_name('id');
-			$authenticated = $db->field_by_name('authenticated');
-			if($authenticated==1){
-				alert('您已经成功激活，请不要重复激活！');
-				redirect('/login/');
-				die();
-			}
 			$db->execute("update fb_yh set authenticated=1 where id={$id}");
 			adjust_user_score($id,50,"用户激活");
 			alert('恭喜您，激活成功，感谢您注册成为福布斯中文网会员！');
