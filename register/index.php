@@ -17,7 +17,7 @@
 <body>
  <div id="ibody">		
 	<?php include_top();?>
-	<div id=bread><a href="#">注册</a></div>
+	<div id=bread>注册</div>
 	<div id=bread_line></div>
 	<div id=register>
 		<form id="re_form" action="register.post.php" method="post">

@@ -2,8 +2,7 @@ body {font-size:12px;  font-family:宋体; font-size:12px; color:#000;  margin:0
 
 #ibody{width:1002px; margin:0 auto; float:none; display:block;}
 
-#bread{width:494px; height:23px; margin-top:16px; padding-left:130px; color:#246BB0; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
-#bread a{color:#666666; text-decoration:none;}
+#bread{width:494px; height:23px; margin-top:16px; padding-left:130px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url(/images/public/bread_line.jpg) no-repeat;}
 
 #register{width:900px; margin:0 auto; float:none; display:block;}
