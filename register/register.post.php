@@ -11,6 +11,7 @@
 </head>
 <?php 
 	if(!is_post()){
+		redirect('/error');
 		die();
 	}
 	if($_POST['rvcode'] != (string)$_SESSION['register_pic']){
