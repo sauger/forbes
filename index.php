@@ -98,9 +98,9 @@
 		 
 		<div id=forbes_trt>
 			<div class="title selected">09全球富豪</div>
-			<div class=title>财富过山车</div>	
-			<div class=title>名人榜</div>	
-			<div class=title>城市榜</div>
+			<div class=title>09城市榜</div>	
+			<div class=title>10慈善榜</div>	
+			<div class=title>潜力企业榜</div>
 			<div id=phb>
 				<div id="rt_tab1" class="rt_tab" style="display:inline;">
 					<table cellspacing="0">
@@ -132,13 +132,15 @@
 				<div id="rt_tab2" class="rt_tab" <?php show_page_pos($pos_name,'base_img')?>>
 					<table cellspacing="0">
 						<tr>
-							<th width="10%" nowrap>排名</th>
-							<th width="40%" nowrap>姓名</th>
-							<th width="30%" nowrap>资产(亿美元)</th>
-							<th width="20%" nowrap>国家</th>
+							<th  nowrap>排名</th>
+							<th  nowrap>城市</th>
+							<th  nowrap>行政级别</th>
+							<th  nowrap>省份</th>
+							<th  nowrap>人才指数</th>
+							<th  nowrap>R1</th>
 						</tr>
 						<?php 
-							$list_id = 237;
+							$list_id = 44;
 							$list = $db->query("select table_name from fb_custom_list_type where id=$list_id");
 							$table_name = $list[0]->table_name;
 							$items = $db->query("select * from {$table_name} limit 10");
@@ -146,7 +148,7 @@
 							for($i=0;$i < 10; $i++){
 						?>
 							<tr>
-								<?php for($j=1;$j<5;$j++){
+								<?php for($j=2;$j<8;$j++){
 									$field = "field_{$j}";
 								?>
 								<td align="center" nowrap><?php echo $items[$i]->$field;?></td>
@@ -156,8 +158,54 @@
 					</table>
 				</div>
 				<div id="rt_tab3" class="rt_tab">
+				<table cellspacing="0">
+						<tr>
+							<th  nowrap>排名</th>
+							<th  nowrap>企业名</th>
+							<th  nowrap>董事长</th>
+							<th  nowrap>捐款(万元)</th>
+							<th  nowrap>总部</th>
+						</tr>
+						<?php 
+							$list_id = 215;
+							$list = $db->query("select table_name from fb_custom_list_type where id=$list_id");
+							$table_name = $list[0]->table_name;
+							$items = $db->query("select * from {$table_name} limit 10");
+							
+							for($i=0;$i < 10; $i++){
+						?>
+							<tr>
+								<?php for($j=1;$j<6;$j++){
+									$field = "field_{$j}";
+								?>
+								<td align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<?php }?>
+							</tr>						
+						<?php }?>
+					</table>
 				</div>
 				<div id="rt_tab4" class="rt_tab">
+				<table cellspacing="0">
+						<tr>
+							<th width="10%" nowrap>排名</th>
+							<th width="60%" nowrap>主营业务</th>
+							<th width="20%" nowrap>所在地(省)</th>
+						</tr>
+						<?php 
+							$list_id = 149;
+							$list = $db->query("select table_name from fb_custom_list_type where id=$list_id");
+							$table_name = $list[0]->table_name;
+							$items = $db->query("select * from {$table_name} limit 10");
+							
+							for($i=0;$i < 10; $i++){
+						?>
+							<tr>
+								<td align="center" nowrap><?php echo $i + 1;?></td>
+								<td align="center" nowrap><?php echo $items[$i]->field_4;?></td>
+								<td align="center" nowrap><?php echo $items[$i]->field_5;?></td>
+							</tr>						
+						<?php }?>
+					</table>
 				</div>
 				<div id=bottom>
 					<div id=title>实时财富动态</div>
