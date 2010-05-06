@@ -130,7 +130,7 @@
 				</div>
 				<?php $pos_name = "index_ipo"?>
 				<div id="rt_tab2" class="rt_tab" <?php show_page_pos($pos_name,'base_img')?>>
-					<table cellspacing="0">
+					<table cellspacing="0" style="table-layout:auto;">
 						<tr>
 							<th  nowrap>排名</th>
 							<th  nowrap>城市</th>
