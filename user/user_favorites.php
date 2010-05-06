@@ -84,7 +84,7 @@
 				<div class=right_text id="news" <?php if($type=="news")echo 'style="display:inline;"';?>>
 					<div class="right_box">
 					<?php
-						$sql = "select t1.title,t1.id,t2.created_at from fb_news t1 join fb_collection t2 on t1.id=t2.resource_id where t2.resource_type='fb_news' and t2.user_id=$uid order by t2.created_at";
+						$sql = "select t1.title,t1.id,t1.created_at from fb_news t1 join fb_collection t2 on t1.id=t2.resource_id where t2.resource_type='fb_news' and t2.user_id=$uid order by t2.created_at";
 						$news = $db->paginate($sql,7,'news_page');
 						$news_count = count($news);
 						for($i=0;$i<$news_count;$i++){

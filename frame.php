@@ -210,7 +210,9 @@ function paginate($url="",$ajax_dom=null,$page_var="page",$force_show = false)
 	if(empty($url)){
 		$url = $_SERVER['PHP_SELF'] ."?";
 	}
-	if($page_type=='static'){
+	$turl = $_SERVER['PHP_SELF'];
+	$pattern = '/(.+)\.php$/';
+	if($page_type=='static' && !preg_match($pattern,$turl)){
 		$url = $_SERVER['PHP_SELF'];
 		$pattern = '/(.+)\/page\/(\d+)/';
 		if(preg_match($pattern,$url)){
@@ -280,7 +282,7 @@ function paginate($url="",$ajax_dom=null,$page_var="page",$force_show = false)
 			function jumppage(urlprex,pageindex)
 			{
 			<?php 
-				if($page_type=='static'){
+				if($page_type=='static' && !preg_match($pattern,$turl)){
 					$str = "'{$url}/page/' + pageindex;";	
 				}else{
 					$str = "urlprex + pageindex;";
