@@ -173,7 +173,7 @@
 		</tr>	
 	</table>
 	</div>
-		<input type="hidden" name="id" value="<?php echo $info[0]->id;?>">
+		<input type="hidden" name="id" value="<?php echo $id;?>">
 	</form>
 </body>
 </html>
