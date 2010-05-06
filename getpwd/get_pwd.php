@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include_once('../frame.php');
 	$db =get_db();
 	$_SESSION['get_pwd'] = rand_str();
