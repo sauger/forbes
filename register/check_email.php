@@ -1,9 +1,9 @@
 <?php 
 	include_once('../frame.php'); 
 	
-	$name = $_POST['name'];
+	$email = $_POST['email'];
 	
-	$sql = "select name from fb_yh where name='{$name}'";
+	$sql = "select email from fb_yh where email='{$email}'";
 	$db = get_db();
 	$record = $db->query($sql);
 	echo $db->record_count;

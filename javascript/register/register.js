@@ -3,11 +3,11 @@ $(function(){
 	
 	
 	$("#user_name").blur(function(){
-		userName();
+		check_name();
 	});
 	
 	$("#user_email").blur(function(){
-		userEmail();
+		check_email();
 	});
 	
 	$("#user_pass").blur(function(){
@@ -52,7 +52,10 @@ $(function(){
 			$("#user_name").focus();
 			return false;
 		}else{
-			
+			if(!userName()){
+				$("#user_name").focus();
+				return false;
+			}
 		}
 		if($("#user_email").val()=='') {
 			alert('请输入邮箱地址');
@@ -99,7 +102,23 @@ $(function(){
 					alert('验证码错误！');
 					return false;
 				}else{
-					$("#re_form").submit();
+					$.post('check_name.php',{'name':$("#user_name").val()},function(data){
+						if(data==1){
+							$(".name_check").css('display','none');
+							$("#user3").css('display','inline');
+							$("#user_name").focus();
+						}else if(data==0){
+							$.post('check_email.php',{'email':$("#user_email").val()},function(data){
+								if(data==1){
+									$(".email_check").css('display','none');
+									$("#email4").css('display','inline');
+									$("#user_email").focus();
+								}else if(data=='0'){
+									$("#re_form").submit();
+								}
+							});
+						}
+					});
 				}
 			});
 		}
@@ -121,23 +140,43 @@ function userName(){
 				$(".name_check").css('display','none');
 				$("#user5").css('display','inline');
 				return false;
+			}else{
+				$(".name_check").css('display','none');
+				$("#user2").css('display','inline');
+				return true;
 			}
-			$.post('check_name.php',{'name':$("#user_name").val()},function(data){
-				if(data==1){
-					$(".name_check").css('display','none');
-					$("#user3").css('display','inline');
-					return false;
-				}else if(data==0){
-					$(".name_check").css('display','none');
-					$("#user2").css('display','inline');
-					return true;
-				}
-			});
 		}
 	}else{
 		$(".name_check").css('display','none');
 		$("#user1").css('display','inline');
+		return false;
 	}
+}
+
+function check_name(){
+	$.post('check_name.php',{'name':$("#user_name").val()},function(data){
+		if(data==1){
+			$(".name_check").css('display','none');
+			$("#user3").css('display','inline');
+			return false;
+		}else if(data==0){
+			userName()
+			return true;
+		}
+	});
+}
+
+function check_email(){
+	$.post('check_email.php',{'email':$("#user_email").val()},function(data){
+		if(data==1){
+			$(".email_check").css('display','none');
+			$("#email4").css('display','inline');
+			return false;
+		}else if(data=='0'){
+			userEmail()
+			return true;
+		}
+	});
 }
 
 function userEmail(){
@@ -154,6 +193,7 @@ function userEmail(){
 	}else{
 		$(".email_check").css('display','none');
 		$("#email1").css('display','inline');
+		return false;
 	}
 }
 
