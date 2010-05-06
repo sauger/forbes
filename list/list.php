@@ -16,7 +16,7 @@
 </head>
 <body>
 	<div id=ibody>
-	<?php include "../inc/top.inc.php";?>
+	<?php include_top();?>
 		<div id=bread><a href="#">榜单</a></div>
 		<div id=bread_line></div>
 		<div id=sort_l>
@@ -148,6 +148,6 @@
 			</div>
 			<div id=sort_page><?php paginate();?></div>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 	</div>
 </body>

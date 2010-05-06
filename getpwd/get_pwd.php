@@ -19,7 +19,7 @@
 </head>
 <body>
 <div id=ibody>		
-	 <?php include "../inc/top.inc.php";?>
+	 <?php include_top();?>
 	 <div id=bread><span>密码找回</span></div>
 	 <div id=bread_line></div>
 	 <div id="left">
@@ -57,7 +57,7 @@
 	<?php
 	}
 		}
-		include "../inc/bottom.inc.php";
+		include_bottom();
 	?>
 </div>
 </body>

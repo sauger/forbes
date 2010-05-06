@@ -16,7 +16,7 @@
 </head>
 <body>
 <div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>		
 			<a href="#">活动列表</a>
 		</div>
@@ -45,7 +45,7 @@
 			<?php include "../right/forum.php";?>
 			<?php include "../right/magazine.php";?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 </div>
 </body>
 <html>

@@ -20,7 +20,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread><a href="/user/">用户中心</a> > <a>我的收藏</a></div>
 	 	 <div id=bread_line></div>
 		<div id=left>
@@ -246,6 +246,6 @@
 				</div>
 			</div>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 	</div>
 </body>

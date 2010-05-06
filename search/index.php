@@ -20,7 +20,7 @@
 <body>
 	<div id=ibody>
 		
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		
 		<div id=bread>
 			
@@ -84,7 +84,7 @@
 			<?php include_right("forum");?>
 			<?php include_right("magazine");?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 		
 	</div>
 </body>

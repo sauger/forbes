@@ -18,7 +18,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=top>
 			<div id=top>
 			 <div id=bread><a href="/user/">用户中心</a> > <a>订阅信息</a></div>
@@ -97,6 +97,6 @@
 				<button id="order_b" class="user_b" type="button">确定</button>
 			</div>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 	</div>
 </body>

@@ -19,7 +19,7 @@
 </head>
 <body <?php if($news->forbbide_copy == 1){ ?> oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="return false" oncopy="return false" onbeforecopy="return false" onmouseup="return false" <?php }?>>
 <div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=bread>
 				<span style="color:#246BB0; margin-left:8px;">分享</span>		
 		</div>
@@ -48,7 +48,7 @@
 		<div id="right_inc">
 			<?php include "../right/ad.php";?>
 		</div>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 </div>
 </body>
 <html>

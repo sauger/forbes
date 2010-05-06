@@ -27,7 +27,7 @@
 </head>
 <body>
 	<div id=ibody>
-		<?php include "../inc/top.inc.php";?>
+		<?php include_top();?>
 		<div id=top>
 			<div id=title>用户中心</div>
 			<div id=title1><a style="color:#626262;" href="">个人中心</a> > <a href="" style="color:#246BB0;">个人基本信息</a> </div>
@@ -282,6 +282,6 @@
 			</div>
 		</div>
 		<?php }?>
-		<?php include "../inc/bottom.inc.php";?>
+		<?php include_bottom();?>
 	</div>
 </body>
