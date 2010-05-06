@@ -120,7 +120,7 @@
 								$record = $db->query("select id,created_at,short_title,title from fb_news where author='{$news->author}' and id!=$id limit 3");
 								if(count($record)>0){
 						?>
-						<div class=info_title style="margin-top:15px;">该作者的其他文章</div>
+						<div class=info_title style="margin-top:15px;">该作者其他文章</div>
 						<div class=info_more><a href="<?php echo "{$static_site}/review/list/{$id}/author"?>"><img src="/images/news/more.png" border=0></a></div>
 						<div class=info_list>
 							<ul>
@@ -140,7 +140,7 @@
 									$record = $db->query("select id,created_at,title,short_title from fb_news where id in({$news->related_news})");
 						?>
 						<div class=info_title style="margin-top:15px;">推荐的评论文章</div>
-						<div class=info_more><a href="news_list.php?news_id=<?php echo $id?>&type=author"><img src="/images/news/more.png" border=0></a></div>
+						<div class=info_more></div>
 						<div class=info_list>
 							<ul>
 								<?php for($i=0;$i<count($record);$i++){?>
