@@ -6,11 +6,23 @@
 	if($date==''){
 		$date = date("Y-m-d");
 	}
+	$type = $_GET['type'];
 	$key = $_GET['key'];
-	$sql = "SELECT t1.date_time,t1.source_id,t1.ad_name,t1.count,t2.count as click_count FROM forbes_ad.fb_ad_result t1 left join forbes_ad.fb_ad_result t2 on t1.source_id=t2.source_id and t2.type='ad_click' and t1.date_time=t2.date_time where t1.type='ad' and t1.	date_time='$date'";
+	$sql = "SELECT t1.date_time,t1.source_id,t1.ad_name,sum(t1.count) as count,sum(t2.count) as click_count FROM forbes_ad.fb_ad_result t1 left join forbes_ad.fb_ad_result t2 on t1.source_id=t2.source_id and t2.type='ad_click' and t1.date_time=t2.date_time where t1.type='ad'";
 	if($key!=''){
 		$sql .= " and t1.ad_name like '%$key%'";
 	}
+	if($type==''){
+		$sql .= " and t1.date_time='$date'";
+	}elseif($type=='week'){
+		$sql .= " and week(t1.date_time)=week('$date')";
+	}elseif($type=='month'){
+		$sql .= " and month(t1.date_time)=month('$date')";
+	}elseif($type=='year'){
+		$sql .= " and year(t1.date_time)=year('$date')";
+	}elseif($type=='all'){
+	}
+	$sql .= " group by t1.source_id";
 	$db = get_db();
 	$record = $db->paginate($sql,20);
 	$count = $db->record_count;
@@ -33,6 +45,13 @@
 <div id=isearch>
 		<input id="key" type="text" value="<?php echo $key?>">
 		<input type="text" class="date_jquery" value="<?php echo $date;?>">
+		<select id="date_type">
+			<option value=''>日期当天</option>
+			<option <?php if($type=='week')echo 'selected="selected"';?> value='week'>日期当周</option>
+			<option <?php if($type=='month')echo 'selected="selected"';?> value='month'>日期当月</option>
+			<option <?php if($type=='year')echo 'selected="selected"';?> value='year'>日期当年</option>
+			<option <?php if($type=='all')echo 'selected="selected"';?> value='all'>全部</option>
+		</select>
 		<input type="button" value="搜索" id="search_button">
 </div>
 <div id=itable>
@@ -71,7 +90,7 @@
 		}
 	});
 	function search(){
-		window.location.href = "result.php?key="+encodeURI($("#key").val())+"&date="+$(".date_jquery").val();
+		window.location.href = "result.php?key="+encodeURI($("#key").val())+"&date="+$(".date_jquery").val()+"&type="+$("#date_type").val();
 	}
 	
 	$(".date_jquery").datepicker(
