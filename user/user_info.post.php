@@ -11,13 +11,14 @@
 <?php
 	$user_info = new table_class('fb_yh_xx');
 	$db = get_db();
-	$info = $db->query("select id from fb_yh_xx where yh_id={$_SESSION['user_id']}");
+	$uid = front_user_id();
+	$info = $db->query("select id from fb_yh_xx where yh_id={$uid}");
 	if($db->record_count==1){
 		$user_info->find($info[0]->id);
 		$user_info->update_attributes($_POST['post'],false);
 	}else{
 		$user_info->update_attributes($_POST['post'],false);
-		$user_info->yh_id = $_SESSION['user_id'];
+		$user_info->yh_id = $uid;
 	}
 	
 	if($_FILES['tx']['name']!=''){
