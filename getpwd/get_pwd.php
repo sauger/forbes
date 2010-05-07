@@ -11,7 +11,7 @@
 	<head>
 		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 		<meta http-equiv=Content-Language content=zh-cn>
-		<title>福布斯-密码找回</title>
+		<title>密码找回_福布斯中文网</title>
 		<?php
 			use_jquery();
 			js_include_tag('public','get_pwd');
@@ -19,23 +19,23 @@
 		?>
 </head>
 <body>
+ <?php
+ 	$verify = $_GET['verify'];
+	if(empty($verify)){
+		alert('您的申请不合法或者已经过期');
+		redirect('/'); 
+	}else{
+		$db->query("select * from fb_get_pwd where verify='$verify' and now()<end_time");
+		if(!$db->move_first()){
+			alert('您的申请不合法或者已经过期');
+			redirect('/'); 
+		}else{
+ ?>
 <div id=ibody>		
 	 <?php include_top();?>
 	 <div id=bread><a>密码找回</a></div>
 	 <div id=bread_line></div>
 	 <div id="left">
-	 	<?php
-	 	$verify = $_GET['verify'];
-		if(empty($verify)){
-			alert('您的申请不合法或者已经过期');
-			redirect('/'); 
-		}else{
-			$db->query("select * from fb_get_pwd where verify='$verify' and now()<end_time");
-			if(!$db->move_first()){
-				alert('您的申请不合法或者已经过期');
-				redirect('/'); 
-			}else{
-	 ?>
 	  <form name="login" id="get_pwd" action="getpwd2.post.php" method="post">
 	  	<div id="left_top">
 	  		<div id="left_title">密码找回</div>
@@ -63,10 +63,13 @@
 	    </div>
 	</div>
 	<?php
-	}
-		}
-		include_bottom();
+	include_bottom();
 	?>
 </div>
+<?php
+}
+		}
+		
+?>
 </body>
 </html>

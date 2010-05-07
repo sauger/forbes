@@ -42,18 +42,18 @@
 		<tr class=tr4>
 			<td class=td1>精华推荐</td>
 			<td>
-			    <div>订阅</div><input name="jhtj"  style="width:30px;" <?php if($order[0]->jhtj==1)echo 'checked="checked"'?> type="checkbox">
+			    <input name="jhtj"  style="width:30px;" <?php if($order[0]->jhtj==1)echo 'checked="checked"'?> type="checkbox"><div>订阅</div>
 			</td>
 		</tr>
 		<tr class=tr4>
 			<td class=td1>分类文章</td>
 			<td>
-			    <div>富豪</div><input style="width:30px;" name="fh" <?php if($order[0]->fh==1)echo 'checked="checked"'?> type="checkbox">
-				<div>创业</div><input style="width:30px;" name="cy" <?php if($order[0]->cy==1)echo 'checked="checked"'?> type="checkbox">
-				<div>商业</div><input style="width:30px;" name="sy" <?php if($order[0]->sy==1)echo 'checked="checked"'?> type="checkbox">
-				<div>科技</div><input style="width:30px;" name="kj" <?php if($order[0]->kj==1)echo 'checked="checked"'?> type="checkbox">
-				<div>投资</div><input style="width:30px;" name="tz" <?php if($order[0]->tz==1)echo 'checked="checked"'?> type="checkbox">
-				<div>生活</div><input style="width:30px;" name="sh" <?php if($order[0]->sh==1)echo 'checked="checked"'?> type="checkbox">
+			    <input style="width:30px;" name="fh" <?php if($order[0]->fh==1)echo 'checked="checked"'?> type="checkbox"><div>富豪</div>
+				<input style="width:30px;" name="cy" <?php if($order[0]->cy==1)echo 'checked="checked"'?> type="checkbox"><div>创业</div>
+				<input style="width:30px;" name="sy" <?php if($order[0]->sy==1)echo 'checked="checked"'?> type="checkbox"><div>商业</div>
+				<input style="width:30px;" name="kj" <?php if($order[0]->kj==1)echo 'checked="checked"'?> type="checkbox"><div>科技</div>
+				<input style="width:30px;" name="tz" <?php if($order[0]->tz==1)echo 'checked="checked"'?> type="checkbox"><div>投资</div>
+				<input style="width:30px;" name="sh" <?php if($order[0]->sh==1)echo 'checked="checked"'?> type="checkbox"><div>生活</div>
 			</td>
 		</tr>
 		<tr class="btools">
