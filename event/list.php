@@ -25,7 +25,7 @@
 		<div id=l>
 			<div id=list_content>
 					<?php
-					$sql = "select * from fb_event order by id desc";
+					$sql = "select * from fb_event order by priority asc, id desc";
 					$record = $db->paginate($sql,15);
 					$count = count($record);
 					for($i=0;$i<$count;$i++){
