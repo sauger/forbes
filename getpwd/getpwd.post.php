@@ -10,6 +10,11 @@
 <?php
     include_once('../frame.php');
 	
+	if(!is_post()){
+		redirect('/error/'); 
+		die();
+	}
+	
 	if($_POST['yzm']!=$_SESSION['getpwd']){
 		alert('验证码不正确！');
 		redirect('/getpwd/'); 
