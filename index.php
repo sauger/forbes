@@ -1,8 +1,6 @@
 ﻿<?php 
 	include_once( dirname(__FILE__) .'/frame.php');
 	$db = get_db();
-	$nav=$db->query('select id from fb_navigation where name="首页"');
-	$nav=$nav[0]->id;	
 	$seo=$db->query('select * from fb_seo where name="网站首页"');
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -369,7 +367,7 @@
 			<div id=dictionary>
 				<div id=dictionary_t>
 					<div id=dictionary_tl <?php show_page_pos("index_dict0");?>><?php show_page_href("index_dict0");?></div>
-					<div id=dictionary_tr><span><a href="<?php echo get_newslist_url($category->find_by_name("实用商业词汇")->id);?>" target="_blank">实用商业词汇</a></span>  |  <span><a href="<?php echo get_newslist_url($category->find_by_name("实用财经词汇")->id);?>" target="_blank">实用财经词汇</a></span></div>
+					<div id=dictionary_tr> <span><a href="<?php echo get_newslist_url($category->find_by_name("热门财经词汇")->id);?>" target="_blank">实用财经词汇</a></span></div>
 				</div>
 				<div id=dictionary_bl <?php show_page_pos("index_dictb0",'link');?>><?php show_page_href("index_dictb0");?></div>
 				<div id=dictionary_br <?php show_page_pos("index_dictb1",'link');?>><?php show_page_href("index_dictb1");?></div>
@@ -498,21 +496,27 @@
 		</div>	
 			
 		<div class=forbes_l style="margin-top:0px; margin-left:25px;">
-	  	<div class=caption>
-				<div class=captions>采编空间<span>Bloggers</span></div>
-				<div class=line>|</div>
-				<a href="/column/" class=more target="_blank"></a>
+		  	<div class=caption>
+					<div class=captions>采编空间<span>Bloggers</span></div>
+					<div class=line>|</div>
+					<a href="/column/" class=more target="_blank"></a>
 			</div>
 				<?php 
 				for($i=0;$i<8;$i++){ $pos_name = "index_jour".$i;?>
-					<div class=writer <?php show_page_pos($pos_name,'index_column2')?>>
-						<div class=writer_pic><?php show_page_img()?></div>
+					<div class=writer>
+						<div class=writer_pic<?php show_page_pos($pos_name,'index_column2')?>><?php show_page_img(null,null,0,'image1',null,'alias')?></div>
 						<div class=writer_name>
-							<a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">
-								<span style="font-weight:bold;"><?php echo $pos_items->$pos_name->display;?></span><br>
-								<?php echo $pos_items->$pos_name->title;?>
+							<a href="<?php echo $pos_items->$pos_name->alias;?>" target="_blank">
+								<span style="font-weight:bold;"><?php echo $pos_items->$pos_name->display;?></span>
 							</a>	
 						</div>	
+						<?php for($j=0;$j<2;$j++){
+							$pos_name= "index_column_article_{$i}_{$j}";
+						?>
+						<div class="writer_name" <?php show_page_pos($pos_name,'link_withouttime')?>>
+							<?php show_page_href();?>
+						</div>
+						<?php }?>
 					</div>
 				<?php } ?>
 		</div>
