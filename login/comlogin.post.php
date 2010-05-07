@@ -25,10 +25,14 @@ if($_SESSION['login']!=$_POST['session']){
 		$db->execute("update fb_yh set cache_name='{$cache_name}' where id={$user_id}");
 		if($_POST['time']!='')
 		{
-			$limit=$_POST['time']*3600*24;
-			setcookie("name",$name,time()+$limit,'/');
-			setcookie("cache_name",$cache_name,time()+$limit,'/');
-			setcookie("password",$_POST['password'],time()+$limit,'/');
+			$limit=time()+$_POST['time']*3600*24;
+			if(empty($_POST['time'])){
+				$limit = 0;
+			}
+			setcookie("name",$name,$limit,'/');
+			setcookie("cache_name",$cache_name,$limit,'/');
+			setcookie("password",$_POST['password'],$limit,'/');
+			
 		}else{
 			setcookie("login_name",$cache_name,time()+3600*24,'/');
 		}
