@@ -67,14 +67,14 @@
 					<div class=name><a href="/investor/<?php echo $investor[$i]->id;?>"><?php echo $investor[$i]->name;?></a></div>
 							
 						<div class=com>
-							<div  class=zh_left_co><?php echo $investor[$i]->company;?></div>
-							<div  class=zh_left_of><?php echo $investor[$i]->post;?></div>
+							<div class=zh_left_co><?php echo $investor[$i]->company;?></div>
+							<div class=zh_left_of><?php echo $investor[$i]->post;?></div>
 							</div>
 							<div class=zh_left_z>
 							<div class=zh_left_i>投资方向</div> 
-							<div  class=zh_left_in><?php echo $investor[$i]->invest_zone;?></div>
+							<div class=zh_left_in><?php echo $investor[$i]->invest_zone;?></div>
 							</div>
-					<div  class=zh_left_ne>投资动态</div>
+					<div class=zh_left_ne>投资动态</div>
 					<?php
 						$news = $db->query("select t1.title,t1.id,t1.created_at from fb_news t1 join fb_investor_news t2 on t1.id=t2.news_id where t2.investor_id={$investor[$i]->id} order by t1.created_at desc limit 2");
 						$count = $db->record_count;

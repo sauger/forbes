@@ -50,16 +50,16 @@ div{margin:0; padding:0; float:left; display:inline;}
 #forbes_trt{width:300px; margin-top:10px; overflow:hidden; float:right;}
 #forbes_trt .title{width:75px; height:26px; line-height:26px; font-size:13px; color:#003399; background:url(/images/index/block1.jpg) no-repeat; text-align:center; cursor:pointer;}
 #forbes_trt .title.selected{background:url(/images/index/block2.jpg) no-repeat; font-weight:bold; color:#000000;}
-.rt_tab{width:100px;height:290px; display:none; background-color:#FFF;}
-.rt_tab table{width:300px;margin-top:5px;table-layout:fixed}
-.rt_tab td{overflow: hidden;height:26px; border-bottom:1px solid #666}
+.rt_tab{width:100px; display:none; background-color:#FFF;}
+.rt_tab table{width:300px;margin-top:5px; table-layout:fixed}
+.rt_tab td{overflow: hidden;height:26px; color:#666666; border-bottom:1px solid #666}
 #forbes_trt #ph{width:300px; height:23px; line-height:23px; border-top:2px solid #666666; border-bottom:1px solid #666666; overflow:hidden;}
 #rt_tab1 #ph .span1{width:40px;}
 #rt_tab1 #ph .span2{width:160px;}
 #rt_tab1 #ph .span3{width:60px;}
 #rt_tab1 #ph .span4{width:35px;}
-#rt_tab1 .content .span1{width:40px; color:#000000; font-weight:bold;}
-#rt_tab1 .content .span2{width:160px; height:26px; line-height:26px; overflow:hidden;}
+#rt_tab1 .content .span1{width:40px; color:#666666; font-weight:bold;}
+#rt_tab1 .content .span2{width:160px; height:26px; color:#1649A2; line-height:26px; overflow:hidden;}
 #rt_tab1 .content .span3{width:60px;}
 #rt_tab1 .content .span4{width:35px; font-size:14px; font-weight:bold;}
 
@@ -80,7 +80,7 @@ span.down{color:#33CC00;}
 #ipo_info{width:300px; height:20px; line-height:20px; text-align:right;}
 #ipo_src{width:300px; float:left;}
 
-#forbes_trt #bottom{width:300px; height:77px; margin-top:2px; background:#f7f7f7; overflow:hidden; float:right;}
+#forbes_trt #bottom{width:300px; height:77px; margin-top:5px; background:#f7f7f7; overflow:hidden; float:right;}
 #forbes_trt #bottom #title{width:280px; height:18px; margin-top:10px; margin-left:10px; color:#333333; font-size:14px; font-weight:bold; line-height:18px;}
 #forbes_trt .bottom_list{width:280px; height:16px; margin-top:5px; margin-left:10px; padding-left:20px; background:url(/images/index/arrow.jpg) no-repeat 0 5px; line-height:16px; overflow:hidden;}
 #forbes_trt .bottom_list a{color:#666666; text-decoration:none;}
