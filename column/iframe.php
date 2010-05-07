@@ -35,7 +35,7 @@ if($type=="news"){
 	<?php $comment=$db->query('select count(*) as num from fb_comment where resource_id='.$news[$i]->id);?>
 	<div class=r_read>阅读数 （<?php echo $news[$i]->click_count;?>）    评论 （<?php echo $comment[0]->num;?>）</div>
 	<div class=r_context>
-		<?php echo mb_substr(get_fck_content($news[$i]->content),0,300,'utf8'); ?>
+		<?php echo mb_substr(strip_tags($news[$i]->content),0,300,'utf8'); ?>
 	</div>
 	<div class=r_dash></div>
 </div>
@@ -50,7 +50,7 @@ if($type=="news"){
 ?>
 	<div class=column_image >
 		<div><img border=0 src="<?php echo $img_src; ?>" /></div>
-		<div style="margin-top:5px; line-height:15px; color:#666666;"><?php echo $images[$i]->title;?></div>
+		<div class="column_image_title"><?php echo $images[$i]->title;?></div>
 	</div>
 <?php } ?>
 </div>

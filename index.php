@@ -95,21 +95,21 @@
 		 
 		 
 		<div id=forbes_trt>
-			<div class="title selected">09全球富豪</div>
+			<div class="title selected">10全球富豪</div>
 			<div class=title>09城市榜</div>	
 			<div class=title>10慈善榜</div>	
 			<div class=title>潜力企业榜</div>
 			<div id=phb>
 				<div id="rt_tab1" class="rt_tab" style="display:inline;">
-					<table cellspacing="0">
+					<table cellspacing="0" style="table-layout:auto;">
 						<tr>
 							<th width="10%" nowrap>排名</th>
 							<th width="40%" nowrap>姓名</th>
-							<th width="30%" nowrap>资产(亿美元)</th>
 							<th width="20%" nowrap>国家</th>
+							<th width="30%" nowrap>资产(亿美元)</th>
 						</tr>
 						<?php 
-							$list_id = 237;
+							$list_id = 228;
 							$list = $db->query("select table_name from fb_custom_list_type where id=$list_id");
 							$table_name = $list[0]->table_name;
 							$items = $db->query("select * from {$table_name} limit 10");
@@ -117,11 +117,12 @@
 							for($i=0;$i < 10; $i++){
 						?>
 							<tr>
-								<?php for($j=1;$j<5;$j++){
+								<?php for($j=1;$j<4;$j++){
 									$field = "field_{$j}";
 								?>
 								<td style="color:<?php if($j==2){ echo "#1649A2";}else if($j==3){echo "#000000";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
 								<?php }?>
+								<td align="center" nowrap><?php echo $items[$i]->field_5;?></td>
 							</tr>						
 						<?php }?>
 					</table>
@@ -186,11 +187,11 @@
 					<table cellspacing="0">
 						<tr>
 							<th width="10%" nowrap>排名</th>
-							<th width="60%" nowrap>主营业务</th>
+							<th width="60%" nowrap>公司名称</th>
 							<th width="20%" nowrap>所在地(省)</th>
 						</tr>
 						<?php 
-							$list_id = 149;
+							$list_id = 147;
 							$list = $db->query("select table_name from fb_custom_list_type where id=$list_id");
 							$table_name = $list[0]->table_name;
 							$items = $db->query("select * from {$table_name} limit 10");

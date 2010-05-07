@@ -341,36 +341,14 @@ function role_include($file, $role='member'){
 }
 
 function require_login($type="redirect"){
-	if($_SESSION['name']){
+	if($_COOKIE['cache_name']){
 		return true;
 	}
-	if($_COOKIE['name'] && $_COOKIE['password']){
-		$name = $_COOKIE['name'];
-		$password = md5($_COOKIE['password']);
-		$db = get_db();
-		$sql = "select * from fb_yh where name = '{$name}' and password = '{$password}'";
-		$record = $db->query($sql);
-		if($db->record_count == 1){
-			$_SESSION['user_id']=$record[0]->id;
-			$_SESSION['name']=$name;
-			$db->execute("insert into fb_yh_log (yh_id,time) values ({$_SESSION['user_id']},now())");
-			return true;
-		}else{
-			if($type=="redirect"){
-				$url = '/login/?last_url=' .get_current_url();
-				redirect($url);
-			}else{
-				return false;
-			}
-			return false;
-		}
+	if($type == 'redirect'){
+		$url = '/login/?last_url=' . get_current_url();
+		redirect($url);		
 	}else{
-		if($type=="redirect"){
-			$url = '/login/?last_url=' . get_current_url();
-			redirect($url);
-		}else{
-			return false;
-		}
+		return false;
 	}
 }
 

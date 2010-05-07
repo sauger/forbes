@@ -80,7 +80,7 @@
 					<?php }?>
 					
 				</div>
-				<div id=column_edit>
+				<div class=column_edit>
 					<div class=captions>专栏文章推荐</div>
 					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
@@ -102,7 +102,7 @@
 						</div>
 					</div>
 					<?php }?>
-					<div id=column_edit_recommend >
+					<div class=column_edit_recommend >
 						<?php
 							for($i=3;$i<11;$i++){
 								$pos_name = 'column_edit_t'.$i;
@@ -118,7 +118,7 @@
 						<?php }?>
 					</div>
 					<div class="dash2"></div>
-					<div id=column_edit_b>
+					<div class=column_edit_b>
 						<div class=caption>
 							<div class=captions>专栏列表</div>
 							<div class=line>|</div>
@@ -188,7 +188,7 @@
 					<?php }?>
 					
 				</div>
-				<div id=column_edit>
+				<div class=column_edit>
 					<div class=captions>采编空间文章推荐</div>
 					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
@@ -210,7 +210,7 @@
 						</div>
 					</div>
 					<?php }?>
-					<div id=column_edit_recommend>
+					<div class=column_edit_recommend>
 						<?php
 							for($i=3;$i<11;$i++){
 								$pos_name = "column_edit_edit_t2_{$i}";
@@ -226,7 +226,7 @@
 						<?php }?>
 					</div>
 					<div class="dash2"></div>
-					<div id=column_edit_b>
+					<div class=column_edit_b>
 						<div class=caption>
 							<div class=captions>专栏列表</div>
 							<div class=line>|</div>
