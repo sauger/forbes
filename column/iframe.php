@@ -35,7 +35,7 @@ if($type=="news"){
 	<?php $comment=$db->query('select count(*) as num from fb_comment where resource_id='.$news[$i]->id);?>
 	<div class=r_read>阅读数 （<?php echo $news[$i]->click_count;?>）    评论 （<?php echo $comment[0]->num;?>）</div>
 	<div class=r_context>
-		<a target="_blank" target="_top" href="<?php echo column_article_url($news[$i]->name,$news[$i])?>"><?php echo mb_substr(get_fck_content($news[$i]->content),0,300,'utf8'); ?></a>	
+		<?php echo mb_substr(get_fck_content($news[$i]->content),0,300,'utf8'); ?>
 	</div>
 	<div class=r_dash></div>
 </div>

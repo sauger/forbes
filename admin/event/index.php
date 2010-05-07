@@ -53,6 +53,7 @@
 					<td>
 						<a href="edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border=0></a>
 						<span class="del" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png" border=0></span>
+						<input type="text" class="priority"  name="<?php echo $record[$i]->id;?>"  value="<?php if('100'!=$record[$i]->priority){echo $record[$i]->priority;};?>" style="width:40px;">
 					</td>
 				</tr>
 		<?php
@@ -62,6 +63,12 @@
 				<td colspan=10>
 					<?php paginate("",null,"page",true);?>
 					<input type="hidden" id="db_table" value="fb_event">
+				</td>
+			</tr>
+			<tr class="btools">
+				<td colspan=10>
+					<button id=clear_priority>清空优先级</button>
+					<button id=edit_priority>编辑优先级</button>
 				</td>
 			</tr>
 		</table>	
