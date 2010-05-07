@@ -36,7 +36,7 @@
 					<div id=flash></div>
 					<div id=flash_t>
 						<div id=flash_t_l></div>
-						<div id=flash_t_r><?php show_page_href('index_hl_0');?></div>
+						<div id=flash_t_r><?php show_page_href();?></div>
 					</div>
 					<div id=flash_b>
 						<div id=content>
