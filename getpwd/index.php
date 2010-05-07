@@ -11,13 +11,14 @@
 			use_jquery();
 			js_include_tag('public');
 			css_include_tag('comlogin','public');
+			js_include_tag('get_pwd');
 			validate_form('form_login');
 		?>
 </head>
 <body>
 <div id=ibody>		
 	 <?php include_top();?>
-	 <div id=bread><span>密码找回</span></div>
+	 <div id=bread><a>密码找回</a></div>
 	 <div id=bread_line></div>
 	 <div id="left">
 	  <form name="login" id="form_login" action="getpwd.post.php" method="post">
@@ -34,15 +35,19 @@
 	  		 <div id=left-font3>验证码：</div>
 			 <input type="text" class="input3" name="yzm">
 			 <img id="yz_img" src="yz.php">
+			 <div id="change_pic">点击更换</div>
 	  		</div>
 	  		<div><input type="submit"  id="login" value="提交"></button></div>
 	  	</div>
 	  </form>
 	</div>
-	  <div id=right>
-	  	<div id=rightp>
-	  		 <div id=right-title>欢迎您登陆福布斯中文网！</div>
-	  		 <div id=right-font>《福布斯》杂志的前瞻性报道为企业高层决策者引导投资方向，提供商业机会，被誉为“美国经济的晴雨表”。</div>
+	  <div id="right">
+	  	<div id="rightp">
+	  		 <div id="login_banner" class="ad_banner"><img src="../images/comlogin/4.jpg"></div>
+	  		 	<div id="content_c">
+			  		 <div id="right-title">欢迎您登陆福布斯中文网！</div>
+			  		 <div id="right-font">《福布斯》杂志的前瞻性报道为企业高层决策者引导投资方向，提供商业机会，被誉为“美国经济的晴雨表”。</div>
+	  			</div>
 	  	</div>
 	  </div>
 	<?php 

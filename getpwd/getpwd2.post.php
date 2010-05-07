@@ -10,7 +10,6 @@
 <?php
     include_once('../frame.php');
 	
-	
 	if($_POST['session']!=$_SESSION['get_pwd']){
 		die();
 	}
@@ -21,7 +20,13 @@
 		alert("2次密码输入不一致!");
 		redirect($_SERVER['HTTP_REFERER']);
 	}else{
-		
+		$db = get_db();
+		$password = md5($_POST['password1']);
+		$uid = $_POST['uid'];
+		$db->execute("update fb_yh set password='$password' where id=$uid");
+		$db->execute("update fb_get_pwd set end_time=now() where user_id=$uid");
+		alert('修改成功!');
+		redirect('/login');
 	}
 
 ?>
