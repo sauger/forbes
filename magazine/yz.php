@@ -2,7 +2,7 @@
     session_start();
 	//生成验证码图片
 	Header("Content-type: image/PNG");
-	$im = imagecreate(60,25);
+	$im = imagecreate(60,22);
 	$back = ImageColorAllocate($im, 245,245,245);
 	imagefill($im,0,0,$back); //背景
 	
