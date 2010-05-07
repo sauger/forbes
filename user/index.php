@@ -3,26 +3,25 @@
 	require_login();
 	$db = get_db();
 	$uid = $_SESSION['user_id'];
-	$yh_xx = $db->query("select id from fb_yh_xx where yh_id=$uid");
-	$user = new table_class('fb_yh_xx');
-	$user->find($yh_xx[0]->id);
+	$type = $_REQUEST['type'];
+	if(empty($type))$type='news';
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-用户</title>
+	<title>用户中心_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','user/user','jquery.colorbox-min');
-		css_include_tag('user/user','public','user/register_user','colorbox');
+		css_include_tag('user/user','public','user/favorites','colorbox');
 	?>
 </head>
 <body>
 	<div id=ibody>
 		<?php include_top();?>
-		 <div id=bread><a href="/user/">用户中心</a> > <a>个人基本信息</a></div>
+		<div id=bread><a>用户中心</a> > <a>我的收藏</a></div>
 	 	 <div id=bread_line></div>
 		<div id=left>
 			<div id=left_top>
@@ -30,11 +29,11 @@
 			</div>
 			<div class="left_list2">
 				<div class="iconb">
-					<img style="display:none" src="/images/user/c1a.gif">
-					<img style="display:inline" src="/images/user/c1b.gif">
+					<img style="display:none" src="/images/user/c3a.gif">
+					<img style="display:inline" src="/images/user/c3b.gif">
 				</div>
-				<div class="left_text"><a href="user_info.php">个人基本信息</div></a>
-				<div class="icon2" style="display:inline"><img src="/images/user/coin.gif"></div>
+				<div class="left_text"><a href="user_favorites.php">我的收藏</a></div>
+				<div class="icon2"  style="display:inline"><img src="/images/user/coin.gif"></div>
 			</div>
 			<div class="left_list">
 				<div class="icon">
@@ -46,10 +45,10 @@
 			</div>
 			<div class="left_list">
 				<div class="icon">
-					<img src="/images/user/c3a.gif">
-					<img style="display:none" src="/images/user/c3b.gif">
+					<img src="/images/user/c1a.gif">
+					<img style="display:none" src="/images/user/c1b.gif">
 				</div>
-				<div class="left_text"><a href="user_favorites.php">我的收藏</a></div>
+				<div class="left_text"><a href="user_info.php">个人信息</a></div>
 				<div class="icon2"><img src="/images/user/coin.gif"></div>
 			</div>
 			<div class="left_list">
@@ -57,261 +56,196 @@
 					<img src="/images/user/c4a.gif">
 					<img style="display:none" src="/images/user/c4b.gif">
 				</div>
-				<div class="left_text"><a href="user_password.php">修改登录密码</a></div>
+				<div class="left_text"><a href="user_password.php">修改密码</a></div>
 				<div class="icon2"><img src="/images/user/coin.gif"></div>
 			</div>
 		</div>
 		<div class=right>
 			<div class=right_title>
-				<span style="float:left;display:inline">个人基本信息</span>
+				<span style="float:left;display:inline">我的收藏</span>
 				<?php $log = $db->query("select * from fb_yh_log where yh_id=$uid order by id desc limit 2");?>
 				<span class="r_t_right">亲爱的<?php echo $_SESSION['name'];?>：您上次登录的时间是 <?php if($db->record_count==2) echo $log[1]->time;else echo $log[0]->time;?></span>
 			</div>
 			<div class="right_text2">
-				<div id=register>
-					<div id=person>
-						完善您的个人信息，就有机会获得《福布斯》中文版杂志赠阅机会！<br/>
-						个人资料　（请全部用中文填写完整，所填事项不完整及填写家庭地址恕不受理）<br>
+				<div class=right_title2>
+					<div name="news" <?php  if($type=="news"){?>style="background:url(/images/user/right_title.jpg); color:#055C99;"<?php }?> class=right_title4>
+						专栏文章
 					</div>
-					<form action="user_info.post.php" method="post" enctype="multipart/form-data">
-					<table cellpadding="0" cellspacing="0">
-						<tr>
-							<td class=td1>姓　　名：</td>
-							<td class=td3><input class="txt" value="<?php echo htmlspecialchars($user->xm);?>" name="post[xm]" type="text"></td>
-							<td colspan=2></td>
-						</tr>
-						<tr>
-							<td class=td1>性　　别：</td>
-							<td class=td3>
-								<div class=td4><input type="radio" <?php if($user->xb=='男')echo 'checked="checked"'?> value="男" name="post[xb]">男</div>
-								<div class=td4><input type="radio" <?php if($user->xb=='女')echo 'checked="checked"'?> value="女" name="post[xb]">女</div>
-							</td>
-							<td class=td11>学　　历：</td>
-							<td class=td3>
-								<SELECT  class=sel1 name="post[xl]">
-									<option value=""></option>
-									<OPTION <?php if($user->xl=="1.博士"){?>selected="selected"<?php }?> value=1.博士>1.博士</OPTION> 
-									<OPTION <?php if($user->xl=="2.硕士"){?>selected="selected"<?php }?> value=2.硕士>2.硕士</OPTION> 
-									<OPTION <?php if($user->xl=="3.大学本科 大学专科"){?>selected="selected"<?php }?> value="3.大学本科 大学专科">3.大学本科/大学专科</OPTION> 
-									<OPTION <?php if($user->xl=="4.高中 中专"){?>selected="selected"<?php }?> value="4.高中 中专">4.高中/中专</OPTION> 
-									<OPTION <?php if($user->xl=="5.其他"){?>selected="selected"<?php }?> value=5.其他>5.其他</OPTION>
-								</SELECT>
-							</td>
-						</tr>
-						<tr>
-							<td class=td1>行　　业：</td>
-							<td class=td3>
-								<select name="post[hy]" class=sel1>
-									<option value=""></option>
-									<OPTION <?php if($user->hy=="1.制造业"){?>selected="selected"<?php }?> value=1.制造业>1.制造业</OPTION> 
-									<OPTION <?php if($user->hy=="2.进出口贸易"){?>selected="selected"<?php }?> value=2.进出口贸易>2.进出口贸易</OPTION> 
-									<OPTION <?php if($user->hy=="3.批发 零售分销"){?>selected="selected"<?php }?> value="3.批发 零售分销">3.批发/零售/分销</OPTION> 
-									<OPTION <?php if($user->hy=="4.产品代理"){?>selected="selected"<?php }?> value=4.产品代理>4.产品代理</OPTION> 
-									<OPTION <?php if($user->hy=="5.银行 金融"){?>selected="selected"<?php }?> value="5.银行 金融">5.银行/金融</OPTION> 
-							        <OPTION <?php if($user->hy=="6.保险业"){?>selected="selected"<?php }?> value=6.保险业>6.保险业</OPTION>
-									<OPTION <?php if($user->hy=="7.电信服务业"){?>selected="selected"<?php }?> value=7.电信服务业>7.电信服务业</OPTION> 
-									<OPTION <?php if($user->hy=="8.邮政服务"){?>selected="selected"<?php }?> value=8.邮政服务>8.邮政服务</OPTION> 
-							        <OPTION <?php if($user->hy=="9.网络 信息服务 电子商务"){?>selected="selected"<?php }?> value="9.网络 信息服务 电子商务">9.网络/信息服务/电子商务</OPTION> 
-									<OPTION <?php if($user->hy=="10.公用事业"){?>selected="selected"<?php }?> value=10.公用事业>10.公用事业</OPTION> 
-									<OPTION <?php if($user->hy=="11.酒店 旅游"){?>selected="selected"<?php }?> value="11.酒店 旅游">11.酒店/旅游</OPTION> 
-									<OPTION <?php if($user->hy=="12.房地产"){?>selected="selected"<?php }?> value=12.房地产>12.房地产</OPTION> 
-							        <OPTION <?php if($user->hy=="13.建筑"){?>selected="selected"<?php }?> value=13.建筑>13.建筑</OPTION> 
-									<OPTION <?php if($user->hy=="14.政府机构"){?>selected="selected"<?php }?> value=14.政府机构>14.政府机构</OPTION> 
-									<OPTION <?php if($user->hy=="15.文化 教育 培训"){?>selected="selected"<?php }?> value="15.文化 教育 培训">15.文化/教育/培训</OPTION> 
-									<OPTION <?php if($user->hy=="16.交通运输 航空 船务 铁路 货运等 "){?>selected="selected"<?php }?> value="16.交通运输 航空 船务 铁路 货运等 ">16.交通运输(航空，船务，铁路，货运等)</OPTION> 
-									<OPTION <?php if($user->hy=="17.法律 会计"){?>selected="selected"<?php }?> value="17.法律 会计">17.法律/会计</OPTION> 
-									<OPTION <?php if($user->hy=="18.商业咨询 顾问服务"){?>selected="selected"<?php }?> value="18.商业咨询 顾问服务">18.商业咨询/顾问服务</OPTION> 
-									<OPTION <?php if($user->hy=="19.媒体 公关 出版 广播 广告等 "){?>selected="selected"<?php }?> value="19.媒体 公关 出版 广播 广告等 ">19.媒体/公关（出版，广播，广告等）</OPTION> 
-									<OPTION <?php if($user->hy=="20.其他"){?>selected="selected"<?php }?> value=20.其他>20.其他</OPTION>
-								</select>
-							</td>
-							<td class=td11>职　　位：</td>
-							<td class=td3>
-								<select name="post[zw]" class=sel1>
-									<option value=""></option>
-									<OPTION <?php if($user->zw=="1.董事长 总裁 行政总裁 首席执行官 董事"){?>selected="selected"<?php }?> value="1.董事长 总裁 行政总裁 首席执行官 董事">1.董事长/总裁/行政总裁/首席执行官/董事</OPTION> 
-									<OPTION <?php if($user->zw=="2.副总裁 执行董事"){?>selected="selected"<?php }?> value="2.副总裁 执行董事">2.副总裁/执行董事</OPTION> 
-									<OPTION <?php if($user->zw=="3.总经理 副总经理 厂长 副厂长"){?>selected="selected"<?php }?> value="3.总经理 副总经理 厂长 副厂长">3.总经理/副总经理/厂长/副厂长</OPTION> 
-									<OPTION <?php if($user->zw=="4.企业所有人 企业合伙人"){?>selected="selected"<?php }?> value="4.企业所有人 企业合伙人">4.企业所有人/企业合伙人</OPTION> 
-									<OPTION <?php if($user->zw=="5.财务总监 总会计师"){?>selected="selected"<?php }?> value="5.财务总监 总会计师">5.财务总监/总会计师</OPTION> 
-									<OPTION <?php if($user->zw=="6.信息系统总监 首席信息官"){?>selected="selected"<?php }?> value="6.信息系统总监 首席信息官">6.信息系统总监/首席信息官</OPTION> 
-									<OPTION <?php if($user->zw=="7.人事经理 行政经理"){?>selected="selected"<?php }?> value="7.人事经理 行政经理">7.人事经理/行政经理</OPTION> 
-									<OPTION <?php if($user->zw=="8.总工程师 高级工程师"){?>selected="selected"<?php }?> value="8.总工程师 高级工程师">8.总工程师/高级工程师</OPTION> 
-									<OPTION <?php if($user->zw=="9.市场营销 销售总监"){?>selected="selected"<?php }?> value="9.市场营销 销售总监">9.市场营销/销售总监</OPTION> 
-									<OPTION <?php if($user->zw=="10.部门经理"){?>selected="selected"<?php }?> value=10.部门经理>10.部门经理</OPTION> 
-									<OPTION <?php if($user->zw=="11.专业人士 会计师 律师 经济师 教授等"){?>selected="selected"<?php }?> value="11.专业人士 会计师 律师 经济师 教授等">11.专业人士（会计师，律师，经济师，教授等）</OPTION> 
-									<OPTION <?php if($user->zw=="12.政府机构官员"){?>selected="selected"<?php }?> value=12.政府机构官员>12.政府机构官员</OPTION> 
-									<OPTION <?php if($user->zw=="13.其他"){?>selected="selected"<?php }?> value=13.其他>13.其他</OPTION>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td class=td1>工作单位：</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->gzdw);?>" name="post[gzdw]" type="text"></td>
-						</tr>
-						<tr>
-							<td class=td1>所在部门：</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->szbm);?>" name="post[szbm]" type="text"></td>
-						</tr>
-						<tr>
-							<td class=td1>公司性质：</td>
-							<td class=td3>
-								<select name="post[gsxz]" class=sel1>
-									<option value=""></option>
-									<option <?php if($user->gsxz=="1.国有/国有控股企业"){?>selected="selected"<?php }?> value="1.国有/国有控股企业">1.国有/国有控股企业</option>
-									<option <?php if($user->gsxz=="2.事业单位"){?>selected="selected"<?php }?> value="2.事业单位">2.事业单位</option>
-									<option <?php if($user->gsxz=="3.民营企业"){?>selected="selected"<?php }?> value="3.民营企业">3.民营企业</option>
-									<option <?php if($user->gsxz=="4.外商独资企业"){?>selected="selected"<?php }?> value="4.外商独资企业">4.外商独资企业</option>
-									<option <?php if($user->gsxz=="5.中外合资/合作企业"){?>selected="selected"<?php }?> value="5.中外合资/合作企业">5.中外合资/合作企业</option>
-									<option <?php if($user->gsxz=="6.其他（请说明）"){?>selected="selected"<?php }?> value="6.其他（请说明）">6.其他（请说明）</option>
-								</select>
-							</td>
-							<td class=td1>公司员工规模：</td>
-							<td class=td3>
-								<select name="post[gsgm]" class=sel1>
-									<option value=""></option>
-									<OPTION <?php if($user->gsgm=="1.100人以下"){?>selected="selected"<?php }?> value=1.100人以下>1.100人以下</OPTION> 
-									<OPTION <?php if($user->gsgm=="2.101 - 250"){?>selected="selected"<?php }?> value="2.101 - 250">2.101 - 250</OPTION> 
-							    	<OPTION <?php if($user->gsgm=="251 - 500"){?>selected="selected"<?php }?> value="3.251 - 500">3.251 - 500</OPTION> 
-									<OPTION <?php if($user->gsgm=="501 - 1000"){?>selected="selected"<?php }?> value="4.501 - 1000">4.501 - 1,000</OPTION> 
-									<OPTION <?php if($user->gsgm=="1001 - 5000"){?>selected="selected"<?php }?> value="5.1001 - 5000">5.1001 - 5,000</OPTION> 
-									<OPTION <?php if($user->gsgm=="5001 - 10000"){?>selected="selected"<?php }?> value="6.5001 - 10000">6.5,001 - 10,000</OPTION> 
-									<OPTION <?php if($user->gsgm=="10000以上"){?>selected="selected"<?php }?> value=7.10000以上>7.10,000以上</OPTION>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td class=td1>公司是否上市公司：</td>
-							<td class=td3>
-								<select name="post[sfss]" class=sel1>
-									<option value=""></option>
-									<OPTION <?php if($user->sfss=="1"){?>selected="selected"<?php }?> value=1>1.是</OPTION>
-									<OPTION <?php if($user->sfss=="0"){?>selected="selected"<?php }?> value=0>2.否</OPTIN>
-								</select>
-							</td>
-							<td class=td1>公司制造的产品：</td>
-							<td class=td3>
-								<select name="post[gscp]" class=sel1>
-									<option value=""></option>
-									<OPTION <?php if($user->gscp=="1.电脑 电脑配件及外设"){?>selected="selected"<?php }?> value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</OPTION> 
-							        <OPTION <?php if($user->gscp=="2.电子元器件 电阻 电容 半导体等零部件 "){?>selected="selected"<?php }?> value="2.电子元器件 电阻 电容 半导体等零部件 ">2.电子元器件（电阻、电容、半导体等零部件）</OPTION> 
-							        <OPTION <?php if($user->gscp=="3.电子消费类产品"){?>selected="selected"<?php }?> value=3.电子消费类产品>3.电子消费类产品</OPTION> 
-									<OPTION <?php if($user->gscp=="4.通讯 电力 网络等硬件设备"){?>selected="selected"<?php }?> value="4.通讯 电力 网络等硬件设备">4.通讯、电力、网络等硬件设备</OPTION> 
-									<OPTION <?php if($user->gscp=="5.汽车及汽车用品"){?>selected="selected"<?php }?> value=5.汽车及汽车用品>5.汽车及汽车用品</OPTION> 
-									<OPTION <?php if($user->gscp=="6.工业机械设备"){?>selected="selected"<?php }?> value=6.工业机械设备>6.工业机械设备</OPTION> 
-									<OPTION <?php if($user->gscp=="7.建筑及家居装饰材料"){?>selected="selected"<?php }?> value=7.建筑及家居装饰材料>7.建筑及家居装饰材料</OPTION> 
-									<OPTION <?php if($user->gscp=="8.纸业 包装印刷及包装印刷器材"){?>selected="selected"<?php }?> value="8.纸业 包装印刷及包装印刷器材">8.纸业、包装印刷及包装印刷器材</OPTION> 
-									<OPTION <?php if($user->gscp=="9.五金制品"){?>selected="selected"<?php }?> value=9.五金制品>9.五金制品</OPTION> 
-									<OPTION <?php if($user->gscp=="10.食品 食品加工及饲料"){?>selected="selected"<?php }?> value="10.食品 食品加工及饲料">10.食品、食品加工及饲料</OPTION> 
-									<OPTION <?php if($user->gscp=="11.化工产品"){?>selected="selected"<?php }?> value=11.化工产品>11.化工产品</OPTION> 
-									<OPTION <?php if($user->gscp=="12.日用化工 化妆品 香料 肥皂类及其它)"){?>selected="selected"<?php }?> value="12.日用化工 化妆品 香料 肥皂类及其它)">12.日用化工(化妆品、香料、肥皂类及其它)</OPTION> 
-									<OPTION <?php if($user->gscp=="13.生物工程 药品及医疗器械"){?>selected="selected"<?php }?> value="13.生物工程 药品及医疗器械">13.生物工程、药品及医疗器械</OPTION> 
-									<OPTION <?php if($user->gscp=="14.服装及饰品 纺织 皮革"){?>selected="selected"<?php }?> value="14.服装及饰品 纺织 皮革">14.服装及饰品、纺织、皮革</OPTION> 
-									<OPTION <?php if($user->gscp=="15.钟表 相机及精密仪表"){?>selected="selected"<?php }?> value="15.钟表 相机及精密仪表">15.钟表、相机及精密仪表</OPTION> 
-									<OPTION <?php if($user->gscp=="16.礼品 玩具 珠宝及文教体育用品"){?>selected="selected"<?php }?> value="16.礼品 玩具 珠宝及文教体育用品">16.礼品、玩具、珠宝及文教体育用品</OPTION> 
-									<OPTION <?php if($user->gscp=="17.其他"){?>selected="selected"<?php }?> value=17.其他>17.其他</OPTION>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<td class=td1>公司年营业额：</td>
-							<td class=td3>
-								<select name="post[gsyye]" class=sel1>
-									<option value=""></option>
-									<OPTION <?php if($user->gsyye=="1.500万以下"){?>selected="selected"<?php }?> value=1.500万以下>1.500万以下</OPTION> 
-									<OPTION <?php if($user->gsyye=="2.501万--1000万"){?>selected="selected"<?php }?> value=2.501万--1000万>2.501万--1,000万</OPTION> 
-									<OPTION <?php if($user->gsyye=="3.1001万--5000万"){?>selected="selected"<?php }?> value=3.1001万--5000万>3.1,001万--5,000万</OPTION> 
-									<OPTION <?php if($user->gsyye=="4.5001万--1亿"){?>selected="selected"<?php }?> value=4.5001万--1亿>4.5,001万--1亿</OPTION> 
-									<OPTION <?php if($user->gsyye=="5.1亿零1万--50亿"){?>selected="selected"<?php }?> value=5.1亿零1万--50亿>5.1亿零1万--50亿</OPTION> 
-									<OPTION <?php if($user->gsyye=="6.50亿零1万--100亿"){?>selected="selected"<?php }?> value=6.50亿零1万--100亿>6.50亿零1万--100亿</OPTION> 
-									<OPTION <?php if($user->gsyye=="7.100亿以上"){?>selected="selected"<?php }?> value=7.100亿以上>7.100亿以上</OPTION>
-								</select>
-							</td>
-							<td class=td1>您的个人年收入：</td>
-							<td class=td3>
-								<select name="post[grsr]" class=sel1>
-									<OPTION value=""></OPTION> 
-									<OPTION <?php if($user->grsr=="1.10万元人民币以内"){?>selected="selected"<?php }?> value="1.10万元人民币以内">1. 10万元人民币以内</OPTION> 
-							        <OPTION <?php if($user->grsr=="2.10万-299999元人民币"){?>selected="selected"<?php }?> value="2.10万-299999元人民币">2. 10万-299,999元人民币</OPTION> 
-									<OPTION <?php if($user->grsr=="3.30万-499999元人民币"){?>selected="selected"<?php }?> value="3.30万-499999元人民币">3. 30万-499,999元人民币</OPTION> 
-									<OPTION <?php if($user->grsr=="4.50万-999999元人民币"){?>selected="selected"<?php }?> value="4.50万-999999元人民币">4. 50万-999,999元人民币</OPTION> 
-									<OPTION <?php if($user->grsr=="5.100万人民币及以上"){?>selected="selected"<?php }?> value="5.100万人民币及以上">5. 100万人民币及以上</OPTION>
-								</select>
-							</td>
-						</tr>
-					</table>
-					<table cellpadding="0" cellspacing="0">
-						<tr>
-							<td class=td1><span style="color:red;">*</span>所在区域：</td>
-							<td class=td3><select id="province" name="post[sf]" class=sel1>
-								<option value=""></option>
+					<div name="rich" <?php if($type=="rich"){?>style="background:url(/images/user/right_title.jpg); color:#055C99;"<?php }?> class=right_title4>
+						收藏的富豪
+					</div>
+					<div name="famous" <?php if($type=="famous"){?>style="background:url(/images/user/right_title.jpg); color:#055C99;"<?php }?> class=right_title4>
+						收藏的名人
+					</div>
+					<div name="column" <?php if($type=="column"){?>style="background:url(/images/user/right_title.jpg); color:#055C99;"<?php }?> class=right_title4>
+						收藏的专栏
+					</div>
+				</div>
+				<div class=right_text id="news" <?php if($type=="news")echo 'style="display:inline;"';?>>
+					<div class="right_box">
+					<?php
+						$sql = "select t1.title,t1.id,t1.created_at from fb_news t1 join fb_collection t2 on t1.id=t2.resource_id where t2.resource_type='fb_news' and t2.user_id=$uid order by t2.created_at";
+						$news = $db->paginate($sql,7,'news_page');
+						$news_count = count($news);
+						for($i=0;$i<$news_count;$i++){
+					?>
+					<div class=li1><a target="_blank" title="<?php echo strip_tags($news[$i]->title);?>" href="<?php echo static_news_url($news[$i]);?>"><?php echo $news[$i]->title;?></a></div><div class=li2> 收藏于：<?php echo substr($news[$i]->created_at, 0, 10);?></div>
+					<?php
+						}
+					?>
+					</div>
+					<div class="paginate"><?php paginate("user_favorites.php?type=news",null,'news_page');?></div>
+				</div>
+				<div class=right_text id="rich" <?php if($type=="rich")echo 'style="display:inline;"';?>>
+					<div class="right_box">
+					<?php
+						$rich_ids = $db->query("select group_concat(resource_id) as ids from fb_collection where user_id=$uid and resource_type='rich' group by user_id");
+						$ids = $rich_ids[0]->ids;
+						if($ids!=''){
+							$sql = "SELECT r1.id,i2.name as iname,c2.name as cname,i2.id as iid,c2.id as cid FROM fb_rich r1  left join fb_rich_company c1 on r1.id=c1.rich_id left join fb_company c2 on c1.company_id=c2.id left join fb_company_industry i1 on c2.id=i1.company_id left join fb_industry i2 on i1.industry_id=i2.id  where r1.id in({$ids})";
+							$rich_info = $db->query($sql);
+							$info_count = $db->record_count;
+							$sql = "select id,name,gender,birthday,image,current_fortune_order from fb_rich where id in ($ids)";
+							$rich = $db->paginate($sql,4,'rich_page');
+							$rich_count = count($rich);
+							$rich_list = $db->query("select t3.name,t1.rich_id,t3.id from fb_rich_list_items t1 join fb_custom_list_type t3 on t1.list_id=t3.id where t1.rich_id in ($ids)");
+							$list_count = $db->record_count;
+						}else{
+							$rich_count = 0;
+						}
+					
+						for($i=0;$i<$rich_count;$i++){
+							$fortune = $db->query("select fortune,fortune_order,fortune_year from fb_rich_fortune where rich_id={$rich[$i]->id} order by fortune_year desc");
+							if($db->record_count>0){
+								$fortune = $fortune[0]->fortune.'亿人民币';
+								$order = $fortune[0]->fortune_order;
+								$year = $fortune[0]->fortune_year.'年';
+							}else{
+								$fortune = '未知';
+								$order = '未知';
+								$year = '未知';
+							}
+							$company = array();
+							$industry = array();
+							for($j=0;$j<$info_count;$j++){
+								if($rich_info[$j]->id==$rich[$i]->id){
+									$company[$rich_info[$j]->cid] = $rich_info[$j]->cname;
+									$industry[$rich_info[$j]->iid] = $rich_info[$j]->iname;
+								}
+							}
+							$company = array_unique($company);
+							$industry = array_unique($industry);
+					?>
+					<div class="rich_box">
+						<div class="rich_pic"><img src="<?php echo $rich[$i]->image;?>" width="70" height="70"></div>
+						<div class="rich_info">
+							<div class="rich_name"><a href="/rich/rich.php?id=<?php echo $rich[$i]->id;?>"><?php echo $rich[$i]->name;?></a> <?php if($rich[$i]->gender==1)echo '男';elseif($rich[$i]->gender==0)echo '女';else echo "未知";?> <?php if($rich[$i]->birthday!=''&&strlen($rich[$i]->birthday)==4)echo (date('Y')-$rich[$i]->birthday).'岁';else echo '未知';?></div>
+							<div class="rich_com"><?php $j=0;foreach($company as $key => $val){if($j!=0)echo ',';?><a class="style1"><?php echo $val;?></a><?php $j++;}?></div>
+							<div class="rich_ind">（<?php $j=0;foreach($industry as $key => $val){if($j!=0)echo ',';?><a class="style2"><?php echo $val;?></a><?php $j++;}?>）</div>
+							<div class="rich_rank">
+								年度排名：<span class="red"><?php echo $order;?></span>　今日排名：<span class="red"><?php echo $rich[$i]->current_fortune_order;?></span><br/>
+								个人财富：<?php echo $fortune;?><br/>
+								（截止日期：<?php echo $year;?>）
+							</div>
+						</div>
+						<div class="rich_bd">
+							<div class="bd_left">入选榜单：</div>
+							<div class="bd_list">
+								<?php for($n=0;$n<$list_count;$n++){
+									if($rich_list[$n]->rich_id==$rich[$i]->id){
+								?>
+								<a href="/list/show_list.php?id=<?php echo $rich_list[$n]->id;?>"><?php echo $rich_list[$n]->name;?></a>
+								<?php }}?>
+							</div>
+						</div>
+					</div>
+					<?php
+						}
+					?>
+					</div>
+					<div class="paginate"><?php paginate("user_favorites.php?type=rich",null,'rich_page');?></div>
+				</div>
+				<div class=right_text id="famous" <?php if($type=="famous")echo 'style="display:inline;"';?>>
+					<div class="right_box">
+						<?php
+							$list = $db->query("select id from fb_custom_list_type where table_name='fb_famous_list_items' and year=".(date('Y')-1));
+							if($db->record_count==1){
+								$sql = "select t1.id,t1.name,t1.xb,t1.mr_zp,t1.zy,t3.fortune,t3.exposure_rate,t3.fortune_order,t3.exposure_order from fb_mr t1 join fb_collection t2 on t1.id=t2.resource_id join fb_famous_list_items t3 on t1.id=t3.famous_id where t2.resource_type='famous' and t2.user_id=$uid and t3.list_id={$list[0]->id} order by t2.created_at";
+								$famous = $db->paginate($sql,4,'famous_page');
+								$famous_count = count($famous);
+							}else{
+								$famous_count = 0;
+							}
+							$famous_list = $db->query("select t1.list_id,t3.name,t1.famous_id from fb_famous_list_items t1 join fb_collection t2 on t1.famous_id=t2.resource_id join fb_custom_list_type t3 on t1.list_id=t3.id where t2.resource_type='famous' and t2.user_id=$uid  order by t2.created_at");
+							$list_count = count($famous_list);
+							for($i=0;$i<$famous_count;$i++){
+						?>
+						<div class="famous_box">
+							<div class="famous_pic">
+								<img src="<?php echo $famous[$i]->mr_zp?>" width="90" height="90">
+							</div>
+							<div class="famous_info">
+								<div class="famous_name">
+									<a href="famous.php?id=<?php echo $famous[$i]->id?>"><?php echo $famous[$i]->name?></a>　<?php echo $famous[$i]->xb?>
+								</div>
+								<div class="famous_rank">
+									<span class="blue"><?php echo $famous[$i]->zy?></span><br/>
+									年度收入排名：<?php echo $famous[$i]->fortune_order;?>　收入：<?php echo $famous[$i]->fortune;?>万<br/>
+									曝光率排名：<?php echo $famous[$i]->exposure_order;?>　曝光指数：<?php echo $famous[$i]->exposure_rate;?><br/>
+								</div>
+							</div>
+							<div class="famous_bd">
+								<div class="bd_left">入选榜单：</div>
+								<div class="bd_list">
+									<?php for($n=0;$n<$list_count;$n++){
+										if($famous_list[$n]->famous_id==$famous[$i]->id){
+									?>
+									<a class="famous_a" href="/show/show_list.php?id=<?php echo $famous_list[$n]->list_id;?>"><?php echo $famous_list[$n]->name;?></a>
+									<?php }}?>
+								</div>
+							</div>
+						</div>
+						<?php }?>
+					</div>
+					<div class="paginate"><?php paginate("user_favorites.php?type=famous",null,'famous_page');?></div>
+				</div>
+				<div class=right_text id="column" <?php if($type=="column")echo 'style="display:inline;"';?>>
+					<div class="right_box">
+						<?php
+							$sql = "select t1.* from fb_collection t2 join fb_user t1 on t1.id=t2.resource_id where t2.user_id=$uid and t2.resource_type='column'";
+							$author = $db->paginate($sql,2,'column_page');
+							$sql = "select t1.title,t1.id,t1.short_title,t1.author_id from fb_collection t2 join fb_news t1 on t1.author_id=t2.resource_id where t2.user_id=$uid and t2.resource_type='column'";
+							$news = $db->query($sql);
+							for($i=0;$i<count($author);$i++){
+								$k=0;
+						?>
+						<div <?php if($i==1){?>style="border:0"<?php }?> class="column_box">
+							<div class="column_photo"><img width="90" height="90" src="<?php if(!$author[$i]->image_src)echo '/images/html/column/picture.jpg';else echo $author[$i]->image_src;?>"></div>
+							<div class="column_info">
+								<div class="column_title"><a href=""><?php echo $author[$i]->nick_name;?></a></div>
+								<div class="column_description"><?php echo $author[$i]->description;?></div>
+							</div>
+							<div class="column_news">
+								<div class="news_new">最新专栏文章：</div>
+								<?php 
+									for($j=0;$j<count($news);$j++){
+										if($news[$j]->author_id==$author[$i]->id){
+											$k++;
+											if($k>2) break;
+								?>
+								<div class="news_title"><a title="<?php echo strip_tags($news[$j]->title);?>" href="/news/news.php?id=<?php echo $news[$j]->id?>"><?php echo $news[$j]->short_title;?></a></div>
 								<?php
-									$province = $db->query("select * from fb_chinafar where region_type=1");
-									for($i=0;$i<count($province);$i++){
+									}}
 								?>
-								<option <?php if($user->sf==$province[$i]->id)echo 'selected="selected"';?> value="<?php echo $province[$i]->id;?>"><?php echo $province[$i]->name;?></option>
-								<?php 
-									}
-								?>
-							</select></td>
-							<td class=td3><select id="city" name="post[cs]" class=sel1>
-								<option value=""></option>
-								<?php 
-									if($user->sf!=''){
-										$city = $db->query("select * from fb_chinafar where parent_id={$user->sf}");
-										for($i=0;$i<count($city);$i++){
-								?>
-								<option <?php if($user->cs==$city[$i]->id)echo 'selected="selected"';?> value="<?php echo $city[$i]->id;?>"><?php echo $city[$i]->name;?></option>
-								<?php 
-										}
-									}
-								?>
-							</select></td>
-						</tr>
-					</table>
-					<table cellpadding="0" style="margin-top:0" cellspacing="0">
-						<tr>
-							<td class=td1>您的通讯地址：</td>
-							<td colspan=3 class=td2><input value="<?php echo htmlspecialchars($user->txdz);?>" class="txt1" name="post[txdz]" type="text"></td>
-						</tr>
-						<tr>
-							<td class=td1>邮　　编：</td>
-							<td colspan=3 class=td2><input value="<?php echo htmlspecialchars($user->yb);?>" class="txt1" name="post[yb]" type="text"></td>
-						</tr>
-						<tr>
-							<td class=td1>您的固定电话：</td>
-							<td class=td2><input class="txt2" value="<?php echo $user->gddh1?>" name="post[gddh1]" type="text"></td>
-							<td class=td2><input class="txt2" value="<?php echo $user->gddh2?>" name="post[gddh2]" type="text"></td>
-							<td class=td2><input class="txt2" value="<?php echo $user->gddh3?>" name="post[gddh3]" type="text"></td>
-						</tr>
-						<tr>
-							<td class=td1>手　　机：</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->sj);?>" name="post[sj]" type="text"></td>
-						</tr>
-						<tr>
-							<td class=td1>M　S　N：</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->msn);?>" name="post[msn]" type="text"></td>
-						</tr>
-						<tr>
-							<td class=td1>Ｑ　　Ｑ：</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->qq);?>" name="post[qq]" type="text"></td>
-						</tr>
-						<tr >
-							<td class=td1>您的头像：</td>
-							<td colspan=3 class=td2><input class="file" name="tx" type="file"><?php if($user->tx!=''){?><a href="<?php echo $user->tx?>" title="查看头像" class="color_box">点击查看</a><?php }?></td>
-						</tr>
-					</table>
-					<div id="submit"><button type="submit">提交并保存个人信息</button></div>
-					</form>
+								<div class="go_to"><a href="/column/column.php?id=<?php echo $author[$i]->id;?>">进入专栏>></a></div>
+							</div>
+						</div>
+						<?php }?>
+					</div>
+					<div class="paginate"><?php paginate("user_favorites.php?type=column",null,'column_page');?></div>
 				</div>
 			</div>
 		</div>
 		<?php include_bottom();?>
 	</div>
 </body>
-
-<script>
-	$(function(){
-		$(".color_box").colorbox();
-	})
-</script>
