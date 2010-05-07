@@ -507,13 +507,13 @@
 						<div class=writer_pic<?php show_page_pos($pos_name,'index_column2')?>><?php show_page_img(null,null,0,'image1',null,'alias')?></div>
 						<div class=writer_name>
 							<a href="<?php echo $pos_items->$pos_name->alias;?>" target="_blank">
-								<span style="font-weight:bold;"><?php echo $pos_items->$pos_name->display;?></span>
+								<span style="color: #000;"><?php echo $pos_items->$pos_name->display;?></span>
 							</a>	
 						</div>	
 						<?php for($j=0;$j<2;$j++){
 							$pos_name= "index_column_article_{$i}_{$j}";
 						?>
-						<div class="writer_name" <?php show_page_pos($pos_name,'link_withouttime')?>>
+						<div class="writer_name" style="font-weight: bold;" <?php show_page_pos($pos_name,'link_withouttime')?>>
 							<?php show_page_href();?>
 						</div>
 						<?php }?>
