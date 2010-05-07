@@ -38,7 +38,7 @@
 			<div id="survey_content_left"></div>
 			<div id="survey_content_center">
 			<?php for($i=0;$i<2;$i++){ ?>
-				<div class=content <?php $pos_name='club_survey_'.$i; show_page_pos($pos_name,'survey'); ?>>
+				<div class=content <?php $pos_name='club_survey_'.$i; show_page_pos($pos_name,'survey_pic'); ?>>
 					<div class=content_l>
 						<?php show_page_img(); ?>	
 					</div>
