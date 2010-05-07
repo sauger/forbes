@@ -61,7 +61,6 @@ if($_SESSION['login']!=$_POST['session']){
 	</head>
 	<body>
 	<?
-	
 	if($err){
 		 	alert($err);
 	 }

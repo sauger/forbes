@@ -3,6 +3,11 @@
 	require_login();
 	$db = get_db();
 	$uid = front_user_id();
+	if(isset($_COOKIE['name'])){
+		$uname = $_COOKIE['name'];
+	}else{
+		$uname = $_COOKIE['login_name'];
+	}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -20,7 +25,7 @@
 	<div id=ibody>
 		<?php include_top();?>
 		<div id=top>
-			<div id=bread><a>用户中心</a> > <a>订阅信息</a></div>
+			<div id=bread>用户中心 > 订阅信息</div>
 	 	 <div id=bread_line></div>
 		</div>
 		<div id=left>
@@ -62,9 +67,9 @@
 		</div>
 		<div class=right>
 			<div class=right_title>
-				<span style="float:left;display:inline">订阅信息</span>
-				<?php $log = $db->query("select * from fb_yh_log where yh_id=$uid order by id desc limit 2");?>
-				<span class="r_t_right">亲爱的<?php echo $_SESSION['name'];?>：您上次登录的时间是 <?php if($db->record_count==2) echo $log[1]->time;else echo $log[0]->time;?></span>
+				<div id="r_title1"><?php echo $uname;?> 的个人中心</div>
+				<?php $score = $db->query("select score from fb_yh where id=$uid");?>
+				<div id="r_title2">个人积分：<?php echo $score[0]->score;?></div>
 			</div>
 			<div class="right_text2">
 				<?php
@@ -80,7 +85,7 @@
 					<input type="checkbox" name="jhtj2" <?php if($order[0]->jhtj==0)echo 'checked="checked"';?> id="checkbox2"><label for="checkbox2">我要取消订阅</label>
 				</div>
 				
-				<div class="right_list" style="margin-top:40px;">
+				<div class="right_list">
 					是否愿意订阅福布斯分类文章（一周发送一次）　<span class="right_list2">如果您要取消订阅请选择去掉勾选的选项</span>
 				</div>
 				<div class="right_check_list">

@@ -1,4 +1,4 @@
-﻿<?php 
+﻿<?php
 	include_once( dirname(__FILE__) .'/frame.php');
 	$db = get_db();
 	$seo=$db->query('select * from fb_seo where name="网站首页"');
