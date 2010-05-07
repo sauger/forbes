@@ -367,10 +367,10 @@
 			<div id=dictionary>
 				<div id=dictionary_t>
 					<div id=dictionary_tl <?php show_page_pos("index_dict0");?>><?php show_page_href("index_dict0");?></div>
-					<div id=dictionary_tr> <span><a href="<?php echo get_newslist_url($category->find_by_name("热门财经词汇")->id);?>" target="_blank">实用财经词汇</a></span></div>
+					<div id=dictionary_tr> <span style="float:right;"><a href="<?php echo get_newslist_url($category->find_by_name("热门财经词汇")->id);?>" target="_blank">实用财经词汇</a></span></div>
 				</div>
 				<div id=dictionary_bl <?php show_page_pos("index_dictb0",'link');?>><?php show_page_href("index_dictb0");?></div>
-				<div id=dictionary_br <?php show_page_pos("index_dictb1",'link');?>><?php show_page_href("index_dictb1");?></div>
+				<div id=dictionary_br ></div>
 			</div>
 
 			<div id=activity>
