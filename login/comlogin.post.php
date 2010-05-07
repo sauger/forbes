@@ -37,10 +37,11 @@ if($_SESSION['login']!=$_POST['session']){
 				$limit = 0;
 			}
 			setcookie("name",$name,$limit,'/');
-			setcookie("cache_name",$cache_name,$limit,'/');
+			setcookie("cache_name",$cache_name,0,'/');
 			setcookie("password",$_POST['password'],$limit,'/');
 			
 		}else{
+			setcookie("cache_name",$cache_name,0,'/');
 			setcookie("login_name",$cache_name,time()+3600*24,'/');
 		}
 		$db->execute("insert into fb_yh_log (yh_id,time) values ({$user_id},now())");
