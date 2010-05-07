@@ -9,7 +9,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-用户</title>
+	<title>用户中心_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','user/user','jquery.colorbox-min');
@@ -19,7 +19,7 @@
 <body>
 	<div id=ibody>
 		<?php include_top();?>
-			 <div id=bread><a href="/user/">用户中心</a> > <a>修改登录密码</a></div>
+			 <div id=bread><a>用户中心</a> > <a>修改登录密码</a></div>
 	 	 <div id=bread_line></div>
 		<div id=left>
 			<div id=left_top>
@@ -27,10 +27,10 @@
 			</div>
 			<div class="left_list">
 				<div class="icon">
-					<img src="/images/user/c1a.gif">
-					<img style="display:none" src="/images/user/c1b.gif">
+					<img src="/images/user/c3a.gif">
+					<img style="display:none" src="/images/user/c3b.gif">
 				</div>
-				<div class="left_text"><a href="user_info.php">个人基本信息</a></div>
+				<div class="left_text"><a href="user_favorites.php">我的收藏</a></div>
 				<div class="icon2"><img src="/images/user/coin.gif"></div>
 			</div>
 			<div class="left_list">
@@ -43,10 +43,10 @@
 			</div>
 			<div class="left_list">
 				<div class="icon">
-					<img src="/images/user/c3a.gif">
-					<img style="display:none" src="/images/user/c3b.gif">
+					<img src="/images/user/c1a.gif">
+					<img style="display:none" src="/images/user/c1b.gif">
 				</div>
-				<div class="left_text"><a href="user_favorites.php">我的收藏</a></div>
+				<div class="left_text"><a href="user_info.php">个人信息</a></div>
 				<div class="icon2"><img src="/images/user/coin.gif"></div>
 			</div>
 			<div class="left_list2">
@@ -54,7 +54,7 @@
 					<img style="display:none" src="/images/user/c4a.gif">
 					<img style="display:inline" src="/images/user/c4b.gif">
 				</div>
-				<div class="left_text"><a href="user_password.php">修改登录密码</a></div>
+				<div class="left_text"><a href="user_password.php">修改密码</a></div>
 				<div class="icon2" style="display:inline"><img src="/images/user/coin.gif"></div>
 				
 			</div>
