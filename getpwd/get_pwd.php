@@ -27,11 +27,13 @@
 	 	<?php
 	 	$verify = $_GET['verify'];
 		if(empty($verify)){
-			redirect('/error.html'); 
+			alert('您的申请不合法或者已经过期');
+			redirect('/'); 
 		}else{
 			$db->query("select * from fb_get_pwd where verify='$verify' and now()<end_time");
 			if(!$db->move_first()){
-				echo "<div id='error'>您的申请不合法或者已经过期</div>";
+				alert('您的申请不合法或者已经过期');
+				redirect('/'); 
 			}else{
 	 ?>
 	  <form name="login" id="get_pwd" action="getpwd2.post.php" method="post">
