@@ -178,7 +178,7 @@
 								<?php for($j=1;$j<6;$j++){
 									$field = "field_{$j}";
 								?>
-								<td style="color:<?php if($j==2){ echo "#1649A2";}else if($j==4){echo "#000000";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<td style="color:<?php if($j==2){ echo "#1649A2"."; font-weight:bold;";}else if($j==4){echo "#000000";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
 								<?php }?>
 							</tr>						
 						<?php }?>
