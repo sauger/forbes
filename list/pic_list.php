@@ -39,7 +39,7 @@
 	<? include_top();?>
 		<div id=bread><a href="#">榜单</a></div>
 		<div id=bread_line></div>
-		<div id="list_name"></div>
+		<div id="list_name"><?php echo $list->name;?></div>
 		<div id=pic_list>
 			<div id=p_flash>
 				<div id="control_panel">
