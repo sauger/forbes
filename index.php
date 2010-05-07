@@ -151,7 +151,7 @@
 								<?php for($j=2;$j<8;$j++){
 									$field = "field_{$j}";
 								?>
-								<td style="color:<?php if($j==2){ echo "#1649A2";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<td style="color:<?php if($j==3){ echo "#1649A2";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
 								<?php }?>
 							</tr>						
 						<?php }?>
@@ -201,7 +201,7 @@
 						?>
 							<tr>
 								<td align="center" nowrap><?php echo $i + 1;?></td>
-								<td style="color:<?php if($j==2){ echo "#1649A2";} ?>" align="center" nowrap><?php echo $items[$i]->field_4;?></td>
+								<td style="color:#1649A2" align="center" nowrap><?php echo $items[$i]->field_4;?></td>
 								<td align="center" nowrap><?php echo $items[$i]->field_5;?></td>
 							</tr>						
 						<?php }?>
