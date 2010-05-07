@@ -25,7 +25,7 @@
 	 	<?php
 	 	$verify = $_GET['verify'];
 		if(empty($verify)){
-			echo "<div id='error'>您的申请不合法或者已经过期</div>";
+			redirect('/error.html'); 
 		}else{
 			$db->query("select * from fb_get_pwd where verify='$verify' and now()<end_time");
 			if(!$db->move_first()){
