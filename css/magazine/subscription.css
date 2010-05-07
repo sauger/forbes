@@ -16,11 +16,11 @@ div{margin:0; padding:0; float:left; display:inline;}
 .subscription table { border-collapse:collapse}
 .subscription table tr td { padding:2px;}
 #su_bottom{margin-left:250px;}
-#chang_pic{ cursor:pointer; color:#246BB0; margin-left:15px;}
+#chang_pic{ cursor:pointer; color:#246BB0; margin-left:10px; font-weight:normal;}
 .subscription select { width:300px;}
 .subscription input { padding:2px;}
 td input,select{border:1px solid #999999; }
-td{font-weight:bold; font-size:13px; line-height:25px; }
+td{font-weight:bold; font-size:13px; line-height:28px; }
 #su_bottom{width:100px; height:30px; }
-#yzm{width:60px; height:25px; margin-left:10px; font-size:16px; font-weight:bold; line-height:25px; }
+#yzm{width:60px; height:28px; margin-left:10px; font-size:16px; font-weight:bold; line-height:28px; }
 .inputradio{border:none;}
