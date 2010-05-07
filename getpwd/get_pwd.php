@@ -12,48 +12,52 @@
 		<title>福布斯-密码找回</title>
 		<?php
 			use_jquery();
-			js_include_tag('public');
+			js_include_tag('public','get_pwd');
 			css_include_tag('comlogin','public');
-			validate_form('form_login');
 		?>
 </head>
 <body>
 <div id=ibody>		
 	 <?php include_top();?>
-	 <div id=bread><span>密码找回</span></div>
+	 <div id=bread><a>密码找回</a></div>
 	 <div id=bread_line></div>
 	 <div id="left">
 	 	<?php
 	 	$verify = $_GET['verify'];
 		if(empty($verify)){
-			echo "<div id='error'>您的申请不合法或者已经过期</div>";
+			redirect('/error.html'); 
 		}else{
 			$db->query("select * from fb_get_pwd where verify='$verify' and now()<end_time");
-			if($db->record_count==0){
+			if(!$db->move_first()){
 				echo "<div id='error'>您的申请不合法或者已经过期</div>";
 			}else{
 	 ?>
-	  <form name="login" id="form_login" action="getpwd2.post.php" method="post">
-	  	<div id=leftp>
-	  		<div style="float:left; display:inline">
-	  		 <div id=left-font1>新密码：</div>
-	  		 <input type="password" id=font1 class="required"  name="password1"></input>
+	  <form name="login" id="get_pwd" action="getpwd2.post.php" method="post">
+	  	<div id="left_top">
+	  		<div id="left_title">密码找回</div>
+		</div>
+		<div id="left_bottom">
+	  		<div class="line_div" style="margin-top:30px;">
+		  		 <div>新 密 码：</div>
+		  		 <input type="password" class="required" name="password1"></input>
 	  		</div>
-	  		<div style="float:left; display:inline">
-	  		 <div id=left-font2>重复密码：</div>
-	  		 <input type="password" class="required font2" name="password2"></input>
+	  		<div class="line_div">
+	  		 <div>重复密码：</div>
+	  		 <input type="password" class="required" name="password2"></input>
 	  		</div>
-	  		<div><input type="submit"  id="login" value="提交"></button></div>
+	  		<div class="line_div"><input type="button" id="login2" value="提交"></button></div>
 	  	</div>
 		<input type="hidden" name="session" value="<?php echo $_SESSION['get_pwd'];?>">
+		<input type="hidden" name="uid" value="<?php echo $db->field_by_name('user_id');?>">
 	  </form>
 	</div>
-	  <div id=right>
-	  	<div id=rightp>
-	  		 <div id=right-title>欢迎您登陆福布斯中文网！</div>
-	  		 <div id=right-font>《福布斯》杂志的前瞻性报道为企业高层决策者引导投资方向，提供商业机会，被誉为“美国经济的晴雨表”。</div>
-	  	</div>
-	  </div>
+	<div id="right">
+	    <div id="login_banner" class="ad_banner"><img src="../images/comlogin/4.jpg"></div>
+	    <div id="right_bottom">
+			 <div id="right_title">欢迎您登陆福布斯中文网！</div>
+			 <div id="right_word">《福布斯》杂志的前瞻性报道为企业高层决策者引导投资方向，提供商业机会，被誉为“美国经济的晴雨表”。</div>
+	    </div>
+	</div>
 	<?php
 	}
 		}
