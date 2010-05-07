@@ -19,6 +19,9 @@
 	if($_POST['password1']!=$_POST['password2']){
 		alert("2次密码输入不一致!");
 		redirect($_SERVER['HTTP_REFERER']);
+	}elseif(strlen($_POST['password1'])>20||strlen($_POST['password1'])<4){
+		alert("密码长度不正确!");
+		redirect($_SERVER['HTTP_REFERER']);
 	}else{
 		$db = get_db();
 		$password = md5($_POST['password1']);

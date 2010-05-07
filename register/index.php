@@ -17,7 +17,7 @@
 <body>
  <div id="ibody">		
 	<?php include_top();?>
-	<div id=bread><a href="#">注册</a></div>
+	<div id=bread>注册</div>
 	<div id=bread_line></div>
 	<div id=register>
 		<form id="re_form" action="register.post.php" method="post">
@@ -45,7 +45,7 @@
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span><label for="user_pass">登陆密码</label></td>
-				<td  class=td3><input class="txt" id="user_pass" name="user[password]" type="password"></td>
+				<td class=td3><input class="txt" id="user_pass" name="user[password]" type="password"></td>
 				<td class=td2>
 					<div id="pass1" class="display1 pass_check">请设置4-20个字符，包含英文大小写字母、数字和部分标点符号的组合</div>
 					<div id="pass2" class="display2 pass_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">密码可用</div></div>
@@ -228,14 +228,12 @@
 <p>a. 法律程序所规定或政府主管部门提出要求；</p>
 <p><b>22、解释权</b></p>
 <p>本协议版权由福布斯中文网所有，福布斯中文网保留一切解释权利。</p></div>
-		<table width="500">
+		<table>
 			<tr>
-				<td class=td5 style="width:300px; color:#999999; font-weight:normal;"><input id="sure_check" type="checkbox"><label for="sure_check"></lable>我接受福布斯中文网用户注册和使用协议</td>
-				<td class=td2 style="width:100px; height:40px; line-height:40px; float:left; display:inline;"></td>
+				<td class=td5><input id="sure_check" type="checkbox"><label for="sure_check"></lable>我接受福布斯中文网用户注册和使用协议</td>
 			</tr>
 			<tr>
 				<td class=td5><button id="tj" disabled="ture" type="button">确认并注册</button></td>
-				<td class=td2></td>
 			</tr>
 		</table>
 		</form>

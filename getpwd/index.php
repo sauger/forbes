@@ -21,35 +21,36 @@
 	 <div id=bread><a>密码找回</a></div>
 	 <div id=bread_line></div>
 	 <div id="left">
-	  <form name="login" id="form_login" action="getpwd.post.php" method="post">
-	  	<div id=leftp>
-	  		<div style="float:left; display:inline">
-	  		 <div id=left-font1>用户名：</div>
-	  		 <input type="text" id=font1 class="required"  name="u_name" value=""></input>
+	 	<div id="left_top">
+	  		<div id="left_title">密码找回</div>
+		</div>
+		<div id="left_bottom">
+	  	<form name="login" id="form_login" action="getpwd.post.php" method="post">
+	  		<div class="line_div">
+	  		 <div>用户名：</div>
+	  		 <input type="text"class="required" name="u_name"></input>
 	  		</div>
-	  		<div style="float:left; display:inline">
-	  		 <div id=left-font2>邮　箱：</div>
-	  		 <input type="text" class="required font2" name="email" value=""></input>
+	  		<div class="line_div">
+	  		 <div >邮　箱：</div>
+	  		 <input type="text" class="required" name="email"></input>
 	  		</div>
-	  		<div style="float:left; display:inline">
-	  		 <div id=left-font3>验证码：</div>
-			 <input type="text" class="input3" name="yzm">
+	  		<div class="line_div">
+	  		 <div>验证码：</div>
+			 <input type="text" id="verify_text" name="yzm">
 			 <img id="yz_img" src="yz.php">
-			 <div id="change_pic">点击更换</div>
+			 <div id="change_pic">看不清楚？换张图片</div>
 	  		</div>
-	  		<div><input type="submit"  id="login" value="提交"></button></div>
+	  		<div class="line_div"><input type="submit"  id="login" value="提交"></button></div>
 	  	</div>
 	  </form>
 	</div>
-	  <div id="right">
-	  	<div id="rightp">
-	  		 <div id="login_banner" class="ad_banner"><img src="../images/comlogin/4.jpg"></div>
-	  		 	<div id="content_c">
-			  		 <div id="right-title">欢迎您登陆福布斯中文网！</div>
-			  		 <div id="right-font">《福布斯》杂志的前瞻性报道为企业高层决策者引导投资方向，提供商业机会，被誉为“美国经济的晴雨表”。</div>
-	  			</div>
-	  	</div>
-	  </div>
+	<div id="right">
+	    <div id="login_banner" class="ad_banner"><img src="../images/comlogin/4.jpg"></div>
+	    <div id="right_bottom">
+			 <div id="right_title">欢迎您登陆福布斯中文网！</div>
+			 <div id="right_word">《福布斯》杂志的前瞻性报道为企业高层决策者引导投资方向，提供商业机会，被誉为“美国经济的晴雨表”。</div>
+	    </div>
+	</div>
 	<?php 
 		include_bottom();
 	?>
