@@ -24,8 +24,8 @@
 			<form id="subscriptionform" name="subscriptionform" action="subscription.post.php" method="post">
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td><input class="ApplyType" class="inputradio" name="sub[ApplyType]"  type="radio"  value="0" checked />初次申请</td>
-                  <td><input class="ApplyType" class="inputradio" name="sub[ApplyType]"  type="radio"  value="1" />申请续订</td>
+                  <td><input class="ApplyType inputradio" name="sub[ApplyType]"  type="radio"  value="0" checked />初次申请</td>
+                  <td><input class="ApplyType inputradio" name="sub[ApplyType]"  type="radio"  value="1" />申请续订</td>
                   <td width="300"><input type="hidden" id="applyvalue" value="0">&nbsp;</td>
                 </tr>
               </table>
@@ -308,7 +308,7 @@
                   </select></td>
                 </tr>
 				<tr>
-                  <td>&nbsp;<span style="color:red">*</span> 验证码</td>
+                  <td><span style="color:red">*</span> 验证码</td>
                   <td>
                   	<div id="rvcode"><input  name="rvcode" class="txt" type="text"></div>
                   	<div id=yzm><img id="pic" src="yz.php"></div>
