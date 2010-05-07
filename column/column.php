@@ -52,7 +52,7 @@
 					<div id=datetime>
 						<?php
 						$db=get_db();
-						$datetime=$db->query('select distinct(concat(left(created_at,7))) as date from fb_news where publisher='.$id.' order by created_at desc limit 4');
+						$datetime=$db->query('select distinct(concat(left(created_at,7))) as date from fb_news where publisher='.$id.' order by created_at desc');
 						 for($i=0;$i<count($datetime);$i++){ ?>
 							<div class=c_b_content><a href="/column/<?php echo $name;?>/date/<?php echo $datetime[$i]->date;?>"><?php echo $datetime[$i]->date; ?></a></div>
 						<?php } ?>
