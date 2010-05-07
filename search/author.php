@@ -3,20 +3,34 @@
 	$db=get_db();
 	$key = $_GET['key'];
 	$type = $_GET['type'];
-	if(strlen($key)>20){
+	$role = $_GET['role'];
+	$types = array('created_at','click_count','role');
+	if(strlen($key)>40){
 		$key = '';
 	}
-	if($type!='created_at'&&$type!='click_count'){
+	if(!in_array($type,$types)){
 		$type = "created_at";
 	}
-	if($key){
-		$sql = "select * from (select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.author_id order by $type) as t where nick_name like '%$key%' group by id";
-		$user=$db->paginate($sql,5);
+	if($type=='role'){
+		if(!in_array($role,array('column_writer','column_editor'))){
+			$c = '';
+		}else{
+			$c =" where role_name = '$role'";
+		}
+		$sql = "select * from fb_user {$c}";
+		$user = $db->paginate($sql,5);
 		$count = $db->record_count;
 	}else{
-		$count = 0;
-		$page_record_count = 0;
+		if($key){
+			$sql = "select * from (select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.author_id order by $type) as t where nick_name like '%$key%' group by id";
+			$user=$db->paginate($sql,5);
+			$count = $db->record_count;
+		}else{
+			$count = 0;
+			$page_record_count = 0;
+		}	
 	}
+	
 	
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -45,7 +59,15 @@
 			<div id=cy_title>
 				<div id=title_left></div>
 				<div id=title_center>
-					<div id=bt>您搜索的关键字"<?php echo $key;?>"的作者共有<?php echo $page_record_count;?>位</div>	
+					<?php if($type == 'role'){?>
+						<?php if($role=='column_editor'){?>
+							<div id=bt>采编空间共有<?php echo $page_record_count;?>位</div>
+						<?php }else{?>
+							<div id=bt>专栏作者共有<?php echo $page_record_count;?>位</div>
+						<?php }?>
+					<?php }else{?>
+					<div id=bt>您搜索的关键字"<?php echo $key;?>"的作者共有<?php echo $page_record_count;?>位</div>
+					<?php }?>	
 				</div>
 				<div id=title_right></div>
 			</div>
@@ -64,7 +86,7 @@
 			<div class=newarticle>
 				<div class=wz>最新专栏文章</div>
 				<div class=wx>
-					<div class="enterzl"><a href="/column/column.php?id=<?php echo $user[$i]->id;?>">进入专栏>></a></div>	
+					<div class="enterzl"><a href="<?php echo "{$static_site}/column/{$user[$i]->name}";?>">进入专栏>></a></div>	
 				</div>
 				<?php 
 					$news=$db->query('select * from fb_news where author_id='.$user[$i]->id.' and is_adopt=1 order by priority asc, created_at desc limit 2');
@@ -83,7 +105,7 @@
 			<div class=cy_dash></div>
 			<?php }?>
 			<?php } ?>
-			<div id=paginage><?php paginate(''); ?></div>
+			<div id=paginage><?php paginate(); ?></div>
 		</div>
 		<div id="right_inc">
 			<?php include_right("ad");?>
