@@ -9,7 +9,7 @@
 	if($search!=''){
 		$sql .= " where title like '%".$search."%' ";
 	}
-	$sql .=" order by id desc";
+	$sql .=" order by priority asc, id desc";
 	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
