@@ -17,9 +17,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 .column_left_top{width:648px;}
 .column_special{width:323px;}
 .column_special a{color:#003899; text-decoration:none;}
-.column_special_top{width:273px; height:73px; margin-left:10px; margin-top:11px;}
-.column_special_top .t1{width:270px; height:28px; overflow:hidden; font-size:20px; font-family:SimHei; color:#003899; line-height:28px;}
-.column_special_top .t2{width:270px; height:40px; color:#666666; overflow:hidden; font-size:12px; line-height:20px;}
+.column_special_top{width:288px; height:73px; margin-top:11px;}
+.column_special_top .t1{width:280px; height:28px; overflow:hidden; font-size:20px; font-family:SimHei; color:#003899; line-height:28px;}
+.column_special_top .t2{width:280px; height:40px; color:#666666; overflow:hidden; font-size:12px; line-height:20px;}
 .column_special_top .t2 a{color:#666666; text-decoration:none;}
 .column_recommend{width:300px;  margin-top:40px;}
 .column_recommend_top{width:300px; margin-bottom:10px;}
