@@ -50,7 +50,7 @@ if($type=="news"){
 ?>
 	<div class=column_image >
 		<div><img border=0 src="<?php echo $img_src; ?>" /></div>
-		<div style="margin-top:5px;"><?php echo $images[$i]->title;?></div>
+		<div style="margin-top:5px; line-height:15px;"><?php echo $images[$i]->title;?></div>
 	</div>
 <?php } ?>
 </div>
