@@ -29,30 +29,3 @@
 #verify_text{width:70px; float:left; display:inline;}
 #change_pic{width:120px; height:20px; margin-left:5px; line-height:20px; color:#3C7FB1; cursor:pointer; font-size:12px; }
 #yz_img{height:20px; margin-left:10px; float:left; display:inline;}
-
-
-
-#font1{margin-top:71px; width:249px;}
-.font2{margin-top:20px; width:249px;}
-.input3{margin-top:20px; width:100px; float:left; display:inline;}
-#left-font1{width:70px; height:20px; margin-left:37px; margin-top:71px;  float:left; display:inline;}
-#left-font2{width:70px; height:20px; margin-left:37px; margin-top:20px; font-size:14px; float:left; display:inline;}
-#left-font3{width:70px; height:20px; margin-left:37px; margin-top:20px; font-size:14px; float:left; display:inline;}
-
-
-
-#left-bottom1{width:66px; height:16px; margin-left:100px; margin-top:30px; font-size:12px; float:left; display:inline;}
-#left-bottom1 a{color:#3C7FB1;}
-#left-bottom2{width:66px; height:16px; margin-left:20px; margin-top:30px; font-size:12px; float:left; display:inline;}
-#left-bottom2 a{color:#3C7FB1;}
-
-
-#rightp{width:510px; height:300px; margin-left:10px; margin-top:20px; float:left; display:inline;}
-
-#right-font{width:320px; height:30px; margin-top:15px; margin-left:50px; font-size:12px; color:#444444; float:left; display:inline;}
-
-#error{width:400px; height:30px; margin-top:50px; margin-left:50px; line-height:30px; font-size:14px; float:left; display:inline;}
-
-#login_banner{width:500px; height:190px; overflow:hidden; float:left; display:inline;}
-#login_banner img{width:500px; height:190px;}
-#content_c{width:380px; height:70px; margin-top:50px; float:left; display:inline;}
