@@ -49,12 +49,14 @@
 					<div id=c_b_title>
 						<div id=wz>按日期存档</div>
 					</div>
-					<?php
-					$db=get_db();
-					$datetime=$db->query('select distinct(concat(left(created_at,7))) as date from fb_news where publisher='.$id.' order by created_at desc limit 5');
-					 for($i=0;$i<count($datetime);$i++){ ?>
-						<div class=c_b_content><a href="/column/<?php echo $name;?>/date/<?php echo $datetime[$i]->date;?>"><?php echo $datetime[$i]->date; ?></a></div>
-					<?php } ?>
+					<div id=datetime>
+						<?php
+						$db=get_db();
+						$datetime=$db->query('select distinct(concat(left(created_at,7))) as date from fb_news where publisher='.$id.' order by created_at desc limit 4');
+						 for($i=0;$i<count($datetime);$i++){ ?>
+							<div class=c_b_content><a href="/column/<?php echo $name;?>/date/<?php echo $datetime[$i]->date;?>"><?php echo $datetime[$i]->date; ?></a></div>
+						<?php } ?>
+					</div>
 					<div class=c_title>
 						<div class=wz>其他特约专栏作家</div>
 					</div>
@@ -78,7 +80,7 @@
 				<div param=2 id="othertitle2" param1="pic" class=other_title>专栏照片</div>
 				<div param=3 id="othertitle3" param1="other" class=other_title>专栏作者介绍</div>	
 			</div>
-			<iframe scrolling="no" id="iframesrc"  frameborder="no" width=100% height=908 src="iframe.php?type=news&id=<?php echo $id;?>&date=<?php echo $date; ?>"></iframe>
+			<iframe scrolling="no" id="iframesrc"  frameborder="no" width=100% height=916 src="iframe.php?type=news&id=<?php echo $id;?>&date=<?php echo $date; ?>"></iframe>
 		</div>
 		<? include_bottom();?>
 	</div>
