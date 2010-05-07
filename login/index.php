@@ -10,7 +10,7 @@
 	<head>
 		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 		<meta http-equiv=Content-Language content=zh-cn>
-		<title>福布斯-登陆</title>
+		<title>登陆_福布斯中文网</title>
 		<?php
 			use_jquery();
 			js_include_tag('public');

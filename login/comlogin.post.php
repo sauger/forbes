@@ -1,13 +1,20 @@
 <?php
 session_start();
+
+include("../frame.php");
+if(!is_post()){
+	redirect('/error/'); 
+	die();
+}
+
 if($_SESSION['login']!=$_POST['session']){
+		redirect('/error/'); 
 		die();
 	}else{
 		unset($_SESSION['login']);
 	}
 	$name=$_POST['name'];
 	$password=$_POST['password'];
-	include("../frame.php");
 	$suess_url =   $_POST['last_url'] ? $_POST['last_url'] :'/';
 	$fail_url = $_POST['last_url'] ?"index.php?last_url=" .$_POST['last_url'] :"/login/";
 	if(strlen($name)>20 || strlen($password)>20){

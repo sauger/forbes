@@ -10,13 +10,17 @@
 <?php
     include_once('../frame.php');
 	
+	
+	if(!is_post()){
+		redirect('/error/'); 
+		die();
+	}
+	
 	if($_POST['session']!=$_SESSION['get_pwd']){
+		redirect('/error/'); 
 		die();
 	}else{
 		unset($_SESSION['get_pwd']);
-	}
-	if(!is_post()){
-		die();
 	}
 	if($_POST['password1']!=$_POST['password2']){
 		alert("2次密码输入不一致!");
