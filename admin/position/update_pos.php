@@ -378,7 +378,7 @@ function update_news_column($category_name,$limit,$type,$position_name){
 
 include "./_index.php";
 include "_listindex.php";
-include "_richindex.php";
+#include "_richindex.php";
 include "./_fiveindex.php";
 include "./_right.php";
 #include "./_life.php";

@@ -34,7 +34,7 @@
 					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
 					<?php $pos_name = "column_special_t";?>
-					<div class=column_special_top <?php show_page_pos($pos_name,'base');?>>
+					<div class=column_special_top <?php show_page_pos($pos_name,'base_ntime');?>>
 						<div class=t1 >
 							<?php show_page_href(); ?>
 						</div>
@@ -128,7 +128,7 @@
 							for($i=0;$i<14;$i++){
 								$pos_name = 'column_edit_b_t2_'.$i;
 						?>
-						<div class=t2 <? show_page_pos($pos_name,'base'); ?>>
+						<div class=t2 <? show_page_pos($pos_name,'column_author_ntime'); ?>>
 							<?php show_page_href(); ?>
 						</div>
 						<?php }?>
@@ -143,7 +143,7 @@
 					<a href="#" target="_blank" class=more></a>
 					<div class=column_special_top>
 						<?php $pos_name = 'column_c_b_zk_'.$i ?>
-						<div class=t1 <?php show_page_pos($pos_name,'base');?>>
+						<div class=t1 <?php show_page_pos($pos_name,'base_ntime');?>>
 							<?php show_page_href(); ?>
 						</div>
 						<div class=t2>
@@ -236,7 +236,7 @@
 							for($i=0;$i<14;$i++){
 								$pos_name = 'column_list_'.$i;
 						?>
-						<div class=t2 <?php show_page_pos($pos_name,'base') ?>>
+						<div class=t2 <?php show_page_pos($pos_name,'column_author_ntime') ?>>
 							<?php show_page_href(); ?>
 						</div>
 						<?php }?>
