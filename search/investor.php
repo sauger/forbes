@@ -67,12 +67,12 @@
 					<div class=name><a href="/investor/<?php echo $investor[$i]->id;?>"><?php echo $investor[$i]->name;?></a></div>
 							
 						<div class=com>
-							<div  class=zh_left_co><?php echo $investor[$i]->company;?></div>
-							<div  class=zh_left_of><?php echo $investor[$i]->post;?></div>
+							<div class=zh_left_co><?php echo $investor[$i]->company;?></div>
+							<div class=zh_left_of><?php echo $investor[$i]->post;?></div>
 							</div>
 							<div class=zh_left_z>
 							<div class=zh_left_i>投资方向</div> 
-							<div  class=zh_left_in><?php echo $investor[$i]->invest_zone;?></div>
+							<div class=zh_left_in><?php echo $investor[$i]->invest_zone;?></div>
 							</div>
 					<div  class=zh_left_ne>投资动态</div>
 					<?php
