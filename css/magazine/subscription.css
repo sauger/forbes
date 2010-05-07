@@ -1,4 +1,4 @@
-body {font-size:12px; font-family:宋体,Arial; color:#000000; margin:0 auto; padding:0;}
+body {font-size:12px; font-family:宋体; color:#000000; margin:0 auto; padding:0;}
 p{margin:0; padding:0;}
 ul{margin:0; padding:0;}
 li{margin:0; padding:0;} 
@@ -19,8 +19,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #chang_pic{ cursor:pointer; color:#246BB0; margin-left:10px; line-height:22px; font-weight:normal;}
 .subscription select { width:300px;}
 .subscription input { padding:2px;}
-td input,select{border:1px solid #999999; }
-td{font-weight:bold; font-size:13px; line-height:28px; }
+td input,select{border:1px solid #CCCCFF; }
+td{font-size:13px; color:#333333; }
+tr{line-height:40px;}
 #su_bottom{width:100px; height:30px; }
 #yzm{width:60px; height:22px; margin-left:10px; font-size:16px; font-weight:bold; line-height:22px; }
 .inputradio{border:none;}
