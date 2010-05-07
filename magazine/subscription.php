@@ -159,7 +159,7 @@
                   <td><input name="sub[Email]" id="Email" type="text"  class=bc maxlength="40" class="required"/><span id="checkemail">&nbsp;</span></td>
                 </tr>
               </table>
-			  <p style="color:#FF0000; font-weight:bold; font-size:14px;">正确填写电话或手机号码将有助于您更快通过审核及获得更多优惠资讯</p>
+			  <p>正确填写电话或手机号码将有助于您更快通过审核及获得更多优惠资讯</p>
 			  <table width="100%" cellpadding="0" cellspacing="0">
 
                 <tr>
