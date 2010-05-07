@@ -7,7 +7,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>注册-福布斯中文网</title>
+	<title>注册_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('register/register','public','jquery.colorbox-min.js');
