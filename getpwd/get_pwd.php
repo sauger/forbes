@@ -2,7 +2,9 @@
 	session_start();
 	include_once('../frame.php');
 	$db =get_db();
-	$_SESSION['get_pwd'] = rand_str();
+	if(!isset($_SESSION['get_pwd'])){
+		$_SESSION['get_pwd'] = rand_str();
+	}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,17 +21,19 @@
 <body>
 <div id=ibody>		
 	 <?php include_top();?>
-	 <div id=bread><span>密码找回</span></div>
+	 <div id=bread><a>密码找回</a></div>
 	 <div id=bread_line></div>
 	 <div id="left">
 	 	<?php
 	 	$verify = $_GET['verify'];
 		if(empty($verify)){
-			echo "<div id='error'>您的申请不合法或者已经过期</div>";
+			alert('您的申请不合法或者已经过期');
+			redirect('/'); 
 		}else{
 			$db->query("select * from fb_get_pwd where verify='$verify' and now()<end_time");
 			if(!$db->move_first()){
-				echo "<div id='error'>您的申请不合法或者已经过期</div>";
+				alert('您的申请不合法或者已经过期');
+				redirect('/'); 
 			}else{
 	 ?>
 	  <form name="login" id="get_pwd" action="getpwd2.post.php" method="post">
