@@ -1,4 +1,4 @@
-<?php  
+<?php 
 	include_once('../frame.php');
 	require_login();
 	$db = get_db();
