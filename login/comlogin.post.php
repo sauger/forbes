@@ -2,6 +2,8 @@
 session_start();
 if($_SESSION['login']!=$_POST['session']){
 		die();
+	}else{
+		unset($_SESSION['login']);
 	}
 	$name=$_POST['name'];
 	$password=$_POST['password'];

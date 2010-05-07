@@ -12,6 +12,8 @@
 	
 	if($_POST['session']!=$_SESSION['get_pwd']){
 		die();
+	}else{
+		unset($_SESSION['get_pwd']);
 	}
 	if(!is_post()){
 		die();
