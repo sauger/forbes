@@ -134,7 +134,7 @@ $(function(){
 			$(".cloumn_news_box[name="+$(this).attr('name')+"]").show();
 			$('.cpic').css('opacity','0.4');
 			$(this).find(".cpic").css('opacity','1');
-			$('.cpic').css('filter','alpha(opacity=86)');
+			$('.cpic').css('filter','alpha(opacity=40)');
 			$(this).find(".cpic").css('filter','alpha(opacity=100)');
 		});
 		
