@@ -21,7 +21,7 @@
 		$fields['base_ntime'] = array("标题","描述","mouseover","链接","静态链接","","","","","","说明");
 		$fields['base_img'] = array("标题","描述","mouseover","链接","静态链接","图片","","过期时间","","","说明");
 		$fields['index_column'] = array("专栏名","","mouseover","链接","静态链接","图片","","","用户名","","说明");
-		$fields['index_column2'] = array("专栏名","","专栏作者名","链接","静态链接","图片","","","","","说明");
+		$fields['index_column2'] = array("专栏名","","","","","图片","","","专栏链接","","说明");
 		$fields['index_event'] = array("标题","","地点","链接","","图片","","","","举办日期","说明");
 		$fields['magazine'] = array("杂志标题","杂志介绍","mouseover","链接","","杂志图片","","","","","说明");
 		$fields['magazine_index'] = array("杂志标题","","出版日期","链接","","杂志图片","","过期时间","杂志name","","说明");

@@ -138,7 +138,7 @@
 			<div class="dash1"></div>
 			<div class=column_left_top style="margin-top:30px;border:0px; ">
 				<div class=column_special>
-					<div class=captions>采编智库</div>
+					<div class=captions>采编空间</div>
 					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
 					<div class=column_special_top>
@@ -189,7 +189,7 @@
 					
 				</div>
 				<div id=column_edit>
-					<div class=captions>采编智库文章推荐</div>
+					<div class=captions>采编空间文章推荐</div>
 					<div class=line>|</div>
 					<a href="#" target="_blank" class=more></a>
 					<?php
