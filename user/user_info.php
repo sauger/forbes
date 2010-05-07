@@ -2,7 +2,7 @@
 	include_once('../frame.php');
 	require_login();
 	$db = get_db();
-	$uid = $_SESSION['user_id'];
+	$uid = front_user_id();
 	$yh_xx = $db->query("select id from fb_yh_xx where yh_id=$uid");
 	$user = new table_class('fb_yh_xx');
 	$user->find($yh_xx[0]->id);

@@ -2,7 +2,7 @@
 	include_once('../frame.php');
 	require_login();
 	$db = get_db();
-	$uid = $_SESSION['user_id'];
+	$uid = front_user_id();
 	$type = $_REQUEST['type'];
 	if(empty($type))$type='news';
 ?>
