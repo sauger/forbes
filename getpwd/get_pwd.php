@@ -19,7 +19,7 @@
 <body>
 <div id=ibody>		
 	 <?php include_top();?>
-	 <div id=bread><span>密码找回</span></div>
+	 <div id=bread><a>密码找回</a></div>
 	 <div id=bread_line></div>
 	 <div id="left">
 	 	<?php

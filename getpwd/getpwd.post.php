@@ -12,19 +12,19 @@
 	
 	if($_POST['yzm']!=$_SESSION['getpwd']){
 		alert('验证码不正确！');
-		redirect('index.php'); 
+		redirect('/getpwd/'); 
 		die();
 	}
 	$name = $_POST['u_name'];
 	if(strlen($name)>20){
 		alert('用户名和注册邮箱不匹配');
-		redirect('index.php'); 
+		redirect('/getpwd/');
 		die();
 	}
 	$mail = $_POST['email'];
 	if(strlen($mail)>30){
 		alert('用户名和注册邮箱不匹配');
-		redirect('index.php'); 
+		redirect('/getpwd/');
 		die();
 	}
 	$db = get_db();
@@ -43,7 +43,7 @@
 		redirect('/');
 	}else{
 		alert('用户名和注册邮箱不匹配');
-		redirect('index.php'); 
+		redirect('/getpwd/');
 		die();
 	}
 ?>
