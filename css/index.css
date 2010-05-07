@@ -58,8 +58,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #rt_tab1 #ph .span2{width:160px;}
 #rt_tab1 #ph .span3{width:60px;}
 #rt_tab1 #ph .span4{width:35px;}
-#rt_tab1 .content .span1{width:40px; color:#000000; font-weight:bold;}
-#rt_tab1 .content .span2{width:160px; height:26px; line-height:26px; overflow:hidden;}
+#rt_tab1 .content .span1{width:40px; color:#666666; font-weight:bold;}
+#rt_tab1 .content .span2{width:160px; height:26px; color:#1649A2; line-height:26px; overflow:hidden;}
 #rt_tab1 .content .span3{width:60px;}
 #rt_tab1 .content .span4{width:35px; font-size:14px; font-weight:bold;}
 
