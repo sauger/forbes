@@ -122,7 +122,7 @@
 								<?php for($j=1;$j<5;$j++){
 									$field = "field_{$j}";
 								?>
-								<td style="color:<?php if($j==2){ echo "#1649A2";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<td style="color:<?php if($j==2){ echo "#1649A2";}else if($j==3){echo "#000000";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
 								<?php }?>
 							</tr>						
 						<?php }?>
