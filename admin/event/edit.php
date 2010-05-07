@@ -55,9 +55,15 @@
 			</td>
 		</tr>
 		<tr class=tr4>
+			<td class=td1>优先级</td>
+			<td>
+				<input type="text"  name="post[priority]" value="<?php echo $record->priority;?>">
+			</td>
+		</tr>
+		<!--<tr class=tr4>
 			<td class=td1>封面图片</td>
 			<td><input type="file" name="post[image]"></input><?php if($record->image){?> <a href="<?php echo $record->image;?>" title="封面图片" target="_blank" class="colorbox">查看</a><?php }?></td>
-		</tr>
+		</tr>-->
 		<tr class="btools">
 			<td colspan="10">
 				<input id="submit" type="submit" value="完成">	

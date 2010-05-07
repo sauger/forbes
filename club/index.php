@@ -20,7 +20,7 @@
 		<div id=bread><a href="#">会员俱乐部</a></div>
 		<div id=bread_line></div>
 		<div id=club_left>
-			<div id=club_img <?php $pos_name='club_img'; show_page_pos($pos_name); ?>>
+			<div id=club_img <?php $pos_name='club_img'; show_page_pos($pos_name,'base_img_withoutime'); ?>>
 				<div id=club_l_t>
 					<img src="<?php echo $pos_items->$pos_name->image1;?>">
 					<div id=fd>
@@ -38,7 +38,7 @@
 			<div id="survey_content_left"></div>
 			<div id="survey_content_center">
 			<?php for($i=0;$i<2;$i++){ ?>
-				<div class=content <?php $pos_name='club_survey_'.$i; show_page_pos($pos_name); ?>>
+				<div class=content <?php $pos_name='club_survey_'.$i; show_page_pos($pos_name,'survey'); ?>>
 					<div class=content_l>
 						<?php show_page_img(); ?>	
 					</div>
@@ -76,7 +76,7 @@
 				<div class=Bulletin_t>
 					<div class=wz>会员公告</div>
 				</div>
-				<div id=Bulletin_c  <?php $pos_name='club_post'; show_page_pos($pos_name); ?>>
+				<div id=Bulletin_c  <?php $pos_name='club_post'; show_page_pos($pos_name,'base_img_withoutime'); ?>>
 					<div id=pic><a href="<?php echo $pos_items->$pos_name->href; ?>"><img border=0 src="<?php echo $pos_items->$pos_name->image1; ?>"></a></div>
 					<div id=pictitle><?php show_page_href(); ?></div>
 					<div id=piccontent><?php show_page_desc(); ?></div>
@@ -84,7 +84,7 @@
 				<div class="club_dash"></div>
 				<div id=Bulletin_b>
 				<?php for($i=0; $i<3; $i++){?>
-					<div class=cl <?php $pos_name='club_post_'.$i; show_page_pos($pos_name); ?>>
+					<div class=cl <?php $pos_name='club_post_'.$i; show_page_pos($pos_name,'link_withouttime'); ?>>
 						<div class=cl_l></div>
 						<div class=cl_r>
 							<?php show_page_href(); ?>	
@@ -103,16 +103,18 @@
 					<div class=wz>获奖名单</div>
 				</div>
 				<div id="idea_t">
-					<?php for($i=0;$i<3;$i++){ ?>
-					<div class=content>
+					<?php for($i=0;$i<3;$i++){ 
+						$pos_name = "club_huojiang_$i";
+					?>
+					<div class=content <?php show_page_pos($pos_name,'base_img_withoutime')?>>
 						<div class=pic>
-							<a href=""><img border=0 src="/images/club/five.jpg"></a>	
+							<?php show_page_img()?>	
 						</div>
 						<div class=pictitle>
-							<a href="">后机时代更</a>	
+							<?php show_page_href();?>	
 						</div>
 						<div class=piccontent>
-							<a href="">其加薪理由是在危机期间未...</a>	
+							<?php show_page_desc();?>	
 						</div>
 					</div>
 					<?php } ?>

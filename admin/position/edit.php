@@ -12,11 +12,13 @@
 		$pos = new table_class('fb_page_pos');
 		$pos->find_by_name($_GET['pos_name']);
 		$fields['link'] = array("标题","","mouseover","链接","静态链接","","","过期时间","","","说明");
+		$fields['rich_index_head'] = array("头条标题","描述","mouseover","链接","静态链接","图片","","","","","说明");
 		$fields['link_withouttime'] = array("标题","","mouseover","链接","静态链接","","","","","","说明");
 		$fields['link_img'] = array("标题","","mouseover","链接","静态链接","图片","","过期时间","","","说明");
 		$fields['link_img_withouttime'] = array("标题","","mouseover","链接","静态链接","图片","","","","","说明");
 		$fields['base_img_withoutime'] = array("标题","描述","mouseover","链接","静态链接","图片","","","","","说明");
 		$fields['base'] = array("标题","描述","mouseover","链接","静态链接","","","过期时间","","","说明");
+		$fields['base_ntime'] = array("标题","描述","mouseover","链接","静态链接","","","","","","说明");
 		$fields['base_img'] = array("标题","描述","mouseover","链接","静态链接","图片","","过期时间","","","说明");
 		$fields['index_column'] = array("专栏名","","mouseover","链接","静态链接","图片","","","用户名","","说明");
 		$fields['index_column2'] = array("专栏名","","专栏作者名","链接","静态链接","图片","","","","","说明");
@@ -31,13 +33,15 @@
 		$fields['life_index_column']=array("标题","描述","mouseover","链接","静态链接","图片","","","","专栏链接","说明");
 		$fields['column_full']=array("文章标题","文章描述","mouseover","链接","静态链接","作者照片","","过期时间","专栏作者","专栏链接","说明");
 		$fields['column_with_author']=array("文章标题","文章描述","mouseover","链接","静态链接","","","过期时间","专栏作者","专栏链接","说明");
+		$fields['column_author_ntime']=array("作者名","","mouseover","专栏链接链接","静态链接","","","","","","说明");
 		$fields['column_simple']=array("文章标题","","mouseover","链接","静态链接","","","过期时间","专栏作者","专栏链接","说明");
-		$fields['rich']=array("富豪","公司","mouseover","链接","静态链接","富豪照片","","过期时间","财富数（亿）","","说明");
+		$fields['rich']=array("富豪","公司","mouseover","链接","静态链接","富豪照片","","","财富数（亿）","","说明");
 		$fields['rich_pic']=array("富豪","公司","mouseover","","","富豪照片","","","财富数（亿）","","说明");
 		$fields['survey']=array("调查标题","描述","mouseover","链接","静态链接","","","","","","说明");
 		$fields['activity']=array("活动标题","","mouseover","链接","静态链接","活动图片","","","","","说明");
 		$fields['list_head']=array("榜单标题","榜单描述","mouseover","链接","静态链接","榜单图片","","","","","说明");
 		$fields['list_common']=array("榜单标题","榜单描述","mouseover","链接","静态链接","","","过期时间","","","说明");
+		$fields['article_npic_author'] = array("文章标题","文章描述","mouseover","链接","静态链接","","","","作者名称","","说明");
 		
 		$names = array_key_exists($_GET['name'],$fields) ?  $fields[$_GET['name']] : $fields['default'];  
 		

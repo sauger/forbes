@@ -96,7 +96,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 
 #list_content{width:640px;}
-.list_box{width:640px; margin-top:15px; padding-bottom:15px; background:url(/images/news/dash.gif) repeat-x bottom;}
+.list_box{width:630px; margin-left:10px; margin-top:15px; padding-bottom:15px; background:url(/images/news/dash.gif) repeat-x bottom;}
 .list_box .title{height:30px; line-height:30px; font-size:14px; font-weight:bold; color:#246BB0; overflow:hidden;}
 .list_box .title a{color:#246BB0; text-decoration:none;}
 .list_box .title a:hover{color:#246BB0; text-decoration:underline;}
