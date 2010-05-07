@@ -24,8 +24,8 @@
 			<form id="subscriptionform" name="subscriptionform" action="subscription.post.php" method="post">
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td><input class="inputradio" name="sub[ApplyType]" class="ApplyType" type="radio"  value="0" checked />初次申请</td>
-                  <td><input class="inputradio" name="sub[ApplyType]" class="ApplyType" type="radio"  value="1" />申请续订</td>
+                  <td><input class="ApplyType" class="inputradio" name="sub[ApplyType]"  type="radio"  value="0" checked />初次申请</td>
+                  <td><input class="ApplyType" class="inputradio" name="sub[ApplyType]"  type="radio"  value="1" />申请续订</td>
                   <td width="300"><input type="hidden" id="applyvalue" value="0">&nbsp;</td>
                 </tr>
               </table>
@@ -54,7 +54,7 @@
               </table>
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="90" valign="top">* 出 生 地：</td>
+                  <td width="90" valign="top">* 出生地：</td>
                   <td style="font-size:12px; font-weight:normal;"><input name="sub[BirthPlace]" id="BirthPlace" class=bc type="text"  maxlength="20" class="required"/><span id="checkbirthplace">&nbsp;</span><br />请输入您的出生地作为个人标志，本资料仅供确认您订阅的有效性，不会用于其他用途。</td>
 
                 </tr>
@@ -130,7 +130,7 @@
                   </select></td>
                 </tr>
                 <tr>
-                  <td>* 邮　　编：</td>
+                  <td>* 邮编：</td>
                   <td><input name="sub[zipcode]" id="zipcode" type="text"  class=bc maxlength="6" class="required"/><span id="checkzipcode">&nbsp;</span></td>
                 </tr>
                 <tr>
@@ -139,18 +139,18 @@
                   <td><input name="sub[CompanyAddress]" id="CompanyAddress" type="text" class=bc maxlength="40" class="required"/><span id="checkcompanyaddress">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td>* 电　　话：</td>
+                  <td>* 电话：</td>
                   <td>
                     <input name="sub[Tel]" id="Tel" type="text"  class=bc maxlength="14" class="required" /><span id="checktel">&nbsp;</span>
                   </td>
 
                 </tr>
                 <tr>
-                  <td>* 手　　机：</td>
+                  <td>* 手机：</td>
                   <td><input name="sub[Mobile]" id="Mobile" type="text"  class=bc maxlength="13" class="required"/><span id="checkmobile">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td>* 传　　真：</td>
+                  <td>* 传真：</td>
                   <td><input name="sub[Fax]" id="Fax" type="text"  class=bc maxlength="13" class="required"/><span id="checkfax">&nbsp;</span></td>
 
                 </tr>
@@ -163,7 +163,7 @@
 			  <table width="100%" cellpadding="0" cellspacing="0">
 
                 <tr>
-                  <td width="200">* 您的学历是：</td>
+                  <td width="180">* 您的学历是：</td>
                   <td><select  name="sub[Degree]" id="Degree"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.博士">1.博士</option>
@@ -174,7 +174,7 @@
                   </select></td>
                 </tr>
 				<tr>
-                  <td>* 职　　位：</td>
+                  <td>* 职位：</td>
                   <td><select  name="sub[Position]"  id="Position"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.董事长 总裁 行政总裁 首席执行官 董事">1.董事长/总裁/行政总裁/首席执行官/董事</option>
