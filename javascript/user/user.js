@@ -2,7 +2,7 @@ $(function(){
 	$('.left_list').hover(function(){
 		$(".left_list").css('background','');
 		$(".left_list").find('a').css('color','#5B5B5B');
-		$(this).css('background','#2F75B9');
+		$(this).css('background','#999999');
 		$(this).find('a').css('color','#fff');
 		$(".left_list").find('img:first').css('display','inline');
 		$(".left_list").find('img:eq(1)').css('display','none');
@@ -97,4 +97,33 @@ $(function(){
 		})
 	});
 	
+	$("#change_pic").click(function(){
+		$("#yz_img").attr('src','yz.php?reload='+Math.round(Math.random()*10000));
+	})
+	
+	$("#info_submit").click(function(){
+		if($("#verify_text").val()==''){
+			alert('请输入验证码！');
+		}else{
+			$.post('check_session.php',{'verify':$("#verify_text").val()},function(data){
+				if(data=='success'){
+					$('form').submit();
+				}else{
+					alert('验证码错误！');
+				}
+			});
+		}
+	});
+	
 });
+
+
+function isNumberOrLetter2(s){//判断是否是数字或字母及少量特殊符号
+	var regu = "^[0-9a-zA-Z.!@#$%^&*]+$";
+	var re = new RegExp(regu);
+	if(re.test(s)){
+		return true;
+	}else{
+		return false;
+	}
+}

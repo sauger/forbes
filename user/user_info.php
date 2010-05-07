@@ -3,9 +3,15 @@
 	require_login();
 	$db = get_db();
 	$uid = front_user_id();
+	$uid = 23;
 	$yh_xx = $db->query("select id from fb_yh_xx where yh_id=$uid");
 	$user = new table_class('fb_yh_xx');
 	$user->find($yh_xx[0]->id);
+	if(isset($_COOKIE['name'])){
+		$uname = $_COOKIE['name'];
+	}else{
+		$uname = $_COOKIE['login_name'];
+	}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,11 +28,11 @@
 <body>
 	<div id=ibody>
 		<?php include_top();?>
-		 <div id=bread><a>用户中心</a> > <a>个人基本信息</a></div>
+		 <div id=bread>用户中心 > 个人基本信息</div>
 	 	 <div id=bread_line></div>
 		<div id=left>
 			<div id=left_top>
-				用户中心导航
+				用户中心
 			</div>
 			<div class="left_list">
 				<div class="icon">
@@ -63,9 +69,9 @@
 		</div>
 		<div class=right>
 			<div class=right_title>
-				<span style="float:left;display:inline">个人基本信息</span>
-				<?php $log = $db->query("select * from fb_yh_log where yh_id=$uid order by id desc limit 2");?>
-				<span class="r_t_right">亲爱的<?php echo $_SESSION['name'];?>：您上次登录的时间是 <?php if($db->record_count==2) echo $log[1]->time;else echo $log[0]->time;?></span>
+				<div id="r_title1"><?php echo $uname;?> 的个人中心</div>
+				<?php $score = $db->query("select score from fb_yh where id=$uid");?>
+				<div id="r_title2">个人积分：<?php echo $score[0]->score;?></div>
 			</div>
 			<div class="right_text2">
 				<div id=register>
@@ -76,17 +82,17 @@
 					<form action="user_info.post.php" method="post" enctype="multipart/form-data">
 					<table cellpadding="0" cellspacing="0">
 						<tr>
-							<td class=td1>姓　　名：</td>
+							<td class=td1>姓名</td>
 							<td class=td3><input class="txt" value="<?php echo htmlspecialchars($user->xm);?>" name="post[xm]" type="text"></td>
 							<td colspan=2></td>
 						</tr>
 						<tr>
-							<td class=td1>性　　别：</td>
+							<td class=td1>性别</td>
 							<td class=td3>
 								<div class=td4><input type="radio" <?php if($user->xb=='男')echo 'checked="checked"'?> value="男" name="post[xb]">男</div>
 								<div class=td4><input type="radio" <?php if($user->xb=='女')echo 'checked="checked"'?> value="女" name="post[xb]">女</div>
 							</td>
-							<td class=td11>学　　历：</td>
+							<td class=td11>学历</td>
 							<td class=td3>
 								<SELECT  class=sel1 name="post[xl]">
 									<option value=""></option>
@@ -99,7 +105,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class=td1>行　　业：</td>
+							<td class=td1>行业</td>
 							<td class=td3>
 								<select name="post[hy]" class=sel1>
 									<option value=""></option>
@@ -125,7 +131,7 @@
 									<OPTION <?php if($user->hy=="20.其他"){?>selected="selected"<?php }?> value=20.其他>20.其他</OPTION>
 								</select>
 							</td>
-							<td class=td11>职　　位：</td>
+							<td class=td11>职位</td>
 							<td class=td3>
 								<select name="post[zw]" class=sel1>
 									<option value=""></option>
@@ -146,15 +152,15 @@
 							</td>
 						</tr>
 						<tr>
-							<td class=td1>工作单位：</td>
+							<td class=td1>工作单位</td>
 							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->gzdw);?>" name="post[gzdw]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>所在部门：</td>
+							<td class=td1>所在部门</td>
 							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->szbm);?>" name="post[szbm]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>公司性质：</td>
+							<td class=td1>公司性质</td>
 							<td class=td3>
 								<select name="post[gsxz]" class=sel1>
 									<option value=""></option>
@@ -166,7 +172,7 @@
 									<option <?php if($user->gsxz=="6.其他（请说明）"){?>selected="selected"<?php }?> value="6.其他（请说明）">6.其他（请说明）</option>
 								</select>
 							</td>
-							<td class=td1>公司员工规模：</td>
+							<td class=td11>员工规模</td>
 							<td class=td3>
 								<select name="post[gsgm]" class=sel1>
 									<option value=""></option>
@@ -181,7 +187,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class=td1>公司是否上市公司：</td>
+							<td class=td1>上市公司</td>
 							<td class=td3>
 								<select name="post[sfss]" class=sel1>
 									<option value=""></option>
@@ -189,7 +195,7 @@
 									<OPTION <?php if($user->sfss=="0"){?>selected="selected"<?php }?> value=0>2.否</OPTIN>
 								</select>
 							</td>
-							<td class=td1>公司制造的产品：</td>
+							<td class=td11>制造的产品</td>
 							<td class=td3>
 								<select name="post[gscp]" class=sel1>
 									<option value=""></option>
@@ -214,7 +220,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class=td1>公司年营业额：</td>
+							<td class=td1>年营业额</td>
 							<td class=td3>
 								<select name="post[gsyye]" class=sel1>
 									<option value=""></option>
@@ -227,7 +233,7 @@
 									<OPTION <?php if($user->gsyye=="7.100亿以上"){?>selected="selected"<?php }?> value=7.100亿以上>7.100亿以上</OPTION>
 								</select>
 							</td>
-							<td class=td1>您的个人年收入：</td>
+							<td class=td11>个人年收入</td>
 							<td class=td3>
 								<select name="post[grsr]" class=sel1>
 									<OPTION value=""></OPTION> 
@@ -242,7 +248,7 @@
 					</table>
 					<table cellpadding="0" cellspacing="0">
 						<tr>
-							<td class=td1><span style="color:red;">*</span>所在区域：</td>
+							<td class=td1>所在区域</td>
 							<td class=td3><select id="province" name="post[sf]" class=sel1>
 								<option value=""></option>
 								<?php
@@ -271,37 +277,47 @@
 					</table>
 					<table cellpadding="0" style="margin-top:0" cellspacing="0">
 						<tr>
-							<td class=td1>您的通讯地址：</td>
+							<td class=td1>通讯地址</td>
 							<td colspan=3 class=td2><input value="<?php echo htmlspecialchars($user->txdz);?>" class="txt1" name="post[txdz]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>邮　　编：</td>
+							<td class=td1>邮编</td>
 							<td colspan=3 class=td2><input value="<?php echo htmlspecialchars($user->yb);?>" class="txt1" name="post[yb]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>您的固定电话：</td>
+							<td class=td1>固定电话</td>
 							<td class=td2><input class="txt2" value="<?php echo $user->gddh1?>" name="post[gddh1]" type="text"></td>
 							<td class=td2><input class="txt2" value="<?php echo $user->gddh2?>" name="post[gddh2]" type="text"></td>
 							<td class=td2><input class="txt2" value="<?php echo $user->gddh3?>" name="post[gddh3]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>手　　机：</td>
+							<td class=td1>手机</td>
 							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->sj);?>" name="post[sj]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>M　S　N：</td>
+							<td class=td1>MSN</td>
 							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->msn);?>" name="post[msn]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>Ｑ　　Ｑ：</td>
+							<td class=td1>QQ</td>
 							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->qq);?>" name="post[qq]" type="text"></td>
 						</tr>
-						<tr >
+						<!--
+						<tr>
 							<td class=td1>您的头像：</td>
 							<td colspan=3 class=td2><input class="file" name="tx" type="file"><?php if($user->tx!=''){?><a href="<?php echo $user->tx?>" title="查看头像" class="color_box">点击查看</a><?php }?></td>
 						</tr>
+						-->
+						<tr>
+							<td class=td1>验证码</td>
+							<td colspan=3 class=td2>
+								 <input type="text" id="verify_text" class="txt2" name="yzm">
+								 <img id="yz_img" src="yz.php">
+								 <div id="change_pic">看不清楚？换张图片</div>
+			 				</td>
+						</tr>
 					</table>
-					<div id="submit"><button type="submit">提交并保存个人信息</button></div>
+					<div id="submit"><button type="button" id="info_submit">提交并保存个人信息</button></div>
 					</form>
 				</div>
 			</div>
