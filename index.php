@@ -122,7 +122,7 @@
 								<?php for($j=1;$j<5;$j++){
 									$field = "field_{$j}";
 								?>
-								<td align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<td style="color:<?php if($j==2){ echo "#1649A2";}else if($j==3){echo "#000000";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
 								<?php }?>
 							</tr>						
 						<?php }?>
@@ -151,7 +151,7 @@
 								<?php for($j=2;$j<8;$j++){
 									$field = "field_{$j}";
 								?>
-								<td align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<td style="color:<?php if($j==3){ echo "#1649A2";}else if($j==6){echo "#000000";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
 								<?php }?>
 							</tr>						
 						<?php }?>
@@ -178,7 +178,7 @@
 								<?php for($j=1;$j<6;$j++){
 									$field = "field_{$j}";
 								?>
-								<td align="center" nowrap><?php echo $items[$i]->$field;?></td>
+								<td style="color:<?php if($j==2){ echo "#1649A2";}else if($j==4){echo "#000000";} ?>" align="center" nowrap><?php echo $items[$i]->$field;?></td>
 								<?php }?>
 							</tr>						
 						<?php }?>
@@ -201,7 +201,7 @@
 						?>
 							<tr>
 								<td align="center" nowrap><?php echo $i + 1;?></td>
-								<td align="center" nowrap><?php echo $items[$i]->field_4;?></td>
+								<td style="color:#1649A2" align="center" nowrap><?php echo $items[$i]->field_4;?></td>
 								<td align="center" nowrap><?php echo $items[$i]->field_5;?></td>
 							</tr>						
 						<?php }?>
@@ -378,7 +378,7 @@
 			<div id=activity>
 				<div class=public_top1>
 					<div class=public_caption1>论坛活动<span>Conferences</span></div>
-					<a href="event/list.php" target=_blank class=public_more1></a>
+					<a href="/event" target=_blank class=public_more1></a>
 				</div>
 				<?php $pos_name = 'index_event';?>
 				<div class=public_box1 <?php show_page_pos($pos_name,'index_event');?>>

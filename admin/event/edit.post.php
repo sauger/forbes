@@ -10,6 +10,10 @@
 	
 	$activity->update_attributes($_POST['post'],false);
 	$activity->update_file_attributes('post');
+	if($_POST['post']['priority']=="")
+	{
+		$activity->priority=100;
+	}
 	$activity->save();
 	
 	redirect('index.php');

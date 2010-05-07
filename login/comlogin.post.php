@@ -2,12 +2,14 @@
 session_start();
 if($_SESSION['login']!=$_POST['session']){
 		die();
+	}else{
+		unset($_SESSION['login']);
 	}
 	$name=$_POST['name'];
 	$password=$_POST['password'];
 	include("../frame.php");
 	$suess_url =   $_POST['last_url'] ? $_POST['last_url'] :'/';
-	$fail_url = $_POST['last_url'] ?"index.php?last_url=" .$_POST['last_url'] :"index.php";
+	$fail_url = $_POST['last_url'] ?"index.php?last_url=" .$_POST['last_url'] :"/login/";
 	if(strlen($name)>20 || strlen($password)>20){
 		$err = "用户名或密码错误";
 		$last_url = $fail_url;
@@ -23,10 +25,14 @@ if($_SESSION['login']!=$_POST['session']){
 		$db->execute("update fb_yh set cache_name='{$cache_name}' where id={$user_id}");
 		if($_POST['time']!='')
 		{
-			$limit=$_POST['time']*3600*24;
-			setcookie("name",$name,time()+$limit,'/');
-			setcookie("cache_name",$cache_name,time()+$limit,'/');
-			setcookie("password",$_POST['password'],time()+$limit,'/');
+			$limit=time()+$_POST['time']*3600*24;
+			if(empty($_POST['time'])){
+				$limit = 0;
+			}
+			setcookie("name",$name,$limit,'/');
+			setcookie("cache_name",$cache_name,$limit,'/');
+			setcookie("password",$_POST['password'],$limit,'/');
+			
 		}else{
 			setcookie("login_name",$cache_name,time()+3600*24,'/');
 		}

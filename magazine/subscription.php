@@ -32,7 +32,7 @@
 
 			  <table border="0" cellpadding="0" cellspacing="0" id="xdtable" style="display:none">
                 <tr>
-                  <td>重新申请的读者请注意：为更好地处理您的申请，及保持您的订阅的持续性，请填写您个人的读者编号。您的读者编号是在我们给您邮寄杂志信封上的标签的右下角，它是一个由Q开头的九位条形码的号码，号码在条形码的下方。(*为必填项)</td>
+                  <td style="font-size:14px;">重新申请的读者请注意：为更好地处理您的申请，及保持您的订阅的持续性，请填写您个人的读者编号。您的读者编号是在我们给您邮寄杂志信封上的标签的右下角，它是一个由Q开头的九位条形码的号码，号码在条形码的下方。(*为必填项)</td>
                 </tr>
                 <tr>
                   <td height="170" align="center"><img src="/images/magazine/pic_09.jpg" width="303" height="150" /></td>
@@ -49,21 +49,21 @@
                 </tr>
 
                 <tr>
-                  <td>个人资料(请全部用中文填写完整，所填事项不完整及填写家庭地址恕不受理。)</td>
+                  <td style="font-size:14px;">个人资料(请全部用中文填写完整，所填事项不完整及填写家庭地址恕不受理。)</td>
                 </tr>
               </table>
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="90">* 出 生 地：</td>
-                  <td><input name="sub[BirthPlace]" id="BirthPlace" class=bc type="text"  maxlength="20" class="required"/><span id="checkbirthplace">&nbsp;</span><br />请输入您的出生地作为个人标志，本资料仅供确认您订阅的有效性，不会用于其他用途。</td>
+                  <td width="90" valign="top">* 出 生 地：</td>
+                  <td style="font-size:12px; font-weight:normal;"><input name="sub[BirthPlace]" id="BirthPlace" class=bc type="text"  maxlength="20" class="required"/><span id="checkbirthplace">&nbsp;</span><br />请输入您的出生地作为个人标志，本资料仅供确认您订阅的有效性，不会用于其他用途。</td>
 
                 </tr>
                 <tr>
-                  <td width="90">* 姓　　名：</td>
+                  <td width="90">* 姓名：</td>
                   <td><input name="sub[RealName]" id="RealName" type="text" size="35" class=bc maxlength="6" class="required"/><span id="checkrealname">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td>* 性　　别：</td>
+                  <td>* 性别：</td>
                   <td><select name="sub[Sex]" id="Sex" class="required">
 
                       <option value="男">先生</option>
@@ -77,11 +77,11 @@
                   <td><input name="sub[Company]" id="Company" class=bc type="text" size="35"  maxlength="20" class="required"/><span id="checkcompany">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td>* 部　　门：</td>
+                  <td>* 部门：</td>
                   <td><input name="sub[Department]" class=bc id="Department" type="text" size="35" maxlength="20" class="required"/><span id="checkdepartment">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td>* 职　　位：</td>
+                  <td>* 职位：</td>
 
                   <td><input name="sub[Position2]" class=bc id="Position2" type="text" size="35" maxlength="20" class="required"/><span id="checkPosition2">&nbsp;</span></td>
                 </tr>
@@ -159,11 +159,11 @@
                   <td><input name="sub[Email]" id="Email" type="text"  class=bc maxlength="40" class="required"/><span id="checkemail">&nbsp;</span></td>
                 </tr>
               </table>
-			  <p style="color:#FF0000">正确填写电话或手机号码将有助于您更快通过审核及获得更多优惠资讯</p>
+			  <p style="color:#FF0000; font-weight:bold; font-size:14px;">正确填写电话或手机号码将有助于您更快通过审核及获得更多优惠资讯</p>
 			  <table width="100%" cellpadding="0" cellspacing="0">
 
                 <tr>
-                  <td width="150">* 您的学历是：</td>
+                  <td width="200">* 您的学历是：</td>
                   <td><select  name="sub[Degree]" id="Degree"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.博士">1.博士</option>

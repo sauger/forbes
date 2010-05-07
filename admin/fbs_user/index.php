@@ -38,7 +38,7 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="35%">用户名</td><td width="35%">邮箱</td><td width="30%">操作</td>
+			<td width="30%">用户名</td><td width="30%">邮箱</td><td width="10%">是否验证</td><td width="30%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
@@ -46,6 +46,7 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><?php echo $record[$i]->name;?></td>
 					<td><?php echo $record[$i]->email;?></td>
+					<td><?php  if($record[$i]->authenticated==1)echo '已验证';else echo '未验证';?></td>
 					<td>
 						<a href="edit_order.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer" title="查看用户订阅"><img src="/images/admin/btn_config1.png" border="0"></a>　
 						<a href="edit_info.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer" title="查看用户个人信息"><img src="/images/admin/btn_edit.png" border="0"></a>　

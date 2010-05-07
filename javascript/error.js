@@ -8,7 +8,7 @@
 	} 
 	
 	} 
-	var bar = window.setInterval("go()",5); 
+	var bar = window.setInterval("go()",30); 
 	window.onload = function(){ 
 	bar; 
 	}	
