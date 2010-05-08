@@ -14,7 +14,7 @@
 		redirect('/error');
 		die();
 	}
-	if($_POST['rvcode'] != (string)$_SESSION['register_pic']){
+	if($_POST['rvcode']!=$_SESSION['register_pic']||empty($_SESSION['register_pic'])){
 		alert('验证码错误!');
 		redirect('/register/');
 		die();

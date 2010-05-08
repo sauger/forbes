@@ -14,7 +14,7 @@
 		die();
 	}
 	
-	if($_POST['yzm']!=$_SESSION['user_info']){
+	if($_POST['yzm']!=$_SESSION['user_info']||empty($_SESSION['user_info'])){
 		alert('验证码错误！');
 		redirect($_SERVER['HTTP_REFERER']);
 		die();

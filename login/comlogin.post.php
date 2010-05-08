@@ -6,7 +6,7 @@
 		die();
 	}
 
-	if($_SESSION['login']!=$_POST['session']){
+	if($_SESSION['login']!=$_POST['session']||empty($_SESSION['login'])){
 		redirect('/error/'); 
 		die();
 	}else{
