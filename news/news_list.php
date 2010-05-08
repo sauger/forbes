@@ -32,7 +32,9 @@
 				$c_id = $category->children_map($cid);
 				$c_id = implode(',',$c_id);
 				$len = count($parent_ids);
+				$itemp = 0;
 				for($i=$len-1;$i>0;$i--){
+					$itemp++;
 					$item = $category->find($parent_ids[$i]);
 			?>
 			<a href="<?php echo get_newslist_url($parent_ids[$i]);?>"><?php echo $item->name;?></a>
@@ -40,8 +42,9 @@
 				}
 				$item = $category->find($parent_ids[0]);
 				$condition .= " and category_id in ({$c_id})";
+				if($itemp > 0 ) echo ">";
 			?>
-			><span style="color:#246BB0; margin-left:8px;"><?php echo $item->name;?></span>
+			<span style=" margin-left:8px;"><?php echo $item->name;?></span>
 			<?php }else{
 				$item = $db->query("select author as name from fb_news where id={$news_id}");
 				if(empty($item)) die();
@@ -66,7 +69,7 @@
 					<div id=picture><img width="300" height="200"  src="<?php echo $top_news[0]->video_photo_src?>"></div>
 					<div id=title><a href="news.php?id=<?php echo $top_news[0]->id;?>"><?php echo $top_news[0]->title;?></a></div>
 					<div id=description><?php echo mb_substr($top_news[0]->description,0,200,'utf8');?></div>
-					<div id=info>《福布斯》　记者：<?php echo $top_news[0]->author;?>　发布于：<?php echo substr($top_news[0]->created_at,0,10);?></div>
+					<div id=info>记者：<?php echo $top_news[0]->author;?>　发布于：<?php echo substr($top_news[0]->created_at,0,10);?></div>
 			</div>
 			<?php }?>
 			
@@ -83,7 +86,7 @@
 					?>
 					<div class=list_box>
 							<div class=title><a title="<?php echo $record[$i]->title;?>" href="<?php echo get_news_url($record[$i]);?>"><?php echo $record[$i]->title?></a></div>
-							<div class=info>《福布斯》　记者：<?php echo $record[$i]->author;?>　发布于：<?php echo substr($record[$i]->created_at,0,10);?></div>
+							<div class=info>记者：<?php echo $record[$i]->author;?>　发布于：<?php echo substr($record[$i]->created_at,0,10);?></div>
 							<div class=description ><?php echo mb_substr(strip_tags($record[$i]->content,'<p>'),0,200,'utf8');?></div>
 					</div>
 					<?php }?>
