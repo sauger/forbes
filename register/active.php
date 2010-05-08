@@ -12,7 +12,7 @@
 		$user_id = $db->field_by_name('id');
 		$password = $db->field_by_name('password');
 		$authenticated = $db->field_by_name('authenticated');
-		if($authenticated==1){
+		if($authenticated==0){
 			$db->execute("update fb_yh set authenticated=1 where id={$user_id}");
 			adjust_user_score($user_id,50,"用户激活");
 		}
