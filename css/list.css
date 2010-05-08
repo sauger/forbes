@@ -116,10 +116,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 .sort_l_t1{width:178px; height:30px; font-size:14px; color:#ffffff; font-weight:bold; line-height:30px; text-indent:30px; margin-top:1px; background:url(/images/list/l_t1.jpg) no-repeat; }
 .sort_l_l1{width:165px; height:20px; font-size:12px; line-height:20px; text-indent:25px; margin-top:5px; margin-left:8px; background:url(/images/list/sort_tar1.jpg) no-repeat left center; }
 #sort_r{width:800px; height:540px; margin-top:5px; margin-left:10px; border-style:solid; border-width:1px; border-color:#BDCBD7; }
-#sort_r_t{width:320px; height:40px; font-size:16px; color:#666666; font-weight:bold; line-height:40px; margin-top:12px; margin-left:20px; }
-#sort_r_b_l{width:320px; height:390px; margin-top:20px; margin-left:20px;}
-.sort_r_b_l_t{width:300px; height:38px; font-size:14px; font-weight:bold; line-height:38px; border-bottom:1px dotted #999999; overflow:hidden;}
-#list_banner{width:385px; height:375px; margin-top:12px; margin-right:15px; float:right;}
+#sort_r_t{width:340px; height:40px; font-size:16px; color:#666666; font-weight:bold; line-height:40px; margin-top:12px; margin-left:20px; }
+#sort_r_b_l{width:340px; height:390px; margin-top:20px; margin-left:20px;}
+.sort_r_b_l_t{width:320px; height:38px; font-size:14px; font-weight:bold; line-height:38px; border-bottom:1px dotted #999999; overflow:hidden;}
+#list_banner{width:385px; height:375px; margin-top:12px; margin-right:20px; float:right;}
 #list_banner img{width:385px;height:375px;}
 
 #sort_top{margin-top:10px;}
