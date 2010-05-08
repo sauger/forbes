@@ -366,12 +366,12 @@
 		
 		<div class=forbes_r>
 			<div id=dictionary>
-				<div id=dictionary_t>
-					<div id=dictionary_tl <?php show_page_pos("index_dict0");?>><?php show_page_href("index_dict0");?></div>
-					<div id=dictionary_tr> <span style="float:right;"><a href="<?php echo get_newslist_url($category->find_by_name("热门财经词汇")->id);?>" target="_blank">实用财经词汇</a></span></div>
+				<div id=dictionary_l <?php $pos_name ="dictionary_l_content1"; show_page_pos($pos_name);?>><?php show_page_href()?></div>
+				<div id=dictionary_r>
+					<div class=content <?php $pos_name ="dictionary_r_content1"; show_page_pos($pos_name);?>><?php show_page_href()?></div>
+					<div class=content <?php $pos_name ="dictionary_r_content2"; show_page_pos($pos_name);?>><?php show_page_href()?></div>
+					<div class=content></div>
 				</div>
-				<div id=dictionary_bl <?php show_page_pos("index_dictb0",'link');?>><?php show_page_href("index_dictb0");?></div>
-				<div id=dictionary_br ></div>
 			</div>
 
 			<div id=activity>

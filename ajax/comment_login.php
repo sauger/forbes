@@ -2,7 +2,7 @@
 	$name=$_POST['user_name'];
 	$password=$_POST['password'];
 	include("../frame.php");
-	$suess_url =   $_POST['last_url'] ? $_POST['last_url'] :'/user/user.php';
+	$suess_url =   $_POST['last_url'] ? $_POST['last_url'] :'/user/';
 	$fail_url = $_POST['last_url'] ?"index.php?last_url=" .$_POST['last_url'] :"index.php";
 	if(strlen($name)>20 || strlen($password)>20){
 		echo "wrong";
@@ -20,9 +20,10 @@
 			setcookie("name",$name,time()+$limit,'/');
 			setcookie("password",$_POST['password'],time()+$limit,'/');
 		}
-		$_SESSION['user_id']=$record[0]->id;
-		$_SESSION['name']=$name;
-		$db->execute("insert into fb_yh_log (yh_id,time) values ({$_SESSION['user_id']},now())");
+		$user_id = $db->field_by_name('id');
+		$cache_name = sprintf('%06s',$user_id) .rand_str(24);
+		setcookie("cache_name",$cache_name,0,'/');
+		$db->execute("insert into fb_yh_log (yh_id,time) values ({$user_id},now())");
 		echo $name;
 	}
 	else
