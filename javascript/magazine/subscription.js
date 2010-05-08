@@ -37,9 +37,10 @@ $(function(){
 			alert('请输入正确的邮件地址！');
 			return false;
 		}
-		if(!IsNum($('Mobile').val()))
+		if(!IsNum($('#Mobile').val()))
 		{
 			alert('请输入正确的手机号码！');
+			$('#Mobile').focus();
 			return false;
 		}
 		if($("#yzmcode").val()==''){
