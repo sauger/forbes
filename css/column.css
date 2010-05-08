@@ -26,9 +26,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 .column_recommend_top_l{width:89px;}
 .column_recommend_top_l .picture{width:90px;}
 .column_recommend_top_l .picture img{width:90px; height:90px;}
-.column_recommend_top_l .n{width:89px; height:16px; color:#333333; line-height:16px; font-size:13px; font-weight:bold; text-align:center; margin-top:10px;}
 .column_recommend_top_r{width:195px; margin-left:8px;}
 .column_recommend_top_r .t1{width:195px; height:18px; font-size:13px; font-weight:bold; overflow:hidden; line-height:18px;}
+.column_recommend_top_r .t1 a{color:#000000; text-decoration:none;}
 .column_recommend_top_r .t2{width:195px; height:20px; margin-top:7px; font-size:14px; font-weight:bold; overflow:hidden; color:#003899; line-height:20px;}
 .column_recommend_top_r .t3{width:195px; height:60px; font-size:12px; overflow:hidden; line-height:20px;}
 .column_recommend_top_r .t3 a{color:#666666; text-decoration:none;}
