@@ -52,13 +52,10 @@
 								<div class=picture>
 									<a href="<?php echo $pos_items->$pos_name->reserve?>"><? show_page_img(null,null,0,"image1",null,"reserve"); ?></a>
 								</div>
-								<div class=n>
-									<a href="<?php echo $pos_items->$pos_name->reserve?>" title="<?php echo $pos_items->$pos_name->alias?>" target="_blank"><? echo $pos_items->$pos_name->alias; ?></a>
-								</div>
 							</div>
 							<div class=column_recommend_top_r>
 								<div class=t1>
-									<?php echo $pos_items->$pos_name->alias;?>的专栏
+									<a href="<?php echo $pos_items->$pos_name->reserve?>"><?php echo $pos_items->$pos_name->alias;?>的专栏</a>
 								</div>
 								<div class=t2>
 									<?php show_page_href(); ?>
@@ -160,13 +157,10 @@
 								<div class=picture>
 									<?php show_page_img(null,null,0,"image1",null,"reserve"); ?>
 								</div>
-								<div class=n>
-									<a href="<?php echo $pos_items->$pos_name->reserve?>" title="<?php echo $pos_items->$pos_name->alias?>" target="_blank"><? echo $pos_items->$pos_name->alias; ?></a>
-								</div>
 							</div>
 							<div class=column_recommend_top_r<?php show_page_pos($pos_name,'column_full');?>>
 								<div class=t1>
-									<?php echo $pos_items->$pos_name->alias;?>的专栏
+									<a href="<?php echo $pos_items->$pos_name->reserve?>" title="<?php echo $pos_items->$pos_name->alias?>" target="_blank"><?php echo $pos_items->$pos_name->alias;?>的专栏</a>
 								</div>
 								<div class=t2>
 									<?php echo show_page_href(); ?>
