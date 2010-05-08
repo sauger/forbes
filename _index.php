@@ -76,7 +76,7 @@
 		
 		
 		<div id=right>
-				<div id="right_inc" style="margin-top:10px;">
+				<div id="right_inc">
 		  		<?php include dirname(__FILE__)."/right/ad.php";?>
 		  		<?php include dirname(__FILE__)."/right/investment_list.php"?>
 		  		<?php include dirname(__FILE__)."/right/favor.php"?>

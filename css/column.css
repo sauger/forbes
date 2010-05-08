@@ -13,7 +13,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #bread a{color:#666666; text-decoration:none;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
 
-#column_left{width:669px; padding-bottom:30px; margin-top:15px; ;}
+#column_left{width:669px; padding-bottom:30px; margin-top:5px;}
 .column_left_top{width:648px;}
 .column_special{width:323px;}
 .column_special a{color:#003899; text-decoration:none;}

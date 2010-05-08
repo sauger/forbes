@@ -1,9 +1,9 @@
 ﻿<?php
 	session_start();
-	include_once('../frame.php');
 	if(!isset($_SESSION['sign'])){
 		$_SESSION['sign'] = rand_str(20);
 	}
+	include_once('../frame.php');
 	$db = get_db();
 	$industry = $db->query("select * from fb_invest_industry");
 	$count = $db->record_count;
@@ -30,7 +30,7 @@
 		<div id=bread>
 				<span>增长俱乐部首页 > 报名加入创业者数据库</span>
 		</div>
-		<div id="hr_top"></div>
+		<div id="bread_line"></div>
 		<div id="f_z">
 				<div class="f_title">
 					<div class="f_title_left"></div>
