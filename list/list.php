@@ -129,7 +129,7 @@
 			<div id=sort_r_t>
 				<?php echo $bdname; ?>共有<?php echo $page_record_count; ?>条榜单
 			</div>
-			<div id="list_banner"></div>
+			<div id="list_banner" class="ad_banner"></div>
 			<div id=sort_r_b_l>
 				<?php for($i=0;$i<count($bd);$i++){ ?>
 					<div class=sort_r_b_l_t><a href="<?php echo $static_site ."/list/" . $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
