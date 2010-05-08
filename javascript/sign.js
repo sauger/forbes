@@ -142,7 +142,7 @@ $(function(){
 		if(rs>=0){
 			return true;
 		}else{
-		alert("请上传word\PPT\PDF文档！");
+		alert("请上传word|PPT|PDF文档！");
 		return false;
 		}
 	}
