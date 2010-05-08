@@ -1,6 +1,6 @@
 <?php include_once(dirname(__FILE__).'/../frame.php');?>
 <div class=right_title>
-	<div class=title_con>专栏文章文类</div>
+	<div class=title_con>专栏文章分类</div>
 </div>
 <?php 
 	$category = $db->query("select  group_concat(category_id separator ',') as ids from fb_news where author_type=2");

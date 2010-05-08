@@ -186,7 +186,7 @@
 							<div class="linkman_name">* 联系人手机：</div>
 							<div class="linkman_input"><input type="text" maxlength="20" class="required number" name="post[mobile]"/></div>
 							<div id="linkman_phone">* 联系人电话</div>
-							<input type="text"  class="number" maxlength="4" id="phone_a" name="phone1"/>
+							<input type="text" class="number" maxlength="4" id="phone_a" name="phone1"/>
 							<input type="text"  class="required number" maxlength="8" id="phone_b" name="phone2"/>
 							<input type="text"  class="number" maxlength="10" id="phone_c" name="phone3"/>
 					</div>
