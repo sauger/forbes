@@ -134,7 +134,7 @@ $(function(){
 		//获取截取的最后一个字符串，即为后缀名
 		var last=three[three.length-1];
 		//添加需要判断的后缀名类型
-		var tp ="pdf,ppt,doc,docx";
+		var tp ="pdf,ppt,doc,docx,DOC,DOCX,PPT";
 		//var tp ="jpg,gif,bmp,JPG,GIF,BMP";
 		//返回符合条件的后缀名在字符串中的位置
 		var rs=tp.indexOf(last);
@@ -142,7 +142,7 @@ $(function(){
 		if(rs>=0){
 			return true;
 		}else{
-		alert("请使用word\PPT\PDF文档！");
+		alert("请上传word|PPT|PDF文档！");
 		return false;
 		}
 	}
