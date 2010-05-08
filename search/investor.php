@@ -20,6 +20,7 @@
 	if($type!=''){
 		$sql .= " and invest_zone like '%$type%'";
 	}
+	$sql .= " order by chinese_name asc";
 	$investor = $db->paginate($sql,5);
 	$i_count = $db->record_count;
 ?>

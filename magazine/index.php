@@ -47,7 +47,7 @@
 				<div class=r_b>
 					<div class=title>
 						<div class=jt></div>
-						<div class=wz><a href="<?php echo static_news_url($news[$i]);?>" title="<?php echo $news[$i]->title;?>"><?php echo $news[$i]->title;?></div>
+						<div class=wz><a href="<?php echo static_news_url($news[$i]);?>" title="<?php echo $news[$i]->title;?>"><?php echo $news[$i]->title;?></a></div>
 					</div>
 					<div class=content>
 						<?php echo $news[$i]->description;?>
@@ -56,7 +56,7 @@
 				</div>
 				<?php }?>
 				<div class="l_b">
-					<div class="btn_ck"><a href="magazine.php?id=<?php echo $magazine[0]->id;?>"><img border="0" src="/images/magazine/btn_ck.jpg"></a></div>
+					<div class="btn_ck"><a href="<?php echo "{$static_site}/magazine/{$magazine[0]->id}";?>"><img border="0" src="/images/magazine/btn_ck.jpg"></a></div>
 					<div class="btn_readonline"><a href="<?php echo $magazine[0]->url;?>"><img border="0" src="/images/magazine/btn_readonline.jpg"></a></div>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 					<div class=pic>
 						<img src="<?php echo $magazine[$i]->img_src;?>">
 					</div>
-					<div class=pictitle><a href="magazine.php?id=<?php echo $magazine[$i]->id;?>" title="<?php echo $magazine[$i]->name;?>"><?php echo $magazine[$i]->name;?></a></div>
+					<div class=pictitle><a href="<?php echo "{$static_site}/magazine/{$magazine[$i]->id}";?>" title="<?php echo $magazine[$i]->name;?>"><?php echo $magazine[$i]->name;?></a></div>
 					<?php
 						$news = $db->query("select t1.title,t1.id,t1.created_at,t1.description from fb_news t1 join fb_magazine_relation t2 on t1.id=t2.resource_id where t2.magazine_id={$magazine[$i]->id} order by t2.priority limit 3");
 						$news_count = $db->record_count;
