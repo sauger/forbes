@@ -177,7 +177,7 @@
 						$pos_name = "richindex_list_{$i}";
 					?>
 					<div class=content2 <?php show_page_pos($pos_name,'rich');?>>
-						<div class=name>
+						<div class=name title="<?php  echo $pos_items->$pos_name->title; ?>">
 							<?php echo $pos_items->$pos_name->display?>
 						</div>
 						<div class=zc>

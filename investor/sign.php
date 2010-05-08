@@ -1,7 +1,9 @@
 ﻿<?php
 	session_start();
 	include_once('../frame.php');
-	$_SESSION['sign'] = rand_str(20);
+	if(!isset($_SESSION['sign'])){
+		$_SESSION['sign'] = rand_str(20);
+	}
 	$db = get_db();
 	$industry = $db->query("select * from fb_invest_industry");
 	$count = $db->record_count;
@@ -45,7 +47,7 @@
 					</div>
 					<div class="fc_c">
 							<div class="fc_c_left">*  项目名称：</div>
-							<div class="fc_c_right"><input type="text" class="required" name="post[item_name]" ></div>
+							<div class="fc_c_right"><input type="text" maxlength="30" class="required" name="post[item_name]" ></div>
 					</div>
 					<div class="fc_c">
 							<div class="fc_c_left">*  所属行业：</div>
@@ -68,7 +70,7 @@
 					</div>
 					<div id="fc_money">
 							<div id="fc_c_money"><div class="n"></div>融资金额：</div>
-							<div id="money_input"><input type="text" name="post[item_money]"/></div>
+							<div id="money_input"><input maxlength="20" type="text" name="post[item_money]"/></div>
 							<div id="moneyvalue">选择投资类型为“风险投资“和”天使投资“的金额，例如：100万人民币</div>
 					</div>
 					<div id="fc_trae">
@@ -78,7 +80,7 @@
 					<div class="fc_c">
 							<div class="fc_c_left"><div class="n"></div>项目网址：</div>
 							<div class="fc_c_right">
-							<div class="fc_c_right"><input type="text" name="post[item_url]" id="www_r"></div>
+							<div class="fc_c_right"><input type="text" maxlength="50" name="post[item_url]" id="www_r"></div>
 							</div>
 					</div>
 					<div class="fc_c">
@@ -98,11 +100,11 @@
 					</div>
 					<div class="fc_c">
 							<div class="fc_c_left">*  公司名称：</div>
-							<div class="fc_c_right"><input type="text" class="required" id="re_a" name="post[company_name]"></div>
+							<div class="fc_c_right"><input type="text" maxlength="20" class="required" id="re_a" name="post[company_name]"></div>
 					</div>
 					<div class="fc_c">
 							<div class="fc_c_left"><div class="n"></div>公司规模：</div>
-							<div class="fc_c_right"><input type="text" name="post[company_size]"  id="re_b"></div>
+							<div class="fc_c_right"><input type="text" maxlength="30" name="post[company_size]"  id="re_b"></div>
 					</div>
 					<div id="company">
 							<div id="company_a">
@@ -116,8 +118,8 @@
 											<div class="money_b">收入单位：万  人民币</div>
 										</div>
 										<div class="com_d">
-											<div class="year_d"><input id="year1"></div>
-											<div class="money_d"><input id="income1"></div>
+											<div class="year_d"><input maxlength="4" id="year1"></div>
+											<div class="money_d"><input maxlength="10" id="income1"></div>
 										</div>
 										<div class="com_e">
 												<input type="button" id="add_income1" value="添加输入"/>
@@ -137,8 +139,8 @@
 											<div class="money_b">收入单位：万  人民币</div>
 										</div>
 										<div class="com_d">
-											<div class="year_d"><input id="year2"></div>
-											<div class="money_d"><input id="income2"></div>
+											<div class="year_d"><input maxlength="4" id="year2"></div>
+											<div class="money_d"><input maxlength="10" id="income2"></div>
 										</div>
 										<div class="com_e">
 												<input type="button" id="add_income2"  value="添加输入"/>
@@ -150,23 +152,23 @@
 						<div class="fc_c">
 							<div class="company_left">公司成立时间：</div>
 							<div class="fc_c_right">
-									<input type="text" id="cr_t" name="post[company_created]">		
+									<input type="text" id="cr_t" maxlength="20" name="post[company_created]">		
 							</div>
 						</div>
 						<div class="fc_c">
 							<div id="comany_add">*  公司总部所在地：</div>
 							<div class="fc_c_right">
-									<input type="text" class="required" name="post[company_location]" id="address">
+									<input type="text" class="required" maxlength="50" name="post[company_location]" id="address">
 							</div>
 					</div>
 							<div class="fc_c">
 							<div class="fc_c_left">*  邮编：</div>
-							<div class="fc_c_right"><input class="required number" id="post_input" type="text" name="post[zip]"></div>
+							<div class="fc_c_right"><input class="required number" maxlength="20" id="post_input" type="text" name="post[zip]"></div>
 					</div>
 					</div>
 					<div id="fc_v">
 							<div id="fc_c_ma">公司注册资金单位：万人民币</div>
-							<div id="money_i"><input type="text" class="number" name="post[capital]"/></div>
+							<div id="money_i"><input type="text" class="number" maxlength="10" name="post[capital]"/></div>
 							<div id="money_v">如：500万 人民币</div>
 					</div>
 					
@@ -178,27 +180,27 @@
 					</div>
 					<div class="linkman_a">
 							<div class="linkman_name">* 联系人姓名：</div>
-							<div id="linkman_name_input"><input type="text" class="required"  name="post[name]"/></div>
+							<div id="linkman_name_input"><input type="text" maxlength="20" class="required"  name="post[name]"/></div>
 					</div>
 					<div class="linkman_a">
 							<div class="linkman_name">* 联系人手机：</div>
-							<div class="linkman_input"><input type="text" class="required number" name="post[mobile]"/></div>
+							<div class="linkman_input"><input type="text" maxlength="20" class="required number" name="post[mobile]"/></div>
 							<div id="linkman_phone">* 联系人电话</div>
-							<input type="text"  class="required number" id="phone_a" name="phone1"/>
-							<input type="text"  class="required number" id="phone_b" name="phone2"/>
-							<input type="text"  class="required number" id="phone_c" name="phone3"/>
+							<input type="text"  class="required number" maxlength="4" id="phone_a" name="phone1"/>
+							<input type="text"  class="required number" maxlength="8" id="phone_b" name="phone2"/>
+							<input type="text"  class="required number" maxlength="10" id="phone_c" name="phone3"/>
 					</div>
 					<div class="linkman_a">
 							<div class="linkman_name">* 联系人邮件：</div>
-							<div class="linkman_input"><input type="text" class="required" name="post[email]"/></div>
+							<div class="linkman_input"><input type="text" maxlength="40" class="required" name="post[email]"/></div>
 							<div id="linkman_qq">联系人QQ：</div>
-							<input type="text" id="q_input" class="number" name="post[qq]"/>
+							<input type="text" id="q_input" class="number" maxlength="10" name="post[qq]"/>
 					</div>
 					<div class="linkman_a">
 							<div id="linkman_name">* 联系人职位信息：</div>
-							<div class="linkman_input"><input type="text" id="p_info" class="required" name="post[post]"/></div>
+							<div class="linkman_input"><input type="text" id="p_info" maxlength="20" class="required" name="post[post]"/></div>
 							<div id="linkman_msn">联系人MSN：</div>
-							<input type="text" id="msn" name="post[msn]"/>
+							<input type="text" id="msn" maxlength="40" name="post[msn]"/>
 					</div>
 					<div id="kong"><input type="button" id="sumbit" value="完  成"/></div>
 			</div>

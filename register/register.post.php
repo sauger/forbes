@@ -16,22 +16,42 @@
 	}
 	if($_POST['rvcode'] != (string)$_SESSION['register_pic']){
 		alert('验证码错误!');
-		redirect('index.php');
+		redirect('/register/');
 		die();
 	}
 	if(strlen($_POST['user']['name']) > 20){
 		alert('用户名过长！请重新输入！');
-		redirect('index.php');
+		redirect('/register/');
 		die();
 	}
 	if(strlen($_POST['user']['name']) < 4){
 		alert('用户名过短！请重新输入！');
-		redirect('index.php');
+		redirect('/register/');
+		die();
+	}
+	if(preg_match("/^\w+$/", $_POST['user']['name'])==0){
+		alert('用户名包含特殊字符！请重新输入！');
+		redirect('/register/');
 		die();
 	}
 	if(strlen($_POST['user']['password']) > 20){
 		alert('密码过长！请重新输入！');
-		redirect('index.php');
+		redirect('/register/');
+		die();
+	}
+	if(strlen($_POST['user']['password']) < 4){
+		alert('密码过短！请重新输入！');
+		redirect('/register/');
+		die();
+	}
+	if(preg_match("/^[\w.!@#$%^&*]+$/", $_POST['user']['password'])==0){
+		alert('密码包含特殊字符！请重新输入！');
+		redirect('/register/');
+		die();
+	}
+	if(strlen($_POST['user']['email']) > 40){
+		alert('邮箱过长！请重新输入！');
+		redirect('/register/');
 		die();
 	}
 	$user = new table_class('fb_yh');

@@ -59,7 +59,7 @@
 					<div id="t_r_pg">
 					<div id=t_r_b_l>
 						<div id=picture1>
-							<img width="169px" src="<?php echo $magazine_now->img_src2?>">
+							<img src="<?php echo $magazine_now->img_src2?>">
 						</div>
 						<div id=text>
 							<a href="/column/column.php?id=">总编专栏</a>

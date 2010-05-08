@@ -63,7 +63,15 @@ $(function(){
 		});
 		if(!flag) return false;
 		if($("#new_pass").val()!=$("#rnew_pass").val()){
-			alert("请重新确认新密码");
+			alert("确认密码和新密码不一致！");
+			$("#rnew_pass").focus();
+			return false;
+		}else if(!isNumberOrLetter2($("#new_pass").val())){
+			alert("密码只能包含数字或字母及少量特殊符号！");
+			$("#rnew_pass").focus();
+			return false;
+		}else if($("#new_pass").val().length<4){
+			alert("密码过短！");
 			$("#rnew_pass").focus();
 			return false;
 		}else{
