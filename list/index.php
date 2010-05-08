@@ -146,9 +146,9 @@
 			</div>
 		</div>
 		<div id="right_inc" style="margin-top:10px;">
-		  		<?php include dirname(__FILE__)."/../right/ad.php";?>
-		  		<?php include dirname(__FILE__)."/../right/right_list.php"?>
-		  		<?php include dirname(__FILE__)."/../right/article.php";?>
+		  		<?php include_right('ad');?>
+		  		<?php include_right('right_list')?>
+		  		<?php include_right('article');?>
 		 </div>
 		
 		<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
