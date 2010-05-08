@@ -10,7 +10,7 @@
 		$sql .= " and (name like '%{$key}%' or email like '%{$key}%')";
 	}
 	
-	$record = $db->paginate($sql,15);
+	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
 
