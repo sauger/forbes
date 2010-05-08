@@ -51,7 +51,7 @@
 					return "城市";
 				break;
 				case 5:
-					return "名人";
+					return "人物";
 				break;
 				case 6:
 					return "体育";
@@ -106,7 +106,7 @@
 					<option value="2">投资</option>
 					<option value="3">公司</option>
 					<option value="4">城市</option>
-					<option value="5">名人</option>
+					<option value="5">人物</option>
 					<option value="6">体育</option>
 					<option value="7">生活</option>
 					<option value="8">教育</option>

@@ -98,7 +98,7 @@
 			<div id="normal_list">
 				<div class="list_list">
 				<?php 							
-					$type = array('rich' => '富豪','company' => '公司','famous' => '名人','tech' => '生活');
+					$type = array('rich' => '富豪','company' => '公司','famous' => '人物','tech' => '生活');
 					$j=1;
 					foreach($type as $key => $val){
 				?>
