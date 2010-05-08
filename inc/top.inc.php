@@ -29,7 +29,7 @@
 				}
 				$(function(){
 					$("#logout").click(function(){
-						$.cookie('cache_name','');
+						$.cookie('cache_name','',{path: '/'});
 						location.reload();
 					});
 				});
@@ -46,7 +46,7 @@
 	</div>
   <div id=top_logo>
 			<div id=border></div>
-			<div id=logo></div>
+			<div id=logo><a href="http://www.forbeschina.com"><img border=0 src="/images/forbes_logo.png"></a></div>
 			<div class=forbes_search>
 					<select name="selsearch" class="iselect">
 						<option value="list">榜单</option>

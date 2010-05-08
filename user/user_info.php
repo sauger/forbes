@@ -3,7 +3,6 @@
 	require_login();
 	$db = get_db();
 	$uid = front_user_id();
-	$uid = 23;
 	$yh_xx = $db->query("select id from fb_yh_xx where yh_id=$uid");
 	$user = new table_class('fb_yh_xx');
 	$user->find($yh_xx[0]->id);
@@ -71,7 +70,7 @@
 			<div class=right_title>
 				<div id="r_title1"><?php echo $uname;?> 的个人中心</div>
 				<?php $score = $db->query("select score from fb_yh where id=$uid");?>
-				<div id="r_title2">个人积分：<?php echo $score[0]->score;?></div>
+				<div id="r_title2">积分：<span style="color:#ff0000;"><?php echo $score[0]->score;?></span></div>
 			</div>
 			<div class="right_text2">
 				<div id=register>
@@ -83,7 +82,7 @@
 					<table cellpadding="0" cellspacing="0">
 						<tr>
 							<td class=td1>姓名</td>
-							<td class=td3><input class="txt" value="<?php echo htmlspecialchars($user->xm);?>" name="post[xm]" type="text"></td>
+							<td class=td3><input class="txt" maxlength=10 value="<?php echo htmlspecialchars($user->xm);?>" name="post[xm]" type="text"></td>
 							<td colspan=2></td>
 						</tr>
 						<tr>
@@ -124,10 +123,10 @@
 							        <OPTION <?php if($user->hy=="13.建筑"){?>selected="selected"<?php }?> value=13.建筑>13.建筑</OPTION> 
 									<OPTION <?php if($user->hy=="14.政府机构"){?>selected="selected"<?php }?> value=14.政府机构>14.政府机构</OPTION> 
 									<OPTION <?php if($user->hy=="15.文化 教育 培训"){?>selected="selected"<?php }?> value="15.文化 教育 培训">15.文化/教育/培训</OPTION> 
-									<OPTION <?php if($user->hy=="16.交通运输 航空 船务 铁路 货运等 "){?>selected="selected"<?php }?> value="16.交通运输 航空 船务 铁路 货运等 ">16.交通运输(航空，船务，铁路，货运等)</OPTION> 
+									<OPTION <?php if($user->hy=="16.交通运输 航空 船务 铁路 货运等"){?>selected="selected"<?php }?> value="16.交通运输 航空 船务 铁路 货运等 ">16.交通运输(航空，船务，铁路，货运等)</OPTION> 
 									<OPTION <?php if($user->hy=="17.法律 会计"){?>selected="selected"<?php }?> value="17.法律 会计">17.法律/会计</OPTION> 
 									<OPTION <?php if($user->hy=="18.商业咨询 顾问服务"){?>selected="selected"<?php }?> value="18.商业咨询 顾问服务">18.商业咨询/顾问服务</OPTION> 
-									<OPTION <?php if($user->hy=="19.媒体 公关 出版 广播 广告等 "){?>selected="selected"<?php }?> value="19.媒体 公关 出版 广播 广告等 ">19.媒体/公关（出版，广播，广告等）</OPTION> 
+									<OPTION <?php if($user->hy=="19.媒体 公关 出版 广播 广告等"){?>selected="selected"<?php }?> value="19.媒体 公关 出版 广播 广告等 ">19.媒体/公关（出版，广播，广告等）</OPTION> 
 									<OPTION <?php if($user->hy=="20.其他"){?>selected="selected"<?php }?> value=20.其他>20.其他</OPTION>
 								</select>
 							</td>
@@ -153,11 +152,11 @@
 						</tr>
 						<tr>
 							<td class=td1>工作单位</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->gzdw);?>" name="post[gzdw]" type="text"></td>
+							<td colspan=3 class=td2><input class="txt1" maxlength="30" value="<?php echo htmlspecialchars($user->gzdw);?>" name="post[gzdw]" type="text"></td>
 						</tr>
 						<tr>
 							<td class=td1>所在部门</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->szbm);?>" name="post[szbm]" type="text"></td>
+							<td colspan=3 class=td2><input class="txt1" maxlength="20" value="<?php echo htmlspecialchars($user->szbm);?>" name="post[szbm]" type="text"></td>
 						</tr>
 						<tr>
 							<td class=td1>公司性质</td>
@@ -200,7 +199,7 @@
 								<select name="post[gscp]" class=sel1>
 									<option value=""></option>
 									<OPTION <?php if($user->gscp=="1.电脑 电脑配件及外设"){?>selected="selected"<?php }?> value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</OPTION> 
-							        <OPTION <?php if($user->gscp=="2.电子元器件 电阻 电容 半导体等零部件 "){?>selected="selected"<?php }?> value="2.电子元器件 电阻 电容 半导体等零部件 ">2.电子元器件（电阻、电容、半导体等零部件）</OPTION> 
+							        <OPTION <?php if($user->gscp=="2.电子元器件 电阻 电容 半导体等零部件"){?>selected="selected"<?php }?> value="2.电子元器件 电阻 电容 半导体等零部件 ">2.电子元器件（电阻、电容、半导体等零部件）</OPTION> 
 							        <OPTION <?php if($user->gscp=="3.电子消费类产品"){?>selected="selected"<?php }?> value=3.电子消费类产品>3.电子消费类产品</OPTION> 
 									<OPTION <?php if($user->gscp=="4.通讯 电力 网络等硬件设备"){?>selected="selected"<?php }?> value="4.通讯 电力 网络等硬件设备">4.通讯、电力、网络等硬件设备</OPTION> 
 									<OPTION <?php if($user->gscp=="5.汽车及汽车用品"){?>selected="selected"<?php }?> value=5.汽车及汽车用品>5.汽车及汽车用品</OPTION> 
@@ -278,29 +277,29 @@
 					<table cellpadding="0" style="margin-top:0" cellspacing="0">
 						<tr>
 							<td class=td1>通讯地址</td>
-							<td colspan=3 class=td2><input value="<?php echo htmlspecialchars($user->txdz);?>" class="txt1" name="post[txdz]" type="text"></td>
+							<td colspan=3 class=td2><input maxlength="30" value="<?php echo htmlspecialchars($user->txdz);?>" class="txt1" name="post[txdz]" type="text"></td>
 						</tr>
 						<tr>
 							<td class=td1>邮编</td>
-							<td colspan=3 class=td2><input value="<?php echo htmlspecialchars($user->yb);?>" class="txt1" name="post[yb]" type="text"></td>
+							<td colspan=3 class=td2><input maxlength="20" value="<?php echo htmlspecialchars($user->yb);?>" class="txt1" name="post[yb]" type="text"></td>
 						</tr>
 						<tr>
 							<td class=td1>固定电话</td>
-							<td class=td2><input class="txt2" value="<?php echo $user->gddh1?>" name="post[gddh1]" type="text"></td>
-							<td class=td2><input class="txt2" value="<?php echo $user->gddh2?>" name="post[gddh2]" type="text"></td>
-							<td class=td2><input class="txt2" value="<?php echo $user->gddh3?>" name="post[gddh3]" type="text"></td>
+							<td class=td2><input class="txt2" maxlength="4" value="<?php echo $user->gddh1?>" name="post[gddh1]" type="text"></td>
+							<td class=td2><input class="txt2" maxlength="8" value="<?php echo $user->gddh2?>" name="post[gddh2]" type="text"></td>
+							<td class=td2><input class="txt2" maxlength="10" value="<?php echo $user->gddh3?>" name="post[gddh3]" type="text"></td>
 						</tr>
 						<tr>
 							<td class=td1>手机</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->sj);?>" name="post[sj]" type="text"></td>
+							<td colspan=3 class=td2><input class="txt1" maxlength="20" value="<?php echo htmlspecialchars($user->sj);?>" name="post[sj]" type="text"></td>
 						</tr>
 						<tr>
 							<td class=td1>MSN</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->msn);?>" name="post[msn]" type="text"></td>
+							<td colspan=3 class=td2><input class="txt1" maxlength="40" value="<?php echo htmlspecialchars($user->msn);?>" name="post[msn]" type="text"></td>
 						</tr>
 						<tr>
 							<td class=td1>QQ</td>
-							<td colspan=3 class=td2><input class="txt1" value="<?php echo htmlspecialchars($user->qq);?>" name="post[qq]" type="text"></td>
+							<td colspan=3 class=td2><input class="txt1" maxlength="10" value="<?php echo htmlspecialchars($user->qq);?>" name="post[qq]" type="text"></td>
 						</tr>
 						<!--
 						<tr>

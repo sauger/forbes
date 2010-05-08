@@ -82,7 +82,12 @@ $(function(){
 		
 		$("#subject_btnl").click(function()
 		{
+			
+			var str = $("#subject_box").find('.subject_content').last();
+			$("#subject_box").find('.subject_content').last().remove();
+			$("#subject_box").prepend(str);
 
+			/*
 			if(subject_id==0){return false;}
 			
 			$(".subject_content").hide();
@@ -94,13 +99,24 @@ $(function(){
 			$("#subject_content_"+subject_id2).show();
 			$("#subject_content_"+subject_id3).show();
 			subject_id=parseInt(subject_id)-1;
+			*/
 
 
 		})		
 		
 		$("#subject_btnr").click(function()
 		{
-			if(subject_id>=5){return false;}
+			var str = $("#subject_box").find('.subject_content').first();
+			$("#subject_box").find('.subject_content').first().remove();
+			$("#subject_box").append(str);
+			/*
+			var str = $("#subject_btnl").next().html();
+			$("#subject_btnl").next().remove();
+			$("#subject_btnr").before(str);
+
+			
+			
+			if(subject_id>=1){return false;}
 			
 			$(".subject_content").hide();
 			var subject_id1=parseInt(subject_id)+1;
@@ -111,6 +127,7 @@ $(function(){
 			$("#subject_content_"+subject_id2).show();
 			$("#subject_content_"+subject_id3).show();
 			subject_id=parseInt(subject_id)+1;
+			*/
 
 		})	
 		
@@ -147,7 +164,7 @@ $(function(){
 					if($(this).css('opacity')=='1'&&flag){
 						$('.cpic').css('opacity','0.4');
 						$(this).parent().next().find('.cpic').css('opacity','1');
-						$('.cpic').css('filter','alpha(opacity=86)');
+						$('.cpic').css('filter','alpha(opacity=40)');
 						$(this).parent().next().find('.cpic').css('filter','alpha(opacity=100)');
 						flag = false;
 						$(".cloumn_news_box").hide();
@@ -172,7 +189,7 @@ $(function(){
 					if($(this).css('opacity')=='1'&&flag){
 						$('.cpic').css('opacity','0.4');
 						$(this).parent().prev().find('.cpic').css('opacity','1');
-						$('.cpic').css('filter','alpha(opacity=86)');
+						$('.cpic').css('filter','alpha(opacity=40)');
 						$(this).parent().prev().find('.cpic').css('filter','alpha(opacity=100)');
 						flag = false;
 						$(".cloumn_news_box").hide();

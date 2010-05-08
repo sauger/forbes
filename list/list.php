@@ -36,7 +36,7 @@
 				<a href="list.php?id=4">城市</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=5">名人</a>
+				<a href="list.php?id=5">人物</a>
 			</div>
 			<div class=sort_l_l1>
 				<a href="list.php?id=6">体育</a>
@@ -53,14 +53,7 @@
 			<div class=sort_l_t1>
 				<a class="sort_link2" href="list.php?id=10">专题榜</a>
 			</div>
-			<div class=sort_l_t1>
-				按年份
-			</div>
-			<?php for($i=date('Y');$i>2004;$i--){?>
-			<div class=sort_l_l1 <?php if($i==date('Y')){?>style="margin-top:10px;"<?php }?>>
-				<a href="list.php?year=<?php echo $i;?>"><?php echo $i;?>年榜单</a>
-			</div>
-			<?php }?>
+			
 			<input type="text" id=sort_text ><input type="button" id=sort_button>
 		</div>
 		<div id=sort_r>
@@ -71,37 +64,37 @@
 				if(strlen($key)>20)$key='';
 				switch($bdid){
 					case "1":
-						$bdname="您选择的富豪榜";
+						$bdname="富豪榜";
 						break;
 					case "2":
-						$bdname="您选择的投资榜";
+						$bdname="投资榜";
 						break;
 					case "3":
-						$bdname="您选择的公司榜";
+						$bdname="公司榜";
 						break;
 					case "4":
-						$bdname="您选择的城市榜";
+						$bdname="城市榜";
 						break;
 					case "5":
-						$bdname="您选择的名人榜";
+						$bdname="名人榜";
 						break;
 					case "6":
-						$bdname="您选择的体育榜";
+						$bdname="体育榜";
 						break;
 					case "7":
-						$bdname="您选择的科技榜";
+						$bdname="科技榜";
 						break;
 					case "8":
-						$bdname="您选择的教育榜";
+						$bdname="教育榜";
 						break;
 					case "9":
-						$bdname="您选择的图片榜";
+						$bdname="图片榜";
 						break;
 					case "10":
-						$bdname="您选择的专题榜";
+						$bdname="专题榜";
 						break;
 					default: 
-			    	$bdname="您选择的常规榜"; 
+			    	$bdname="常规榜"; 
 			    	break; 
 				}
 				if($bdid=="")
@@ -124,28 +117,24 @@
 					
 				}
 				if($year){
-					$bdname = "您选择的".$year."年榜单";
+					$bdname = $year."年榜单";
 					$sql = "select * from fb_custom_list_type where created_at>'{$year}-01-01 00:00:00' and created_at<'{$year}-12-31 23:59:59' order by priority asc,created_at desc";
 				}
 				if($key){
 					$bdname = '您搜索的关键字"'.$key.'"榜单';
 					$sql = "select * from fb_custom_list_type where name like '%$key%'";
 				}
-				$bd=$db->paginate($sql,13);
+				$bd=$db->paginate($sql,10);
 			?>
 			<div id=sort_r_t>
-				<div style="width:420px;float:left;display:inline;"><?php echo $bdname; ?>共有<?php echo $page_record_count; ?>条记录，分别如下：</div>
+				<?php echo $bdname; ?>共有<?php echo $page_record_count; ?>条榜单
 			</div>
-			<div id=sort_r_m>
-			</div>
-			<div id=sort_r_b>
-				<div id=sort_r_b_l>
-					<?php for($i=0;$i<count($bd);$i++){ ?>
-						<div class=sort_r_b_l_t><a href="show_list.php?id=<?php echo $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
-					<?php } ?>
-				</div>
-				<div id="list_banner"></div>
-			</div>
+			<div id="list_banner"></div>
+			<div id=sort_r_b_l>
+				<?php for($i=0;$i<count($bd);$i++){ ?>
+					<div class=sort_r_b_l_t><a href="show_list.php?id=<?php echo $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
+				<?php } ?>
+			</div>	
 			<div id=sort_page><?php paginate();?></div>
 		</div>
 		<?php include_bottom();?>

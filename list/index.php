@@ -92,13 +92,13 @@
 			<div class=caption>
 					<div class=captions>常规榜单</div>
 					<div class=line>|</div>
-					<a href="/list/list.php" class=more target="_blank"></a>
+					<a href="#" class=more target="_blank"></a>
 			</div>
 
 			<div id="normal_list">
 				<div class="list_list">
 				<?php 							
-					$type = array('rich' => '富豪','company' => '公司','famous' => '名人','tech' => '生活');
+					$type = array('rich' => '富豪','company' => '公司','famous' => '人物','tech' => '生活');
 					$j=1;
 					foreach($type as $key => $val){
 				?>
@@ -106,7 +106,7 @@
 						<div class="list_title">
 							<div class="title"><?php echo $val;?></div>
 							<div class="title_line1"></div>
-							<div class="title_line2"><a href="list.php?id=<?php echo $j;?>">更多>></a></div>
+							<div class="title_line2"><a href="/list/more/<?php echo $j;?>">更多>></a></div>
 							<div class="title_line3"></div>
 						</div>
 						<div class="list_li_box">
@@ -130,7 +130,7 @@
 						<div class="list_title">
 							<div class="title"><?php echo $val;?></div>
 							<div class="title_line1"></div>
-							<div class="title_line2"><a href="list.php?id=<?php echo $j;?>">更多>></a></div>
+							<div class="title_line2"><a href="/list/more/<?php echo $j;?>">更多>></a></div>
 							<div class="title_line3"></div>
 						</div>
 						<div class="list_li_box">
@@ -146,9 +146,9 @@
 			</div>
 		</div>
 		<div id="right_inc" style="margin-top:10px;">
-		  		<?php include dirname(__FILE__)."/../right/ad.php";?>
-		  		<?php include dirname(__FILE__)."/../right/right_list.php"?>
-		  		<?php include dirname(__FILE__)."/../right/article.php";?>
+		  		<?php include_right('ad');?>
+		  		<?php include_right('right_list')?>
+		  		<?php include_right('article');?>
 		 </div>
 		
 		<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>

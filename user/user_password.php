@@ -71,9 +71,9 @@
 				<div id="r_title2">个人积分：<?php echo $score[0]->score;?></div>
 			</div>
 			<div class="right_text2">
-				<div style="margin-top:40px;" class="p_list"><label for="old_pass">原密码</label><input id="old_pass" type="password"></div>
-				<div class="p_list"><label for="new_pass">新密码</label><input id="new_pass" type="password"></div>
-				<div class="p_list"><label for="rnew_pass">确认新密码</label><input id="rnew_pass" type="password"></div>
+				<div style="margin-top:40px;" class="p_list"><label for="old_pass">原密码</label><input id="old_pass"  maxlength=20 type="password"></div>
+				<div class="p_list"><label for="new_pass">新密码</label><input id="new_pass" maxlength=20 type="password"></div>
+				<div class="p_list"><label for="rnew_pass">确认新密码</label><input id="rnew_pass" maxlength=20 type="password"></div>
 				<button class="user_b" id="pass_b" type="button">设定</button>
 			</div>
 		</div>

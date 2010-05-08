@@ -29,7 +29,7 @@
 		if(!$db->move_first()){
 			alert('您的申请不合法或者已经过期');
 			redirect('/'); 
-		}else{
+		}else{$uid = $db->field_by_name('user_id');
  ?>
 <div id=ibody>		
 	 <?php include_top();?>
@@ -52,7 +52,7 @@
 	  		<div class="line_div"><input type="button" id="login2" value="提交"></button></div>
 	  	</div>
 		<input type="hidden" name="session" value="<?php echo $_SESSION['get_pwd'];?>">
-		<input type="hidden" name="uid" value="<?php echo $db->field_by_name('user_id');?>">
+		<input type="hidden" name="uid" value="<?php echo $uid;?>">
 	  </form>
 	</div>
 	<div id="right">

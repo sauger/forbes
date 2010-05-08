@@ -15,23 +15,38 @@
 		die();
 	}
 	
-	if($_POST['yzm']!=$_SESSION['getpwd']){
+	if($_POST['yzm']!=$_SESSION['getpwd']||empty($_SESSION['getpwd'])){
 		alert('验证码不正确！');
 		redirect('/getpwd/'); 
 		die();
 	}
+	if(strlen($_POST['u_name']) > 20){
+		alert('用户名过长！请重新输入！');
+		redirect('/getpwd/');
+		die();
+	}
+	if(strlen($_POST['u_name']) < 4){
+		alert('用户名过短！请重新输入！');
+		redirect('/getpwd/');
+		die();
+	}
+	if(preg_match("/^\w+$/", $_POST['u_name'])==0){
+		alert('用户名包含特殊字符！请重新输入！');
+		redirect('/getpwd/');
+		die();
+	}
+	if(strlen($_POST['email']) > 40){
+		alert('邮箱过长！请重新输入！');
+		redirect('/getpwd/');
+		die();
+	}
+	if(preg_match("/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/", $_POST['email'])==0){
+		alert('邮箱格式不正确！请重新输入！');
+		redirect('/getpwd/');
+		die();
+	}
 	$name = $_POST['u_name'];
-	if(strlen($name)>20){
-		alert('用户名和注册邮箱不匹配');
-		redirect('/getpwd/');
-		die();
-	}
-	$mail = $_POST['email'];
-	if(strlen($mail)>30){
-		alert('用户名和注册邮箱不匹配');
-		redirect('/getpwd/');
-		die();
-	}
+	$mail =  $_POST['email'];
 	$db = get_db();
 	
 	$user = $db->query("select id from fb_yh where name='$name' and email='$mail'");

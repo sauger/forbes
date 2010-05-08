@@ -176,7 +176,7 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 							$pos->find($record[0]->id);
 							$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 							$pos->end_time = $end_time;
-							$pos->display = $news[$i]->short_title;
+							$pos->display = $news[$i]->title;
 							$pos->title = $news[$i]->title;
 							$pos->image1 = $news[$i]->video_photo_src;
 							$pos->description = $news[$i]->description;
@@ -190,7 +190,7 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 						$pos->name = $pos_name;
 						$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 						$pos->end_time = $end_time;
-						$pos->display = $news[$i]->short_title;
+						$pos->display = $news[$i]->title;
 						$pos->title = $news[$i]->title;
 						$pos->image1 = $news[$i]->video_photo_src;
 						$pos->description = $news[$i]->description;
@@ -250,7 +250,7 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 					$pos->name = $pos_name;
 					$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 					$pos->end_time = $end_time;
-					$pos->display = $news[$i]->short_title;
+					$pos->display = $news[$i]->title;
 					$pos->title = $news[$i]->title;
 					$pos->image1 = $news[$i]->video_photo_src;
 					$pos->description = $news[$i]->description;
@@ -280,7 +280,7 @@ function update_click($limit,$position_name){
 					$pos->find($record[0]->id);
 					$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 					$pos->end_time = $end_time;
-					$pos->display = $news[$i]->short_title;
+					$pos->display = $news[$i]->title;
 					$pos->title = $news[$i]->title;
 					$pos->image1 = $news[$i]->video_photo_src;
 					$pos->description = $news[$i]->description;
@@ -294,7 +294,7 @@ function update_click($limit,$position_name){
 				$pos->name = $pos_name;
 				$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 				$pos->end_time = $end_time;
-				$pos->display = $news[$i]->short_title;
+				$pos->display = $news[$i]->title;
 				$pos->title = $news[$i]->title;
 				$pos->image1 = $news[$i]->video_photo_src;
 				$pos->description = $news[$i]->description;
@@ -336,7 +336,7 @@ function update_news_column($category_name,$limit,$type,$position_name){
 					$pos->find($record[0]->id);
 					$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 					$pos->end_time = $end_time;
-					$pos->display = $news[$i]->short_title;
+					$pos->display = $news[$i]->title;
 					$pos->title = $news[$i]->title;
 					$pos->image1 = $news[$i]->video_photo_src;
 					$pos->image2 = $news[$i]->image_src;
@@ -356,7 +356,7 @@ function update_news_column($category_name,$limit,$type,$position_name){
 				$pos->name = $pos_name;
 				$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 				$pos->end_time = $end_time;
-				$pos->display = $news[$i]->short_title;
+				$pos->display = $news[$i]->title;
 				$pos->title = $news[$i]->title;
 				$pos->image1 = $news[$i]->video_photo_src;
 				$pos->image2 = $news[$i]->image_src;

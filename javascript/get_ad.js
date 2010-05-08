@@ -1,5 +1,5 @@
 $(function(){
-	var parttern = /\/(.*)\/\s*/;
+	var parttern = /\/([^\/]*)\/\s*/;
 	var channel =  parttern.exec(location.pathname);
 	if(channel){
 		channel = channel[1];

@@ -253,4 +253,4 @@
 		</div>
 		<?php include_bottom();?>
 	</div>
-</body>
+</body>	

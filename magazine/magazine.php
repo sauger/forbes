@@ -57,16 +57,8 @@
 				</div>
 				<div id=t_r_b>
 					<div id="t_r_pg">
-					<div id=t_r_b_l>
-						<div id=picture1>
-							<img width="169px" src="<?php echo $magazine_now->img_src2?>">
-						</div>
-						<div id=text>
-							<a href="/column/column.php?id=">总编专栏</a>
-						</div>
-					</div>
 					<div id="zhuanlan_top"><?php echo $magazine_now->name;?></div>
-							<?php echo $magazine_now->description;?>
+					<?php echo $magazine_now->description;?>
 					</div>
 				</div>
 			</div>
@@ -114,7 +106,7 @@
 						?>
 						<div class="picture">
 							<div class="picture1">
-								<a title="<?php echo $magazines[$i]->name;?>" href="magazine.php?id=<?php echo $magazines[$i]->id;?>"><img border="0" width="93px" height="123px;" src="<?php echo $magazines[$i]->img_src;?>"></a>
+								<a title="<?php echo $magazines[$i]->name;?>" href="<?php echo "{$static_site}/magazine/{$magazine[$i]->id}";?>"><img border="0" width="93px" height="123px;" src="<?php echo $magazines[$i]->img_src;?>"></a>
 							</div>
 						</div>
 						<?php }?>

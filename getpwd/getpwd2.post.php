@@ -10,17 +10,46 @@
 <?php
     include_once('../frame.php');
 	
-	
 	if(!is_post()){
 		redirect('/error/'); 
 		die();
 	}
 	
-	if($_POST['session']!=$_SESSION['get_pwd']){
+	if($_POST['session']!=$_SESSION['get_pwd']||empty($_SESSION['get_pwd'])){
 		redirect('/error/'); 
 		die();
 	}else{
 		unset($_SESSION['get_pwd']);
+	}
+	if(strlen($_POST['password1']) > 20){
+		alert('密码过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(strlen($_POST['password1']) < 4){
+		alert('密码过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(preg_match("/^[\w.!@#$%^&*]+$/", $_POST['password1'])==0){
+		alert('用户名包含特殊字符！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(strlen($_POST['password2']) > 20){
+		alert('密码过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(strlen($_POST['password2']) < 4){
+		alert('密码过短！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(preg_match("/^[\w.!@#$%^&*]+$/", $_POST['password2'])==0){
+		alert('密码包含特殊字符！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
 	}
 	if($_POST['password1']!=$_POST['password2']){
 		alert("2次密码输入不一致!");

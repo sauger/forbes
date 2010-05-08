@@ -1,17 +1,46 @@
 <?php
-session_start();
+	session_start();
+	include("../frame.php");
+	if(!is_post()){
+		redirect('/error/'); 
+		die();
+	}
 
-include("../frame.php");
-if(!is_post()){
-	redirect('/error/'); 
-	die();
-}
-
-if($_SESSION['login']!=$_POST['session']){
+	if($_SESSION['login']!=$_POST['session']||empty($_SESSION['login'])){
 		redirect('/error/'); 
 		die();
 	}else{
 		unset($_SESSION['login']);
+	}
+	if(strlen($_POST['name']) > 20){
+		alert('用户名过长！请重新输入！');
+		redirect('/login/');
+		die();
+	}
+	if(strlen($_POST['name']) < 4){
+		alert('用户名过短！请重新输入！');
+		redirect('/login/');
+		die();
+	}
+	if(preg_match("/^\w+$/", $_POST['name'])==0){
+		alert('用户名包含特殊字符！请重新输入！');
+		redirect('/login/');
+		die();
+	}
+	if(strlen($_POST['password']) > 20){
+		alert('密码过长！请重新输入！');
+		redirect('/login/');
+		die();
+	}
+	if(strlen($_POST['password']) < 4){
+		alert('密码过短！请重新输入！');
+		redirect('/login/');
+		die();
+	}
+	if(preg_match("/^[\w.!@#$%^&*]+$/", $_POST['password'])==0){
+		alert('密码包含特殊字符！请重新输入！');
+		redirect('/login/');
+		die();
 	}
 	$name=$_POST['name'];
 	$password=$_POST['password'];
@@ -42,7 +71,6 @@ if($_SESSION['login']!=$_POST['session']){
 			
 		}else{
 			setcookie("cache_name",$cache_name,0,'/');
-			setcookie("login_name",$cache_name,time()+3600*24,'/');
 		}
 		$db->execute("insert into fb_yh_log (yh_id,time) values ({$user_id},now())");
 		$last_url = $suess_url;
