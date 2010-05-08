@@ -3,7 +3,7 @@
 	$user = $_GET['user'];
 	$key = $_GET['key'];
 	$db = get_db();
-	$db->query("select name,id,password from fb_yh where name='{$user}' and authenticate_string='{$key}'");
+	$db->query("select name,id,password,authenticated from fb_yh where name='{$user}' and authenticate_string='{$key}'");
 	
 	if(!$db->move_first()){
 		$str = '对不起，您的验证码不正确，无法完成激活！';
@@ -12,8 +12,11 @@
 		$name = $db->field_by_name('name');
 		$user_id = $db->field_by_name('id');
 		$password = $db->field_by_name('password');
-		$db->execute("update fb_yh set authenticated=1 where id={$id}");
-		adjust_user_score($id,50,"用户激活");
+		$authenticated = $db->field_by_name('authenticated');
+		if($authenticated==0){
+			$db->execute("update fb_yh set authenticated=1 where id={$id}");
+			adjust_user_score($id,50,"用户激活");
+		}
 		$str = '恭喜您，激活成功，感谢您注册成为福布斯中文网会员！';
 		$cache_name = sprintf('%06s',$user_id) .rand_str(24);
 		$limit=3600*24;

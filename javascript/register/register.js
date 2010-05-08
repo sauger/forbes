@@ -167,7 +167,6 @@ function check_name(){
 		}
 	});
 }
-
 function check_email(){
 	$.post('check_email.php',{'email':$("#user_email").val()},function(data){
 		if(data==1){
@@ -273,7 +272,7 @@ function isNumberOrLetter2(s){//判断是否是数字或字母及少量特殊符
 
 
 function isEmail( str ){ 
-	var myReg = /^[-_.A-Za-z0-9]+@([-_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
+	var myReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; 
 	if(myReg.test(str)) return true; 
 	return false; 
 } 
