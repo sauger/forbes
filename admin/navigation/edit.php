@@ -33,8 +33,9 @@
 	  <a href="index.php" id=btn_back></a>
 </div>
 <div id=itable>
+	<form id="menu_form" method="post" action="edit.post.php">
 	<table cellspacing="1" align="center">
-	<form id="menu_form" method="post" action="edit.post.php">	
+		
 		<tr class=tr4>
 			<td class=td1 width=15%>名称</td>
 			<td width="85%"><input type="text" name="post[name]" value="<?php echo $menu->name;?>" class="required"></td>
@@ -59,7 +60,7 @@
 			<td class=td1>链接方式</td>
 			<td>
 				<select id="sel_target" name="post[target]" >
-					<option value="_slef" <?php if($menu->target == '_slef') echo 'selected="selected"'; ?>>当前窗口</option>
+					<option value="_slef" <?php if($menu->target == '_self') echo 'selected="selected"'; ?>>当前窗口</option>
 					<option value="_blank" <?php if($menu->target == '_blank') echo 'selected="selected"'; ?>>新建窗口</option>
 				</select>				
 			</td>
@@ -79,8 +80,8 @@
 				<input type="hidden" name="id" value="<?php echo $menu->id;?>">
 			</td>
 		</tr>
-	</form>
 	</table>
+	</form>
 </div>
 </body>
 </html>
