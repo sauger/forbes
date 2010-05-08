@@ -32,7 +32,7 @@
 				<div class=column_special>
 					<div class=captions>特约专栏</div>
 					<div class=line>|</div>
-					<a href="#" target="_blank" class=more></a>
+					<a href="http://www.forbeschina.com/column/expert" target="_blank" class=more></a>
 					<?php $pos_name = "column_special_t";?>
 					<div class=column_special_top <?php show_page_pos($pos_name,'base_ntime');?>>
 						<div class=t1 >
@@ -96,7 +96,7 @@
 				<div class=column_edit>
 					<div class=captions>专栏文章推荐</div>
 					<div class=line>|</div>
-					<a href="#" target="_blank" class=more></a>
+					<a href="http://www.forbeschina.com/column/journalist" target="_blank" class=more></a>
 					<?php
 						for($i=0;$i<3;$i++){
 							$pos_name = 'column_edit_t'.$i;
