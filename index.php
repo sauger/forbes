@@ -207,7 +207,7 @@
 					</table>
 				</div>
 				<div id=bottom>
-					<div id=title>实时财富动态</div>
+					<div id=title>榜单动态</div>
 					<?php for($i=0;$i<2;$i++){
 						$pos_name = "index_dyn_list{$i}"; 
 						?>
@@ -390,7 +390,7 @@
 			</div>
 			
 			<div id=club>
-					<div class=club_caption1>增长俱乐部<span>Up Club</span></div>
+					<div class=club_caption1>增长会<span>Up</span></div>
 					<a href="/investor" class=club_more1 target="_blank"></a>
 					<?php $pos_name = 'index_club0';?>
 					<div class=content <?php show_page_pos("$pos_name",'base_img_withoutime');?>>
@@ -508,13 +508,13 @@
 						<div class=writer_pic<?php show_page_pos($pos_name,'index_column2')?>><?php show_page_img(null,null,0,'image1',null,'alias')?></div>
 						<div class=writer_name>
 							<a href="<?php echo $pos_items->$pos_name->alias;?>" target="_blank">
-								<span style="color: #000;"><?php echo $pos_items->$pos_name->display;?></span>
+								<?php echo $pos_items->$pos_name->display;?>
 							</a>	
 						</div>	
-						<?php for($j=0;$j<2;$j++){
+						<?php for($j=0;$j<1;$j++){
 							$pos_name= "index_column_article_{$i}_{$j}";
 						?>
-						<div class="writer_name" style="font-weight: bold;" <?php show_page_pos($pos_name,'link_withouttime')?>>
+						<div class="writer_content" <?php show_page_pos($pos_name,'link_withouttime')?>>
 							<?php show_page_href();?>
 						</div>
 						<?php }?>
