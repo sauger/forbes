@@ -58,14 +58,6 @@
 				<div id=t_r_b>
 					<div id="t_r_pg">
 					<div id="zhuanlan_top"><?php echo $magazine_now->name;?></div>
-					<div id=t_r_b_l>
-						<div id=picture1>
-							<img src="<?php echo $magazine_now->img_src2?>">
-						</div>
-						<div id=text>
-							<a href="­http://www.forbeschina.com/column/zhoujiangong">总编专栏</a>
-						</div>
-					</div>
 					<?php echo $magazine_now->description;?>
 					</div>
 				</div>
