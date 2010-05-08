@@ -1,9 +1,9 @@
-﻿<?php
+<?php
 	session_start();
+	include_once('../frame.php');
 	if(!isset($_SESSION['sign'])){
 		$_SESSION['sign'] = rand_str(20);
 	}
-	include_once('../frame.php');
 	$db = get_db();
 	$industry = $db->query("select * from fb_invest_industry");
 	$count = $db->record_count;
