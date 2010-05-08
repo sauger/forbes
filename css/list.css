@@ -113,7 +113,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .sort_r_b_l_t a{color:#246BB0; text-decoration:none;}
 
 #sort_l{width:180px; height:673px; border:1px solid #f5f5f5; margin-top:5px; background:#fafafa; overflow:hidden;}
-.sort_l_t1{width:178px; height:30px; font-size:14px; color:#4990b9; font-weight:bold; line-height:30px; text-indent:30px; margin-top:1px; margin-left:1px; background:url(/images/column/l_title_bg1.jpg) repeat-x; }
+.sort_l_t1{width:178px; height:30px; font-size:14px; color:#4990b9; font-weight:bold; line-height:30px; text-indent:10px; margin-top:1px; margin-left:1px; background:url(/images/column/l_title_bg1.jpg) repeat-x; }
 .sort_l_l1{width:165px; height:20px; font-size:12px; line-height:20px; text-indent:25px; margin-top:5px; margin-left:8px; background:url(/images/list/sort_tar1.jpg) no-repeat left center; }
 #sort_r{width:800px; height:673px; margin-top:5px; margin-left:10px; border-style:solid; border-width:1px; border-color:#BDCBD7; }
 #sort_r_t{width:730px; height:40px; font-size:14px; font-weight:bold; line-height:40px; margin-top:12px; margin-left:20px; }
@@ -124,7 +124,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #list_banner{width:385px; height:375px; margin-top:27px; margin-left:15px;}
 #list_banner img{width:385px;height:375px;}
 
-#sort_top{margin-top:10px; }
+#sort_top{margin-top:10px;}
 #sort_title{height:27px; font-size:18px; text-align:left; font-weight:bold; color:#278AC4; font-family:微软雅黑; }
 #sort_title1{height:20px; font-size:12px; line-height:20px; margin-top:6px; margin-left:19px; }
 #sort_line{width:1000px; height:10px; background-image:url(/images/list/line.jpg); }

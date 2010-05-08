@@ -13,21 +13,21 @@ p{margin:0; padding:0}
 #zzleft #l_t_content{width:658px; height:575px; border-left:1px solid #dfdfdf; border-right:1px solid #dfdfdf; float:left; display:inline;}
 #zzleft .l_title{width:658px; height:27px; background:url('/images/magazine/title_bg.jpg') repeat-x; border-bottom:1px solid #dfdfdf; float:left; display:inline;}
 #zzleft .l_title .wz{width:191px; height:18px; margin-top:4px; margin-left:20px; font-size:14px; color:#999999; font-weight:bold; line-height:18px; float:left; display:inline;}
-#zzleft .l_pic{width:349px; height:451px; margin-top:20px; margin-left:25px; float:left; display:inline;}
+#zzleft .l_pic{width:349px; height:451px; margin-top:20px; margin-left:20px; float:left; display:inline;}
 #zzleft .l_pic img{width:349px; height:451px; margin:1px;}
-#zzleft #r_t{width:229px; margin-left:30px; float:left; display:inline;}
-#zzleft #r_t #title{width:229px; height:22px; margin-top:20px; line-height:22px; font-size:18px; font-weight:bold; float:left; display:inline;}
+#zzleft #r_t{width:245px; margin-left:20px; float:left; display:inline;}
+#zzleft #r_t #title{width:245px; height:22px; margin-top:20px; line-height:22px; font-size:18px; font-weight:bold; overflow:hidden; float:left; display:inline;}
 #zzleft #r_t #title a{color:#246bb0; text-decoration:none;}
-#zzleft #r_t #content{width:229px; height:42px; margin-top:10px; line-height:21px; font-size:13px; font-weight:bold; float:left; display:inline;}
+#zzleft #r_t #content{width:245px; height:42px; margin-top:10px; line-height:21px; font-size:13px; font-weight:bold; overflow:hidden; float:left; display:inline;}
 #zzleft #r_t #content a{color:#666666; text-decoration:none;}
-#zzleft .r_b{width:229px; margin-top:10px; margin-left:30px; float:left; display:inline;}
-#zzleft .r_b .title{width:229px; height:18px; margin-top:10px; overflow:hidden;  float:left; display:inline;}
+#zzleft .r_b{width:245px; margin-top:10px; margin-left:20px; float:left; display:inline;}
+#zzleft .r_b .title{width:245px; height:18px; margin-top:10px; overflow:hidden; float:left; display:inline;}
 #zzleft .r_b .title .jt{width:12px; height:11px; margin-top:3px; background:url('/images/magazine/jiantou.jpg') no-repeat; float:left; display:inline;}
 #zzleft .r_b .title .wz{width:210px; height:18px; font-size:14px; font-weight:bold; line-height:18px; float:right; display:inline;}
 #zzleft .r_b .title .wz a{color:#246bb0; text-decoration:none;}
-#zzleft .r_b .content{width:229px; height:63px; margin-top:10px; overflow:hidden; line-height:21px; float:left; display:inline;}
+#zzleft .r_b .content{width:245px; height:63px; margin-top:10px; overflow:hidden; line-height:21px; float:left; display:inline;}
 #zzleft .r_b .content a{color:#666666; text-decoration:none;}
-#zzleft .r_b .r_b_dash{width:214px; height:1px; margin-top:10px; margin-left:2px; background:url('/images/magazine/dash.jpg') no-repeat; overflow:hidden; float:left; display:inline;}
+#zzleft .r_b .r_b_dash{width:245px; height:1px; margin-top:10px; background:url('/images/magazine/dash.jpg') repeat-x; overflow:hidden; float:left; display:inline;}
 #zzleft .l_b{width:349px; height:34px; margin-top:15px; margin-left:25px; float:left; display:inline;}
 #zzleft .l_b .btn_ck{width:146px; height:34px; float:left; display:inline;}
 #zzleft .l_b .btn_readonline{width:146px; height:34px;  float:right; display:inline;}
