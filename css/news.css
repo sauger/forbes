@@ -17,7 +17,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #news_title{width:650px; margin-left:10px; overflow:hidden; font-size:30px; color:#1E448D; line-height:40px; font-weight:bold; font-family:微软雅黑,宋体; clear:both;}
 
 #news_info{width:650px; height:18px; margin-top:10px; margin-left:12px; color:#97ABCA; line-height:18px; font-size:14px; }
-
+#news_desc{width:630px; margin-top:10px; margin-left:10px; font-size:14px; line-height:20px;  padding:10px; background:#DFDFDF}
 #news_tools{width:648px; height:34px; margin-left:10px; margin-top:20px; font-size:12px; border:1px solid #D1D7DD; background:url('/images/news/tools.jpg'); text-align:right; line-height:30px;}
 .news_tools_btn{height:14px; margin-top:11px; padding-left:12px; line-height:16px; font-size:12px; padding-right:16px; border-left:1px #DBE1E7 solid; border-right:1px #FFFFFF solid; }
 .news_tools_btn img{float:left;}
