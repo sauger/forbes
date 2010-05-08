@@ -36,7 +36,7 @@
 				<a href="list.php?id=4">城市</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=5">名人</a>
+				<a href="list.php?id=5">人物</a>
 			</div>
 			<div class=sort_l_l1>
 				<a href="list.php?id=6">体育</a>
