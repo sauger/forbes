@@ -110,7 +110,7 @@
 	
 			<div id=news_text>
 				<div id=news_text_info>
-						<div class=info_title style="width:180px;">来源于：福布斯中文网</div>
+						<div class=info_title style="width:180px;">来源于：<?php if(strpos($news->top_info,'http://www') ===false){?>福布斯中文网<?php }?></div>
 						<?php if($news->top_info!=''){?>
 								<div id=info_resource><?php echo $news->top_info;?></div>
 						<?php }?>
