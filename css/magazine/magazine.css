@@ -29,20 +29,21 @@ p{margin:0; padding:0}
 #t_r{width:565px; height:649px; margin-left:11px; background-image:url(/images/magazine/t_r.jpg); float:left; display:inline;}
 #t_r_t{width:565px; height:30px; font-size:14px;   font-weight:bold; color:#8D8D8D; line-height:30px; text-indent:13px; border-bottom-style:solid; border-width:1px; border-color:#DADADA; float:left; display:inline;}
 #t_r_b{width:563px; height:616px; margin-left:1px; overflow:hidden; background:url(/images/magazine/pg_r.jpg) no-repeat; float:left; display:inline;}
-#t_r_b_l{width:196px; float:left; display:inline;}
-#t_r_b_l #picture1{width:169px; margin-top:15px; float:left; display:inline;}
+#t_r_b_l{width:150px; float:left; display:inline;}
+#t_r_b_l #picture1{width:100px; margin-top:15px; float:left; display:inline;}
+#t_r_b_l #picture1 img{width:100px; height:150px;}
 #t_r_b_l #text{width:104px; height:41px; margin-left:10px; font-size:14px; font-weight:bold; text-indent:40px; line-height:41px;  margin-top:22px; background:url(/images/magazine/tar1.jpg) no-repeat left center; float:left; display:inline;}
-#t_r_b_r{width:366px; height:518px;  float:left; display:inline;}
-#t_r_b_r #title2{width:366px; height:30px; font-size:18px; font-weight:bold; color:#003A7B; line-height:30px; margin-left:2px; margin-top:10px;  float:left; display:inline;}
-#t_r_b_r #text{width:360px; height:540px; overflow:hidden; color:#666666; line-height:22px; margin-left:2px; float:left; display:inline;}
+#t_r_b_r{width:406px; height:518px;  float:left; display:inline;}
+#t_r_b_r #title2{width:406px; height:30px; font-size:18px; font-weight:bold; color:#003A7B; line-height:30px; margin-left:2px; margin-top:10px;  float:left; display:inline;}
+#t_r_b_r #text{width:400px; height:540px; overflow:hidden; color:#666666; line-height:22px; margin-left:2px; float:left; display:inline;}
 #m{width:993px; height:521px; border-left:1px solid #DADADA; border-right:1px solid #DADADA; border-bottom:1px solid #DADADA;  background:url(/images/magazine/PG.jpg) no-repeat; float:left; display:inline;}
 #titlex{width:995px; height:30px; font-size:14px; margin-top:33px;  font-weight:bold; color:#8D8D8D; line-height:30px; text-indent:20px; background-image:url(/images/magazine/title1.jpg); float:left; display:inline;}
 .m_l{width:479px; height:217px; margin-left:12px; margin-top:13px; float:left; display:inline;}
-.m_l .picture{width:100px; height:145px; margin-left:9px; margin-top:11px; float:left; display:inline;}
-.m_l_r{width:332px; height:195px; margin-left:17px; margin-top:11px; float:left; display:inline;}
-.m_l_r .title3{width:332px; height:26px; font-size:18px; font-weight:bold; color:#003A7B; margin-top:10px; float:left; display:inline;}
+.m_l .picture{width:150px; height:195px; margin-left:9px; margin-top:11px; float:left; display:inline;}
+.m_l_r{width:282px; height:195px; margin-left:17px; margin-top:11px; float:left; display:inline;}
+.m_l_r .title3{width:282px; height:26px; font-size:18px; font-weight:bold; color:#003A7B; margin-top:10px; float:left; display:inline;}
 .title3 a{color:#003A7B; text-decoration: none;}
-.m_l_r .text{width:330px; height:138px; color:#666666; line-height:20px; margin-top:17px; float:left; display:inline;}
+.m_l_r .text{width:280px; height:138px; color:#666666; line-height:20px; margin-top:17px; float:left; display:inline;}
 #b{width:991px; height:174px; margin-top:26px; float:left; display:inline;}
 #b_l{width:715px; height:173px; background-image:url(/images/magazine/b_l.jpg); float:left; display:inline;}
 #b_l #title4{width:715px; height:30px; font-size:14px; font-weight:bold; color:#003A7B; line-height:30px; text-indent:14px; background-image:url(/images/magazine/title2.jpg); float:left; display:inline;}
