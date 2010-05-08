@@ -65,7 +65,6 @@
                 <tr>
                   <td><span style="color:red">*</span> 性别</td>
                   <td><select name="sub[Sex]" id="Sex" class="required">
-
                       <option value="男">先生</option>
                       <option value="女">女士</option>
                     </select>
@@ -169,7 +168,6 @@
                       <option value="1.博士">1.博士</option>
                       <option value="2.硕士">2.硕士</option>
                       <option value="3.大学本科 大学专科">3.大学本科/大学专科</option>
-
                       <option value="4.高中 中专">4.高中/中专</option>
                   </select></td>
                 </tr>
@@ -186,8 +184,7 @@
                       <option value="7.市场 销售 运营总监">7市场/销售/运营总监</option>
                       <option value="8.总工程师 高级工程师">8.总工程师/高级工程师</option>
                       <option value="9.部门经理">9.部门经理</option>
-                       <option value="10.专业人士 会计师 律师 经济师 教授等">10.专业人士（会计师，律师，经济师，教授等）</option>
-
+                      <option value="10.专业人士 会计师 律师 经济师 教授等">10.专业人士（会计师，律师，经济师，教授等）</option>
                       <option value="11.政府机构官员">11.政府机构官员</option>
                       <option value="12.其他">12.其他</option>
                   </select></td>
@@ -214,11 +211,11 @@
                       <option value="13.建筑">13.建筑</option>
                       <option value="14.政府机构">14.政府机构</option>
                       <option value="15.文化 教育 培训">15.文化/教育/培训</option>
-                      <option value="16.交通运输 航空 船务 铁路 货运等 ">16.交通运输(航空，船务，铁路，货运等)</option>
+                      <option value="16.交通运输 航空 船务 铁路 货运等">16.交通运输(航空，船务，铁路，货运等)</option>
                       <option value="17.法律 会计">17.法律/会计</option>
 
                       <option value="18.商业咨询 顾问服务">18.商业咨询/顾问服务</option>
-                      <option value="19.媒体 公关 出版 广播 广告等 ">19.媒体/公关（出版，广播，广告等）</option>
+                      <option value="19.媒体 公关 出版 广播 广告等">19.媒体/公关（出版，广播，广告等）</option>
                       <option value="20.其他">20.其他</option>
                   </select></td>
                 </tr>
@@ -264,7 +261,7 @@
                   <td><select  name="sub[Product]"  id="Product"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</option>
-                      <option value="2.电子元器件 电阻 电容 半导体等零部件 ">2.电子元器件（电阻、电容、半导体等零部件）</option>
+                      <option value="2.电子元器件 电阻 电容 半导体等零部件">2.电子元器件（电阻、电容、半导体等零部件）</option>
                       <option value="3.电子消费类产品">3.电子消费类产品</option>
                       <option value="4.通讯 电力 网络等硬件设备">4.通讯、电力、网络等硬件设备</option>
                       <option value="5.汽车及汽车用品">5.汽车及汽车用品</option>
@@ -274,7 +271,7 @@
                       <option value="9.五金制品">9.五金制品</option>
                       <option value="10.食品 食品加工及饲料">10.食品、食品加工及饲料</option>
                       <option value="11.化工产品">11.化工产品</option>
-                      <option value="12.日用化工 化妆品 香料 肥皂类及其它)">12.日用化工(化妆品、香料、肥皂类及其它)</option>
+                      <option value="12.日用化工 化妆品 香料 肥皂类及其它">12.日用化工(化妆品、香料、肥皂类及其它)</option>
                       <option value="13.生物工程 药品及医疗器械">13.生物工程、药品及医疗器械</option>
                       <option value="14.服装及饰品 纺织 皮革">14.服装及饰品、纺织、皮革</option>
                       <option value="15.钟表 相机及精密仪表">15.钟表、相机及精密仪表</option>
@@ -310,7 +307,7 @@
 				<tr>
                   <td><span style="color:red">*</span> 验证码</td>
                   <td>
-                  	<div id="rvcode"><input  name="rvcode" class="txt" type="text"></div>
+                  	<div id="rvcode"><input id="yzmcode" name="rvcode" class="txt" type="text"></div>
                   	<div id=yzm><img id="pic" src="yz.php"></div>
                   	<div id="chang_pic">看不清楚？换张图片</div>
                   </td>

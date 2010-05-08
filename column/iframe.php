@@ -14,11 +14,15 @@
 <?php
 $db=get_db();
 $id=$_REQUEST['id'];
+if(empty($id))die();
 $type=$_REQUEST['type'];
+$types = array('news','pic','other');
+if(!in_array($type,$types)) die();
 $date=$_REQUEST['date'];
+if(strtotime($date)===false) die();
 if($date!="")
 {
-	$sql=' and concat(left(created_at,7))="'.$date.'"';
+	$sql=' and left(created_at,7)="'.$date.'"';
 }
 else
 {

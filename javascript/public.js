@@ -1,4 +1,8 @@
 $(function(){
+	if(location.host == 'www.ctu.cn') {
+		location.href = "http://www.forbeschina.com";
+		return;
+	}
 	$(".search").click(function(){
 		top_search();
 	});

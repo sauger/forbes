@@ -130,7 +130,9 @@ span.down{color:#33CC00;}
 .forbes_l .writer_pic{width:57px; height:57px; border:1px solid #cccccc;}
 .forbes_l .writer_pic img{width:55px; height:55px; margin:1px;}
 .forbes_l .writer_name{width:59px; height:20px; margin-top:3x; text-align:center; line-height:20px; overflow:hidden;}
-.forbes_l .writer_name a{color:#003399; text-decoration:none;}
+.forbes_l .writer_name a{color:#000000; text-decoration:none;}
+.forbes_l .writer_content{width:59px; height:40px; text-align:center; line-height:20px; overflow:hidden;}
+.forbes_l .writer_content a{color:#666666; text-decoration:none;}
 
 .forbes_l .piccontent1{width:310px; height:100px; font-size:14px; line-height:25px; overflow:hidden;}
 .forbes_l .piccontent1 a{color:#666666; text-decoration:none;}

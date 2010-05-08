@@ -1,10 +1,9 @@
 <?php 
 	include_once(dirname(__FILE__).'/../frame.php');
 	$id = intval($_GET['id']);
-	$date=$_GET['date'];
 	if(empty($id)){
 		$name = $_GET['name'];
-		if(empty($name)){
+		if(empty($name) or strlen($name) > 20){
 			die();
 		}
 		$db = get_db();
@@ -38,7 +37,7 @@
 					<div id=top>
 						<div id=pic><a href=""><img border=0 src="<?php echo $column->image_src;?>"></a></div>
 						<div id=pictitle_left><a><?php echo $column->nick_name;?></a></div>
-						<div id=pictitle_right><button></button></div>
+						<div id=pictitle_right><button id="btn_collect"></button></div>
 					</div>
 					<div class=c_title>
 						<div class=wz>专栏作者介绍</div>
@@ -52,7 +51,7 @@
 					<div id=datetime>
 						<?php
 						$db=get_db();
-						$datetime=$db->query('select distinct(concat(left(created_at,7))) as date from fb_news where publisher='.$id.' order by created_at desc');
+						$datetime=$db->query('select distinct(left(created_at,7)) as date from fb_news where publisher='.$id.' order by created_at desc');
 						 for($i=0;$i<count($datetime);$i++){ ?>
 							<div class=c_b_content><a href="/column/<?php echo $name;?>/date/<?php echo $datetime[$i]->date;?>"><?php echo $datetime[$i]->date; ?></a></div>
 						<?php } ?>
@@ -62,7 +61,7 @@
 					</div>
 					<?php
 					
-					$othercolumn=$db->query('select image_src,nick_name,id,name from fb_user where id<>'.$id.' order by id desc limit 6');
+					$othercolumn=$db->query("select image_src,nick_name,id,name from fb_user where id != $id and (role_name='column_editor' or role_name='column_writer') order by rand() limit 6");
 					for($i=0;$i<count($othercolumn);$i++){ ?>
 						<div class=b_b_left>
 							<div class=b_pic><a href="/column/<?php echo $othercolumn[$i]->name;?>"><img border=0 src="<?php echo $othercolumn[$i]->image_src; ?>"></a></div>
@@ -76,9 +75,9 @@
 			<div id=title>
 				<input type="hidden" id="columnid" value="<?php echo $id; ?>">
 				<input type="hidden" id="columndate" value="<?php echo $date; ?>">
-				<div param=1 id="othertitle1" param1="news" class=other_title>专栏文章</div>
-				<div param=2 id="othertitle2" param1="pic" class=other_title>专栏照片</div>
-				<div param=3 id="othertitle3" param1="other" class=other_title>专栏作者介绍</div>	
+				<div id="news" class="other_title selected">专栏文章</div>
+				<div id="pic" class=other_title>专栏照片</div>
+				<div id="other" class=other_title>专栏作者介绍</div>	
 			</div>
 			<iframe scrolling="no" id="iframesrc"  frameborder="no" width=100% height=916 src="iframe.php?type=news&id=<?php echo $id;?>&date=<?php echo $date; ?>"></iframe>
 		</div>
@@ -86,8 +85,3 @@
 	</div>
 </body>
 </html>
-<script>
-	$(function(){
-		$("#othertitle1").attr('class','dq_title');
-	});
-</script>
