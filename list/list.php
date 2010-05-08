@@ -124,19 +124,17 @@
 					$bdname = '您搜索的关键字"'.$key.'"榜单';
 					$sql = "select * from fb_custom_list_type where name like '%$key%'";
 				}
-				$bd=$db->paginate($sql,13);
+				$bd=$db->paginate($sql,10);
 			?>
 			<div id=sort_r_t>
 				<?php echo $bdname; ?>共有<?php echo $page_record_count; ?>条榜单
 			</div>
-			<div id=sort_r_b>
-				<div id=sort_r_b_l>
-					<?php for($i=0;$i<count($bd);$i++){ ?>
-						<div class=sort_r_b_l_t><a href="show_list.php?id=<?php echo $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
-					<?php } ?>
-				</div>
-				<div id="list_banner"></div>
-			</div>
+			<div id="list_banner"></div>
+			<div id=sort_r_b_l>
+				<?php for($i=0;$i<count($bd);$i++){ ?>
+					<div class=sort_r_b_l_t><a href="show_list.php?id=<?php echo $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
+				<?php } ?>
+			</div>	
 			<div id=sort_page><?php paginate();?></div>
 		</div>
 		<?php include_bottom();?>
