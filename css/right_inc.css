@@ -1,13 +1,13 @@
 
 ul{list-style:none; padding:0; margin:0;}
 
-#right_inc{width:320px; padding-bottom:50px; line-height:0; font-left_bottom_titlesize:0; float:right; display:inline;}
-#right_inc .right_box{width:315px; border-left:1px solid #E1E1E1; border-right:1px solid #E1E1E1; float:left; display:inline;}
+#right_inc{width:320px; margin-top:10px; padding-bottom:50px; line-height:0; font-left_bottom_titlesize:0; float:right; display:inline;}
+#right_inc .right_box{width:315px; padding-bottom:10px; border-left:1px solid #E1E1E1; border-right:1px solid #E1E1E1; float:left; display:inline;}
 #right_inc .bottom_line{width:317px; height:3px; background:url(/images/right/bottom.jpg) no-repeat; float:left; display:inline;}
 
 
 
-#right_inc .left_title{width:317px; height:36px; margin-top:20px; padding-left:1px; padding-top:3px; background:url("/images/right/left_title.jpg") no-repeat; float:left; display:inline; overflow:hidden;}
+#right_inc .left_title{width:317px; height:36px; margin-top:10px; color:#999999; padding-left:1px; padding-top:3px; background:url("/images/right/left_title.jpg") no-repeat; float:left; display:inline; overflow:hidden;}
 #right_inc .left_top_title{width:157px; height:36px; font-size:15px;  font-weight:bold; text-align:center; line-height:25px; float:left; display:inline;}
 .left_top_title.selected{color:#000; background: url(/images/right/background1.jpg);}
 
@@ -23,7 +23,7 @@ ul{list-style:none; padding:0; margin:0;}
 #right_inc .right_title .more{width:19px; height:9px; margin-top:10px; margin-right:10px; float:right; display:inline;}
 
 
-#right_inc #order_top{width:291px; height:24px; margin-top:15px; margin-left:10px; line-height:24px; font-size:14px; float:left; display:inline;}
+#right_inc #order_top{width:291px; height:24px; margin-top:10px; margin-left:10px; line-height:24px; font-size:14px; float:left; display:inline;}
 #right_inc #order_t_l{width:195px; height:24px; color:#11579e; font-weight:bold; float:left; display:inline;}
 #right_inc #order_t_l span{font-size:12px; font-weight:normal; color:#666666;}
 #right_inc #order_t_r{width:63px; height:24px; float:right; display:inline;}
