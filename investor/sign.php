@@ -87,7 +87,7 @@
 							<div class="fc_c_left"><div class="n"></div>项目计划：</div>
 							<div class="fc_c_right">
 									<div id="fc_open">
-										<input type="file" id="file" name="post[item_doc]">
+										<input type="file" id="file" name="post">
 									</div>
 							</div>
 					</div>

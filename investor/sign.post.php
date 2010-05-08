@@ -128,11 +128,45 @@
 		redirect($_SERVER['HTTP_REFERER']);
 		die();
 	}
-	$filter = array('application/vnd.openxmlformats-officedocument.wordprocessingml.document','');
+	$filter = array('application/vnd.openxmlformats-officedocument.wordprocessingml.document','application/msword','application/vnd.ms-powerpoint','application/pdf');
+	$filter2 = array('doc','docx','ppt','pdf');
+	if($_FILES['post']['name']!=''){
+		#var_dump($_FILES);
+		$path_info = pathinfo($_FILES['post']['name']);
+		$extension = $path_info['extension'];
+		if(!in_array(strtolower($extension),$filter2)){
+			alert('请上传word\PPT\PDF文档！');
+			redirect($_SERVER['HTTP_REFERER']);
+			die();
+		}
+		if(!in_array($_FILES['post']['type'],$filter)){
+			alert('请上传word\PPT\PDF文档！');
+			redirect($_SERVER['HTTP_REFERER']);
+			die();
+		}
+		if($_FILES['post']['size']>2097152){
+			alert('请上传大小不大于2M文档！');
+			redirect($_SERVER['HTTP_REFERER']);
+			die();
+		}
+	}
 	
 	
 	$sign = new table_class("fb_investor_sign");
-	$sign->update_file_attributes('post');
+	if($_FILES['post']['name']!=''){
+		$upload = new upload_file_class();
+		$upload->save_dir = "/upload/files/";
+		$files = $upload->handle('post');
+		
+		if($files === false){
+			alert('上传失败 !');
+			redirect($_SERVER['HTTP_REFERER']);
+			die();
+		}
+		$sign->item_doc = "/upload/files/{$files}";
+	}
+	#$post_filter = array('doc','docx','ppt','pdf');
+	#$sign->update_file_attributes2('post','/files');
 	$sign->update_attributes($_POST['post'],false);
 	$sign->phone = $_POST['phone1'].'-'.$_POST['phone2'].'-'.$_POST['phone3'];
 	$sign->save();
