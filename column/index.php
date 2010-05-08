@@ -77,6 +77,22 @@
 					<?php }?>
 					
 				</div>
+				
+				<div id=steven>
+				<?php $db=get_db();
+					$news=$db->query('select n.short_title,n.description,u.name,u.image_src from fb_news n left join fb_user u on n.publisher=u.id where u.id=72 and n.is_adopt=1 order by n.priority asc, n.created_at desc limit 1');
+				 ?>
+					<div id=pic>
+						<a href="<?php "{$static_site}/column/".$news[0]->name;?>"><img border=0 src="<?php echo $news[0]->image_src; ?>" /></a>
+						<div id=title><a href="<?php "{$static_site}/column/".$news[0]->name;?>">进入专栏>></a></div>			
+					</div>
+					<div id=pictitle><a href="<?php "{$static_site}/column/".$news[0]->name;?>">史蒂夫·福布斯专栏</a></div>
+					<div id=piccontent>
+						<div id=title><a href="<?php "{$static_site}/column/".$news[0]->name;?>"><?php echo $news[0]->short_title; ?></a></div>
+						<div id=content><?php echo $news[0]->description; ?></div>
+						<div id=info><a href="<?php "{$static_site}/column/".$news[0]->name;?>">详细>></a></div>
+					</div>
+				</div>
 				<div class=column_edit>
 					<div class=captions>专栏文章推荐</div>
 					<div class=line>|</div>
@@ -122,7 +138,7 @@
 							<a href="#" target="_blank" class=more></a>
 						</div>
 						<?php
-							for($i=0;$i<14;$i++){
+							for($i=0;$i<10;$i++){
 								$pos_name = 'column_edit_b_t2_'.$i;
 						?>
 						<div class=t2 <? show_page_pos($pos_name,'column_author_ntime'); ?>>

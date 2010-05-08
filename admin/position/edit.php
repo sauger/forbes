@@ -44,6 +44,7 @@
 		$fields['list_head']=array("榜单标题","榜单描述","mouseover","链接","静态链接","榜单图片","","","","","说明");
 		$fields['list_common']=array("榜单标题","榜单描述","mouseover","链接","静态链接","","","过期时间","","","说明");
 		$fields['article_npic_author'] = array("文章标题","文章描述","mouseover","链接","静态链接","","","","作者名称","","说明");
+		$fields['dictionary'] = array("标题","","","","链接","","","","","","");
 		
 		$names = array_key_exists($_GET['name'],$fields) ?  $fields[$_GET['name']] : $fields['default'];  
 		
