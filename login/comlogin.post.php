@@ -71,7 +71,6 @@
 			
 		}else{
 			setcookie("cache_name",$cache_name,0,'/');
-			setcookie("login_name",$cache_name,time()+3600*24,'/');
 		}
 		$db->execute("insert into fb_yh_log (yh_id,time) values ({$user_id},now())");
 		$last_url = $suess_url;

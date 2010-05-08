@@ -29,7 +29,7 @@
 				}
 				$(function(){
 					$("#logout").click(function(){
-						$.cookie('cache_name','');
+						$.cookie('cache_name','',{path: '/'});
 						location.reload();
 					});
 				});

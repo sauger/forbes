@@ -19,9 +19,9 @@ $type=$_REQUEST['type'];
 $types = array('news','pic','other');
 if(!in_array($type,$types)) die();
 $date=$_REQUEST['date'];
-if(strtotime($date)===false) die();
 if($date!="")
 {
+	if(strtotime($date)===false) die();
 	$sql=' and left(created_at,7)="'.$date.'"';
 }
 else
