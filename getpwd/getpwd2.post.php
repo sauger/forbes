@@ -15,7 +15,7 @@
 		die();
 	}
 	
-	if($_POST['session']!=$_SESSION['get_pwd']){
+	if($_POST['session']!=$_SESSION['get_pwd']||empty($_SESSION['get_pwd'])){
 		redirect('/error/'); 
 		die();
 	}else{

@@ -4,10 +4,14 @@
 	
 	#var_dump($_POST);
 	if(!is_post()){
+		redirect('/error/');
 		die("非法访问!");
 	}
 	if($_SESSION['sign']!=$_POST['session']||$_SESSION['sign']==''){
+		redirect('/error/');
 		die("非法访问!");
+	}else{
+		unset($_SESSION['sign']);
 	}
 	
 	$sign = new table_class("fb_investor_sign");

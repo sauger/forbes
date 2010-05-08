@@ -80,7 +80,7 @@
 						 
 			 <div id=subject>
 			 	 <div id=subject_btnl></div>
-			 	 <?php for($i=0;$i<8;$i++){ $pos_name = "index_sub".$i;?>
+			 	 <?php for($i=0;$i<4;$i++){ $pos_name = "index_sub".$i;?>
 			 	 <div <?php show_page_pos($pos_name,'link_img_withouttime')?> class=subject_content id=subject_content_<?php echo $i?> <?php if($i>2){echo "style='display:none'";}?>>
 			 			<div class=subject_pic><?php show_page_img();?></div>
 			 			<div class=subject_list><?php show_page_href();?></div>

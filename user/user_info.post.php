@@ -105,17 +105,17 @@
 		die();
 	}
 	if(strlen($_POST['post']['gddh1'])>4){
-		alert('固定电话过长！请重新输入！');
+		alert('固定电话必须为数字！请重新输入！');
 		redirect($_SERVER['HTTP_REFERER']);
 		die();
 	}
 	if(strlen($_POST['post']['gddh2'])>8){
-		alert('固定电话过长！请重新输入！');
+		alert('固定电话必须为数字！请重新输入！');
 		redirect($_SERVER['HTTP_REFERER']);
 		die();
 	}
 	if(strlen($_POST['post']['gddh3'])>10){
-		alert('固定电话过长！请重新输入！');
+		alert('固定电话必须为数字！请重新输入！');
 		redirect($_SERVER['HTTP_REFERER']);
 		die();
 	}
