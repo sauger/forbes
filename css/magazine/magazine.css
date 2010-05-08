@@ -32,7 +32,7 @@ p{margin:0; padding:0}
 #t_r_b_l{width:150px; float:left; display:inline;}
 #t_r_b_l #picture1{width:100px; margin-top:15px; float:left; display:inline;}
 #t_r_b_l #picture1 img{width:100px; height:150px;}
-#t_r_b_l #text{width:104px; height:41px; margin-left:10px; font-size:14px; font-weight:bold; text-indent:40px; line-height:41px;  margin-top:22px; background:url(/images/magazine/tar1.jpg) no-repeat left center; float:left; display:inline;}
+#t_r_b_l #text{width:104px; height:41px; font-size:14px; font-weight:bold; text-indent:30px; line-height:41px;  margin-top:22px; background:url(/images/magazine/tar1.jpg) no-repeat left center; float:left; display:inline;}
 #t_r_b_r{width:406px; height:518px;  float:left; display:inline;}
 #t_r_b_r #title2{width:406px; height:30px; font-size:18px; font-weight:bold; color:#003A7B; line-height:30px; margin-left:2px; margin-top:10px;  float:left; display:inline;}
 #t_r_b_r #text{width:400px; height:540px; overflow:hidden; color:#666666; line-height:22px; margin-left:2px; float:left; display:inline;}
