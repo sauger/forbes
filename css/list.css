@@ -112,14 +112,13 @@ div{margin:0; padding:0; float:left; display:inline;}
 .sort_l_l1 a{color:#246BB0; text-decoration:underline;}
 .sort_r_b_l_t a{color:#246BB0; text-decoration:none;}
 
-#sort_l{width:180px; height:673px; border:1px solid #f5f5f5; margin-top:5px; background:#fafafa; overflow:hidden;}
-.sort_l_t1{width:178px; height:30px; font-size:14px; color:#4990b9; font-weight:bold; line-height:30px; text-indent:10px; margin-top:1px; margin-left:1px; background:url(/images/column/l_title_bg1.jpg) repeat-x; }
+#sort_l{width:178px; height:673px; border:1px solid #f5f5f5; margin-top:5px; background:#fafafa; overflow:hidden;}
+.sort_l_t1{width:178px; height:30px; font-size:14px; color:#ffffff; font-weight:bold; line-height:30px; text-indent:30px; margin-top:1px; background:url(/images/list/l_t1.jpg) no-repeat; }
 .sort_l_l1{width:165px; height:20px; font-size:12px; line-height:20px; text-indent:25px; margin-top:5px; margin-left:8px; background:url(/images/list/sort_tar1.jpg) no-repeat left center; }
 #sort_r{width:800px; height:673px; margin-top:5px; margin-left:10px; border-style:solid; border-width:1px; border-color:#BDCBD7; }
-#sort_r_t{width:730px; height:40px; font-size:14px; font-weight:bold; line-height:40px; margin-top:12px; margin-left:20px; }
-#sort_r_m{width:760px; height:1px; margin-top:13px; margin-left:20px; border-bottom-style:solid; border-width:1px; border-color:#BDCBD7; }
+#sort_r_t{width:420px; height:40px; font-size:16px; color:#666666; font-weight:bold; line-height:40px; margin-top:12px; margin-left:20px; }
 #sort_r_b{width:788px; height:403px;}
-#sort_r_b_l{width:300px; height:380px; margin-top:27px; margin-left:35px;}
+#sort_r_b_l{width:300px; height:380px; margin-top:27px; margin-left:20px;}
 .sort_r_b_l_t{width:266px; height:23px; font-size:15px; font-weight:bold; margin-top:5px; line-height:23px; overflow:hidden;  }
 #list_banner{width:385px; height:375px; margin-top:27px; margin-left:15px;}
 #list_banner img{width:385px;height:375px;}
@@ -128,13 +127,13 @@ div{margin:0; padding:0; float:left; display:inline;}
 #sort_title{height:27px; font-size:18px; text-align:left; font-weight:bold; color:#278AC4; font-family:微软雅黑; }
 #sort_title1{height:20px; font-size:12px; line-height:20px; margin-top:6px; margin-left:19px; }
 #sort_line{width:1000px; height:10px; background-image:url(/images/list/line.jpg); }
-#sort_text{width:100px; height:15px; margin-left:10px;}
+#sort_text{width:160px; height:15px; margin-top:20px; margin-left:10px; border:1px solid #A5ACB2; }
 #sort_select1{width:200px; height:19px; margin-top:10px; float:right; }
-#sort_button{width:46px; height:21px; margin-top:3px; margin-left:10px; background-image:url(/images/list/sort_button.jpg); border:0px;  }
+#sort_button{width:46px; height:21px; margin-top:10px; margin-right:10px; background-image:url(/images/list/sort_button.jpg); border:0px; float:right; }
 
 #sort_page{width:650px; height:30px; margin-top:20px; margin-left:30px; font-size:14px; line-height:30px; color:#666666; text-align:center; }
 #sort_page a{color:#246BB0; text-decoration:none;}
-.sort_link2{color:#4990b9; font-weight:bold; text-decoration:none;}
+.sort_link2{color:#ffffff; font-weight:bold; text-decoration:none;}
 
 #list_title{width:650px; margin-left:10px; margin-top:20px; overflow:hidden; font-size:30px; color:#1E448D; line-height:40px; font-weight:bold; font-family:微软雅黑,宋体; clear:both;}
 #list_title2{width:650px; margin-left:10px; padding-bottom:20px; overflow:hidden; font-size:30px; color:#1E448D; line-height:40px; font-weight:bold; font-family:微软雅黑,宋体; clear:both;}
