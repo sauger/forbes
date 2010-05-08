@@ -27,7 +27,7 @@ p{margin:0; padding:0}
 #zzleft .r_b .title .wz a{color:#246bb0; text-decoration:none;}
 #zzleft .r_b .content{width:245px; height:63px; margin-top:10px; overflow:hidden; line-height:21px; float:left; display:inline;}
 #zzleft .r_b .content a{color:#666666; text-decoration:none;}
-#zzleft .r_b .r_b_dash{width:245px; height:1px; margin-top:10px; margin-left:15px; background:url('/images/magazine/dash.jpg') repeat-x; overflow:hidden; float:left; display:inline;}
+#zzleft .r_b .r_b_dash{width:245px; height:1px; margin-top:10px; margin-left:10px; background:url('/images/magazine/dash.jpg') repeat-x; overflow:hidden; float:left; display:inline;}
 #zzleft .l_b{width:349px; height:34px; margin-top:15px; margin-left:25px; float:left; display:inline;}
 #zzleft .l_b .btn_ck{width:146px; height:34px; float:left; display:inline;}
 #zzleft .l_b .btn_readonline{width:146px; height:34px;  float:right; display:inline;}
