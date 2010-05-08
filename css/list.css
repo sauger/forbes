@@ -54,7 +54,6 @@ div{margin:0; padding:0; float:left; display:inline;}
 .list_li_box li a{color:#003A7B; text-decoration:none;}
 #list_dash{width:1px; height:580px; margin-left:20px; margin-right:35px; margin-top:5px; border-right:1px dotted #cccccc;}
 
-#right_inc{width:225px; overflow:hidden; float:right;}
 
 #list_left{width:675px;}
 #list_left_top{width:114px; height:25px; margin-top:15px; float:right;}
