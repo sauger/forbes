@@ -15,7 +15,7 @@
 		die();
 	}
 	
-	if($_POST['yzm']!=$_SESSION['getpwd']){
+	if($_POST['yzm']!=$_SESSION['getpwd']||empty($_SESSION['getpwd'])){
 		alert('验证码不正确！');
 		redirect('/getpwd/'); 
 		die();

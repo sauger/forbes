@@ -100,7 +100,7 @@ $(function(){
 		
 		$("#subject_btnr").click(function()
 		{
-			if(subject_id>=5){return false;}
+			if(subject_id>=1){return false;}
 			
 			$(".subject_content").hide();
 			var subject_id1=parseInt(subject_id)+1;
@@ -147,7 +147,7 @@ $(function(){
 					if($(this).css('opacity')=='1'&&flag){
 						$('.cpic').css('opacity','0.4');
 						$(this).parent().next().find('.cpic').css('opacity','1');
-						$('.cpic').css('filter','alpha(opacity=86)');
+						$('.cpic').css('filter','alpha(opacity=40)');
 						$(this).parent().next().find('.cpic').css('filter','alpha(opacity=100)');
 						flag = false;
 						$(".cloumn_news_box").hide();
@@ -172,7 +172,7 @@ $(function(){
 					if($(this).css('opacity')=='1'&&flag){
 						$('.cpic').css('opacity','0.4');
 						$(this).parent().prev().find('.cpic').css('opacity','1');
-						$('.cpic').css('filter','alpha(opacity=86)');
+						$('.cpic').css('filter','alpha(opacity=40)');
 						$(this).parent().prev().find('.cpic').css('filter','alpha(opacity=100)');
 						flag = false;
 						$(".cloumn_news_box").hide();
