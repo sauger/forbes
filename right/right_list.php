@@ -65,7 +65,7 @@ global $pos_name;?>
 <div class="inc_right_list_main">
 	<!--  title -->
 	<div class="inc_list_top_border"></div>
-	<div class="inc_list_title">文章榜</div>
+	<div class="inc_list_title">福布斯之选</div>
 	<div class="inc_list_item_title"><div>餐饮</div><div class="inc_list_news_title" <?php $pos_name='right_list1'; show_page_pos($pos_name,'link')?>><?php show_page_href()?></div></div>
 	<div class="inc_list_item_title"><div>游艇</div><div class="inc_list_news_title" <?php $pos_name='right_list2'; show_page_pos($pos_name,'link')?>><?php show_page_href()?></div></div>
 	<div class="inc_list_item_title"><div>艺术品</div><div class="inc_list_news_title" <?php $pos_name='right_list3'; show_page_pos($pos_name,'link')?>><?php show_page_href()?></div></div>
