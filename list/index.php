@@ -92,7 +92,7 @@
 			<div class=caption>
 					<div class=captions>常规榜单</div>
 					<div class=line>|</div>
-					<a href="/list/list.php" class=more target="_blank"></a>
+					<a href="#" class=more target="_blank"></a>
 			</div>
 
 			<div id="normal_list">
@@ -106,7 +106,7 @@
 						<div class="list_title">
 							<div class="title"><?php echo $val;?></div>
 							<div class="title_line1"></div>
-							<div class="title_line2"><a href="list.php?id=<?php echo $j;?>">更多>></a></div>
+							<div class="title_line2"><a href="/list/more/<?php echo $j;?>">更多>></a></div>
 							<div class="title_line3"></div>
 						</div>
 						<div class="list_li_box">
@@ -130,7 +130,7 @@
 						<div class="list_title">
 							<div class="title"><?php echo $val;?></div>
 							<div class="title_line1"></div>
-							<div class="title_line2"><a href="list.php?id=<?php echo $j;?>">更多>></a></div>
+							<div class="title_line2"><a href="/list/more/<?php echo $j;?>">更多>></a></div>
 							<div class="title_line3"></div>
 						</div>
 						<div class="list_li_box">
