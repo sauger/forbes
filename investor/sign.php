@@ -37,7 +37,7 @@
 					<div class="f_title_middle"><div class="title_z">填写报名信息</div></div>
 					<div class="f_title_right"></div>
 				</div>
-				<form action="sign.post.php" method="post" id="sign">
+				<form action="sign.post.php" enctype="multipart/form-data" method="post" id="sign">
 				<div id="f_content">
 					<div id="fc_top"></div>
 					<div id="fc_a">注意 * 为必填项，请将内容准确完整，以保证项目真实有效。</div>
@@ -63,9 +63,9 @@
 					<div class="fc_c">
 							<div id="fc_c_redio">*  希望的投资类型：</div>
 							<div id="fc_x_right">
-									<input type="radio"  name="post[item_type]" id="rdo_a" value="radiobutton" /><div class="f_xx">风险投资</div>
-									<input type="radio"  name="post[item_type]" class="rdo"  value="radiobutton"/><div  class="f_xx">出售企业</div>
-									<input type="radio"  name="post[item_type]" class="rdo"  value="radiobutton" /><div  class="f_xx">天使投资</div>
+									<input type="radio"  name="post[item_type]" id="rdo_a" value="1" /><div class="f_xx">风险投资</div>
+									<input type="radio"  name="post[item_type]" class="rdo"  value="2"/><div  class="f_xx">出售企业</div>
+									<input type="radio"  name="post[item_type]" class="rdo"  value="3" /><div  class="f_xx">天使投资</div>
 							</div>
 					</div>
 					<div id="fc_money">
