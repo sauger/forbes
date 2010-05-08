@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include_once('../frame.php');
-	if($_POST['rvcode'] != (string)$_SESSION['sub_pic']){
+	if($_POST['rvcode'] != $_SESSION['sub_pic']){
 		alert('验证码错误!');
 		redirect('subscription.php');
 		die();
