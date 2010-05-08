@@ -1,0 +1,5 @@
+RewriteEngine on 
+RewriteCond % !^http://127.0.0.1:81/.*$гагага[NC] 
+RewriteCond % !^http://127.0.0.1:81$гагага[NC] 
+
+
