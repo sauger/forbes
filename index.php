@@ -370,10 +370,10 @@
 		
 		<div class=forbes_r>
 			<div id=dictionary>
-				<div id=dictionary_l <?php $pos_name ="dictionary_l_content1"; show_page_pos($pos_name);?>><?php show_page_href()?></div>
+				<div id=dictionary_l <?php $pos_name ="dictionary_l_content1"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
 				<div id=dictionary_r>
-					<div class=content <?php $pos_name ="dictionary_r_content1"; show_page_pos($pos_name);?>><?php show_page_href()?></div>
-					<div class=content <?php $pos_name ="dictionary_r_content2"; show_page_pos($pos_name);?>><?php show_page_href()?></div>
+					<div class=content <?php $pos_name ="dictionary_r_content1"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
+					<div class=content <?php $pos_name ="dictionary_r_content2"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
 					<div class=content></div>
 				</div>
 			</div>
