@@ -24,34 +24,34 @@
 				常规榜
 			</div>
 			<div class=sort_l_l1 style="margin-top:10px;">
-				<a href="list.php?id=1">富豪</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>1">富豪</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=2">投资</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>2">投资</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=3">公司</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>3">公司</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=4">城市</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>4">城市</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=5">人物</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>5">人物</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=6">体育</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>6">体育</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=7">科技</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>7">科技</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="list.php?id=8">教育</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>8">教育</a>
 			</div>
 			<div class=sort_l_t1 style="margin-top:20px;">
-				<a class="sort_link2" href="list.php?id=9">图片榜</a>
+				<a class="sort_link2" href="<?php echo "{$static_site}/list/more/"; ?>9">图片榜</a>
 			</div>
 			<div class=sort_l_t1>
-				<a class="sort_link2" href="list.php?id=10">专题榜</a>
+				<a class="sort_link2" href="<?php echo "{$static_site}/list/more/"; ?>10">专题榜</a>
 			</div>
 			
 			<input type="text" id=sort_text ><input type="button" id=sort_button>
@@ -132,7 +132,7 @@
 			<div id="list_banner"></div>
 			<div id=sort_r_b_l>
 				<?php for($i=0;$i<count($bd);$i++){ ?>
-					<div class=sort_r_b_l_t><a href="show_list.php?id=<?php echo $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
+					<div class=sort_r_b_l_t><a href="<?php echo $static_site ."/list/" . $bd[$i]->id;?>"><?php echo $bd[$i]->name; ?></a></div>
 				<?php } ?>
 			</div>	
 			<div id=sort_page><?php paginate();?></div>

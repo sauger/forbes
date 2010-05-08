@@ -32,7 +32,7 @@
 			?>
 			<div id=billionaires_head <?php show_page_pos($pos_name,'rich_index_head'); ?>>
 				<div id=pic>
-					<img border=0 src="<?php echo $pos_items->$pos_name->image1;?>" alt="<?php echo $pos_items->$pos_name->title;?>"/>
+					<?php show_page_img()?>
 					<div id=flash></div>
 					<div id=flash_t>
 						<div id=flash_t_l></div>
