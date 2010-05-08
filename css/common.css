@@ -59,7 +59,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 
 
-#right{width:317px; margin-top:10px; float:right;}
+#right{width:317px; float:right;}
 #r_t_title{width:315px; height:28px; margin-top:10px; border:1px solid #dfdfdf; background:url(/images/hyjlb/right_b_title_bg.jpg) repeat-x;}
 #r_t_title #wz{height:18px; margin-top:5px; margin-left:15px; color:#999999; font-size:14px; font-weight:bold; line-height:18px;}
 #r_t_title #more{width:19px; height:9px; margin-top:10px; margin-right:10px; float:right;}

@@ -15,7 +15,7 @@ body {font-size:12px; font-family:SimSun; color:#000000; margin:0 auto; padding:
 .top_rpg{width:8px; height:30px; background:url(/images/survey/t_r.jpg) no-repeat;}
 .top_pg{width:640px; height:30px;  background:#F3F3F3;}
 .top_pg2{width:940px; height:30px;  background:#F3F3F3;}
-.survey2_z{width:660px; margin-top:10px; padding-bottom:20px;}
+.survey2_z{width:660px; margin-top:15px; padding-bottom:20px;}
 .survey2_z2{width:960px; margin-top:10px; padding-bottom:20px;}
 .s2_content{margin-top:5px;}
 .title_pic{width:19px; height:21px; margin-top:3px; }
@@ -32,8 +32,7 @@ body {font-size:12px; font-family:SimSun; color:#000000; margin:0 auto; padding:
 #s2_submit input{border:0 solid red; width:63px; height:24px;  background:url(/images/survey/right_b_b_btn.jpg);}
 
 
-#left_content{width:660px; height:500px; margin-top:10px;}
-#right_inc{margin-top:10px;}
+#left_content{width:660px; height:500px; margin-top:15px;}
 #title{width:630px; height:20px; margin-top:5px; }
 #title_a{width:7px; height:7px; margin-left:5px; margin-top:5px; background:#999999; }
 #title_b{width:60px; height:20px; margin-left:10px; line-height:20px; color:#444444; font-size:14px; font-weight:bold; }

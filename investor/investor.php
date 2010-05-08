@@ -37,7 +37,7 @@
 		<div id=bread>
 				<span>福布斯中文网 > <a>投资人</a></span>
 		</div>
-		<div id="hr_top"></div>
+		<div id="bread_line"></div>
 			<div id="info">
 				<div id="info_top"><div id="people_info">人物信息</div></div>
 					<div id="info_connect">

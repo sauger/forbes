@@ -3,13 +3,13 @@ p{margin:0; padding:0}
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 #bread{width:494px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
 #bread a{color:#666666; text-decoration:none;}
-#hr_top{width:1000px; height:20px; background:url(../images/survey/zh_hr.jpg) no-repeat;  float:left; dislay:inline;}
+#bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
 
 #chr_c_right a{margin-left:9px; text-decoration: none; color:#246BB0}
 
 #info_top{width:660px; height:30px; background:url(../images/rich/info_top.jpg) no-repeat; float:left; display:inline;}
 #info_bottom{width:659px; height:9px; background:url(../images/rich/info_bottom.jpg) no-repeat; float:left; display:inline;}
-#info{width:660px; float:left; display:inline;}
+#info{width:660px; margin-top:15px; float:left; display:inline;}
 #info_connect{width:657px; border:1px solid #DFDFDF; border-bottom:0px solid red; float:left; display:inline;}
 #people_info{width:100px; height:28px; margin-left:15px; line-height:30px; color:#999999;  font-size:14px; font-weight:bold; float:left; display:inline;	}
 

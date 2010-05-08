@@ -17,7 +17,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_head #flash{width:215px; height:214px; left:525px; background:#000000; filter:alpha(opacity=40); -moz-opacity:0.4; opacity:0.4; position:absolute;}
 #billionaires_head #flash_t{width:182px; height:23px; top:20px; left:535px; overflow:hidden; position:absolute;}
 #billionaires_head #flash_t #flash_t_l{width:34px; height:23px; background:url(/images/billionaires/jt.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/billionaires/jt.png");}
-#billionaires_head #flash_t #flash_t_r{width:126px; height:20px; margin-top:2px; font-family:黑体; font-weight:bold; font-size:16px; line-height:20px; float:right;}
+#billionaires_head #flash_t #flash_t_r{width:140px; height:20px; margin-top:2px; font-family:黑体; font-weight:bold; font-size:16px; line-height:20px; float:right;}
 #billionaires_head #flash_t #flash_t_r a{color:#ffffff; text-decoration:none;}
 #billionaires_head #flash_b{width:19tpx; height:112px; top:60px; left:535px; overflow:hidden; position:absolute;}
 #billionaires_head #flash_b #content{width:195px; height:112px; line-height:22px; font-size:13px;}
