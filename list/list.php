@@ -10,7 +10,7 @@
 	<title>福布斯-榜单列表</title>
 	<?php
 		use_jquery();
-		js_include_tag('public');
+		js_include_tag('public','list_list');
 		css_include_tag('list','public');
 	?>
 </head>

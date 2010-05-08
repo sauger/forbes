@@ -12,9 +12,9 @@
 		$user_id = $db->field_by_name('id');
 		$password = $db->field_by_name('password');
 		$authenticated = $db->field_by_name('authenticated');
-		if($authenticated==0){
+		if($authenticated==1){
 			$db->execute("update fb_yh set authenticated=1 where id={$user_id}");
-			adjust_user_score($id,50,"用户激活");
+			adjust_user_score($user_id,50,"用户激活");
 		}
 		$str = '恭喜您，激活成功，感谢您注册成为福布斯中文网会员！';
 		$cache_name = sprintf('%06s',$user_id) .rand_str(24);
