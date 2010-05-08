@@ -222,22 +222,7 @@
 	
 		<div class=forbes_l>
 			<div class=caption>
-				<div class=captions>商业<span>Business</span></div>
-				<div class=line>|</div>
-				<a href="/business/" class=more target="_blank"></a>
-			</div>
-			<div class=forbes_l_content>
-				<div class=list1>
-					<div class=list1_title <?php $pos_name ="index_business0"; show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
-					<div class=list1_description><?php show_page_desc();?></div>
-				</div>
-				<?php for($i=0;$i<4;$i++){ $pos_name="index_business".($i+1);?>
-					<div class=list2 <? if($i==0){?>style="margin-top:10px;"<?php } ?> <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
-				<?php } ?>
-			</div>
-			<div class=dashed></div>
-			<div class=caption>
-				<div class=captions>创业<span>Enterpreneur</span></div>
+				<div class=captions>创业<span>Enterpreneurs</span></div>
 				<div class=line>|</div>
 				<a href="/investment/" class=more target="_blank"></a>
 			</div>
@@ -268,6 +253,23 @@
 				<?php } ?>
 			</div>
 			<div class=dashed></div>
+
+			<div class=caption>
+				<div class=captions>商业<span>Business</span></div>
+				<div class=line>|</div>
+				<a href="/business/" class=more target="_blank"></a>
+			</div>
+			<div class=forbes_l_content>
+				<div class=list1>
+					<div class=list1_title <?php $pos_name ="index_business0"; show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
+					<div class=list1_description><?php show_page_desc();?></div>
+				</div>
+				<?php for($i=0;$i<4;$i++){ $pos_name="index_business".($i+1);?>
+					<div class=list2 <? if($i==0){?>style="margin-top:10px;"<?php } ?> <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
+				<?php } ?>
+			</div>
+			<div class=dashed></div>
+
 						
 			
 			<div class=caption>
