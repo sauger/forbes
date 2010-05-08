@@ -4,7 +4,6 @@
 	$key = $_GET['key'];
 	$db = get_db();
 	$db->query("select name,id,password,authenticated from fb_yh where name='{$user}' and authenticate_string='{$key}'");
-	
 	if(!$db->move_first()){
 		$str = '对不起，您的验证码不正确，无法完成激活！';
 	}else{
@@ -18,6 +17,7 @@
 		}
 		$str = '恭喜您，激活成功，感谢您注册成为福布斯中文网会员！';
 		$cache_name = sprintf('%06s',$user_id) .rand_str(24);
+		$db->execute("update fb_yh set cache_name='{$cache_name}' where id={$user_id}");
 		setcookie("name",$name,0,'/');
 		setcookie("cache_name",$cache_name,0,'/');
 		setcookie("password",$password,0,'/');
