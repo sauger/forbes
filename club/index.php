@@ -95,7 +95,7 @@
 			</div>
 			<div class=club_right_content_bottom></div>
 			<div id=zy>
-				<div id=btn><a href="/magazine/subscription.php"><button></button></a></div>	
+				<div id=btn><a href="/images/club/club.jpg"><button></button></a></div>	
 			</div>
 			<div class=club_right_title_top></div>
 			<div id="idea">
