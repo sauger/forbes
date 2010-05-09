@@ -20,7 +20,7 @@ if($db->record_count > 0 ){
 	$news = new table_class('fb_news');
 	for($i=0;$i< $len; $i++){
 		$news->find($news_id[$i]->id);
-		static_news($news);
+		static_news($news,'page');
 	}
 }
 echo '静态条数：'.$len;
