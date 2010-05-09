@@ -1,4 +1,4 @@
-<?php
+ <?php
 	include_once("../frame.php");
 	$db = get_db();
 	$id = intval($_GET['id']);
@@ -35,6 +35,7 @@
 		<div id=bread_line></div>
 		<div id="list_list_content" style="width:1000px;">
 			<div id="list_title2"><?php echo $list->name;?></div>
+			<div id="list_desc2"><?php echo $list->comment;?></div>
 			<?php
 				if($list->table_name=="fb_famous_list_items"){
 			?>
