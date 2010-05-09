@@ -35,7 +35,7 @@
 <div id=itable>
 	<table cellspacing="1"  align="center">
 		<tr class=itable_title>
-			<td width="20%">姓名</td><td width="15%">所在公司</td><td width="15%">身份</td><td width="30%">投资方向</td><td width="20%">操作</td>
+			<td width="15%">姓名</td><td width="25%">所在公司</td><td width="15%">身份</td><td width="30%">投资方向</td><td width="15%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count ;$i++){
