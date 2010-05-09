@@ -42,7 +42,7 @@
 				<div id="info_top"><div id="people_info">人物信息</div></div>
 					<div id="info_connect">
 						<div id="info_a">
-							<div id="info_a_left"><img src="<?php echo $investor->image;?>"></div>
+							<div id="info_a_left"><img src="<?php echo $investor->image2;?>"></div>
 							<div id="info_c_name"><font style="color:#246BB0; font-size:14px; font-weight:bold;">姓名：<?php echo $investor->name;?></font></div>											
 							<div id="info_c_company"><font style="font-size:13px; font-weight:bold;">所在公司：</font><font style="font-size:13px; "><?php echo $investor->company;?></font> </div>
 							<div id="info_c_capacity"><font style="font-size:13px; font-weight:bold;">身份：</font><font style="font-size:13px; "><?php echo $investor->post;?></font></div>
