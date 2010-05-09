@@ -325,9 +325,9 @@
 						</div>
 					</div>
 					<div class=bottom>
-						<div class=bottom_l><a href='/investor/sign.php'>我要报名</a></div>
+						<div class=bottom_l><a href='/investor/sign'>我要报名</a></div>
 						<div class=bottom_r>
-							<a href='/search/investor.php'>VC/PE/天使人投资人数据库</a>
+							<a href='/investor'>VC/PE/天使人投资人数据库</a>
 						</div>	
 					</div>
 			</div>
@@ -350,7 +350,7 @@
 						</div>
 					</div>
 					<div class=bottom>
-						<div class=bottom_l><a href="">城市榜</a></div>
+						<div class=bottom_l><a href="http://www.forbeschina.com/list/more/4">城市榜</a></div>
 						<?php $pos_name = 'index_city2';?>
 						<div class=bottom_r <?php show_page_pos($pos_name,'link');?>>
 							<?php show_page_href();?>
