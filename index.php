@@ -121,7 +121,7 @@
 					<?php for($i=0;$i<3;$i++){
 						$pos_name = "index_dyn_list{$i}"; 
 						?>
-						<div class=bottom_list<?php show_page_pos($pos_name,'link');?>><?php show_page_href()?></div>
+						<div class=bottom_list<?php show_page_pos($pos_name,'link_withouttime');?>><?php show_page_href()?></div>
 					<?php } ?>
 				</div>
 			</div>
