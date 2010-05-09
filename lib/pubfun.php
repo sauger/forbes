@@ -25,9 +25,9 @@ function debug_info($msg,$type='php') {
 function send_mail($smtp_server,$smtp_user,$smtp_pwd,$from,$to,$title,$content){
 	$email = new table_class('forbes_email.fb_email');
 	$email->email_to = $to;
-	$email->email_status  = 0;
+	$email->email_status  = '0';
 	$email->email_subject = $title;
-	$email->email_content = $content;
+	$email->email_content = addslashes($content);
 	$email->save();
 }
 /*
