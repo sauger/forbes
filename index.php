@@ -255,7 +255,7 @@
 					<?php } ?>
 				</div>
 			</div>	
-			<div class=dashed style="height:15px;"></div>
+			<div class=dashed></div>
 
 	  		<div class=caption>
 				<div class=captions>生活<span>Life</span></div>
