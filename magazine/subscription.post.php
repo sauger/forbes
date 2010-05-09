@@ -129,7 +129,7 @@
 	$subscript->update_attributes($_POST['sub'],false);
 	$subscript->stime=date('Y-m-d H:m:s');
 	if($subscript->save()){
-		alert(iconv('utf-8','gb2312','申请成功'));
+		alert(iconv('申请成功');
 		$content = "感谢您订阅福布斯杂志。";
 		send_mail('smtp.163.com','sauger','auden6666','sauger@163.com',$_POST['sub']['Email'],'福布斯中文网',$content);
 	};
