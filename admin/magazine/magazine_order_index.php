@@ -8,7 +8,7 @@
 	if($search!=''){
 		$sql .= " and RealName like '%$search%' or BirthPlace like '%$search%' or Sex like '%$search%' or Company like '%$search%' or Department like '%$search%' or Position like '%$search%' or Province like '%$search%' or zipcode like '%$search%' or Email like '%$search%'";
 	}
-	$sql .= " order by t1.stime desc";
+	$sql .= " order by stime desc";
 	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
