@@ -118,7 +118,7 @@
 				</script>
 				<div id=bottom>
 					<div id=title>榜单动态</div>
-					<?php for($i=0;$i<2;$i++){
+					<?php for($i=0;$i<3;$i++){
 						$pos_name = "index_dyn_list{$i}"; 
 						?>
 						<div class=bottom_list<?php show_page_pos($pos_name,'link');?>><?php show_page_href()?></div>
@@ -233,7 +233,7 @@
 					$news->find($comments[$i]->resource_id);
 			?>
 			<div class=context style="overflow: hidden;"><?php echo $comments[$i]->comment?></div>
-			<div class=context1><a href="#"><?php echo $comments[$i]->nick_name;?></a>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
+			<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
 			<?php }?>
 		</div>
 		

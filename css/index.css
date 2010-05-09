@@ -81,7 +81,7 @@ span.down{color:#33CC00;}
 #ipo_info{width:300px; height:20px; line-height:20px; text-align:right;}
 #ipo_src{width:300px; float:left;}
 
-#forbes_trt #bottom{width:300px; height:77px; margin-top:5px; background:#f7f7f7; overflow:hidden; float:right;}
+#forbes_trt #bottom{width:300px; margin-top:5px; padding-bottom:10px; background:#f7f7f7; overflow:hidden; float:right;}
 #forbes_trt #bottom #title{width:280px; height:18px; margin-top:10px; margin-left:10px; color:#333333; font-size:14px; font-weight:bold; line-height:18px;}
 #forbes_trt .bottom_list{width:280px; height:16px; margin-top:5px; margin-left:10px; padding-left:20px; background:url(/images/index/arrow.jpg) no-repeat 0 5px; line-height:16px; overflow:hidden;}
 #forbes_trt .bottom_list a{color:#666666; text-decoration:none;}
@@ -160,6 +160,7 @@ span.down{color:#33CC00;}
 .forbes_l .context{width:295px; height:38px; margin-top:11px; margin-left:13px; line-height:19px;color:#003899;}
 .forbes_l .context1{width:295px; height:16px; line-height:16px; margin-left:13px; color:#999999;}
 .forbes_l .context1 a{color:#999999; text-decoration:none;}
+.forbes_l .context1 a:hover{ text-decoration:underline;}
 
 .forbes_r{width:300px; float:right;}
 
