@@ -24,8 +24,6 @@
 			<div class=common_box>
 				<div class=caption>
 					<div class=captions><?php echo $catename[0]->name; ?>热点</div>
-					<div class=line>|</div>
-					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name($catename[0]->name)->id?>" target="_blank" class=more></a>
 				</div>
 				<?php for($i=0;$i<6;$i++){ $pos_name = $pos.'acticle'.$i;?>
 					<div class=common_article_lis1 <?php show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
@@ -41,8 +39,6 @@
 			<div class=common_box2 >
 				<div class=caption>
 					<div class=captions><?php echo $catename[0]->name; ?>专题</div>
-					<div class=line>|</div>
-					<a href="/news/news_list.php?cid=<?php echo $category->find_by_name($catename[0]->name)->id?>" target="_blank" class=more></a>
 				</div>
 				<?php for($i=0;$i<2;$i++){ $pos_name = $pos."them".$i;?>
 				<div class=common_subject <?php show_page_pos($pos_name,'base_img')?>>
