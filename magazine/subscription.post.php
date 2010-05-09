@@ -135,5 +135,5 @@
 		send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_POST['sub']['Email'],'福布斯中文网',$content);
 	};
 	
-	redirect('/magazine/subscription.php');
+	redirect('/magazine/subscription');
 ?>

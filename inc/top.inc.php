@@ -73,7 +73,7 @@
   <?php }?>
 			<div id=top_function2>
 				<a href="/club" id=member></a>
-				<a href="/magazine/subscription.php" id=magazine></a>
+				<a href="/magazine/subscription" id=magazine></a>
 			</div>
 			
 	</div>
