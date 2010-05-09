@@ -70,7 +70,7 @@
 			<div class=right_title>
 				<div id="r_title1"><?php echo $uname;?> 的个人中心</div>
 				<?php $score = $db->query("select score from fb_yh where id=$uid");?>
-				<div id="r_title2">积分：<span style="color:#ff0000;"><?php echo $score[0]->score;?></span></div>
+				<div id="r_title2">个人积分：<?php echo $score[0]->score;?></div>
 			</div>
 			<div class="right_text2">
 				<div id=register>
