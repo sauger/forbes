@@ -298,8 +298,9 @@
 				<?php $pos_name = 'index_event';?>
 				<div class=public_box1 <?php show_page_pos($pos_name,'index_event');?>>
 					<div id=images><img src="<?php echo $pos_items->$pos_name->image1;?>" width="260" height="90"/></div>
+					<div id=title><?php echo $pos_items->$pos_name->display;?></div>
 					<div id=context>
-						<span style="font-size:13px; font-weight:bold; color:#333385"><?php echo $pos_items->$pos_name->display;?></span><br>举办日期：<?php echo $pos_items->$pos_name->reserve;?><br>地点：<?php echo $pos_items->$pos_name->title;?>
+						举办日期：<?php echo $pos_items->$pos_name->reserve;?><br>地点：<?php echo $pos_items->$pos_name->title;?>
 					</div>
 					<div id=info><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">查看详细</a></div>	
 				</div>
