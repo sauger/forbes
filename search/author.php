@@ -22,7 +22,8 @@
 		$count = $db->record_count;
 	}else{
 		if($key){
-			$sql = "select * from (select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.publisher order by $type) as t where nick_name like '%$key%' group by id";
+			#$sql = "select a.* from fb_user a left join fb_news b on b.publisher=a.id where (a.role_name = 'column_editor' or a.role_name='column_writer') and a.nick_name like '%$key%' order by $type group by a.id ";
+			$sql = "select * from (select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.publisher order by $type) as t where nick_name like '%$key%' and (role_name = 'column_editor' or role_name='column_writer') group by id";
 			$user=$db->paginate($sql,5);
 			$count = $db->record_count;
 		}else{
@@ -87,7 +88,7 @@
 					<div class="enterzl"><a href="<?php echo "{$static_site}/column/{$user[$i]->name}";?>">进入专栏>></a></div>	
 				</div>
 				<?php 
-					$news=$db->query('select * from fb_news where author_id='.$user[$i]->id.' and is_adopt=1 order by priority asc, created_at desc limit 2');
+					$news=$db->query('select * from fb_news where publisher='.$user[$i]->id.' and is_adopt=1 order by priority asc, created_at desc limit 2');
 					$ncount = $db->record_count;
 					for($j=0;$j<$ncount;$j++){
 				?>
