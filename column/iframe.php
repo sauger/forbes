@@ -39,7 +39,7 @@ if($type=="news"){
 	<?php $comment=$db->query('select count(*) as num from fb_comment where resource_id='.$news[$i]->id);?>
 	<div class=r_read>阅读数 （<?php echo $news[$i]->click_count;?>）    评论 （<?php echo $comment[0]->num;?>）</div>
 	<div class=r_context>
-		<?php echo strip_tags($news[$i]->content); ?>
+		<?php echo strip_tags($news[$i]->content,'<p>'); ?>
 	</div>
 	<div class=r_dash></div>
 </div>
