@@ -219,9 +219,11 @@ $(function(){
 			}
 			if($("#show_magazine option:selected").val()==''){
 				$("#sq").removeAttr('href');
+				$("#jr").removeAttr('href');
 			}else{
 				$("#sq").attr('href','javascript:void(0)');
 				$("#sq").attr('name',$("#show_magazine option:selected").val());
+				$("#jr").attr('href','/magazine/'+$("#show_magazine option:selected").val());
 			}
 		});
 		

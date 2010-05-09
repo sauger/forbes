@@ -456,10 +456,7 @@
 						<div class=pic><?php show_page_img()?></div>
 						<div class=pictitle><?php show_page_href()?></div>
 						<div class=context><?php show_page_desc()?></div>	
-
-			 			 <div id=mag_dash></div>
-
-						<div id=search>往期杂志查阅</div>
+			 			<div id=mag_dash></div>
 						<div id=sel>
 							<select id="old_magazine">
 								<?php 
@@ -485,8 +482,7 @@
 						</div>
 						<a id="btnonline"></a>
 						<a id="sq"></a>
-						<div id=ck><a href="/magazine/" target="_blank">查看杂志列表>></a></div>
-
+						<a id="jr"></a>
 				</div>
 				<div class=public_bottom1></div>
 			</div>

@@ -9,7 +9,6 @@ global $pos_name;?>
 		<div class=pictitle><?php show_page_href()?></div>
 		<div class=context><?php show_page_desc()?></div>	
 		<div id=mag_dash></div>
-		<div id=search>往期杂志查阅</div>
 		<div id=sel>
 			<select id="old_magazine">
 				<?php
@@ -36,7 +35,6 @@ global $pos_name;?>
 		</div>
 		<a id="btnonline"></a>
 		<a id="sq"></a>
-		<div id=ck><a href="/magazine/list.php">查看杂志列表>></a></div>
-
+		<a id="jr"></a>
 </div>
 <div class=bottom_line></div>

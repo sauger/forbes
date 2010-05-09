@@ -46,7 +46,7 @@ ul{list-style:none; padding:0; margin:0;}
 #right_inc .rich_ind{float:left; display:inline;}
 #right_inc .rich_rank{width:200px; height:60px; float:left; display:inline;}
 
-#right_inc #mag_content{width:315px; border-left:1px solid #E1E1E1; border-right:1px solid #E1E1E1; float:left; display:inline;}
+#right_inc #mag_content{width:315px; padding-bottom:15px; border-left:1px solid #E1E1E1; border-right:1px solid #E1E1E1; float:left; display:inline;}
 #right_inc #mag_content .pic{width:88px; height:114px; margin-top:10px; margin-left:13px; border:1px solid #cccccc; float:left; display:inline;}
 #right_inc #mag_content .pic img{width:86px; height:112px; margin:1px;}
 #right_inc #mag_content .pictitle{width:170px; height:20px; margin-top:13px;  margin-left:13px; font-size:13px; line-height:20px; color:#3399CC; font-weight:bold; overflow:hidden; float:left; display:inline;}
@@ -54,12 +54,13 @@ ul{list-style:none; padding:0; margin:0;}
 #right_inc #mag_content .context{width:170px; height:96px; margin-left:13px; overflow:hidden; font-size:12px; line-height:25px; float:left; display:inline;}
 #right_inc #mag_content .context a{text-decoration:none; color:#666666;}
 #right_inc #mag_dash{width:270px; height:1px; margin-top:10px; margin-left:15px; background:url(/images/right/dashed2.jpg) no-repeat; float:left; display:inline;}
-#right_inc #mag_content #search{width:202px; height:20px; font-size:12px; margin-left:12px; line-height:20px; color:#0066CC; font-weight:bold; float:left; display:inline;}
-#right_inc #mag_content #sel{width:280px; height:20px; margin-top:5px; margin-left:12px; float:left; display:inline;}
-#right_inc #mag_content #sel select{width:95px; height:23px; margin-right:40px; float:left; display:inline;}
+#right_inc #mag_content #sel{width:280px; height:20px; margin-top:15px; margin-left:12px; float:left; display:inline;}
+#right_inc #mag_content #sel #old_magazine{width:65px; height:23px; margin-left:7px;}
+#right_inc #mag_content #sel #show_magazine{width:190px; height:23px; margin-left:7px;}
 #right_inc #mag_content #btnonline{width:66px; height:22px; margin-top:10px; margin-left:20px; border:0px; background:url('/images/right/readonline.jpg') no-repeat; float:left; display:inline;}
 #right_inc #mag_content #sq{width:66px; height:22px; margin-top:10px; margin-left:20px; border:0px; background:url('/images/right/sqread.jpg') no-repeat; float:left; display:inline;}
 #right_inc #mag_content #ck{width:200px; height:20px; margin-right:10px; line-height:20px; font-size:12px; text-align:right; float:right; display:inline;}
+#right_inc #mag_content #jr{width:66px; height:22px; margin-top:10px; margin-left:15px; border:0px; background:url(/images/index/sqread2.jpg) no-repeat; float:left; display:inline;}
 #right_inc #mag_content #ck a{color:#666666; font-weight:bold;}
 
 #right_inc #forum_box{width:315px; border-left:1px solid #E1E1E1; border-right:1px solid #E1E1E1; float:left; display:inline;}
