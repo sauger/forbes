@@ -32,7 +32,7 @@
 	  <a href="user_list.php" id=btn_back></a>
 	</div>
 	<div id=itable>
-	<form id="user_form" method="post" action="user.post.php">
+	<form id="user_form" method="post" enctype="multipart/form-data" action="user.post.php">
 	<table cellspacing="1"  align="center">
 	
 		<tr class=tr4>
@@ -71,6 +71,33 @@
 				<script>
 					$('#role_name').val('<?php echo $user->role_name;?>');
 				</script>
+			</td>
+		</tr>
+		<tr class=tr4>
+			<td class=td1 width="15%">头像</td>
+			<td width="85%">
+			<?php if($user->image_src){?>
+			<img width="90" height="90" src="<?php echo $user->image_src;?>">
+			<?php }?>
+			<input type="file" name="image_src"></input>(请上传90×90大小的图片)
+			</td>
+		</tr>
+		<tr class=tr4>
+			<td class=td1 width="15%">大头像</td>
+			<td width="85%">
+			<?php if($user->image_src){?>
+			<img width="136" height="136" src="<?php echo $user->image_src2;?>">
+			<?php }?>
+			<input type="file" name="image_src2"></input>(请上传136×136大小的图片)
+			</td>
+		</tr>
+		<tr class=tr4>
+			<td class=td1 width="15%">小头像</td>
+			<td width="85%">
+			<?php if($user->image_src){?>
+			<img width="62" height="62" src="<?php echo $user->image_src3;?>">
+			<?php }?>
+			<input type="file" name="image_src3"></input>(请上传62×62大小的图片)
 			</td>
 		</tr>
 		<tr class=btools>

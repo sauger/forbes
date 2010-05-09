@@ -26,6 +26,18 @@ if($_FILES['image_src']['name'] != ''){
 		$user->image_src = '/upload/news/' .$upload->handle('image_src','filter_pic');
 		$changed = true;
 }
+if($_FILES['image_src2']['name'] != ''){
+		$upload = new upload_file_class();
+		$upload->save_dir = '/upload/news/';
+		$user->image_src2 = '/upload/news/' .$upload->handle('image_src2','filter_pic');
+		$changed = true;
+}
+if($_FILES['image_src3']['name'] != ''){
+		$upload = new upload_file_class();
+		$upload->save_dir = '/upload/news/';
+		$user->image_src3 = '/upload/news/' .$upload->handle('image_src3','filter_pic');
+		$changed = true;
+}
 
 if($_POST['description']!=$user->description){
 	$user->description = $_POST['description'];
