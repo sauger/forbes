@@ -1,12 +1,11 @@
 <?php
-   session_start();
+	if($_SERVER['REMOTE_ADDR']!='127.0.0.1')die();
 	include_once('../../frame.php');
-	judge_role();
 	
 	set_time_limit(600);
 	$db = get_db();
 	$date = $_GET['date'];
-	if($date = ''){
+	if($date == ''){
 		$date = date("Y-m-d");
 	}
 	
