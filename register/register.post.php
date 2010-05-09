@@ -103,7 +103,7 @@
 	}
 	if($order->save()){
 		$mail = $user->email;
-		$content = "{$user->name},你好：<br/><br/>　　感谢您注册福布斯中文网(<a href='http://www.forbeschina.com/'>http://www.forbeschina.com/</a>)！<br/><br/>　　请点击以下确认链接，以完成身份验证：<br/>　　<a href=\"http://www.forbeschina.com/register/active.php?user={$user->name}&key={$user->authenticate_string}\">http://www.forbeschina.com/register/active.php?user={$user->name}&key={$user->authenticate_string}</a><br/>　　(如果不能点击该链接地址，请复制并粘贴到浏览器的地址输入框)";
+		$content = "{$user->name}，你好：<br/><br/>　　感谢您注册福布斯中文网(<a href='http://www.forbeschina.com/'>http://www.forbeschina.com/</a>)！<br/><br/>　　请点击以下确认链接，以完成身份验证：<br/>　　<a href=\"http://www.forbeschina.com/register/active.php?user={$user->name}&key={$user->authenticate_string}\">http://www.forbeschina.com/register/active.php?user={$user->name}&key={$user->authenticate_string}</a><br/>　　(如果不能点击该链接地址，请复制并粘贴到浏览器的地址输入框)";
 		send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$mail,'福布斯中文网(Forbeschina.com)注册确认邮件',$content);
 		alert('注册成功，系统已经将激活链接发送到您的注册邮箱中，请查收邮件并激活您的账号');
 	};
