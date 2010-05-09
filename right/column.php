@@ -37,7 +37,7 @@
 	?>
 	<div class="column_box">
 		<div class="col_pic">
-			<img src="<?php echo $record[$i]->image_src;?>">
+			<img src="<?php echo $record[$i]->image_src3;?>">
 		</div>
 		<div class="clo_name">
 			<a href="/column/<?php echo $record[$i]->name;?>"><?php echo $record[$i]->nick_name;?></a>

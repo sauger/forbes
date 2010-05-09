@@ -37,7 +37,7 @@
 			<div id=column_person_left_t></div>
 			<div id=column_person_left_content>
 					<div id=top>
-						<div id=pic><a href=""><img border=0 src="<?php echo $column->image_src;?>"></a></div>
+						<div id=pic><a href=""><img border=0 src="<?php echo $column->image_src2;?>"></a></div>
 						<div id=pictitle_left><a><?php echo $column->nick_name;?></a></div>
 						<div id=pictitle_right><button id="btn_collect"></button></div>
 					</div>
@@ -63,10 +63,10 @@
 					</div>
 					<?php
 					
-					$othercolumn=$db->query("select image_src,nick_name,id,name from fb_user where id != $id and (role_name='column_editor' or role_name='column_writer') order by rand() limit 6");
+					$othercolumn=$db->query("select image_src3,nick_name,id,name from fb_user where id != $id and (role_name='column_editor' or role_name='column_writer') order by rand() limit 6");
 					for($i=0;$i<count($othercolumn);$i++){ ?>
 						<div class=b_b_left>
-							<div class=b_pic><a href="/column/<?php echo $othercolumn[$i]->name;?>"><img border=0 src="<?php echo $othercolumn[$i]->image_src; ?>"></a></div>
+							<div class=b_pic><a href="/column/<?php echo $othercolumn[$i]->name;?>"><img border=0 src="<?php echo $othercolumn[$i]->image_src3; ?>"></a></div>
 							<div class=b_pictitle><a href="/column/<?php echo $othercolumn[$i]->name;?>"><?php echo $othercolumn[$i]->nick_name; ?></a></div>
 						</div>
 					<?php } ?>
