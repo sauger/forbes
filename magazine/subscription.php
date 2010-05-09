@@ -42,11 +42,6 @@
                 </tr>
               </table>
 			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td>我希望收到《福布斯》中文版！
-                      <input class="inputradio" type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="1" checked/>是
-                      <input class="inputradio" type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="0"/>否</td>
-                </tr>
 
                 <tr>
                   <td style="font-size:14px;">个人资料(请全部用中文填写完整，所填事项不完整及填写家庭地址恕不受理。)</td>
@@ -55,8 +50,7 @@
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td width="90" valign="top"><span style="color:red">*</span> 出生地</td>
-                  <td style="font-size:12px; font-weight:normal;"><input name="sub[BirthPlace]" id="BirthPlace" class=bc type="text"  maxlength="20" class="required"/><span id="checkbirthplace">&nbsp;</span><br />请输入您的出生地作为个人标志，本资料仅供确认您订阅的有效性，不会用于其他用途。</td>
-
+                  <td style="font-size:12px; font-weight:normal; color:#666666;"><input name="sub[BirthPlace]" id="BirthPlace" class=bc type="text"  maxlength="20" class="required"/><span id="checkbirthplace">&nbsp;</span><br />请输入您的出生地作为个人标志，本资料仅供确认您订阅的有效性，不会用于其他用途。</td>
                 </tr>
                 <tr>
                   <td width="90"><span style="color:red">*</span> 姓名</td>
