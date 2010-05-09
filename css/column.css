@@ -90,7 +90,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #column_person_left_content #top{width:140px; margin-top:20px; margin-left:19px;}
 #column_person_left_content #top #pic{width:138px; height:138px; border:1px solid #cccccc; overflow:hidden;}
 #column_person_left_content #top #pic img{width:136px; height:136px; margin:1px;}
-#column_person_left_content #top #pictitle_left{width:70px; height:21px; margin-top:10px; line-height:21px; overflow:hidden;}
+#column_person_left_content #top #pictitle_left{width:140px; height:21px; margin-top:10px; line-height:21px; overflow:hidden;}
 #column_person_left_content #top #pictitle_left a{color:#3075b9;}
 #column_person_left_content #top #pictitle_right{width:66px; height:21px; margin-top:10px; float:right;}
 #column_person_left_content #top #pictitle_right button{width:66px; height:21px; border:0px; background:url('/images/column/btn_bg.jpg') no-repeat; color:#000000;}
@@ -121,7 +121,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .r_content .r_title .wz a{color:#303082; text-decoration:none;}
 .r_content .r_title .subtime{height:16px; margin-top:7px;  margin-right:10px; line-height:16px; color:#999999; float:right;}
 .r_content .r_read{width:200px; height:16px; margin-top:10px; font-size:12px; line-height:16px; color:#055c99; text-align:right; float:right;}
-.r_content .r_context{width:730px; height:100px; margin-top:10px; margin-left:13px; margin-bottom:10px; line-height:20px; font-size:13px; color:#666666; overflow: hidden;}
+.r_content .r_context{width:730px; height:100px; margin-top:10px; margin-left:13px; margin-bottom:10px; line-height:20px; font-size:13px; text-indent:2em; color:#666666; overflow: hidden;}
 .r_content .r_dash{width:740px; height:1px; margin-left:7px; margin-top:5px; overflow:hidden; background:url('/images/column/r_dash.jpg') no-repeat;}
 .page{width:788px; height:30px; margin-top:20px; font-size:14px; line-height:30px; color:#666666; text-decoration:none; text-align:center;}
 .page a{color:#246BB0; text-decoration:none;}
