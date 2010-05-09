@@ -118,7 +118,7 @@
 				</script>
 				<div id=bottom>
 					<div id=title>榜单动态</div>
-					<?php for($i=0;$i<2;$i++){
+					<?php for($i=0;$i<3;$i++){
 						$pos_name = "index_dyn_list{$i}"; 
 						?>
 						<div class=bottom_list<?php show_page_pos($pos_name,'link');?>><?php show_page_href()?></div>
@@ -233,7 +233,7 @@
 					$news->find($comments[$i]->resource_id);
 			?>
 			<div class=context style="overflow: hidden;"><?php echo $comments[$i]->comment?></div>
-			<div class=context1><a href="#"><?php echo $comments[$i]->nick_name;?></a>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
+			<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
 			<?php }?>
 		</div>
 		
@@ -247,7 +247,8 @@
 			 	<div class=list1 >
 					<div class=list1_title <?php $pos_name ="index_invest0"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
 					<div class=list1_description2>
-						<a class=list1_pic href="<?php echo $pos_items->index_invest0->href;?>" target="_blank"><img border=0 width=70 height=70 src="<?php echo $pos_items->index_invest0->image1;?>"></a><p style="width:10px; height:51px; float:left;"></p><?php show_page_desc('index_invest0');?></a>
+						<div class="list1_pic"><a href="<?php echo $pos_items->index_invest0->href;?>" target="_blank"><img border=0  src="<?php echo $pos_items->index_invest0->image1;?>"></a></div>
+						<div class="list1_piccontent"><?php show_page_desc('index_invest0');?></a></div>
 					</div>
 					<?php for($i=1;$i<=5;$i++){ $pos_name = "index_invest".$i;?>
 						<div class=list2 style="margin-left:3px;" <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
@@ -256,7 +257,7 @@
 			</div>	
 			<div class=dashed style="height:15px;"></div>
 
-	  	<div class=caption>
+	  		<div class=caption>
 				<div class=captions>生活<span>Life</span></div>
 				<div class=line>|</div>
 				<a href="/life/" class=more target="_blank"></a>
@@ -272,6 +273,11 @@
 						<div class=image_description><?php show_page_desc()?></div>
 					</div>
 					<div class=image style="margin-top:20px; margin-left:5px;"><?php show_page_img(150,130)?></div>
+			</div>
+			<div class=life_bottom>
+				<?php for($i=0;$i<4;$i++){ ?>
+					<div <?php $pos_name ="index_lifelist_".$i; show_page_pos($pos_name,'dictionary');?> class=lifelist><?php show_page_href()?></div>
+				<?php }?>
 			</div>
 		</div>
 		
@@ -294,9 +300,11 @@
 				<?php $pos_name = 'index_event';?>
 				<div class=public_box1 <?php show_page_pos($pos_name,'index_event');?>>
 					<div id=images><img src="<?php echo $pos_items->$pos_name->image1;?>" width="260" height="90"/></div>
+					<div id=title><?php echo $pos_items->$pos_name->display;?></div>
 					<div id=context>
-						<span style="font-size:13px; font-weight:bold; color:#333385"><?php echo $pos_items->$pos_name->display;?></span><br>举办日期：<?php echo $pos_items->$pos_name->reserve;?><br>地点：<?php echo $pos_items->$pos_name->title;?></div>
-						<div id=info><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">查看详细</a></div>	
+						举办日期：<?php echo $pos_items->$pos_name->reserve;?><br>地点：<?php echo $pos_items->$pos_name->title;?>
+					</div>
+					<div id=info><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">查看详细</a></div>	
 				</div>
 				<div class=public_bottom1></div>
 			</div>

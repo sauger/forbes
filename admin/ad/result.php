@@ -24,7 +24,7 @@
 	}
 	$sql .= " group by t1.source_id";
 	$db = get_db();
-	$record = $db->paginate($sql,20);
+	$record = $db->paginate($sql,30);
 	$count = $db->record_count;
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -77,6 +77,7 @@
 			<td colspan=10><?php paginate("",null,"page",true);?></td>
 		</tr>
 	</table>
+</div>
 </body>
 </html>
 

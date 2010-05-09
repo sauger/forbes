@@ -34,7 +34,7 @@
 			die();
 		}
 		$upload = new upload_file_class();
-		$upload->save_dir = "/upload/ad/";
+		$upload->save_dir = "/upload/jj/";
 		$img = $upload->handle('image','filter_pic');
 		
 		if($img === false){
@@ -42,7 +42,7 @@
 			redirect($_SERVER['HTTP_REFERER']);
 			die();
 		}
-		$ad->image = "/upload/ad/{$img}";
+		$ad->image = "/upload/jj/{$img}";
 	}
 	if($_FILES['video']['name']!=null){
 		#var_dump($_FILES);
@@ -52,7 +52,7 @@
 			die();
 		}
 		$upload = new upload_file_class();
-		$upload->save_dir = "/upload/ad/";
+		$upload->save_dir = "/upload/jj/";
 		$vid = $upload->handle('video','filter_video');
 		
 		if($vid === false){
@@ -60,7 +60,7 @@
 			redirect($_SERVER['HTTP_REFERER']);
 			die();
 		}
-		$ad->video = "/upload/ad/{$vid}";
+		$ad->video = "/upload/jj/{$vid}";
 	}
 	if($_FILES['flash']['name']!=null){
 		if($_FILES['flash']['size']>2000000){
@@ -69,7 +69,7 @@
 			die();
 		}
 		$upload = new upload_file_class();
-		$upload->save_dir = "/upload/ad/";
+		$upload->save_dir = "/upload/jj/";
 		$flash = $upload->handle('flash');
 		
 		if($flash === false){
@@ -77,7 +77,7 @@
 			redirect($_SERVER['HTTP_REFERER']);
 			die();
 		}
-		$ad->flash = "/upload/ad/{$flash}";
+		$ad->flash = "/upload/jj/{$flash}";
 	}
 	$ad->save();
 	if(!$_POST['url']){

@@ -14,7 +14,7 @@ if($end!=''){
 }
 $db = get_db();
 $news_id = $db->query($sql);
-echo '静态条数：'.$db->record_count;die();
+echo '静态条数：'.$db->record_count;
 if($db->record_count > 0 ){
 	$len = $db->record_count;
 	$news = new table_class('fb_news');
@@ -23,3 +23,4 @@ if($db->record_count > 0 ){
 		static_news($news);
 	}
 }
+echo '静态条数：'.$len;
