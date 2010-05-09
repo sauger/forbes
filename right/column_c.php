@@ -14,9 +14,10 @@
 ?>
 <div class="right_box">
 	<?php 
+		global $static_site;
 		for($i=0;$i<$count;$i++){
 	?>
-	<div class="right_span"><a href="/news/news_list.php?cid=<?php echo $category[$i]->id;?>&type=column"><?php echo $category[$i]->name;?></a></div>
+	<div class="right_span"><a href="<?php echo "{$static_site}/column/category/".$category[$i]->id;?>"><?php echo $category[$i]->name;?></a></div>
 	<?php }?>
 </div>
 <div class=bottom_line></div>

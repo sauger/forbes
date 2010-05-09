@@ -79,12 +79,12 @@ div{margin:0; padding:0; float:left; display:inline;}
 #ibottom #td5{width:1000px; height:30px; margin-top:5px; line-height:30px; text-align:center; color:#ffffff;}
 .ibabout{width:1000px; height:48px; margin-top:20px; margin-bottom:10px; line-height:16px; font-size:12px; text-align:center; overflow:hidden;}
 
-.public_top1{width:300px; height:30px; background:url(/images/public/bg_top1.jpg) no-repeat;}
-.public_bottom1{width:300px; height:10px;  background:url(/images/public/bg_bottom1.jpg) no-repeat;}
+.public_top1{width:300px; height:30px; background:url(/images/public/bg_top1.jpg) no-repeat; overflow:hidden;}
+.public_bottom1{width:300px; height:10px;  background:url(/images/public/bg_bottom1.jpg) no-repeat; overflow:hidden;}
 .public_caption1{height:20px;  margin-left:15px; margin-top:8px; font-size:14px; font-weight:bold; color:#999999;}
 .public_caption1 span{margin-left:10px; font-family:arial; font-weight:normal; font-size:11px;}
 .public_more1{width:18px; height:8px; margin-top:11px; margin-right:10px; background:url(/images/public/public_more1.jpg) no-repeat; line-height:18px; float:right;}
-.public_box1{width:298px;  border-left:1px solid #dfdfdf;  border-right:1px solid #dfdfdf; line-height:20px; overflow:hidden;}
+.public_box1{width:298px; border-left:1px solid #dfdfdf;  border-right:1px solid #dfdfdf; line-height:20px; overflow:hidden;}
 
 .page_span{height:15px; padding-left:7px; padding-right:7px; font-family:Arial; margin:0; font-size:13px; line-height:15px; border-right:1px solid #666666;}
 .page_span a{color:#003399; text-decoration:none;}
