@@ -118,7 +118,7 @@ span.down{color:#33CC00;}
 .forbes_l .image_content .image_description a{color:#666666; text-decoration:none;}
 
 .forbes_l .life_bottom{width:320px; margin-top:20px;}
-.forbes_l .lifelist{width:150px; height:20px; margin-top:5px; margin-left:5px; font-size:14px; line-height:20px; overflow:hidden;}
+.forbes_l .lifelist{width:150px; height:20px; margin-top:5px; margin-left:10px; font-size:14px; line-height:20px; overflow:hidden;}
 .forbes_l .lifelist a{color:#003899; text-decoration:none;}
 
 #column_btnl{width:8px; height:99px; margin-top:45px; background:url(/images/index/column_btnl.jpg) no-repeat; cursor:pointer;}
