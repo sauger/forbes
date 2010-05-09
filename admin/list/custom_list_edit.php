@@ -13,7 +13,7 @@
 
 		css_include_tag('admin');
 		use_jquery();
-		js_include_tag('admin/list/edit');
+		js_include_tag('admin/list/edit','../ckeditor/ckeditor.js');
 		validate_form("list_edit");
 	?>
 </head>
@@ -94,7 +94,7 @@
 		}?>
 		<tr class=tr4>
 			<td class=td1>说明</td>
-			<td><textarea rows="10" cols="60" name="mlist[comment]"><?php echo $record->comment;?></textarea> </td>
+			<td><?php show_fckeditor('mlist[comment]','Admin',false,"215",$record->comment);?></td>
 		</tr>
 		<tr class="btools">
 			<td colspan="10" align="center"><input id="submit" type="submit" value="保　　　存"> 		<input type="hidden" name="id" id="id"  value="<?php echo $record->id; ?>"></td>
