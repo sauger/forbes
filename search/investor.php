@@ -59,7 +59,8 @@
 			<?php for($i=0;$i<$i_count;$i++){?>
 			<div class=zh_left_c>
 				<div class=zc_left>
-					<img src="<?php echo $investor[$i]->image;?>"></div>
+					<img src="<?php echo $investor[$i]->image;?>">
+				</div>
 				<div class="z_title">
 					<div class=name><a href="/investor/<?php echo $investor[$i]->id;?>"><?php echo $investor[$i]->name;?></a></div>
 							
