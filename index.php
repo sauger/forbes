@@ -243,7 +243,7 @@
 				<div class=line>|</div>
 				<a href="/investment/" class=more target="_blank"></a>
 			</div>
-			<div id=forbes_l_content>
+			<div class=forbes_l_content>
 			 	<div class=list1 >
 					<div class=list1_title <?php $pos_name ="index_invest0"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
 					<div class=list1_description2>
@@ -255,7 +255,7 @@
 					<?php } ?>
 				</div>
 			</div>	
-			<div class=dashed style="height:15px;"></div>
+			<div class=dashed></div>
 
 	  		<div class=caption>
 				<div class=captions>生活<span>Life</span></div>
