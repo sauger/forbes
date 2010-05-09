@@ -23,7 +23,7 @@
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
 	<meta name="keywords" content="<?php echo $investor->name;?> 福布斯中文网 投资人" />
-	<meta name="description" content="<?php echo $investor->description; ?>" />
+	<meta name="description" content="<?php echo get_fck_content($investor->description); ?>" />
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/investor');
