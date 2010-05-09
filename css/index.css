@@ -173,8 +173,8 @@ span.down{color:#33CC00;}
 #activity{width:300px; height:205px; margin-top:8px; float:right;}
 #activity #images{width:260px; height:90px; margin-top:10px; margin-left:20px;}
 #activity #title{width:260px; height:20px; margin-top:5px; margin-left:20px; font-size:13px; font-weight:bold; color:#333385 line-height:20px;}
-#activity #context{width:200px; height:20px; margin-top:5px; margin-left:20px; font-size:12px; color:#999999; line-height:20px;}
-#activity #info{width:50px; height:20px; margin-top:5px; margin-right:20px; line-height:20px; float:right;}
+#activity #context{width:200px; height:40px; margin-top:5px; margin-left:20px; font-size:12px; color:#999999; line-height:20px;}
+#activity #info{width:50px; height:20px; margin-top:25px; margin-right:20px; line-height:20px; float:right;}
 #activity #info a{color:#3399CC;}
 
 #club{width:300px; height:151px; margin-top:12px; background:url(/images/index/bg2.jpg) no-repeat; float:right;}
