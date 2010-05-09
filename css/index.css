@@ -172,8 +172,8 @@ span.down{color:#33CC00;}
 #dictionary_l a{color:#993333; text-decoration:none;}
 #dictionary_r{width:205px; height:80px; margin-top:1px; margin-left:7px;}
 #dictionary_r a{color:#003399; text-decoration:none;}
-#dictionary_r #content1{width:115px; height:20px; line-height:20px; overflow:hidden;}
-#dictionary_r #more{width:90px; height:15px; margin-top:1px; line-height:15px; text-align:right; float:right;}
+#dictionary_r #content1{width:180px; height:20px; line-height:20px; overflow:hidden;}
+#dictionary_r #more{width:18px; height:8px; margin-top:5px; text-align:right; float:right;}
 #dictionary_r #more a{color:#666666;}
 #dictionary_r #content2{width:205px; height:40px; line-height:20px; overflow:hidden;}
 #dictionary_r #content3{width:205px; height:20px; line-height:20px; overflow:hidden;}

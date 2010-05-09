@@ -12,7 +12,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 .bc{width:294px;}
 
-.subscription {line-height:20px;}
+.subscription {margin-top:15px; margin-left:10px; line-height:20px;}
 .subscription table { border-collapse:collapse}
 .subscription table tr td { padding:2px;}
 #su_bottom{margin-left:250px;}

@@ -15,12 +15,18 @@
 			Net::SMTP.start('smtp.qiye.163.com', 25,'abc<userservice@forbeschina.com>','userservice@forbeschina.com','userservice',:login) do |smtp|
       			result = smtp.send_message str,'userservice@forbeschina.com',to
 				#print_r(result)
-				return result.status == "250"
+				if result.status == "250"
+					return "success"
+				else
+					return "send_fail"
+				end
     		end
 		rescue Net::SMTPAuthenticationError
-			return false
+			return "authentication_error"
+		rescue TimeoutError
+			return "timeout_error"
 		else
-			return false
+			return "other_error"
 		end
 	end
 	host = '192.168.1.4'
@@ -34,11 +40,15 @@
 	
 	items = my.query("select * from forbes_email.fb_email where email_status=#{randnum}")
 	items.each do |id,to,from,subject,content,status|
-		if send_mail(from,to,subject,content)
+		send_result = send_mail(from,to,subject,content)
+		if send_result=="success"
 			stmt = my.prepare("delete from forbes_email.fb_email where id=?")
 		else
 			stmt = my.prepare("update forbes_email.fb_email set email_status = 0 where id=?")
 		end
 		stmt.execute id
+		stmt = my.prepare("insert into forbes_email.fb_email_history (email_from,email_to,email_subject,email_content,email_status,created_at) values(?,?,?,?,?,now())")
+		stmt.execute from,to,subject,content,send_result
+		
 	end
 #	p send_mail('userservice@forbeschina.com','sauger1@163.com','测试','测试内容')

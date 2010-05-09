@@ -96,7 +96,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #column_person_left_content #top #pictitle_right button{width:66px; height:21px; border:0px; background:url('/images/column/btn_bg.jpg') no-repeat; color:#000000;}
 #column_person_left_content .c_title{width:178px; height:28px; border-top:1px solid #F5F5F5; border-bottom:1px solid #F5F5F5; margin-top:20px; background:url('/images/column/l_title_bg1.jpg') repeat-x;}
 #column_person_left_content .c_title .wz{height:18px; margin-top:6px; margin-left:10px; color:#4990b9; font-weight:bold; font-size:14px; line-height:18px;}
-#column_person_left_content #c_content{width:152px; height:140px; margin-top:10px; margin-left:14px; text-indent:2em; overflow:hidden; line-height:20px;}
+#column_person_left_content #c_content{width:152px; height:140px; margin-top:10px; margin-left:14px; overflow:hidden; line-height:20px;}
 #column_person_left_content #c_content a{color:#666666; text-decoration:none;}
 #column_person_left_content #c_c_b{height:16px; margin-top:10px; margin-right:15px; float:right;}
 #column_person_left_content #c_c_b a{color:#3075b9;}

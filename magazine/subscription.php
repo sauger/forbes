@@ -42,11 +42,6 @@
                 </tr>
               </table>
 			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td>我希望收到《福布斯》中文版！
-                      <input class="inputradio" type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="1" checked/>是
-                      <input class="inputradio" type="radio" name="sub[ChineseMagazine]" class="ChineseMagazine" value="0"/>否</td>
-                </tr>
 
                 <tr>
                   <td style="font-size:14px;">个人资料(请全部用中文填写完整，所填事项不完整及填写家庭地址恕不受理。)</td>
