@@ -23,11 +23,19 @@ function debug_info($msg,$type='php') {
 }
 
 function send_mail($smtp_server,$smtp_user,$smtp_pwd,$from,$to,$title,$content){
+	$body = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+				<HTML><HEAD>
+				<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+				<META name=GENERATOR content="MSHTML 8.00.6001.18854"><LINK rel=stylesheet 
+				href="BLOCKQUOTE{margin-Top: 0px; margin-Bottom: 0px; margin-Left: 2em}"></HEAD>
+				<BODY style="MARGIN: 10px; FONT-FAMILY: verdana; FONT-SIZE: 10pt">';
+	$body = $body.addslashes($content);;
+	$body = $body.'</BODY></HTML>';
 	$email = new table_class('forbes_email.fb_email');
 	$email->email_to = $to;
 	$email->email_status  = '0';
 	$email->email_subject = $title;
-	$email->email_content = addslashes($content);
+	$email->email_content = $body;
 	$email->save();
 }
 /*
