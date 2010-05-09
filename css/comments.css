@@ -13,40 +13,39 @@ div{margin:0; padding:0; float:left; display:inline;}
 #c_join_a{width:630px; margin-top:12px;  float:left; display:inline;}
 
 
-#comments_top{width:630px; height:30px;  float:left; display:inline;}
-#title_pg_l{width:10px; height:30px; background:url(../images/comments/hr_pg_l.jpg) no-repeat; float:left; display:inline;}
-#title_pg_r{width:8px; height:30px; background:url(../images/comments/hr_pg_r.jpg) no-repeat; float:right; display:inline;}
-#title_pg{width:612px; height:28px; margin-top:1px; background:#C0C0C0;  font-weight:bold; font-size:14px; line-height:27px; float:left; display:inline;}
+.news_caption {width:500px; height:28px; margin-top:5px; margin-left:10px;}
+.news_caption .captions{height:18px; margin-top:5px; padding-left:18px; line-height:18px; font-size:14px; color:#666666; font-weight:bold;  background:url(/images/public/square.jpg) no-repeat 0 5px;}
+.news_caption .captions span{margin-left:10px; font-weight:normal; font-size:12px; color:#7F7F7F;}
 
-#left{width:630px; float:left; display:inline;}
+#left{width:630px;}
 
-.hr{WIDTH:630PX; height:1PX; FLOAT:LEFT; DISPLAY:INLINE;}
+.hr{WIDTH:630PX; height:1PX;}
 
-.c_join{width:630px; margin-top:2px; float:left; display:inline;}
+.c_join{width:630px; margin-top:2px;}
 
-.join_top{width:625px; height:15px; font-weight:bold; font-size:14px; float:left; display:inline;}
+.join_top{width:640px; height:15px; font-weight:bold; font-size:14px;}
 .join_top div{line-height:18px;}
-.name{width:100px; height:18px; float:left; display:inline;}
-.time{width:160px; height:18px; margin-right:5px; text-align:right; font-size:12px; color:#CCCCCC; float:right; display:inline;}
-.issues{width:325px; height:18px; float:left; color:#333; display:inline; overflow:hidden;}
-.title{width:100px; height:18px; color:blue; margin-left:10px; float:left; display:inline;}
-.content{width:627px; margin-top:8px; background-color:#F4F4F4;color:#666666;letter-spacing:1pt; word-spacing:2mm; line-height:20px; float:left; display:inline;}
+.name{width:100px; height:18px;}
+.time{width:160px; height:18px; margin-right:5px; text-align:right; font-size:12px; font-weight:normal; color:#666666; float:right;}
+.issues{width:325px; height:18px; color:#333333; overflow:hidden;}
+.title{width:100px; height:18px; color:#246BB0;}
+.content{width:620px; margin-top:8px; background:#EFEFEF; color:#333333; padding-left:10px; padding-right:10px; border-top:5px solid #efefef; border-bottom:5px solid #efefef; line-height:20px;}
 
-.hr_dashed{width:627px; height:15px;  background:url(../images/news/dash.gif) repeat-x; margin-top:15px;  float:left; display:inline;}
+.hr_dashed{width:640px; height:15px;  background:url(../images/news/dash.gif) repeat-x; margin-top:15px; }
 
-.content_lable{width:600px; margin-bottom:5px; margin-right:7px; margin-left:15px;  margin-top:5px;  float:left; display:inline;}
+.content_lable{width:600px; margin-bottom:5px; margin-right:7px; margin-left:15px;  margin-top:5px; }
 
-.title_people{width:100px; height:18px; float:left; display:inline;}
+.title_people{width:100px; height:18px;}
 
-#content_bottom{width:620PX;  MARGIN-TOP:10PX; FLOAT:LEFT; DISPLAY:INLINE;}
+#content_bottom{width:620PX;  MARGIN-TOP:10PX;}
 
-#z{width:125px; cursor:pointer; float:left; display:inline;}
-#z_bottom{width:615px; float:left; display:inline;}
-#z_right{width:150px; margin-top:5px;  text-align:right; font-size:13px; float:right; display:inline;}
-#z_left{width:150px; text-align:left; margin-top:3px; margin-left:5px; font-size:14px; font-weight:bold; float:left; display:inline;}
-#c_text{width:620px;  float:left; display:inline;}
-#text{width:615px; height:100px;  float:left; display:inline;}
+#z{width:125px; cursor:pointer;}
+#z_bottom{width:615px;}
+#z_right{width:150px; margin-top:5px;  text-align:right; font-size:13px; float:right;}
+#z_left{width:150px; text-align:left; margin-top:3px; margin-left:5px; font-size:14px; font-weight:bold;}
+#c_text{width:620px; }
+#text{width:615px; height:100px; }
 #ta{width:620px; height:80px;	 margin-top:10px; BORDER: #666666 1px solid;}
-#submit{width:100px; height:20px; margin-left:50px; text-align:center; background:#AEAEAE;  float:left; display:inline;}
-#s_radio{width:25px; height:18px; margin-left:200px; float:left; display:inline;}
-#s_niming{width:40px; height:18px; margin-top:2px;  font-weight:bold;  float:left; display:inline;}
+#submit{width:100px; height:20px; margin-left:50px; text-align:center; background:#AEAEAE; }
+#s_radio{width:25px; height:18px; margin-left:200px;}
+#s_niming{width:40px; height:18px; margin-top:2px;  font-weight:bold; }
