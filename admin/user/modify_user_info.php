@@ -32,11 +32,29 @@
 			<td class=td1 width="15%">头像</td>
 			<td width="85%">
 			<?php if($user->image_src){?>
-			<img src="<?php echo $user->image_src;?>">
+			<img width="90" height="90" src="<?php echo $user->image_src;?>">
 			<?php }?>
-			<input type="file" name="image_src"></input>
+			<input type="file" name="image_src"></input>(请上传90×90大小的图片)
 			</td>
-		</tr>		
+		</tr>
+		<tr class=tr4>
+			<td class=td1 width="15%">大头像</td>
+			<td width="85%">
+			<?php if($user->image_src){?>
+			<img width="136" height="136" src="<?php echo $user->image_src2;?>">
+			<?php }?>
+			<input type="file" name="image_src2"></input>(请上传136×136大小的图片)
+			</td>
+		</tr>
+		<tr class=tr4>
+			<td class=td1 width="15%">小头像</td>
+			<td width="85%">
+			<?php if($user->image_src){?>
+			<img width="62" height="62" src="<?php echo $user->image_src3;?>">
+			<?php }?>
+			<input type="file" name="image_src3"></input>(请上传62×62大小的图片)
+			</td>
+		</tr>
 		<tr class=tr4>
 			<td class=td1>用户名：</td>
 			<td ><?php echo $user->name;?></td>

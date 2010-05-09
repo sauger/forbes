@@ -241,7 +241,7 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 						$pos->image1 = $news[$i]->video_photo_src;
 						$pos->description = $news[$i]->description;
 						$pos->href = dynamic_news_url($news[$i]);
-						$pos->static_href = column_article_url($column[0]->name,$news[$i]->id);
+						$pos->static_href = column_article_url($column[0]->name,$news[$i]->id,'static');
 						$pos->save();
 						break;
 					}
@@ -255,7 +255,7 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 					$pos->image1 = $news[$i]->video_photo_src;
 					$pos->description = $news[$i]->description;
 					$pos->href = dynamic_news_url($news[$i]);
-					$pos->static_href = column_article_url($column[0]->name,$news[$i]->id);
+					$pos->static_href = column_article_url($column[0]->name,$news[$i]->id,'static');
 					$pos->save();
 					break;
 				}
