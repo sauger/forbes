@@ -172,7 +172,7 @@ span.down{color:#33CC00;}
 #dictionary_r .content{width:205px; height:25px; line-height:25px; overflow:hidden;}
 
 
-#activity{width:300px; height:205px; margin-top:8px; float:right;}
+#activity{width:300px; margin-top:8px; overflow:hidden; float:right;}
 #activity #images{width:260px; height:90px; margin-top:10px; margin-left:19px;}
 #activity #title{width:260px; height:20px; margin-top:5px; margin-left:19px; font-size:13px; font-weight:bold; color:#333385 line-height:20px;}
 #activity #context{width:200px; height:40px; margin-top:5px; margin-left:19px; font-size:12px; color:#999999; line-height:20px;}
