@@ -50,7 +50,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #forbes_trt{width:300px; margin-top:10px; overflow:hidden; float:right;}
 #forbes_trt .title{width:75px; height:26px; line-height:26px; font-size:13px; background:url(/images/index/block1.jpg) no-repeat; text-align:center; cursor:pointer;}
-#forbes_trt .title.selected{background:url(/images/index/block2.jpg) no-repeat; font-weight:bold; color:#000000;}
+#forbes_trt .title.selected{background:url(/images/index/block2.jpg) no-repeat; font-weight:bold;}
 #forbes_trt .title a{color:#003399; text-decoration:none;}
 #forbes_trt .title.selected a{color:#000000;}
 .rt_tab{width:300px; height:280px; display:none; background-color:#FFF;}
