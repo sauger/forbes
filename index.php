@@ -100,7 +100,7 @@
 			<?php for($i=1;$i<5;$i++){
 				$pos_name = "index_right_list_title{$i}";
 			?>
-			<div class="title"<?php show_page_pos($pos_name,'only_title')?> title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->display?></div>
+			<div class="title"<?php show_page_pos($pos_name,'only_title')?> title="<?php echo $pos_items->$pos_name->title;?>"><?php show_page_href();?></div>
 			<?php }?>
 			<script>
 				$('#forbes_trt .title:first').addClass("selected");
