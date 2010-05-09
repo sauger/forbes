@@ -4,7 +4,7 @@
 	def send_mail (from, to, subject, content)
 		mail = TMail::Mail.new
 		mail.to = to
-		mail.from = "=?UTF-8?B?56aP5biD5pav5Lit5paH572R?= <" + from.to_s + ">"
+		mail.from = " =?UTF-8?B?56aP5biD5pav5Lit5paH572R?= <userservice@forbeschina.com>"
 		mail.subject = subject
 		mail.date = Time.now
 		mail.mime_version = '1.0'

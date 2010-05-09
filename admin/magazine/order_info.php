@@ -20,7 +20,7 @@
 	$record = new table_class('fb_subscription');
 	if(isset($_REQUEST['id']))
 	{
-		$record->find($id);
+		$record->find_by_sid($id);
 	}
 ?>
 <body>

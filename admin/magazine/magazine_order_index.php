@@ -9,7 +9,7 @@
 		$sql .= " and RealName like '%$search%' or BirthPlace like '%$search%' or Sex like '%$search%' or Company like '%$search%' or Department like '%$search%' or Position like '%$search%' or Province like '%$search%' or zipcode like '%$search%' or Email like '%$search%'";
 	}
 	#$sql .= " order by t1.created_at desc";
-	$record = $db->paginate($sql,15);
+	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
 
@@ -53,7 +53,7 @@
 					<td><?php echo $record[$i]->zipcode;?></td>
 					<td><?php echo $record[$i]->Email;?></td>
 					<td>
-						<a href="order_info.php?id=<?php echo $record[$i]->id;?>" class="edit" title="编辑" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
+						<a href="order_info.php?id=<?php echo $record[$i]->sid;?>" class="edit" title="编辑" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
 						<span style="cursor:pointer;color:#FF0000" class="del" title="删除" name="<?php echo $record[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
 					</td>
 				</tr>
