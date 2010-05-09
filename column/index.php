@@ -96,7 +96,7 @@
 				<div class=column_edit>
 					<div class=captions>专栏文章推荐</div>
 					<div class=line>|</div>
-					<a href="http://www.forbeschina.com/column/journalist" target="_blank" class=more></a>
+					<a href="#" target="_blank" class=more></a>
 					<?php
 						for($i=0;$i<3;$i++){
 							$pos_name = 'column_edit_t'.$i;
@@ -135,7 +135,7 @@
 						<div class=caption>
 							<div class=captions>专栏列表</div>
 							<div class=line>|</div>
-							<a href="#" target="_blank" class=more></a>
+							<a href="http://www.forbeschina.com/column/expert" target="_blank" class=more></a>
 						</div>
 						<?php
 							for($i=0;$i<10;$i++){
@@ -153,7 +153,7 @@
 				<div class=column_special>
 					<div class=captions>采编空间</div>
 					<div class=line>|</div>
-					<a href="#" target="_blank" class=more></a>
+					<a href="http://www.forbeschina.com/column/journalist" target="_blank" class=more></a>
 					<div class=column_special_top>
 						<?php $pos_name = 'column_c_b_zk_'.$i ?>
 						<div class=t1 <?php show_page_pos($pos_name,'base_ntime');?>>
@@ -240,7 +240,7 @@
 						<div class=caption>
 							<div class=captions>专栏列表</div>
 							<div class=line>|</div>
-							<a href="#" target="_blank" class=more></a>
+							<a href="http://www.forbeschina.com/column/journalist" target="_blank" class=more></a>
 						</div>
 						<?php
 							for($i=0;$i<14;$i++){
