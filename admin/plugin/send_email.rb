@@ -26,7 +26,7 @@
 		rescue TimeoutError
 			return "timeout_error"
 		else
-			return false
+			return "other_error"
 		end
 	end
 	host = '192.168.1.4'

@@ -5,6 +5,6 @@ CREATE TABLE  `forbes_email`.`fb_email_history` (
   `email_subject` varchar(256) DEFAULT NULL,
   `email_content` text,
   `email_status` varchar(50) DEFAULT 'success',
-  `email_status` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 )
