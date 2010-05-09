@@ -1,8 +1,14 @@
 <?php
-    include_once('../../frame.php');
+   session_start();
+	include_once('../../frame.php');
+	judge_role();
+	
 	set_time_limit(600);
 	$db = get_db();
-	$date = date("Y-m-d");
+	$date = $_GET['date'];
+	if($date = ''){
+		$date = date("Y-m-d");
+	}
 	
 	$record = $db->query("select count(id) as num,ad_id,ad_name from forbes_ad.fb_ad_show_list where substring(created_at,1,10)='$date' group by ad_id");
 	$count = $db->record_count;
