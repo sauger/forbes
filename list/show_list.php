@@ -50,6 +50,7 @@
 		<div id=bread_line>
 		<div id="list_left">
 			<div id="list_title"><?php echo $list->name;?></div>
+			<div id="list_desc"><?php echo $list->comment;?></div>
 			<div id="list_left_top">
 				<?php if($page_type=='static'){?>
 				<a href="/list/<?php echo $id?>/more">查看详细</a>

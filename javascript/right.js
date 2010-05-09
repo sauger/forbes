@@ -14,8 +14,8 @@ $(function(){
 	});
 	
 	$(".left_bottom_title").hover(function(){
-		$(".left_bottom_title").removeClass('selected');
-		$(this).addClass('selected');
+		$(".left_bottom_title").removeClass('selected2');
+		$(this).addClass('selected2');
 		$(".left_bottom").css('display','none');
 		$("#"+$(this).attr('name')).css('display','inline');
 	});
