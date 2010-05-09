@@ -72,7 +72,7 @@
 					<div class=search_content_l></div>
 					<div class="search_content_r">
 						<div class=content>
-							<div class=search_content_r_l>富豪姓名</div>
+							<div class=search_content_r_l>自然人姓名</div>
 							<div class=search_content_r_r>
 								<input type="text" id="name" />
 							</div>
