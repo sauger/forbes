@@ -475,13 +475,13 @@
 									for($i=0;$i<$count;$i++){
 								?>
 									<option url="<?php echo $magazine[$i]->url;?>" value="<?php echo $magazine[$i]->id;?>"><?php echo $magazine[$i]->name;?></option>
-								<?php			
+								<?php
 									}
 								?>
 							</select>
 						</div>
 						<a id="btnonline"></a>
-						<a id="sq"></a>
+						<a id="sq" href="http://www.forbeschina.com/magazine/subscription.php"></a>
 						<a id="jr"></a>
 				</div>
 				<div class=public_bottom1></div>
