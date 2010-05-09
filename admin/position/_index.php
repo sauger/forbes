@@ -7,5 +7,6 @@ update_pos("投资",6,"index_invest",true);
 update_click(6,'index_pop');
 #update_column('column_editor',8,'index_jour');
 update_column2('column_writer',8,'index_author',4,'_r');
+update_column2('column_editor',8,'index_author',4,'_r');
 update_pos("财经词典",2,'index_dictb',true);
 ?>
