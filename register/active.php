@@ -28,7 +28,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯中文网-用户激活</title>
+	<title>用户激活_福布斯中文网</title>
 </head>
 <?php
 alert($str);

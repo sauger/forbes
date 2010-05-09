@@ -53,7 +53,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-新闻列表</title>
+	<title>新闻列表_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right');

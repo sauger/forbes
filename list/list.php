@@ -5,9 +5,9 @@
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <head>
-  <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<title>榜单列表_福布斯中文网</title>
+  	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-榜单列表</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','list_list');
@@ -17,7 +17,7 @@
 <body>
 	<div id=ibody>
 	<?php include_top();?>
-		<div id=bread><a href="#">榜单</a></div>
+		<div id=bread>榜单</div>
 		<div id=bread_line></div>
 		<div id=sort_l>
 			<div class=sort_l_t1>

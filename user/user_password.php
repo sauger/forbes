@@ -1,5 +1,5 @@
 <?php 
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	require_login();
 	$db = get_db();
 	$uid = front_user_id();

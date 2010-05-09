@@ -4,9 +4,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<title>会员俱乐部_福布斯中文网</title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-会员俱乐部</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right');
@@ -17,7 +17,7 @@
 <body>
 	<div id=ibody>
 		<? include_top();?>
-		<div id=bread><a href="#">会员俱乐部</a></div>
+		<div id=bread>会员俱乐部</div>
 		<div id=bread_line></div>
 		<div id=club_left>
 			<div id=club_img <?php $pos_name='club_img'; show_page_pos($pos_name,'base_img_withoutime'); ?>>

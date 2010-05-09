@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	$db = get_db();
 	$_SESSION['news_share'] = rand_str();
 	$news_id = intval($_GET['news_id']);
@@ -10,7 +10,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-新闻分享</title>
+	<title>新闻分享_福布斯中文网</title>
 	<?php
 		use_jquery();
 		require_login();
@@ -22,7 +22,7 @@
 <div id=ibody>
 		<?php include_top();?>
 		<div id=bread>
-				<span style="color:#246BB0; margin-left:8px;">分享</span>		
+				分享
 		</div>
 		<div id=bread_line></div>
 		<div id=l>

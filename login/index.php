@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	if(!isset($_SESSION['login'])){
 		$_SESSION['login'] = rand_str();
 	}
