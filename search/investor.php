@@ -43,6 +43,7 @@
 		<div id="bread_line"></div>
 		<div id="left">
 			<div id="c_top">
+				<div id=desc>福布斯中国增长会（Forbes China Up Networking）是由福布斯中文版联合数十名中国最具影响力的企业领袖、最具眼光的投资家和、最具创新力的创业家发起成立的一个创业创富（或投融资）组织，是专门为中文版高端读者提供增值服务的非盈利性会员组织。</div>
 				<div id="c_left"></div>
 				<div id="c_middle">
 					<div id="chr_c">
