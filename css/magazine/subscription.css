@@ -24,5 +24,5 @@ td{font-size:13px; color:#333333; }
 tr{line-height:35px;}
 #su_bottom{width:100px; height:30px; }
 #yzm{width:60px; height:22px; margin-left:10px; font-size:16px; font-weight:bold; line-height:22px; }
-.inputradio{border:none;}
+.inputradio{padding-left:0px; border:none;}
 p{ color:#FF0000; font-weight:bold; font-size:14px; line-height:35px;}
