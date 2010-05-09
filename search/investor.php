@@ -21,7 +21,7 @@
 		$sql .= " and invest_zone like '%$type%'";
 	}
 	$sql .= " order by chinese_name asc";
-	$investor = $db->paginate($sql,5);
+	$investor = $db->paginate($sql,6);
 	$i_count = $db->record_count;
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
