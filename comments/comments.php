@@ -14,7 +14,7 @@
 		js_include_tag('public','jquery.colorbox-min','comment','right');
 		css_include_tag('public','comments','right_inc','colorbox');
 		$db = get_db();
-		$items = $db->paginate("select a.resource_type,a.title,a.magzine_number,a.nick_name,a.comment,a.created_at,b.title as news_title from fb_comment a left join fb_news b on a.resource_id = b.id where is_approve=1 order by a.id desc",30);
+		$items = $db->paginate("select a.resource_type,a.title,a.magzine_number,a.nick_name,a.comment,a.created_at,b.title as news_title from fb_comment a left join fb_news b on a.resource_id = b.id where is_approve=1 order by a.id desc",10);
 		$len = count($items);
 	?>
 </head>
@@ -25,10 +25,9 @@
 		<div id=bread>读者高见</div>
 		<div id="hr_top"></div>
 		<div id="left">
-			<div id="comments_top">
-				<div id="title_pg_l"></div>
-				<div id="title_pg">共有<?php echo $page_record_count;?>条&nbsp;&nbsp;&nbsp;感言</div>
-				<DIV ID="title_pg_r"></div>
+			<div class=news_caption>
+				<?php $count=$db->query("select count(*) as num from fb_comment a left join fb_news b on a.resource_id = b.id where is_approve=1 order by a.id desc") ?>
+				<div class=captions>感言<span>共<?php echo $count[0]->num;?>篇</span></div>
 			</div>
 			<?php
 				for($i=0;$i<$len;$i++){
