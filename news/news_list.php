@@ -33,7 +33,7 @@
 		$author_type = "";
 		$conditions[] = "is_adopt = 1";
 	}
-	$sql = "select a.id,video_photo_src,a.author,a.created_at,a.title,a.content from fb_news a left join fb_user b on a.publisher=b.id where ";
+	$sql = "select a.id,video_photo_src,a.author,a.created_at,a.title,a.content,a.description from fb_news a left join fb_user b on a.publisher=b.id where ";
 	if($cid && $author_type == "" && (!$_REQUEST['page'] || $_REQUEST['page']==1)){
 		//normal category,find the top image;
 		$condition = implode(' and ',$conditions) . " and video_photo_src!='' and set_up=1";
@@ -103,7 +103,7 @@
 			<div id=list_top>
 					<div id=picture><img width="300" height="200"  src="<?php echo $top_news[0]->video_photo_src?>"></div>
 					<div id=title><a href="<?php echo get_news_url($top_news[0]);?>"><?php echo $top_news[0]->title;?></a></div>
-					<div id=description><?php echo mb_substr(strip_tags($top_news[0]->content,0,200,'utf8'));?></div>
+					<div id=description><?php echo strip_tags($top_news[0]->description);?></div>
 					<div id=info>记者：<?php echo $top_news[0]->author;?>　发布于：<?php echo substr($top_news[0]->created_at,0,10);?></div>
 			</div>
 			<?php }?>
