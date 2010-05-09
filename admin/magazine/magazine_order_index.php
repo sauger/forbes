@@ -8,7 +8,7 @@
 	if($search!=''){
 		$sql .= " and RealName like '%$search%' or BirthPlace like '%$search%' or Sex like '%$search%' or Company like '%$search%' or Department like '%$search%' or Position like '%$search%' or Province like '%$search%' or zipcode like '%$search%' or Email like '%$search%'";
 	}
-	#$sql .= " order by t1.stime desc";
+	$sql .= " order by t1.stime desc";
 	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
@@ -37,7 +37,7 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="10%">订阅时间</td><td width="10%">姓名</td><td width="10%">性别</td><td width="10%">工作单位</td><td width="10%">部门</td><td width="10%">职位</td><td width="10%">省/直辖市</td><td width="10%">电子邮件</td><td width="10%">操作</td>
+			<td width="15%">订阅时间</td><td width="7%">姓名</td><td width="15%">工作单位</td><td width="15%">部门</td><td width="15%">职位</td><td width="8%">省/直辖市</td><td width="15%">电子邮件</td><td width="10%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
@@ -45,7 +45,6 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><?php echo $record[$i]->stime;?></td>
 					<td><?php echo $record[$i]->RealName;?></td>
-					<td><?php echo $record[$i]->Sex;?></td>
 					<td><?php echo $record[$i]->Company;?></td>
 					<td><?php echo $record[$i]->Department;?></td>
 					<td><?php echo $record[$i]->Position;?></td>
