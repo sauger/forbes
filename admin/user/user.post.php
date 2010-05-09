@@ -11,7 +11,7 @@
 	<body>
 		<?php		
 			$user = new table_class($tb_user);
-			if($_POST['id']!=''){
+			if($_POST['id']!='0'){
 				$user -> find($_POST['id']);
 				if($user->name!=$_POST['post']['name']){
 					$db = get_db();
@@ -28,6 +28,24 @@
 						redirect($_SERVER['HTTP_REFERER']);
 					}
 				}else{
+					if($_FILES['image_src']['name'] != ''){
+							$upload = new upload_file_class();
+							$upload->save_dir = '/upload/news/';
+							$user->image_src = '/upload/news/' .$upload->handle('image_src','filter_pic');
+							$changed = true;
+					}
+					if($_FILES['image_src2']['name'] != ''){
+							$upload = new upload_file_class();
+							$upload->save_dir = '/upload/news/';
+							$user->image_src2 = '/upload/news/' .$upload->handle('image_src2','filter_pic');
+							$changed = true;
+					}
+					if($_FILES['image_src3']['name'] != ''){
+							$upload = new upload_file_class();
+							$upload->save_dir = '/upload/news/';
+							$user->image_src3 = '/upload/news/' .$upload->handle('image_src3','filter_pic');
+							$changed = true;
+					}
 					if($user->update_attributes($_POST['post'])){
 						redirect('user_list.php');
 					}else{
@@ -39,6 +57,24 @@
 				$db = get_db();
 				$record = $db->query("select * from ".$tb_user." where name='".$_POST['post']['name']."'");
 				if(count($record)==0){
+					if($_FILES['image_src']['name'] != ''){
+							$upload = new upload_file_class();
+							$upload->save_dir = '/upload/news/';
+							$user->image_src = '/upload/news/' .$upload->handle('image_src','filter_pic');
+							$changed = true;
+					}
+					if($_FILES['image_src2']['name'] != ''){
+							$upload = new upload_file_class();
+							$upload->save_dir = '/upload/news/';
+							$user->image_src2 = '/upload/news/' .$upload->handle('image_src2','filter_pic');
+							$changed = true;
+					}
+					if($_FILES['image_src3']['name'] != ''){
+							$upload = new upload_file_class();
+							$upload->save_dir = '/upload/news/';
+							$user->image_src3 = '/upload/news/' .$upload->handle('image_src3','filter_pic');
+							$changed = true;
+					}
 					if($user->update_attributes($_POST['post'])){
 						redirect('user_list.php');
 					}else{
@@ -50,7 +86,6 @@
 					redirect($_SERVER['HTTP_REFERER']);
 				}
 			}
-			
 			
 		?>
 	</body>
