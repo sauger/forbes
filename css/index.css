@@ -103,10 +103,12 @@ span.down{color:#33CC00;}
 .forbes_l .list2 a{font-size:14px; color:#003899; text-decoration:none;}
 .forbes_l .dashed{width:320px; height:2px; margin-top:10px; background:url(/images/index/dashed.jpg) no-repeat bottom;}
 
-.forbes_l .list1_description2{width:310px; height:105px; margin-top:7px; font-size:14px; line-height:25px; overflow:hidden;}
+.forbes_l .list1_description2{width:310px; height:80px; margin-top:7px; font-size:14px; line-height:25px; overflow:hidden;}
 .forbes_l .list1_description2 a{color:#666666; text-decoration:none;}
 .forbes_l .list1_pic{width:72px; height:72px; border:1px solid #CCCCCC; float:left;}
 .forbes_l .list1_pic img{width:70px; height:70px; margin:1px;}
+.forbes_l .list1_piccontent{width:228px; height:74px; overflow:hidden; float:right;}
+
 
 .forbes_l .image{width:150px; height:130px;}
 .forbes_l .image_content{width:155px; height:130px; margin-left:5px; line-height:20px;}
@@ -114,6 +116,9 @@ span.down{color:#33CC00;}
 .forbes_l .image_content .image_list a{color:#000000; text-decoration:none;}
 .forbes_l .image_content .image_description{width:135px; height:100px; margin-top:10px; line-height:20px; overflow:hidden;}
 .forbes_l .image_content .image_description a{color:#666666; text-decoration:none;}
+
+.forbes_l .lifelist{width:150px; height:20px; margin-top:5px; margin-left:5px; font-size:14px; line-height:20px; overflow:hidden;}
+.forbes_l .lifelist a{color:#003899; text-decoration:none;}
 
 #column_btnl{width:8px; height:99px; margin-top:45px; background:url(/images/index/column_btnl.jpg) no-repeat; cursor:pointer;}
 #column_btnr{width:8px; height:99px; margin-top:45px; margin-left:5px; background:url(/images/index/column_btnr.jpg) no-repeat; cursor:pointer;}
@@ -166,9 +171,9 @@ span.down{color:#33CC00;}
 
 
 #activity{width:300px; height:205px; margin-top:8px; float:right;}
-#activity #images{width:260px; height:90px; margin-top:10px; margin-left:17px;}
-#activity #context{width:260px; height:40px; margin-top:5px; margin-left:20px; font-size:12px; color:#999999; line-height:20px;}
-#activity #info{width:50px; height:20px; margin-top:5px; margin-right:23px; line-height:20px; float:right;}
+#activity #images{width:260px; height:90px; margin-top:10px; margin-left:20px;}
+#activity #context{width:200px; height:40px; margin-top:5px; margin-left:20px; font-size:12px; color:#999999; line-height:20px;}
+#activity #info{width:50px; height:20px; margin-top:5px; margin-right:20px; line-height:20px; float:right;}
 #activity #info a{color:#3399CC;}
 
 #club{width:300px; height:151px; margin-top:12px; background:url(/images/index/bg2.jpg) no-repeat; float:right;}
