@@ -20,23 +20,17 @@
 	?>
 	<style type="text/css">
 		div{float:left; display:inline;}
-		#right_inc{float:left;}
+		#right_inc{float:left; margin-left:20px;}
 	</style>
 </head>
 <body>
 	<div id=right_inc>
-		<?php include_right("favor")?>
 		<?php include_right("four")?>
+	</div>
+	<div id=right_inc>
 		<?php include_right("magazine")?>
 	</div>
 	<div id=right_inc>
-		<?php include_right("activities")?>
-		<?php include_right("column")?>
-		<?php include_right("investment_list")?>
-	</div>
-	<div id=right_inc>
-		<?php include_right("right_list")?>
-		<?php include_right("four")?>
-		<?php include_right("magazine")?>
+		<?php include_right("forum")?>
 	</div>
 </body>
