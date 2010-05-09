@@ -384,3 +384,34 @@ include "./_right.php";
 #include "./_life.php";
 include "./_column_index.php";
 #include "./_magazine.php";
+#static the pages
+echo "更新位置完成!<br/>";
+if(static_top()){
+	echo '静态化顶部成功!<br/>';
+}else{
+	echo '静态化顶部失败!<br/>';
+}
+
+if(static_bottom()){
+	echo '静态化底部成功!<br/>';
+}else{
+	echo '静态化底部失败!<br/>';
+}
+$a = array('activities','ad','article','column_c','column','favor','forum','four','investment_list','magazine','rich','right_list');
+foreach($a as $v){
+	if(!static_right($v)){
+		echo("静态化右侧'{$v}'失败<br/>");
+	}	
+}
+echo '静态化右侧成功!<br/>';
+$a = array('investment','business','entrepreneur','tech','city','list','billionaires','life','column','club');
+foreach($a as $v){
+	if(!static_sub_index($v)){
+		echo ("静态化二级首页'{$v}'失败<br/>");
+	}	
+}
+if(static_index()){
+	echo '静态化首页成功!<br/>';
+}else{
+	echo '静态化首页失败!<br/>';
+}
