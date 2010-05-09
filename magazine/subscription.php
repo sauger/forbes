@@ -32,7 +32,7 @@
 
 			  <table border="0" cellpadding="0" cellspacing="0" id="xdtable" style="display:none">
                 <tr>
-                  <td style="font-size:14px;">重新申请的读者请注意：为更好地处理您的申请，及保持您的订阅的持续性，请填写您个人的读者编号。您的读者编号是在我们给您邮寄杂志信封上的标签的右下角，它是一个由Q开头的九位条形码的号码，号码在条形码的下方。(*为必填项)</td>
+                  <td style="font-size:14px;"><span>重新申请的读者请注意：</span>为更好地处理您的申请，及保持您的订阅的持续性，请填写您个人的读者编号。您的读者编号是在我们给您邮寄杂志信封上的标签的右下角，它是一个由Q开头的九位条形码的号码，号码在条形码的下方。(<span>*</span>为必填项)</td>
                 </tr>
                 <tr>
                   <td height="170" align="center"><img src="/images/magazine/pic_09.jpg" width="303" height="150" /></td>
@@ -44,20 +44,20 @@
 			  <table width="100%" border="0" cellpadding="0" cellspacing="0">
 
                 <tr>
-                  <td style="font-size:14px;">个人资料(请全部用中文填写完整，所填事项不完整及填写家庭地址恕不受理。)</td>
+                  <td style="font-size:14px;"><span>个人资料( 请全部用中文填写完整，所填事项不完整及填写家庭地址恕不受理 )</span></td>
                 </tr>
               </table>
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="90" valign="top"><span style="color:red">*</span> 出生地</td>
+                  <td width="90" valign="top"><span >*</span> 出生地</td>
                   <td style="font-size:12px; font-weight:normal; color:#666666;"><input name="sub[BirthPlace]" id="BirthPlace" class=bc type="text"  maxlength="20" class="required"/><span id="checkbirthplace">&nbsp;</span><br />请输入您的出生地作为个人标志，本资料仅供确认您订阅的有效性，不会用于其他用途。</td>
                 </tr>
                 <tr>
-                  <td width="90"><span style="color:red">*</span> 姓名</td>
+                  <td width="90"><span>*</span> 姓名</td>
                   <td><input name="sub[RealName]" id="RealName" type="text" size="35" class=bc maxlength="6" class="required"/><span id="checkrealname">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 性别</td>
+                  <td><span>*</span> 性别</td>
                   <td><select name="sub[Sex]" id="Sex" class="required">
                       <option value="男">先生</option>
                       <option value="女">女士</option>
@@ -65,21 +65,21 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 工作单位</td>
+                  <td><span>*</span> 工作单位</td>
 
                   <td><input name="sub[Company]" id="Company" class=bc type="text" size="35"  maxlength="20" class="required"/><span id="checkcompany">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 部门</td>
+                  <td><span>*</span> 部门</td>
                   <td><input name="sub[Department]" class=bc id="Department" type="text" size="35" maxlength="20" class="required"/><span id="checkdepartment">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 职位</td>
+                  <td><span>*</span> 职位</td>
 
                   <td><input name="sub[Position2]" class=bc id="Position2" type="text" size="35" maxlength="20" class="required"/><span id="checkPosition2">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 省/直辖市</td>
+                  <td><span>*</span> 省/直辖市</td>
                   <td><select  name="sub[Province]" id="Province"  size="1" class="required">
                       <option value=""> </option>
                       <option value="北京">北京</option>
@@ -123,32 +123,32 @@
                   </select></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 邮编</td>
+                  <td><span>*</span> 邮编</td>
                   <td><input name="sub[zipcode]" id="zipcode" type="text"  class=bc maxlength="6" class="required"/><span id="checkzipcode">&nbsp;</span></td>
                 </tr>
                 <tr>
 
-                  <td><span style="color:red">*</span> 单位地址</td>
+                  <td><span>*</span> 单位地址</td>
                   <td><input name="sub[CompanyAddress]" id="CompanyAddress" type="text" class=bc maxlength="40" class="required"/><span id="checkcompanyaddress">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 电话</td>
+                  <td><span>*</span> 电话</td>
                   <td>
                     <input name="sub[Tel]" id="Tel" type="text"  class=bc maxlength="14" class="required" /><span id="checktel">&nbsp;</span>
                   </td>
 
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 手机</td>
+                  <td><span>*</span> 手机</td>
                   <td><input name="sub[Mobile]" id="Mobile" type="text"  class=bc maxlength="13" class="required"/><span id="checkmobile">&nbsp;</span></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 传真</td>
+                  <td><span>*</span> 传真</td>
                   <td><input name="sub[Fax]" id="Fax" type="text"  class=bc maxlength="13" class="required"/><span id="checkfax">&nbsp;</span></td>
 
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 电子邮件</td>
+                  <td><span>*</span> 电子邮件</td>
                   <td><input name="sub[Email]" id="Email" type="text"  class=bc maxlength="40" class="required"/><span id="checkemail">&nbsp;</span></td>
                 </tr>
               </table>
@@ -156,7 +156,7 @@
 			  <table width="100%" cellpadding="0" cellspacing="0">
 
                 <tr>
-                  <td width="180"><span style="color:red">*</span> 您的学历是</td>
+                  <td width="180"><span>*</span> 您的学历是</td>
                   <td><select  name="sub[Degree]" id="Degree"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.博士">1.博士</option>
@@ -166,7 +166,7 @@
                   </select></td>
                 </tr>
 				<tr>
-                  <td><span style="color:red">*</span> 职位</td>
+                  <td><span>*</span> 职位</td>
                   <td><select  name="sub[Position]"  id="Position"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.董事长 总裁 行政总裁 首席执行官 董事">1.董事长/总裁/行政总裁/首席执行官/董事</option>
@@ -184,7 +184,7 @@
                   </select></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 贵公司的行业类型</td>
+                  <td><span>*</span> 贵公司的行业类型</td>
                   <td><select  name="sub[Industry]"  id="Industry"  size="1" class="required">
 
                       <option value=""> </option>
@@ -214,7 +214,7 @@
                   </select></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 贵公司的职工人数是</td>
+                  <td><span>*</span> 贵公司的职工人数是</td>
 
                   <td><select  name="sub[Employeeamount]" id="Employeeamount"  size="1" class="required">
                       <option value=""> </option>
@@ -229,7 +229,7 @@
                   </select></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 贵公司的类型是</td>
+                  <td><span>*</span> 贵公司的类型是</td>
                   <td><select  name="sub[CompanyType]" id="CompanyType"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.国有企业 集体企业">1.国有企业/集体企业</option>
@@ -242,7 +242,7 @@
 
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 贵公司是否是上市公司</td>
+                  <td><span>*</span> 贵公司是否是上市公司</td>
                   <td><select  name="sub[StockCompany]" id="StockCompany"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1">1.是</option>
@@ -251,7 +251,7 @@
                   </select></td>
                 </tr>
                 <tr>
-                  <td><span style="color:red">*</span> 贵公司所制造的产品</td>
+                  <td><span>*</span> 贵公司所制造的产品</td>
                   <td><select  name="sub[Product]"  id="Product"  size="1" class="required">
                       <option value=""> </option>
                       <option value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</option>
@@ -299,7 +299,7 @@
                   </select></td>
                 </tr>
 				<tr>
-                  <td><span style="color:red">*</span> 验证码</td>
+                  <td><span>*</span> 验证码</td>
                   <td>
                   	<div id="rvcode"><input id="yzmcode" name="rvcode" class="txt" type="text"></div>
                   	<div id=yzm><img id="pic" src="yz.php"></div>
