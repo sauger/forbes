@@ -85,6 +85,7 @@ span.down{color:#33CC00;}
 
 #forbes_trt #bottom{width:300px; height:95px; margin-top:8px; background:#f7f7f7; overflow:hidden; float:right;}
 #forbes_trt #bottom #title{width:280px; height:18px; margin-top:5px; margin-left:10px; color:#333333; font-size:14px; font-weight:bold; line-height:18px;}
+#forbes_trt #bottom #title a{color:#333333; text-decoration:none;}
 #forbes_trt .bottom_list{width:280px; height:16px; margin-top:5px; margin-left:10px; padding-left:20px; font-weight:bold; background:url(/images/index/arrow.jpg) no-repeat 0 5px; line-height:16px; overflow:hidden;}
 #forbes_trt .bottom_list a{color:#999999; text-decoration:none;}
 
@@ -169,13 +170,13 @@ span.down{color:#33CC00;}
 .forbes_r{width:300px; float:right;}
 
 #dictionary{width:300px; height:82px; margin-top:8px; background:#f1f1f1;}
-#dictionary_r{width:290px; height:80px; margin-top:1px; margin-left:5px;}
+#dictionary_r{width:280px; height:80px; margin-top:1px; margin-left:10px;}
 #dictionary_r a{color:#003399; text-decoration:none;}
-#dictionary_r #content1{width:210px; height:20px; line-height:20px; overflow:hidden;}
+#dictionary_r #content1{width:200px; height:20px; line-height:20px; font-weight:bold; overflow:hidden;}
 #dictionary_r #more{width:70px; height:20px; font-size:14px; line-height:20px; font-weight:bold; text-align:right; float:right;}
 #dictionary_r #more a{color:#993333;}
-#dictionary_r #content2{width:205px; height:40px; line-height:20px; overflow:hidden;}
-#dictionary_r #content3{width:205px; height:20px; line-height:20px; overflow:hidden;}
+#dictionary_r #content2{width:280px; height:40px; line-height:20px; overflow:hidden;}
+#dictionary_r #content3{width:280px; height:20px; line-height:20px; overflow:hidden;}
 
 
 #activity{width:300px; margin-top:8px; overflow:hidden; float:right;}
