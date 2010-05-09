@@ -1,5 +1,5 @@
 <?php 
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	$key = $_GET['key'];
 	$db = get_db();
 	if(strlen($key)>100){
@@ -23,7 +23,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-新闻列表</title>
+	<title>新闻检索_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/news_highlight.js');
@@ -33,9 +33,7 @@
 <body <?php if($news->forbbide_copy == 1){ ?> oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="return false" oncopy="return false" onbeforecopy="return false" onmouseup="return false" <?php }?>>
 <div id=ibody>
 		<?php include_top();?>
-		<div id=bread>
-			<span>新闻检索</span>
-		</div>
+		<div id=bread>新闻检索</div>
 		<div id=bread_line></div>
 		
 		<div id=l>

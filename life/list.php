@@ -7,7 +7,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-奢侈品</title>
+	<title>奢侈品列表_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('select2css');
@@ -18,7 +18,7 @@
 	<div id=ibody>
 	<? include_once('../inc/top.inc.php');?>
 		<div id=cyindex></div>
-		<div id=cytitle><a style="color:#666666;" href="">福布斯中文网　＞　</a><a style="color:#666666;" href="">奢华　＞　</a><a href="">文化娱乐</a></div>
+		<div id=cytitle><a style="color:#666666;" href="">生活</a> > 奢侈品列表</div>
 		<div id=cyline></div>
 		<div id=scpleft>
 			<div id=scpleft_t>

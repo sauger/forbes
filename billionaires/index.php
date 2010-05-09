@@ -9,9 +9,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<title><?php echo $seo[0]->title ?></title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-富豪首页</title>
+	<meta name="keywords" content="<?php echo $seo[0]->keywords ?>" />
+	<meta name="description" content="<?php echo $seo[0]->description ?>" />
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/rich');
@@ -22,7 +24,7 @@
 <body>
 	<div id=ibody>
 	<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
-		<div id=bread><a href="#">富豪</a></div>
+		<div id=bread>富豪</div>
 		<div id=bread_line></div>
 		<div id=billionaires_left>
 			<div id=billionaires_head_left></div>

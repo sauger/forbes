@@ -4,9 +4,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-图片排行榜</title>
 	<?php
 		use_jquery_ui();
 		js_include_tag('public','picture_list/index','right');
@@ -33,11 +30,16 @@
 			$litems[] = $tmp;
 		}
 	?>
+	<title><?php echo $list->name;?>_福布斯中文网</title>
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<meta http-equiv=Content-Language content=zh-cn>
+	<meta name="keywords" content="<?php echo $list->name;?> 福布斯中文网" />
+	<meta name="description" content="<?php echo $list->name;?> 福布斯中文网" />
 </head>
 <body>
 	<div id=ibody>
 	<? include_top();?>
-		<div id=bread><a href="#">榜单</a></div>
+		<div id=bread><a href="/list">榜单</a> > <?php echo $list->name;?></div>
 		<div id=bread_line></div>
 		<div id="list_name"><?php echo $list->name;?></div>
 		<div id=pic_list>

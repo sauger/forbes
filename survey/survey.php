@@ -1,6 +1,6 @@
 ﻿<?php 
 	session_start();
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	$db = get_db();
 	$id = intval($_GET['id']);
 	$_SESSION['survey'.$id] = rand_str(20);
@@ -29,7 +29,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯中文网</title>
+	<title><?php echo $vote->name;?>_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','survey');
@@ -39,8 +39,7 @@
 <body>
 	<div id=ibody>
 		<?php include_top();?>
-		<div id=bread>
-			<span>在线问卷</span>
+		<div id=bread><a href="/survey/">问卷调查</a> > <?php echo $vote->name;?></span>
 		</div>
 		<div id=bread_line></div>
 		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '(已经结束)';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "(还未开始)";else $flag=1;?>
@@ -79,11 +78,10 @@
 		</div>
 		<?php }?>
 		<div id="right_inc">
-		 		<?php include "../right/ad.php";?>
-		 		<?php include "../right/favor.php";?>
-		 		<?php include "../right/four.php";?>
-		 		<?php include "../right/rich.php";?>
-		 		<?php include "../right/magazine.php";?>
+		 	<?php include_right("ad")?>
+			<?php include_right("favor")?>
+			<?php include_right("four")?>
+			<?php include_right("magazine")?>
 		</div>
 		<?php include_bottom();?>
 	</div>
