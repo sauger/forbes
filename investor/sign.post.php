@@ -204,6 +204,6 @@
 		}
 	}
 	alert("提交成功!");
-	redirect('/investor/sign.php');
+	redirect('/investor/');
 ?>
 </html>
