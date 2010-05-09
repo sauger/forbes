@@ -1,7 +1,11 @@
 <?php
 	session_start();
 	include_once('../frame.php');
-	if($_POST['rvcode'] != $_SESSION['sub_pic']){
+	if(!is_post())
+	{
+		redirect('/error/');
+	}
+	if($_POST['rvcode'] != $_SESSION['sub_pic'] || trim($_SESSION['sub_pic'])==""){
 		alert('验证码错误!');
 		redirect('subscription.php');
 		die();
@@ -23,11 +27,6 @@
 	}
 	if(($_POST['sub']['ApplyType']!= "0" && $_POST['sub']['ApplyType']!= "1") || trim($_POST['sub']['ApplyType'])==""){
 		alert('请正确选择赠阅方式！');
-		redirect('subscription.php');
-		die();
-	}
-	if(($_POST['sub']['ChineseMagazine'] != "0" && $_POST['sub']['ChineseMagazine']!= "1") || trim($_POST['sub']['ChineseMagazine'])==""){
-		alert('请正确选择赠是否愿意收到福布斯中文！');
 		redirect('subscription.php');
 		die();
 	}
@@ -130,9 +129,10 @@
 	$subscript->update_attributes($_POST['sub'],false);
 	$subscript->stime=date('Y-m-d H:m:s');
 	if($subscript->save()){
+		alert(iconv('utf-8','gb2312','申请成功'));
 		$content = "感谢您订阅福布斯杂志。";
 		send_mail('smtp.163.com','sauger','auden6666','sauger@163.com',$_POST['sub']['Email'],'福布斯中文网',$content);
-		alert('申请成功！');
 	};
+	
 	redirect('/magazine/subscription.php');
 ?>
