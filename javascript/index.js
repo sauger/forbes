@@ -218,13 +218,13 @@ $(function(){
 				$("#btnonline").attr('href',$("#show_magazine option:selected").attr('url'));
 			}
 			if($("#show_magazine option:selected").val()==''){
-				$("#sq").removeAttr('href');
+				$("#jr").removeAttr('href');
 			}else{
-				$("#sq").attr('href','javascript:void(0)');
-				$("#sq").attr('name',$("#show_magazine option:selected").val());
+				$("#jr").attr('href','/magazine/'+$("#show_magazine option:selected").val());
 			}
 		});
 		
+		/*
 		$("#sq").click(function(){
 			if($("#sq").attr('name')!=''){
 				$.post('/ajax/order_magazine.php',{'id':$("#sq").attr('name')},function(data){
@@ -237,7 +237,8 @@ $(function(){
 					}
 				});
 			}
-		});
+		})
+		*/
 		
 });
 

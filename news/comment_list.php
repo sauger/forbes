@@ -83,7 +83,12 @@
 				</div>
 				<?php }?>
 				<?php 
-						$sql = "select t1.nick_name,t1.created_at,t1.comment,t1.id,t2.up,t2.down from fb_comment t1 left join fb_comment_dig t2 on t1.id=t2.comment_id where t1.resource_id=$id and t1.is_approve=1 order by t1.created_at desc";
+						if($comment_id){
+							$sql = "select t1.nick_name,t1.created_at,t1.comment,t1.id,t2.up,t2.down from fb_comment t1 left join fb_comment_dig t2 on t1.id=t2.comment_id where t1.id=$comment_id and t1.is_approve=1 order by t1.created_at desc";
+						}else{
+							$sql = "select t1.nick_name,t1.created_at,t1.comment,t1.id,t2.up,t2.down from fb_comment t1 left join fb_comment_dig t2 on t1.id=t2.comment_id where t1.resource_id=$id and t1.is_approve=1 order by t1.created_at desc";	
+						}
+						
 						$comment = $db->paginate($sql,10);
 						$count = $db->record_count;
 						for($i=0;$i<$count;$i++){

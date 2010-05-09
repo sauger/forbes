@@ -135,7 +135,7 @@ span.down{color:#33CC00;}
 .forbes_l .list3{width:300px; height:21px; margin-top:5px; margin-left:10px; padding-left:15px; background:url(/images/index/square2.jpg) no-repeat 0 10px; line-height:21px;}
 .forbes_l .list3 a{color:#003399; font-size:14px; text-decoration:none;}
 
-.forbes_l .writer{width:60px; height:135px; margin-top:15px; margin-left:15px;}
+.forbes_l .writer{width:60px; height:120px; margin-top:10px; margin-left:15px;}
 .forbes_l .writer_pic{width:58px; height:58px; border:1px solid #cccccc;}
 .forbes_l .writer_pic img{width:56px; height:56px; margin:1px;}
 .forbes_l .writer_name{width:60px; height:20px; margin-top:3x; line-height:20px; overflow:hidden;}
@@ -161,6 +161,7 @@ span.down{color:#33CC00;}
 .forbes_l .cltitle{width:300px; height:24px; margin-top:10px; margin-left:10px; line-height:24px;}
 .forbes_l .cltitle a{color:#000066; font-size:20px; font-weight:bold; font-family:黑体; text-decoration:none;}
 .forbes_l .context{width:295px; height:38px; margin-top:11px; margin-left:13px; line-height:19px;color:#003899;}
+.context a{color:#003899; text-decoration: none;}
 .forbes_l .context1{width:295px; height:16px; line-height:16px; margin-left:13px; color:#999999;}
 .forbes_l .context1 a{color:#999999; text-decoration:none;}
 .forbes_l .context1 a:hover{ text-decoration:underline;}
@@ -232,7 +233,7 @@ span.down{color:#33CC00;}
 .inventory_button{width:66px; height:22px; margin-right:15px; background:url(/images/index/btn1.jpg) no-repeat; float:right;}
 
 #mag{width:300px; margin-top:8px; float:right;}
-#mag_content{width:298px; border-left:1px solid #dfdfdf; border-right:1px solid #dfdfdf;}
+#mag_content{width:298px; padding-bottom:10px; border-left:1px solid #dfdfdf; border-right:1px solid #dfdfdf;}
 #mag_content .pic{width:88px; height:114px; margin-top:10px; margin-left:13px; border:1px solid #cccccc;}
 #mag_content .pic img{width:86px; height:112px; margin:1px;}
 #mag_content .pictitle{width:170px; height:20px;margin-top:13px; margin-left:13px; color:#3399CC; font-weight:bold; overflow:hidden;}
@@ -240,11 +241,12 @@ span.down{color:#33CC00;}
 #mag_content .context{width:170px; height:96px; margin-left:13px; overflow:hidden; line-height:25px;}
 #mag_content .context a{text-decoration:none;}
 #mag_dash{width:270px; height:1px; margin-top:10px; margin-left:15px; background:url(/images/index/dashed2.jpg) no-repeat;}
-#mag #search{width:202px; height:20px; margin-left:12px; line-height:20px; color:#0066CC; font-weight:bold;}
-#mag #sel{width:280px; height:20px; margin-top:5px; margin-left:12px;}
-#mag #sel select{width:95px; height:23px;}
-#mag #btnonline{width:66px; height:22px; margin-top:10px; margin-left:20px; border:0px; background:url(/images/index/readonline.jpg) no-repeat; float:left; display:inline;}
-#mag #sq{width:66px; height:22px; margin-top:10px; margin-left:20px; border:0px; background:url(/images/index/sqread.jpg) no-repeat; float:left; display:inline;}
+#mag #sel{width:280px; height:20px; margin-top:15px; margin-left:12px;}
+#mag #sel #old_magazine{width:65px; height:23px;}
+#mag #sel #show_magazine{width:190px; height:23px;}
+#mag #btnonline{width:66px; height:22px; margin-top:10px; margin-left:12px; border:0px; background:url(/images/index/readonline.jpg) no-repeat; float:left; display:inline;}
+#mag #sq{width:66px; height:22px; margin-top:10px; margin-left:15px; border:0px; background:url(/images/index/sqread.jpg) no-repeat; float:left; display:inline;}
+#mag #jr{width:66px; height:22px; margin-top:10px; margin-left:15px; border:0px; background:url(/images/index/sqread2.jpg) no-repeat; float:left; display:inline;}
 #mag #ck{width:200px; height:20px; margin-right:10px; line-height:20px; text-align:right; float:right;}
 #mag #ck a{color:#666666; font-weight:bold;}
 

@@ -232,7 +232,7 @@
 				for($i=0;$i<4;$i++){
 					$news->find($comments[$i]->resource_id);
 			?>
-			<div class=context style="overflow: hidden;"><?php echo $comments[$i]->comment?></div>
+			<div class=context style="overflow: hidden;"><a href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a></div>
 			<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
 			<?php }?>
 		</div>
@@ -455,10 +455,7 @@
 						<div class=pic><?php show_page_img()?></div>
 						<div class=pictitle><?php show_page_href()?></div>
 						<div class=context><?php show_page_desc()?></div>	
-
-			 			 <div id=mag_dash></div>
-
-						<div id=search>往期杂志查阅</div>
+			 			<div id=mag_dash></div>
 						<div id=sel>
 							<select id="old_magazine">
 								<?php 
@@ -477,15 +474,14 @@
 									for($i=0;$i<$count;$i++){
 								?>
 									<option url="<?php echo $magazine[$i]->url;?>" value="<?php echo $magazine[$i]->id;?>"><?php echo $magazine[$i]->name;?></option>
-								<?php			
+								<?php
 									}
 								?>
 							</select>
 						</div>
 						<a id="btnonline"></a>
-						<a id="sq"></a>
-						<div id=ck><a href="/magazine/" target="_blank">查看杂志列表>></a></div>
-
+						<a id="sq" href="http://www.forbeschina.com/magazine/subscription.php"></a>
+						<a id="jr"></a>
 				</div>
 				<div class=public_bottom1></div>
 			</div>
