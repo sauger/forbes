@@ -23,6 +23,15 @@ function debug_info($msg,$type='php') {
 }
 
 function send_mail($smtp_server,$smtp_user,$smtp_pwd,$from,$to,$title,$content){
+	$email = new table_class('forbes_email.fb_email');
+	$email->email_to = $to;
+	$email->email_status  = 0;
+	$email->email_subject = $title;
+	$email->email_content = $content;
+	$email->save();
+}
+/*
+function send_mail($smtp_server,$smtp_user,$smtp_pwd,$from,$to,$title,$content){
 		$body = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 				<HTML><HEAD>
 				<META content="text/html; charset=utf-8" http-equiv=Content-Type>
@@ -98,7 +107,7 @@ function send_mail($smtp_server,$smtp_user,$smtp_pwd,$from,$to,$title,$content){
 		//关闭连接  
 		@fclose($fp); 
 		return true;
-}
+}*/
 
 function display_error($msg) {
 	echo '<font style="color:red;">' .$msg .'</font>';;
