@@ -42,8 +42,7 @@
 			<div id="c_join_a">
 				
 				<div class="join_top">
-					<div class="title"><?php echo $items[$i]->nick_name;?></div>
-					<div class="issues" title="<?php echo $title?>">评论：<?php echo $title?></div>
+					<div class="issues" title="<?php echo $title?>"><span><?php echo $items[$i]->nick_name;?></span>评论：<?php echo $title?></div>
 					<div class="time"><?php echo $items[$i]->created_at;?></div>
 				</div>
 				
@@ -58,7 +57,7 @@
 			<?php 
 				}
 			?>	
-				<div><?php paginate();?></div>
+				<div id=page><?php paginate();?></div>
 				<div id="content_bottom">
 					<div id="z_bottom">
 					<div id="z"><img src="../images/comments/comment.jpg"></div>
