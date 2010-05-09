@@ -13,16 +13,18 @@ p{margin:0; padding:0}
 #info_connect{width:657px; border:1px solid #DFDFDF; border-bottom:0px solid red; float:left; display:inline;}
 #people_info{width:100px; height:28px; margin-left:15px; line-height:30px; color:#999999;  font-size:14px; font-weight:bold; float:left; display:inline;	}
 
-#info_a{width:657px; float:left; display:inline;}
-#info_a_left{width:240px; height:305px; margin-left:5px; margin-top:30px; margin-left:6px; text-align:center; border:1px solid #CCCCCC; float:left; display:inline;}
+#info_a{width:657px; padding-left:20px; font-size:14px;  float:left; display:inline;}
+#info_a_left{width:240px; height:264px;  margin-top:20px; margin-left:-10px; margin-right:25px; text-align:center; border:1px solid #CCCCCC; float:left; display:inline;}
+#info_a_left img{width:236px; height:260px; margin:2px;}
 #info_a_right{width:371px;  margin-left:36px;  float:left; display:inline;}
 
-#info_c_name{width:360px; height:25px; margin-top:20px; line-height:20px; float:left; display:inline;}
-#info_c_company{width:360px; height:25px; margin-top:5px;  line-height:20px; float:left; display:inline;}
-#info_c_capacity{width:360px; height:25px; line-height:20px; float:left; display:inline;}
-#investment{width:360px; height:25px; line-height:20px; float:left; display:inline;}
-#info_c_extra{width:360px; height:25px; margin-top:10px; line-height:20px;  float:left; display:inline;}
-#extra_content{width:320px; margin-left:14px; margin-top:5px; overflow:hidden; line-height:30px; font-size:13px;  color:#666666; word-wrap: break-word; word-break: normal;  float:left; display:inline;}
+#info_c_name{width:375px; margin-top:20px; line-height:25px; float:left; display:inline;}
+#info_c_company{width:375px; margin-top:5px;  line-height:25px; float:left; display:inline;}
+#info_c_capacity{width:375px; margin-top:5px; line-height:25px; float:left; display:inline;}
+#investment{width:375px; margin-top:5px; line-height:25px; float:left; display:inline;}
+#info_c_extra{width:375px; height:25px; margin-top:10px; line-height:25px;  float:left; display:inline;}
+#extra_content{width:625px; line-height:25px; font-size:14px;  float:none; display:block;}
+#extra_content p{text-indent:0px; margin-bottom:15px;}
 
 #investment_b{width:655px; overflow:hidden; margin-top:30px; float:left; display:inline;}
 #i_b_title{width:632px; height:30px; margin-left:20px; overflow:hidden; line-height:30px; font-size:14px; font-weight:bold; float:left; display:inline;}
