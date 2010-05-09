@@ -10,10 +10,10 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>新闻分享_福布斯中文网</title>
+	<title>分享_福布斯中文网</title>
 	<?php
 		use_jquery();
-		require_login();
+		#require_login();
 		js_include_tag('public','right','news/share');
 		css_include_tag('news','public','right_inc');
 	?>
@@ -21,9 +21,7 @@
 <body <?php if($news->forbbide_copy == 1){ ?> oncontextmenu="return false" ondragstart="return false" onselectstart ="return false" onselect="return false" oncopy="return false" onbeforecopy="return false" onmouseup="return false" <?php }?>>
 <div id=ibody>
 		<?php include_top();?>
-		<div id=bread>
-				分享
-		</div>
+		<div id=bread>分享</div>
 		<div id=bread_line></div>
 		<div id=l>
 			<div class="share_line">分享给好友，您可以输入好友昵称和邮件地址，将福布斯的精华文章和您的商务好友分享</div>

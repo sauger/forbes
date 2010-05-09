@@ -19,8 +19,9 @@ $(function(){
 					if(!isEmail($(this).val())){
 						alert("邮件格式有误！");
 						return false;
+					}else{
+						input1 = true;
 					}
-					input1 = true;
 				}
 			}
 		});
@@ -44,7 +45,7 @@ $(function(){
 });
 
 function isEmail( str ){ 
-	var myReg = /^[-_A-Za-z0-9]+@([_A-Za-z0-9_-]+\.)+[A-Za-z0-9]{2,3}$/; 
+	var myReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; 
 	if(myReg.test(str)) return true; 
 	return false; 
 } 
