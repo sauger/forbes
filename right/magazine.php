@@ -34,7 +34,7 @@ global $pos_name;?>
 			</select>
 		</div>
 		<a id="btnonline"></a>
-		<a id="sq"></a>
+		<a id="sq" href="http://www.forbeschina.com/magazine/subscription.php"></a>
 		<a id="jr"></a>
 </div>
 <div class=bottom_line></div>

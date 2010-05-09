@@ -86,7 +86,7 @@ span.down{color:#33CC00;}
 #forbes_trt #bottom{width:300px; height:95px; margin-top:8px; background:#f7f7f7; overflow:hidden; float:right;}
 #forbes_trt #bottom #title{width:280px; height:18px; margin-top:5px; margin-left:10px; color:#333333; font-size:14px; font-weight:bold; line-height:18px;}
 #forbes_trt .bottom_list{width:280px; height:16px; margin-top:5px; margin-left:10px; padding-left:20px; font-weight:bold; background:url(/images/index/arrow.jpg) no-repeat 0 5px; line-height:16px; overflow:hidden;}
-#forbes_trt .bottom_list a{color:#666666; text-decoration:none;}
+#forbes_trt .bottom_list a{color:#999999; text-decoration:none;}
 
 .forbes_l{width:330px; margin-top:10px; margin-left:5px; overflow:hidden;}
 .forbes_l .caption{width:320px; height:28px; margin-top:5px;}
@@ -135,12 +135,12 @@ span.down{color:#33CC00;}
 .forbes_l .list3{width:300px; height:21px; margin-top:5px; margin-left:10px; padding-left:15px; background:url(/images/index/square2.jpg) no-repeat 0 10px; line-height:21px;}
 .forbes_l .list3 a{color:#003399; font-size:14px; text-decoration:none;}
 
-.forbes_l .writer{width:60px; height:135px; margin-top:15px; margin-left:15px;}
+.forbes_l .writer{width:60px; height:120px; margin-top:10px; margin-left:15px;}
 .forbes_l .writer_pic{width:58px; height:58px; border:1px solid #cccccc;}
 .forbes_l .writer_pic img{width:56px; height:56px; margin:1px;}
 .forbes_l .writer_name{width:60px; height:20px; margin-top:3x; line-height:20px; overflow:hidden;}
 .forbes_l .writer_name a{color:#000000; text-decoration:none;}
-.forbes_l .writer_content{width:60px; height:40px; line-height:20px; overflow:hidden;}
+.forbes_l .writer_content{width:60px; height:36px; line-height:18px; overflow:hidden;}
 .forbes_l .writer_content a{color:#246BB0; text-decoration:none;}
 
 .forbes_l .piccontent1{width:310px; height:100px; font-size:14px; line-height:25px; overflow:hidden;}
@@ -169,13 +169,11 @@ span.down{color:#33CC00;}
 .forbes_r{width:300px; float:right;}
 
 #dictionary{width:300px; height:82px; margin-top:8px; background:#f1f1f1;}
-#dictionary_l{width:75px; height:80px; margin-top:1px; margin-left:5px; font-size:14px; font-weight:bold; line-height:80px; text-align:center;}
-#dictionary_l a{color:#993333; text-decoration:none;}
-#dictionary_r{width:205px; height:80px; margin-top:1px; margin-left:7px;}
+#dictionary_r{width:290px; height:80px; margin-top:1px; margin-left:5px;}
 #dictionary_r a{color:#003399; text-decoration:none;}
-#dictionary_r #content1{width:180px; height:20px; line-height:20px; overflow:hidden;}
-#dictionary_r #more{width:18px; height:8px; margin-top:5px; text-align:right; float:right;}
-#dictionary_r #more a{color:#666666;}
+#dictionary_r #content1{width:210px; height:20px; line-height:20px; overflow:hidden;}
+#dictionary_r #more{width:70px; height:20px; font-size:14px; line-height:20px; font-weight:bold; text-align:right; float:right;}
+#dictionary_r #more a{color:#993333;}
 #dictionary_r #content2{width:205px; height:40px; line-height:20px; overflow:hidden;}
 #dictionary_r #content3{width:205px; height:20px; line-height:20px; overflow:hidden;}
 

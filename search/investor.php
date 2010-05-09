@@ -67,7 +67,7 @@
 							
 						<div class=com>
 							<div class=zh_left_co><?php echo $investor[$i]->company;?></div>
-							<div class=zh_left_of><?php echo $investor[$i]->post;?></div>
+							<div class=zh_left_of><?php echo str_replace(',',' ',$investor[$i]->post);?></div>
 							</div>
 							<div class=zh_left_z>
 							<div class=zh_left_i>投资方向</div> 
