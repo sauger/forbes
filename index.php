@@ -274,9 +274,11 @@
 					</div>
 					<div class=image style="margin-top:20px; margin-left:5px;"><?php show_page_img(150,130)?></div>
 			</div>
-			<?php for($i=0;$i<4;$i++){ ?>
-				<div class=lifelist><a href="">哇哈叫阿哈哈哈哈哈哈哈哈哈哈哈哈</a></div>
-			<?php }?>
+			<div class=life_bottom>
+				<?php for($i=0;$i<4;$i++){ ?>
+					<div class=lifelist><a href="">哇哈叫阿哈哈哈哈哈哈哈哈哈哈哈哈</a></div>
+				<?php }?>
+			</div>
 		</div>
 		
 		
