@@ -180,9 +180,6 @@
 						<div class=name title="<?php  echo $pos_items->$pos_name->title; ?>">
 							<?php echo $pos_items->$pos_name->display?>
 						</div>
-						<div class=zc>
-							<?php echo $pos_items->$pos_name->alias;?>
-						</div>
 						<div class=num<?php echo $i;?>></div>
 					</div>
 					<?php } ?>
