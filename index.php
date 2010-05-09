@@ -232,7 +232,7 @@
 				for($i=0;$i<4;$i++){
 					$news->find($comments[$i]->resource_id);
 			?>
-			<div class=context style="overflow: hidden;"><?php echo $comments[$i]->comment?></div>
+			<div class=context style="overflow: hidden;"><a href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a></div>
 			<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
 			<?php }?>
 		</div>
