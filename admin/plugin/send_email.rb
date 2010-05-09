@@ -8,7 +8,7 @@
 		mail.subject = subject
 		mail.date = Time.now
 		mail.mime_version = '1.0'
-		mail.set_content_type 'text', 'plain', {'charset'=>'utf-8'}
+		mail.set_content_type 'text', 'html', {'charset'=>'utf-8'}
 		mail.body = content
 		str = mail.encoded
 		begin

@@ -117,7 +117,7 @@
 					$('#rt_tab1').show();
 				</script>
 				<div id=bottom>
-					<div id=title>榜单动态</div>
+					<div id=title>数据库透析</div>
 					<?php for($i=0;$i<3;$i++){
 						$pos_name = "index_dyn_list{$i}"; 
 						?>
@@ -284,11 +284,12 @@
 		
 		<div class=forbes_r>
 			<div id=dictionary>
-				<div id=dictionary_l <?php $pos_name ="dictionary_l_content1"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
+				<div id=dictionary_l><a href="">财经词典</a></div>
 				<div id=dictionary_r>
-					<?php for($i=0;$i<3;$i++){ ?>
-						<div class=content <?php $pos_name ="dictionary_r_content".$i; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
-					<?php }?>
+					<div id=content1 <?php $pos_name ="dictionary_r_content0"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
+					<div id=more><a href="">更多财经词汇>></a></div>
+					<div id=content2 <?php $pos_name ="dictionary_r_content1"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
+					<div id=content3 <?php $pos_name ="dictionary_r_content2"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
 				</div>
 			</div>
 
