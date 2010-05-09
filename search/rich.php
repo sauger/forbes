@@ -1,5 +1,5 @@
 <?php 
-	include_once( '../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	$db = get_db();
 	
 	$name = $_GET['name'];
@@ -23,7 +23,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-富豪检索</title>
+	<title>富豪检索_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/rich');
@@ -33,7 +33,7 @@
 <body>
 	<div id=ibody>
 		<?php include_top();?>
-		 <div id=bread><span>富豪检索</span></div>
+		 <div id=bread>富豪检索</div>
 	 	 <div id=bread_line></div>
 		<div id="left">
 			<div id="left_top">

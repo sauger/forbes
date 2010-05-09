@@ -1,12 +1,12 @@
 ﻿<?php 
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<title>杂志赠阅_福布斯中文网</title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-杂志赠阅</title>
 	<?php
 		use_jquery();
 		js_include_tag('magazine/subscription','public','jquery.colorbox-min.js');
@@ -16,7 +16,7 @@
 <body>
 	<div id=ibody>
 	<? include_top();?>
-		<div id=bread><a href="#">杂志赠阅</a></div>
+		<div id=bread><a href="/magazine/">杂志</a> > 杂志赠阅</div>
 		<div id=bread_line></div>
 		<div class="con_left">
 			<div class="subscription">

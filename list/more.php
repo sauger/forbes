@@ -1,18 +1,6 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
-<head>
-   <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-榜单首页</title>
-	<?php
-		include_once("../frame.php");
-		$db = get_db();
-		use_jquery();
-		js_include_tag('public');
-		css_include_tag('list','public');
-	?>
-</head>
-<body>
 <?php
+	include_once("../frame.php");
+	$db = get_db();
 	$id = intval($_GET['id']);
 	$order = $_GET['order'];
 	if(strlen($order)>20||$id==""){
@@ -27,9 +15,23 @@
 		die();
 	}
 ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<head>
+	<title><?php echo $list->name;?>详细页_福布斯中文网</title>
+   	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+	<meta http-equiv=Content-Language content=zh-cn>
+	<meta name="keywords" content="<?php echo $list->name;?> 福布斯中文网" />
+	<meta name="description" content="<?php echo $list->name;?> 福布斯中文网" />
+	<?php
+		use_jquery();
+		js_include_tag('public');
+		css_include_tag('list','public');
+	?>
+</head>
+<body>
 <div id=ibody>
 		<?php include_top();?>
-		<div id=bread><a href="/list">榜单</a> > <span style="color:#246BB0;"><?php echo $list->name;?></span></div>
+		<div id=bread><a href="/list">榜单</a> > <?php echo $list->name;?></div>
 		<div id=bread_line></div>
 		<div id="list_list_content" style="width:1000px;">
 			<div id="list_title2"><?php echo $list->name;?></div>

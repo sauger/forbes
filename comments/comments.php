@@ -1,16 +1,14 @@
 ﻿<?php 
-	include_once('../frame.php');
-		$db = get_db();
+	include_once( dirname(__FILE__) .'/../frame.php');
+	$db = get_db();
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+	<title>读者高见_福布斯中文网</title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title><?php echo strip_tags($news->short_title);?>-福布斯中文网</title>
-	<meta name="Keywords" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
-	<meta name="Description" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
 	<?php
 		use_jquery();
 		js_include_tag('public','jquery.colorbox-min','comment','right');
@@ -24,9 +22,7 @@
 <body>
 	<div id=ibody>
 		<?php include_top();?>
-		<div id=bread>
-				<span>读者高见</span>
-		</div>
+		<div id=bread>读者高见</div>
 		<div id="hr_top"></div>
 		<div id="left">
 			<div class=news_caption>
@@ -71,11 +67,11 @@
 				</div>
 			</div>
 			<div id="right_inc">
-		 		<?php include "../right/ad.php";?>
-		 		<?php include "../right/favor.php";?>
-		 		<?php include "../right/four.php";?>
-		 		<?php include "../right/rich.php";?>
-		 		<?php include "../right/magazine.php";?>
+				<?php include_right("ad")?>
+				<?php include_right("favor")?>
+				<?php include_right("four")?>
+				<?php include_right("rich")?>
+				<?php include_right("magazine")?>
 		</div>
 		<?php include_bottom();?>
 		

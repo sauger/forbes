@@ -1,5 +1,5 @@
 <?php 
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	$db=get_db();
 	$key = $_GET['key'];
 	$type = $_GET['type'];
@@ -38,7 +38,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-专栏作者检索</title>
+	<title>作者检索_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/author');
@@ -50,9 +50,7 @@
 	<?php
 		include_top();
 	?>
-		<div id=bread>
-			<span>专栏作者检索</span>
-		</div>
+		<div id=bread>专栏作者检索	</div>
 		<div id=bread_line></div>
 		<div id=cy_left>
 			<div id=search>专栏搜索：<select id="type"><option></option><option <?php if($type=='created_at')echo 'selected="selected"'?> value="created_at">按最新发布文章排序</option><option <?php if($type=='click_count')echo 'selected="selected"'?> value="click_count">按最多点击文章排序</option></select><input type="text" value="<?php echo $key;?>" id="author_text"><button id="author_search">搜索</button></div>

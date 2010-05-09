@@ -19,11 +19,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+	<title><?php echo $investor->name;?>-福布斯中文网</title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title><?php echo strip_tags($news->short_title);?>-福布斯中文网</title>
-	<meta name="Keywords" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
-	<meta name="Description" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
+	<meta name="keywords" content="<?php echo $investor->name;?> 福布斯中文网 投资人" />
+	<meta name="description" content="<?php echo $investor->description ?>" />
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/investor');
@@ -35,7 +35,7 @@
 	<div id=ibody>
 		<?php include_top();?>
 		<div id=bread>
-				<span>福布斯中文网 > <a>投资人</a></span>
+				投资人
 		</div>
 		<div id="bread_line"></div>
 			<div id="info">
