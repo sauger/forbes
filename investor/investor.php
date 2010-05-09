@@ -35,22 +35,20 @@
 	<div id=ibody>
 		<?php include_top();?>
 		<div id=bread>
-				投资人
+				<a href="/investor">投资人</a> > <?php echo $investor->name;?>
 		</div>
 		<div id="bread_line"></div>
 			<div id="info">
 				<div id="info_top"><div id="people_info">人物信息</div></div>
 					<div id="info_connect">
 						<div id="info_a">
-							<div id="info_a_left"><img src="<?php echo $investor->image;?>" style="width:236px; height:301px; margin-top:2px; margin-left:2px; margin-right:2px; margin-bottom:2px;"></div>
-							<div id="info_a_right">
-									<div id="info_c_name"><font style="color:#246BB0; font-size:14px; font-weight:bold;">姓名：<?php echo $investor->name;?></font></div>											
-									<div id="info_c_company"><font style="font-size:13px; font-weight:bold;">所在公司：</font><font style="font-size:13px; "><?php echo $investor->company;?></font> </div>
-									<div id="info_c_capacity"><font style="font-size:13px; font-weight:bold;">身份：</font><font style="font-size:13px; "><?php echo $investor->post;?></font></div>
-									<div id="investment"><font style="font-size:13px; font-weight:bold;">投资方向：</font><font style="font-size:13px;"><?php echo $investor->invest_zone;?></font></div>
-									<div id="info_c_extra"><font style="font-size:13px; font-weight:bold;">个人介绍：</font></div>
-									<div id="extra_content"><?php echo $investor->description;?></div>
-							</div>
+							<div id="info_a_left"><img src="<?php echo $investor->image;?>"></div>
+							<div id="info_c_name"><font style="color:#246BB0; font-size:14px; font-weight:bold;">姓名：<?php echo $investor->name;?></font></div>											
+							<div id="info_c_company"><font style="font-size:13px; font-weight:bold;">所在公司：</font><font style="font-size:13px; "><?php echo $investor->company;?></font> </div>
+							<div id="info_c_capacity"><font style="font-size:13px; font-weight:bold;">身份：</font><font style="font-size:13px; "><?php echo $investor->post;?></font></div>
+							<div id="investment"><font style="font-size:13px; font-weight:bold;">投资方向：</font><font style="font-size:13px;"><?php echo $investor->invest_zone;?></font></div>
+							<div id="info_c_extra"><font style="font-size:13px; font-weight:bold;">个人介绍：</font></div>
+							<div id="extra_content"><?php echo $investor->description;?></div>
 						</div>
 						<div id="investment_b">
 							<div id="i_b_title">投资项目</div>
