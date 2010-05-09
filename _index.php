@@ -3,7 +3,7 @@
 	$catename=$db->query('SELECT name FROM fb_category where id='.$cid); 
 	$category = new category_class('news');
 ?>
-		<div id=bread><a href="#"><?php echo $catename[0]->name; ?></div>
+		<div id=bread><?php echo $catename[0]->name; ?></div>
 		<div id=bread_line></div>
 		<div id=l>
 		 <div id=common_head>	

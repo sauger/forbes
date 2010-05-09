@@ -17,9 +17,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<title><?php echo $column->nick_name;?>的专栏_福布斯中文网</title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-特约作者</title>
+	<meta name="keywords" content="<?php echo $column->nick_name;?> 福布斯专栏 专栏" />
+	<meta name="description" content="<?php echo $column->description;?>" />
 	<?php
 		use_jquery();
 		js_include_tag('public','column_person','jquery.colorbox-min.js');
@@ -29,7 +31,7 @@
 <body>
 	<div id=ibody>
 		<? include_top();?>
-		<div id=bread><a href="#">专栏</a></div>
+		<div id=bread><a href='/column'>专栏</a> > <?php echo $column->nick_name;?></div>
 		<div id=bread_line></div>
 		<div id=column_person_left>
 			<div id=column_person_left_t></div>

@@ -13,9 +13,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+	<title>报名加入创业者数据库-福布斯中文网</title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title><?php echo strip_tags($news->short_title);?>-福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','sign');
@@ -28,7 +28,7 @@
 	<div id=ibody>
 		<?php include_top();?>
 		<div id=bread>
-				<span>增长俱乐部首页 > 报名加入创业者数据库</span>
+			报名加入创业者数据库
 		</div>
 		<div id="bread_line"></div>
 		<div id="f_z">

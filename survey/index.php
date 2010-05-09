@@ -1,5 +1,5 @@
 ﻿<?php 
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	$db = get_db();
 	$sql="SELECT id,name,description,created_at FROM forbes.fb_vote where is_sub_vote=0 and is_adopt=1 order by priority asc,created_at desc ";
 	$value=$db->paginate($sql,13);
@@ -10,7 +10,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-问卷调查</title>
+	<title>问卷调查_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right');
@@ -20,9 +20,7 @@
 <body>
 <div id=ibody>
 		<?php include_top();?>
-		<div id=bread>			
-				<span>问卷调查</span>
-		</div>
+		<div id=bread>问卷调查</div>
 		<div id="bread_line"></div>
 		<div id="left_content">
 			<div id="t_left"></div>
@@ -50,11 +48,11 @@
 			<div id="page"><?php paginate();?></div>
 		</div>
 		<div id="right_inc">
-			<?php include "../right/ad.php";?>
-			<?php include "../right/favor.php";?>
-			<?php include "../right/four.php";?>
-			<?php include "../right/forum.php";?>
-			<?php include "../right/magazine.php";?>
+			<?php include_right("ad")?>
+			<?php include_right("favor")?>
+			<?php include_right("four")?>
+			<?php include_right("forum")?>
+			<?php include_right("magazine")?>
 		</div>
 		<?php include_bottom();?>
 </div>

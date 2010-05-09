@@ -1,5 +1,5 @@
 <?php 
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	
 	$id = $_GET['id'];
 	if(!intval($id)) die();
@@ -12,7 +12,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-杂志</title>
+	<title><?php echo $magazine_now->name;?>_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','magazine');
@@ -23,7 +23,7 @@
 	<div id="ibody">
 	<?php include_top();?>
 		<div id=bread>
-			<a href="/magazine/">杂志首页</a> > <span>杂志</span>		
+			<a href="/magazine/">杂志</a> > 	<?php echo $magazine_now->name;?>
 		</div>
 		<div id=bread_line></div>
 		<div id=t>

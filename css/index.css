@@ -81,8 +81,8 @@ span.down{color:#33CC00;}
 #ipo_info{width:300px; height:20px; line-height:20px; text-align:right;}
 #ipo_src{width:300px; float:left;}
 
-#forbes_trt #bottom{width:300px; margin-top:5px; padding-bottom:10px; background:#f7f7f7; overflow:hidden; float:right;}
-#forbes_trt #bottom #title{width:280px; height:18px; margin-top:10px; margin-left:10px; color:#333333; font-size:14px; font-weight:bold; line-height:18px;}
+#forbes_trt #bottom{width:300px; height:97px; margin-top:8px; background:#f7f7f7; overflow:hidden; float:right;}
+#forbes_trt #bottom #title{width:280px; height:18px; margin-top:7px; margin-left:10px; color:#333333; font-size:14px; font-weight:bold; line-height:18px;}
 #forbes_trt .bottom_list{width:280px; height:16px; margin-top:5px; margin-left:10px; padding-left:20px; background:url(/images/index/arrow.jpg) no-repeat 0 5px; line-height:16px; overflow:hidden;}
 #forbes_trt .bottom_list a{color:#666666; text-decoration:none;}
 
@@ -172,14 +172,14 @@ span.down{color:#33CC00;}
 #dictionary_r .content{width:205px; height:25px; line-height:25px; overflow:hidden;}
 
 
-#activity{width:300px; height:205px; margin-top:8px; float:right;}
+#activity{width:300px; margin-top:8px; overflow:hidden; float:right;}
 #activity #images{width:260px; height:90px; margin-top:10px; margin-left:19px;}
 #activity #title{width:260px; height:20px; margin-top:5px; margin-left:19px; font-size:13px; font-weight:bold; color:#333385 line-height:20px;}
 #activity #context{width:200px; height:40px; margin-top:5px; margin-left:19px; font-size:12px; color:#999999; line-height:20px;}
 #activity #info{width:50px; height:20px; margin-top:25px; margin-right:19px; line-height:20px; float:right;}
 #activity #info a{color:#3399CC;}
 
-#club{width:300px; height:151px; margin-top:12px; background:url(/images/index/bg2.jpg) no-repeat; overflow:hidden; float:right;}
+#club{width:300px; height:151px; margin-top:8px; background:url(/images/index/bg2.jpg) no-repeat; overflow:hidden; float:right;}
 .club_caption1{height:20px; margin-left:15px; margin-top:8px; font-size:14px; font-weight:bold; color:#999999;}
 .club_caption1 span{margin-left:10px; font-family:Arial; font-weight:normal; font-size:11px;}
 .club_more1{width:18px; height:8px; margin-top:11px; margin-right:10px; background:url(/images/public/public_more1.jpg) no-repeat; line-height:18px; float:right;}

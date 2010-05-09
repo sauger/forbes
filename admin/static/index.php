@@ -42,9 +42,9 @@ switch ($type) {
 		break;
 	case 'bottom':
 		if(static_bottom()){
-			echo '静态化顶部成功!';
+			echo '静态化底部成功!';
 		}else{
-			echo '静态化顶部失败!';
+			echo '静态化底部失败!';
 		}
 		break;
 	case 'right':

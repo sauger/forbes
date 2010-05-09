@@ -276,7 +276,7 @@
 			</div>
 			<div class=life_bottom>
 				<?php for($i=0;$i<4;$i++){ ?>
-					<div <?php $pos_name ="index_lifelist_".$i; show_page_pos($pos_name,'dictionary');?> class=lifelist><?php show_page_href()?></div>
+					<div <?php $pos_name ="index_lifelist_".$i; show_page_pos($pos_name,'dictionary');?> class=lifelist><?php show_page_href();?></div>
 				<?php }?>
 			</div>
 		</div>

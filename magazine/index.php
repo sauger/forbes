@@ -6,7 +6,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>福布斯-杂志</title>
+	<title>杂志_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right');
@@ -18,7 +18,7 @@
 	<div id=ibody>
 	<?php include_top();?>
 		<div id=bread>
-			<span>杂志首页</span>
+			杂志
 		</div>
 		<div id=bread_line></div>
 		<div id=zzleft>

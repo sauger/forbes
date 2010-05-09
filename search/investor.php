@@ -1,5 +1,5 @@
 <?php 
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	$db = get_db();
 	$industry = $db->query("select * from fb_invest_industry");
 	$count = $db->record_count;
@@ -27,11 +27,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<title>投资人检索_福布斯中文网</title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title><?php echo strip_tags($news->short_title);?>-福布斯中文网</title>
-	<meta name="Keywords" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
-	<meta name="Description" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/investor');
@@ -41,9 +39,7 @@
 <body>
 	<div id=ibody>
 		<?php include_top();?>
-		<div id=bread>
-			<a>投资人检索</a>
-		</div>
+		<div id=bread>投资人检索</div>
 		<div id="bread_line"></div>
 		<div id="left">
 			<div id="c_top">

@@ -1,6 +1,6 @@
-<?php
+	<?php
 	session_start();
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	if(!isset($_SESSION['login'])){
 		$_SESSION['login'] = rand_str();
 	}
@@ -21,7 +21,7 @@
 <body>
 <div id=ibody>		
 	 <?php include_top();?>
-	 <div id=bread><a>用户登录</a></div>
+	 <div id=bread>用户登录</div>
 	 <div id=bread_line></div>
 	 <div id="left">
 	    <form name="login" id="form_login" action="comlogin.post.php" method="post">

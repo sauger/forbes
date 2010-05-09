@@ -1,5 +1,5 @@
 ﻿<?php 
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
 	$id = intval($_REQUEST['id']);
 	if(!empty($id)){
 		$news = new table_class('fb_news');
@@ -53,7 +53,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title><?php echo strip_tags($news->short_title);?>-福布斯中文网</title>
+	<title><?php echo strip_tags($news->short_title);?>_福布斯中文网</title>
 	<meta name="Keywords" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
 	<meta name="Description" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
 	<?php
