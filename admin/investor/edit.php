@@ -76,6 +76,10 @@
 			<td><input type="file" name="post[image]"><?php if($record->image!=''){?><a href="<?php echo $record->image;?>" target="_blank">点击查看<?php }?></td>
 		</tr>
 		<tr class=tr4>
+			<td class=td1>大照片</td>
+			<td><input type="file" name="post[image2]"><?php if($record->image2!=''){?><a href="<?php echo $record->image2;?>" target="_blank">点击查看<?php }?></td>
+		</tr>
+		<tr class=tr4>
 			<td class=td1>拼音首字母</td>
 			<td><input type="text" name="post[chinese_name]" class="required" value="<?php echo $record->chinese_name;?>"></td>
 		</tr>
