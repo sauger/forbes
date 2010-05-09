@@ -174,7 +174,8 @@ span.down{color:#33CC00;}
 #dictionary_r #content1{width:200px; height:20px; line-height:20px; overflow:hidden;}
 #dictionary_r #more{width:70px; height:20px; font-size:14px; line-height:20px; font-weight:bold; text-align:right; float:right;}
 #dictionary_r #more a{color:#993333;}
-#dictionary_r .content2{width:280px; height:40px; line-height:20px; overflow:hidden;}
+#dictionary_r #content2{width:280px; height:40px; line-height:20px; overflow:hidden;}
+#dictionary_r #content3{width:280px; height:20px; line-height:20px; overflow:hidden;}
 
 
 #activity{width:300px; margin-top:8px; overflow:hidden; float:right;}
