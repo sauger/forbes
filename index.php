@@ -224,7 +224,7 @@
 			<div class=caption>
 				<div class=captions>读者高见<span>Readers Say</span></div>
 				<div class=line>|</div>
-				<a href="http://www.forbeschina.com/comments/" class=more target="_blank"></a>
+				<a href="http://www.forbeschina.com/comments" class=more target="_blank"></a>
 			</div>
 			<?php 
 				$comments = $db->query("select * from fb_comment where resource_type='news' and is_approve=1 order by priority asc,created_at desc limit 4");
