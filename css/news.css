@@ -107,7 +107,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #page{width:650px; height:30px; margin-top:20px; font-size:14px; line-height:30px; color:#666666; text-align:center;}
 #page a{color:#246BB0; text-decoration:none;}
 
-.share_line{width:600px; height:30px; margin-left:20px; color:#666666; line-height:30px; font-size:13px; float:left; display:inline;}
+.share_line{width:600px; height:30px; margin-left:20px; margin-top:5px; color:#666666; line-height:30px; font-size:14px; float:left; display:inline;}
 .share_line input{border:1px solid #6E6E6E; margin-top:5px; float:left; display:inline;}
 .share_line .input1{width:200px;}
 .share_line .input2{width:150px;}

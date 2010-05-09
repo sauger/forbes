@@ -27,16 +27,18 @@
 			if(strlen($_GET['email'][$i])>20){
 				die();
 			}
-			if(isset($_SESSION['name'])){
-				$share->user = $_SESSION['name'];
+			if(isset($_COOKIE['name'])){
+				$share->user = $_COOKIE['name'];
+				$sname = " {$_COOKIE['name']} ";
 			}else{
 				$share->user = $_SERVER['REMOTE_ADDR'];
+				$sname = "";
 			}
 			$share->created_at = now();
 			$share->news_id = $news_id;
 			$share->save();
-			$content = $_GET['name'][$i]."，你好<br/>您的好友'".$share->user."'想与您分享福布斯中文网的文章《".$news->title."》，您可以点击<a href='http://www.forbeschina.com".static_news_url($news)."'>http://www.forbeschina.com".static_news_url($news)."</a>来阅读<br><br>福布斯中文网";
-			send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_GET['mail'][$i],'福布斯中文网',$content);
+			$content = $_GET['name'][$i]."，你好<br/><br/>　　您的好友'".$share->user."'想与您分享福布斯中文网的文章《".$news->title."》，您可以点击<br/>　　<a href='http://www.forbeschina.com".static_news_url($news)."'>http://www.forbeschina.com".static_news_url($news)."</a>来阅读<br/>　　如果点击以上链接不起作用，请将此网址复制并粘贴到新的浏览器窗口中。";
+			send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_GET['mail'][$i],"《".$news->title."》",$content);
 		}
 	}
 	$user_id = front_user_id();
