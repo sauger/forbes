@@ -22,7 +22,7 @@
 		$count = $db->record_count;
 	}else{
 		if($key){
-			$sql = "select * from (select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.author_id order by $type) as t where nick_name like '%$key%' group by id";
+			$sql = "select * from (select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.publisher order by $type) as t where nick_name like '%$key%' group by id";
 			$user=$db->paginate($sql,5);
 			$count = $db->record_count;
 		}else{
