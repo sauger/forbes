@@ -10,7 +10,7 @@
 	$investor->find($id);
 	$item = $db->query("select t1.*,t2.name from fb_invest_items t1 join fb_invest_industry t2 on t1.invest_industry_id=t2.id where t1.investor_id=$id");
 	$item_count = $db->record_count;
-	$job = $db->query("select * from fb_investor_job_history where investor_id=$id");
+	$job = $db->query("select * from fb_investor_job_history where investor_id=".$id);
 	$job_count = $db->record_count;
 	$news = $db->query("select t1.title,t1.id,t1.created_at from fb_news t1 join fb_investor_news t2 on t1.id=t2.news_id where t2.investor_id=$id order by t1.created_at desc");
 	$news_count = $db->record_count;
