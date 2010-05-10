@@ -21,7 +21,7 @@
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
 	<meta name="keywords" content="<?php echo $column->nick_name;?> 福布斯专栏 专栏" />
-	<meta name="description" content="<?php echo $column->description;?>" />
+	<meta name="description" content="<?php echo strip_tags($column->description);?>" />
 	<?php
 		use_jquery();
 		js_include_tag('public','column_person','jquery.colorbox-min.js');
@@ -45,7 +45,7 @@
 						<div class=wz>专栏作者介绍</div>
 					</div>
 					<div id=c_content>
-						<?php echo $column->description;?>	
+						<?php echo strip_tags($column->description);?>	
 					</div>
 					<div id=c_b_title>
 						<div id=wz>按日期存档</div>
@@ -68,7 +68,7 @@
 						<div class=b_b_left>
 							<div class=b_pic><a href="/column/<?php echo $othercolumn[$i]->name;?>"><img border=0 src="<?php echo $othercolumn[$i]->image_src3; ?>"></a></div>
 							<div class=b_pictitle><a href="/column/<?php echo $othercolumn[$i]->name;?>"><?php echo $othercolumn[$i]->nick_name; ?></a></div>
-						</div>
+						</div>	
 					<?php } ?>
 			</div>
 			<div id=column_person_left_b></div>
