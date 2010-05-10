@@ -100,7 +100,7 @@
 				<div class=column_edit>
 					<div class=captions>专栏文章推荐</div>
 					<div class=line>|</div>
-					<a href="#" target="_blank" class=more></a>
+					<a href="http://www.forbeschina.com/column/category/writer" target="_blank" class=more></a>
 					<?php
 						for($i=0;$i<3;$i++){
 							$pos_name = 'column_edit_t'.$i;
@@ -205,7 +205,7 @@
 				<div class=column_edit>
 					<div class=captions>采编空间文章推荐</div>
 					<div class=line>|</div>
-					<a href="#" target="_blank" class=more></a>
+					<a href="http://www.forbeschina.com/column/category/editor" target="_blank" class=more></a>
 					<?php
 						for($i=0;$i<3;$i++){
 							$pos_name = "column_edit_edit_t2_{$i}";
