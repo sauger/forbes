@@ -51,21 +51,25 @@ div{margin:0; padding:0; float:left; display:inline;}
 .column_edit_recommend .t2 a{color:#003899; font-weight:normal;}
 .column_edit_recommend .t3{width:62px; height:20px; font-size:12px; color:#666666; font-weight:normal; overflow:hidden; line-height:20px; margin-left:15px;}
 
-#steven{width:300px; height:120px; margin-bottom:10px; background:#eaeaea;}
+#steven{width:300px; height:160px; margin-bottom:10px; background:#eaeaea;}
 #steven a{text-decoration:none;}
 #steven #pic{width:80px; height:80px; margin:10px;}
 #steven #pic img{width:80px; height:80px;}
-#steven #pic #picimg{width:80px; height:80px;}
+#steven #pic #picimg{width:90px; height:90px;}
 #steven #pic #title{width:100px; height:20px; text-align:center; line-height:20px;}
 #steven #pic #title a{color:#666666;}
 #steven #pictitle{width:170px; height:25px; margin-top:10px; margin-right:10px; font-size:17px; font-weight:bold; line-height:25px; float:right;}
+#steven_name{width:160px; height:20px;float:right; text-align: right; padding-right:10px;}
+#steven_name a{font-size:14px; line-height:20px;font-weight:bold;} 
 #steven #pictitle a{color:#0f0f0f;}
-#steven #piccontent{width:170px; height:50px; margin-top:10px; margin-right:10px; float:right;}
+#steven #piccontent{width:170px; height:50px; margin-top:5px; margin-right:10px; float:right;}
 #steven #piccontent #title{width:170px; height:20px; line-height:20px; font-size:16px; overflow:hidden;}
 #steven #piccontent #title a{color:#332BA5;}
-#steven #piccontent #content{width:170px; height:30px; line-height:15px; color:#666666; overflow:hidden;}
+#steven #piccontent #content{width:170px; height:30px; margin-top:3px; line-height:15px; color:#666666; overflow:hidden;}
 #steven #piccontent #info{line-height:15px; margin-top:5px; margin-right:3px; float:right;}
 #steven #piccontent #info a{color:#666666}
+#piccontent .title{width:160px;height:20px;  padding-left:10px; font-size:14px; line-height:20px; overflow: hidden;background:url(/images/public/circle1.jpg) no-repeat 0 8px;}
+.title a{color:#332BA5;}
 
 
 .caption{width:200px; height:28px;}
