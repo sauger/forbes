@@ -299,12 +299,12 @@
 				</div>
 				<?php $pos_name = 'index_event';?>
 				<div class=public_box1 <?php show_page_pos($pos_name,'index_event');?>>
-					<div id=images><img src="<?php echo $pos_items->$pos_name->image1;?>" width="260" height="90"/></div>
-					<div id=title><?php echo $pos_items->$pos_name->display;?></div>
+					<div id=images><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank"><img src="<?php echo $pos_items->$pos_name->image1;?>" border="0" width="260" height="90"/></a></div>
+					<div id=title><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank"><?php echo $pos_items->$pos_name->display;?></a></div>
 					<div id=context>
 						举办日期：<?php echo $pos_items->$pos_name->reserve;?><br>地点：<?php echo $pos_items->$pos_name->title;?>
 					</div>
-					<div id=info><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">查看详细</a></div>	
+					<div id=info><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">查看详细</a></div>	
 				</div>
 				<div class=public_bottom1></div>
 			</div>
