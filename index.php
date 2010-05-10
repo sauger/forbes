@@ -327,7 +327,7 @@
 					<div class=bottom>
 						<div class=bottom_l><a href='/investor/sign'>我要报名</a></div>
 						<div class=bottom_r>
-							<a href='/investor'>VC/PE/天使人投资人数据库</a>
+							<a href='/investor'>VC/PE/天使投资人数据库</a>
 						</div>	
 					</div>
 			</div>
