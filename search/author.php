@@ -91,7 +91,7 @@
 					for($j=0;$j<$ncount;$j++){
 				?>
 				<div class=content>
-					<div class="images"><img border=0 src="/images/tyzl/sjt.jpg"></div>
+					<div class="images"></div>
 					<div class=context><a href="<?php echo column_article_url($user[$i]->name,$news[$j],'static');?>"><?php echo $news[$j]->title;?></a></div>
 				</div>
 				<?php if($j==0){?>
