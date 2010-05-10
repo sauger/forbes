@@ -141,7 +141,10 @@
 					</div>
 					-->
 					<div id=rich_banner1 class="ad_banner">
-						<a href=""><img border=0 src="/images/fh/four.jpg"></a>	
+						<a href=""></a>	
+					</div>
+					<div id=rich_banner2 class="ad_banner">
+						<a href=""></a>	
 					</div>
 				</div>
 			</div>
