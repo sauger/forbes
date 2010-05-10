@@ -236,7 +236,8 @@ function init_page_items(){
 	}
 	if($page_type == 'static'){
 		foreach($pos_items as $val){
-			$val->href = $val->static_href;
+			if($val->static_href)
+				$val->href = $val->static_href;
 		}
 	}
 	if($page_type == 'admin'){
