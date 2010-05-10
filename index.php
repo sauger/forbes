@@ -286,7 +286,7 @@
 			<div id=dictionary>
 				<div id=dictionary_r>
 					<div id=content1 <?php $pos_name ="dictionary_r_content0"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
-					<div id=more><a href="">财经词典</a></div>
+					<div id=more><a href="<?php echo get_newslist_url($category->find_by_name('财经词典')->id);?>">财经词典</a></div>
 					<div id=content2 <?php $pos_name ="dictionary_r_content1"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
 					<div id=content3 <?php $pos_name ="dictionary_r_content2"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
 				</div>
