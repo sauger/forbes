@@ -77,9 +77,9 @@
 					$content = str_replace($filte_words[$j]->words,'****',$content);
 				}
 				if($type == 'static'){
-					$url = "$comment_url/{$comment[$i]->id}";
+					$url = "$comments_url/{$comment[$i]->id}";
 				}else{
-					$url = "$comment_url&comment_id={$comment[$i]->id}";
+					$url = "$comments_url&comment_id={$comment[$i]->id}";
 				}
 				echo "<a href='{$url}' target='_blank'>$content</a>";
 			?>
