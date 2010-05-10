@@ -221,13 +221,7 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 		}
 		
 		for($i=0;$i<$news_count;$i++){
-			for($j=0;$j<$news_limit;$j++){
-				if($flag){
-					$pos_name = $position_name.$k.$news_position.$j;
-				}else{
-					$pos_name = $news_position.$k;
-				}
-				
+			$pos_name = $position_name.$k.$news_position.$i;
 				$record = $db->query("select id,end_time from fb_page_pos where name='{$pos_name}'");
 				if($db->record_count==1){
 					$pos = new table_class('fb_page_pos');
@@ -241,7 +235,6 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 					$pos->href = dynamic_news_url($news[$i]);
 					$pos->static_href = column_article_url($column[0]->name,$news[$i]->id,'static');
 					$pos->save();
-					break;
 				}else{
 					$pos = new table_class('fb_page_pos');
 					$pos->name = $pos_name;
@@ -254,9 +247,7 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 					$pos->href = dynamic_news_url($news[$i]);
 					$pos->static_href = column_article_url($column[0]->name,$news[$i]->id,'static');
 					$pos->save();
-					break;
 				}
-			}
 		}
 	}
 }
