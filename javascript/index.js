@@ -28,7 +28,7 @@ function head_line2()
 	  if(is_changed=="1")
 	  {
 	  	is_changed=0;
-			setTimeout("head_line2()",7000);
+			setTimeout("head_line2()",5000);
 	  	return false;
 	  }
 		var now_id=headline_id;	
@@ -246,4 +246,4 @@ $(function(){
 
 
 
-setTimeout("head_line2()",7000);
+setTimeout("head_line2()",5000);
