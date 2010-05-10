@@ -6,6 +6,7 @@ $(function(){
 	}else{
 		channel = "index";
 	}
+	if(channel=='')channel='index';
 	var ads = $('div.ad_banner');
 	ads.each(function(){
 		$(this).load('/ajax/load_ad.php?channel='+channel+ '&banner='+$(this).attr('id'),{url:location.pathname});
