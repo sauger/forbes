@@ -63,7 +63,7 @@
 					</div>
 					<?php
 					
-					$othercolumn=$db->query("select image_src3,nick_name,id,name from fb_user where id != $id and (role_name='column_editor' or role_name='column_writer') order by rand() limit 6");
+					$othercolumn=$db->query("select image_src3,nick_name,id,name from fb_user where id != $id and (image_src3 is not null and image_src3 != '') and (role_name='column_editor' or role_name='column_writer') order by rand() limit 6");
 					for($i=0;$i<count($othercolumn);$i++){ ?>
 						<div class=b_b_left>
 							<div class=b_pic><a href="/column/<?php echo $othercolumn[$i]->name;?>"><img border=0 src="<?php echo $othercolumn[$i]->image_src3; ?>"></a></div>
