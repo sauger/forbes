@@ -12,7 +12,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true){
 		return false;
 	}
 	$ids = $has_children ? implode(',',$category->children_map($category_id)) : $category_id ;
-	$sql = "select id,title,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) order by created_at desc limit {$count}";
+	$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) order by created_at desc limit {$count}";
 	$news = $db->query($sql);
 	$news_count = $db->record_count;
 	if($news_count <= 0 ) return false;
@@ -22,9 +22,9 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true){
 	for($i=0;$i<$news_count;$i++){
 		$pos = $count == 1 ? $pos_name : $pos_name .$i;
 		$pos_table->find("first",array("conditions" => "name = '$pos'"));
-		if($pos_table->id && $pos_table->end_time > date(now())){
-			continue;
-		}
+		#if($pos_table->id && $pos_table->end_time > date(now())){
+		#	continue;
+		#}
 		$pos_table->name = $pos;
 		$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 		$pos_table->end_time = $end_time;

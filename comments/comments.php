@@ -63,7 +63,7 @@
 				<div id=page><?php paginate();?></div>
 				<div id="content_bottom">
 					<div id="z_bottom">
-					<div id="z"><img src="../images/comments/comment.jpg"></div>
+					<div id="z"><img src="/images/comments/comment.jpg"></div>
 				</div>
 				
 				</div>
