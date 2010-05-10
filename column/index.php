@@ -262,6 +262,8 @@
 			<?php include_once(dirname(__FILE__)."/../right/ad.php");?>
 			<?php include_once(dirname(__FILE__)."/../right/column_c.php");?>
 			<?php include_once(dirname(__FILE__)."/../right/column.php");?>
+			<?php include_once(dirname(__FILE__)."/../right/forum.php");?>
+			<?php include_once(dirname(__FILE__)."/../right/magazine.php");?>
 		</div>
 		<? include_once(dirname(__FILE__).'/../inc/bottom.inc.php');?>
 	</div>
