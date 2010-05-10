@@ -76,6 +76,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .comment_box .support{height:25px; color:#003399; font-size:12px; float:right; display:inline;}
 .comment_box .support div{margin-left:5px;}
 .comment_box .comment_content{width:620px; margin-left:20px; padding-bottom:10px; font-size:12px; color:#666666;}
+.comment_content a{color:#666; text-decoration: none;}
 .pointor{cursor:pointer;}
 
 #comment_paginate{width:640px; height:50px; margin-top:25px; line-height:30px; font-size:13px; color:#666666; text-align:center;}
