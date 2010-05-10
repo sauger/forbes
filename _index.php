@@ -26,11 +26,11 @@
 					<div class=captions><?php echo $catename[0]->name; ?>热点</div>
 				</div>
 				<?php for($i=0;$i<6;$i++){ $pos_name = $pos.'acticle'.$i;?>
-					<div class=common_article_lis1 <?php show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
+					<div class=common_article_lis1 <?php #show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
 					<div class=common_article_description1><?php show_page_desc();?></div>
 				<? }?>
 				<?php  for($i=6;$i<15;$i++){ $pos_name = $pos.'acticle'.$i;?>
-					<div class=common_article_lis2 <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
+					<div class=common_article_lis2 <?php #show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
 				<?php } ?>
 			</div>
 			
@@ -41,7 +41,7 @@
 					<div class=captions><?php echo $catename[0]->name; ?>专题</div>
 				</div>
 				<?php for($i=0;$i<2;$i++){ $pos_name = $pos."them".$i;?>
-				<div class=common_subject <?php show_page_pos($pos_name,'base_img')?>>
+				<div class=common_subject <?php #show_page_pos($pos_name,'base_img')?>>
 					<div class=common_subject_pic><?php show_page_img();?></div>
 					<div class=common_subject_list><?php show_page_href();?></div>
 					<div class=common_subject_description><?php show_page_desc();?></div>

@@ -13,18 +13,18 @@
 	}
 	if($type=='role'){
 		if(!in_array($role,array('column_writer','column_editor'))){
-			$c = '';
+			$c = " where (t1.image_src is not null or t1.image_src = '')";
 		}else{
-			$c =" where role_name = '$role'";
+			$c =" where (t1.image_src is not null or t1.image_src = '') and role_name = '$role'";
 		}
-		$sql = "select * from fb_user {$c}";
-		$user = $db->paginate($sql,5);
+		$sql = "select * from fb_user t1 {$c}";
+		$user = $db->paginate($sql,6);
 		$count = $db->record_count;
 	}else{
 		if($key){
 			#$sql = "select a.* from fb_user a left join fb_news b on b.publisher=a.id where (a.role_name = 'column_editor' or a.role_name='column_writer') and a.nick_name like '%$key%' order by $type group by a.id ";
-			$sql = "select * from (select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.publisher order by $type) as t where nick_name like '%$key%' and (role_name = 'column_editor' or role_name='column_writer') group by id";
-			$user=$db->paginate($sql,5);
+			$sql = "select * from (select t1.* from fb_user t1 join fb_news t2 on t1.id=t2.publisher order by $type) as t where nick_name like '%$key%' and (t1.image_src is not null or t1.image_src = '') and (role_name = 'column_editor' or role_name='column_writer') group by id";
+			$user=$db->paginate($sql,6);
 			$count = $db->record_count;
 		}else{
 			$count = 0;
