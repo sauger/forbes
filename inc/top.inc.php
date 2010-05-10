@@ -52,7 +52,7 @@
 					<select name="selsearch" class="iselect">
 						<option value="list">榜单</option>
 						<option value="rich">富豪</option>
-						<option value="author">作者</option>
+						<option value="author_news">作者</option>
 						<option value="news">文章</option>
 					</select>
 			</div>
@@ -127,8 +127,8 @@
 			window.location.href="/list/list.php?key="+encodeURI(text);
 		}else if(type=='news'){
 			window.location.href="/search/news.php?key="+encodeURI(text);
-		}else if(type=='author'){
-			window.location.href="/search/author.php?key="+encodeURI(text);
+		}else if(type=='author_news'){
+			window.location.href="/search/author_news.php?key="+encodeURI(text);
 		}else if(type=='rich'){
 			window.location.href="/search/rich.php?name="+encodeURI(text);
 		}

@@ -371,7 +371,7 @@ function search_content($key,$table_name='fb_news',$conditions=null,$page_count 
 		$sql .= " and {$conditions}";
 	}
 	if($key){
-		$sql .= " and (title regexp '{$key}' or short_title regexp '{$key}' or keywords regexp '{$key}'";
+		$sql .= " and (title regexp '{$key}' or short_title regexp '{$key}' or keywords regexp '{$key}' or author regexp '{$key}'";
 		if($full_text){
 			$sql .= " or content regexp '{$key}'";
 		}
