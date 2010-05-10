@@ -47,7 +47,7 @@
 						$pos_name = 'column_recommend_top_l_'.$i;	
 					?>
 					<div class=column_recommend>
-						<div class=column_recommend_top <?php show_page_pos($pos_name,'column_full');?>>
+						<div class=column_recommend_top <?php #show_page_pos($pos_name,'column_full');?>>
 							<div class=column_recommend_top_l>
 								<div class=picture>
 									<a href="<?php echo $pos_items->$pos_name->reserve?>"><? show_page_img(null,null,0,"image1",null,"reserve"); ?></a>
@@ -69,7 +69,7 @@
 							for($j=1;$j<3;$j++){
 								$pos_name = 'column_recommend_b_'.$i.'_'.$j;
 						?>
-						<div class=column_recommend_b <?php show_page_pos($pos_name,'link'); ?>>
+						<div class=column_recommend_b <?php #show_page_pos($pos_name,'link'); ?>>
 							<?php show_page_href(); ?>
 						</div>
 						<?php }?>
@@ -87,7 +87,7 @@
 						<div id=title><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>">进入专栏</a></div>			
 					</div>
 					<div id=pictitle>事实与评论</div>
-					<div id="steven_name"><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>">--史蒂夫·福布斯专栏</a></div>
+					<div id="steven_name"><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>">--史蒂夫·福布斯</a></div>
 					<div id=piccontent>
 						<div id=title><a href="<?php echo column_article_url($news[0]->name,$news[0]->id,'static');?>" title="<?php echo $news[2]->title; ?>"><?php echo $news[0]->title; ?></a></div>
 						<div id=content title="<?php echo strip_tags($news[0]->description); ?>"><?php echo $news[0]->description; ?></div>
@@ -103,7 +103,7 @@
 						for($i=0;$i<3;$i++){
 							$pos_name = 'column_edit_t'.$i;
 					?>
-					<div class=column_edit_t <?php show_page_pos($pos_name,"column_with_author"); ?>>
+					<div class=column_edit_t <?php #show_page_pos($pos_name,"column_with_author"); ?>>
 						<div class=t1>
 							<div class=t2>
 								<?php show_page_href();?>
@@ -122,7 +122,7 @@
 							for($i=3;$i<11;$i++){
 								$pos_name = 'column_edit_t'.$i;
 						?>
-						<div class=t1<?php show_page_pos($pos_name,'column_simple'); ?>>
+						<div class=t1<?php #show_page_pos($pos_name,'column_simple'); ?>>
 							<div class=t2>
 								<?php show_page_href(); ?>
 							</div>
@@ -170,13 +170,13 @@
 							$pos_name = 'column_r_t_l'.$i;
 					?>
 					<div class=column_recommend>
-						<div class=column_recommend_top <?php show_page_pos($pos_name); ?>>
+						<div class=column_recommend_top <?php #show_page_pos($pos_name); ?>>
 							<div class=column_recommend_top_l>
 								<div class=picture>
 									<?php show_page_img(null,null,0,"image1",null,"reserve"); ?>
 								</div>
 							</div>
-							<div class=column_recommend_top_r<?php show_page_pos($pos_name,'column_full');?>>
+							<div class=column_recommend_top_r<?php #show_page_pos($pos_name,'column_full');?>>
 								<div class=t1>
 									<a href="<?php echo $pos_items->$pos_name->reserve?>" title="<?php echo $pos_items->$pos_name->alias?>" target="_blank"><?php echo $pos_items->$pos_name->alias;?>的专栏</a>
 								</div>
@@ -192,7 +192,7 @@
 							for($j=1;$j<3;$j++){
 								$pos_name = "column_recommend_top_r_t2_{$i}_{$j}";
 						?>
-						<div class=column_recommend_b <?php show_page_pos($pos_name,'link');?>>
+						<div class=column_recommend_b <?php #show_page_pos($pos_name,'link');?>>
 							<?php show_page_href(); ?>
 						</div>
 						<?php }?>
@@ -208,7 +208,7 @@
 						for($i=0;$i<3;$i++){
 							$pos_name = "column_edit_edit_t2_{$i}";
 					?>
-					<div class=column_edit_t <?php show_page_pos($pos_name,"column_with_author"); ?>>
+					<div class=column_edit_t <?php #show_page_pos($pos_name,"column_with_author"); ?>>
 						<div class=t1>
 							<div class=t2 >
 								<?php show_page_href(); ?>
@@ -227,7 +227,7 @@
 							for($i=3;$i<11;$i++){
 								$pos_name = "column_edit_edit_t2_{$i}";
 						?>
-						<div class=t1<?php show_page_pos($pos_name,'column_simple'); ?>>
+						<div class=t1<?php #show_page_pos($pos_name,'column_simple'); ?>>
 							<div class=t2>
 								<?php show_page_href(); ?>
 							</div>
