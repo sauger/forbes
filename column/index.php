@@ -80,20 +80,22 @@
 				
 				<div id=steven>
 				<?php $db=get_db();
-					$news=$db->query('select n.id, n.title,n.description,u.name,u.image_src from fb_news n left join fb_user u on n.publisher=u.id where u.id=72 and n.is_adopt=1 order by n.priority asc, n.created_at desc limit 3');
+					$news=$db->query('select n.id, n.title,n.description,u.name,u.image_src from fb_news n left join fb_user u on n.publisher=u.id where u.id=72 and n.is_adopt=1 order by n.priority asc, n.created_at desc limit 5');
 				 ?>
 					<div id=pic>
 						<div id=picimg><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>"><img border=0 src="<?php echo $news[0]->image_src; ?>" /></a></div>
-						<div id=title><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>">进入专栏</a></div>			
 					</div>
-					<div id=pictitle>事实与评论</div>
-					<div id="steven_name"><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>">--史蒂夫·福布斯</a></div>
+					<div id=pictitle>
+						<div><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>">事实与评论</a></div>
+						<div id="steven_name"><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>">史蒂夫·福布斯</a></div>
+					</div>
 					<div id=piccontent>
 						<div id=title><a href="<?php echo column_article_url($news[0]->name,$news[0]->id,'static');?>" title="<?php echo $news[2]->title; ?>"><?php echo $news[0]->title; ?></a></div>
 						<div id=content title="<?php echo strip_tags($news[0]->description); ?>"><?php echo $news[0]->description; ?></div>
-						<div class="title" style="margin-top:3px;"><a href="<?php echo column_article_url($news[1]->name,$news[1]->id,'static');?>" title="<?php echo $news[2]->title; ?>"><?php echo $news[1]->title; ?></a></div>
-						<div class="title"><a href="<?php echo column_article_url($news[2]->name,$news[2]->id,'static');?>" title="<?php echo $news[2]->title; ?>"><?php echo $news[2]->title; ?></a></div>
 					</div>
+					<?php for($i=1;$i<5;$i++){?>
+					<div class="title" ><a href="<?php echo column_article_url($news[$i]->name,$news[$i]->id,'static');?>" title="<?php echo $news[$i]->title; ?>"><?php echo $news[$i]->title; ?></a></div>
+					<?php }?>
 				</div>
 				<div class=column_edit>
 					<div class=captions>专栏文章推荐</div>
