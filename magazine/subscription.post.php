@@ -132,8 +132,8 @@
 	$subscript->stime=now();
 	if($subscript->save()){
 		alert('申请成功');
-		$content = "感谢您订阅福布斯杂志。";
-		send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_POST['sub']['Email'],'福布斯中文网',$content);
+		#$content = "感谢您订阅福布斯杂志。";
+		#send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_POST['sub']['Email'],'福布斯中文网',$content);
 	};
 	
 	redirect('/magazine/subscription');
