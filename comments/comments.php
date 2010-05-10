@@ -14,7 +14,7 @@
 		js_include_tag('public','jquery.colorbox-min','comment','right');
 		css_include_tag('public','comments','right_inc','colorbox');
 		$db = get_db();
-		$items = $db->paginate("select a.resource_type,a.title,a.magzine_number,a.nick_name,a.comment,a.created_at,b.title as news_title from fb_comment a left join fb_news b on a.resource_id = b.id where is_approve=1 order by a.id desc",10);
+		$items = $db->paginate("select a.resource_type,a.title,a.magzine_number,a.nick_name,a.comment,a.created_at as c_created_at,b.title as news_title,b.created_at,b.id, a.id as c_id  from fb_comment a left join fb_news b on a.resource_id = b.id where is_approve=1 order by a.id desc",10);
 		$len = count($items);
 	?>
 </head>
@@ -34,8 +34,11 @@
 					if($items[$i]->resource_type == 'magazine'){
 						$is_magazine = true;
 						$title = $items[$i]->magzine_number ." ". $items[$i]->title;
+						$content = $items[$i]->comment;
 					}else{
 						$title = $items[$i]->news_title;
+						
+						$content = "<a href='{$static_site}" .static_news_url($items[$i]) ."/comments/{$items[$i]->c_id}'>{$items[$i]->comment}</a>";
 					}
 					
 			?>
@@ -43,11 +46,11 @@
 				
 				<div class="join_top">
 					<div class="issues" title="<?php echo $title?>"><span><?php echo $items[$i]->nick_name;?></span>评论：<?php echo $title?></div>
-					<div class="time"><?php echo $items[$i]->created_at;?></div>
+					<div class="time"><?php echo $items[$i]->c_created_at;?></div>
 				</div>
 				
 				<div class="content">
-					<div class="content_lable"><?php echo $items[$i]->comment;?></div>
+					<div class="content_lable"><?php echo $content;?></div>
 				</div>
 				
 			</div>
