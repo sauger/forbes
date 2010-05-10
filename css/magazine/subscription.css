@@ -12,7 +12,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 .bc{width:294px;}
 
-.subscription {margin-top:15px; margin-left:10px; line-height:20px;}
+.subscription {margin-top:10px; margin-left:10px; line-height:20px;}
 .subscription table { border-collapse:collapse}
 .subscription table tr td { padding:2px;}
 #su_bottom{margin-left:250px;}
@@ -27,3 +27,5 @@ tr{line-height:30px;}
 #yzm{width:60px; height:22px; margin-left:10px; font-size:16px; font-weight:bold; line-height:22px; }
 .inputradio{padding-left:0px; border:none;}
 p{ color:#FF0000; font-weight:bold; font-size:14px; line-height:40px;}
+
+#description{width:600px; height:40px; margin-top:15px; margin-left:10px;  line-height:20px; font-size:14px; color:#666666;}

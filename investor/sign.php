@@ -40,7 +40,7 @@
 				<form action="sign.post.php" enctype="multipart/form-data" method="post" id="sign">
 				<div id="f_content">
 					<div id="fc_top"></div>
-					<div id="fc_a">注意 * 为必填项，请将内容准确完整，以保证项目真实有效。</div>
+					<div id="fc_a">1.福布斯将充分尊重您的隐私，对您提供的数据严格保密；<br>2.注意 * 为必填项，请保证所填数据的真实性。</div>
 					<div class="fc_b">
 							<div class="fc_title_pg"></div>
 							<div class="fc_title">项目信息</div>
