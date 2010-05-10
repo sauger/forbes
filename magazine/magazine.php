@@ -106,7 +106,7 @@
 						?>
 						<div class="picture">
 							<div class="picture1">
-								<a title="<?php echo $magazines[$i]->name;?>" href="<?php echo "{$static_site}/magazine/{$magazine[$i]->id}";?>"><img border="0" width="93px" height="123px;" src="<?php echo $magazines[$i]->img_src;?>"></a>
+								<a title="<?php echo $magazines[$i]->name;?>" href="<?php echo "{$static_site}/magazine/{$magazines[$i]->id}";?>"><img border="0" width="93px" height="123px;" src="<?php echo $magazines[$i]->img_src;?>"></a>
 							</div>
 						</div>
 						<?php }?>
