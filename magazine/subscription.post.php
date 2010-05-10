@@ -126,9 +126,10 @@
 		redirect('subscription.php');
 		die();
 	}
+
 	$subscript=new table_class('fb_subscription');
 	$subscript->update_attributes($_POST['sub'],false);
-	$subscript->stime=date('Y-m-d H:m:s');
+	$subscript->stime=now();
 	if($subscript->save()){
 		alert('申请成功');
 		$content = "感谢您订阅福布斯杂志。";
