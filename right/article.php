@@ -4,7 +4,7 @@
 <div class="right_box">
 	<div id=order_top>
 		<div id=order_t_l>
-			订阅福布斯快闻　<input value="1" id="order_news" type="radio"><span>我要定制</span>	
+			订阅福布斯快闻　<input value="1" id="order_news" type="radio" name="order_news"><span>我要定制</span>	
 		</div>
 		<div id=order_t_r>
 			<button disabled="disabled" id="news_order">定制</button>	
