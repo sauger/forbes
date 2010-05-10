@@ -19,8 +19,8 @@
 		<div id=bread><a href="/magazine/">杂志</a> > 杂志赠阅</div>
 		<div id=bread_line></div>
 		<div class="con_left">
+		<div id="description">1.福布斯将充分尊重您的隐私，对您提供的数据严格保密；<br>2.请保证所填数据的真实性，否则将可能影响到您是否能获得杂志赠阅。</div>
 			<div class="subscription">
-
 			<form id="subscriptionform" name="subscriptionform" action="subscription.post.php" method="post">
 			  <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
