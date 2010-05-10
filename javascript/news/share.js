@@ -8,8 +8,19 @@ $(function(){
 	});
 	
 	$("#share_submit").click(function(){
+		
+		
+		var input_array = new Array();
+		var input_size = $(".input1").size();
+		for(var i=0;i<input_size;i++){
+			if(isEmail($(".input1").eq(i).val())&&$(".input2").eq(i).val()!=''){
+				
+			}
+		}
+		return false;
 		var input1 = false;
 		var input2 = false;
+		
 		$(".input1").each(function(){
 			if($(this).val().length>30){
 				alert("邮件名太长！");
@@ -25,6 +36,7 @@ $(function(){
 				}
 			}
 		});
+		alert(input1);
 		$(".input2").each(function(){
 			if($(this).val().length>20){
 				alert("昵称太长！");
