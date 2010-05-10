@@ -75,7 +75,7 @@
 					<img border=0 src="<?php echo $user[$i]->image_src;?>">
 				</div>
 				<div class=pictitle>
-					<?php echo $user[$i]->nick_name;?>专栏
+					<a href="<?php echo "{$static_site}/column/{$user[$i]->name}";?>"><?php echo $user[$i]->nick_name;?>专栏</a>
 				</div>
 				<div class=piccontent>
 					<?php echo strip_tags($user[$i]->description);?>
@@ -84,6 +84,7 @@
 			<div class=newarticle>
 				<div class=wz>最新专栏文章</div>
 				<div class=wx>
+					<div class="enterzl"></div>	
 				</div>
 				<?php 
 					$news=$db->query('select * from fb_news where publisher='.$user[$i]->id.' order by priority asc, created_at desc limit 2');
@@ -91,7 +92,7 @@
 					for($j=0;$j<$ncount;$j++){
 				?>
 				<div class=content>
-					<div class="images"></div>
+					<div class="images"><img border=0 src="/images/tyzl/sjt.jpg"></div>
 					<div class=context><a href="<?php echo column_article_url($user[$i]->name,$news[$j],'static');?>"><?php echo $news[$j]->title;?></a></div>
 				</div>
 				<?php if($j==0){?>

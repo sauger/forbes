@@ -89,7 +89,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #list_top{width:640px; height:250px; border-bottom:1px dotted #cccccc; overflow:hidden;}
 #list_top #picture{width:300px; height:200px; margin-left:10px;}
-#list_top #title{width:300px; height:30px; margin-top:10px; margin-left:20px; font-family:微软雅黑; font-size:18px; font-weight:bold; line-height:30px; overflow:hidden;}
+#list_top #title{width:300px; height:30px; margin-top:10px; margin-left:15px; font-family:微软雅黑; font-size:18px; font-weight:bold; line-height:30px; overflow:hidden;}
 #list_top #title a{color:#246BB0; text-decoration:none;}
 #list_top #title a:hover{color:#246BB0; text-decoration:underline;}
 #list_top #description{width:300px; height:125px; margin-top:10px; margin-left:20px; font-size:12px; color:#666; line-height:25px; overflow:hidden;}
