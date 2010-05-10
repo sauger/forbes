@@ -34,7 +34,7 @@ $(function(){
 		}
 		if(run_time){
 			$.getScript('/php/share.post.php?'+ $('#share_form').serialize());
-			return false;
+			window.location.href = $("#news_url").val();
 		}
 	});
 });
