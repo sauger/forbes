@@ -100,13 +100,14 @@
 			<?php for($i=1;$i<5;$i++){
 				$pos_name = "index_right_list{$i}";
 			?>
-			<div class="title" <?php show_page_pos($pos_name,'link_img	')?> title="<?php echo $pos_items->$pos_name->title;?>"><?php show_page_href();?></div>
+			<div class="title"  <?php show_page_pos($pos_name,'link_img	')?>  title="<?php echo $pos_items->$pos_name->title;?>"><?php show_page_href();?></div>
 			<?php }?>
 			<script>
 				$('#forbes_trt .title:first').addClass("selected");
 			</script>
 			<div id=phb>
 				<?php for($i=1;$i<5;$i++){
+					$pos_name = "index_right_list{$i}";
 				?>
 				<div id="rt_tab<?php echo $i;?>" class="rt_tab">
 					<a href="<?php echo $pos_items->$pos_name->static_href;?>"><img border="0" width="300" height="280" title="<?php echo $pos_items->$pos_name->title;?>" src="<?php echo $pos_items->$pos_name->image1?>" /></a>
