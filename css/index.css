@@ -133,7 +133,7 @@ span.down{color:#33CC00;}
 .forbes_l .caption .caption_base span{margin-left:10px; font-family:Arial; font-weight:normal; line-height:18px; font-size:11px; color:#7F7F7F;}
 .forbes_l .caption .caption_selected{font-size:14px; font-weight:bold;}
 .forbes_l .caption .line{width:1px; height:10px; margin-top:9px; margin-left:10px; font-size:10px; line-height:10px;}
-.forbes_l .list3{width:300px; height:21px; margin-top:5px; margin-left:10px; padding-left:15px; background:url(/images/index/square2.jpg) no-repeat 0 10px; line-height:21px;}
+.forbes_l .list3{width:300px; height:21px; margin-top:5px; margin-left:10px; padding-left:15px; background:url(/images/index/square2.jpg) no-repeat 0 10px; overflow:hidden; line-height:21px;}
 .forbes_l .list3 a{color:#003399; font-size:14px; text-decoration:none;}
 
 .forbes_l .writer{width:60px; height:120px; margin-top:10px; margin-left:15px;}
