@@ -53,10 +53,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #steven{width:300px; height:160px; margin-bottom:10px; background:#eaeaea;}
 #steven a{text-decoration:none;}
-#steven #pic{width:80px; height:80px; margin:10px;}
-#steven #pic img{width:80px; height:80px;}
+#steven #pic{width:90px; height:90px; margin:10px;}
+#steven #pic img{width:90px; height:90px;}
 #steven #pic #picimg{width:90px; height:90px;}
-#steven #pic #title{width:100px; height:20px; text-align:center; line-height:20px;}
+#steven #pic #title{width:100px; height:20px; margin-top:5px; text-align:center; line-height:20px;}
 #steven #pic #title a{color:#666666;}
 #steven #pictitle{width:170px; height:25px; margin-top:10px; margin-right:10px; font-size:17px; font-weight:bold; line-height:25px; float:right;}
 #steven_name{width:160px; height:20px;float:right; text-align: right; padding-right:10px;}
