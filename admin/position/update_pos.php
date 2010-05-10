@@ -3,7 +3,7 @@ include_once "../../frame.php";
 $category = new category_class('news');
 $pos_table = new table_class('fb_page_pos');
 
-function update_pos($category_name,$count=1,$pos_name,$has_children=true){
+function update_pos($category_name,$count=1,$pos_name,$has_children=true,$ignore_time = false){
 	global $category;
 	global $pos_table;
 	$db = get_db();
@@ -22,9 +22,9 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true){
 	for($i=0;$i<$news_count;$i++){
 		$pos = $count == 1 ? $pos_name : $pos_name .$i;
 		$pos_table->find("first",array("conditions" => "name = '$pos'"));
-		#if($pos_table->id && $pos_table->end_time > date(now())){
-		#	continue;
-		#}
+		if($pos_table->id && $pos_table->end_time > date(now()) && !$ignore_time){
+			continue;
+		}
 		$pos_table->name = $pos;
 		$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 		$pos_table->end_time = $end_time;
