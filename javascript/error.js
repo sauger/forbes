@@ -4,7 +4,8 @@
 	function go(){ 
 	jd("bar").style.width = parseInt(jd("bar").style.width) + 1 + "%"; 
 	if(jd("bar").style.width == "100%"){ 
-	window.clearInterval(bar); 
+	window.clearInterval(bar);
+	window.location.href = '/';
 	} 
 	
 	} 
