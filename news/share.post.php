@@ -52,4 +52,4 @@
 	#redirect('share.php?news_id='.$news_id);
 ?>
 alert("已成功分享！");
-window.location.href = <?php echo static_news_url($news);?>
+window.location.href = "<?php echo static_news_url($news);?>";
