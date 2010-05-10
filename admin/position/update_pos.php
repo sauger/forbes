@@ -230,21 +230,18 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 				
 				$record = $db->query("select id,end_time from fb_page_pos where name='{$pos_name}'");
 				if($db->record_count==1){
-					if($record[0]->end_time>now()){
-					}else{
-						$pos = new table_class('fb_page_pos');
-						$pos->find($record[0]->id);
-						$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
-						$pos->end_time = $end_time;
-						$pos->display = $news[$i]->title;
-						$pos->title = $news[$i]->title;
-						$pos->image1 = $news[$i]->video_photo_src;
-						$pos->description = $news[$i]->description;
-						$pos->href = dynamic_news_url($news[$i]);
-						$pos->static_href = column_article_url($column[0]->name,$news[$i]->id,'static');
-						$pos->save();
-						break;
-					}
+					$pos = new table_class('fb_page_pos');
+					$pos->find($record[0]->id);
+					$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
+					$pos->end_time = $end_time;
+					$pos->display = $news[$i]->title;
+					$pos->title = $news[$i]->title;
+					$pos->image1 = $news[$i]->video_photo_src;
+					$pos->description = $news[$i]->description;
+					$pos->href = dynamic_news_url($news[$i]);
+					$pos->static_href = column_article_url($column[0]->name,$news[$i]->id,'static');
+					$pos->save();
+					break;
 				}else{
 					$pos = new table_class('fb_page_pos');
 					$pos->name = $pos_name;
