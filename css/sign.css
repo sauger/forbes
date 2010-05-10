@@ -21,7 +21,7 @@ p{margin:0; padding:0}
 .f_xx{width:80px; height:15px;  margin-left:2px; line-height:20px;  font-size:13px; float:left; display:inline;}
 #fc_x_right{width:400px; height:20px; margin-top:4px; float:left; display:inline;}
 .fc_title_pg{width:8px; height:15px; margin-top:7px; margin-left:10px; background:url(../images/index/column_btnr.jpg); float:left; display:inline;}
-#fc_a{width:623px; height:30px; line-height:30px; margin-left:10px; font-size:14px; font-weight:bold; float:left; display::inline;}
+#fc_a{width:623px; height:50px; line-height:25px; margin-left:10px; margin-top:5px; font-size:14px; float:left; display::inline;}
 .fc_title{width:300px; height:30px; margin-left:5px; font-size:13px; font-weight:bold; line-height:30px; float:left; display:inline;}
 .fc_c{width:613px; height:30px;  margin-left:20px; line-height:30px; float:left; display:inline;}
 .fc_c_left{width:100px; height:30px; margin-left:20px; font-size:13px; font-weight:bold; float:left; display:inline;}
