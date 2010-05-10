@@ -19,7 +19,7 @@
 			<a href="/column/<?php echo $record[$i]->name;?>"><?php echo $record[$i]->nick_name;?></a>
 		</div>
 		<div class="clo_des">
-			<?php echo $record[$i]->description;?>
+			<?php echo strip_tags($record[$i]->description);?>
 		</div>
 		<div class="clo_news">
 			<a href="<?php echo static_news_url($record[$i])?>"><?php echo $record[$i]->title;?></a>
@@ -43,7 +43,7 @@
 			<a href="/column/<?php echo $record[$i]->name;?>"><?php echo $record[$i]->nick_name;?></a>
 		</div>
 		<div class="clo_des">
-			<?php echo $record[$i]->description;?>
+			<?php echo strip_tags($record[$i]->description);?>
 		</div>
 		<div class="clo_news">
 			<a href="<?php echo static_news_url($record[$i])?>"><?php echo $record[$i]->title;?></a>
