@@ -34,3 +34,5 @@ body {font-size:12px;  font-family:Arial,宋体; color:#000;  margin:0 auto; pad
 .cy_dash{width:635px; height:1px; margin-top:10px; background:url('/images/right/dash4.gif') repeat-x; overflow:hidden; float:left; display:inline;}
 #paginage{width:650px; height:30px; margin-top:20px; font-size:14px; line-height:30px; color:#666666; text-align:center;}
 #paginage a{color:#246BB0; text-decoration:none;}
+#paginage{width:650px; height:30px; margin-top:20px; font-size:14px; line-height:30px; color:#666666; text-align:center;}
+#paginage a{color:#246BB0; text-decoration:none;}
