@@ -88,7 +88,7 @@
 					<div class="enterzl"><a href="<?php echo "{$static_site}/column/{$user[$i]->name}";?>">进入专栏>></a></div>	
 				</div>
 				<?php 
-					$news=$db->query('select * from fb_news where publisher='.$user[$i]->id.' and is_adopt=1 order by priority asc, created_at desc limit 2');
+					$news=$db->query('select * from fb_news where publisher='.$user[$i]->id.' order by priority asc, created_at desc limit 2');
 					$ncount = $db->record_count;
 					for($j=0;$j<$ncount;$j++){
 				?>
