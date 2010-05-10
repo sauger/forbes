@@ -25,6 +25,7 @@
 		<div id=bread_line></div>
 		<div id=l>
 			<div class="share_line">分享给好友，您可以输入好友昵称和邮件地址，将福布斯的精华文章和您的商务好友分享</div>
+			<form action="/php/share.post.php" method="post" id="share_form">
 			<div class="share_line">
 				<div class="share_mail"><span>好友邮件1:</span><input name="mail[]" class="input1" type="text"></div>
 				<div class="share_name"><span>好友昵称1：</span><input name="name[]" class="input2" type="text"></div>
@@ -41,6 +42,7 @@
 			<div style="margin-top:50px" class="share_line"><button id="share_submit" type="button">提交</button></div>
 			<input type="hidden" name="session" value="<?php echo $_SESSION['news_share'];?>">
 			<input type="hidden" name="news_id" value="<?php echo $news_id;?>">
+			</form>
 		</div>
 		<div id="right_inc">
 			<?php include_right('ad');?>

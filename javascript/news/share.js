@@ -33,7 +33,7 @@ $(function(){
 			alert(error_info);
 		}
 		if(run_time){
-			$.getScript('/php/share.post.php?'+ $('#l').serialize());
+			$.getScript('/php/share.post.php?'+ $('#share_form').serialize());
 		}
 	});
 });
