@@ -109,7 +109,7 @@
 				<?php for($i=1;$i<5;$i++){
 				?>
 				<div id="rt_tab<?php echo $i;?>" class="rt_tab" <?php show_page_pos($pos_name,'link_img	')?>>
-					<a href="<?php echo $pos_items->$pos_name->static_href;?>"><img width="300" height="280" title="<?php echo $pos_items->$pos_name->title;?>" src="<?php echo $pos_items->$pos_name->image1?>" /></a>
+					<a href="<?php echo $pos_items->$pos_name->static_href;?>"><img border="0" width="300" height="280" title="<?php echo $pos_items->$pos_name->title;?>" src="<?php echo $pos_items->$pos_name->image1?>" /></a>
 				</div>
 				<?php }?>
 				<script>
