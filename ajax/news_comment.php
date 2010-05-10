@@ -13,7 +13,13 @@
 		}while($db->move_next());
 
 	}
-	$comments_url = strpos($_SERVER['HTTP_REFERER'],'.shtml') > 0? $_SERVER['HTTP_REFERER'] .'/comments' : "comment_list.php?id=$id";
+	if(strpos($_SERVER['HTTP_REFERER'],'.shtml') > 0){
+		$comments_url = $_SERVER['HTTP_REFERER'] .'/comments';
+		$type = 'static';
+	}else{
+		$comments_url = "comment_list.php?id=$id";
+		$type = 'dynamic';
+	}
 ?>
 	<div id=comment_caption>
 		<div id=comment_title>读者评论</div>
@@ -70,7 +76,12 @@
 				for($j=0;$j<$f_count;$j++){
 					$content = str_replace($filte_words[$j]->words,'****',$content);
 				}
-				echo $content;
+				if($type == 'static'){
+					$url = "$comments_url/{$comment[$i]->id}";
+				}else{
+					$url = "$comments_url&comment_id={$comment[$i]->id}";
+				}
+				echo "<a href='{$url}' target='_blank'>$content</a>";
 			?>
 		</div>
 	</div>
