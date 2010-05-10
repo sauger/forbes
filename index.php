@@ -132,7 +132,7 @@
 			<div class=caption>
 				<div class=captions>创业<span>Enterpreneurs</span></div>
 				<div class=line>|</div>
-				<a href="/investment/" class=more target="_blank"></a>
+				<a href="/entrepreneur/" class=more target="_blank"></a>
 			</div>
 			<div class=forbes_l_content>
 				<div class=list1>
