@@ -32,7 +32,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 .hr_dashed{width:640px; height:15px;  background:url(../images/news/dash.gif) repeat-x; margin-top:15px; }
 
-.content_lable{width:600px; margin-bottom:5px; margin-right:7px; margin-left:15px;  margin-top:5px; }
+.content_lable{width:600px; line-height:20px; height:60px; margin-bottom:5px; margin-right:7px; margin-left:15px;  margin-top:5px; overflow: hidden; }
+.content_lable a{color:#333333; text-decoration: none;}
 
 .title_people{width:100px; height:18px;}
 #page{width:650px; height:30px; margin-top:20px; font-size:14px; line-height:30px; color:#666666; text-align:center;}
