@@ -54,7 +54,6 @@
 		<div id=bread>专栏作者检索	</div>
 		<div id=bread_line></div>
 		<div id=cy_left>
-			<div id=search>专栏搜索：<select id="type"><option></option><option <?php if($type=='created_at')echo 'selected="selected"'?> value="created_at">按最新发布文章排序</option><option <?php if($type=='click_count')echo 'selected="selected"'?> value="click_count">按最多点击文章排序</option></select><input type="text" value="<?php echo $key;?>" id="author_text"><button id="author_search">搜索</button></div>
 			<div id=cy_title>
 				<div id=title_left></div>
 				<div id=title_center>
@@ -76,24 +75,23 @@
 					<img border=0 src="<?php echo $user[$i]->image_src;?>">
 				</div>
 				<div class=pictitle>
-					<?php echo $user[$i]->nick_name;?>专栏
+					<a href="<?php echo "{$static_site}/column/{$user[$i]->name}";?>"><?php echo $user[$i]->nick_name;?>专栏</a>
 				</div>
 				<div class=piccontent>
-					<?php echo $user[$i]->description;?>
+					<?php echo strip_tags($user[$i]->description);?>
 				</div>
 			</div>
 			<div class=newarticle>
 				<div class=wz>最新专栏文章</div>
 				<div class=wx>
-					<div class="enterzl"><a href="<?php echo "{$static_site}/column/{$user[$i]->name}";?>">进入专栏>></a></div>	
+					<div class="enterzl"></div>	
 				</div>
 				<?php 
-					$news=$db->query('select * from fb_news where publisher='.$user[$i]->id.' and is_adopt=1 order by priority asc, created_at desc limit 2');
+					$news=$db->query('select * from fb_news where publisher='.$user[$i]->id.' order by priority asc, created_at desc limit 2');
 					$ncount = $db->record_count;
 					for($j=0;$j<$ncount;$j++){
 				?>
 				<div class=content>
-					<div class="images"><img border=0 src="/images/tyzl/sjt.jpg"></div>
 					<div class=context><a href="<?php echo column_article_url($user[$i]->name,$news[$j],'static');?>"><?php echo $news[$j]->title;?></a></div>
 				</div>
 				<?php if($j==0){?>

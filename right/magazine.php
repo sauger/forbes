@@ -1,4 +1,5 @@
 <?php include_once(dirname(__FILE__).'/../frame.php');
+init_page_items();
 global $pos_name;?>
 <div class=right_title>
 	<div class=title_con>福布斯杂志</div>
