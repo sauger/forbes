@@ -1,6 +1,6 @@
 <?php 
 	js_include_tag('right');
-	$catename=$db->query('SELECT name FROM fb_category where id='.$cid); 
+	$catename=$db->query('SELECT id,name FROM fb_category where id='.$cid); 
 	$category = new category_class('news');
 ?>
 		<div id=bread><?php echo $catename[0]->name; ?></div>
@@ -55,7 +55,7 @@
 				<div class=caption style="height:40px; margin-top:20px;">
 					<div class=captions><?php echo $catename[0]->name; ?>专栏</div>
 					<div class=line>|</div>
-					<a href="/column/" class=more target="_blank"></a>
+					<a href="/column/category/<?php echo $catename[0]->id?>" class=more target="_blank"></a>
 				</div>
 				<?php for($i=0;$i<3;$i++){ $pos_name = $pos."column".$i;?>
 				<div class=column_container<?php show_page_pos($pos_name,'column_full')?>>
