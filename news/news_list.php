@@ -101,10 +101,8 @@
 					if($top_news){
 				?>
 			<div id=list_top>
-				<div class="head_line">
 					<div id=picture><img width="300" height="200"  src="<?php echo $top_news[0]->video_photo_src?>"></div>
 					<div id=title><a href="<?php echo get_news_url($top_news[0]);?>"><?php echo $top_news[0]->title;?></a></div>
-				</div>
 					<div id=description><?php echo strip_tags($top_news[0]->description);?></div>
 					<div id=info>记者：<?php echo $top_news[0]->author;?>　发布于：<?php echo substr($top_news[0]->created_at,0,10);?></div>
 			</div>
