@@ -2,18 +2,13 @@
 	include_once('../frame.php');
 	$cid = intval($_GET['cid']);  //normal category list;can work with author_type to find the column articles;
 	$news_id = intval($_GET['news_id']); //find the news with the same author by giving the news id;
-	if(empty($cid) && empty($news_id)){
+	$author_type = $_GET['author_type'];
+	if(empty($cid) && empty($news_id) && empty($author_type)){
 		redirect('error.html');
 		die();
 	}
 	$db = get_db();
-	if($cid){
-		$category = new category_class('news');
-		$c_id = $category->children_map($cid);
-		$c_id = implode(',',$c_id);
-		$conditions[] = "a.category_id in ({$c_id})";
-		$title = $category->find($cid)->name;
-	}else{
+	if($news_id){
 		$db->query("select author as name from fb_news where id={$news_id}");
 		if($db->record_count <= 0){
 			redirect('/error/');
@@ -22,9 +17,16 @@
 		$author = $db->field_by_name('name');
 		$conditions[]="author='{$author}'";
 		$title = "作者:{$author}";
+	}else{
+		if(empty($cid)) $cid = 0;
+		$category = new category_class('news');
+		$c_id = $category->children_map($cid);
+		$c_id = implode(',',$c_id);
+		$conditions[] = "a.category_id in ({$c_id})";
+		$title = $category->find($cid)->name;
 	}
 	
-	$author_type = $_GET['author_type'];
+	
 	if($author_type == 'column_writer' || $author_type == 'column_editor'){
 		$conditions[] = "b.role_name = '{$author_type}'";
 	}elseif($author_type == 'column'){
@@ -65,7 +67,7 @@
 		<?php include_top();?>
 		<div id=bread>
 			<?php
-			if($cid){
+			if($cid || $cid===0	){
 				$parent_ids = $category->tree_map($cid);
 				$len = count($parent_ids);
 				$itemp = 0;
