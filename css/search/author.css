@@ -19,6 +19,7 @@ body {font-size:12px;  font-family:Arial,宋体; color:#000;  margin:0 auto; pad
 .cy_content .pic{width:92px; height:92px; margin-left:10px; border:1px solid #999999; float:left; display:inline;}
 .cy_content .pic img{width:90px; height:90px; margin-top:1px; margin-left:1px; float:left; display:inline;}
 .cy_content .pictitle{width:482px; height:20px; margin-left:10px; color:#0d4471; line-height:20px; font-size:14px; font-weight:bold; overflow:hidden; float:left; display:inline;}
+.cy_content .pictitle a{color:#246BB0; text-decoration:none;}
 .cy_content .piccontent{width:482px; height:60px; margin-top:10px; margin-left:10px; color:#666666; line-height:20px; overflow:hidden; float:left; display:inline;}
 .newarticle{width:635px; margin-top:10px; float:left; display:inline;}
 .newarticle .wz{width:96px; height:18px; margin-left:10px; margin-bottom:10px; font-size:14px; line-height:18px; font-weight:bold; float:left; display:inline;}
