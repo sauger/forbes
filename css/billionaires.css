@@ -24,14 +24,14 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_head #flash_b #content a{color:#ffffff; text-decoration:none;}
 #billionaires_head_right{width:3px; height:236px; background:url('/images/billionaires/billionaires_head_right.jpg') no-repeat; overflow:hidden;}
 #billionaires_ranking{width:520px; margin-top:20px;}
-#billionaires_ranking #ranking_top{width:510px; height:260px; border-bottom:1px dotted #cccccc;}
+#billionaires_ranking #ranking_top{width:510px; height:250px; border-bottom:1px dotted #cccccc;}
 #billionaires_ranking #ranking_top .piccontent{width:150px; height:240px; margin-right:20px; overflow:hidden;}
 #billionaires_ranking #ranking_top .pic{width:148px; height:198px; border:1px solid #cccccc; overflow:hidden;}
 #billionaires_ranking #ranking_top .pic img{width:144px; height:194px; border:none; margin:2px;}
 #billionaires_ranking #ranking_top .pictitle{width:150px; height:30px; margin-top:10px; line-height:30px; font-size:18px; font-weight:bold; text-align:center; overflow:hidden;}
 #billionaires_ranking #ranking_top .pictitle a{color:#666666; text-decoration:none;}
-#billionaires_ranking #ranking_bottom{width:510px; margin-top:10px;}
-#billionaires_ranking #ranking_bottom .piccontent{width:74px; height:100px; margin:10px;}
+#billionaires_ranking #ranking_bottom{width:510px; margin-top:5px;}
+#billionaires_ranking #ranking_bottom .piccontent{width:74px; height:100px; margin:10px; margin-bottom:0; margin-top:5px;}
 #billionaires_ranking #ranking_bottom .pic{width:72px; height:72px; border:1px solid #cccccc;}
 #billionaires_ranking #ranking_bottom .pic img{width:70px; height:70px; border:none; margin:1px;}
 #billionaires_ranking #ranking_bottom .pictitle{width:74px; height:20px; line-height:20px; font-size:12px; text-align:center; overflow:hidden;}
@@ -49,8 +49,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_search .search_content_r .content{width:215px; line-height:30px;}
 #billionaires_search #search_pic1{width:228px; height:113px; margin-top:23px; border:1px solid #cccccc; overflow:hidden;}
 #billionaires_search #search_pic1 img{width:226px; height:111px; margin:1px;}
-#billionaires_search #rich_banner1{width:228px; height:154px; margin-top:22px; margin-left:10px; border:1px solid #cccccc; overflow:hidden;}
-#billionaires_search #rich_banner1 img{width:226px; height:152px; margin:1px;}
+#billionaires_search #rich_banner1{width:228px; height:207px; margin-left:10px; border:1px solid #cccccc; overflow:hidden;}
+#billionaires_search #rich_banner1 img{width:226px; height:205px; margin:1px;}
+#billionaires_search #rich_banner2{width:228px; height:207px; margin-top:25px; margin-left:10px; border:1px solid #cccccc; overflow:hidden;}
+#billionaires_search #rich_banner2 img{width:226px; height:205px; margin:1px;}
 #billionaires_lists{width:227px; margin-top:10px; float:right;}
 #billionaires_lists_top{width:225px; height:234px; border:1px solid #dfdfdf;}
 #billionaires_lists .title{width:225px; height:28px; border-bottom:1px solid #dfdfdf; background:url('/images/billionaires/billionaires_lists_title.jpg') repeat-x;}
@@ -61,7 +63,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_lists_top #content .context .point{width:4px; height:4px; margin-top:8px; background:url('/images/billionaires/r_t_point.jpg') no-repeat;}
 #billionaires_lists_top #content .context .cl{width:185px; height:20px; line-height:20px; overflow:hidden; float:right;}
 #billionaires_lists_top #content .context .cl a{color:#003193; text-decoration:none;}
-#billionaires_lists_bottom{width:225px; height:532px; margin-top:10px; border:1px solid #dfdfdf;}
+#billionaires_lists_bottom{width:225px; height:451px; margin-top:10px; border:1px solid #dfdfdf;}
 #billionaires_lists_bottom .content1{width:223px; height:70px; margin-top:1px; margin-left:1px; background:#f1f7f8;}
 #billionaires_lists_bottom .content1 .pic1{width:52px; height:52px; margin-top:9px; margin-left:10px; border:1px solid #e1e4e5; overflow:hidden;}
 #billionaires_lists_bottom .content1 .pic1 img{width:50px; height:50px; margin:1px;}

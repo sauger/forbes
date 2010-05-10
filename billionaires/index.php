@@ -68,6 +68,7 @@
 				</div>
 			</div>
 				<div id=billionaires_search>
+				<!--
 					<div class="search_title">自然人检索</div>
 					<div class=search_content_l></div>
 					<div class="search_content_r">
@@ -138,8 +139,12 @@
 						</div>
 						<div class=content><button id="search"></button></div>
 					</div>
+					-->
 					<div id=rich_banner1 class="ad_banner">
-						<a href=""><img border=0 src="/images/fh/four.jpg"></a>	
+						<a href=""></a>	
+					</div>
+					<div id=rich_banner2 class="ad_banner">
+						<a href=""></a>	
 					</div>
 				</div>
 			</div>
@@ -185,11 +190,12 @@
 						<div class=num<?php echo $i;?>></div>
 					</div>
 					<?php } ?>
+					<!--  
 					<div id=billionaires_inventory>富豪清单　<select></select></div>
 					<div id=lists>
 						<a href="" style="color:#0f78b0;">排名</a>　　<a href="">姓名</a>　　<a href="">名开头字母顺序</a>	
 						<a href="">年龄</a>　　<a href="">资产规则</a>　　<a href="">城市区域</a>	
-					</div>
+					</div>-->
 				</div>
 			</div>
 			<div id=billionaires_m class="ad_banner">
