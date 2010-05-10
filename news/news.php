@@ -118,7 +118,7 @@
 	          
 	          <?php
 							if($news->author!=''){
-								$record = $db->query("select id,created_at,short_title,title from fb_news where author='{$news->author}' and id!=$id limit 3");
+								$record = $db->query("select id,created_at,short_title,title from fb_news where author='{$news->author}' and title!='{$title}' group by title limit 3");
 								if(count($record)>0){
 						?>
 						<div class=info_title style="margin-top:15px;">该作者其他文章</div>

@@ -44,7 +44,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #navigation .menu #piccolumn{background:url(/images/public/m_column.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_column.png);}
 
 #navigation #top_function2{width:214px; height:29px; margin-top:5px; background:url(/images/public/bg3.jpg) no-repeat; background-position:bottom; float:right;}
-#navigation #member{width:52px; height:12px; margin-top:12px; margin-left:40px; cursor:pointer; background:url(/images/public/member.png) no-repeat;float:left;}
+#navigation #member{width:52px; height:12px; margin-top:12px; margin-left:40px; background:url(/images/public/member.png) no-repeat;float:left;}
 #navigation #magazine{width:52px; height:12px; margin-top:12px; margin-right:10px; cursor:pointer; background:url(/images/public/magazine.png); float:right;}
 
 #navigation2{width:1000px; height:27px; background:#C1E1EE;}

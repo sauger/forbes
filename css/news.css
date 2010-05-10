@@ -12,7 +12,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #bread a:hover{color:blue; text-decoration: underline;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
 
-#l{width:665px; overflow:hidden;}
+#l{width:665px; margin-top:10px; overflow:hidden;}
 
 #news_title{width:650px; margin-left:10px; overflow:hidden; font-size:30px; color:#1E448D; line-height:40px; font-weight:bold; font-family:微软雅黑,宋体; clear:both;}
 
