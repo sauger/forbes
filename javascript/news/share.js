@@ -9,15 +9,16 @@ $(function(){
 	
 	$("#share_submit").click(function(){
 		
-		
+		/*
 		var input_array = new Array();
 		var input_size = $(".input1").size();
 		for(var i=0;i<input_size;i++){
 			if(isEmail($(".input1").eq(i).val())&&$(".input2").eq(i).val()!=''){
-				
+				input_array.push()
 			}
 		}
 		return false;
+		*/
 		var input1 = false;
 		var input2 = false;
 		
