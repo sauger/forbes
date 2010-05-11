@@ -21,7 +21,9 @@
 	}
 	$pid = implode(',',$pid);
 	$nid = implode(',',$nid);
-	$db->execute("delete from fb_publish_schedule where id in ($pid)");
-	$db->execute("update fb_news set is_adopt=1 where id in ($nid)");
+	if($pid){
+		$db->execute("delete from fb_publish_schedule where id in ($pid)");
+		$db->execute("update fb_news set is_adopt=1 where id in ($nid)");
+	}
 	close_db();
 ?>
