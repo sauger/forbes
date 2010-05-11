@@ -29,6 +29,7 @@ tr{height:40px; line-height:40px; }
 .display3{color:#FF0000; float:left; display:none;}
 .pic{width:14px; height:14px; }
 .pic_content{margin-left:5px; line-height:14px; }
+.radio_div{width:50px; margin-left:20px;}
 hr{width:840px; height:1px; margin-top:10px; color:#cccccc; }
 #yzm_input{width:120px; height:25px; line-height:25px; }
 #yzm_input input{width:120px; height:22px; border:1px solid #CCCCFF;}

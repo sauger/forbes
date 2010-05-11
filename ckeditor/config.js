@@ -12,7 +12,7 @@ CKEDITOR.editorConfig = function( config )
 
 	config.language = 'zh-cn';
 	config.toolbar = 'title';
-
+	config.autoUpdateElement = true;
 
 	    config.toolbar_title =
 	    [
