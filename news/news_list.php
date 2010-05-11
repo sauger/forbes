@@ -8,6 +8,7 @@
 		die();
 	}
 	$db = get_db();
+	$category = new category_class('news');
 	if($news_id){
 		$db->query("select author as name from fb_news where id={$news_id}");
 		if($db->record_count <= 0){
@@ -19,7 +20,6 @@
 		$title = "作者:{$author}";
 	}else{
 		if(empty($cid)) $cid = 0;
-		$category = new category_class('news');
 		$c_id = $category->children_map($cid);
 		$c_id = implode(',',$c_id);
 		$conditions[] = "a.category_id in ({$c_id})";
