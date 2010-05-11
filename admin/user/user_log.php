@@ -7,7 +7,7 @@
 	$start = $_GET['start'];
 	$end = $_GET['end'];
 	$key  = $_GET['key'];
-	$sql = "select t1.name,t1.nick_name,t2.* from fb_user t1 join fb_user_log t2 on t1.id where 1=1";
+	$sql = "select t2.*,t1.name,t1.nick_name from fb_user_log t2 join fb_user t1 on t1.id=t2.user_id where 1=1";
 	if($key!=''){
 		$sql .= " and (t1.name like '%$key%' or t1.nick_name like '%$key%')";
 	}
