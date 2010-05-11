@@ -57,7 +57,7 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="30%">广告名</td><td width="20%">展示次数</td><td width="20%">有效次数</td><td width="15%">有效率</td><td width="15%">操作</td>
+			<td width="30%">广告名</td><td width="20%">展示次数</td><td width="20%">点击次数</td><td width="15%">有效率</td><td width="15%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){

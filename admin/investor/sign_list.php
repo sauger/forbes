@@ -4,7 +4,7 @@
 	judge_role();	
 	$search = $_REQUEST['search'];
 	$db = get_db();
-	$sql = "SELECT * FROM forbes.fb_investor_sign f where 1=1";
+	$sql = "SELECT * FROM fb_investor_sign f where 1=1";
 	$sea = $_REQUEST['sea'];
 	if($sea!=''){
 		if($sea=='风险投资'){
@@ -31,6 +31,7 @@
 	<?php
 		css_include_tag('admin');
 		use_jquery();
+		js_include_tag('admin_pub');
 	?>
 </head>
 
@@ -69,7 +70,7 @@
 		<tr class="btools">
 			<td colspan=10>
 				<?php paginate("",null,"page",true);?>
-				<input type="hidden" id="db_table" value="fb_subscription">
+				<input type="hidden" id="db_table" value="fb_investor_sign">
 			</td>
 		</tr>
 		</table>	
@@ -80,25 +81,13 @@
 $(function(){
 	$(".sau_search").keypress(function(event){
 		if (event.keyCode == 13) {
-			search();
+			sea();
 		}
 	});
 	
 	$('#search_button').click(function(){
 		sea();
 	})
-	$(".del").click(function(){
-		if(!window.confirm("确定要删除吗"))
-		{
-			return false;
-		}
-		else
-		{
-			$.post("del_magazine_order.php",{'del_id':$(this).attr('name')},function(data){
-			});
-			$(this).parent().parent().remove();
-		}
-	});
 })
 
 function sea(){
