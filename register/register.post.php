@@ -59,6 +59,7 @@
 	$user->password = md5($user->password);
 	$user->authenticate_string = rand_str(10);
 	$user->authenticated = 0;
+	$user->ip =$_SERVER["REMOTE_ADDR"];
 	#$user->created_at = now();
 	$user->save();
 	//echo $user->id;
