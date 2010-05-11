@@ -102,7 +102,7 @@
 					<div class=line>|</div>
 					<a href="http://www.forbeschina.com/column/category/writer" target="_blank" class=more></a>
 					<?php
-						for($i=0;$i<3;$i++){
+						for($i=0;$i<4;$i++){
 							$pos_name = 'column_edit_t'.$i;
 					?>
 					<div class=column_edit_t <?php #show_page_pos($pos_name,"column_with_author"); ?>>
@@ -119,21 +119,7 @@
 						</div>
 					</div>
 					<?php }?>
-					<div class=column_edit_recommend >
-						<?php
-							for($i=3;$i<6;$i++){
-								$pos_name = 'column_edit_t'.$i;
-						?>
-						<div class=t1<?php #show_page_pos($pos_name,'column_simple'); ?>>
-							<div class=t2>
-								<?php show_page_href(); ?>
-							</div>
-							<div class=t3>
-								—<?php echo $pos_items->$pos_name->alias;?>
-							</div>
-						</div>
-						<?php }?>
-					</div>
+					
 					<div class="dash2"></div>
 					<div class=column_edit_b>
 						<div class=caption>
@@ -207,7 +193,7 @@
 					<div class=line>|</div>
 					<a href="http://www.forbeschina.com/column/category/editor" target="_blank" class=more></a>
 					<?php
-						for($i=0;$i<3;$i++){
+						for($i=0;$i<4;$i++){
 							$pos_name = "column_edit_edit_t2_{$i}";
 					?>
 					<div class=column_edit_t <?php #show_page_pos($pos_name,"column_with_author"); ?>>
@@ -224,21 +210,7 @@
 						</div>
 					</div>
 					<?php }?>
-					<div class=column_edit_recommend>
-						<?php
-							for($i=3;$i<6;$i++){
-								$pos_name = "column_edit_edit_t2_{$i}";
-						?>
-						<div class=t1<?php #show_page_pos($pos_name,'column_simple'); ?>>
-							<div class=t2>
-								<?php show_page_href(); ?>
-							</div>
-							<div class=t3>
-								—<?php echo $pos_items->$pos_name->alias;?>
-							</div>
-						</div>
-						<?php }?>
-					</div>
+					
 					<div class="dash2"></div>
 					<div class=column_edit_b>
 						<div class=caption>

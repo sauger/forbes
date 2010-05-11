@@ -39,7 +39,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .column_edit_t .t1{width:310px;}
 .column_edit_t .t2{width:300px; height:23px; overflow:hidden; font-size:16px; color:#003899; font-weight:bold;  line-height:23px;}
 .column_edit_t .t2 a{color:#003899;}
-.column_edit_t .t3{height:23px; margin-right:10px; font-size:12px; color:#666666; overflow:hidden; line-height:23px; float:right;}
+.column_edit_t .t3{height:23px; margin-right:10px; font-size:12px; color:#666666; font-weight:bold; overflow:hidden; line-height:23px; float:right;}
 .column_edit_t .t3 a{color:#666666;}
 .column_edit_t .t4{width:300px; height:44px; font-size:12px; line-height:22px; margin-top:5px; overflow:hidden;}
 .column_edit_t .t4 a{color:#666666;}
