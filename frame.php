@@ -211,8 +211,8 @@ function paginate($url="",$ajax_dom=null,$page_var="page",$force_show = false)
 		$url = $_SERVER['PHP_SELF'] ."?";
 	}
 	$turl = $_SERVER['PHP_SELF'];
-	$pattern1 = '/(.+)\.php$/';
-	if($page_type=='static' && !preg_match($pattern1,$turl)){
+	$pattern = '/(.+)\.php$/';
+	if($page_type=='static' && !preg_match($pattern,$turl)){
 		$url = $_SERVER['PHP_SELF'];
 		$pattern = '/(.+)\/page\/(\d+)/';
 		if(preg_match($pattern,$url)){
@@ -282,7 +282,7 @@ function paginate($url="",$ajax_dom=null,$page_var="page",$force_show = false)
 			function jumppage(urlprex,pageindex)
 			{
 			<?php 
-				if($page_type=='static' && !preg_match($pattern1,$turl)){
+				if($page_type=='static' && !preg_match($pattern,$turl)){
 					$str = "'{$url}/page/' + pageindex;";	
 				}else{
 					$str = "urlprex + pageindex;";
@@ -341,6 +341,8 @@ function role_include($file, $role='member'){
 }
 
 function require_login($type="redirect"){
+	var_dump($_COOKIE);
+	die();
 	if($_COOKIE['cache_name']){
 		return true;
 	}
@@ -371,7 +373,7 @@ function search_content($key,$table_name='fb_news',$conditions=null,$page_count 
 		$sql .= " and {$conditions}";
 	}
 	if($key){
-		$sql .= " and (title regexp '{$key}' or short_title regexp '{$key}' or keywords regexp '{$key}' or author regexp '{$key}'";
+		$sql .= " and (title regexp '{$key}' or short_title regexp '{$key}' or keywords regexp '{$key}'";
 		if($full_text){
 			$sql .= " or content regexp '{$key}'";
 		}
