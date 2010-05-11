@@ -12,7 +12,7 @@ CKEDITOR.editorConfig = function( config )
 
 	config.language = 'zh-cn';
 	config.toolbar = 'title';
-
+	config.autoUpdateElement = true;
 
 	    config.toolbar_title =
 	    [
@@ -28,5 +28,5 @@ CKEDITOR.editorConfig = function( config )
 	    config.ignoreEmptyParagraph = false;
 	    config.startupOutlineBlocks = true;
 	    config.font_names = 'Arial;Times New Roman;Verdana;宋体;黑体;微软雅黑';
-	    
+			config.disableNativeTableHandles = true;
 };
