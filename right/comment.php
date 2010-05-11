@@ -1,4 +1,17 @@
-<?php include_once(dirname(__FILE__).'/../frame.php');?>
+<?php 
+	include_once(dirname(__FILE__).'/../frame.php');
+	global $page_type;
+	global $page_items;
+	if($page_type == 'static'){
+		function get_news_url($news){
+			return static_news_url($news);
+		}
+	}else{
+		function get_news_url($news){
+			return dynamic_news_url($news);
+		}
+	}
+?>
 <div class=right_title>
 	<div class=title_con>读者高见</div>
 	<div class=more><a href="http://www.forbeschina.com/comments/"><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
@@ -17,16 +30,3 @@
 	<?php }?>
 </div>
 <div class=bottom_line></div>
-<?php 
-	global $page_type;
-	global $page_items;
-	if($page_type == 'static'){
-		function get_news_url($news){
-			return static_news_url($news);
-		}
-	}else{
-		function get_news_url($news){
-			return dynamic_news_url($news);
-		}
-	}
-?>
