@@ -72,18 +72,7 @@
 				<?php if($record->item_type==1) echo '风险投资'; else if($record->item_type==2) echo '出售企业'; else if($record->item_type) echo '天使投资';?>
 			</td>
 		</tr>
-		<tr class=tr4>
-			<td  class=td1>电子邮件</td>
-			<td>
-				<?php echo $record->Position2;?>
-			</td>
-		</tr>
-		<tr class=tr4>
-			<td  class=td1> 省/直辖市</td>
-			<td>
-				<?php echo $record->Province;?>
-			</td>
-		</tr>
+	
 		<tr class=tr4>
 			<td  class=td1>邮箱</td>
 			<td>
