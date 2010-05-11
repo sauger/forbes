@@ -164,7 +164,7 @@
 				<select multiple="multiple" id="sel_keywords">
 				<?php for($i=0;$i<$record_count;$i++){?>
 				<option value="<?php echo $recvalue[$i]->year;?>">
-				<?php echo $recvalue[$i]->year;?>年<?php echo $recvalue[$i]->income;?>
+				<?php echo $recvalue[$i]->year;?>年<?php echo $recvalue[$i]->income;?>万人民币
 				</option>
 				<?php }?> 	
 				</select>
