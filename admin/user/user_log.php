@@ -4,11 +4,20 @@
 	judge_role();
 	
 	$db = get_db();
-	$search  = $_GET['search'];
-	$sql = "select t1.name,t2.* from fb_user t1 join fb_user_log t2 on t1.id where 1=1";
-	if($search!=''){
-		$sql .= " and t1.name like '%$search%'";
+	$start = $_GET['start'];
+	$end = $_GET['end'];
+	$key  = $_GET['key'];
+	$sql = "select t1.name,t1.nick_name,t2.* from fb_user t1 join fb_user_log t2 on t1.id where 1=1";
+	if($key!=''){
+		$sql .= " and (t1.name like '%$key%' or t1.nick_name like '%$key%')";
 	}
+	if($start!=''&&$start!='开始时间'){
+		$sql .= " and datetime>'{$start} 00:00:00'";
+	}
+	if($end!=''&&$end!='结束时间'){
+		$sql .= " and datetime<'{$end} 23:59:59'";
+	}
+	$sql .= " order by datetime desc";
 	$records = $db->paginate($sql,30);
 	$count = count($records);
 ?>
@@ -21,33 +30,29 @@
 	<title>迅傲信息</title>
 	<?php 
 		css_include_tag('admin');
-		use_jquery();
-		js_include_tag('admin_pub');
+		use_jquery_ui();
 	?>
 </head>
 <body>
 	<div id=icaption>
-    <div id=title>用户管理</div>
-	  <a href="user_edit.php" id=btn_add></a>
+    <div id=title>用户登录日志</div>
 	</div>
 	<div id=isearch>
-		<input class="sau_search" id="search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
+		<input id="key" type="text" value="<?php echo $key?>">
+		<input type="text" id="start" class="date_jquery" value="<?php if($start)echo $start;else echo '开始时间';?>">
+		<input type="text" id="end" class="date_jquery" value="<?php if($end)echo $end;else echo '结束时间';?>">
 		<input type="button" value="搜索" id="search_button">
 	</div>
 	<div id=itable>
 	<table cellspacing="1"  align="center">
 		<tr class="itable_title">
-			<td width="25%">用户名</td><td width="25%">用户昵称</td><td width="25%">用户身份</td><td width="25%">操作</td>
+			<td width="35%">用户名</td><td width="35%">用户昵称</td><td width="30%">登录时间</td>
 		</tr>
 		<?php for($i=0;$i<$count;$i++){?>
 		<tr class="tr3" id="<?php echo $records[$i]->id;?>">
 			<td><?php echo $records[$i]->name;?></td>
 			<td><?php echo $records[$i]->nick_name;?></td>
-			<td><?php echo $records[$i]->role_name;?></td>
-			<td>	
-				<a href="user_edit.php?id=<?php echo $records[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border="0"></a> 
-				<span class="del" title="删除" name="<?php echo $records[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
-			</td>
+			<td><?php echo $records[$i]->datetime;?></td>
 		</tr>
 		<? }?>
 		<tr class="btools">
@@ -57,25 +62,34 @@
 		</tr>
 	</table>
 </div>
-	<input type="hidden" id="db_table" value="<?php echo $tb_user;?>">
 </body>
 </html>
 
 <script>
 $(function(){
 	$('#search_button').click(function(){
-		send_search();
+		search();
 	});
-	$('#search').keypress(function(e){
+	$('#key').keypress(function(e){
 		if(e.keyCode == 13){
-			send_search();
+			search();
 		}
 	});
 });
 
-function send_search(){
-	var search = $('#search').val();
-	var url = "user_list.php?search=" + encodeURI(search);
-	location.href = url;
+
+function search(){
+	window.location.href = "?key="+encodeURI($("#key").val())+"&start="+$("#start").val()+"&end="+$("#end").val();
 }
+
+$(".date_jquery").datepicker(
+{
+	changeMonth: true,
+	changeYear: true,
+	monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+	dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+	dayNamesMin:["日","一","二","三","四","五","六"],
+	dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+	dateFormat: 'yy-mm-dd'
+});
 </script>
