@@ -341,8 +341,6 @@ function role_include($file, $role='member'){
 }
 
 function require_login($type="redirect"){
-	var_dump($_COOKIE);
-	die();
 	if($_COOKIE['cache_name']){
 		return true;
 	}
