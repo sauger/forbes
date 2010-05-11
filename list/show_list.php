@@ -9,6 +9,7 @@
 		$desc = intval($_GET['desc']);
 		$list = new table_class('fb_custom_list_type');
 		$list->find($id);
+		if(!$list->id) die();
 		if($list->list_type==4){
 			if($page_type=='static'){
 				redirect('/pic_list/'.$id,'header');
