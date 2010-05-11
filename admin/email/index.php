@@ -70,6 +70,7 @@
 			<td colspan=10><?php paginate("",null,"page",true);?></td>
 		</tr>
 	</table>
+</div>
 </body>
 </html>
 
