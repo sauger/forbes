@@ -103,7 +103,7 @@ ul{list-style:none; padding:0; margin:0;}
 
 
 
-#right_inc .context{width:290px; height:38px; margin-top:11px; margin-left:13px; line-height:19px;color:#003899;}
+#right_inc .context{width:290px; height:38px; margin-top:11px; margin-left:13px; line-height:19px;color:#003899; overflow: hidden;}
 #right_inc .context a{color:#003899; text-decoration: none;}
 #right_inc .context1{width:290px; height:16px; line-height:16px; margin-left:13px; color:#999999;}
 #right_inc .context1 a{color:#999999; text-decoration:none;}
