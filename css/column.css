@@ -13,9 +13,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #bread a{color:#666666; text-decoration:none;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
 
-#column_left{width:669px; padding-bottom:30px; margin-top:15px;}
-.column_left_top{width:648px;}
-.column_special{width:323px;}
+#column_left{width:670px; padding-bottom:30px; margin-top:15px;}
+.column_left_top{width:670px;}
+.column_special{width:330px;}
 .column_special a{color:#003899; text-decoration:none;}
 .column_special_top{width:300px; height:73px; margin-top:11px;}
 .column_special_top .t1{width:300px; height:28px; overflow:hidden; font-size:20px; font-family:SimHei; color:#003899; line-height:28px;}
@@ -29,27 +29,28 @@ div{margin:0; padding:0; float:left; display:inline;}
 .column_recommend_top_r{width:195px; margin-left:8px;}
 .column_recommend_top_r .t1{width:195px; height:18px; font-size:13px; font-weight:bold; overflow:hidden; line-height:18px;}
 .column_recommend_top_r .t1 a{color:#000000; text-decoration:none;}
-.column_recommend_top_r .t2{width:195px; height:20px; margin-top:7px; font-size:14px; font-weight:bold; overflow:hidden; color:#003899; line-height:20px;}
-.column_recommend_top_r .t3{width:195px; height:60px; font-size:12px; overflow:hidden; line-height:20px;}
+.column_recommend_top_r .t2{width:195px; height:40px; margin-top:7px; font-size:14px; font-weight:bold; overflow:hidden; color:#003899; line-height:20px;}
+.column_recommend_top_r .t3{width:195px; height:40px; font-size:12px; overflow:hidden; line-height:20px;}
 .column_recommend_top_r .t3 a{color:#666666; text-decoration:none;}
 .column_recommend_b{width:300px; height:20px; font-size:14px; overflow:hidden; text-indent:14px; line-height:20px; background:url(/images/public/circle1.jpg) no-repeat 0 8px;}
 .column_edit{width:320px; margin-left:5px;}
 .column_edit_t{width:310px; margin-top:11px;}
 .column_edit_t a{text-decoration:none;}
-.column_edit_t .t1{width:310px; height:23px;}
-.column_edit_t .t2{width:230px; height:23px; overflow:hidden; font-size:16px; color:#003899; font-weight:bold;  line-height:23px;}
+.column_edit_t .t1{width:310px;}
+.column_edit_t .t2{width:300px; height:23px; overflow:hidden; font-size:16px; color:#003899; font-weight:bold;  line-height:23px;}
 .column_edit_t .t2 a{color:#003899;}
-.column_edit_t .t3{width:72px; height:23px; font-size:12px; color:#666666; overflow:hidden; line-height:23px; margin-left:5px;}
+.column_edit_t .t3{height:23px; margin-right:10px; font-size:12px; color:#666666; overflow:hidden; line-height:23px; float:right;}
 .column_edit_t .t3 a{color:#666666;}
-.column_edit_t .t4{width:290px; height:44px; font-size:12px; line-height:22px; margin-top:5px; overflow:hidden;}
+.column_edit_t .t4{width:300px; height:44px; font-size:12px; line-height:22px; margin-top:5px; overflow:hidden;}
 .column_edit_t .t4 a{color:#666666;}
 .column_edit_recommend{width:320px; line-height:20px;}
 .column_edit_recommend a{text-decoration:none;}
-.column_edit_recommend .t1{width:310px; height:20px; font-weight:bold; margin-top:7px; background:url(/images/public/circle1.jpg) no-repeat 0 8px; *background:url(/images/public/circle1.jpg) no-repeat 0 8px;}
+.column_edit_recommend .t1{width:310px; font-weight:bold; margin-top:7px; background:url(/images/public/circle1.jpg) no-repeat 0 8px; *background:url(/images/public/circle1.jpg) no-repeat 0 8px;}
 .column_edit_recommend .t1 a{color:#323284;}
-.column_edit_recommend .t2{width:215px; height:20px; overflow:hidden; font-size:14px; line-height:20px; margin-left:15px;}
+.column_edit_recommend .t2{width:310px; height:20px; overflow:hidden; font-size:14px; line-height:20px; margin-left:15px;}
 .column_edit_recommend .t2 a{color:#003899; font-weight:normal;}
-.column_edit_recommend .t3{width:62px; height:20px; font-size:12px; color:#666666; font-weight:normal; overflow:hidden; line-height:20px; margin-left:15px;}
+.column_edit_recommend .t3{height:20px; margin-right:10px; font-size:12px; color:#666666; font-weight:normal; overflow:hidden; line-height:20px; float:right;}
+
 
 #steven{width:300px; height:210px; margin-bottom:10px; font-family:"宋体"; font-size: 13px; background:#eaeaea;}
 #steven a{text-decoration:none;}

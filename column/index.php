@@ -121,7 +121,7 @@
 					<?php }?>
 					<div class=column_edit_recommend >
 						<?php
-							for($i=3;$i<11;$i++){
+							for($i=3;$i<6;$i++){
 								$pos_name = 'column_edit_t'.$i;
 						?>
 						<div class=t1<?php #show_page_pos($pos_name,'column_simple'); ?>>
@@ -226,7 +226,7 @@
 					<?php }?>
 					<div class=column_edit_recommend>
 						<?php
-							for($i=3;$i<11;$i++){
+							for($i=3;$i<6;$i++){
 								$pos_name = "column_edit_edit_t2_{$i}";
 						?>
 						<div class=t1<?php #show_page_pos($pos_name,'column_simple'); ?>>
@@ -247,7 +247,7 @@
 							<a href="http://www.forbeschina.com/column/journalist" target="_blank" class=more></a>
 						</div>
 						<?php
-							for($i=0;$i<14;$i++){
+							for($i=0;$i<10;$i++){
 								$pos_name = 'column_list_'.$i;
 						?>
 						<div class=t2 <?php show_page_pos($pos_name,'column_author_ntime') ?>>
