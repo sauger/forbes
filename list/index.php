@@ -72,8 +72,10 @@
 
 			<div class=caption>
 					<div class=captions>榜单推荐</div>
+					<!-- 
 					<div class=line>|</div>
 					<a href="/list/list.php" class=more  target="_blank"></a>
+					 -->
 			</div>
 			<div id=recommend>
 
