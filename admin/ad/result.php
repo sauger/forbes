@@ -40,7 +40,7 @@
 </head>
 <body>
 <div id=icaption>
-    <div id=title>广告统计</div>
+    <div id=title>广告计统</div>
 </div>
 <div id=isearch>
 		<input id="key" type="text" value="<?php echo $key?>">

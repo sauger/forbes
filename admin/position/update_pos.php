@@ -122,9 +122,9 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 					$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 					$pos->end_time = $end_time;
 					if(!$column[$i]->column_name){
-						$pos->display = $column[$i]->nick_name.'专栏';
+						$pos->display = $column[$i]->nick_name;
 					}else{
-						$pos->display = $column[$i]->column_name.'专栏';
+						$pos->display = $column[$i]->column_name;
 					}
 					$pos->title = $column[$i]->nick_name;
 					$pos->image1 = $column[$i]->image_src;
@@ -140,9 +140,9 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 				$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 				$pos->end_time = $end_time;
 				if(!$column[$i]->column_name){
-					$pos->display = $column[$i]->nick_name.'专栏';
+					$pos->display = $column[$i]->nick_name;
 				}else{
-					$pos->display = $column[$i]->column_name.'专栏';
+					$pos->display = $column[$i]->column_name;
 				}
 				$pos->title = $column[$i]->nick_name;
 				$pos->image1 = $column[$i]->image_src;
@@ -329,9 +329,9 @@ function update_news_column($category_name,$limit,$type,$position_name){
 					$pos->image1 = $news[$i]->video_photo_src;
 					$pos->image2 = $news[$i]->image_src;
 					if(!$news[$i]->column_name){
-						$pos->alias = $news[$i]->nick_name.'专栏';
+						$pos->alias = $news[$i]->nick_name;
 					}else{
-						$pos->alias = $news[$i]->column_name.'专栏';
+						$pos->alias = $news[$i]->column_name;
 					}
 					$pos->description = $news[$i]->description;
 					$pos->href = dynamic_news_url($news[$i]);
@@ -349,9 +349,9 @@ function update_news_column($category_name,$limit,$type,$position_name){
 				$pos->image1 = $news[$i]->video_photo_src;
 				$pos->image2 = $news[$i]->image_src;
 				if(!$news[$i]->column_name){
-					$pos->alias = $news[$i]->nick_name.'专栏';
+					$pos->alias = $news[$i]->nick_name;
 				}else{
-					$pos->alias = $news[$i]->column_name.'专栏';
+					$pos->alias = $news[$i]->column_name;
 				}
 				$pos->description = $news[$i]->description;
 				$pos->href = dynamic_news_url($news[$i]);
