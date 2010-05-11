@@ -69,7 +69,7 @@
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>年龄</td>
-				<td class=td3><input id="year" maxlength="5" name="user[year]" class="txt" type="text"></td>
+				<td class=td3><input id="year" maxlength="3" name="user[year]" class="txt" type="text"></td>
 				<td class=td2>
 					<div id="year1" class="display1 year_check">请输入年龄，使用阿拉伯数字</div>
 					<div id="year2" class="display2 year_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">年龄可用</div></div>

@@ -5,9 +5,9 @@
 	
 	$db = get_db();
 	$search  = $_GET['search'];
-	$sql = "select a.*,b.nick_name as role_name from fb_user a left join fb_role b on a.role_name = b.name where 1=1";
+	$sql = "select t1.name,t2.* from fb_user t1 join fb_user_log t2 on t1.id where 1=1";
 	if($search!=''){
-		$sql .= " and a.nick_name like '%$search%' or a.name like '%$search%'";
+		$sql .= " and t1.name like '%$search%'";
 	}
 	$records = $db->paginate($sql,30);
 	$count = count($records);
