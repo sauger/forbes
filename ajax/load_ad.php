@@ -24,15 +24,15 @@ function generate_ad($ad){
 	$size = explode('*',$ad->ad_size);
 	switch ($ad->ad_type) {
 		case 'flash':
-			$str = "<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\" width=\"{$size[0]}\" height=\"{$size[1]}\">
+			$str = "<div id='{$ad->code}' class='ad_container'><object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\" width=\"{$size[0]}\" height=\"{$size[1]}\">
 				        <param name=\"movie\" value=\"{$ad->flash}\">
 				        <param name=\"quality\" value=\"high\">
 				        <PARAM NAME=\"WMode\" VALUE=\"Opaque\">
 				        <embed src=\"{$ad->flash}\" quality=\"high\" WMode=\"Opaque\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" width=\"{$size[0]}\" height=\"{$size[1]}\"></embed>
-				     </object>";
+				     </object></div>";
 		break;
 		case 'image':
-			$str = "<a id='{$ad->code}' href='{$ad->target_url}' target='_blank'><img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' /></a>";
+			$str = "<div id='{$ad->code}' class='ad_container'><a href='{$ad->target_url}' target='_blank'><img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' /></a></div>";
 		break;
 		case 'video':
 		;
