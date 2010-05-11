@@ -17,3 +17,16 @@
 	<?php }?>
 </div>
 <div class=bottom_line></div>
+<?php 
+	global $page_type;
+	global $page_items;
+	if($page_type == 'static'){
+		function get_news_url($news){
+			return static_news_url($news);
+		}
+	}else{
+		function get_news_url($news){
+			return dynamic_news_url($news);
+		}
+	}
+?>
