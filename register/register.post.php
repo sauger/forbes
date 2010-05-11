@@ -54,6 +54,16 @@
 		redirect('/register/');
 		die();
 	}
+	if(strlen($_POST['user']['gender']) > 10){
+		alert('年龄过长！请重新输入！');
+		redirect('/register/');
+		die();
+	}
+	if(strlen($_POST['user']['year']) > 10){
+		alert('年龄过长！请重新输入！');
+		redirect('/register/');
+		die();
+	}
 	$user = new table_class('fb_yh');
 	$user->update_attributes($_POST['user'],false);
 	$user->password = md5($user->password);

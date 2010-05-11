@@ -18,6 +18,15 @@ $(function(){
 		userPassword2();
 	});
 	
+	$("#year").blur(function(){
+		if($("#year").val()!=''){
+			check_year();
+		}else{
+			$('.year_check').hide();
+			$("#year1").show();
+		}
+	});
+	
 	$("#order1").click(function(){
 		if($(this).attr('checked')==true){
 			$("#order2").attr('checked',false);
@@ -84,6 +93,16 @@ $(function(){
 		}else{
 			if(!userPassword2()){
 				$("#password2").focus();
+				return false;
+			}
+		}
+		if($("#year").val()==''){
+			alert('请输入年龄');
+			$("#year").focus();
+			return false;
+		}else{
+			if(!check_year()){
+				$("#year").focus();
 				return false;
 			}
 		}
@@ -247,6 +266,22 @@ function userPassword2(){
 		}
 	}else{
 		$(".pass_check2").css('display','none');
+	}
+}
+
+function check_year(){
+	if(isNaN($("#year").val())){
+		$('.year_check').hide();
+		$("#year3").show();
+		return false;
+	}else if($("#year").val()<1||$("#year").val()>150){
+		$('.year_check').hide();
+		$("#year3").show();
+		return false;
+	}else{
+		$('.year_check').hide();
+		$("#year2").show();
+		return true;
 	}
 }
 
