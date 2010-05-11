@@ -1,4 +1,6 @@
-<?php include_once(dirname(__FILE__).'/../frame.php');?>
+<?php 
+	include_once(dirname(__FILE__).'/../frame.php');
+?>
 <div class=right_title>
 	<div class=title_con>读者高见</div>
 	<div class=more><a href="http://www.forbeschina.com/comments/"><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
@@ -13,7 +15,7 @@
 			$news->find($comments[$i]->resource_id);
 	?>
 	<div class=context><a href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a></div>
-	<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
+	<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo static_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
 	<?php }?>
 </div>
 <div class=bottom_line></div>
