@@ -71,7 +71,7 @@
 		<div id=m>
 			
 			<?php
-				$sql = "select t1.title,t1.short_title,t1.id,t1.description,t1.video_photo_src from fb_news t1 join fb_magazine_relation t2 on t1.id=t2.resource_id where t2.magazine_id={$id} order by t2.priority limit 4";
+				$sql = "select t1.title,t1.short_title,t1.id,t1.created_at,t1.description,t1.video_photo_src from fb_news t1 join fb_magazine_relation t2 on t1.id=t2.resource_id where t2.magazine_id={$id} order by t2.priority limit 4";
 				$magazine_news = $db->query($sql);
 				for($i=0;$i<count($magazine_news);$i++){
 			?>
