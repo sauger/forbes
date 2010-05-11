@@ -35,7 +35,7 @@
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span><label for="user_email">邮箱</label></td>
-				<td class=td3><input class="txt" maxlength="20" name="user[email]" id="user_email" type="text"></td>
+				<td class=td3><input class="txt" maxlength="40" name="user[email]" id="user_email" type="text"></td>
 				<td class=td2>
 					<div id="email1" class="display1 email_check">邮箱作为您找回密码的唯一凭证，请填写真实有效地邮箱地址并妥善保管！</div>
 					<div id="email2" class="display2 email_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">邮箱填写正确</div></div>
