@@ -77,14 +77,14 @@
 				<td class=td2><a href="/images/register/email.jpg" class="colorbox">查看快闻板式</a></td>
 			</tr>
 			<tr>
-				<td class=td6><input type="checkbox" name="jhtj" id="order1"><label for="order1">我愿意订阅</label><input id="order2" class="ck" type="checkbox"><label for="order2">不，暂时不考虑</label></td>
+				<td class=td6><input type="checkbox" name="jhtj" checked=checked id="order1"><label for="order1">我愿意订阅</label><input id="order2" class="ck" type="checkbox"><label for="order2">不，暂时不考虑</label></td>
 			</tr>
 			<tr>
 				<td class=td5>是否愿意订阅福布斯分类文章（一周发送一次）</td>
 				<td class=td2><a href="/images/register/news.jpg" class="colorbox">查看快闻板式</a></td>
 			</tr>
 			<tr>
-				<td class=td6><input type="checkbox" class="n_order" name="fh" id="order3" checked=checked><label for="order3">富豪</label><input id="order4" type="checkbox" name="cy" class="ck n_order"><label for="order4">创业</label><input type="checkbox" name="sy" id="order5" class="ck n_order"><label for="order5">商业</label><input type="checkbox" id="order6" name="kj" class="ck n_order"><label for="order6">科技</label><input name="tz" id="order7" type="checkbox" class="ck n_order"><label for="order7">投资</label><input id="order8" type="checkbox" name="sh" class="ck n_order"><label for="order8">生活</label><input id="order9" class="ck" type="checkbox"><label for="order9">不，暂时不考虑</label></td>
+				<td class=td6><input type="checkbox" class="n_order" name="fh" id="order3" checked=checked><label for="order3">富豪</label><input id="order4" type="checkbox" checked=checked name="cy" class="ck n_order"><label for="order4">创业</label><input type="checkbox" checked=checked name="sy" id="order5" class="ck n_order"><label for="order5">商业</label><input checked=checked type="checkbox" id="order6" name="kj" class="ck n_order"><label for="order6">科技</label><input name="tz" id="order7" type="checkbox" checked=checked class="ck n_order"><label for="order7">投资</label><input id="order8" type="checkbox" name="sh" checked=checked class="ck n_order"><label for="order8">生活</label><input id="order9" class="ck" type="checkbox"><label for="order9">不，暂时不考虑</label></td>
 			</tr>
 		</table>
 		<div class="dash"></div>
