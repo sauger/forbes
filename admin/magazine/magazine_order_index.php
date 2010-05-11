@@ -22,7 +22,6 @@
 	<?php
 		css_include_tag('admin');
 		use_jquery();
-		js_include_tag('admin_pub');
 	?>
 </head>
 
@@ -42,7 +41,7 @@
 		<?php
 			for($i=0;$i<$count;$i++){
 		?>
-				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
+				<tr class="tr3" id="<?php echo $record[$i]->sid;?>">
 					<td><?php echo $record[$i]->stime;?></td>
 					<td><?php echo $record[$i]->RealName;?></td>
 					<td><?php echo $record[$i]->Company;?></td>
@@ -52,7 +51,7 @@
 					<td><?php echo $record[$i]->Email;?></td>
 					<td>
 						<a href="order_info.php?id=<?php echo $record[$i]->sid;?>" class="edit" title="编辑" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
-						<span style="cursor:pointer;color:#FF0000" class="del" title="删除" name="<?php echo $record[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
+						<span style="cursor:pointer;color:#FF0000" class="del" title="删除" name="<?php echo $record[$i]->sid;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
 					</td>
 				</tr>
 		<?php
@@ -79,6 +78,18 @@ $(function(){
 	$('#search_button').click(function(){
 		search();
 	})
+	$(".del").click(function(){
+		if(!window.confirm("确定要删除吗"))
+		{
+			return false;
+		}
+		else
+		{
+			$.post("del_magazine_order.php",{'del_id':$(this).attr('name')},function(data){
+			});
+			$(this).parent().parent().remove();
+		}
+	});
 })
 
 function search(){
