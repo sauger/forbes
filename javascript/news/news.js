@@ -123,7 +123,7 @@ $(function(){
 	});
 	
 	$.post('/ajax/comment_cout.php',{'news_id':$("#newsid").val()},function(data){
-		$("#news_title").html($("#news_title").html()+data);
+		$(".news_tools_btn2").html(data);
 	});
 	
 	$("#commit_submit").live('click',function(){

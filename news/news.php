@@ -86,27 +86,23 @@
 			<div id=news_info>作者：<?php echo $news->author;?>　　发布于：<?php echo substr($news->created_at,0,10);?></div>
 			<?php if(trim(strip_tags($news->description))!=''){?><div id="news_desc"><?php echo $news->description;?></div><?php }?>
 			<div id=news_tools>
-				<?php if(isset($english_news)){?>
+				<?php if(false){?>
 					<div style="border-left:0" class=news_tools_btn><img src="/images/news/btn_cn.png"><span class=news_tools_span><a href="<?php echo get_news_url($news)?>">正文</a></span></div>
 					<div class=top_title><img src="/images/news/btn_en.png"><span class=news_tools_span>English</span></div>
 				<?php }else{?>
 					<div style="border-left:0" class=news_tools_btn><img src="/images/news/btn_cn.png"><span class=news_tools_span>正文</span></div>
-				<?php if(isset($english_id)){?>
+				<?php if(false){?>
 					<div class=news_tools_btn><img src="/images/news/btn_en.png"><span class=news_tools_span><a href=<?php echo get_news_en_url($news)?>>English</a></span></div>
 				<?php }?>
 				<?php }?>
 					<div class=news_tools_btn><img src="/images/news/btn_share.png"><span class=news_tools_span><a href="<?php echo $static_site?>/review/<?php echo $id;?>/share">分享</a></span></div>
 					<div class=news_tools_btn><img src="/images/news/btn_print.png"><span class=news_tools_span><a href="javascript:window.print();">打印</a></span></div>
 					<div class=news_tools_btn><img id=font_down src="/images/news/font3.gif" class=news_tools_span style="margin:0"><span class=news_tools_span><a>字体大小</a></span><img id=font_up src="/images/news/font2.gif" class=news_tools_span></div>
-					<div style="border-right:0" class=news_tools_btn>
 					<?php if($news->pdf_src!=''){?>
-						<img src="/images/news/btn_donwload.png">
-						<span class=news_tools_span><a target="_blank" href="<?php echo $news->pdf_src;?>">下载PDF格式</a></span>
+					<div class=news_tools_btn><!-- <img src="/images/news/btn_donwload.png"> --><span class=news_tools_span><a target="_blank" href="<?php echo $news->pdf_src;?>">下载PDF格式</a></span></div>
 					<?php }?>
-					</div>
-					<div style="border:0" class=news_tools_btn2>
-						<img src="/images/news/btn_collection.png"><span class=news_tools_span><a href="<?php echo $news->id;?>" id=a_collect>加入收藏</a></span>
-					</div>
+					<div class=news_tools_btn style="border-right:0"><img src="/images/news/btn_collection.png"><span class=news_tools_span><a href="<?php echo $news->id;?>" id=a_collect>加入收藏</a></span></div>
+					<div class=news_tools_btn2></div>
 			</div>
 	
 			<div id=news_text>

@@ -4,8 +4,20 @@
 	judge_role();	
 	$search = $_REQUEST['search'];
 	$db = get_db();
-	$sql = "SELECT * FROM forbes.fb_investor_sign f where 1=1";
-
+	$sql = "SELECT * FROM fb_investor_sign f where 1=1";
+	$sea = $_REQUEST['sea'];
+	if($sea!=''){
+		if($sea=='风险投资'){
+			$sea=1;
+			}else if($sea=='出售投资')
+			{
+				$sea=2;
+			}else if($sea=='天使投资')
+			{
+				$sea=3;
+			}
+		$sql .= " and name like '%$sea%' or item_type like '%$sea%' or company_name like '%$sea%' or item_name like '%$sea%' or email like '%$sea%'";
+	}
 	$record = $db->paginate($sql,30);
 	$count = count($record);
 ?>
@@ -19,6 +31,7 @@
 	<?php
 		css_include_tag('admin');
 		use_jquery();
+		js_include_tag('admin_pub');
 	?>
 </head>
 
@@ -27,7 +40,7 @@
     <div id=title>投资人报名信息</div>
 </div>
 <div id=isearch>
-		<input class="sau_search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
+		<input class="sau_search" name="title" type="text" value="<? echo $_REQUEST['sea']?>">
 		<input type="button" value="搜索" id="search_button">
 </div>
 <div id=itable>
@@ -40,7 +53,7 @@
 		?>
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><?php echo $record[$i]->name;?></td>
-					<td><?php echo $record[$i]->company_name;?></td>
+					<td><?php echo $record[$i]->company_name;?></td>	
 					<td><?php echo $record[$i]->phone;?></td>
 					<td><?php echo $record[$i]->item_name;?></td>
 					<td><?php echo $record[$i]->item_money;?></td>
@@ -57,7 +70,7 @@
 		<tr class="btools">
 			<td colspan=10>
 				<?php paginate("",null,"page",true);?>
-				<input type="hidden" id="db_table" value="fb_subscription">
+				<input type="hidden" id="db_table" value="fb_investor_sign">
 			</td>
 		</tr>
 		</table>	
@@ -68,28 +81,16 @@
 $(function(){
 	$(".sau_search").keypress(function(event){
 		if (event.keyCode == 13) {
-			search();
+			sea();
 		}
 	});
 	
 	$('#search_button').click(function(){
-		search();
+		sea();
 	})
-	$(".del").click(function(){
-		if(!window.confirm("确定要删除吗"))
-		{
-			return false;
-		}
-		else
-		{
-			$.post("del_magazine_order.php",{'del_id':$(this).attr('name')},function(data){
-			});
-			$(this).parent().parent().remove();
-		}
-	});
 })
 
-function search(){
-	window.location.href="?search="+encodeURI($(".sau_search").attr('value'));
+function sea(){
+	window.location.href="?sea="+encodeURI($(".sau_search").attr('value'));
 }
 </script>

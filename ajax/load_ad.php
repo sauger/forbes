@@ -4,7 +4,7 @@ $channel = $_GET['channel'];
 $banner = $_GET['banner'];
 if(!is_ajax()) die();
 $banners = array('top_banner','index_middle_banner','right_banner','rich_banner2','rich_banner1','news_banner','list_banner','magazine_banner1','magazine_banner2','login_banner','club_banner');
-$channels = array('billionaires','business','city','club','column','entrepreneur','index','investment','investor','life','list','magazine','news','search','survey','tech','login','register','user','getpwd','review','comments');
+$channels = array('billionaires','business','city','club','column','entrepreneur','index','investment','investor','life','list','magazine','news','search','survey','tech','login','register','user','getpwd','review','comments','pic_list');
 if(!in_array($_GET['channel'],$channels) || !in_array($_GET['banner'],$banners)){
 	die();
 }
@@ -32,7 +32,13 @@ function generate_ad($ad){
 				     </object>";
 		break;
 		case 'image':
-			$str = "<a href='{$ad->target_url}' target='_blank'><img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' /></a>";
+			if($ad->target_url){
+				$str = "<a href='{$ad->target_url}' target='_blank'>";
+			}
+			$str .= "<img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' />";
+			if($ad->target_url){
+				$str .= "</a>";
+			}
 		break;
 		case 'video':
 		;

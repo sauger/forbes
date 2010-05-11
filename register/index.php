@@ -24,7 +24,7 @@
 		<table>
 			<tr>
 				<td class=td1><span style="color:red;">* </span><label for="user_name">用户名</label></td>
-				<td class=td3><input class="txt" id="user_name" name="user[name]" type="text"></td>
+				<td class=td3><input class="txt" maxlength="20" id="user_name" name="user[name]" type="text"></td>
 				<td class=td2>
 					<div id="user1" class="display1 name_check">4-20位，包含英文大小写字母和数字组成</div>
 					<div id="user2" class="display2 name_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">用户名可用</div></div>
@@ -35,7 +35,7 @@
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span><label for="user_email">邮箱</label></td>
-				<td class=td3><input class="txt" name="user[email]" id="user_email" type="text"></td>
+				<td class=td3><input class="txt" maxlength="40" name="user[email]" id="user_email" type="text"></td>
 				<td class=td2>
 					<div id="email1" class="display1 email_check">邮箱作为您找回密码的唯一凭证，请填写真实有效地邮箱地址并妥善保管！</div>
 					<div id="email2" class="display2 email_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">邮箱填写正确</div></div>
@@ -45,7 +45,7 @@
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span><label for="user_pass">登陆密码</label></td>
-				<td class=td3><input class="txt" id="user_pass" name="user[password]" type="password"></td>
+				<td class=td3><input class="txt" maxlength="20" id="user_pass" name="user[password]" type="password"></td>
 				<td class=td2>
 					<div id="pass1" class="display1 pass_check">请设置4-20个字符，包含英文大小写字母、数字和部分标点符号的组合</div>
 					<div id="pass2" class="display2 pass_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">密码可用</div></div>
@@ -55,15 +55,30 @@
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>确认密码</td>
-				<td class=td3><input class="txt" id="password2" type="password"></td>
+				<td class=td3><input class="txt" maxlength="20" id="password2" type="password"></td>
 				<td class=td2>
 					<div id="check_pass1" class="display2 pass_check2"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">输入一致</div></div>
 					<div id="check_pass2" class="display3 pass_check2"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请输入相同密码</div></div>
 				</td>
 			</tr>
 			<tr>
+				<td class=td1><span style="color:red;">* </span>性别</td>
+				<td class=td3><div class="radio_div"><input value='男' name="user[gender]" checked=checked id="gender1" type="radio"><label for="gender1">男</label></div><div class="radio_div"><input value='女' name="user[gender]" id="gender2" type="radio"><label for="gender2">女</label></div></td>
+				<td class=td2>
+				</td>
+			</tr>
+			<tr>
+				<td class=td1><span style="color:red;">* </span>年龄</td>
+				<td class=td3><input id="year" maxlength="3" name="user[year]" class="txt" type="text"></td>
+				<td class=td2>
+					<div id="year1" class="display1 year_check">请输入年龄，使用阿拉伯数字</div>
+					<div id="year2" class="display2 year_check"><div class=pic><img src="/images/register/right.jpg"></div><div class="pic_content">年龄可用</div></div>
+					<div id="year3" class="display3 year_check"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请输入合法阿拉伯数字</div></div>
+				</td>
+			</tr>
+			<tr>
 				<td class=td1><span style="color:red;">* </span>验证码</td>
-				<td class=td3><input id="rvcode" name="rvcode" class="txt" type="text"></td>
+				<td class=td3><input id="rvcode" maxlength="4" name="rvcode" class="txt" type="text"></td>
 				<td class=td2>
 					<div id=yzm><img id="pic" src="yz.php"></div>
 					<div id="chang_pic">看不清楚？换张图片</div>

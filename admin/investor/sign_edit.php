@@ -82,7 +82,7 @@
 			<tr class=tr4>
 			<td  class=td1>手机</td>
 			<td>
-				<?php echo $record->moblie;?>
+				<?php echo $record->mobile;?>
 			</td>
 		</tr>
 			<tr class=tr4>
