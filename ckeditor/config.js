@@ -26,7 +26,7 @@ CKEDITOR.editorConfig = function( config )
 	    config.resize_enabled = false;
 	    config.entities = false;
 	    config.ignoreEmptyParagraph = false;
-	    config.startupOutlineBlocks = false;
+	    config.startupOutlineBlocks = true;
 	    config.font_names = 'Arial;Times New Roman;Verdana;宋体;黑体;微软雅黑';
 	    
 };
