@@ -31,7 +31,7 @@
 ?>
 <body>
 	<div id=icaption>
-    <div id=title>杂志订阅查看</div>
+    <div id=title>投资人报名详细信息</div>
 	<a href="sign_list.php" id=btn_back></a>
 	</div>
 <div id=itable>

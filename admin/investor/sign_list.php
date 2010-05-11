@@ -24,7 +24,7 @@
 
 <body>
 <div id=icaption>
-    <div id=title>杂志订阅查看</div>
+    <div id=title>投资人报名信息</div>
 </div>
 <div id=isearch>
 		<input class="sau_search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
