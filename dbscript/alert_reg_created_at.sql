@@ -1,0 +1,1 @@
+ALTER TABLE `forbes`.`fb_yh` MODIFY COLUMN `created_at` TIMESTAMP  DEFAULT NULL COMMENT '注册时间';

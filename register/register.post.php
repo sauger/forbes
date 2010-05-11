@@ -59,7 +59,7 @@
 	$user->password = md5($user->password);
 	$user->authenticate_string = rand_str(10);
 	$user->authenticated = 0;
-	$user->created_at = now();
+	#$user->created_at = now();
 	$user->save();
 	//echo $user->id;
 	

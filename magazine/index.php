@@ -94,6 +94,7 @@
 		<div id="right_inc">
 			<?php include_right("ad")?>
 			<?php include_right("magazine")?>
+			<?php include_right("comment")?>
 		</div>
 	<?php include_bottom();?>
 	</div>

@@ -1,19 +1,19 @@
 <?php include_once(dirname(__FILE__).'/../frame.php');?>
-<?php init_page_items();
-global $pos_name;
-?>
 <div class=right_title>
 	<div class=title_con>读者高见</div>
-	<div class=more><a href="http://www.forbeschina.com/comments"><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
+	<div class=more><a href="http://www.forbeschina.com/comments/"><img border=0 src="/images/right/c_r_t_more.gif"></a></div>	
 </div>
-<div id="forum_box">
-	<div class=pic><?php show_page_img(null,null,0,"image1","right_forum_news0")?></div>
-	<div <?php show_page_pos("right_forum_news0")?> class=pictitle><?php show_page_href("right_forum_news0")?></div>
- 	<div id=forum_dash></div>
+<div class="right_box">
 	<?php
-		for($i=1;$i<3;$i++){$pos_name = "right_forum_news".$i;
+		$db = get_db();
+		$comments = $db->query("select * from fb_comment where resource_type='news' and is_approve=1 order by priority asc,created_at desc limit 8");
+		$count = $db->record_count;
+		$news = new table_class('fb_news');
+		for($i=0;$i<$count;$i++){
+			$news->find($comments[$i]->resource_id);
 	?>
-		<div class=content <?php show_page_pos($pos_name)?>><li><?php show_page_href();?></li></div>
-	<?php } ?>
+	<div class=context><a href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a></div>
+	<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
+	<?php }?>
 </div>
 <div class=bottom_line></div>
