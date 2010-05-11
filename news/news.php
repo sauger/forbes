@@ -102,6 +102,7 @@
 					<div class=news_tools_btn><!-- <img src="/images/news/btn_donwload.png"> --><span class=news_tools_span><a target="_blank" href="<?php echo $news->pdf_src;?>">下载PDF格式</a></span></div>
 					<?php }?>
 					<div class=news_tools_btn><img src="/images/news/btn_collection.png"><span class=news_tools_span><a href="<?php echo $news->id;?>" id=a_collect>加入收藏</a></span></div>
+					<div class=news_tools_btn2></div>
 			</div>
 	
 			<div id=news_text>

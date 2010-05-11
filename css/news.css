@@ -7,7 +7,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 
-#bread{width:800px; height:23px; margin-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
+#bread{width:800px; height:23px; margnews_tools_btn2in-top:16px; padding-left:130px; font-size:12px; color:#666666; line-height:23px; background:url(/images/public/bread.jpg) no-repeat 10px 0;}
 #bread a{color:#666666; text-decoration:none;}
 #bread a:hover{color:blue; text-decoration: underline;}
 #bread_line{width:1000px; height:8px; margin-top:2px; background:url('/images/public/bread_line.jpg') no-repeat;}
@@ -23,8 +23,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .news_tools_btn img{float:left;}
 .news_tools_btn a{color:#666666; text-decoration:none;}
 .news_tools_span{margin-left:6px; cursor:pointer; float:left;}
-.news_tools_btn2{height:14px; margin-top:11px; padding-left:12px; line-height:16px; font-size:12px; padding-right:16px; border-left:1px #DBE1E7 solid; border-right:1px #FFFFFF solid;}
-.news_tools_btn2 img{float:left;}
+.news_tools_btn2{height:14px; margin-top:11px; padding-left:12px; line-height:16px; font-size:12px; padding-right:16px; float:right;}
 .news_tools_btn2 a{color:#666666;}
 
 #news_text{width:648px; margin-left:12px; margin-top:20px; border-bottom:1px dotted #cccccc;}
