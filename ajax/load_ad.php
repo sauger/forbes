@@ -32,7 +32,7 @@ function generate_ad($ad){
 				     </object>";
 		break;
 		case 'image':
-			$str = "<a id='{$ad->code}' href='{$ad->target_url}' target='_blank'><img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' /></a>";
+			$str = "<a href='{$ad->target_url}' target='_blank'><img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' /></a>";
 		break;
 		case 'video':
 		;
@@ -42,6 +42,7 @@ function generate_ad($ad){
 			;
 		break;
 	}
+	$str .= "<input type='hidden' value='{$ad->code}' />";
 	return $str;
 	
 }
