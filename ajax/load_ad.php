@@ -32,7 +32,13 @@ function generate_ad($ad){
 				     </object>";
 		break;
 		case 'image':
-			$str = "<a href='{$ad->target_url}' target='_blank'><img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' /></a>";
+			if($ad->target_url){
+				$str = "<a href='{$ad->target_url}' target='_blank'>";
+			}
+			$str .= "<img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' />";
+			if($ad->target_url){
+				$str .= "</a>";
+			}
 		break;
 		case 'video':
 		;
