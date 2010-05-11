@@ -1,16 +1,5 @@
 <?php 
 	include_once(dirname(__FILE__).'/../frame.php');
-	global $page_type;
-	global $page_items;
-	if($page_type == 'static'){
-		function get_news_url($news){
-			return static_news_url($news);
-		}
-	}else{
-		function get_news_url($news){
-			return dynamic_news_url($news);
-		}
-	}
 ?>
 <div class=right_title>
 	<div class=title_con>读者高见</div>
@@ -26,7 +15,7 @@
 			$news->find($comments[$i]->resource_id);
 	?>
 	<div class=context><a href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a></div>
-	<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
+	<div class=context1><?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo static_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a></div>
 	<?php }?>
 </div>
 <div class=bottom_line></div>
