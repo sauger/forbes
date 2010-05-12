@@ -2,6 +2,9 @@
 	include '../frame.php';
 	$user = $_GET['user'];
 	$key = $_GET['key'];
+	if(strlen($key)!= 20 || strlen($user) > 20){
+		die();
+	}
 	$db = get_db();
 	$db->query("select name,id,password,authenticated from fb_yh where name='{$user}' and authenticate_string='{$key}'");
 	if(!$db->move_first()){
