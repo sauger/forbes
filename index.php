@@ -68,7 +68,7 @@
 			
 		 <div id=forbes_tltb>	
 			 <div id=lujiazui>
-  		 	 <div id=lujiazui_caption <?php show_page_pos('lujiazui','only_link')?>><a href="<?php echo $pos_items->lujiazui->href;?>" title="<?php echo $pos_items->lujiazui->title;?>" target="_blank">陆家嘴早餐</a><span>Lujiazui Breakfast</span></div>
+  		 	 <div id=lujiazui_caption <?php show_page_pos('lujiazui','only_link')?>><a href="<?php echo $pos_items->lujiazui->href;?>" title="<?php echo $pos_items->lujiazui->title;?>" target="_blank">陆家嘴早餐</a></div>
 			 	 <div id=lujiazui_coffee></div>
   		 	 	<?php for($i=0;$i<3;$i++){
   		 	 		$pos_name = "index_bf".$i;
@@ -130,9 +130,7 @@
 	
 		<div class=forbes_l>
 			<div class=caption>
-				<div class=captions>创业<span>Enterpreneurs</span></div>
-				<div class=line>|</div>
-				<a href="/entrepreneur/" class=more target="_blank"></a>
+				<div class=captions><a href="/entrepreneur/" target="_blank">创业</a></div>
 			</div>
 			<div class=forbes_l_content>
 				<div class=list1>
@@ -147,9 +145,7 @@
 			<div class=dashed></div>
 			
 			<div class=caption>
-				<div class=captions>科技<span>Tech</span></div>
-				<div class=line>|</div>
-				<a href="/tech/" class=more target="_blank"></a>
+				<div class=captions><a href="/tech/" target="_blank">科技</a></div>
 			</div>
 			<div class=forbes_l_content>
 				<div class=list1>
@@ -163,9 +159,7 @@
 			<div class=dashed></div>
 
 			<div class=caption>
-				<div class=captions>商业<span>Business</span></div>
-				<div class=line>|</div>
-				<a href="/business/" class=more target="_blank"></a>
+				<div class=captions><a href="/business/" target="_blank">商业</a></div>
 			</div>
 			<div class=forbes_l_content>
 				<div class=list1>
@@ -181,9 +175,7 @@
 						
 			
 			<div class=caption>
-				<div class=captions>专栏<span>Columns</span></div>
-				<div class=line>|</div>
-				<a href="/column/" class=more target="_blank"></a>
+				<div class=captions><a href="/column/" target="_blank">专栏</a></div>
 			</div>
 			<div class=forbes_l_content>
 				<div id=column_btnl style="background:none; cursor:auto;"></div>
@@ -222,9 +214,7 @@
 			
 			
 			<div class=caption>
-				<div class=captions>读者高见<span>Readers Say</span></div>
-				<div class=line>|</div>
-				<a href="http://www.forbeschina.com/comments" class=more target="_blank"></a>
+				<div class=captions><a href="http://www.forbeschina.com/comments" target="_blank">读者高见</a></div>
 			</div>
 			<?php 
 				$comments = $db->query("select * from fb_comment where resource_type='news' and is_approve=1 order by priority asc,created_at desc limit 4");
@@ -239,9 +229,7 @@
 		
 		<div class=forbes_l style="margin-left:25px;">
 			<div class=caption>
-				<div class=captions>投资<span>Money & Investment</span></div>
-				<div class=line>|</div>
-				<a href="/investment/" class=more target="_blank"></a>
+				<div class=captions><a href="/investment/" target="_blank">投资</a></div>
 			</div>
 			<div class=forbes_l_content>
 			 	<div class=list1 >
@@ -258,9 +246,7 @@
 			<div class=dashed></div>
 
 	  		<div class=caption>
-				<div class=captions>生活<span>Life</span></div>
-				<div class=line>|</div>
-				<a href="/life/" class=more target="_blank"></a>
+				<div class=captions><a href="/life/" target="_blank">生活</a></div>
 			</div>
 			<div class=list1>
 					<div <?php $pos_name ="index_luxu0"; show_page_pos($pos_name,'base_img_withoutime');?> class=image><?php show_page_img(150,130)?></div>
@@ -294,7 +280,7 @@
 
 			<div id=activity>
 				<div class=public_top1>
-					<div class=public_caption1>论坛活动<span>Conferences</span></div>
+					<div class=public_caption1>论坛活动</div>
 					<a href="/event" target=_blank class=public_more1></a>
 				</div>
 				<?php $pos_name = 'index_event';?>
@@ -310,7 +296,7 @@
 			</div>
 			
 			<div id=club>
-					<div class=club_caption1>增长会<span>Up Network</span></div>
+					<div class=club_caption1>增长会</div>
 					<a href="/investor" class=club_more1 target="_blank"></a>
 					<?php $pos_name = 'index_club0';?>
 					<div class=content <?php show_page_pos("$pos_name",'base_img_withoutime');?>>
@@ -335,7 +321,7 @@
 			
 			
 			<div id=city>
-					<div class=city_caption1>城市<span>Best Cities</span></div>
+					<div class=city_caption1>城市</div>
 					<a href="/city/" class=city_more1 target="_blank"></a>
 					<?php $pos_name = 'index_city0';?>
 					<div class=content <?php show_page_pos($pos_name,'base_img_withoutime');?>>
@@ -366,9 +352,9 @@
 		
 		<div class=forbes_l style="margin-left:25px;">
     	<div class=caption>
-				<div class="caption_base captions caption_selected" id="cls_cpt1">最受欢迎<span>Most Popular</span></div>
+				<div class="caption_base captions caption_selected" id="cls_cpt1">最受欢迎</div>
 				<div class=line style="margin-top:14px;">|</div>
-				<div class="caption_base" id="cls_cpt2">编辑推荐<span>Reference</span></div>
+				<div class="caption_base" id="cls_cpt2">编辑推荐</div>
 		</div>
 		<div id="div_caption1">
 			<?php for($i=0;$i<6;$i++){ $pos_name = "index_pop".$i;?>
@@ -388,7 +374,7 @@
 			
 			<div id=inventory>
 				<div class=public_top1>
-					<div class=public_caption1 style="color:#4990B9;">在线调查<span>Survey</span></div>
+					<div class=public_caption1 style="color:#4990B9;">在线调查</div>
 					<a href="/survey/" class=public_more1 target="_blank"></a>
 				</div>
 
@@ -417,9 +403,7 @@
 			
 		<div class=forbes_l style="margin-top:0px; margin-left:25px;">
 		  	<div class=caption>
-					<div class=captions>采编空间<span>Bloggers</span></div>
-					<div class=line>|</div>
-					<a href="/column/" class=more target="_blank"></a>
+					<div class=captions><a href="/column/" target="_blank">采编空间</a></div>
 			</div>
 				<?php 
 				for($i=0;$i<8;$i++){ $pos_name = "index_jour".$i;?>
@@ -446,7 +430,7 @@
 			
 			<div id=mag>
 				<div class=public_top1>
-					<div class=public_caption1 style="color:#4990B9;">福布斯杂志<span>Magazine Archive</span></div>
+					<div class=public_caption1 style="color:#4990B9;">福布斯杂志</div>
 					<a href="/magazine/" class=public_more1 target="_blank"></a>
 				</div>
 				<?php $pos_name='index_magazine';?>
