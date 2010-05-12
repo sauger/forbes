@@ -1,4 +1,4 @@
-var interval = 5000;
+var interval = 10000;
 var timeout_handler;
 var items;
 var start = 0;
@@ -78,13 +78,12 @@ $(function(){
 	$('#slider').slider(
 	{
 		change: function(event,ui){
-			interval = $(this).slider("option",'value') * 1000;
-			$('#debug').html(interval);
+			interval = (20 - $(this).slider("option",'value')) * 1000;
 			change_images(0);
 		},
-		min:3,
-		max:30,
-		value:5,
+		min:0,
+		max:17,
+		value:10,
 		animate:true
 	});
 });
