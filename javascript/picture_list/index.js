@@ -67,11 +67,11 @@ $(function(){
 	});
 	
 	$('#btn_play').toggle(function(){
-		$(this).attr('src','/images/imagephb/play.jpg');
+		$(this).attr('src','/images/list/play.jpg');
 		clearTimeout(timeout_handler);
 		auto_play = false;
 	},function(){
-		$(this).attr('src','/images/imagephb/pause.jpg');
+		$(this).attr('src','/images/list/pause.jpg');
 		auto_play = true;
 		timeout_handler = setTimeout("timeout_func()",interval);
 	});
