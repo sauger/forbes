@@ -57,7 +57,7 @@
 					<div id=comment_title>读者评论</div>
 					<div id=comment_count>(共<?php echo $count;?>条)</div>
 					<button id=comment_btn></button>
-					<a href="<?php echo static_news_url($news);?>" id=comment_more>返回新闻原文</a>
+					<a href="<?php echo static_news_url($news);?>" id=comment_more>返回<?php echo $news->title;?></a>
 				</div>
 				
 				<?php if($comment_id!=-1){?>
