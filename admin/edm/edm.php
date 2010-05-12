@@ -196,14 +196,14 @@ a:active {text-decoration: none;}
 			             		$pos = "edm_list_list_0";
 			             	?>
 			              <tr>
-			                <td width="65" rowspan="3" valign="top"<?php show_page_pos($pos);?>><img src="<?php img_src()?>" width="54" height="54" /></td>
+			                <td width="65" rowspan="3" valign="top"<?php show_page_pos($pos,'link_img');?>><img src="<?php img_src()?>" width="54" height="54" /></td>
 			                <td height="30" valign="top" class="f5"  style="color: #000">·<?php show_href();?></td>
 			              </tr>
 			              <?php for($i=1;$i<3;$i++){
 			              	$pos = "edm_list_list_{$i}";
 			              ?>
 			              <tr>
-			                <td height="30" valign="top"<?php show_page_pos($pos);?>><span class="f5"  style="color: #000">·<?php show_href();?></span></td>
+			                <td height="30" valign="top"<?php show_page_pos($pos,'link');?>><span class="f5"  style="color: #000">·<?php show_href();?></span></td>
 			              </tr>
 			              <?php }?>
 			            </table></td>
@@ -229,46 +229,46 @@ a:active {text-decoration: none;}
 			                <td><table width="180" border="0" cellspacing="0" style="margin-left:6px;" cellpadding="0">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C;">【商业】</td>
-			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;">MORE&gt;&gt;</td>
+			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href='http://www.forbeschina.com/business/'>MORE&gt;&gt;</a></td>
 			                  </tr>
 			                  <?php 
 			                  	$pos = "edm_sy";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos)?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
-			                    <td colspan="2" valign="top" <?php show_page_pos($pos)?>><?php show_desc();?></td>
+			                    <td colspan="2" valign="top"><?php show_desc();?></td>
 			                  </tr>
 			                  <?php 
 			                  	for($i=0;$i<2;$i++){
 			                  		$pos = "edm_sy_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos);?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
 			                <td><table width="180" border="0" align="right" style="margin-left:6px"  cellpadding="0" cellspacing="0">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C">【创业】</td>
-			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;">MORE&gt;&gt;</td>
+			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="http://www.forbeschina.com/entrepreneur/">MORE&gt;&gt;</a></td>
 			                  </tr>
 			                  <?php 
 			                  	$pos = "edm_cy";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos)?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
-			                    <td colspan="2" valign="top" <?php show_page_pos($pos)?>><?php show_desc();?></td>
+			                    <td colspan="2" valign="top"><?php show_desc();?></td>
 			                  </tr>
 			                  <?php 
 			                  	for($i=0;$i<2;$i++){
 			                  		$pos = "edm_cy_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos);?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
@@ -291,46 +291,46 @@ a:active {text-decoration: none;}
 			                <td><table width="180" border="0" cellspacing="0" cellpadding="0">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C">【科技】</td>
-			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;">MORE&gt;&gt;</td>
+			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="http://www.forbeschina.com/tech/">MORE&gt;&gt;</a></td>
 			                  </tr>
 			                   <?php 
 			                  	$pos = "edm_kj";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos)?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
-			                    <td colspan="2" valign="top" <?php show_page_pos($pos)?>><?php show_desc();?></td>
+			                    <td colspan="2" valign="top"><?php show_desc();?></td>
 			                  </tr>
 			                  <?php 
 			                  	for($i=0;$i<2;$i++){
 			                  		$pos = "edm_kj_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos);?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
 			                <td><table width="180" border="0" align="right" style="margin-left:6px"   cellpadding="0" cellspacing="0">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C">【城市】</td>
-			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="#"  target="_blank" style="color:#333">MORE&gt;&gt;</a></td>
+			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="http://www.forbeschina.com/city/">MORE&gt;&gt;</a></td>
 			                  </tr>
 			                   <?php 
 			                  	$pos = "edm_cs";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos)?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
-			                    <td colspan="2" valign="top" <?php show_page_pos($pos)?>><?php show_desc();?></td>
+			                    <td colspan="2" valign="top"><?php show_desc();?></td>
 			                  </tr>
 			                  <?php 
 			                  	for($i=0;$i<2;$i++){
 			                  		$pos = "edm_cs_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos);?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
@@ -353,20 +353,26 @@ a:active {text-decoration: none;}
 			                <td><table width="180" border="0" cellspacing="0" cellpadding="0">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C">【投资】</td>
-			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;">MORE&gt;&gt;</td>
+			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="http://www.forbeschina.com/investment/">MORE&gt;&gt;</a></td>
 			                  </tr>
+			                  </tr>
+			                   <?php 
+			                  	$pos = "edm_tz";
+			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C"><strong>对话杨惠妍</strong></td>
-			                  </tr>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
+			                   </tr>
 			                  <tr>
-			                    <td colspan="2" valign="top">前女首富张茵明确表示因为我国老龄化问...</td>
+			                    <td colspan="2" valign="top"><?php show_desc();?></td>
 			                  </tr>
+			                  <?php 
+			                  	for($i=0;$i<2;$i++){
+			                  		$pos = "edm_cs_{$i}";
+			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000">·前女首富张茵明确表示因为我</td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
 			                  </tr>
-			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000">·前女首富张茵明确表示因为我</td>
-			                  </tr>
+			                   <?php }?>
 			                </table></td>
 			                <td valign="top"><table width="180" border="0" align="right" cellpadding="0" cellspacing="0">
 			                  <tr>

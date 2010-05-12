@@ -57,6 +57,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #comment_count{color:#BA2636; font-size:12px;}
 #comment_btn{width:122px; height:22px; margin-left:20px; border:0; background:url(/images/news/comment.jpg) no-repeat; cursor:pointer; float:left;}
 #comment_more{color:#003399; width:600px; height:30px; overflow:hidden; text-align:right; font-size:13px; float:right;}
+#comment_more{color:#003399;}
 
 .publish_comment{width:640px; padding-bottom:20px; line-height:20px; font-size:13px; color:#666666; float:left; display:none;}
 .publish_comment textarea{width:640px; height:140px; border:1px solid #cccccc; margin-bottom:5px;}

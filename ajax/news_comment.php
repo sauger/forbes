@@ -25,7 +25,9 @@
 		<div id=comment_title>读者评论</div>
 		<div id=comment_count>(共<?php echo $count;?>条)</div>
 		<button id=comment_btn></button>
-		<a href="<?php echo $comments_url;?>" id=comment_more>查看所有评论</a>
+		<div id="comment_more">
+		<a href="<?php echo $comments_url;?>">查看所有评论</a>
+		</div>
 	</div>
 	
 	<?php if($comment_id!=-1){?>
