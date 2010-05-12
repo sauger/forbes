@@ -11,8 +11,8 @@ function display_images(){
 		if(i==display_index){
 			$(this).addClass('selected');
 			$('#main_picture').attr('src',$(this).attr('src'));
-			$('#title a').html(items[start+i].name);
-			$('#content a').html(items[start+i].comment);
+			$('#title').html(items[start+i].name);
+			$('#content').html(items[start+i].comment);
 		}else{
 			$(this).removeClass('selected');
 		}
