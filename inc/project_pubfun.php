@@ -383,4 +383,8 @@ function insert_ad_record($ad,$type='show'){
 	$list->save();
 }
 
+function die_error(){
+	die(redirect('error.html'));
+	
+}
 ?>

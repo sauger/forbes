@@ -187,7 +187,7 @@
 			</div>
 			<div class=forbes_l_content>
 				<div id=column_btnl style="background:none; cursor:auto;"></div>
-				<div id="column_box">
+				<div id="column_box" >
 				<?php 
 					for($i=0;$i<8;$i++){ 
 						$pos_name = "index_author".$i;
