@@ -61,15 +61,14 @@
 					<img src="<?php echo $items[1]->image;?>" />
 					<img style="margin-right:0px;" src="<?php echo $items[2]->image;?>" />
 				</div>
-				 	
 			</div>
 			<div id=email>
 					<div id=pic><a href=""><img border=0 src="/images/list/email.jpg"></a></div>
-					<div id=wz><a href="">分享给好友</a></div>
+					<div id=wz><a href="<?php echo $static_site?>/pic_list/<?php echo $id;?>/share">分享给好友</a></div>
 			</div>
 			<div id=pic_content>
-				<div id=title><a href=""><?php echo $items[0]->name?></a></div>
-				<div id=content><a href=""><?php echo $items[0]->comment?></a></div>
+				<div id=title><?php echo $items[0]->name?></div>
+				<div id=content><?php echo $items[0]->comment?></div>
 			</div>
 			<div id=pic_recommend>
 				<div id=wz>图片榜单推荐</div>
@@ -85,8 +84,6 @@
 		<div id="right_inc">
 		 	<?php include_right( "ad");?>
 	 		<?php include_right( "favor");?>
-	 		<?php include_right( "four");?>
-	 		<?php include_right( "magazine");?>
 		</div>
 	<? include_bottom();?>
 	</div>
