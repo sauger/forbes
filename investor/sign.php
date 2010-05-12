@@ -192,7 +192,7 @@
 					</div>
 					<div class="linkman_a">
 							<div class="linkman_name">* 联系人邮件：</div>
-							<div class="linkman_input"><input type="text" maxlength="40" class="required" name="post[email]"/></div>
+							<div class="linkman_input"><input type="text" maxlength="40" class="required email" name="post[email]"/></div>
 							<div id="linkman_qq">联系人QQ：</div>
 							<input type="text" id="q_input" class="number" maxlength="10" name="post[qq]"/>
 					</div>
