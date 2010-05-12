@@ -143,3 +143,26 @@
 </div>
 </body>
 </html>
+<SCRIPT>
+  
+	
+	var demo1 = document.getElementById('demo1');
+	var demo2 = document.getElementById('demo2');
+	var demo3 = document.getElementById('demo3');  
+    	
+	var speed=30//速度数值越大速度越慢
+
+
+	demo3.innerHTML=demo2.innerHTML
+	function Marquee2(){
+	if(demo3.offsetWidth-demo1.scrollLeft<=0)
+	demo1.scrollLeft-=demo2.offsetWidth
+	else{
+	demo1.scrollLeft++
+	}
+	}
+	var MyMar2=setInterval(Marquee2,speed)
+	demo1.onmouseover=function() {clearInterval(MyMar2)}
+	demo1.onmouseout=function() {MyMar2=setInterval(Marquee2,speed)}
+	
+</SCRIPT>
