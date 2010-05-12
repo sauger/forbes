@@ -13,6 +13,10 @@
 	}
 	$column = new table_class('fb_user');
 	$column->find($id);
+	if(!$column->id){
+		redirect('error.html');
+		die();
+	}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
