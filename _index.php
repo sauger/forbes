@@ -41,7 +41,7 @@
 					<div class=captions><?php echo $catename[0]->name; ?>专题</div>
 				</div>
 				<?php for($i=0;$i<2;$i++){ $pos_name = $pos."them".$i;?>
-				<div class=common_subject <?php #show_page_pos($pos_name,'base_img')?>>
+				<div class=common_subject <?php show_page_pos($pos_name,'base_img')?>>
 					<div class=common_subject_pic><?php show_page_img();?></div>
 					<div class=common_subject_list><?php show_page_href();?></div>
 					<div class=common_subject_description><?php show_page_desc();?></div>
