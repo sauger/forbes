@@ -10,7 +10,7 @@
 		use_jquery();
 	?>
 </head>
-<body>
+<body style="background:#ffffff;">
 <?php
 $db=get_db();
 $id=$_REQUEST['id'];

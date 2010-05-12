@@ -63,7 +63,7 @@
 				</div>
 			</div>
 			<div id=email>
-					<div id=pic><a href=""><img border=0 src="/images/list/email.jpg"></a></div>
+					<div id=pic><img border=0 src="/images/list/email.jpg"></div>
 					<div id=wz><a href="<?php echo $static_site?>/pic_list/<?php echo $id;?>/share">分享给好友</a></div>
 			</div>
 			<div id=pic_content>
