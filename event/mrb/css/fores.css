@@ -6,7 +6,7 @@ body{margin:0; font-family:宋体; font-size:12px;}
 
 /*   设置 超链接的 样式 */
 a{color: #FFFFFF;	text-decoration: none;}
-
+#b_bottom{width:950px; height:30px; background:#999999; margin-top:20px; margin-bottom:380px; float:left; display:inline;}
 /*    顶部 top */
 #top_pg{width:950px; height:226px; background:url(../image/top.jpg); text-align:center; float:left; display:inline; }
 
