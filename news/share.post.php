@@ -60,11 +60,13 @@
 				$share->save();
 				if($type == 'news'){
 					$content = $_GET['name'][$i]."，你好：<br/><br/>　　您的好友".$sname."想与您分享福布斯中文网的文章《".$news->title."》，您可以点击以下连接阅读<br/><br/>　　<a href='http://www.forbeschina.com".static_news_url($news)."'>http://www.forbeschina.com".static_news_url($news)."</a><br/>　　如果点击以上链接不起作用，请将此网址复制并粘贴到新的浏览器窗口中。";
+					$title = $news->title;
 				}else if($type == 'pic_list'){
 					$content = $_GET['name'][$i]."，你好：<br/><br/>　　您的好友".$sname."想与您分享福布斯中文网的榜单《".$list->name."》，您可以点击以下连接查看<br/><br/>　　<a href='http://www.forbeschina.com/list/".$news_id."'>http://www.forbeschina.com/list/".$news_id."</a><br/>　　如果点击以上链接不起作用，请将此网址复制并粘贴到新的浏览器窗口中。";
+					$title = $list->name;
 				}
 				
-				send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_GET['mail'][$i],$news->title,$content);
+				send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_GET['mail'][$i],$title,$content);
 			}
 		}
 	}
