@@ -27,24 +27,24 @@ div{margin:0; padding:0; float:left; display:inline;}
 #top_logo .input{width:160px; height:22px;  margin-top:37px; border:1px solid #99CCFF; background:#ffffff; float:left;}
 #top_logo .search{width:83px; height:26px; margin-top:38px; margin-left:5px; border:0px; color:#ffffff; line-height:26px; background:url(/images/public/search_bg.jpg) no-repeat;}
 
-#navigation{width:1000px; height:45px; margin-top:1px; background:url(/images/public/bg2.jpg) repeat-x;}
-#navigation .menu{width:75px; height:45px; text-align:center; overflow:hidden;}
+#navigation{width:1000px; height:35px; margin-top:1px; background:url(/images/public/bg2.jpg) repeat-x;}
+#navigation .menu{width:75px; height:35px; text-align:center; overflow:hidden;}
 
 #navigation .vertical{width:2px; height:25px; margin-top:5px; background:url(/images/public/vertical.jpg);}
-#navigation .nav{width:75px; height:35px; cursor:pointer;  background:none; margin:0 auto; margin-top:3px;}
+#navigation .nav{width:75px; height:35px; cursor:pointer;  background:none; margin:0 auto;}
 
-#navigation .menu #picindex{background:url(/images/public/m_index.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_index.png);}
-#navigation .menu #piclist{background:url(/images/public/m_lists.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_lists.png);}
-#navigation .menu #picbillionaires{background:url(/images/public/m_billionaires.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_billionaires.png);}
-#navigation .menu #picinvestment{background:url(/images/public/m_investment.png) no-repeat center! important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_investment.png);}
-#navigation .menu #picentrepreneur{background:url(/images/public/m_entrepreneur.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_entrepreneur.png);}
-#navigation .menu #picbusiness{background:url(/images/public/m_business.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_business.png);}
-#navigation .menu #pictech{background:url(/images/public/m_tech.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_tech.png);}
-#navigation .menu #piccity{background:url(/images/public/m_city.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_city.png);}
-#navigation .menu #piclife{background:url(/images/public/m_life.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_life.png);}
-#navigation .menu #piccolumn{background:url(/images/public/m_column.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_column.png);}
+#navigation .menu #picindex{background:url(/images/public/m_index2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_index2.png);}
+#navigation .menu #piclist{background:url(/images/public/m_lists2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_lists2.png);}
+#navigation .menu #picbillionaires{background:url(/images/public/m_billionaires2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_billionaires2.png);}
+#navigation .menu #picinvestment{background:url(/images/public/m_investment2.png) no-repeat center! important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_investment2.png);}
+#navigation .menu #picentrepreneur{background:url(/images/public/m_entrepreneur2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_entrepreneur2.png);}
+#navigation .menu #picbusiness{background:url(/images/public/m_business2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_business2.png);}
+#navigation .menu #pictech{background:url(/images/public/m_tech2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_tech2.png);}
+#navigation .menu #piccity{background:url(/images/public/m_city2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_city2.png);}
+#navigation .menu #piclife{background:url(/images/public/m_life2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_life2.png);}
+#navigation .menu #piccolumn{background:url(/images/public/m_column2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_column2.png);}
 
-#navigation #top_function2{width:214px; height:29px; margin-top:5px; background:url(/images/public/bg3.jpg) no-repeat; background-position:bottom; float:right;}
+#navigation #top_function2{width:214px; height:29px; margin-top:1px; background:url(/images/public/bg3.jpg) no-repeat; background-position:bottom; float:right;}
 #navigation #member{width:52px; height:12px; margin-top:12px; margin-left:40px; background:url(/images/public/member.png) no-repeat;float:left;}
 #navigation #magazine{width:52px; height:12px; margin-top:12px; margin-right:10px; cursor:pointer; background:url(/images/public/magazine.png); float:right;}
 
