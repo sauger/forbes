@@ -11,9 +11,27 @@
 	if(empty($news_id)){
 		die();
 	}
+	$type = $_GET['type'];
+	if(empty($type)){
+		$type = 'news';
+	}else if($type!='pic_list'){
+		$type = 'news';
+	}
 	$count = count($_GET['mail']);
-	$news = new table_class('fb_news');
-	$news->find($news_id);
+	if($type == 'news'){
+		$news = new table_class('fb_news');
+		$news->find($news_id);
+		if(!$news->id){
+			die_error();
+		}
+	}else if($type == 'pic_list'){
+		$list = new table_class('fb_custom_list_type');
+		$list->find($news_id);
+		if(!$list->id){
+			die_error();
+		}
+	}
+	
 	
 	$sharenames = array();
 	$share = new table_class('fb_news_share');
@@ -40,8 +58,15 @@
 				$share->created_at = now();
 				$share->news_id = $news_id;
 				$share->save();
-				$content = $_GET['name'][$i]."，你好：<br/><br/>　　您的好友".$sname."想与您分享福布斯中文网的文章《".$news->title."》，您可以点击以下连接阅读<br/><br/>　　<a href='http://www.forbeschina.com".static_news_url($news)."'>http://www.forbeschina.com".static_news_url($news)."</a><br/>　　如果点击以上链接不起作用，请将此网址复制并粘贴到新的浏览器窗口中。";
-				send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_GET['mail'][$i],$news->title,$content);
+				if($type == 'news'){
+					$content = $_GET['name'][$i]."，你好：<br/><br/>　　您的好友".$sname."想与您分享福布斯中文网的文章《".$news->title."》，您可以点击以下连接阅读<br/><br/>　　<a href='http://www.forbeschina.com".static_news_url($news)."'>http://www.forbeschina.com".static_news_url($news)."</a><br/>　　如果点击以上链接不起作用，请将此网址复制并粘贴到新的浏览器窗口中。";
+					$title = $news->title;
+				}else if($type == 'pic_list'){
+					$content = $_GET['name'][$i]."，你好：<br/><br/>　　您的好友".$sname."想与您分享福布斯中文网的榜单《".$list->name."》，您可以点击以下连接查看<br/><br/>　　<a href='http://www.forbeschina.com/list/".$news_id."'>http://www.forbeschina.com/list/".$news_id."</a><br/>　　如果点击以上链接不起作用，请将此网址复制并粘贴到新的浏览器窗口中。";
+					$title = $list->name;
+				}
+				
+				send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$_GET['mail'][$i],$title,$content);
 			}
 		}
 	}
@@ -52,4 +77,14 @@
 	#redirect('share.php?news_id='.$news_id);
 ?>
 alert("已成功分享！");
+<?php 
+if($type == 'news'){
+?>
 window.location.href = "<?php echo static_news_url($news);?>";
+<?php
+}else if($type == 'pic_list'){
+?>
+window.location.href = "/list/<?php echo $news_id;?>";
+<?php
+}
+?>

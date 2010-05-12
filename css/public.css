@@ -1,3 +1,4 @@
+body{background:#ffffff;}
 p{margin:0; padding:0;}
 ul{margin:0; padding:0;}
 li{margin:0; padding:0;} 
@@ -23,7 +24,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #top_logo{width:785px; height:90px; margin-top:3px; background:url(/images/public/bg1.jpg) repeat-x;}
 #top_logo #border{width:2px; height:90px; background:url(/images/public/border.jpg) no-repeat;}
 #top_logo #logo{width:170px; height:75px; margin-top:7px; margin-left:15px;}
-#top_logo .input{width:160px; height:22px;  margin-top:37px; border:1px solid #99CCFF; float:left;}
+#top_logo .input{width:160px; height:22px;  margin-top:37px; border:1px solid #99CCFF; background:#ffffff; float:left;}
 #top_logo .search{width:83px; height:26px; margin-top:38px; margin-left:5px; border:0px; color:#ffffff; line-height:26px; background:url(/images/public/search_bg.jpg) no-repeat;}
 
 #navigation{width:1000px; height:35px; margin-top:1px; background:url(/images/public/bg2.jpg) repeat-x;}

@@ -1,4 +1,4 @@
-var interval = 5000;
+var interval = 10000;
 var timeout_handler;
 var items;
 var start = 0;
@@ -11,8 +11,8 @@ function display_images(){
 		if(i==display_index){
 			$(this).addClass('selected');
 			$('#main_picture').attr('src',$(this).attr('src'));
-			$('#title a').html(items[start+i].name);
-			$('#content a').html(items[start+i].comment);
+			$('#title').html(items[start+i].name);
+			$('#content').html(items[start+i].comment);
 		}else{
 			$(this).removeClass('selected');
 		}
@@ -67,24 +67,23 @@ $(function(){
 	});
 	
 	$('#btn_play').toggle(function(){
-		$(this).attr('src','/images/imagephb/play.jpg');
+		$(this).attr('src','/images/list/play.jpg');
 		clearTimeout(timeout_handler);
 		auto_play = false;
 	},function(){
-		$(this).attr('src','/images/imagephb/pause.jpg');
+		$(this).attr('src','/images/list/pause.jpg');
 		auto_play = true;
 		timeout_handler = setTimeout("timeout_func()",interval);
 	});
 	$('#slider').slider(
 	{
 		change: function(event,ui){
-			interval = $(this).slider("option",'value') * 1000;
-			$('#debug').html(interval);
+			interval = (20 - $(this).slider("option",'value')) * 1000;
 			change_images(0);
 		},
-		min:3,
-		max:30,
-		value:5,
+		min:0,
+		max:17,
+		value:10,
 		animate:true
 	});
 });

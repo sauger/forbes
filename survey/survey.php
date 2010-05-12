@@ -10,7 +10,7 @@
 	}
 	$vote = new table_class("fb_vote");
 	$vote->find($id);
-	if($vote->max_item_count==1)$in_type="radio";else$in_type="checkbox";
+	if($vote->max_item_count==1)$in_type="radio";else $in_type="checkbox";
 	$item = $db->query("select * from fb_vote_item where vote_id=$id");
 	$item_count = $db->record_count;
 	if($vote->vote_type!='more_vote'){

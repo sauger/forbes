@@ -10,18 +10,18 @@
 		use_jquery();
 	?>
 </head>
-<body>
+<body style="background:#ffffff;">
 <?php
 $db=get_db();
 $id=$_REQUEST['id'];
-if(empty($id))die();
+if(empty($id)) die_error();
 $type=$_REQUEST['type'];
 $types = array('news','pic','other');
-if(!in_array($type,$types)) die();
+if(!in_array($type,$types)) die_error();
 $date=$_REQUEST['date'];
 if($date!="")
 {
-	if(strtotime($date)===false) die();
+	if(strtotime($date)===false) die_error();
 	$sql=' and left(created_at,7)="'.$date.'"';
 }
 else
