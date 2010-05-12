@@ -114,7 +114,7 @@ a:active {text-decoration: none;}
 			             <?php for($i=0;$i<3;$i++){
 			             	$pos = "edm_jh_{$i}";
 			             ?>
-			              <tr <?php show_page_pos($pos);?>>
+			              <tr <?php show_page_pos($pos,'base');?>>
 			                <td><table width="295" border="0" align="right" cellpadding="0" cellspacing="0" style=" margin-top:10px;">
 			                  <tr>
 			                    <td><strong class="f3" style="color: #17599C;"><?php show_href()?></strong></td>
@@ -144,7 +144,7 @@ a:active {text-decoration: none;}
 			          </tr>
 			          <tr>
 			            <td><table width="190" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
-			              <tr <?php $pos="emd_rich"; show_page_pos($pos);?>>
+			              <tr <?php $pos="emd_rich"; show_page_pos($pos,'base_img');?>>
 			                <td width="65" rowspan="2" valign="top"><img src="<?php img_src()?>" width="54" height="54" /></td>
 			                <td class="f3" style="color: #17599C;"><strong><?php show_href();?></strong></td>
 			              </tr>
@@ -154,7 +154,7 @@ a:active {text-decoration: none;}
 			              <?php for($i=0;$i<2;$i++){
 			              	$pos = "edm_rich_list_{$i}";
 			              ?>
-			              <tr<?php show_page_pos($pos)?>>
+			              <tr<?php show_page_pos($pos,'link')?>>
 			                <td height="22" colspan="2" valign="bottom" class="f5" style="color: #000">·<?php show_href();?></td>
 			              </tr>
 			              <?php }?>
@@ -168,7 +168,7 @@ a:active {text-decoration: none;}
 			          </tr>
 			          <tr>
 			            <td><table width="190" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
-			              <tr<?php $pos="emd_city"; show_page_pos($pos);?>>
+			              <tr<?php $pos="emd_city"; show_page_pos($pos,'base_img');?>>
 			                <td width="65" rowspan="2" valign="top"><img src="images/pic2.jpg" width="54" height="54" /></td>
 			                <td class="f3" style="color: #17599C;"><strong><?php show_href();?></strong></td>
 			              </tr>
@@ -178,7 +178,7 @@ a:active {text-decoration: none;}
 			              <?php for($i=0;$i<2;$i++){
 			              	$pos = "edm_city_list_{$i}";
 			              ?>
-			              <tr<?php show_page_pos($pos);?>>
+			              <tr<?php show_page_pos($pos,'link');?>>
 			                <td height="22" colspan="2" valign="bottom" class="f5" style="color: #000">·<?php show_href();?></td>
 			              </tr>
 			              <?php }?>

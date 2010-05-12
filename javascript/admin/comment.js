@@ -15,7 +15,7 @@ $(function(){
 	$('.colorbox').click(function(e){
 		e.preventDefault();
 		parent.$.fn.colorbox({
-			html:'<div style="width:600px;height:400px;padding:5px;">' +$(this).next().val() + '</div>',
+			html:'<div style="width:600px;height:400px;padding:5px;">' +$(this).next().val() + '</div>'
 		});
 	});
 	
@@ -41,4 +41,4 @@ $(function(){
 			});
 		}
 	});
-})
+});
