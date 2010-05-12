@@ -15,8 +15,8 @@
 		use_jquery();
 	}
 	init_page_items();
-	$doman = "http://admin.forbeschina.com";
-	#$doman = "http://127.0.0.1";
+	$doman = "http://www.forbeschina.com";
+	$doman = "http://localhost:8081";
 	function img_src(){
 		global $pos;
 		global $pos_items;
@@ -85,16 +85,16 @@ a:active {text-decoration: none;}
 			  <tr>
 			    <td height="35" colspan="2" style="background:#125295; color: #FFF;"><table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
 			      <tr class="font1" style="font-weight:bold; color:#FFF;">
-			        <td width="99" align="center" valign="middle" style="color: #FFF; border-right:1px solid #0F4382;"><a href="#"  target="_blank">福布斯首页</a></td>
-			        <td width="61" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">榜单</a></td>
-			        <td width="59" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">富豪</a></td>
-			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"> <a href="#" target="_blank">投资</a></td>
-			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">创业</a></td>
-			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">科技</a></td>
-			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">城市</a></td>
-			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">评论</a></td>
-			        <td width="61" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">奢华</a></td>
-			        <td width="70" align="center" valign="middle" style="color: #FFF;"><a href="#"  target="_blank">专栏</a></td>
+			        <td width="99" align="center" valign="middle" style="color: #FFF; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com"  target="_blank">福布斯首页</a></td>
+			        <td width="61" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/list/" target="_blank">榜单</a></td>
+			        <td width="59" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/billionaires/" target="_blank">富豪</a></td>
+			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"> <a href="http://www.forbeschina.com/investment/" target="_blank">投资</a></td>
+					<td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/business/" target="_blank">商业</a></td>
+			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/entrepreneur/" target="_blank">创业</a></td>
+			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/tech/" target="_blank">科技</a></td>
+			        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/city/" target="_blank">城市</a></td>
+			        <td width="61" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/life/" target="_blank">生活</a></td>
+			        <td width="70" align="center" valign="middle" style="color: #FFF;"><a href="http://www.forbeschina.com/column/"  target="_blank">专栏</a></td>
 			      </tr>
 			    </table></td>
 			  </tr>
@@ -102,7 +102,7 @@ a:active {text-decoration: none;}
 			    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px; ">
 			      <tr>
 			      	<?php $pos ="edm_hl_img";?>
-			        <td width="324" <?php show_page_pos($pos);?>><img src="<?php img_src()?>" width="324" height="234" /></td>
+			        <td width="324" <?php show_page_pos($pos,'link_img');?>><img src="<?php img_src()?>" width="324" height="234" /></td>
 			        <td width="10" height="230">&nbsp;</td>
 			        <td><table width="314" border="0" cellspacing="0" cellpadding="0">
 			          <tr>
@@ -527,7 +527,7 @@ a:active {text-decoration: none;}
 			  <tr>
 			    <td height="26" colspan="2" valign="middle"><table width="650" border="0" cellspacing="0" cellpadding="0">
 			        <tr>
-			          <td valign="middle">您已经订阅了本邮件，如果您想退订，请点击<a href="<?php echo $doman ."/user/user_info.php"?>" style="color:blue">此处</a>，进入“我的设置”进行退订操作。</td>
+			          <td valign="middle">您已经订阅了本邮件，如果您想退订，请点击<a href="<?php echo $doman ."/user/"?>" style="color:blue">此处</a>，进入“我的设置”进行退订操作。</td>
 			        </tr>
 			    </table></td>
 			  </tr>
