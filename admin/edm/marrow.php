@@ -57,16 +57,16 @@
 			    <td height="35" colspan="2" style="background:#125295; color: #FFF;">
 				    <table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
 				      <tr class="font1" style="font-weight:bold; color:#FFF;">
-				        <td width="99" align="center" valign="middle" style="color: #FFF; border-right:1px solid #0F4382;"><a href="#"  target="_blank">福布斯首页</a></td>
-				        <td width="61" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">榜单</a></td>
-				        <td width="59" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">富豪</a></td>
-				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"> <a href="#" target="_blank">投资</a></td>
-				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">创业</a></td>
-				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">科技</a></td>
-				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">城市</a></td>
-				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">评论</a></td>
-				        <td width="61" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="#" target="_blank">奢华</a></td>
-				        <td width="70" align="center" valign="middle" style="color: #FFF;"><a href="#"  target="_blank">专栏</a></td>
+				        <td width="99" align="center" valign="middle" style="color: #FFF; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com"  target="_blank">福布斯首页</a></td>
+				        <td width="61" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/list/" target="_blank">榜单</a></td>
+				        <td width="59" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/billionaires/" target="_blank">富豪</a></td>
+				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"> <a href="http://www.forbeschina.com/investment/" target="_blank">投资</a></td>
+						<td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/business/" target="_blank">商业</a></td>
+				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/entrepreneur/" target="_blank">创业</a></td>
+				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/tech/" target="_blank">科技</a></td>
+				        <td width="60" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/city/" target="_blank">城市</a></td>
+				        <td width="61" align="center" valign="middle" style="color: #FFF; border-left:1px solid #1664AB; border-right:1px solid #0F4382;"><a href="http://www.forbeschina.com/life/" target="_blank">生活</a></td>
+				        <td width="70" align="center" valign="middle" style="color: #FFF;"><a href="http://www.forbeschina.com/column/"  target="_blank">专栏</a></td>
 				      </tr>
 				    </table>
 			    </td>

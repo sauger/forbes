@@ -102,7 +102,7 @@ a:active {text-decoration: none;}
 			    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px; ">
 			      <tr>
 			      	<?php $pos ="edm_hl_img";?>
-			        <td width="324" <?php show_page_pos($pos,'link_img');?>><img src="<?php img_src()?>" width="324" height="234" /></td>
+			        <td width="324" <?php show_page_pos($pos,'edm_img');?>><a href="<?php echo $pos_items->$pos->href;?>"><img border="0" src="<?php img_src()?>" width="324" height="234" /></a></td>
 			        <td width="10" height="230">&nbsp;</td>
 			        <td><table width="314" border="0" cellspacing="0" cellpadding="0">
 			          <tr>
@@ -114,7 +114,7 @@ a:active {text-decoration: none;}
 			             <?php for($i=0;$i<3;$i++){
 			             	$pos = "edm_jh_{$i}";
 			             ?>
-			              <tr <?php show_page_pos($pos,'base');?>>
+			              <tr <?php show_page_pos($pos,'edm_base');?>>
 			                <td><table width="295" border="0" align="right" cellpadding="0" cellspacing="0" style=" margin-top:10px;">
 			                  <tr>
 			                    <td><strong class="f3" style="color: #17599C;"><?php show_href()?></strong></td>
@@ -144,7 +144,7 @@ a:active {text-decoration: none;}
 			          </tr>
 			          <tr>
 			            <td><table width="190" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
-			              <tr <?php $pos="emd_rich"; show_page_pos($pos,'base_img');?>>
+			              <tr <?php $pos="emd_rich"; show_page_pos($pos,'edm_base_img');?>>
 			                <td width="65" rowspan="2" valign="top"><img src="<?php img_src()?>" width="54" height="54" /></td>
 			                <td class="f3" style="color: #17599C;"><strong><?php show_href();?></strong></td>
 			              </tr>
@@ -154,7 +154,7 @@ a:active {text-decoration: none;}
 			              <?php for($i=0;$i<2;$i++){
 			              	$pos = "edm_rich_list_{$i}";
 			              ?>
-			              <tr<?php show_page_pos($pos,'link')?>>
+			              <tr<?php show_page_pos($pos,'edm_link')?>>
 			                <td height="22" colspan="2" valign="bottom" class="f5" style="color: #000">·<?php show_href();?></td>
 			              </tr>
 			              <?php }?>
@@ -168,7 +168,7 @@ a:active {text-decoration: none;}
 			          </tr>
 			          <tr>
 			            <td><table width="190" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
-			              <tr<?php $pos="emd_city"; show_page_pos($pos,'base_img');?>>
+			              <tr<?php $pos="emd_city"; show_page_pos($pos,'edm_base_img');?>>
 			                <td width="65" rowspan="2" valign="top"><img src="images/pic2.jpg" width="54" height="54" /></td>
 			                <td class="f3" style="color: #17599C;"><strong><?php show_href();?></strong></td>
 			              </tr>
@@ -178,7 +178,7 @@ a:active {text-decoration: none;}
 			              <?php for($i=0;$i<2;$i++){
 			              	$pos = "edm_city_list_{$i}";
 			              ?>
-			              <tr<?php show_page_pos($pos,'link');?>>
+			              <tr<?php show_page_pos($pos,'edm_link');?>>
 			                <td height="22" colspan="2" valign="bottom" class="f5" style="color: #000">·<?php show_href();?></td>
 			              </tr>
 			              <?php }?>
@@ -196,14 +196,14 @@ a:active {text-decoration: none;}
 			             		$pos = "edm_list_list_0";
 			             	?>
 			              <tr>
-			                <td width="65" rowspan="3" valign="top"<?php show_page_pos($pos,'link_img');?>><img src="<?php img_src()?>" width="54" height="54" /></td>
+			                <td width="65" rowspan="3" valign="top"<?php show_page_pos($pos,'edm_link_img');?>><img src="<?php img_src()?>" width="54" height="54" /></td>
 			                <td height="30" valign="top" class="f5"  style="color: #000">·<?php show_href();?></td>
 			              </tr>
 			              <?php for($i=1;$i<3;$i++){
 			              	$pos = "edm_list_list_{$i}";
 			              ?>
 			              <tr>
-			                <td height="30" valign="top"<?php show_page_pos($pos,'link');?>><span class="f5"  style="color: #000">·<?php show_href();?></span></td>
+			                <td height="30" valign="top"<?php show_page_pos($pos,'edm_link');?>><span class="f5"  style="color: #000">·<?php show_href();?></span></td>
 			              </tr>
 			              <?php }?>
 			            </table></td>
@@ -235,7 +235,7 @@ a:active {text-decoration: none;}
 			                  	$pos = "edm_sy";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'edm_base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
 			                    <td colspan="2" valign="top"><?php show_desc();?></td>
@@ -245,7 +245,7 @@ a:active {text-decoration: none;}
 			                  		$pos = "edm_sy_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'edm_link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
@@ -258,7 +258,7 @@ a:active {text-decoration: none;}
 			                  	$pos = "edm_cy";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'edm_base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
 			                    <td colspan="2" valign="top"><?php show_desc();?></td>
@@ -268,7 +268,7 @@ a:active {text-decoration: none;}
 			                  		$pos = "edm_cy_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'edm_link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
@@ -297,7 +297,7 @@ a:active {text-decoration: none;}
 			                  	$pos = "edm_kj";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'edm_base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
 			                    <td colspan="2" valign="top"><?php show_desc();?></td>
@@ -307,7 +307,7 @@ a:active {text-decoration: none;}
 			                  		$pos = "edm_kj_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'edm_link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
@@ -320,7 +320,7 @@ a:active {text-decoration: none;}
 			                  	$pos = "edm_cs";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'edm_base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
 			                    <td colspan="2" valign="top"><?php show_desc();?></td>
@@ -330,7 +330,7 @@ a:active {text-decoration: none;}
 			                  		$pos = "edm_cs_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'edm_link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
@@ -360,7 +360,7 @@ a:active {text-decoration: none;}
 			                  	$pos = "edm_tz";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'base')?>><strong><?php show_href();?></strong></td>
+			                    <td height="24" colspan="2" class="f3" style="color: #17599C;" <?php show_page_pos($pos,'edm_base')?>><strong><?php show_href();?></strong></td>
 			                   </tr>
 			                  <tr>
 			                    <td colspan="2" valign="top"><?php show_desc();?></td>
@@ -370,7 +370,7 @@ a:active {text-decoration: none;}
 			                  		$pos = "edm_cs_{$i}";
 			                  ?>
 			                  <tr>
-			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'link');?>>·<?php show_href();?></td>
+			                    <td height="24" colspan="2" class="f5" style="color: #000"<?php show_page_pos($pos,'edm_link');?>>·<?php show_href();?></td>
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
@@ -410,10 +410,10 @@ a:active {text-decoration: none;}
 			                  <tr>
 			                    <td valign="top" class="f5" style="color: #000"><table width="180" border="0" cellspacing="0" cellpadding="0">
 			                      <tr>
-			                        <td height="24" class="f3" style="color: #17599C"><strong><?php show_href();?></strong></td>
+			                        <td height="24" class="f3" style="color: #17599C" <?php show_page_pos($pos,'edm_column');?>><strong><?php show_href();?></strong></td>
 			                      </tr>
 			                      <tr>
-			                        <td height="24"<?php show_page_pos($pos);?>><?php show_desc();?></td>
+			                        <td height="24"><?php show_desc();?></td>
 			                      </tr>
 			                      <tr>
 			                        <td height="24" align="right" class="f5" style="color: #000">--<?php echo $pos_items->$pos->alias;?></td>
@@ -439,16 +439,16 @@ a:active {text-decoration: none;}
 			                    ?>
 			                    <tr>
 			                      <td width="65" rowspan="2" valign="top"><img src="<?php img_src()?>" width="54" height="54" /></td>
-			                      <td class="f3" style="color: #17599C"><strong><?php show_href();?></strong></td>
+			                      <td class="f3" style="color: #17599C" <?php show_page_pos($pos,'edm_base_img');?>><strong><?php show_href();?></strong></td>
 			                    </tr>
 			                    <tr>
-			                      <td valign="top" <?php show_page_pos($pos);?>><?php show_desc()?></td>
+			                      <td valign="top"><?php show_desc()?></td>
 			                    </tr>
 			                    <?php for($i=0;$i<2;$i++){
 			                    	$pos= "edm_subject_{$i}";
 			                    ?>
 			                    <tr>
-			                      <td height="26" colspan="2" valign="bottom" class="f5" style="color: #000"<?php show_page_pos($pos)?>>·<?php show_href();?></td>
+			                      <td height="26" colspan="2" valign="bottom" class="f5" style="color: #000"<?php show_page_pos($pos,'edm_link')?>>·<?php show_href();?></td>
 			                    </tr>
 			                    <?php }?>
 			                  </table></td>
@@ -459,7 +459,7 @@ a:active {text-decoration: none;}
 			          <table width="205" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
 			            <tr>
 			            	<?php $pos="edm_ad"?>
-			              <td height="94" <?php show_page_pos($pos);?>><img src="<?php img_src();?>" width="205" height="94" /></td>
+			              <td height="94" <?php show_page_pos($pos,'edm_img');?>><img src="<?php img_src();?>" width="205" height="94" /></td>
 			            </tr>
 			          </table></td>
 			      </tr>
@@ -474,23 +474,23 @@ a:active {text-decoration: none;}
 			        <td width="428" height="199" valign="top">
 			        	<table width="428" border="0" align="right" cellpadding="0" cellspacing="0"  style="background:#F7F7F7">
 			          <tr>
-			            <td height="24" valign="middle" class="f4"  style="color: #333;background:#ECECEC">&nbsp;<strong>奢华</strong></td>
+			            <td height="24" valign="middle" class="f4"  style="color: #333;background:#ECECEC">&nbsp;<strong>生活</strong></td>
 			          </tr>
 			          <tr>
 			            <?php $pos="edm_sh"?>
 			            <td valign="middle" class="f4"  style="color: #333"><table width="405" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:10px;">
 			              <tr>
-			                <td width="195" rowspan="4" valign="top"><img src="<?php img_src();?>" width="183" height="149" /></td>
+			                <td width="195" rowspan="4" valign="top" <?php show_page_pos($pos,'edm_base_img');?>><img src="<?php img_src();?>" width="183" height="149" /></td>
 			                <td valign="top" class="f3" style="color: #17599C"><strong><?php show_href();?></strong></td>
 			              </tr>
 			              <tr>
-			                <td valign="top"<?php show_page_pos($pos);?>><?php show_desc();?></td>
+			                <td valign="top"><?php show_desc();?></td>
 			              </tr>
 			              <?php for($i=0;$i<2;$i++){
 			              	$pos="edm_sh_{$i}";
 			              ?>
 			              <tr>
-			                <td valign="top"<?php show_page_pos($pos)?>><span class="f5" style="color: #000">·<?php show_href();?></span></td>
+			                <td valign="top"<?php show_page_pos($pos,'edm_link')?>><span class="f5" style="color: #000">·<?php show_href();?></span></td>
 			              </tr>
 			              <?php }?>
 			            </table></td>
@@ -508,14 +508,14 @@ a:active {text-decoration: none;}
 			              	<?php $pos="edm_magazine";?>
 			                <td><table width="190" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
 			                  <tr>
-			                    <td width="90" rowspan="2" valign="top"<?php show_page_pos($pos)?>><img src="<?php img_src();?>" width="82" height="107" /></td>
+			                    <td width="90" rowspan="2" valign="top"<?php show_page_pos($pos,'edm_base_img')?>><img src="<?php img_src();?>" width="82" height="107" /></td>
 			                    <td class="f3" style="color: #17599C"><strong><?php echo $pos_items->$pos->display;?></strong></td>
 			                  </tr>
 			                  <tr>
 			                    <td valign="top">·<?php echo $pos_items->$pos->description;?></td>
 			                  </tr>
 			                  <tr>
-			                    <td height="26" valign="bottom" class="f5" style="color: #000">·<a href="#">往期杂志查阅</a></td>
+			                    <td height="26" valign="bottom" class="f5" style="color: #000">·<a href="http://www.forbeschina.com/magazine">往期杂志查阅</a></td>
 			                    <td height="26" valign="bottom" class="f5" style="color: #000"><label>
 			                    </label></td>
 			                  </tr>
@@ -541,7 +541,7 @@ a:active {text-decoration: none;}
 			    <td height="20" colspan="2"></td>
 			  </tr>
 			  <tr>
-			    <td height="24" colspan="2" align="center" valign="middle" class="f2" style="background:#2775C3; color: #FFF;"><a href="#"  target="_blank">福布斯首页</a>　　      <a href="#"  target="_blank">榜单</a>　　      <a href="#"  target="_blank">富豪</a>　      　<a href="#"  target="_blank">投资</a>　　      <a href="#" target="_blank">创业</a>　　      <a href="#" target="_blank">科技</a>　　      <a href="#" target="_blank">城市</a>　      　<a href="#" target="_blank">评论</a>　     　<a href="#" target="_blank">奢华</a>　　      <a href="#" target="_blank">专栏</a></td>
+			    <td height="24" colspan="2" align="center" valign="middle" class="f2" style="background:#2775C3; color: #FFF;"><a href="http://www.forbeschina.com/"  target="_blank">福布斯首页</a>　　      <a href="http://www.forbeschina.com/list/"  target="_blank">榜单</a>　　      <a href="http://www.forbeschina.com/billionaires/"  target="_blank">富豪</a>　      　<a href="http://www.forbeschina.com/investment/"  target="_blank">投资</a>　      　<a href="http://www.forbeschina.com/business/" target="_blank">商业</a>　　      <a href="http://www.forbeschina.com/entrepreneur/" target="_blank">创业</a>　　      <a href="http://www.forbeschina.com/tech/" target="_blank">科技</a>　　      <a href="http://www.forbeschina.com/city/" target="_blank">城市</a>　     　<a href="http://www.forbeschina.com/life/" target="_blank">生活</a>　　      <a href="http://www.forbeschina.com/column/" target="_blank">专栏</a></td>
 			  </tr>
 			  <tr>
 			    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0">
@@ -550,7 +550,7 @@ a:active {text-decoration: none;}
 			        </tr>
 			      <tr>
 			        <td><img src="images/logo.jpg" width="138" height="64" /></td>
-			        <td align="right" valign="top" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="#" target="_blank">Copyright@2001-2010 ShangHai NewEgg E-Business Co.,LTD</a></td>
+			        <td align="right" valign="top" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;">Copyright@2001-2010 ShangHai NewEgg E-Business Co.,LTD</td>
 			      </tr>
 			    </table></td>
 			  </tr>
