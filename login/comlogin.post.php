@@ -50,6 +50,13 @@
 		$err = "用户名或密码错误";
 		$last_url = $fail_url;
 	}
+	if(front_login($name,$password)){
+		$last_url = $suess_url;
+	}else{
+		$err = "用户名或密码错误";
+		$last_url = $fail_url;
+	}
+	/*
 	$password = md5($password);
 	$db = get_db();
 	$sql = "select * from fb_yh where name = '{$name}' and password = '{$password}' and authenticated=1";
@@ -80,6 +87,7 @@
 		$err = "用户名或密码错误";
 		$last_url = $fail_url;
 	}
+	*/
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

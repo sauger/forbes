@@ -58,7 +58,7 @@
 	<meta name="Description" content="<?php echo addslashes(strip_tags($news->keywords));?>"/>
 	<?php
 		use_jquery();
-		js_include_tag('news/news','public','right');
+		js_include_tag('news/news','public','right','jquery.cookie');
 		css_include_tag('public','news','right_inc');
 	?>
 </head>
