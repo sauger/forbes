@@ -176,11 +176,13 @@ function refresh_login_box(){
 		$('#login_info').hide();
 		$('#has_name').show().attr('checked',true);
 		$('#login_info').hide();
+		$('#span_nickname').show();
 	}else{
 		$('#nick_name').hide().val('匿名');
 		$('#hid_name').attr('checked',true);
 		$('#has_name').hide();
 		$('#login_info').show();
+		$('#span_nickname').hide();
 	}
 }
 

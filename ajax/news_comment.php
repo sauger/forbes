@@ -32,7 +32,7 @@
 	<div class=publish_comment id='show_comment'>
 		<textarea id=comment_text></textarea>
 		<input type="radio" name="nick_name" id=hid_name value="hidden" /><span>匿名</span>
-		<input type="radio" name="nick_name" id=has_name value="name" checked="checked" /><span>昵称</span>
+		<input type="radio" name="nick_name" id=has_name value="name" checked="checked" /><span id="span_nickname">昵称</span>
 		<input type="text" value="<?php echo $_COOKIE['name']?>" id=nick_name />
 		<button id=commit_submit>提交</button>	
 		<div id="login_info" style="margin-top:10px;">
