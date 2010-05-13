@@ -409,6 +409,7 @@ function front_login($name,$password){
 			setcookie("password",$_POST['password'],$limit,'/');
 			
 		}else{
+			setcookie("name",$name,0,'/');
 			setcookie("cache_name",$cache_name,0,'/');
 			
 		}
