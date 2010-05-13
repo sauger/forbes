@@ -16,7 +16,7 @@
 	}
 	init_page_items();
 	$doman = "http://www.forbeschina.com";
-	$doman = "http://localhost:8081";
+	#$doman = "http://localhost:8081";
 	function img_src(){
 		global $pos;
 		global $pos_items;
