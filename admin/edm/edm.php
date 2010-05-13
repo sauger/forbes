@@ -78,7 +78,7 @@ a:active {text-decoration: none;}
 </style>
 </head>
 <body style="margin-left: 0px;	margin-top: 0px;margin-right: 0px;	margin-bottom: 0px; font-size: 12px; color: #666; line-height:150%;">
-			<table width="650" border="0" align="center" cellpadding="0" cellspacing="0" style="font-szie:12px;">
+			<table width="650" border="0" align="center" cellpadding="0" cellspacing="0" style="font-size:12px;">
 			  <tr>
 			    <td width="558"><img src="images/logo.jpg" width="138" height="64" /></td>
 			    <td width="92" align="right" valign="bottom"><a href="<?php echo $doman;?>/login/" target="_blank">登陆</a>　| 　<a style="font-size:12px;" href="<?php echo $doman;?>/register/" target="_blank">注册</a></td>
