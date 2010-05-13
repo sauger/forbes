@@ -51,6 +51,8 @@
 		$fields['edm_base_img'] = array("标题","描述","","链接","","图片","","","","","");
 		$fields['edm_link'] = array("标题","","","链接","","","","","","","");
 		$fields['edm_column']=array("文章标题","文章描述","","链接","","","","","专栏作者","","");
+		$fields['edm_news']=array("文章标题","文章描述","","链接","","图片","","","作者","发布于","");
+		$fields['edm_news2']=array("文章标题","文章描述","","链接","","","","","作者","发布于","");
 		
 		$names = array_key_exists($_GET['name'],$fields) ?  $fields[$_GET['name']] : $fields['default'];  
 		

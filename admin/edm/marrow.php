@@ -1,5 +1,7 @@
-<?php 
+<?php
 	include "../../frame.php";
+	$type = $_GET['type'];
+	if(strlen($type)!=6){die();}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -73,22 +75,22 @@
 			  </tr>
 			  <tr>
 			  	<td width="450">
-			  	<?php $pos ="marrow_entre_title";?>
-			  		<table width=100% <?php show_page_pos($pos);?> style="margin-top:10px;">
+			  		<?php if($type[0]){?>
+			  		<table width=100% style="margin-top:10px;">
 			  			<tr>
 			  				<td height=24 style="background:#C0C0C0; font-size:14px; font-weight:bold;">
 			  					<table width=100%>
 			  						<tr>
-			  							<td width="90%">&nbsp;<?php echo $pos_items->$pos->display ? $pos_items->$pos->display : '&nbsp;';?></td>
-			  							<td width="10%" align="right"><a style="text-decoration: underline;" href="<?php echo $pos_items->$pos->href; ?>">更多</a></td>
+			  							<td width="90%">&nbsp;富豪本周精华文章</td>
+			  							<td width="10%" align="right"><a style="text-decoration: underline;" href="http://www.forbeschina.com/entrepreneur/">更多</a></td>
 			  						</tr>
 			  					</table>
 			  				</td>
 			  			</tr>
 			  			<tr>
 			  				<td>
-			  				<?php $pos ="marrow_entre";?>
-			  					<table width=100% <?php show_page_pos($pos);?> style="border:1px dotted #000000; border-top:none; color:#000000;">
+			  				<?php $pos ="marrow_rich";?>
+			  					<table width=100% <?php show_page_pos($pos,'edm_news');?> style="border:1px dotted #000000; border-top:none; color:#000000;">
 			  						<tr>
 			  							<td width=190 valign="top"><img style="margin-top:5px; margin-left:2px;" width=186 height=142 border=0 src="<?php img_src(); ?>" /></td>
 			  							<td width=260>
@@ -122,7 +124,89 @@
 			  										<td height=30></td>
 			  									</tr>
 			  									<tr>
-			  										<td width=100% height=12 align="right"><div style="width:100%; height:12px; line-height:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<a style="color:#4649B0; text-decoration: underline;" href="<?php echo $doman . "/" .$pos_items->$pos->static_href;?>"><?php echo $pos_items->$pos->alias; ?></a>&nbsp;发布于：<?php echo $pos_items->$pos->reserve; ?></div></td>
+			  										<td width=100% height=12 align="right"><div style="width:100%; height:12px; line-height:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?>&nbsp;发布于：<?php echo $pos_items->$pos->reserve; ?></div></td>
+			  									</tr>
+			  								</table>
+			  							</td>
+			  						</tr>
+			  					</table>
+			  				</td>
+			  			</tr>
+			  			<?php for($i=0;$i<3;$i++){
+							$pos="marrow_rich_".$i;
+			  			?>
+			  			<tr><td height=3></td></tr>
+			  			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
+			  				<td width=100% height=13>
+			  					<div style="width:40%; height:13px; line-height:13px; font-size:13px; overflow:hidden; float:left; display:inline;">
+			  						· <?php show_href(); ?>
+			  					</div>
+			  					<div style="width:60%; height:13px; line-height:13px; font-size:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?></div>
+			  				</td>
+			  			</tr>
+			  			<tr><td height=10></td></tr>
+			  			<tr>
+			  				<td width=100% height=45 style="background:#F8F8F8;">
+			  					<div style="width:98%; height:26px; margin-left:5px; font-size:13px; line-height:13px; overflow:hidden; float:left; display:inline;">
+			  						<?php show_desc(); ?>
+			  					</div>
+			  				</td>
+			  			</tr>
+			  			<tr><td height=10></td></tr>
+			  			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
+			  			<?php }?>
+			  		</table>
+			  		<?php }?>
+			  		<?php if($type[1]){?>
+			  		<table width=100% style="margin-top:10px;">
+			  			<tr>
+			  				<td height=24 style="background:#C0C0C0; font-size:14px; font-weight:bold;">
+			  					<table width=100%>
+			  						<tr>
+			  							<td width="90%">&nbsp;创业本周精华文章</td>
+			  							<td width="10%" align="right"><a style="text-decoration: underline;" href="http://www.forbeschina.com/entrepreneur/">更多</a></td>
+			  						</tr>
+			  					</table>
+			  				</td>
+			  			</tr>
+			  			<tr>
+			  				<td>
+			  				<?php $pos ="marrow_entre";?>
+			  					<table width=100% <?php show_page_pos($pos,'edm_news');?> style="border:1px dotted #000000; border-top:none; color:#000000;">
+			  						<tr>
+			  							<td width=190 valign="top"><img style="margin-top:5px; margin-left:2px;" width=186 height=142 border=0 src="<?php img_src(); ?>" /></td>
+			  							<td width=260>
+			  								<table width=100%>
+			  									<tr>
+			  										<td width=98% height=17>
+			  											<div style="width:100%; height:17px; font-size:17px; line-height:17px; overflow:hidden; float:left; display:inline;">
+			  												<?php show_href(); ?>
+			  											</div>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height="27"></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=98% height=52>
+			  											<div style="width:100%; height:52px; font-size:13px; line-height:13px; overflow:hidden;  float:left; display:inline;">
+			  												<?php show_desc(); ?>
+			  											</div>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height="13"></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=100% height=13 align="right">
+			  											<a style="text-decoration: underline;" href="<?php echo $doman . "/" .$pos_items->$pos->href;?>">详细>></a>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height=30></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=100% height=12 align="right"><div style="width:100%; height:12px; line-height:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?>&nbsp;发布于：<?php echo $pos_items->$pos->reserve; ?></div></td>
 			  									</tr>
 			  								</table>
 			  							</td>
@@ -134,16 +218,16 @@
 							$pos="marrow_entre_".$i;
 			  			?>
 			  			<tr><td height=3></td></tr>
-			  			<tr <?php show_page_pos($pos); ?>>
+			  			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
 			  				<td width=100% height=13>
 			  					<div style="width:40%; height:13px; line-height:13px; font-size:13px; overflow:hidden; float:left; display:inline;">
 			  						· <?php show_href(); ?>
 			  					</div>
-			  					<div style="width:60%; height:13px; line-height:13px; font-size:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者： <a style="color:#4649B0; text-decoration: underline;" href="<?php echo $doman . "/" .$pos_items->$pos->static_href;?>"><?php echo $pos_items->$pos->alias; ?></a> 发布于：<?php echo $pos_items->$pos->reserve; ?></div>
+			  					<div style="width:60%; height:13px; line-height:13px; font-size:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?></div>
 			  				</td>
 			  			</tr>
 			  			<tr><td height=10></td></tr>
-			  			<tr <?php show_page_pos($pos); ?>>
+			  			<tr>
 			  				<td width=100% height=45 style="background:#F8F8F8;">
 			  					<div style="width:98%; height:26px; margin-left:5px; font-size:13px; line-height:13px; overflow:hidden; float:left; display:inline;">
 			  						<?php show_desc(); ?>
@@ -154,22 +238,23 @@
 			  			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
 			  			<?php }?>
 			  		</table>
-			  		<?php $pos ="marrow_invest_title";?>
-			  		<table width=100% <?php show_page_pos($pos);?> style="margin-top:10px;">
+			  		<?php }?>
+			  		<?php if($type[2]){?>
+			  		<table width=100% style="margin-top:10px;">
 			  			<tr>
 			  				<td height=24 style="background:#C0C0C0; font-size:14px; font-weight:bold;">
 			  					<table width=100%>
 			  						<tr>
-			  							<td width="90%">&nbsp;<?php echo $pos_items->$pos->display ? $pos_items->$pos->display : '&nbsp;';?></td>
-			  							<td width="10%" align="right"><a style="text-decoration: underline;" href="<?php echo $pos_items->$pos->href;?>">更多</a></td>
+			  							<td width="90%">&nbsp;商业本周精华文章</td>
+			  							<td width="10%" align="right"><a style="text-decoration: underline;" href="http://www.forbeschina.com/entrepreneur/">更多</a></td>
 			  						</tr>
 			  					</table>
 			  				</td>
 			  			</tr>
 			  			<tr>
 			  				<td>
-			  				<?php $pos ="marrow_invest";?>
-			  					<table width=100% <?php show_page_pos($pos);?> style="border:1px dotted #000000; border-top:none; color:#000000;">
+			  				<?php $pos ="marrow_business";?>
+			  					<table width=100% <?php show_page_pos($pos,'edm_news');?> style="border:1px dotted #000000; border-top:none; color:#000000;">
 			  						<tr>
 			  							<td width=190 valign="top"><img style="margin-top:5px; margin-left:2px;" width=186 height=142 border=0 src="<?php img_src(); ?>" /></td>
 			  							<td width=260>
@@ -203,7 +288,171 @@
 			  										<td height=30></td>
 			  									</tr>
 			  									<tr>
-			  										<td width=100% height=12 align="right"><div style="width:100%; height:12px; overflow:hidden; line-height:12px; float:left; display:inline;">《福布斯》记者：<a style="color:#4649B0; text-decoration: underline;" href="<?php echo $doman . "/" .$pos_items->$pos->static_href;?>"><?php echo $pos_items->$pos->alias; ?></a>&nbsp;发布于：<?php echo $pos_items->$pos->reserve; ?></div></td>
+			  										<td width=100% height=12 align="right"><div style="width:100%; height:12px; line-height:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?>&nbsp;发布于：<?php echo $pos_items->$pos->reserve; ?></div></td>
+			  									</tr>
+			  								</table>
+			  							</td>
+			  						</tr>
+			  					</table>
+			  				</td>
+			  			</tr>
+			  			<?php for($i=0;$i<3;$i++){
+							$pos="marrow_business_".$i;
+			  			?>
+			  			<tr><td height=3></td></tr>
+			  			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
+			  				<td width=100% height=13>
+			  					<div style="width:40%; height:13px; line-height:13px; font-size:13px; overflow:hidden; float:left; display:inline;">
+			  						· <?php show_href(); ?>
+			  					</div>
+			  					<div style="width:60%; height:13px; line-height:13px; font-size:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?></div>
+			  				</td>
+			  			</tr>
+			  			<tr><td height=10></td></tr>
+			  			<tr>
+			  				<td width=100% height=45 style="background:#F8F8F8;">
+			  					<div style="width:98%; height:26px; margin-left:5px; font-size:13px; line-height:13px; overflow:hidden; float:left; display:inline;">
+			  						<?php show_desc(); ?>
+			  					</div>
+			  				</td>
+			  			</tr>
+			  			<tr><td height=10></td></tr>
+			  			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
+			  			<?php }?>
+			  		</table>
+			  		<?php }?>
+			  		<?php if($type[3]){?>
+			  		<table width=100% style="margin-top:10px;">
+			  			<tr>
+			  				<td height=24 style="background:#C0C0C0; font-size:14px; font-weight:bold;">
+			  					<table width=100%>
+			  						<tr>
+			  							<td width="90%">&nbsp;科技本周精华文章</td>
+			  							<td width="10%" align="right"><a style="text-decoration: underline;" href="http://www.forbeschina.com/entrepreneur/">更多</a></td>
+			  						</tr>
+			  					</table>
+			  				</td>
+			  			</tr>
+			  			<tr>
+			  				<td>
+			  				<?php $pos ="marrow_tech";?>
+			  					<table width=100% <?php show_page_pos($pos,'edm_news');?> style="border:1px dotted #000000; border-top:none; color:#000000;">
+			  						<tr>
+			  							<td width=190 valign="top"><img style="margin-top:5px; margin-left:2px;" width=186 height=142 border=0 src="<?php img_src(); ?>" /></td>
+			  							<td width=260>
+			  								<table width=100%>
+			  									<tr>
+			  										<td width=98% height=17>
+			  											<div style="width:100%; height:17px; font-size:17px; line-height:17px; overflow:hidden; float:left; display:inline;">
+			  												<?php show_href(); ?>
+			  											</div>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height="27"></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=98% height=52>
+			  											<div style="width:100%; height:52px; font-size:13px; line-height:13px; overflow:hidden;  float:left; display:inline;">
+			  												<?php show_desc(); ?>
+			  											</div>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height="13"></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=100% height=13 align="right">
+			  											<a style="text-decoration: underline;" href="<?php echo $doman . "/" .$pos_items->$pos->href;?>">详细>></a>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height=30></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=100% height=12 align="right"><div style="width:100%; height:12px; line-height:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?>&nbsp;发布于：<?php echo $pos_items->$pos->reserve; ?></div></td>
+			  									</tr>
+			  								</table>
+			  							</td>
+			  						</tr>
+			  					</table>
+			  				</td>
+			  			</tr>
+			  			<?php for($i=0;$i<3;$i++){
+							$pos="marrow_tech_".$i;
+			  			?>
+			  			<tr><td height=3></td></tr>
+			  			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
+			  				<td width=100% height=13>
+			  					<div style="width:40%; height:13px; line-height:13px; font-size:13px; overflow:hidden; float:left; display:inline;">
+			  						· <?php show_href(); ?>
+			  					</div>
+			  					<div style="width:60%; height:13px; line-height:13px; font-size:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?></div>
+			  				</td>
+			  			</tr>
+			  			<tr><td height=10></td></tr>
+			  			<tr>
+			  				<td width=100% height=45 style="background:#F8F8F8;">
+			  					<div style="width:98%; height:26px; margin-left:5px; font-size:13px; line-height:13px; overflow:hidden; float:left; display:inline;">
+			  						<?php show_desc(); ?>
+			  					</div>
+			  				</td>
+			  			</tr>
+			  			<tr><td height=10></td></tr>
+			  			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
+			  			<?php }?>
+			  		</table>
+			  		<?php }?>
+			  		<?php if($type[4]){?>
+			  		<table width=100% style="margin-top:10px;">
+			  			<tr>
+			  				<td height=24 style="background:#C0C0C0; font-size:14px; font-weight:bold;">
+			  					<table width=100%>
+			  						<tr>
+			  							<td width="90%">&nbsp;投资本周精华文章</td>
+			  							<td width="10%" align="right"><a style="text-decoration: underline;" href="http://www.forbeschina.com/entrepreneur/">更多</a></td>
+			  						</tr>
+			  					</table>
+			  				</td>
+			  			</tr>
+			  			<tr>
+			  				<td>
+			  				<?php $pos ="marrow_invest";?>
+			  					<table width=100% <?php show_page_pos($pos,'edm_news');?> style="border:1px dotted #000000; border-top:none; color:#000000;">
+			  						<tr>
+			  							<td width=190 valign="top"><img style="margin-top:5px; margin-left:2px;" width=186 height=142 border=0 src="<?php img_src(); ?>" /></td>
+			  							<td width=260>
+			  								<table width=100%>
+			  									<tr>
+			  										<td width=98% height=17>
+			  											<div style="width:100%; height:17px; font-size:17px; line-height:17px; overflow:hidden; float:left; display:inline;">
+			  												<?php show_href(); ?>
+			  											</div>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height="27"></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=98% height=52>
+			  											<div style="width:100%; height:52px; font-size:13px; line-height:13px; overflow:hidden;  float:left; display:inline;">
+			  												<?php show_desc(); ?>
+			  											</div>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height="13"></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=100% height=13 align="right">
+			  											<a style="text-decoration: underline;" href="<?php echo $doman . "/" .$pos_items->$pos->href;?>">详细>></a>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height=30></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=100% height=12 align="right"><div style="width:100%; height:12px; line-height:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?>&nbsp;发布于：<?php echo $pos_items->$pos->reserve; ?></div></td>
 			  									</tr>
 			  								</table>
 			  							</td>
@@ -215,16 +464,16 @@
 							$pos="marrow_invest_".$i;
 			  			?>
 			  			<tr><td height=3></td></tr>
-			  			<tr <?php show_page_pos($pos); ?>>
+			  			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
 			  				<td width=100% height=13>
 			  					<div style="width:40%; height:13px; line-height:13px; font-size:13px; overflow:hidden; float:left; display:inline;">
 			  						· <?php show_href(); ?>
 			  					</div>
-			  					<div style="width:60%; height:13px; line-height:13px; font-size:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者： <a style="color:#4649B0; text-decoration: underline;" href="<?php echo $doman . "/" .$pos_items->$pos->static_href;?>"><?php echo $pos_items->$pos->alias; ?></a> 发布于：<?php echo $pos_items->$pos->reserve; ?></div>
+			  					<div style="width:60%; height:13px; line-height:13px; font-size:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?></div>
 			  				</td>
 			  			</tr>
 			  			<tr><td height=10></td></tr>
-			  			<tr <?php show_page_pos($pos); ?>>
+			  			<tr>
 			  				<td width=100% height=45 style="background:#F8F8F8;">
 			  					<div style="width:98%; height:26px; margin-left:5px; font-size:13px; line-height:13px; overflow:hidden; float:left; display:inline;">
 			  						<?php show_desc(); ?>
@@ -235,6 +484,89 @@
 			  			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
 			  			<?php }?>
 			  		</table>
+			  		<?php }?>
+			  		<?php if($type[5]){?>
+			  		<table width=100% style="margin-top:10px;">
+			  			<tr>
+			  				<td height=24 style="background:#C0C0C0; font-size:14px; font-weight:bold;">
+			  					<table width=100%>
+			  						<tr>
+			  							<td width="90%">&nbsp;生活本周精华文章</td>
+			  							<td width="10%" align="right"><a style="text-decoration: underline;" href="http://www.forbeschina.com/entrepreneur/">更多</a></td>
+			  						</tr>
+			  					</table>
+			  				</td>
+			  			</tr>
+			  			<tr>
+			  				<td>
+			  				<?php $pos ="marrow_left";?>
+			  					<table width=100% <?php show_page_pos($pos,'edm_news');?> style="border:1px dotted #000000; border-top:none; color:#000000;">
+			  						<tr>
+			  							<td width=190 valign="top"><img style="margin-top:5px; margin-left:2px;" width=186 height=142 border=0 src="<?php img_src(); ?>" /></td>
+			  							<td width=260>
+			  								<table width=100%>
+			  									<tr>
+			  										<td width=98% height=17>
+			  											<div style="width:100%; height:17px; font-size:17px; line-height:17px; overflow:hidden; float:left; display:inline;">
+			  												<?php show_href(); ?>
+			  											</div>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height="27"></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=98% height=52>
+			  											<div style="width:100%; height:52px; font-size:13px; line-height:13px; overflow:hidden;  float:left; display:inline;">
+			  												<?php show_desc(); ?>
+			  											</div>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height="13"></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=100% height=13 align="right">
+			  											<a style="text-decoration: underline;" href="<?php echo $doman . "/" .$pos_items->$pos->href;?>">详细>></a>
+			  										</td>
+			  									</tr>
+			  									<tr>
+			  										<td height=30></td>
+			  									</tr>
+			  									<tr>
+			  										<td width=100% height=12 align="right"><div style="width:100%; height:12px; line-height:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?>&nbsp;发布于：<?php echo $pos_items->$pos->reserve; ?></div></td>
+			  									</tr>
+			  								</table>
+			  							</td>
+			  						</tr>
+			  					</table>
+			  				</td>
+			  			</tr>
+			  			<?php for($i=0;$i<3;$i++){
+							$pos="marrow_left_".$i;
+			  			?>
+			  			<tr><td height=3></td></tr>
+			  			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
+			  				<td width=100% height=13>
+			  					<div style="width:40%; height:13px; line-height:13px; font-size:13px; overflow:hidden; float:left; display:inline;">
+			  						· <?php show_href(); ?>
+			  					</div>
+			  					<div style="width:60%; height:13px; line-height:13px; font-size:12px; overflow:hidden; float:left; display:inline;">《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?></div>
+			  				</td>
+			  			</tr>
+			  			<tr><td height=10></td></tr>
+			  			<tr>
+			  				<td width=100% height=45 style="background:#F8F8F8;">
+			  					<div style="width:98%; height:26px; margin-left:5px; font-size:13px; line-height:13px; overflow:hidden; float:left; display:inline;">
+			  						<?php show_desc(); ?>
+			  					</div>
+			  				</td>
+			  			</tr>
+			  			<tr><td height=10></td></tr>
+			  			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
+			  			<?php }?>
+			  		</table>
+			  		<?php }?>
 			  	</td>
 			  <td width=200 valign="top">
 			  		<table width=184 style="margin-top:10px;float:right; display:inline;">
@@ -245,7 +577,7 @@
 			  				<td height=15></td>
 			  			</tr>
 			  			<tr>
-			  				<td><a style="color:#4649B0;" href="">往期福布斯精华查询</a></td>
+			  				<td><a style="color:#4649B0;" href="<?php echo $doman ."/old_edm/"?>">往期福布斯精华查询</a></td>
 			  			</tr>
 			  			<tr>
 			  				<td height=15></td>
@@ -263,7 +595,7 @@
 			  <tr>
 			    <td height="26" colspan="2" valign="middle"><table width="650" border="0" cellspacing="0" cellpadding="0">
 			        <tr>
-			          <td valign="middle">您已经订阅了本邮件，如果您想退订，请点击<a href="<?php echo $doman ."/user/user_info.php"?>" style="color:blue">此处</a>，进入“我的设置”进行退订操作。</td>
+			          <td valign="middle">您已经订阅了本邮件，如果您想退订，请点击<a href="<?php echo $doman ."/user/"?>" style="color:blue">此处</a>，进入“我的设置”进行退订操作。</td>
 			        </tr>
 			    </table></td>
 			  </tr>

@@ -379,14 +379,8 @@ a:active {text-decoration: none;}
 			                    <td height="80" ><img src="images/dingyeu.jpg" width="184" height="66" /></td>
 			                  </tr>
 			                  <tr>
-			                    <td height="30" valign="bottom" ><strong class="f5" style="color: #000">往期福布精华查询</strong></td>
-			                  </tr>
-			                  <tr>
-			                    <td height="30" valign="middle" ><label>
-			                      <select name="select" id="select" style="width:184px;">
-			                      </select>
-			                    </label></td>
-			                  </tr>
+			  					<td><a style="color:#4649B0;" href="<?php echo $doman ."/old_edm/"?>">往期福布斯精华查询</a></td>
+			  				  </tr>
 			                  </table></td>
 			              </tr>
 			              <tr></tr>
