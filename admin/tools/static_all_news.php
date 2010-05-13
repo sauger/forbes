@@ -7,10 +7,10 @@ $start = $_POST['start'];
 $end = $_POST['end'];
 $sql = "select id from fb_news where is_adopt=1 and language_tag = 0";
 if($start!=''){
-	$sql .= " and created_at>'{$start}'";
+	$sql .= " and created_at>='{$start} 00:00:00'";
 }
 if($end!=''){
-	$sql .= " and created_at<'{$end}'";
+	$sql .= " and created_at<='{$end} 23:59:59'";
 }
 $db = get_db();
 $news_id = $db->query($sql);

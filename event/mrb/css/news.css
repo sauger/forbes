@@ -1,3 +1,4 @@
+body{margin:0; font-size:12px; font-family:SimSun;}
 #content{width:450px; height:400px; margin-top:10px; overflow:hidden; font-size:13px; color:#666666; float:left; display:inline;}
 #page{width:400px; height:30px; color:#999999; font-size:12px; line-height:30px; text-align:center; float:left; display:inline;}
 #page a{color:#999999; text-decoration:none;}
