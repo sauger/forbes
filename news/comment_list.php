@@ -45,7 +45,7 @@
 				<div id=news_title><?php echo $title;?></div>
 				<input type="hidden" id=is_comment value='1'></input>
 				<input type="hidden" value="<?php echo $id;?>" id=newsid></input>
-				<div id=news_comment>
+				<div id=news_comment1>
 					<?php 
 						$db = get_db();
 						$count = $db->query("select count(id) as num from fb_comment where is_approve=1 and resource_id=$id");
@@ -53,37 +53,39 @@
 						$news = new table_class('fb_news');
 						$news->find($id);
 					?>
-				<div id=comment_caption>
+					<div id=comment_caption>
 					<div id=comment_title>读者评论</div>
 					<div id=comment_count>(共<?php echo $count;?>条)</div>
 					<button id=comment_btn></button>
 					<div id="comment_more">
-					<a href="<?php echo static_news_url($news);?>">返回<?php echo $news->title;?></a>
+					<?php 
+						if($news->is_adopt == 0){
+							$db->query("select name from fb_user where id={$news->publisher}");
+							$name = $db->field_by_name('name');
+							$url = column_article_url($name,$news,'static');
+						}else{
+							$url = static_news_url($news);
+						}
+					?>
+					<a href="<?php echo $url;?>">返回<?php echo $news->title;?></a>
 					</div>
 				</div>
 				
-				<?php if($comment_id!=-1){?>
 				<div class=publish_comment id='show_comment'>
 					<textarea id=comment_text></textarea>
-					<input type="radio" name="nick_name" <?php if(!isset($_SESSION['name'])){?>checked="checked"<?php }?> id=hid_name value="hidden"><span>匿名</span>
-					<?php if(isset($_SESSION['name'])){?><input type="radio" checked="checked" id=has_name name="nick_name" value="name"><span>昵称</span>
-					<input type="text" value="<?php echo $_SESSION['name']?>" id=nick_name></input><?php }?>
-					<button id=commit_submit>提交</button>
-					<?php if(!isset($_SESSION['name'])){?>
+					<input type="radio" name="nick_name" id=hid_name value="hidden" /><span>匿名</span>
+					<input type="radio" name="nick_name" id=has_name value="name" checked="checked" /><span>昵称</span>
+					<input type="text" value="<?php echo $_COOKIE['name']?>" id=nick_name />
+					<button id=commit_submit>提交</button>	
 					<div id="login_info" style="margin-top:10px;">
-					<span>用户名：</span><input type="text"  value="<?php echo $_SESSION['name']?>" id=user_name></input>
-					<span>密码：</span><input type="password" value="<?php echo $_SESSION['name']?>" id=password></input>
-					<button id=comment_login>登录</button></div><?php }?>
+						<span>用户名：</span><input type="text"  value="<?php echo $_COOKIE['name']?>" id=user_name />
+						<span>密码：</span><input type="password" value="<?php echo $_COOKIE['password']?>" id=password />
+						<button id=comment_login>登录</button>
+					</div>
 				</div>
-				<?php }else{?>
-				<div class=publish_comment id='show_comment' style="display:inline">
-					<textarea id=comment_text></textarea>
-					<input type="radio" name="nick_name" id=hid_name value="hidden"><span>匿名</span>
-					<input type="radio" checked="checked" id=has_name name="nick_name" value="name"><span>昵称</span>
-					<input type="text" value="<?php echo $_SESSION['name']?>" id=nick_name></input>
-					<button id=commit_submit>提交</button>
-				</div>
-				<?php }?>
+				<script>
+				refresh_login_box();
+				</script>
 				<?php 
 						if($comment_id){
 							$sql = "select t1.nick_name,t1.created_at,t1.comment,t1.id,t2.up,t2.down from fb_comment t1 left join fb_comment_dig t2 on t1.id=t2.comment_id where t1.id=$comment_id and t1.is_approve=1 order by t1.created_at desc";
