@@ -33,12 +33,9 @@
 $(function(){
 	//add view count;
 	$.post('/ajax/add_news_click.php?id=' + $('#newsid').val());
-	
-	if($("#is_comment").val()!='1'){
-		$("#news_comment").load('/ajax/news_comment.php',{'id':$("#newsid").val()});
-	}
-	
-	
+	$("#news_comment").load('/ajax/news_comment.php',{'id':$("#newsid").val()},function(){
+		refresh_login_box();
+	});
 	$('#a_collect').click(function(e){
 		e.preventDefault();
 		$.post('/ajax/user_collect.php',{'resource_type':'fb_news','resource_id':$(this).attr('href')},function(data){
@@ -159,26 +156,29 @@ $(function(){
 
 function login(){
 	$.post('/ajax/comment_login.php',{'user_name':$("#user_name").val(),'password':$("#password").val()},function(data){
-		if(data=='wrong'){
-			alert("用户名或密码错误");
-		}else if(data!=''){
-			load_comment(-1);
-		}
+		eval(data);
 	});
 }
 
-function load_comment(id){
-	if($("#is_comment").val()=='1'){
-		if(id==-1){
-			window.location.href="comment_list.php?comment_id=-1&id="+$("#newsid").val();
-		}else{
-			window.location.reload();
+function refresh_login_box(){
+	if($.cookie('cache_name')){
+		if($('#nick_name').val()=='' || $('#nick_name').val()== '匿名'){
+			$('#nick_name').val($.cookie('name'));
 		}
+		$('#nick_name').show();
+		$('#login_info').hide();
+		$('#has_name').show().attr('checked',true);
+		$('#login_info').hide();
 	}else{
-		if(id!=''){
-			$("#news_comment").load('/ajax/news_comment.php',{'id':$("#newsid").val(),'comment_id':id});
-		}else{
-			$("#news_comment").load('/ajax/news_comment.php',{'id':$("#newsid").val()});
-		}
+		$('#nick_name').hide().val('匿名');
+		$('#hid_name').attr('checked',true);
+		$('#has_name').hide();
+		$('#login_info').show();
 	}
+}
+
+function load_comment(id){
+	$.post('/ajax/load_unapproved_comment.php',{'comment_id':id},function(data){
+		$('#show_comment').after(data);
+	});
 }

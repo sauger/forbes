@@ -1,7 +1,6 @@
 <?php 
 	include_once('../frame.php');
 	$id = intval($_POST['id']);
-	$comment_id = intval($_POST['comment_id']);
 	$db = get_db();
 	$count = $db->query("select count(id) as num from fb_comment where is_approve=1 and resource_id=$id");
 	$count = $count[0]->num;
@@ -17,7 +16,7 @@
 		$comments_url = $_SERVER['HTTP_REFERER'] .'/comments';
 		$type = 'static';
 	}else{
-		$comments_url = "comment_list.php?id=$id";
+		$comments_url = "/news/comment_list.php?id=$id";
 		$type = 'dynamic';
 	}
 ?>
@@ -30,37 +29,20 @@
 		</div>
 	</div>
 	
-	<?php if($comment_id!=-1){?>
 	<div class=publish_comment id='show_comment'>
 		<textarea id=comment_text></textarea>
-		<input type="radio" name="nick_name" <?php if(!isset($_SESSION['name'])){?>checked="checked"<?php }?> id=hid_name value="hidden"><span>匿名</span>
-		<?php if(isset($_SESSION['name'])){?><input type="radio" checked="checked" id=has_name name="nick_name" value="name"><span>昵称</span>
-		<input type="text" value="<?php echo $_SESSION['name']?>" id=nick_name></input><?php }?>
-		<button id=commit_submit>提交</button>
-		<?php if(!isset($_SESSION['name'])){?>
+		<input type="radio" name="nick_name" id=hid_name value="hidden" /><span>匿名</span>
+		<input type="radio" name="nick_name" id=has_name value="name" checked="checked" /><span>昵称</span>
+		<input type="text" value="<?php echo $_COOKIE['name']?>" id=nick_name />
+		<button id=commit_submit>提交</button>	
 		<div id="login_info" style="margin-top:10px;">
-		<span>用户名：</span><input type="text"  value="<?php echo $_SESSION['name']?>" id=user_name></input>
-		<span>密码：</span><input type="password" value="<?php echo $_SESSION['name']?>" id=password></input>
-		<button id=comment_login>登录</button></div><?php }?>
+			<span>用户名：</span><input type="text"  value="<?php echo $_COOKIE['name']?>" id=user_name />
+			<span>密码：</span><input type="password" value="<?php echo $_COOKIE['password']?>" id=password />
+			<button id=comment_login>登录</button>
+		</div>
 	</div>
-	<?php }else{?>
-	<div class=publish_comment id='show_comment' style="display:inline">
-		<textarea id=comment_text></textarea>
-		<input type="radio" name="nick_name" id=hid_name value="hidden"><span>匿名</span>
-		<input type="radio" checked="checked" id=has_name name="nick_name" value="name"><span>昵称</span>
-		<input type="text" value="<?php echo $_SESSION['name']?>" id=nick_name></input>
-		<button id=commit_submit>提交</button>
-	</div>
-	<?php }?>
-	
-	
 	<?php
-		if(empty($comment_id)){
-			$sql = "select t1.nick_name,t1.created_at,t1.comment,t1.id,t2.up,t2.down from fb_comment t1 left join fb_comment_dig t2 on t1.id=t2.comment_id where t1.resource_id=$id and is_approve=1 order by t1.created_at desc limit 3";
-		}else{
-			$sql = "select t1.nick_name,t1.created_at,t1.comment,t1.id,t2.up,t2.down from fb_comment t1 left join fb_comment_dig t2 on t1.id=t2.comment_id where t1.resource_id=$id and is_approve=1 or t1.id=$comment_id order by t1.created_at desc limit 3";
-		}
-		
+		$sql = "select t1.nick_name,t1.created_at,t1.comment,t1.id,t2.up,t2.down from fb_comment t1 left join fb_comment_dig t2 on t1.id=t2.comment_id where t1.resource_id=$id and is_approve=1 order by t1.created_at desc limit 3";
 		$comment = $db->query($sql);
 		$count = $db->record_count;
 		for($i=0;$i<$count;$i++){
