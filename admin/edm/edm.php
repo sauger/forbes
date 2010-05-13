@@ -43,6 +43,7 @@
 ?>
 <style type="text/css">
 <!--
+body{font-size:12px;}
 .font1 a:link {text-decoration: none; color: #fff;}
 .font1 a:visited {text-decoration: none; color: #fff;}
 .font1 a:hover {text-decoration: none; color: #fff;}
