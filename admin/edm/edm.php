@@ -81,7 +81,7 @@ a:active {text-decoration: none;}
 			<table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
 			  <tr>
 			    <td width="558"><img src="images/logo.jpg" width="138" height="64" /></td>
-			    <td width="92" align="right" valign="bottom"><a href="<?php echo $doman;?>/login/" target="_blank">登陆</a>　| 　<a href="<?php echo $doman;?>/register/" target="_blank">注册</a></td>
+			    <td width="92" align="right" valign="bottom"><a href="<?php echo $doman;?>/login/" target="_blank">登陆</a>　| 　<a style="font-size:12px;" href="<?php echo $doman;?>/register/" target="_blank">注册</a></td>
 			  </tr>
 			  <tr>
 			    <td height="35" colspan="2" style="background:#125295; color: #FFF;"><table width="650" border="0" align="center" cellpadding="0" cellspacing="0">
