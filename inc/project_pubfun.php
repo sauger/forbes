@@ -410,9 +410,7 @@ function front_login($name,$password){
 			
 		}else{
 			setcookie("cache_name",$cache_name,0,'/');
-			if(empty($_COOKIE['name'])){
-				setcookie("name",$name,0,'/');
-			}
+			
 		}
 		$db->execute("insert into fb_yh_log (yh_id,time) values ({$user_id},now())");
 		return $cache_name;
