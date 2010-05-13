@@ -12,7 +12,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true,$ignore
 		return false;
 	}
 	$ids = $has_children ? implode(',',$category->children_map($category_id)) : $category_id ;
-	$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) order by created_at desc limit {$count}";
+	$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) and copy_from=0 order by created_at desc limit {$count}";
 	$news = $db->query($sql);
 	$news_count = $db->record_count;
 	if($news_count <= 0 ) return false;
