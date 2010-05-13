@@ -11,7 +11,7 @@
 	if($cache_name ===false){
 		echo "alert('用户名或密码错误');";
 	}else{
-		echo '$.cookie("cache_name","' .$cache_name .'",{path:"/"});';
+		#echo '$.cookie("cache_name","' .$cache_name .'",{path:"/"});';
 		echo "refresh_login_box();";
 	}
 ?>
