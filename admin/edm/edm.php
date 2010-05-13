@@ -100,7 +100,7 @@ a:active {text-decoration: none;}
 			    </table></td>
 			  </tr>
 			  <tr>
-			    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px; ">
+			    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px; font-size:12px;">
 			      <tr>
 			      	<?php $pos ="edm_hl_img";?>
 			        <td width="324" <?php show_page_pos($pos,'edm_img');?>><a href="<?php echo $pos_items->$pos->href;?>"><img border="0" src="<?php img_src()?>" width="324" height="234" /></a></td>
@@ -136,7 +136,7 @@ a:active {text-decoration: none;}
 			    <td height="10" colspan="2"></td>
 			  </tr>
 			  <tr>
-			    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0">
+			    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0" style="font-size:12px;">
 			      <tr>
 			        <td width="205" height="141" valign="top">
 			        	<table width="205" border="0" align="right" cellpadding="0" cellspacing="0" style="background:#F7F7F7">
@@ -220,14 +220,14 @@ a:active {text-decoration: none;}
 			    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0">
 			      <tr>
 			        <td width="428" height="484" valign="top">
-			        <table width="428" border="0" align="right" cellpadding="0" cellspacing="0" style="background:#F7F7F7">
+			        <table width="428" border="0" align="right" cellpadding="0" cellspacing="0" style="background:#F7F7F7; font-size:12px;">
 			          <tr>
 			            <td height="26" valign="middle" class="f4" style="color: #333; background:#E8E8E8">&nbsp;<strong>分类</strong></td>
 			          </tr>
 			          <tr>
 			            <td height="24" valign="middle" class="f4" style="color: #333"><table width="400" border="0" cellspacing="0" cellpadding="0">
 			              <tr>
-			                <td><table width="180" border="0" cellspacing="0" style="margin-left:6px;" cellpadding="0">
+			                <td><table width="180" border="0" cellspacing="0" style="margin-left:6px; font-size:12px" cellpadding="0">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C;">【商业】</td>
 			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href='http://www.forbeschina.com/business/'>MORE&gt;&gt;</a></td>
@@ -250,7 +250,7 @@ a:active {text-decoration: none;}
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
-			                <td><table width="180" border="0" align="right" style="margin-left:6px"  cellpadding="0" cellspacing="0">
+			                <td><table width="180" border="0" align="right" style="margin-left:6px; font-size:12px;"  cellpadding="0" cellspacing="0">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C">【创业】</td>
 			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="http://www.forbeschina.com/entrepreneur/">MORE&gt;&gt;</a></td>
@@ -287,7 +287,7 @@ a:active {text-decoration: none;}
 			          </tr>
 			          <tr>
 			            <td height="24" valign="middle" class="f4" style="color: #333">
-			            	<table width="400" border="0" cellspacing="0"  style="margin-left:6px" cellpadding="0">
+			            	<table width="400" border="0" cellspacing="0"  style="margin-left:6px; font-size:12px;" cellpadding="0">
 			              <tr>
 			                <td><table width="180" border="0" cellspacing="0" cellpadding="0">
 			                  <tr>
@@ -312,7 +312,7 @@ a:active {text-decoration: none;}
 			                  </tr>
 			                   <?php }?>
 			                </table></td>
-			                <td><table width="180" border="0" align="right" style="margin-left:6px"   cellpadding="0" cellspacing="0">
+			                <td><table width="180" border="0" align="right" style="margin-left:6px; font-size:12px;" cellpadding="0" cellspacing="0">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C">【城市】</td>
 			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="http://www.forbeschina.com/city/">MORE&gt;&gt;</a></td>
@@ -351,7 +351,7 @@ a:active {text-decoration: none;}
 			            <td height="24" valign="middle" class="f4" style="color: #333">
 			            	<table width="400" border="0" cellspacing="0" style="margin-left:6px" cellpadding="0">
 			              <tr>
-			                <td><table width="180" border="0" cellspacing="0" cellpadding="0">
+			                <td><table width="180" border="0" cellspacing="0" cellpadding="0" style="font-size:12px;">
 			                  <tr>
 			                    <td height="30" class="f3" style="color: #17599C">【投资】</td>
 			                    <td height="30" align="right" class="f6" style="font-size: 10px;color:#333;font-family: Arial, Helvetica, sans-serif;"><a href="http://www.forbeschina.com/investment/">MORE&gt;&gt;</a></td>
