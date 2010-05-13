@@ -17,7 +17,7 @@
 		use_jquery();
 	}
 	init_page_items();
-	$doman = "http://admin.forbeschina.com";
+	$doman = "http://www.forbeschina.com";
 	#$doman = "http://127.0.0.1";
 	function img_src(){
 		global $pos;
