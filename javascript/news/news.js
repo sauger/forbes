@@ -169,7 +169,7 @@ function login(){
 function refresh_login_box(){
 	if($.cookie('cache_name')){
 		if($('#nick_name').val()=='' || $('#nick_name').val()== '匿名'){
-			if($.cookie('name'));
+			if($.cookie('name') && $.cookie('name')!= 'null');
 			$('#nick_name').val($.cookie('name'));
 		}
 		$('#nick_name').show();
