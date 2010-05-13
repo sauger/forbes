@@ -27,6 +27,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 .join_top div{line-height:18px;}
 .time{width:160px; height:18px; margin-right:5px; text-align:right; font-size:12px; color:#666666; float:right;}
 .issues{width:425px; height:18px; color:#333333; overflow:hidden;}
+.issues a{color:#333333; text-decoration:none;}
 .issues span{margin-right:15px; color:#246BB0;}
 .content{width:620px; margin-top:8px; background:#EFEFEF; color:#333333; padding-left:10px; padding-right:10px; border-top:5px solid #efefef; border-bottom:5px solid #efefef; line-height:20px;}
 

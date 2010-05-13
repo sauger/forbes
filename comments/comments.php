@@ -34,10 +34,11 @@
 					if($items[$i]->resource_type == 'magazine'){
 						$is_magazine = true;
 						$title = $items[$i]->magzine_number ." ". $items[$i]->title;
+						$link = $items[$i]->magzine_number ." ". $items[$i]->title;
 						$content = $items[$i]->comment;
 					}else{
 						$title = $items[$i]->news_title;
-						
+						$link = "<a href='{$static_site}" .static_news_url($items[$i]) ."'>".$items[$i]->news_title."</a>";
 						$content = "<a href='{$static_site}" .static_news_url($items[$i]) ."/comments/{$items[$i]->c_id}'>{$items[$i]->comment}</a>";
 					}
 					
@@ -45,7 +46,7 @@
 			<div id="c_join_a">
 				
 				<div class="join_top">
-					<div class="issues" title="<?php echo $title?>"><span><?php echo $items[$i]->nick_name;?></span>评论：<?php echo $title?></div>
+					<div class="issues" title="<?php echo $title?>"><span><?php echo $items[$i]->nick_name;?></span>评论：<?php echo $link?></div>
 					<div class="time"><?php echo $items[$i]->c_created_at;?></div>
 				</div>
 				
