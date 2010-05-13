@@ -12,7 +12,7 @@
 		}while($db->move_next());
 
 	}
-	if(strpos($_SERVER['HTTP_REFERER'],'.shtml') > 0){
+	if(strpos($_SERVER['HTTP_REFERER'],'.shtml') > 0 || strpos($_SERVER['HTTP_REFERER'],'/column/') > 0){
 		$comments_url = $_SERVER['HTTP_REFERER'] .'/comments';
 		$type = 'static';
 	}else{
