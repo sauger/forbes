@@ -2,7 +2,7 @@
 	include '../frame.php';
 	$user = $_GET['user'];
 	$key = $_GET['key'];
-	if(strlen($key)!= 20 || strlen($user) > 20){
+	if(strlen($key)!= 10 || strlen($user) > 20){
 		die();
 	}
 	$db = get_db();
