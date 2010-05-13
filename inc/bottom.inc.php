@@ -65,9 +65,9 @@
 		</div>
 		<div <?php show_page_pos('forbes_bottom_about'); $posname='forbes_bottom_about';?> class=ibabout><span><?php echo $pos_items->$posname->description; ?></span></div>
 	<?php js_include_tag('get_ad')?>
-	<span style="display:none;">
-	<script src="http://s9.cnzz.com/stat.php?id=2154547&web_id=2154547" language="JavaScript"></script>
-	</span>
+<span style="display:none;">
+<script src="http://s9.cnzz.com/stat.php?id=2154547&web_id=2154547" language="JavaScript"></script>
+</span>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
