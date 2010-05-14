@@ -1,12 +1,22 @@
 ﻿<?php 
 	include_once('../frame.php');
-
+		$a = array('about'=>'关于福布斯中文网', 'news' =>'新闻动态','ad'=>'广告服务','job'=>'诚聘英才','links'=>'友情链接','activity'=>'会员活动','declare'=>'隐私声明','sitedeclare'=>'网站声明','contactus'=>'联系我们','sitemap'=>'网站地图');
+		$name = $_GET['name'];
+		if(!key_exists($name,$a)) die('unknown type!');
+		
 		$db = get_db();
-		$id = intval($_GET['id']);
-		if($id==0)
-		{
-				$id=1;	
+		$category = new category_class('news');
+		function get_contact_url($name){
+			global $category;
+			$page_type = $_GET['page_type'];
+			if($page_type == 'static'){
+				return "/contact/{$name}.shtml";
+			}else{
+				return "contact.php?name={$name}";				
+			}
+			;
 		}
+		/*
 	switch($id){
 		case 1:
 		$title = "关于福布斯中文网(ForbesChina.com)";
@@ -50,6 +60,7 @@
 		$name="网站地图";
 		break;
 	}
+	*/
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -75,18 +86,13 @@
 				<div id="middle_menu">
 						<div id="menu_t"></div>
 						<div id="menu">
-							<?php 
-							$news_count = $db->query("SELECT ni.content FROM forbes.fb_category c inner join fb_news ni on c.id=ni.category_id where c.name='".$name."'");?>
-									<div id="left_text_a"><b><a href="contact.php?id=1">关于福布斯中文网</a></b></div>
-									<div class="left_text"><b><a href="contact.php?id=2">新闻动态</a></b></div>
-									<div class="left_text"><b><a href="contact.php?id=3">广告服务</a></b></div>
-									<div class="left_text"><b><a href="contact.php?id=4">诚聘英才</a></b></div>
-									<div class="left_text"><b><a href="contact.php?id=5">友情链接</a></b></div>
-									<div class="left_text"><b><a href="contact.php?id=6">会员活动</a></b></div>
-									<div class="left_text"><b><a href="contact.php?id=7">隐私声明</a></b></div>
-									<div class="left_text"><b><a href="contact.php?id=8">网站声明</a></b></div>
-									<div class="left_text"><b><a href="contact.php?id=9">联系我们</a></b></div>
-									<div id="left_text_b"><b><a href="contact.php?id=10">网站地图</a></b></div>
+							<div id="left_text_a"><b><a href=<?php echo get_contact_url('about')?>><?php echo $a['about'];?></a></b></div>
+							<?php foreach ($a as $key => $val){
+								if($key == 'about' || $key == 'sitemap') continue;
+							?>
+							<div class="left_text"><b><a href="<?php echo get_contact_url($key)?>"><?php echo $val?></a></b></div>
+							<?php }?>
+							<div id="left_text_b"><b><a href=<?php echo get_contact_url('sitemap')?>><?php echo $a['sitemap'];?></a></b></div>
 						</div>						
 						<div id="menu_b">
 						</div>						
@@ -99,9 +105,10 @@
 			<div id="right_t"></div>
 			
 			<div id="right_title">
-			
+					<?php 
+							$news_count = $db->query("SELECT ni.content FROM forbes.fb_category c inner join fb_news ni on c.id=ni.category_id where c.name='{$name}'");?>
 					
-					<div id="title"><b><?php echo $title;?></b></div>
+					<div id="title"><b><?php echo $a[$name];?></b></div>
 					
 					<div id="right_hr"></div>
 					

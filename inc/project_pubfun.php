@@ -126,6 +126,14 @@ function static_right($name){
 	$content = file_get_contents("{$static_url}/right/{$name}.php?page_type=static");
 	return write_to_file("{$static_dir}/review/inc/right_{$name}.inc.shtml",$content,'w');
 }
+
+function static_contact($name){
+	global $static_dir;
+	global $static_url;
+	$content = file_get_contents("{$static_url}/contact/contact.php?page_type=static&name={$name}");
+	return write_to_file("{$static_dir}/review/contact/{$name}.shtml",$content,'w');
+}
+
 function static_news($news,$symbol='fck_pageindex',$en = false){
 	if(!$news){
 		return false;
