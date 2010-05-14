@@ -263,13 +263,21 @@ function show_page_pos($pos,$name='default'){
 	}	
 };
 
-function show_page_href($pos=null,$title='title',$target="_blank"){
+function show_page_href($pos=null,$title=null,$target=null,$max_len = 0){
 	global $pos_items;
 	if(empty($pos)){
 		global $pos_name;
 		$pos = $pos_name;
 	}
+	if(is_null($title)) $title = 'title';
+	if(is_null($target)) $target = '_blank';
 	$_title = $title ? strip_tags($pos_items->$pos->$title ? $pos_items->$pos->$title : $pos_items->$pos->display) : '';
+	if($max_len > 0){
+		$len = mb_strlen($_title,'utf-8');
+		if($len > $max_len){
+			$_title = mb_substr($_title,0,$max_len-1,'utf-8')  ."...";
+		}
+	}
 	echo "<a href='{$pos_items->$pos->href}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$pos_items->$pos->display}</a>";
 }
 

@@ -26,11 +26,11 @@
 					<div class=captions><?php echo $catename[0]->name; ?>热点</div>
 				</div>
 				<?php for($i=0;$i<6;$i++){ $pos_name = $pos.'acticle'.$i;?>
-					<div class=common_article_lis1 <?php #show_page_pos($pos_name,'base')?>><?php show_page_href();?></div>
+					<div class=common_article_lis1 <?php #show_page_pos($pos_name,'base')?>><?php show_page_href(null,null,null,15);?></div>
 					<div class=common_article_description1><?php show_page_desc();?></div>
 				<? }?>
 				<?php  for($i=6;$i<15;$i++){ $pos_name = $pos.'acticle'.$i;?>
-					<div class=common_article_lis2 <?php #show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
+					<div class=common_article_lis2 <?php #show_page_pos($pos_name,'link')?>><?php show_page_href(null,null,null,19);?></div>
 				<?php } ?>
 			</div>
 			
