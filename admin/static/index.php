@@ -60,10 +60,10 @@ switch ($type) {
 		$a = array('about'=>'关于福布斯中文网', 'news' =>'新闻动态','ad'=>'广告服务','job'=>'诚聘英才','links'=>'友情链接','activity'=>'会员活动','declare'=>'隐私声明','sitedeclare'=>'网站声明','contactus'=>'联系我们','sitemap'=>'网站地图');
 		foreach($a as $key => $v){
 			if(!static_contact($key)){
-				die("静态化右侧'{$v}'失败");
+				die("静态联系我们'{$v}'失败");
 			}	
 		}
-		echo '静态化右侧成功!';
+		echo '静态化联系我们成功!';
 		break;
 	case 'sub_index':
 		$a = array('investment','business','entrepreneur','tech','city','list','billionaires','life','column','club');
