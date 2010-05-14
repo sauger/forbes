@@ -273,12 +273,12 @@ function show_page_href($pos=null,$title=null,$target=null,$max_len = 0){
 	if(is_null($target)) $target = '_blank';
 	$_title = $title ? strip_tags($pos_items->$pos->$title ? $pos_items->$pos->$title : $pos_items->$pos->display) : '';
 	if($max_len > 0){
-		$len = mb_strlen($_title,'utf-8');
+		$len = mb_strlen($pos_items->$pos->display,'utf-8');
 		if($len > $max_len){
-			$_title = mb_substr($_title,0,$max_len-1,'utf-8')  ."...";
+			$display = mb_substr($pos_items->$pos->display,0,$max_len-1,'utf-8')  ."...";
 		}
 	}
-	echo "<a href='{$pos_items->$pos->href}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$pos_items->$pos->display}</a>";
+	echo "<a href='{$pos_items->$pos->href}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$display}</a>";
 }
 
 function show_page_desc($pos=null,$link="href",$title='description',$target="_blank"){
