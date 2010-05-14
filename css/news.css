@@ -51,6 +51,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #news_paginate{width:640px; height:25px; margin-top:30px; text-align:center;}
 
 #news_comment{width:648px; margin-top:20px; margin-left:12px;}
+#news_comment1{width:648px; margin-top:20px; margin-left:12px;}
 
 #comment_caption{width:640px; height:60px; line-height:30px;}
 #comment_title{font-weight:bold; font-size:14px; color:#666666;}
