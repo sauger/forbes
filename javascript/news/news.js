@@ -134,6 +134,10 @@ $(function(){
 			alert("留言内容不能为空！");
 			return false;
 		}
+		if($('#has_name').attr('checked') && $('#nick_name').val()==''){
+			alert("请输入昵称！");
+			return false;
+		}
 		$("input[name='nick_name']").each(function(){
 			if($(this).attr('checked')){
 				if($(this).val()=='hidden'){
@@ -149,6 +153,8 @@ $(function(){
 			}else{
 				alert('发布成功！请等候管理员审批！');
 				load_comment(data);
+				$("#comment_text").val('');
+				$("#show_comment").hide();
 			}
 		});
 	});
@@ -163,17 +169,20 @@ function login(){
 function refresh_login_box(){
 	if($.cookie('cache_name')){
 		if($('#nick_name').val()=='' || $('#nick_name').val()== '匿名'){
+			if($.cookie('name') && $.cookie('name')!= null);
 			$('#nick_name').val($.cookie('name'));
 		}
 		$('#nick_name').show();
 		$('#login_info').hide();
 		$('#has_name').show().attr('checked',true);
 		$('#login_info').hide();
+		$('#span_nickname').show();
 	}else{
 		$('#nick_name').hide().val('匿名');
 		$('#hid_name').attr('checked',true);
 		$('#has_name').hide();
 		$('#login_info').show();
+		$('#span_nickname').hide();
 	}
 }
 

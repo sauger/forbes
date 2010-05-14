@@ -9,6 +9,13 @@
 	$filte_words = $db->query("select text as words from fb_filte_words");
 	$f_count = $db->record_count;
 	$i =0 ;
+	if(strpos($_SERVER['HTTP_REFERER'],'.shtml') > 0 || strpos($_SERVER['HTTP_REFERER'],'/column/') > 0){
+		$comments_url = $_SERVER['HTTP_REFERER'] .'/comments';
+		$type = 'static';
+	}else{
+		$comments_url = "/news/comment_list.php?id=$id";
+		$type = 'dynamic';
+	}
 ?>
 <div class=comment_box>
 		<div class=name><?php echo $comment[$i]->nick_name;?></div>

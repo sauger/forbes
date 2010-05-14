@@ -147,6 +147,7 @@
 	}
 		
 	if($_POST['copy_news']){
+		$news->copy_from = $news->id;
 		$news->id = 0;
 		$news->category_id = intval($_POST['copy_news']);
 		$news->save();
