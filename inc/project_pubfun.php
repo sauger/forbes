@@ -276,6 +276,8 @@ function show_page_href($pos=null,$title=null,$target=null,$max_len = 0){
 		$len = mb_strlen($pos_items->$pos->display,'utf-8');
 		if($len > $max_len){
 			$display = mb_substr($pos_items->$pos->display,0,$max_len-1,'utf-8')  ."...";
+		}else{
+			$display = $pos_items->$pos->display;
 		}
 	}else{
 		$display = $pos_items->$pos->display;
