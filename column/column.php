@@ -41,7 +41,7 @@
 			<div id=column_person_left_t></div>
 			<div id=column_person_left_content>
 					<div id=top>
-						<div id=pic><a href=""><img border=0 src="<?php echo $column->image_src2;?>"></a></div>
+						<div id=pic><a href="#" id="a_image"><img border=0 src="<?php echo $column->image_src2;?>"></a></div>
 						<div id=pictitle_left><a><?php echo $column->nick_name;?></a></div>
 						<div id=pictitle_right><button id="btn_collect"></button></div>
 					</div>
@@ -49,7 +49,10 @@
 						<div class=wz>专栏作者介绍</div>
 					</div>
 					<div id=c_content>
-						<?php echo strip_tags($column->description);?>	
+						<?php 
+							$description = mb_strlen($column->description,'utf-8') > 90 ? mb_substr($column->description,0,90,'utf-8'). '...' : $column->description;
+						?>
+						<?php echo strip_tags($description);?>	
 					</div>
 					<div id=c_b_title>
 						<div id=wz>按日期存档</div>
