@@ -106,7 +106,7 @@
 			
 			<div id="right_title">
 					<?php 
-							$news_count = $db->query("SELECT ni.content FROM forbes.fb_category c inner join fb_news ni on c.id=ni.category_id where c.name='{$name}'");?>
+							$news_count = $db->query("SELECT ni.content FROM forbes.fb_category c inner join fb_news ni on c.id=ni.category_id where c.name='{$a[$name]}'");?>
 					
 					<div id="title"><b><?php echo $a[$name];?></b></div>
 					
