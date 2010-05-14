@@ -112,7 +112,7 @@
 					
 					<div id="right_hr"></div>
 					
-					<div id="right_conntent">
+					<div id="right_content" style="">
 
 						<?php echo $news_count[0]->content;?>
 						
