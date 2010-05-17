@@ -10,34 +10,34 @@ $doman = "http://www.forbeschina.com";
 for($i=0;$i<$count;$i++){
 	$str = $recrod[$i]->name."|".$recrod[$i]->email."|";
 	if($recrod[$i]->fh){
-		$str .= file_get_contents("/admin/edm/fh.php")."|";
+		$str .= "1|";
 	}else{
-		$str .= "|";
+		$str .= "0|";
 	}
 	if($recrod[$i]->cy){
-		$str .= file_get_contents("$doman/admin/edm/cy.php")."|";
+		$str .= "1|";
 	}else{
-		$str .= "|";
+		$str .= "0|";
 	}
 	if($recrod[$i]->sy){
-		$str .= file_get_contents("$doman/admin/edm/sy.php")."|";
+		$str .= "1|";
 	}else{
-		$str .= "|";
+		$str .= "0|";
 	}
 	if($recrod[$i]->kj){
-		$str .= file_get_contents("$doman/admin/edm/kj.php")."|";
+		$str .= "1|";
 	}else{
-		$str .= "|";
+		$str .= "0|";
 	}
 	if($recrod[$i]->tz){
-		$str .= file_get_contents("$doman/admin/edm/tz.php")."|";
+		$str .= "1|";
 	}else{
-		$str .= "|";
+		$str .= "0|";
 	}
 	if($recrod[$i]->sy){
-		$str .= file_get_contents("$doman/admin/edm/sy.php")."|";
+		$str .= "1|";
 	}else{
-		$str .= "|";
+		$str .= "0|";
 	}
 	$str = str_replace("\n",'',$str);
 	$str = str_replace("\t",'',$str);
