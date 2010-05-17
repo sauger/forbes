@@ -9,7 +9,7 @@ $list = new table_class('fb_custom_list_type');
 			redirect('/');
 		}
 		$list_item = new table_class('fb_picture_list_items');
-		$items = $db->query("select name,image,comment from fb_picture_list_items where list_id ={$list->id}");
+		$items = $db->query("select name,image,comment from fb_picture_list_items where list_id ={$list->id} order by priority asc");
 		$len = $db->record_count;
 		for($i=0;$i<$len;$i++){
 			$tmp['name'] = $items[$i]->name;
