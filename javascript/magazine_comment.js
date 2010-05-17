@@ -1,12 +1,11 @@
 $(function(){
-	var name = $.cookie('login_name');
-	if(name){
-		var str = '<button id="submit">提交</button>';
+	var name = $.cookie('name');
+	if($.cookie('cache_name')){
+		var str = '<div id="div_submit"><button id="submit">提交</button></div>';
 	}else{
 		var str = '<span><label>用户名</label></span><input type="text" maxlength="50" name="n" />' 
-				+ '		<span><label>密　码</label></span><input type="password" maxlength="50" name="p" /><br>'
-				+ '		<button id="submit">提交</button>'
-				+ '		<a href="/register/">注册</a>';				
+				+ '		<span><label>密　码</label></span><input type="password" maxlength="50" name="p" style="margin-right:0px" /><br>'
+				+ '		<div id="div_submit"><button id="submit">提　　交</button></div>';
 	}
 	$('#submit_div').html(str);
 	

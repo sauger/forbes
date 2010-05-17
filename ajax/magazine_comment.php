@@ -22,18 +22,11 @@ include "../frame.php";
 					<div><span>如果您能提供文章标题，请输入</span><input type="text" maxlength="200" name="t"/></div>
 					<div><span>如果您能提供期刊号，请输入</span><input type="text" maxlength="200" name="o" /></div>
 				</div>
-				<div id="comment_right_box">
-					<div>
-						<img src="/images/comment_gift.jpg" border="0" width="100" height="100" />
-					</div>
-					<div class="text">本期大奖：碧欧泉男士护肤套装</div>
-					<div class="text">礼品数量：5</div>
-					<div class="text">活动时间：2010.3.11-2010.4.14</div>
-				</div>
+
 				<div id="comment_bottom_box">
 					<div>
 						<span><label>您的email</label></span><input type="text" id="em" maxlength="50" name="em"/> 
-						<span><label>您的手机</label></span><input type="text" maxlength="15" name="mo"/>
+						<span><label>您的手机</label></span><input type="text" maxlength="15" name="mo" style="margin-right:0px"/>
 					</div>
 					<div id="submit_div">
 						<span><label>用户名</label></span><input type="text" maxlength="50" id="n" name="n"/> 

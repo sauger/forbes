@@ -9,6 +9,10 @@ $(function(){
 	$('#btn_collect').click(function(){
 		$.getScript('/ajax/collect_column.php?column_id=' + $('#columnid').val());
 	});
+	$('#a_image').click(function(e){
+		e.preventDefault();
+		$('#other').click();
+	});
 	$('.c_b_content a').click(function(e){
 		e.preventDefault();
 		if($(this).hasClass('selected')){

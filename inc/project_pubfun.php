@@ -126,6 +126,14 @@ function static_right($name){
 	$content = file_get_contents("{$static_url}/right/{$name}.php?page_type=static");
 	return write_to_file("{$static_dir}/review/inc/right_{$name}.inc.shtml",$content,'w');
 }
+
+function static_contact($name){
+	global $static_dir;
+	global $static_url;
+	$content = file_get_contents("{$static_url}/contact/contact.php?page_type=static&name={$name}");
+	return write_to_file("{$static_dir}/review/contact/{$name}.shtml",$content,'w');
+}
+
 function static_news($news,$symbol='fck_pageindex',$en = false){
 	if(!$news){
 		return false;
@@ -255,14 +263,26 @@ function show_page_pos($pos,$name='default'){
 	}	
 };
 
-function show_page_href($pos=null,$title='title',$target="_blank"){
+function show_page_href($pos=null,$title=null,$target=null,$max_len = 0){
 	global $pos_items;
 	if(empty($pos)){
 		global $pos_name;
 		$pos = $pos_name;
 	}
+	if(is_null($title)) $title = 'title';
+	if(is_null($target)) $target = '_blank';
 	$_title = $title ? strip_tags($pos_items->$pos->$title ? $pos_items->$pos->$title : $pos_items->$pos->display) : '';
-	echo "<a href='{$pos_items->$pos->href}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$pos_items->$pos->display}</a>";
+	if($max_len > 0){
+		$len = mb_strlen($pos_items->$pos->display,'utf-8');
+		if($len > $max_len){
+			$display = mb_substr($pos_items->$pos->display,0,$max_len-1,'utf-8')  ."...";
+		}else{
+			$display = $pos_items->$pos->display;
+		}
+	}else{
+		$display = $pos_items->$pos->display;
+	}
+	echo "<a href='{$pos_items->$pos->href}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$display}</a>";
 }
 
 function show_page_desc($pos=null,$link="href",$title='description',$target="_blank"){

@@ -44,7 +44,7 @@ function is_number_character(str){
 	return r.test(str);
 }
 function is_email(str){
-	var myReg = /^[-_A-Za-z0-9]+@([_A-Za-z0-9]+\.)+[A-Za-z0-9]{2,3}$/; 
+	var myReg =  /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; 
 	return myReg.test(str);
 }
 function array_remove(array,val){
