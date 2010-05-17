@@ -33,6 +33,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true,$ignore
 		$pos_table->image1 = $news[$fill_count]->video_photo_src;
 		$pos_table->description = $news[$fill_count]->description;
 		$pos_table->href = dynamic_news_url($news[$fill_count]);
+		$pos_table->reserve = $news[$fill_count]->short_title;
 		$pos_table->static_href = static_news_url($news[$fill_count]);
 		$pos_table->save();
 		$fill_count++;
