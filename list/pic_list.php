@@ -20,7 +20,7 @@
 			alert('非法操作');
 			redirect('/');
 		}
-		$items = $db->query("select name,image,comment from fb_picture_list_items where list_id ={$list->id}");
+		$items = $db->query("select name,image,comment from fb_picture_list_items where list_id ={$list->id} order by priority asc,created_at desc");
 		$len = $db->record_count;
 		for($i=0;$i<$len;$i++){
 			$tmp['name'] = $items[$i]->name;
