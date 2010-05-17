@@ -2,7 +2,16 @@
 $db = get_db();
 $role = "column_writer";
 
-$items = $db->query("select publisher,b.name,b.nick_name,b.column_name,image_src,b.role_name from fb_news a left join fb_user b on a.publisher = b.id where role_name = '$role' and b.id != 72  group by publisher order by created_at desc limit 4");
+$ids[] = 72;
+for($i=0;$i<4;$i++){
+	$nid = '('.implode(',',$ids).')';
+	$item = $db->query("select publisher,b.name,b.nick_name,b.column_name,image_src,b.role_name from fb_news a left join fb_user b on a.publisher = b.id where role_name = '$role' and b.id not in {$nid}  order by created_at desc limit 1");
+	if($item){
+		$items[]= $item[0];
+		$ids[]=$item[0]->publisher;
+	}
+}
+//$items = $db->query("select publisher,b.name,b.nick_name,b.column_name,image_src,b.role_name from fb_news a left join fb_user b on a.publisher = b.id where role_name = '$role' and b.id != 72  group by publisher order by created_at desc limit 4");
 $len = count($items);
 $table = new table_class("fb_page_pos");
 $selected_news = array();
@@ -61,8 +70,17 @@ for($i=0;$i<$len;$i++){
 
 
 $role = "column_editor";
+$ids[] = 72;
+for($i=0;$i<4;$i++){
+	$nid = '('.implode(',',$ids).')';
+	$item = $db->query("select publisher,b.name,b.nick_name,b.column_name,image_src,b.role_name from fb_news a left join fb_user b on a.publisher = b.id where role_name = '$role' and b.id not in {$nid}  order by created_at desc limit 1");
+	if($item){
+		$items[]= $item[0];
+		$ids[]=$item[0]->publisher;
+	}
+}
 
-$items = $db->query("select publisher,b.name,b.nick_name,b.column_name,image_src,b.role_name from fb_news a left join fb_user b on a.publisher = b.id where role_name = '$role'  group by publisher order by created_at desc limit 4");
+#$items = $db->query("select publisher,b.name,b.nick_name,b.column_name,image_src,b.role_name from fb_news a left join fb_user b on a.publisher = b.id where role_name = '$role'  group by publisher order by created_at desc limit 4");
 $len = count($items);
 $table = new table_class("fb_page_pos");
 $selected_news = array();
