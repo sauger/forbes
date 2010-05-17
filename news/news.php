@@ -128,12 +128,35 @@
 						<?php
 								}
 							}
-						?>
-	
-	
-	          <?php
+							$related_count = 0;
+							$related_max = 4;
+							$record = array();
 							if($news->related_news!=''){
-									$record = $db->query("select id,created_at,title,short_title from fb_news where id in({$news->related_news})");
+								$record = $db->query("select id,created_at,title,short_title from fb_news where id in({$news->related_news})");
+								$related_count += $db->record_count;
+							}	
+							if($related_count<$related_max){
+								$industry = $db->query("select industry_id from fb_news_industry where news_id={$news->id}");
+								if ($db->record_count > 0){
+									foreach ($industry as $val){
+										$inds[]=$val->industry_id;
+									}
+									$inds = implode(',',$inds);
+									$ind_news = $db->query("select news_id,b.id,title,created_at,short_title from fb_news_industry a left join fb_news b on a.news_id=b.id where industry_id in ($inds) and news_id != {$news->id} limit " .($related_max - $related_count));
+									if ($db->record_count > 0 ){
+										$related_count += $db->record_count;
+										$record = array_merge($record,$ind_news);
+									}
+								}
+							}
+							if($related_count<$related_max){
+								$ind_news = $db->query("select id,title,created_at,short_title from fb_news where category_id ={$news->category_id} order by rand()  limit " .($related_max - $related_count));
+								if ($db->record_count > 0 ){
+									$related_count += $db->record_count;
+									$record = array_merge($record,$ind_news);
+								}
+							}
+							if($related_count > 0){
 						?>
 						<div class=info_title style="margin-top:15px;">推荐的评论文章</div>
 						<div class=info_list>
@@ -143,7 +166,9 @@
 								<?php }?>
 							</ul>
 						</div>
-						<?php }?>
+						<?php 
+							}
+						?>
 						
 						<div class=info_dash></div>
 						<?php if($news->keywords!=''){?>
