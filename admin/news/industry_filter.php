@@ -7,14 +7,14 @@
 	if(!$industry) $industry = array();
 	$checked = explode(',',$_GET['ids']);
 ?>
-<div style="width:600px;">
+<div style="width:900px;">
 	<?php foreach ($industry as $v) {?>
-		<div style="width:150px;float:left;"><input type="checkbox" value="<?php echo $v->id;?>" id="<?php echo $v->id;?>"></input> <label for="<?php echo $v->id;?>"><?php echo $v->name?></label></div>
+		<div style="width:225px;float:left;"><input type="checkbox" value="<?php echo $v->id;?>" id="<?php echo $v->id;?>"></input> <label for="<?php echo $v->id;?>"><?php echo $v->name?></label></div>
 	<?php }?>
-</div>
-<div style="width:600px;text-align:center">
-<button id="button_save">保存</button>
-<button id="button_cancel">取消</button>
+	<div style="width:900px;text-align:center; margin-top:20px; float:left;">
+		<button id="button_save">保存</button>
+		<button id="button_cancel">取消</button>
+	</div>
 </div>
 <script>
 		var ids = "<?php echo $_GET['ids'];?>".split(',');

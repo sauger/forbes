@@ -1,7 +1,5 @@
 <?php
 	include "../../frame.php";
-	$type = $_GET['type'];
-	if(strlen($type)!=6){die();}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -82,7 +80,7 @@
   </tr>
   <tr>
   	<td width="450">
-  		<?php if($type[0]){?>
+  		<script language="php"> if ($DBfields['course1'] != '') { </script>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -146,8 +144,7 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<?php }?>
-  		<?php if($type[1]){?>
+  		<script language="php"> }if ($DBfields['course2'] != '') { </script>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -211,8 +208,7 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<?php }?>
-  		<?php if($type[2]){?>
+  		<script language="php"> }if ($DBfields['course3'] != '') { </script>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -276,8 +272,7 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<?php }?>
-  		<?php if($type[3]){?>
+  		<script language="php"> }if ($DBfields['course4'] != '') { </script>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -341,8 +336,7 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<?php }?>
-  		<?php if($type[4]){?>
+  		<script language="php"> }if ($DBfields['course5'] != '') { </script>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -406,8 +400,7 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<?php }?>
-  		<?php if($type[5]){?>
+  		<script language="php"> }if ($DBfields['course6'] != '') { </script>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -471,7 +464,7 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<?php }?>
+  		<script language="php"> }</script>
   	</td>
   <td width=200 valign="top" style="padding-top:10px;">
   		<table width=184>
