@@ -83,7 +83,7 @@
 		<div id=bread_line></div>
 		<div id=l>
 			<div id=news_title><?php echo $title;?></div>
-			<div id=news_info>作者：<?php echo $news->author;?>　　发布于：<?php echo substr($news->created_at,0,10);?></div>
+			<div id=news_info>作者：<?php echo $news->author ? $news->author : '福布斯中文网';?>　　发布于：<?php echo substr($news->created_at,0,10);?></div>
 			<?php if(trim(strip_tags($news->description))!=''){?><div id="news_desc"><?php echo $news->description;?></div><?php }?>
 			<div id=news_tools>
 				<?php if(false){?>
@@ -108,12 +108,11 @@
 			<div id=news_text>
 				<div id=news_text_info>
 						<div class=info_title style="width:180px;">来源于：<?php if(strpos($news->top_info,'http://www') ===false){?>福布斯中文网<?php }?></div>
-						<?php if($news->top_info!=''){?>
+						<?php 
+							if($news->top_info!=''){?>
 								<div id=info_resource><?php echo $news->top_info;?></div>
-						<?php }?>
-	          
-	          <?php
-							if($news->author!=''){
+						<?php }
+							if($news->author!='' && $news->author != '福布斯中文网'){
 								$record = $db->query("select id,created_at,short_title,title from fb_news where author='{$news->author}' and title!='{$title}' group by title limit 3");
 								if(count($record)>0){
 						?>
@@ -137,7 +136,6 @@
 									$record = $db->query("select id,created_at,title,short_title from fb_news where id in({$news->related_news})");
 						?>
 						<div class=info_title style="margin-top:15px;">推荐的评论文章</div>
-						<div class=info_more></div>
 						<div class=info_list>
 							<ul>
 								<?php for($i=0;$i<count($record);$i++){?>
@@ -163,7 +161,28 @@
 							<div id=info_keywords_bottom>
 								<div class=info_title>文章的关键字</div>
 							</div>
-						<?php }?>
+							<?php 
+								$len = count($keywords);
+								$icount =0;
+								for($k=0;$k<$len;$k++){
+									if($icount >=3) break;
+									$key_news = $db->query("select id,title,created_at from fb_news where is_adopt=1 and keywords like '%{$keywords[$k]}%' and id != {$news->id} and copy_from=0 order by created_at desc limit 4");
+									if ($db->record_count <=0) continue;
+									$icount++;
+							?>
+							<div class=info_title style="margin-top:15px;">关键词“<?php echo$keywords[$k]?>” 的文章 <span class="info_more"><a href="<?php echo get_news_serach_url($keywords[$k])?>"><img src="/images/news/more.png" border=0></a></span></div>
+							<div class=info_list>
+								<ul>
+									<?php foreach ($key_news as $val){?>
+									<li><a href="<?php echo get_news_url($val)?>" target="_blank"><?php echo $val->title;?></a></li>
+									<?php }?>
+								</ul>
+							
+							</div>
+						<?php
+								} 
+						}
+						?>
 				</div>
 									
 				<?php if($news->ad_id){?>

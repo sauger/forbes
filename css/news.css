@@ -29,7 +29,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #news_text{width:648px; margin-left:12px; margin-top:20px; border-bottom:1px dotted #cccccc;}
 
 #news_text_info{width:180px; padding-left:10px; padding-bottom:10px; background:url(/images/news/dash2.gif) repeat-y; margin-left:20px; float:right; display:inline;}
-.info_title{height:22px; color:#666666; font-weight:bolder; font-size:14px; line-height:20px;}
+.info_title{ color:#666666; font-weight:bolder; font-size:14px; line-height:20px;}
 #info_resource{width:180px; line-height:20px; font-size:12px; color:#666666; word-break:break-all; word-wrap:break-word; overflow:hidden; }
 .info_more{width:45px; height:12px; margin-top:18px; margin-left:5px; padding-left:8px; border-left:1px #666666 solid;}
 .info_list{width:180px;}
