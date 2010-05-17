@@ -70,6 +70,8 @@ for($i=0;$i<$len;$i++){
 
 
 $role = "column_editor";
+unset($ids);
+unset($items);
 $ids[] = 72;
 for($i=0;$i<4;$i++){
 	$nid = '('.implode(',',$ids).')';
