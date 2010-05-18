@@ -1,6 +1,6 @@
 <?php
 include "../../frame.php";
-$str .= file_get_contents("http://localhost:8081/admin/edm/marrow.php?page_typ=static");
+$str .= file_get_contents("http://localhost/admin/edm/marrow.php?page_typ=static");
 
 
 Header("Content-type: application/octet-stream"); 
