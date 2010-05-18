@@ -49,10 +49,16 @@ div{margin:0; padding:0; float:left; display:inline;}
 #navigation #magazine{width:52px; height:12px; margin-top:12px; margin-right:10px; cursor:pointer; background:url(/images/public/magazine.png); float:right;}
 
 #navigation2{width:1000px; height:27px; background:#C1E1EE;}
-#navigation2 .nav2{width:940px; height:27px; font-size:12px; margin-left:30px; line-height:27px; display:none;}
-#navigation2 .nav2 a{color:#000000; text-decoration:underline;}
-#navigation2 .nav2 a:hover{color:#0000CC;}
+#navigation2 .nav2{ height:27px; font-size:12px;  line-height:27px; margin-left:10px; display:none;}
+#navigation2 .nav2 a{color:#003399; text-decoration:none;}
+#navigation2 .nav2 a:hover{color:#000000;}
 
+#navigation2 #nav10{margin-left:100px}
+#navigation2 #nav15{margin-left:200px;}
+#navigation2 #nav21{margin-left:310px;}
+#navigation2 #nav38{margin-left:380px;}
+#navigation2 #nav51{margin-left:220px;}
+#navigation2 #nav56{margin-left:645px;}
 
 .forbes_search{width:102px; height:28px; font-size:12px; background:url(/images/public/tm2008-select.gif) no-repeat 0 0; margin-top:36px; margin-left:73px; overflow:hidden;}
 .forbes_search .iselect{width:102px; height:28px; display:none;}
