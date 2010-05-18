@@ -48,7 +48,7 @@
 				<div id="c_middle">
 					<div id="chr_c">
 						<div id="chr_c_left">点击按字母查询：</div>
-						<div id="chr_c_right"><?php for($i='A';$i<'Z';$i++){?><a <?php if($key==$i)echo 'style="color:#94000B;"';?> href="/investor?key=<?php echo $i;?>"><?php echo $i;?></a><?php }?><a <?php if($key=='Z')echo 'style="color:#94000B;"';?> href="investor.php?key=Z">Z</a></div>	
+						<div id="chr_c_right"><?php for($i='A';$i<'Z';$i++){?><a <?php if($key==$i)echo 'style="color:#94000B;"';?> href="/investor?key=<?php echo $i;?>"><?php echo $i;?></a><?php }?><a <?php if($key=='Z')echo 'style="color:#94000B;"';?> href="investor?key=Z">Z</a></div>	
 					</div>
 					<div id="chr_sousuo">
 							按照投资行业索引：  <select id="industry" style="width:240px; border:1px solid #B4B4BE;"><option value=""></option><?php for($i=0;$i<$count;$i++){?><option <?php if($type==$industry[$i]->name){echo 'selected="selected"';}?> value="<?php echo $industry[$i]->name;?>"><?php echo $industry[$i]->name;?></option><?php }?></select>
