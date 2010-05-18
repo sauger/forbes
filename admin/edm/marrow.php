@@ -80,7 +80,9 @@
   </tr>
   <tr>
   	<td width="450">
-  		<script language="php"> if ($DBfields['course1'] != '') { </script>
+  		<?php if($page_type=='static'){
+  		echo '<script language="php"> if ($DBfields["course1"] != 1) { </script>';
+  		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -144,7 +146,9 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<script language="php"> }if ($DBfields['course2'] != '') { </script>
+  		<?php if($page_type=='static'){
+  		echo '<script language="php">} if ($DBfields["course2"] != 1) { </script>';
+  		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -208,7 +212,9 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<script language="php"> }if ($DBfields['course3'] != '') { </script>
+  		<?php if($page_type=='static'){
+  		echo '<script language="php">} if ($DBfields["course3"] != 1) { </script>';
+  		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -272,7 +278,9 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<script language="php"> }if ($DBfields['course4'] != '') { </script>
+  		<?php if($page_type=='static'){
+  		echo '<script language="php">} if ($DBfields["course4"] != 1) { </script>';
+  		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -336,7 +344,9 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<script language="php"> }if ($DBfields['course5'] != '') { </script>
+  		<?php if($page_type=='static'){
+  		echo '<script language="php">} if ($DBfields["course5"] != 1) { </script>';
+  		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -400,7 +410,9 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<script language="php"> }if ($DBfields['course6'] != '') { </script>
+  		<?php if($page_type=='static'){
+  		echo '<script language="php"> }if ($DBfields["course6"] != 1) { </script>';
+  		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
   				<td height=24 style="background-color:#125295; font-weight:bold;">
@@ -464,7 +476,9 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<script language="php"> }</script>
+  		<?php if($page_type=='download'){
+  		echo '<script language="php"> } </script>';
+  		}?>
   	</td>
   <td width=200 valign="top" style="padding-top:10px;">
   		<table width=184>
