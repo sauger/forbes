@@ -81,7 +81,7 @@
   <tr>
   	<td width="450">
   		<?php if($page_type=='static'){
-  		echo '<script language="php"> if ($DBfields["course1"] != 1) { </script>';
+  		echo '<script language="php"> if ($DBfields["course1"] == 1) { </script>';
   		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
@@ -147,7 +147,7 @@
   			<?php }?>
   		</table>
   		<?php if($page_type=='static'){
-  		echo '<script language="php">} if ($DBfields["course2"] != 1) { </script>';
+  		echo '<script language="php">} if ($DBfields["course2"] == 1) { </script>';
   		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
@@ -213,7 +213,7 @@
   			<?php }?>
   		</table>
   		<?php if($page_type=='static'){
-  		echo '<script language="php">} if ($DBfields["course3"] != 1) { </script>';
+  		echo '<script language="php">} if ($DBfields["course3"] == 1) { </script>';
   		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
@@ -279,7 +279,7 @@
   			<?php }?>
   		</table>
   		<?php if($page_type=='static'){
-  		echo '<script language="php">} if ($DBfields["course4"] != 1) { </script>';
+  		echo '<script language="php">} if ($DBfields["course4"] == 1) { </script>';
   		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
@@ -345,7 +345,7 @@
   			<?php }?>
   		</table>
   		<?php if($page_type=='static'){
-  		echo '<script language="php">} if ($DBfields["course5"] != 1) { </script>';
+  		echo '<script language="php">} if ($DBfields["course5"] == 1) { </script>';
   		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
@@ -411,7 +411,7 @@
   			<?php }?>
   		</table>
   		<?php if($page_type=='static'){
-  		echo '<script language="php"> }if ($DBfields["course6"] != 1) { </script>';
+  		echo '<script language="php"> }if ($DBfields["course6"] == 1) { </script>';
   		}?>
   		<table width=100% style="margin-top:10px;">
   			<tr>
@@ -476,7 +476,7 @@
   			<tr><td height=1 style="border-top:1px dotted #000000;"></td></tr>
   			<?php }?>
   		</table>
-  		<?php if($page_type=='download'){
+  		<?php if($page_type=='static'){
   		echo '<script language="php"> } </script>';
   		}?>
   	</td>
