@@ -255,7 +255,8 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 
 function update_click($limit,$position_name){
 	$db = get_db();
-	$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src from fb_news where 1=1 and is_adopt=1 order by click_count asc,created_at desc limit {$limit}";
+	$date = dt_increase(-30,'d');
+	$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src from fb_news where 1=1 and is_adopt=1 and created_at > '{$date}' order by click_count desc,created_at desc limit {$limit}";
 	$news = $db->query($sql);
 	$news_count = $db->record_count;
 	for($i=0;$i<$news_count;$i++){

@@ -6,7 +6,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 
-#forbes_tlt{width:680px; height:323px; margin-top:10px; padding:1px; border:1px solid #e1e9f0; overflow:hidden;}
+#forbes_tlt{width:680px; height:343px; margin-top:10px; padding:1px; border:1px solid #e1e9f0; overflow:hidden;}
 
 #headline{width:680px; height:200px; background:#f4f4f4; overflow:hidden;}
 #headline_content{width:361px; height:200px; margin-top:1px; overflow:hidden; float:right;}
@@ -22,14 +22,14 @@ div{margin:0; padding:0; float:left; display:inline;}
 #headline #btn .headline_btn1{width:14px; height:14px; margin-left:5px; cursor:pointer;}
 #headline #btn .headline_btn2{width:14px; height:14px; margin-left:5px; cursor:pointer;}
 
-#forbes_tltb{width:680px; height:123px; background:url(/images/index/bg1.jpg); overflow:hidden;}
+#forbes_tltb{width:680px; height:143px;  background:url(/images/index/bg1.gif); overflow:hidden;}
 
 #lujiazui{width:325px;}
 #lujiazui_caption{width:270px; height:20px; margin-top:10px; margin-left:10px; line-height:20px;}
 #lujiazui_caption a{font-weight:bold; font-size:14px; color:#003399; text-decoration:none;}
 #lujiazui_caption span{margin-left:10px; font-weight:normal; font-size:11px; font-family:Arial; color:#003399;}
 
-.lujiazui_list{width:238px; height:18px; margin-top:5px; margin-left:10px; padding-left:18px; background:url(/images/index/arrow1.png) no-repeat 0 7px; line-height:20px; overflow:hidden;}
+.lujiazui_list{width:238px; height:18px; margin-top:5px; margin-left:10px; padding-left:18px; background:url(/images/index/arrow1.png) no-repeat 0 7px; line-height:23px; overflow:hidden;}
 .lujiazui_list a{color:#2555a7; font-size:14px; text-decoration:none;}
 .lujiazui_list a:hover{color:#94000B;} 
 #lujiazui_coffee{width:50px; height:34px; margin-top:40px; background:url(/images/index/coffee.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/index/coffee.png"); float:right;}
@@ -40,11 +40,13 @@ div{margin:0; padding:0; float:left; display:inline;}
 #subject{width:351px; float:right;}
 #subject_btnl{width:5px; height:99px; margin-top:45px; margin-left:10px; background:url(/images/index/subject_btnl.jpg) no-repeat; cursor:pointer;}
 #subject_btnr{width:5px; height:99px; margin-top:45px; margin-left:10px; background:url(/images/index/subject_btnr.jpg) no-repeat; cursor:pointer;}
-#subject_box{width:297px; height:119px; overflow:hidden;}
-.subject_content{width:74px; height:99px; margin-top:15px; margin-left:15px; margin-right:10px; line-height:16px;}
+#subject_box{width:297px; height:139px; overflow:hidden;}
+.subject_content{width:74px; height:119px; margin-top:15px; margin-left:15px; margin-right:10px; line-height:16px;}
+.subject_title{width:72px;height:20px;line-height:20px;font-size:12px; overflow: hidden;}
+.subject_title a{color:#000000;text-decoration: none;}
 .subject_pic{width:72px; height:72px; border:1px solid #CCCCCC;}
 .subject_pic img{width:70px; height:70px; margin:1px;}
-.subject_list{width:73px; height:28px; margin-top:3px; margin-left:1px; line-height:14px; overflow:hidden;}
+.subject_list{width:73px; height:28px; margin-top:3px; margin-left:1px; line-height:14px; text-align:center; overflow:hidden;}
 .subject_list a{color:#003899; text-decoration:none;}
 .subject_list a:hover{color:#94000B;} 
 
@@ -121,7 +123,7 @@ span.down{color:#33CC00;}
 .forbes_l .image_content .image_description{width:135px; height:100px; margin-top:10px; line-height:20px; overflow:hidden;}
 .forbes_l .image_content .image_description a{color:#666666; text-decoration:none;}
 
-.forbes_l .life_bottom{width:330px; margin-top:25px;}
+.forbes_l .life_bottom{width:330px; margin-top:5px;}
 .forbes_l .lifelist{width:150px; height:20px; margin-top:5px; margin-left:15px; font-size:14px; line-height:20px; overflow:hidden;}
 .forbes_l .lifelist a{color:#003899; text-decoration:none;}
 

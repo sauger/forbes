@@ -68,9 +68,9 @@
 			
 		 <div id=forbes_tltb>	
 			 <div id=lujiazui>
-  		 	 <div id=lujiazui_caption <?php show_page_pos('lujiazui','only_link')?>><a href="<?php echo $pos_items->lujiazui->href;?>" title="<?php echo $pos_items->lujiazui->title;?>" target="_blank">陆家嘴早餐</a></div>
-			 	 <div id=lujiazui_coffee></div>
-  		 	 	<?php for($i=0;$i<3;$i++){
+  		 	 	<div id=lujiazui_caption <?php show_page_pos('lujiazui','only_link')?>><a href="<?php echo $pos_items->lujiazui->href;?>" title="<?php echo $pos_items->lujiazui->title;?>" target="_blank">陆家嘴早餐</a></div>
+			 	<div id=lujiazui_coffee></div>
+  		 	 	<?php for($i=0;$i<4;$i++){
   		 	 		$pos_name = "index_bf".$i;
   		 	 	?>
 			 	 <div class=lujiazui_list <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
@@ -82,7 +82,8 @@
 			 	 <div id=subject_btnl></div>
 				 <div id="subject_box">
 			 	 <?php for($i=0;$i<4;$i++){ $pos_name = "index_sub".$i;?>
-			 	 <div <?php show_page_pos($pos_name,'link_img_withouttime')?> class="subject_content">
+			 	 <div <?php show_page_pos($pos_name,'index_subject')?> class="subject_content">
+			 	 		<div class="subject_title"><?php echo "<a href='{$pos_items->$pos_name->reserve}' title='{$pos_items->$pos_name->alias}' target='_blank'>{$pos_items->$pos_name->alias}</a>";?></div>
 			 			<div class=subject_pic><?php show_page_img();?></div>
 			 			<div class=subject_list><?php show_page_href();?></div>
 			 	 </div>
