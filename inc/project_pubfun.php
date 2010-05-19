@@ -133,6 +133,12 @@ function static_contact($name){
 	$content = file_get_contents("{$static_url}/contact/contact.php?page_type=static&name={$name}");
 	return write_to_file("{$static_dir}/review/contact/{$name}.shtml",$content,'w');
 }
+function static_edm($type,$file_name){
+	global $static_dir;
+	global $static_url;
+	$content = file_get_contents("{$static_url}/admin/edm/{$type}.php?page_type=static&file_name={$file_name}");
+	return write_to_file("{$static_dir}/review/edm/{$file_name}",$content,'w');
+}
 
 function static_news($news,$symbol='fck_pageindex',$en = false){
 	if(!$news){

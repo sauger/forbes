@@ -28,15 +28,15 @@
 		css_include_tag('admin');
 		use_jquery();
 		js_include_tag('admin_pub','admin/edm/index');
-		$type['custom'] = '新闻订阅';
-		$type['custom'] = '精华导读';
+		$type['marrow'] = '新闻订阅';
+		$type['edm'] = '精华导读';
 	?>
 </head>
 
 <body>
 <div id=icaption>
     <div id=title>EDM管理</div>
-    <div id="title_link"><a href="">精华导读</a><a href="">新闻定制</a></div>
+    <div id="title_link"><a href="/admin/edm/edm.php?page_type=admin">精华导读</a><a href="/admin/edm/marrow.php?page_type=admin">新闻定制</a></div>
 	<a href="edit.php" id=btn_add></a>
 </div>	
 
@@ -58,6 +58,7 @@
 			<td><?php echo $type[$record[$i]->edm_type];?></td>
 			<td><?php echo substr($record[$i]->created_at,0,10);?></td>
 			<td>
+			<a title="静态页面" href="<?php echo $static_site ."/edm/{$record[$i]->file_name}";?>" target="_blank"><img src="/images/admin/btn_static.png" border="0"></a>
 			<span style="cursor:pointer;color:#FF0000" class="del" title="删除" name="<?php echo $record[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
 			</td>
 		</tr>
@@ -67,7 +68,7 @@
 		<tr class="btools">
 				<td colspan=10>
 					<?php paginate("",null,"page",true);?>
-					<input type="hidden" id="db_table" value="fb_magazine">
+					<input type="hidden" id="db_table" value="fb_edm">
 				</td>
 		</tr>
 	</table>	

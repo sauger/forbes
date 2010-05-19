@@ -44,6 +44,9 @@
 		<?php 		
 		
 	}
+	if($_GET['file_name']){
+		use_jquery();
+	}
 	
 ?>
 <style type="text/css">
@@ -364,7 +367,17 @@ a:active {text-decoration: none;}
 	                    <td height="80" ><img src="http://www.forbeschina.com/images/edm/dingyeu.jpg" width="184" height="66" /></td>
 	                  </tr>
 	                  <tr>
-	  					<td style="padding-top:10px;"><a style="color:#4649B0; font-size:13px; font-family:Arial;" href="<?php echo $doman ."/old_edm/"?>">往期福布斯精华查询</a></td>
+	                  	<?php if($_GET['file_name']){?>
+	                  		<td style="padding-top:10px;" id="edm_history">
+	                  			<script type="text/javascript">
+	                  				$(function(){
+										$('#edm_history').load('/ajax/edm_list.php',{'type':'edm'});
+		                  			});
+	                  			</script>
+	                  		</td>
+	                  	<?php }else{?>
+	  						<td style="padding-top:10px;"><a style="color:#4649B0; font-size:13px; font-family:Arial;" href="<?php echo $doman ."/old_edm/"?>">往期福布斯精华查询</a></td>
+	  					<?php }?>
 	  				  </tr>
 	                  </table></td>
 	              </tr>
