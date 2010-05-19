@@ -221,7 +221,7 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 			$news_count = 0;
 		}
 		
-		for($i=0;$i<$news_count;$i++){
+		for($i=0;$i<$news_limit;$i++){
 			$pos_name = $position_name.$k.$news_position.$i;
 				$record = $db->query("select id,end_time from fb_page_pos where name='{$pos_name}'");
 				if($db->record_count==1){
