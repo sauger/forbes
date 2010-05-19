@@ -483,20 +483,17 @@
   <td width=200 valign="top" style="padding-top:10px;">
   		<table width=184>
   			<tr>
-  				<td width=184 height=66 ><a href=""><img width=184 height=66 border=0 src="http://www.forbeschina.com/images/edm/dingyeu.jpg" /></a></td>
+  				<td width=184 height=66 ><a href="http://www.forbeschina.com/login/"><img width=184 height=66 border=0 src="http://www.forbeschina.com/images/edm/dingyeu.jpg" /></a></td>
   			</tr>
   			<tr>
   				<td height=15></td>
-  			</tr>
-  			<tr>
-  				<td><a style="color:#4649B0; font-size:14px; text-decoration:none;" href="<?php echo $doman ."/old_edm/"?>">往期福布斯精华查询</a></td>
   			</tr>
   			<tr>
   				<td height=15></td>
   			</tr>
   			<?php $pos="marrow_banner"; ?>
   			<tr >
-  				<td width=184 <?php show_page_pos($pos); ?>><a href="<?php echo $doman . "/" .$pos_items->$pos->href;?>"><img border=0 width=184 src="<?php img_src(); ?>" /></a></td>
+  				<td width=184 <?php show_page_pos($pos); ?>><a href="<?php echo $doman . "/" .$pos_items->$pos->href;?>"><img border=0 width=184 height=184 src="<?php img_src(); ?>" /></a></td>
   			</tr>
   		</table>
   	</td>
