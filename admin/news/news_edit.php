@@ -11,7 +11,7 @@
 	<title>发布新闻</title>
 	<?php 
 
-		css_include_tag('admin','colorbox','jquery_ui');
+		css_include_tag('admin2','colorbox','jquery_ui');
 		use_jquery_ui();
 		validate_form("news_edit");
 		js_include_tag('category_class.js', 'admin/news_pub', 'admin/news_edit','jquery.colorbox-min.js','../ckeditor/ckeditor.js','pubfun');

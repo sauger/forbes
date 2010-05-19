@@ -172,13 +172,14 @@ span.down{color:#33CC00;}
 
 .forbes_r{width:300px; float:right;}
 
-#dictionary{width:300px; height:82px; margin-top:8px; background:#f1f1f1;}
-#dictionary_r{width:280px; height:80px; margin-top:1px; margin-left:10px;}
+#dictionary{width:300px; height:90px;}
+#dictionary_t{width:300px; height:20px; color:#ffffff; text-indent:10px; padding-top:10px; font-size:14px; line-height:20px; background:url("/images/index/dictionary_t.jpg") no-repeat;}
+#dictionary_r{width:290px; height:60px;  padding-left:10px; background:#f1f1f1;}
 #dictionary_r a{color:#003399; text-decoration:none;}
 #dictionary_r #content1{width:200px; height:20px; line-height:20px; font-weight:bold; overflow:hidden;}
 #dictionary_r #more{width:70px; height:20px; font-size:14px; line-height:20px; font-weight:bold; text-align:right; float:right;}
 #dictionary_r #more a{color:#993333;}
-#dictionary_r #content2{width:280px; height:40px; line-height:20px; overflow:hidden;}
+#dictionary_r #content2{width:280px; height: 0px; line-height:20px; overflow:hidden;}
 #dictionary_r #content3{width:280px; height:20px; line-height:20px; overflow:hidden;}
 
 
