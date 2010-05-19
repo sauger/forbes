@@ -18,7 +18,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #headline .list{width:224px; height:24px; padding-left:13px; line-height:22px; background:url(/images/public/circle1.jpg) no-repeat 0 8px; overflow:hidden;}
 #headline .list a{font-size:14px; color:#003399; text-decoration:none;}
 #headline .list a:hover{color:#94000B;}
-#headline #btn{width:100px; height:14px; margin-top:3px; margin-right:10px; float:right;}
+#headline #btn{width:120px; height:14px; margin-top:3px; margin-right:10px; float:right;}
 #headline #btn .headline_btn1{width:14px; height:14px; margin-left:5px; cursor:pointer;}
 #headline #btn .headline_btn2{width:14px; height:14px; margin-left:5px; cursor:pointer;}
 

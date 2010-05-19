@@ -153,7 +153,7 @@ a:active {text-decoration: none;}
 	        <td>&nbsp;</td>
 	        <td width="205" valign="top"><table width="195" border="0" align="right" cellpadding="0" cellspacing="0" style="background-color:#F7F7F7">
 	          <tr>
-	            <td height="24" valign="middle" style="background-color:#ECECEC; color:#333333; font-size:14px; font-family:Arial;"><strong>&nbsp;投资</strong></td>
+	            <td height="24" valign="middle" style="background-color:#ECECEC; color:#333333; font-size:14px; font-family:Arial;"><strong>&nbsp;创业</strong></td>
 	          </tr>
 	          <tr>
 	            <td style="padding-top:10px;"><table width="190" border="0" cellspacing="0" cellpadding="0">
@@ -207,7 +207,7 @@ a:active {text-decoration: none;}
 	  <tr>
 	    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0">
 	      <tr>
-	        <td width="428" height="484" valign="top">
+	        <td width="428" valign="top">
 	        <table width="428" border="0" align="right" cellpadding="0" cellspacing="0" style="background-color:#F7F7F7;">
 	          <tr>
 	            <td height="26" valign="middle" style="background-color:#ECECEC; color:#333333; font-size:14px; font-family:Arial;">&nbsp;<strong>分类</strong></td>
@@ -240,8 +240,8 @@ a:active {text-decoration: none;}
 	                </table></td>
 	                <td style="padding-left:6px;"><table width="180" border="0" align="right" cellpadding="0" cellspacing="0">
 	                  <tr>
-	                    <td height="30" class="f3" style="color:#17599C; font-size:13px; font-family:Arial;">【创业】</td>
-	                    <td height="30" align="right" class="f6" style="font-size: 10px;font-family:Arial;"><a href="http://www.forbeschina.com/entrepreneur/" style="text-decoration:none; color:#333;">MORE&gt;&gt;</a></td>
+	                    <td height="30" class="f3" style="color:#17599C; font-size:13px; font-family:Arial;">【投资】</td>
+	                    <td height="30" align="right" class="f6" style="font-size: 10px;font-family:Arial;"><a href="http://www.forbeschina.com/investment/" style="text-decoration:none; color:#333;">MORE&gt;&gt;</a></td>
 	                  </tr>
 	                  <?php 
 	                  	$pos = "edm_cy";
@@ -339,33 +339,14 @@ a:active {text-decoration: none;}
 	            <td height="24" valign="middle" class="f4" style="color: #333">
 	            	<table width="400" border="0" cellspacing="0" style="margin-left:6px" cellpadding="0">
 	              <tr>
-	                <td><table width="180" border="0" cellspacing="0" cellpadding="0" style="font-size:12px;">
+	                <td>
+	                <table width="180" border="0" cellspacing="0" cellpadding="0" style="font-size:12px;">
 	                  <tr>
-	                    <td height="30" class="f3" style="color:#17599C; font-size:13px; font-family:Arial;">【投资】</td>
-	                    <td height="30" align="right" class="f6" style="font-size:10px;font-family: Arial;"><a href="http://www.forbeschina.com/investment/" style="text-decoration:none; color:#333;">MORE&gt;&gt;</a></td>
+	                    <td height="80" ><a href="http://www.forbeschina.com/login/"><img src="http://www.forbeschina.com/images/edm/dingyeu.jpg" width="184" height="66" border="0" /></a></td>
 	                  </tr>
-	                   <?php 
-	                  	$pos = "edm_tz";
-	                  ?>
-	                  <tr>
-	                    <td height="24" colspan="2" class="f3" style="font-size:13px; font-family:Arial;" <?php show_page_pos($pos,'edm_base')?>><strong><?php show_href();?></strong></td>
-	                   </tr>
-	                  <tr>
-	                    <td colspan="2" valign="top" style="font-size:13px; font-family:Arial;"><?php show_desc();?></td>
-	                  </tr>
-	                  <?php 
-	                  	for($i=0;$i<2;$i++){
-	                  		$pos = "edm_tz_{$i}";
-	                  ?>
-	                  <tr>
-	                    <td height="24" colspan="2" class="f5"style="font-size:13px; font-family:Arial;" <?php show_page_pos($pos,'edm_link');?>>·<?php show_href2();?></td>
-	                  </tr>
-	                   <?php }?>
 	                </table></td>
-	                <td valign="top"><table width="180" border="0" align="right" cellpadding="0" cellspacing="0">
-	                  <tr>
-	                    <td height="80" ><img src="http://www.forbeschina.com/images/edm/dingyeu.jpg" width="184" height="66" /></td>
-	                  </tr>
+	                <td valign="top">
+	                	<table width="180" border="0" align="right" cellpadding="0" cellspacing="0">
 	                  <tr>
 	                  	<?php if($_GET['file_name']){?>
 	                  		<td style="padding-top:10px;" id="edm_history">
@@ -376,7 +357,7 @@ a:active {text-decoration: none;}
 	                  			</script>
 	                  		</td>
 	                  	<?php }else{?>
-	  						<td style="padding-top:10px;"><a style="color:#4649B0; font-size:13px; font-family:Arial;" href="<?php echo $doman ."/old_edm/"?>">往期福布斯精华查询</a></td>
+	  						<td style="padding-top:10px;"><a style="color:#4649B0; font-size:13px; font-family:Arial;" href="<?php echo $doman ."/edm/"?>">往期福布斯精华查询</a></td>
 	  					<?php }?>
 	  				  </tr>
 	                  </table></td>
@@ -388,37 +369,44 @@ a:active {text-decoration: none;}
 	          </tr>
 	        </table></td>
 	        <td>&nbsp;</td>
-	        <td width="205" valign="top"><table width="205" border="0" cellspacing="0" cellpadding="0">
-	          <tr>
-	            <td height="201" valign="top"><table width="195" border="0" align="right" cellpadding="0" cellspacing="0" style="background-color:#F7F7F7">
-	              <tr>
-	                <td height="24" valign="middle" style="background-color:#ECECEC; color:#333333; font-size:14px; font-family:Arial;"><strong>&nbsp;专栏</strong></td>
-	              </tr>
-	              <tr>
-	                <td style="padding-top:5px; padding-left:6px;"><table width="180" border="0" cellspacing="0" cellpadding="0">
-	                  <?php for($i=0;$i<2;$i++){
-	                  	$pos="edm_column_{$i}";
-	                  ?>
-	                  <tr>
-	                    <td valign="top"><table width="180" border="0" cellspacing="0" cellpadding="0">
-	                      <tr>
-	                        <td height="24" class="f3" style="font-size:13px; font-family:Arial;" <?php show_page_pos($pos,'edm_column');?>><strong><?php show_href();?></strong></td>
-	                      </tr>
-	                      <tr>
-	                        <td height="24" style="font-size:13px; font-family:Arial;"><?php show_desc();?></td>
-	                      </tr>
-	                      <tr>
-	                        <td height="24" align="right" style="font-size:13px; font-family:Arial; color:#333333;">--<?php echo $pos_items->$pos->alias;?></td>
-	                      </tr>
-	                    </table></td>
-	                  </tr>
-	                  <?php }?>
-	                  </table></td>
-	              </tr>
-	            </table></td>
-	          </tr>
-	        </table>
-	          <table width="205" border="0" cellspacing="0" cellpadding="0" style="padding-top:10px;">
+	        <td width="205" valign="top">
+	        	<table width="205" border="0" cellspacing="0" cellpadding="0">
+	          		<tr>
+	            		<td height="201" valign="top">
+	            			<table width="195" border="0" align="right" cellpadding="0" cellspacing="0" style="background-color:#F7F7F7">
+	              				<tr>
+	                				<td height="24" valign="middle" style="background-color:#ECECEC; color:#333333; font-size:14px; font-family:Arial;"><strong>&nbsp;专栏</strong></td>
+	              				</tr>
+				              	<tr>
+				                	<td style="padding-top:5px; padding-left:6px;">
+				                		<table width="180" border="0" cellspacing="0" cellpadding="0">
+						                  	  <?php for($i=0;$i<2;$i++){
+						                  		$pos="edm_column_{$i}";
+						                  	  ?>
+							                  <tr>
+							                  		<td valign="top">
+							                  			<table width="180" border="0" cellspacing="0" cellpadding="0">
+							                      			<tr>
+							                        			<td height="24" class="f3" style="font-size:13px; font-family:Arial;" <?php show_page_pos($pos,'edm_column');?>><strong><?php show_href();?></strong></td>
+							                      			</tr>
+							                      			<tr>
+							                        			<td height="24" style="font-size:13px; font-family:Arial;"><?php show_desc();?></td>
+							                      			</tr>
+							                      			<tr>
+							                        			<td height="24" align="right" style="font-size:13px; font-family:Arial; color:#333333;">--<?php echo $pos_items->$pos->alias;?></td>
+							                      			</tr>
+							                    		</table>
+							                    	</td>
+							                  </tr>
+				                  			<?php }?>
+				                  		</table>
+				                 	 </td>
+				              	</tr>
+	            			</table>
+	            		</td>
+	          		</tr>
+	       		 </table>
+	          	 <table width="205" border="0" cellspacing="0" cellpadding="0" style="padding-top:10px; ">
 	            <tr>
 	              <td height="166" valign="top"><table width="195" border="0" align="right" cellpadding="0" cellspacing="0" style="background-color:#F7F7F7">
 	                <tr>
@@ -448,12 +436,7 @@ a:active {text-decoration: none;}
 	              </table></td>
 	            </tr>
 	          </table>
-	          <table width="205" border="0" cellspacing="0" cellpadding="0" style="padding-top:10px;">
-	            <tr>
-	            	<?php $pos="edm_ad"?>
-	              <td height="94" <?php show_page_pos($pos,'edm_img');?>><img src="<?php img_src();?>" width="205" height="94" /></td>
-	            </tr>
-	          </table></td>
+	         </td>
 	      </tr>
 	    </table></td>
 	  </tr>
