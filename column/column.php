@@ -50,7 +50,8 @@
 					</div>
 					<div id=c_content>
 						<?php 
-							$description = mb_strlen($column->description,'utf-8') > 90 ? mb_substr($column->description,0,90,'utf-8'). '...' : $column->description;
+							$description = strip_tags($column->description);
+							$description = mb_strlen($description,'utf-8') > 90 ? mb_substr($description,0,90,'utf-8'). '...' : $description;
 						?>
 						<?php echo strip_tags($description);?>	
 					</div>

@@ -28,6 +28,7 @@
 <body>
 <div id=icaption>
     <div id=title>杂志订阅查看</div>
+    <a href="export_order.php">导出</a>
 </div>
 <div id=isearch>
 		<input class="sau_search" name="title" type="text" value="<? echo $_REQUEST['search']?>">
