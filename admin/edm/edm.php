@@ -186,13 +186,13 @@ a:active {text-decoration: none;}
 	             	?>
 	              <tr>
 	                <td width="65" rowspan="3" valign="top"<?php show_page_pos($pos,'edm_link_img');?>><img src="<?php img_src()?>" width="54" height="54" /></td>
-	                <td height="30" valign="top" class="f5"  style="font-size:13px; font-family:Arial;">·<?php show_href2();?></td>
+	                <td height="50" valign="top" class="f5"  style="font-size:13px; font-family:Arial;">·<?php show_href2();?></td>
 	              </tr>
 	              <?php for($i=1;$i<3;$i++){
 	              	$pos = "edm_list_list_{$i}";
 	              ?>
 	              <tr>
-	                <td height="30" valign="top"<?php show_page_pos($pos,'edm_link');?> style="font-size:13px; font-family:Arial;" class="f5"><span>·<?php show_href2();?></span></td>
+	                <td height="50" valign="top"<?php show_page_pos($pos,'edm_link');?> style="font-size:13px; font-family:Arial;" class="f5"><span>·<?php show_href2();?></span></td>
 	              </tr>
 	              <?php }?>
 	            </table></td>
