@@ -33,7 +33,7 @@
 		global $doman;
 		global $pos;
 		global $pos_items; ?>
-		<a href="<?php echo $doman . "/" .$pos_items->$pos->href;?>" style="color:blue; text-decoration:none" target="_blank" title="<?php echo $pos_items->$pos->title;?>"><?php echo $pos_items->$pos->display ? $pos_items->$pos->display : '&nbsp;';?></a>
+		<a href="<?php echo $doman . "/" .$pos_items->$pos->href;?>" style="color:#17599C; text-decoration:none" target="_blank" title="<?php echo $pos_items->$pos->title;?>"><?php echo $pos_items->$pos->display ? $pos_items->$pos->display : '&nbsp;';?></a>
 		<?php
 	}
 	function show_desc(){
