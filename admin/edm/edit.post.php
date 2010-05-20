@@ -16,3 +16,4 @@ if($new){
 	$table->save();
 	static_edm($table->edm_type,$table->file_name);
 }
+redirect('index.php');
