@@ -33,7 +33,7 @@
 		global $doman;
 		global $pos;
 		global $pos_items; ?>
-		<a href="<?php echo $doman . "/" .$pos_items->$pos->href;?>" style="color:#333333; text-decoration:none" target="_blank" title="<?php echo $pos_items->$pos->title;?>"><?php echo $pos_items->$pos->display ? $pos_items->$pos->display : '&nbsp;';?></a>
+		<a href="<?php echo $doman . "/" .$pos_items->$pos->href;?>" style="color:blue; text-decoration:none" target="_blank" title="<?php echo $pos_items->$pos->title;?>"><?php echo $pos_items->$pos->display ? $pos_items->$pos->display : '&nbsp;';?></a>
 		<?php
 	}
 	function show_desc(){
@@ -56,7 +56,7 @@
 .f3 a{text-decoration:none; color:#17599C;}
 
 .f4 a{text-decoration:none; color:#333;}
-.f5 a{text-decoration:none; color:#000;}
+.f5 a{text-decoration:none; color:blue;}
 .f6 a{text-decoration:none; color:#333;}
 
 a:visited {text-decoration:none;color:#666;}
@@ -144,7 +144,7 @@ a:active {text-decoration: none;}
 	              	$pos = "edm_rich_list_{$i}";
 	              ?>
 	              <tr<?php show_page_pos($pos,'edm_link')?>>
-	                <td height="22" colspan="2" valign="bottom" class="f5" style="font-size:13px; font-family:Arial;">·<?php show_href2();?></td>
+	                <td height="22" colspan="2" valign="bottom" class="f5" style="font-size:13px; font-family:Arial;color:blue;">·<?php show_href2();?></td>
 	              </tr>
 	              <?php }?>
 	            </table></td>
