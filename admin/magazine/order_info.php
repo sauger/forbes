@@ -121,7 +121,7 @@
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td  class=td1>职位</td>
+			<td  class=td1>学位</td>
 			<td>
 				<?php echo $record->Position;?>
 			</td>
