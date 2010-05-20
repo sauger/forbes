@@ -46,6 +46,7 @@ for($i=0;$i<$count;$i++){
 	$out_str .= "\n";
 	
 }
+$out_str = iconv('utf-8','gbk',$out_str);
 
 Header("Content-type: application/octet-stream"); 
 
