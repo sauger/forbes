@@ -13,6 +13,8 @@
 	$nid = array();
 	$error_id = array();
 	for($i=0;$i<$count;$i++){
+		$db->execute("update fb_news set created_at = '". now() ."' where id={$news[$i]->id}");
+		$news[$i]->created_at = now();
 		$result = static_news($news[$i],'page');
 		if($result){
 			array_push($pid,$news[$i]->pid);
