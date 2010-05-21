@@ -85,7 +85,7 @@ span.down{color:#33CC00;}
 #ipo_info{width:300px; height:20px; line-height:20px; text-align:right;}
 #ipo_src{width:300px; float:left;}
 
-#forbes_trt #bottom{width:300px; height:95px; margin-top:8px; background:#f7f7f7; overflow:hidden; float:right;}
+#forbes_trt #bottom{width:300px; height:111px; margin-top:8px; background:#f7f7f7; overflow:hidden; float:right;}
 #forbes_trt #bottom #title{width:280px; height:18px; margin-top:5px; margin-left:10px; color:#333333; font-size:14px; font-weight:bold; line-height:18px;}
 #forbes_trt #bottom #title a{color:#333333; text-decoration:none;}
 #forbes_trt .bottom_list{width:280px; height:16px; margin-top:5px; margin-left:10px; padding-left:20px; font-weight:bold; background:url(/images/index/arrow.jpg) no-repeat 0 5px; line-height:16px; overflow:hidden;}
@@ -172,7 +172,7 @@ span.down{color:#33CC00;}
 
 .forbes_r{width:300px; float:right;}
 
-#dictionary{width:300px; height:90px;}
+#dictionary{width:300px; height:90px; margin-top:15px;}
 #dictionary_t{width:300px; height:20px; color:#ffffff; text-indent:10px; padding-top:10px; font-size:14px; line-height:20px; background:url("/images/index/dictionary_t.jpg") no-repeat;}
 #dictionary_t a{color:#FFFFFF;text-decoration: none; }
 #dictionary_r{width:290px; height:60px;  padding-left:10px; background:#f1f1f1;}
@@ -184,7 +184,7 @@ span.down{color:#33CC00;}
 #dictionary_r #content3{width:280px; height:20px; font-size:14px; line-height:20px; text-align:right; overflow:hidden;}
 
 
-#activity{width:300px; margin-top:8px; overflow:hidden; float:right;}
+#activity{width:300px; margin-top:15px; overflow:hidden; float:right;}
 #activity #images{width:260px; height:90px; margin-top:10px; margin-left:19px;}
 #activity #title{width:260px; height:20px; margin-top:5px; margin-left:19px; font-size:13px; font-weight:bold; color:#333385 line-height:20px;}
 #activity #title a{color:#333385; text-decoration:none;}
@@ -192,7 +192,7 @@ span.down{color:#33CC00;}
 #activity #info{width:50px; height:20px; margin-top:25px; margin-right:19px; line-height:20px; float:right;}
 #activity #info a{color:#3399CC;}
 
-#club{width:300px; height:151px; margin-top:8px; background:url(/images/index/bg2.jpg) no-repeat; overflow:hidden; float:right;}
+#club{width:300px; height:151px; margin-top:12px; background:url(/images/index/bg2.jpg) no-repeat; overflow:hidden; float:right;}
 .club_caption1{height:20px; margin-left:15px; margin-top:8px; font-size:14px; font-weight:bold; color:#999999;}
 .club_caption1 span{margin-left:10px; font-family:Arial; font-weight:normal; font-size:11px;}
 .club_more1{width:18px; height:8px; margin-top:11px; margin-right:10px; background:url(/images/public/public_more1.jpg) no-repeat; line-height:18px; float:right;}
@@ -211,19 +211,22 @@ span.down{color:#33CC00;}
 #club .bottom_r a{color:#000000;}
 #club .bottom .image{width:17px; height:20px; margin-top:5px; margin-right:5px;}
 
-#city{width:300px; height:151px; margin-top:8px; background:url(/images/index/bg2.jpg) no-repeat; float:right;}
+#city{width:300px; height:270px; margin-top:15px; background:url(/images/index/bg22.jpg) no-repeat; float:right;}
 .city_caption1{height:20px; margin-left:15px; margin-top:8px; font-size:14px; font-weight:bold; color:#999999;}
 .city_caption1 span{margin-left:10px; font-family:Arial; font-weight:normal; font-size:11px;}
 .city_more1{width:18px; height:8px; margin-top:11px; margin-right:10px; background:url(/images/public/public_more1.jpg) no-repeat; line-height:18px; float:right;}
 #city .c_r_m_right{width:3px; height:151px; background:url(/images/index/c_r_m_right.gif) no-repeat; float:right;}
-#city .content{width:280px; height:74px; margin-top:10px;}
+#city .content{width:280px; height:80px; margin-top:10px;display:inline; }
 #city .content a{color:#666666; text-decoration:none;}
 #city .content .pic{width:72px; height:72px; margin-left:15px; border:1px solid #CCCCCC;}
 #city .content .pic img{width:70px; height:70px; margin:1px;}
 #city .content .pictitle{width:180px; height:16px; margin-left:5px; font-size:13px; line-height:16px; float:right;}
 #city .content .pictitle a{font-weight:bold; color:#333399;}
 #city .content .piccontent{width:180px; height:52px; margin-top:8px; margin-left:5px; overflow:hidden; text-indent:24px; line-height:17px; float:right;}
-#city .bottom{width:280px; height:30px; margin-top:8px; margin-left:15px; line-height:30px;}
+#city_news_list{width:280px; height:100px; margin-top:6px; margin-left:15px;margin-bottom:15px; display:inline;}
+#city_news_list div{height:25px;line-height:25px; width:100%; display:inline; overflow: hidden;}
+#city_news_list div a{color:#003899;font-size:14px; text-decoration: none;}
+#city .bottom{width:280px; height:30px; margin-left:15px; line-height:30px; }
 #city .bottom a{color:#0033CC;}
 #city .bottom_l{width:140px; height:30px; overflow:hidden;}
 #city .bottom_r{width:140px; height:30px; overflow:hidden; float:right;}

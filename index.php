@@ -122,7 +122,7 @@
 				</script>
 				<div id=bottom>
 					<div id=title <?php $pos_name='cfgc'; show_page_pos($pos_name,'only_title')?>><?php show_page_href();?></div>
-					<?php for($i=0;$i<3;$i++){
+					<?php for($i=0;$i<4;$i++){
 						$pos_name = "index_dyn_list{$i}"; 
 						?>
 						<div class=bottom_list<?php show_page_pos($pos_name,'link_withouttime');?>><?php show_page_href()?></div>
@@ -298,28 +298,6 @@
 				<div class=public_bottom1></div>
 			</div>
 			
-			<div id=club>
-					<div class=club_caption1>增长会</div>
-					<a href="/investor" class=club_more1 target="_blank"></a>
-					<?php $pos_name = 'index_club0';?>
-					<div class=content <?php show_page_pos("$pos_name",'base_img_withoutime');?>>
-						<div class=pic>
-							<?php show_page_img()?>
-						</div>	
-						<div class=pictitle>
-							<?php show_page_href()?>
-						</div>
-						<div class=piccontent>
-							<?php show_page_desc()?>
-						</div>
-					</div>
-					<div class=bottom>
-						<div class=bottom_l><a href='/investor/sign'>我要报名</a></div>
-						<div class=bottom_r>
-							<a href='/investor'>VC/PE/天使投资人数据库</a>
-						</div>	
-					</div>
-			</div>
 			
 			
 			
@@ -337,6 +315,16 @@
 						<div class=piccontent>
 							<?php show_page_desc()?>
 						</div>
+					</div>
+					<div id="city_news_list">
+						<?php for($i=0;$i<4;$i++){ 
+							$pos_name = "index_city_news_$i";
+						?>
+						<div <?php show_page_pos($pos_name,'link_withouttime')?>>
+						
+						<?php show_page_href();?>
+						</div>							
+						<?php }?>
 					</div>
 					<div class=bottom>
 						<div class=bottom_l><a href="http://www.forbeschina.com/list/more/4">城市榜</a></div>
