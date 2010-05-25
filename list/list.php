@@ -42,7 +42,7 @@
 				<a href="<?php echo "{$static_site}/list/more/"; ?>6">体育</a>
 			</div>
 			<div class=sort_l_l1>
-				<a href="<?php echo "{$static_site}/list/more/"; ?>7">科技</a>
+				<a href="<?php echo "{$static_site}/list/more/"; ?>7">生活</a>
 			</div>
 			<div class=sort_l_l1>
 				<a href="<?php echo "{$static_site}/list/more/"; ?>8">教育</a>
@@ -103,7 +103,7 @@
 				}
 				else if($bdid<9)
 				{
-					$sql = 'select * from fb_custom_list_type where position="'.$bdid.'" order by priority asc,created_at desc';
+					$sql = 'select * from fb_custom_list_type where position="'.$bdid.'" and list_type not in (4,5) order by priority asc,created_at desc';
 					
 				}
 				else if($bdid==9)
