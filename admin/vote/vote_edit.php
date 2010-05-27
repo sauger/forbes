@@ -68,12 +68,11 @@
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td align="center">控制方式：</td>
+			<td align="center">是否需要登录：</td>
 			<td align="left">
 				<select id=select_limit_type name="vote[limit_type]">
-					<option <?php if("no_limit"==$vote->limit_type){?>selected="selected"<?php }?> value="no_limit">不设限制</option>
-					<option <?php if("user_id"==$vote->limit_type){?>selected="selected"<?php }?> value="user_id">会员登录</option>
-					<option <?php if("ip"==$vote->limit_type){?>selected="selected"<?php }?> value="ip">IP控制</option>
+					<option <?php if("no_limit"==$vote->limit_type){?>selected="selected"<?php }?> value="no_limit">不需要登录</option>
+					<option <?php if("user_id"==$vote->limit_type){?>selected="selected"<?php }?> value="user_id">需要登录</option>
 				</select>
 			</td>
 		</tr>

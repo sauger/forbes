@@ -8,21 +8,6 @@
 		redirect('/error/');
 		die();
 	}
-	$vote = new table_class("fb_vote");
-	$vote->find($id);
-	if($vote->max_item_count==1)$in_type="radio";else $in_type="checkbox";
-	$item = $db->query("select * from fb_vote_item where vote_id=$id");
-	$item_count = $db->record_count;
-	if($vote->vote_type!='more_vote'){
-		$record = $db->query("select * from fb_vote where id=$id");
-		$count = 1;
-	}else{
-		$record = $db->query("SELECT t1.id,t1.name,t1.max_item_count FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id where t2.vote_id=$id");
-		$count = $item_count;
-		$item = $db->query("SELECT t1.id as vote_id,t3.title,t3.id FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id join fb_vote_item t3 on t1.id=t3.vote_id where t2.vote_id=$id");
-		$item_count = $db->record_count;
-	}
-	#$in_type = "radio";
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -37,6 +22,26 @@
 	?>
 </head>
 <body>
+<?php 
+	$vote = new table_class("fb_vote");
+	$vote->find($id);
+	if($vote->limit_type=='user_id'){
+		require_login();
+	}
+	if($vote->max_item_count==1)$in_type="radio";else $in_type="checkbox";
+	$item = $db->query("select * from fb_vote_item where vote_id=$id");
+	$item_count = $db->record_count;
+	if($vote->vote_type!='more_vote'){
+		$record = $db->query("select * from fb_vote where id=$id");
+		$count = 1;
+	}else{
+		$record = $db->query("SELECT t1.id,t1.name,t1.max_item_count FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id where t2.vote_id=$id");
+		$count = $item_count;
+		$item = $db->query("SELECT t1.id as vote_id,t3.title,t3.id FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id join fb_vote_item t3 on t1.id=t3.vote_id where t2.vote_id=$id");
+		$item_count = $db->record_count;
+	}
+	#$in_type = "radio";
+?>
 	<div id=ibody>
 		<?php include_top();?>
 		<div id=bread><a href="/survey/">问卷调查</a> > <?php echo $vote->name;?>
