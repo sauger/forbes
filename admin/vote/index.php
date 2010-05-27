@@ -29,7 +29,7 @@
 </head>
 <body>
 <div id=icaption>
-    <div id=title>投票管理</div>
+    <div id=title>调查表管理</div>
 	<a href="vote_add.php" id=btn_add></a>
 </div>
 <div id=isearch>
@@ -44,20 +44,20 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class=itable_title>
-			<td width="20%">投票名称</td><td width="10%">登录限制</td><td width="10%">票数限制</td><td width="10%">投票类型</td><td width="10%">发布时间</td><td width="10%">到期时间</td><td width="20%">操作</td>
+			<td width="20%">调查表名称</td><td width="10%">登录限制</td><td width="10%">票数限制</td><td width="10%">调查表类型</td><td width="10%">发布时间</td><td width="10%">到期时间</td><td width="20%">操作</td>
 		</tr>
 		<?php
 			//--------------------
 			for($i=0;$i<$count_record;$i++){
 				switch($record[$i]->vote_type) {
 						case "word_vote":
-							$vote_name = "文字投票";
+							$vote_name = "文字调查表";
 							break;
 						case "image_vote":
-							$vote_name = "图片投票";
+							$vote_name = "图片调查表";
 							break;
 						case "more_vote":
-							$vote_name = "复合投票";
+							$vote_name = "复合调查表";
 							break;
 						default:
 							$vote_name = "未知类型";

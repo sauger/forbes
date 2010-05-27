@@ -26,7 +26,7 @@
 <body>
 <form id="sub_vote_form" method="post" enctype="multipart/form-data" action="ajax.post.php">
 <div id=icaption style="width:550px;">
-	<div id=title style="width:500px;">添加投票</div>
+	<div id=title style="width:500px;">添加调查表</div>
 </div>
 <div id=itable style="width:570px;">
  <table style="width:570px;" border="0" id="sub_table">  
@@ -43,22 +43,22 @@
 			<td><input name="image"  type="file"><?php if(null!=$vote->photo_url){?><a href="<?php echo $vote->photo_url;?>" target="_blank">点击查看</a><?php }?></td>
 		</tr>
 		<tr class=tr4>
-			<td align="center">投票类型：</td>
+			<td align="center">调查表类型：</td>
 			<td align="left">
 				<select  id="vote_type" name="vote[vote_type]">
-					<option value="word_vote" <?php if("word_vote"==$vote->vote_type){?>selected="selected"<?php }?>>文字投票</option>
-					<option value="image_vote" <?php if("image_vote"==$vote->vote_type){?>selected="selected"<?php }?>>图片投票</option>
+					<option value="word_vote" <?php if("word_vote"==$vote->vote_type){?>selected="selected"<?php }?>>文字调查表</option>
+					<option value="image_vote" <?php if("image_vote"==$vote->vote_type){?>selected="selected"<?php }?>>图片调查表</option>
 				</select>
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td align="center">投票选项限制：</td>
+			<td align="center">调查表选项限制：</td>
 			<td><input type="hidden" name="vote[max_vote_count]" value="0"><input type="text" class="number"  name="vote[max_item_count]" value="<?php echo $vote->max_item_count;;?>"></td>
 		</tr>
 		<?php if(null!=$id){?>
 			<?php for($k=0;$k<$item_count;$k++){?>
 				<tr class=tr4>
-					<td align="center">投票项目：</td>
+					<td align="center">调查表项目：</td>
 					<td align="left">
 						<input type="text" name="old_item[title][]" style="width:300px;" class="required" value="<?php echo $vote_item_record[$k]->title;?>">
 						<?php if("image_vote"==$vote->vote_type&&null!=$vote_item_record[$k]->photo_url){?><a href="<?php echo $vote_item_record[$k]->photo_url;?>" target="_blank">点击查看</a><?php }?>
@@ -70,7 +70,7 @@
 			<?php }?>
 		<?php }?>
 		<tr class="tr4 item">
-			<td align="center">投票项目：</td>
+			<td align="center">调查表项目：</td>
 			<td id="single">
 				<input type="text" name="vote_item[title][]" style="width:300px;" <?php if(empty($id)){?>class="required"<?php }?>>
 				<input name="vote_item[]"  class="item_image"  type="file"  <?php if("image_vote"!=$vote->vote_type){?>style="display:none;"<?php }?>>
@@ -78,7 +78,7 @@
 			</td>	
 		</tr>
 		<tr class=btools>
-			<td colspan="2"><input id="submit" type="submit" value="发布投票"></td>
+			<td colspan="2"><input id="submit" type="submit" value="发布调查表"></td>
 		</tr>
 		<input type="hidden" name="vote[is_sub_vote]" value="1">
 		<input type="hidden" name="vote_id" value="<?php echo $id;?>">
@@ -101,7 +101,7 @@
 		
 		
 		$(".add_item").click(function(){
-			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='item_image' style='display:"+displayed+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a></td></tr>");
+			$(".btools").before("<tr class='tr4 s_item'><td align='center'>调查表项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='item_image' style='display:"+displayed+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a></td></tr>");
 		});
 	
 		$("#vote_type").change(function(){

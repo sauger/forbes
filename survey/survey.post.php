@@ -24,18 +24,29 @@
 			}
 		}
 	}
-	
-	#var_dump($_POST);
+	#var_dump($_SERVER['REMOTE_ADDR']);
 	#die();
 	$vote = new table_class('fb_vote');
-	
-	
-	$record = new table_class("fb_survey_record");
-	if(isset($_SESSION['user_id'])){
-		$record->source = $_SESSION['user_id'];
+	$vote->find($id);
+	if($vote->limit_type=='user_id'){
+		require_login();
+		$source = $_COOKIE['name'];
 	}else{
-		$record->source = $_SERVER['REMOTE_ADDR'];
+		$source = $_SERVER['REMOTE_ADDR'];
 	}
+	if($vote->max_vote_count){
+		$limit = $vote->max_vote_count;
+		$db = get_db();
+		$has = $db->query("select count(id) as num from fb_survey_record where vote_id=$id and source='$source'");
+		close_db();
+		if($has[0]->num>=$limit){
+			alert('您已经做过该调查表了，请不要重复提交！');
+			redirect('/survey/');
+			die();
+		}
+	}
+	$record = new table_class("fb_survey_record");
+	$record->source = $source;
 	$record->vote_id = $id;
 	$record->created_at = now();
 	$record->save();

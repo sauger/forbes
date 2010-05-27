@@ -9,7 +9,7 @@ update_click(6,'index_pop');
 update_pos("财经词典",1,'dictionary_r_content1',true,true);
 
 $db = get_db();
-$sql = "select t1.* from fb_user t1 join (select * from fb_news order by created_at desc) t2 on t1.id=t2.publisher where t1.role_name='column_writer' and t1.image_src is not null group by t1.id order by t2.created_at desc limit 9";
+$sql = "select t1.* from fb_user t1 join (select * from fb_news where is_adopt=1 order by created_at desc) t2 on t1.id=t2.publisher where t1.role_name='column_writer' and t1.image_src is not null group by t1.id order by t2.created_at desc limit 9";
 $column = $db->query($sql);
 $count = $db->record_count;
 for($i=0;$i<$count;$i++){

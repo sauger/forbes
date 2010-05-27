@@ -61,13 +61,15 @@ div{margin:0; padding:0; float:left; display:inline;}
 #list_left_top{width:114px; height:25px; margin-top:15px; float:right;}
 #list_left_top a{width:100px; height:25px; color:#246BB0; font-size:12px; line-height:25px; text-align:center; text-decoration:none; background:url('/images/list/button.gif'); float:left; display:inline;}
 #list_list_content{width:660px; margin-top:10px;}
-#list_list_content table{width:100%; text-align:center; background:#e7e7e7;}
-#list_list_content td{height:32px; text-align:center; padding:5px; word-break:break-all; word-wrap:break-word; font-size:12px; line-height:16px; background:#ffffff;}
+#list_list_content table{width:100%; text-align:center;}
+#list_list_content td{height:32px; text-align:center; padding:5px; word-break:break-all; word-wrap:break-word; font-size:12px; line-height:16px; background:#ffffff; border-bottom:1px solid #6666CC;}
+#list_list_content .selected{color:#000000; font-weight:bolder; background-color:#E0EBC9;}
 
-#list_top_tr{height:25px; font-size:12px; font-weight:bold; color:#666666; text-align:center;}
-#list_top_tr td{border-bottom:1px solid #999999; background:#f0f0f0;}
-#list_top_tr a{color:#666666; text-decoration:none;}
-#list_top_tr a:hover{color:#000000; text-decoration:underline;}
+#list_top_tr{height:25px; font-size:12px; color:#003399; text-align:center;}
+#list_top_tr td{border-bottom:1px solid #000000;}
+#list_top_tr a{color:#003399; text-decoration:none;}
+#list_top_tr a:visited{color:#6699CC;}
+#list_top_tr a:hover{text-decoration:underline;}
 
 .list_btr td{text-align:center; word-break:break-all; word-wrap:break-word; font-size:12px; line-height:16px;}
 .list_btr a{color:#000000; text-decoration:none;}
