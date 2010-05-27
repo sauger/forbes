@@ -23,8 +23,8 @@
 	}
 	
 	
-	var_dump($_POST);
-	die();
+	#var_dump($_POST);
+	#die();
 	$record = new table_class("fb_survey_record");
 	if(isset($_SESSION['user_id'])){
 		$record->source = $_SESSION['user_id'];
