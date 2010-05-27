@@ -1,11 +1,11 @@
-﻿<?php
+<?php
 	session_start();
 	include_once( dirname(__FILE__) .'/../frame.php');
 	$db = get_db();
 	$id = intval($_GET['id']);
 	$_SESSION['survey'.$id] = rand_str(20);
 	if(empty($id)){
-		redirect('/error.html');
+		redirect('/error/');
 		die();
 	}
 	$vote = new table_class("fb_vote");
