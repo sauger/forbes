@@ -48,7 +48,7 @@
 	<div id=ibody>
 		<?php include_top();?>
 		<div id=bread><a href="/list">榜单</a> > <?php echo $list->name;?></div>
-		<div id=bread_line>
+		<div id=bread_line></div>
 		<div id="list_left">
 			<div id="list_title"><?php echo $list->name;?></div>
 			<div id="list_desc"><?php echo $list->comment;?></div>
@@ -63,15 +63,15 @@
 			<?php
 				if($list->table_name=="fb_famous_list_items"){
 			?>
-				<table border="0" cellspacing="1">
+				<table cellspacing="1" cellpadding="2" border="0" width="100%">
 					<tr id="list_top_tr">
-							<td valign="middle" width="10%"><a href="show_list.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合<br>排名</a></td>
+							<td valign="middle" width="10%"><a <?php if($order=='overall_order')echo 'style="color:#fff; font-weight:bold"';?> href="show_list.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合<br>排名</a></td>
 							<td valign="middle" width="15%">姓名</td>
 							<td valign="middle" width="15%">职业</td>
-							<td valign="middle" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=fortune&desc=<?php echo ($order=='fortune')?!$desc:'1';?>">收入<br>（万人民币）</a></td>
-							<td valign="middle" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=fortune_order&desc=<?php echo ($order=='fortune_order')?!$desc:'0';?>">收入排名</a></td>
-							<td valign="middle" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=exposure_rate&desc=<?php echo ($order=='exposure_rate')?!$desc:'0';?>">曝光率指数</a></td>
-							<td valign="middle" width="15%"><a href="show_list.php?id=<?php echo $id;?>&order=exposure_order&desc=<?php echo ($order=='exposure_order')?!$desc:'0';?>">曝光率排名</a></td>
+							<td valign="middle" width="15%"><a <?php if($order=='fortune')echo 'style="color:#fff; font-weight:bold"';?> href="show_list.php?id=<?php echo $id;?>&order=fortune&desc=<?php echo ($order=='fortune')?!$desc:'1';?>">收入<br>（万人民币）</a></td>
+							<td valign="middle" width="15%"><a <?php if($order=='fortune_order')echo 'style="color:#fff; font-weight:bold"';?> href="show_list.php?id=<?php echo $id;?>&order=fortune_order&desc=<?php echo ($order=='fortune_order')?!$desc:'0';?>">收入排名</a></td>
+							<td valign="middle" width="15%"><a <?php if($order=='exposure_rate')echo 'style="color:#fff; font-weight:bold"';?> href="show_list.php?id=<?php echo $id;?>&order=exposure_rate&desc=<?php echo ($order=='exposure_rate')?!$desc:'0';?>">曝光率指数</a></td>
+							<td valign="middle" width="15%"><a <?php if($order=='exposure_order')echo 'style="color:#fff; font-weight:bold"';?> href="show_list.php?id=<?php echo $id;?>&order=exposure_order&desc=<?php echo ($order=='exposure_order')?!$desc:'0';?>">曝光率排名</a></td>
 					</tr>
 					<?php
 						if(empty($order)){
@@ -89,27 +89,27 @@
 					?>
 					<tr class="list_btr">
 						<td valign="middle" width="10%" style="color:#246BB0;"><?php echo $list[$i]->overall_order;?></td>
-						<td valign="middle" width="15%">
+						<td valign="middle" width="15%" <?php if($order=='overall_order')echo 'class="selected"';?>>
 							<?php if($list[$i]->famous_id!=''){?>
 								<a href="/famous/famous.php?id=<?php echo $list[$i]->famous_id;?>">
 							<?php }?>
 							<?php echo $list[$i]->name;?>
 							<?php if($list[$i]->famous_id!=''){?></a><?php }?></td>
 						<td valign="middle" width="15%"><?php echo $list[$i]->job;?></td>
-						<td valign="middle" width="15%"><?php echo $list[$i]->fortune;?></td>
-						<td valign="middle" width="15%"><?php echo $list[$i]->fortune_order;?></td>
-						<td valign="middle" width="15%"><?php echo $list[$i]->exposure_rate;?></td>
-						<td valign="middle" width="15%"><?php echo $list[$i]->exposure_order;?></td>
+						<td valign="middle" width="15%" <?php if($order=='fortune')echo 'class="selected"';?>><?php echo $list[$i]->fortune;?></td>
+						<td valign="middle" width="15%" <?php if($order=='fortune_order')echo 'class="selected"';?>><?php echo $list[$i]->fortune_order;?></td>
+						<td valign="middle" width="15%" <?php if($order=='exposure_rate')echo 'class="selected"';?>><?php echo $list[$i]->exposure_rate;?></td>
+						<td valign="middle" width="15%" <?php if($order=='exposure_order')echo 'class="selected"';?>><?php echo $list[$i]->exposure_order;?></td>
 					</tr>
 					<?php }?>
 				</table>
 			<?php }else if($list->table_name=="fb_rich_list_items"){?>
-				<table border="0" cellspacing="1" >
+				<table cellspacing="1" cellpadding="2" border="0" width="100%">
 					<tr id="list_top_tr">
-							<td valign="middle" width="10%"><a href="more.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合排名</a></td>
+							<td valign="middle" width="10%"><a <?php if($order=='overall_order')echo 'style="color:#fff; font-weight:bold"';?> href=show_list.php?id=<?php echo $id;?>&order=overall_order&desc=<?php echo ($order=='overall_order')?!$desc:'0';?>">综合排名</a></td>
 							<td valign="middle" width="15%">姓名</td>
 							<td valign="middle" width="15%">年龄</td>
-							<td valign="middle" width="15%"><a href="more.php?id=<?php echo $id;?>&order=fortune&desc=<?php echo ($order=='fortune')?!$desc:'1';?>">年收入<br>（<?php echo $list->unit;?>）</a></td>
+							<td valign="middle" width="15%"><a <?php if($order=='fortune')echo 'style="color:#fff; font-weight:bold"';?> href="show_list.php?id=<?php echo $id;?>&order=fortune&desc=<?php echo ($order=='fortune')?!$desc:'1';?>">年收入<br>（<?php echo $list->unit;?>）</a></td>
 							<td valign="middle" width="15%">所属省市</td>
 							<td valign="middle" width="15%">公司名</td>
 							<td valign="middle" width="15%">主要产业</td>
@@ -129,7 +129,7 @@
 						for($i=0;$i<$count;$i++){
 					?>
 					<tr class="list_btr">
-						<td valign="middle" width="10%" style="color:#246BB0;"><?php echo $list[$i]->overall_order;?></td>
+						<td valign="middle" width="10%" style="color:#246BB0;" <?php if($order=='overall_order')echo 'class="selected"';?>><?php echo $list[$i]->overall_order;?></td>
 						<td valign="middle" width="15%">
 							<?php if($list[$i]->rich_id!=''){?>
 								<a href="/rich/rich.php?id=<?php echo $list[$i]->rich_id;?>">
@@ -137,7 +137,7 @@
 							<?php echo $list[$i]->name;?>
 							<?php if($list[$i]->famous_id!=''){?></a><?php }?></td>
 						<td valign="middle" width="15%"><?php echo $list[$i]->age;?>岁</td>
-						<td valign="middle" width="15%"><?php echo $list[$i]->fortune;?></td>
+						<td valign="middle" width="15%" <?php if($order=='fortune')echo 'class="selected"';?>><?php echo $list[$i]->fortune;?></td>
 						<td valign="middle" width="15%"><?php echo $list[$i]->zone;?></td>
 						<td valign="middle" width="15%"><?php echo $list[$i]->company;?></td>
 						<td valign="middle" width="15%"><?php echo $list[$i]->industry;?></td>
@@ -145,7 +145,7 @@
 					<?php }?>
 				</table>
 			<?php }else{?>
-				<table border="0" cellspacing="1">
+				<table cellspacing="1" cellpadding="2" border="0" width="100%">
 					<tr id="list_top_tr">
 							<?php 
 								$fields = $db->query("show full fields FROM {$list->table_name}");
@@ -154,7 +154,7 @@
 								$width = 100/$count;
 								for($i=1;$i<$count;$i++){
 							?>
-						<td <?php if($i==1){?>style="border-left:0;"<?php }?> <?php if($i==($count-1)){?>style="border-right:0;"<?php }?> width="<?php echo $width;?>%" valign="middle">
+						<td width="<?php echo $width;?>%" valign="middle">
 								<?php if($fields[$i]->Key=='MUL'){
 									$desc1 = ($order==$fields[$i]->Field)?!$desc:'1';
 									if($page_type=='static'){
@@ -162,7 +162,11 @@
 									}else{
 										$url = "show_list.php?id={$id}&order={$fields[$i]->Field}&desc={$desc1}";
 									}
-									echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
+									if($order==$fields[$i]->Field||(empty($order)&&$i==1)){
+										echo "<a style='color:#000; font-weight:bold;' href='{$url}'>{$fields[$i]->Comment}</a>";
+									}else{
+										echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
+									}
 								}else{
 									echo $fields[$i]->Comment;	
 								}
@@ -188,7 +192,7 @@
 						<?php for($j=1;$j<$count;$j++){
 							$field_name = field_.$j;
 						?>
-						<td  width="<?php echo $width;?>%" valign="middle" ><?php echo $list[$i]->$field_name;?></td>
+						<td <?php if($order==$fields[$j]->Field||($order=='id'&&$j==1))echo 'class="selected"';?> width="<?php echo $width;?>%" valign="middle" ><?php echo $list[$i]->$field_name;?></td>
 						<?php }?>
 					</tr>
 					<?php }?>

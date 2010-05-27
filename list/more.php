@@ -141,7 +141,11 @@
 									}else{
 										$url = "more.php?id={$id}&order={$fields[$i]->Field}&desc={$desc1}";
 									}
-									echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
+									if($order==$fields[$i]->Field){
+										echo "<a style='color:#000; font-weight:bold;' href='{$url}'>{$fields[$i]->Comment}</a>";
+									}else{
+										echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
+									}
 								}else{
 									echo $fields[$i]->Comment;	
 								}
@@ -167,7 +171,7 @@
 						<?php for($j=1;$j<$count;$j++){
 							$field_name = field_.$j;
 						?>
-						<td  width="<?php echo $width;?>%" valign="middle" ><?php echo $list[$i]->$field_name;?></td>
+						<td <?php if($order==$fields[$j]->Field)echo 'class="selected"';?> width="<?php echo $width;?>%" valign="middle" ><?php echo $list[$i]->$field_name;?></td>
 						<?php }?>
 					</tr>
 					<?php }?>
