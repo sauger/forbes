@@ -42,7 +42,7 @@
 		<div id=bread><a href="/survey/">问卷调查</a> > <?php echo $vote->name;?></span>
 		</div>
 		<div id=bread_line></div>
-		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '(已经结束)';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "(还未开始)";else $flag=1;?>
+		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '<div>(已经结束)</div>';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "<div>(还未开始)</div>";else $flag=1;?>
 		<?php if($flag==1){?>
 		<div id="question_div">
 			<form action="survey.post.php" method="post">
