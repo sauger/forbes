@@ -102,7 +102,8 @@
 		<tr class="tr4 head">
 			<td class="td1">榜单头部</td>
 			<td class="list_head">名称： <input type="text" name="list_head[<?php echo $heads[$i]->id?>][name]" value="<?php echo $heads[$i]->name;?>" style="width:200px;"/>起始列： <input type="text" name="list_head[<?php echo $heads[$i]->id;?>][from_field]" value="<?php echo $heads[$i]->from_field;?>" />结束列：<input type="text" name="list_head[<?php echo $heads[$i]->id;?>][end_field]" value="<?php echo $heads[$i]->end_field;?>" />
-				<img alt="删除" title="删除" src="/images/admin/btn_delete.png" style="cursor:pointer;" class="del_head">
+				<img alt="删除" title="删除" src="/images/admin/btn_delete.png" style="cursor:pointer;" class="del_exist_head">
+				<input type="hidden" value="<?php echo $heads[$i]->id;?>" />			
 			</td>
 		</tr>
 		<?php 
@@ -117,7 +118,9 @@
 			<td><?php show_fckeditor('mlist[comment]','Admin',false,"215",$record->comment);?></td>
 		</tr>
 		<tr class="btools">
-			<td colspan="10" align="center"><input id="submit" type="submit" value="保　　　存"> 		<input type="hidden" name="id" id="id"  value="<?php echo $record->id; ?>"></td>
+			<td colspan="10" align="center">
+				<input id="submit" type="submit" value="保　　　存"> 		<input type="hidden" name="id" id="id"  value="<?php echo $record->id; ?>">
+			</td>
 		</tr>
 	</table>
 </div>

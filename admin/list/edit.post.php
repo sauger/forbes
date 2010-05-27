@@ -193,4 +193,10 @@ if(is_array($_POST['list_head'])){
 	}
 }
 
+if(is_array($_POST['del'])){
+	$del_id = implode(',',$_POST['del']);
+	$db = get_db();
+	$db->execute("delete from fb_list_head where id in ({$del_id})");
+}
+
 redirect("index.php");

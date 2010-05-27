@@ -79,4 +79,10 @@ $(function(){
 	$('.del_head').live('click',function(){
 		$(this).parent().parent().remove();
 	});
+	
+	$(".del_exist_head").live('click',function(){
+		$('.btools td:last').append('<input type="hidden" name="del[]" value="' +$(this).parent().find('input:last').val() + '"');
+		$(this).parent().parent().remove();
+		//alert('<input type="hidden" name="del[]" value="' +$(this).parent().find('input:last').val() + '"');
+	});
 });

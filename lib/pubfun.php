@@ -517,4 +517,22 @@ function navigation($name)
 {
 		
 }
+function &read_csv($file,$limit=0)
+{
+	if(!file_exists($file)){
+		return false;
+	}
+	$fhandle = fopen($file,'r');
+	if(!$fhandle) return false;
+	$count = 0;
+	while (!feof($fhandle) ) {
+		$line_of_text = fgetcsv($fhandle);
+		if(!$line_of_text) continue;
+		$result[] = $line_of_text;
+		$count++;
+		if($limit > 0 && $limit <= $count) break;
+	}
+	fclose($fhandle);
+	return $result;
+}
 ?>
