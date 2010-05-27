@@ -52,12 +52,8 @@
 			</td>
 		</tr>
 		<tr class=tr4>
-			<td align="center">投票次数限制：</td>
-			<td align="left"><input type="text" name="vote[max_vote_count]" class="number" value="<?php echo $vote->max_vote_count?>"></td>
-		</tr>
-		<tr class=tr4>
 			<td align="center">投票选项限制：</td>
-			<td><input type="text" class="number"  name="vote[max_item_count]" value="<?php echo $vote->max_item_count;;?>"></td>
+			<td><input type="hidden" name="vote[max_vote_count]" value="0"><input type="text" class="number"  name="vote[max_item_count]" value="<?php echo $vote->max_item_count;;?>"></td>
 		</tr>
 		<?php if(null!=$id){?>
 			<?php for($k=0;$k<$item_count;$k++){?>
