@@ -7,10 +7,35 @@
 	$news = new table_class($tb_news);
 	if($news_id!=0){
 		$news->find($news_id);
+		$old_author = $news->author;
 	}
 	$old_pdf_src = $news->pdf_src;
 	$old_video_photo_src = $news->video_photo_src;
 	$news->update_attributes($_POST['news'],false);
+	if($news->id){
+		$author = $_POST['news']['author'];
+		if($old_author != $author){
+			$db->query("select id from fb_user where (name='{$author}' or nick_name='{$author}') and role_name like 'column_%'");
+			if($db->record_count > 0 ){
+				$news->publisher = $db->field_by_name('id');
+			}
+		}
+	}else{
+		$author = $_POST['news']['author'];
+		if(empty($author)){
+			$author = $_SESSION['admin_nick_name'];
+		}
+		if($_SESSION['admin_nick_name'] != $author){
+			$db->query("select id from fb_user where (name='{$author}' or nick_name='{$author}') and role_name like 'column_%'");
+			if($db->record_count > 0 ){
+				$news->publisher = $db->field_by_name('id');
+			}else{
+				$news->publisher = $_SESSION['admin_user_id'];
+			}
+		}else{
+			$news->publisher = $_SESSION['admin_user_id'];
+		}
+	}
 	$pos = strpos(strtolower($news->content), '<img ');
 	if($pos !== false){
 		$pos_end = strpos(strtolower($news->content), '>',$pos);
@@ -60,10 +85,7 @@
 	$news->title = strtr($news->title,$table_change);
 	$news->short_title = strtr($news->short_title,$table_change);	
 	$news->news_type= 1;
-	if(!$news->publisher)
-		$news->publisher = $_SESSION['admin_user_id'];
-	if(!$news->author) $news->author = $_SESSION['admin_nick_name'];
-	if($news_id == ''){
+	if(!$news->id){
 		//insert news
 		$news->created_at = date("Y-m-d H:i:s");
 		$news->last_edited_at = date("Y-m-d H:i:s");

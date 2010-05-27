@@ -11,7 +11,7 @@ $(function(){
 	ads.each(function(){
 		$(this).load('/ajax/load_ad.php?channel='+channel+ '&banner='+$(this).attr('id'),{url:location.pathname});
 	});
-	$('div.ad_banner').live('click',function(){
+	$('div.ad_banner').live('click',function(e){
 		$.post('/ajax/add_click_ad.php',{'code':$(this).find('input:first').val(),url:location.pathname});
 	});
 	

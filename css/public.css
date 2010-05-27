@@ -3,7 +3,7 @@ p{margin:0; padding:0;}
 ul{margin:0; padding:0;}
 li{margin:0; padding:0;} 
 div{margin:0; padding:0; float:left; display:inline;}
-
+div.ad_banner{position: relative;}
 #top_{width:1000px; margin:0 auto;}
 #top_banner{width:778px; height:90px; margin-top:8px; padding:1px; border:1px solid #cccccc;}
 

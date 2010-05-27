@@ -27,18 +27,15 @@ function generate_ad($ad){
 			$str = "<object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\" width=\"{$size[0]}\" height=\"{$size[1]}\">
 				        <param name=\"movie\" value=\"{$ad->flash}\">
 				        <param name=\"quality\" value=\"high\">
-				        <PARAM NAME=\"WMode\" VALUE=\"Opaque\">
-				        <embed src=\"{$ad->flash}\" quality=\"high\" WMode=\"Opaque\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" width=\"{$size[0]}\" height=\"{$size[1]}\"></embed>
+				        <PARAM NAME=\"WMode\" VALUE=\"transparent\">
+				        <embed src=\"{$ad->flash}\" quality=\"high\" WMode=\"transparent\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" width=\"{$size[0]}\" height=\"{$size[1]}\"></embed>
 				     </object>";
+			$str .= "<a href=\"/ajax/ad_bridge.php?code={$ad->code}\" target='_blank' style=\"left:0; top:0; width:{$size[0]}px; height:{$size[1]}px; border:1px solid; z-index:100; background:#ffffff; filter: alpha(opacity=0);-moz-opacity: 0;opacity: 0;  position:absolute; float:left;\"></a>"; 
 		break;
 		case 'image':
-			if($ad->target_url){
-				$str = "<a href='{$ad->target_url}' target='_blank'>";
-			}
+			$str = "<a href='/ajax/ad_bridge.php?code={$ad->code}' target='_blank'>";
 			$str .= "<img width='{$size[0]}' height='{$size[1]}' border=0 src='{$ad->image}' />";
-			if($ad->target_url){
-				$str .= "</a>";
-			}
+			$str .= "</a>";
 		break;
 		case 'video':
 		;
