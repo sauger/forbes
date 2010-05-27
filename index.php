@@ -396,22 +396,22 @@
 		  	<div class=caption>
 					<div class=captions><a href="/column/" target="_blank">采编空间</a></div>
 			</div>
-				<?php 
-				for($i=0;$i<8;$i++){ $pos_name = "index_jour".$i;?>
+				<?php
+					$sql = "select t1.nick_name,t1.name,t1.image_src,t2.title,t2.created_at,t2.id from fb_user t1 join (select * from fb_news order by created_at desc) t2 on t1.id=t2.publisher where t1.role_name='column_editor' and t1.image_src is not null group by t1.id order by t2.created_at desc limit 8";
+					$reccord = $db->query($sql);
+					$count = $db->record_count;
+					for($i=0;$i<$count;$i++){
+				?>
 					<div class=writer>
-						<div class=writer_pic<?php show_page_pos($pos_name,'index_column2')?>><?php show_page_img(null,null,0,'image1',null,'alias')?></div>
+						<div class=writer_pic><img src="<?php echo $reccord[$i]->image_src;?>"></div>
 						<div class=writer_name>
-							<a href="<?php echo $pos_items->$pos_name->alias;?>" target="_blank">
-								<?php echo $pos_items->$pos_name->display;?>
+							<a href="/column/<?php echo $reccord[$i]->name;?>" target="_blank">
+								<?php echo $reccord[$i]->nick_name;?>
 							</a>	
-						</div>	
-						<?php for($j=0;$j<1;$j++){
-							$pos_name= "index_column_article_{$i}_{$j}";
-						?>
-						<div class="writer_content" <?php show_page_pos($pos_name,'link_withouttime')?>>
-							<?php show_page_href();?>
 						</div>
-						<?php }?>
+						<div class="writer_content">
+							<a title="<?php echo htmlspecialchars($reccord[$i]->title);?>" href="<?php echo static_news_url($reccord[$i])?>"><?php echo $reccord[$i]->title;?></a>
+						</div>
 					</div>
 				<?php } ?>
 		</div>

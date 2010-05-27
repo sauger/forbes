@@ -35,7 +35,7 @@ body {font-size:12px; font-family:SimSun; color:#000000; margin:0 auto; padding:
 #left_content{width:660px; height:500px; margin-top:15px;}
 #title{width:630px; height:20px; margin-top:5px; }
 #title_a{width:7px; height:7px; margin-left:5px; margin-top:5px; background:#999999; }
-#title_b{width:60px; height:20px; margin-left:10px; line-height:20px; color:#444444; font-size:14px; font-weight:bold; }
+#title_b{width:80px; height:20px; margin-left:10px; line-height:20px; color:#444444; font-size:14px; font-weight:bold; }
 #title_num{width:100px; height:20px; margin-left:5px; line-height:20px; font-size:12px; }
 #t_left{width:10px; height:30px; background:url(../images/survey/t_l.jpg) no-repeat; }
 #t_right{width:10px; height:30px; background:url(../images/survey/t_r.jpg) no-repeat; }

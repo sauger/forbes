@@ -1,4 +1,4 @@
-﻿<?php 
+﻿<?php
 	session_start();
 	include_once( dirname(__FILE__) .'/../frame.php');
 	$db = get_db();
