@@ -1,11 +1,11 @@
-﻿<?php 
+<?php
 	session_start();
 	include_once( dirname(__FILE__) .'/../frame.php');
 	$db = get_db();
 	$id = intval($_GET['id']);
 	$_SESSION['survey'.$id] = rand_str(20);
 	if(empty($id)){
-		redirect('/error.html');
+		redirect('/error/');
 		die();
 	}
 	$vote = new table_class("fb_vote");
@@ -39,15 +39,22 @@
 <body>
 	<div id=ibody>
 		<?php include_top();?>
-		<div id=bread><a href="/survey/">问卷调查</a> > <?php echo $vote->name;?></span>
+		<div id=bread><a href="/survey/">问卷调查</a> > <?php echo $vote->name;?>
 		</div>
 		<div id=bread_line></div>
-		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '(已经结束)';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "(还未开始)";else $flag=1;?>
+		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '<div>(已经结束)</div>';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "<div>(还未开始)</div>";else $flag=1;?>
 		<?php if($flag==1){?>
 		<div id="question_div">
 			<form action="survey.post.php" method="post">
-			<?php for($i=0;$i<$count;$i++){?>
-				<div class="survey2_z <?php if($record[$i]->max_item_count>1)echo ' limit_item'?>" <?php if($record[$i]->max_item_count>1)echo "limit=".$record[$i]->max_item_count;?>>
+			<?php 
+				for($i=0;$i<$count;$i++){
+					if($record[$i]->max_item_count=='0'){
+						$limit = $vote->max_item_count;
+					}else{
+						$limit = $record[$i]->max_item_count;
+					}
+			?>
+				<div class="survey2_z <?php if($limit)echo ' limit_item'?>" <?php if($limit)echo "limit=".$limit;?>>
 					<div class="s2_top">
 						<div class="top_lpg"></div>
 							<div class="top_pg">
@@ -74,7 +81,7 @@
 			<div id="s2_submit"><input type="submit" value="提交"></div>
 			<input type="hidden" name="verify" value="<?php echo$_SESSION['survey'.$id];?>">
 			<input type="hidden" name="vote_id" value="<?php echo $id;?>">
-			</from>
+			</form>
 		</div>
 		<?php }?>
 		<div id="right_inc">
@@ -86,4 +93,4 @@
 		<?php include_bottom();?>
 	</div>
 </body>
-<html>
+</html>

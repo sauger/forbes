@@ -1,17 +1,33 @@
 $(function(){
-	var num = 0;
 	$(".limit_item input[type=checkbox]").click(function(e){
-		e.preventDefault();
+		var num = 0;
 		var limit = $(this).parent().parent().parent().parent().attr('limit');
-		$(this).parent().find("input[type=checkbox]").each(function(){
+		$(this).parent().parent().parent().find("input[type=checkbox]").each(function(){
 			if($(this).attr("checked")){
 				num++;
-				alert($(this).attr("checked"));
-				alert(num);
-			}
-			if(num==limit){
-				alert('abc');
 			}
 		});
+		if(num>limit){
+			e.preventDefault();
+			alert('只能选择'+limit+'个选项');
+		}
+	});
+	
+	$("input[type=submit]").click(function(){
+		var all = true;
+		var type = $(".s2_c_radio input").attr('type');
+		$(".s2_content").each(function(){
+			var flag = false;
+			$(this).find("input[type="+type+"]").each(function(){
+				if($(this).attr("checked")){
+					flag = true;
+				}
+			});
+			if(!flag) all = false;
+		});
+		if(!all){
+			alert('请将调查表填写完全!');
+			return false;
+		}
 	});
 });

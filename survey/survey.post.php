@@ -18,7 +18,7 @@
 	}else{
 		$record->source = $_SERVER['REMOTE_ADDR'];
 	}
-	$record->vote_id = $_POST['vote_id'];
+	$record->vote_id = intval($_POST['vote_id']);
 	$record->created_at = now();
 	$record->save();
 	
