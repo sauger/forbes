@@ -21,6 +21,7 @@ $banner_id = $db->field_by_name('id');
 $ads = $db->query("select a.*,b.ad_size from forbes_ad.fb_ad a left join forbes_ad.fb_banner b on a.banner_id = b.id where is_adopt=1 and channel_id={$channel_id} and banner_id={$banner_id} and (start_date=0 or start_date is null or start_date < now()) and (end_date is null or end_date=0 or end_date > now())");
 if ($db->record_count <= 0) die();
 function generate_ad($ad){
+	$ad->code = urlencode($ad->code);
 	$size = explode('*',$ad->ad_size);
 	switch ($ad->ad_type) {
 		case 'flash':
