@@ -213,7 +213,7 @@ function update_column2($type,$limit,$position_name,$news_limit,$news_position,$
 		$pos_name = $position_name.$k;
 		$column = $db->query("select t2.id,t2.name from fb_page_pos t1 join fb_user t2 on t1.alias=t2.name where t1.name='{$pos_name}' ");
 		if($db->record_count==1){
-			$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src from fb_news where publisher={$column[0]->id} order by created_at desc limit {$news_limit}";
+			$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src from fb_news where publisher={$column[0]->id} and is_adopt=1 order by created_at desc limit {$news_limit}";
 			$news = $db->query($sql);
 			$news_count = $db->record_count;
 		}else{

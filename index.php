@@ -397,7 +397,7 @@
 					<div class=captions><a href="/column/" target="_blank">采编空间</a></div>
 			</div>
 				<?php
-					$sql = "select t1.nick_name,t1.name,t1.image_src3,t2.title,t2.created_at,t2.id from fb_user t1 join (select * from fb_news order by created_at desc) t2 on t1.id=t2.publisher where t1.role_name='column_editor' and t1.image_src3 is not null group by t1.id order by t2.created_at desc limit 8";
+					$sql = "select t1.nick_name,t1.name,t1.image_src3,t2.title,t2.created_at,t2.id from fb_user t1 join (select * from fb_news where is_adopt order by created_at desc) t2 on t1.id=t2.publisher where t1.role_name='column_editor' and t1.image_src3 is not null group by t1.id order by t2.created_at desc limit 8";
 					$reccord = $db->query($sql);
 					$count = $db->record_count;
 					for($i=0;$i<$count;$i++){

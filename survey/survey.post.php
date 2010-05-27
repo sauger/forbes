@@ -28,7 +28,10 @@
 	#var_dump($_POST);
 	#die();
 	$vote = new table_class('fb_vote');
-	
+	$vote->find($id);
+	if($vote->max_vote_count){
+		
+	}
 	
 	$record = new table_class("fb_survey_record");
 	if(isset($_SESSION['user_id'])){
