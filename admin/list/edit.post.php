@@ -174,4 +174,23 @@ if($id){
 	}
 }
 
+//handle the list head
+
+if(is_array($_POST['new_head'])){
+	foreach ($_POST['new_head'] as $val){
+		$head = new table_class('fb_list_head');
+		$head->update_attributes($val,false);
+		$head->list_id = $list_type->id;
+		$head->save();
+	}
+}
+
+if(is_array($_POST['list_head'])){
+	foreach ($_POST['list_head'] as $key => $val){
+		$head = new table_class('fb_list_head');
+		$head->find($key);
+		$head->update_attributes($val);
+	}
+}
+
 redirect("index.php");

@@ -83,7 +83,7 @@ table{width:1026px; border:none; text-align:center; background:#e7e7e7;}
 #pos_table table{width:737px; border:none; text-align:center; background:#e7e7e7;}
 #pos_table table textarea{width:300px; height:65px;}
 
-
+td.list_head input{float:none;width:50px;} 
 
 
 
@@ -108,3 +108,4 @@ label.error{color:red;}
 .hidden_input{width:1px; height:1px; font-size:0px; line-height:0px; }
 
 */
+

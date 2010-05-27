@@ -2,6 +2,7 @@
  * @author loong
  */
 var field_index = 0;
+var head_index = 0;
 function toggle_list_type(){
 	var list_type = $('#list_type').val();
 	if(list_type == "1"){
@@ -59,5 +60,23 @@ $(function(){
 			+'</td>'
 			+'</tr>';
 		$('tr.tr4:last').after(str);
+	});
+	
+	$('#add_head').click(function(){
+		head_index = head_index + 1;
+		var str = '<tr class="tr4 head">'
+				+ '<td class="td1">榜单头部</td>'
+				+ '<td class="list_head">名称： <input type="text" name="new_head['+head_index+'][name]" style="width:200px;"/>起始列： <input type="text" name="new_head['+head_index+'][from_field]" />结束列：<input type="text" name="new_head['+head_index+'][end_field]" />'
+				+ '<img alt="删除" title="删除" src="/images/admin/btn_delete.png" style="cursor:pointer;" class="del_head">'
+				+ '</td></tr>';
+		if($('.head').length > 0){
+			$('.head:last').after(str);
+		}else{
+			$('#head_tool').after(str);
+		}
+	});
+	
+	$('.del_head').live('click',function(){
+		$(this).parent().parent().remove();
 	});
 });

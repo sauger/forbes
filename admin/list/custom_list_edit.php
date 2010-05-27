@@ -89,6 +89,26 @@
 			<td class=td1>财富单位</td>
 			<td><select name="mlist[unit]" style="width:155px;"><option value="亿人民币">亿人民币</option><option value="亿美元"<?php if($record->unit == '亿美元') echo " selected='selected'"?> >亿美元</option></select></td>
 		</tr>
+		<tr class="tr4" id="head_tool">
+			<td class="td1">榜单头部</td>
+			<td><span style="cursor:pointer;margin-left:5px;line-height:30px;" id="add_head" <?php if($record->list_type != 1) echo "style='display:none;'"?> title="添加一项"><img src="/images/admin/btn_add.png" border=0></span></td>
+		</tr>
+		<?php 
+		if($id){
+			$heads = $db->query("select * from fb_list_head where list_id = {$id}");	
+			$head_count = $heads ? count($heads) : 0;
+			for($i=0; $i< $head_count; $i++){
+		?>
+		<tr class="tr4 head">
+			<td class="td1">榜单头部</td>
+			<td class="list_head">名称： <input type="text" name="list_head[<?php echo $heads[$i]->id?>][name]" value="<?php echo $heads[$i]->name;?>" style="width:200px;"/>起始列： <input type="text" name="list_head[<?php echo $heads[$i]->id;?>][from_field]" value="<?php echo $heads[$i]->from_field;?>" />结束列：<input type="text" name="list_head[<?php echo $heads[$i]->id;?>][end_field]" value="<?php echo $heads[$i]->end_field;?>" />
+				<img alt="删除" title="删除" src="/images/admin/btn_delete.png" style="cursor:pointer;" class="del_head">
+			</td>
+		</tr>
+		<?php 
+			}
+		}
+		?>
 		<?php if($record->list_type==1){
 			include_once '_custom_list_edit.php';
 		}?>
