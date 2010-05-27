@@ -128,7 +128,7 @@
 							<a href="http://www.forbeschina.com/column/expert" target="_blank" class=more></a>
 						</div>
 						<?php
-							for($i=0;$i<10;$i++){
+							for($i=0;$i<15;$i++){
 								$pos_name = 'column_edit_b_t2_'.$i;
 						?>
 						<div class=t2 <? show_page_pos($pos_name,'column_author_ntime'); ?>>
@@ -219,7 +219,7 @@
 							<a href="http://www.forbeschina.com/column/journalist" target="_blank" class=more></a>
 						</div>
 						<?php
-							for($i=0;$i<10;$i++){
+							for($i=0;$i<15;$i++){
 								$pos_name = 'column_list_'.$i;
 						?>
 						<div class=t2 <?php show_page_pos($pos_name,'column_author_ntime') ?>>
