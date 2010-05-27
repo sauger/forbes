@@ -2,8 +2,8 @@
 include_once "../frame.php";
 $ref = $_SERVER['HTTP_REFERER']; 
 if(strpos($ref,$site_domain) !== 0){
-	//die(1);
-	die_error();
+	die($ref."|".$site_domain);
+	//die_error();
 }
 $target_url = $_GET['target_url'];
 $code = $_GET['code'];
