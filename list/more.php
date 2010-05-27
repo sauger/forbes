@@ -14,6 +14,7 @@
 	{
 		die();
 	}
+	$description = $list->comment;
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <head>
@@ -35,7 +36,6 @@
 		<div id=bread_line></div>
 		<div id="list_list_content" style="width:1000px;">
 			<div id="list_title2"><?php echo $list->name;?></div>
-			<div id="list_desc2"><?php echo $list->comment;?></div>
 			<?php
 				if($list->table_name=="fb_famous_list_items"){
 			?>
@@ -126,6 +126,23 @@
 				</table>
 			<?php }else{?>
 				<table border="0" cellspacing="1" >
+					<?php
+						$head = $db->query("select * from fb_list_head where list_id=$id");
+						if($db->record_count){
+							$count = $db->record_count;
+					?>
+					<tr id="head_tr">
+						<?php if($head[0]->from_field>1){?>
+						<td colspan="<?php echo $head[0]->from_field-1;?>"></td>
+						<?php }?>
+						<?php for($i=0;$i<$count;$i++){?>
+						<td class="td2"  colspan="<?php echo $head[$i]->end_field-$head[$i]->from_field+1;?>"><?php echo $head[$i]->name?></td>
+						<?php if($i<$count-1&&$head[$i]->end_field!=($head[$i+1]->from_field-1)){?>
+						<td colspan="<?php echo $head[$i+1]->from_field-$head[$i]->end_field-1;?>"></td>
+						<?php }?>
+						<?php }?>
+					</tr>
+					<?php }?>
 					<tr id="list_top_tr">
 							<?php 
 								$fields = $db->query("show full fields FROM {$list->table_name}");
@@ -141,7 +158,7 @@
 									}else{
 										$url = "more.php?id={$id}&order={$fields[$i]->Field}&desc={$desc1}";
 									}
-									if($order==$fields[$i]->Field){
+									if($order==$fields[$i]->Field||(empty($order)&&$i==1)){
 										echo "<a style='color:#000; font-weight:bold;' href='{$url}'>{$fields[$i]->Comment}</a>";
 									}else{
 										echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
@@ -171,13 +188,14 @@
 						<?php for($j=1;$j<$count;$j++){
 							$field_name = field_.$j;
 						?>
-						<td <?php if($order==$fields[$j]->Field)echo 'class="selected"';?> width="<?php echo $width;?>%" valign="middle" ><?php echo $list[$i]->$field_name;?></td>
+						<td <?php if($order==$fields[$j]->Field||($order=='id'&&$j==1))echo 'class="selected"';?> width="<?php echo $width;?>%" valign="middle" ><?php echo $list[$i]->$field_name;?></td>
 						<?php }?>
 					</tr>
 					<?php }?>
 				</table>
 			<?php }?>
 			</div>
+			<div id="list_desc2"><?php echo $description;?></div>
 			<div id="more_paginate">
 				<?php paginate();?>
 			</div>

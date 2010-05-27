@@ -29,7 +29,8 @@
 		if($list->tablename="")
 		{
 			die();
-		}		
+		}
+		$description = $list->comment;
 	?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <head>
@@ -51,7 +52,6 @@
 		<div id=bread_line></div>
 		<div id="list_left">
 			<div id="list_title"><?php echo $list->name;?></div>
-			<div id="list_desc"><?php echo $list->comment;?></div>
 			<div id="list_left_top">
 				<?php if($page_type=='static'){?>
 				<a href="/list/<?php echo $id?>/more">查看详细</a>
@@ -146,33 +146,50 @@
 				</table>
 			<?php }else{?>
 				<table cellspacing="1" cellpadding="2" border="0" width="100%">
+					<?php
+						$head = $db->query("select * from fb_list_head where list_id=$id");
+						if($db->record_count){
+							$count = $db->record_count;
+					?>
+					<tr id="head_tr">
+						<?php if($head[0]->from_field>1){?>
+						<td colspan="<?php echo $head[0]->from_field-1;?>"></td>
+						<?php }?>
+						<?php for($i=0;$i<$count;$i++){?>
+						<td class="td2"  colspan="<?php echo $head[$i]->end_field-$head[$i]->from_field+1;?>"><?php echo $head[$i]->name?></td>
+						<?php if($i<$count-1&&$head[$i]->end_field!=($head[$i+1]->from_field-1)){?>
+						<td colspan="<?php echo $head[$i+1]->from_field-$head[$i]->end_field-1;?>"></td>
+						<?php }?>
+						<?php }?>
+					</tr>
+					<?php }?>
 					<tr id="list_top_tr">
-							<?php 
-								$fields = $db->query("show full fields FROM {$list->table_name}");
-								$count = $db->record_count;
-								if($count>8)$count=8;
-								$width = 100/$count;
-								for($i=1;$i<$count;$i++){
-							?>
+						<?php 
+							$fields = $db->query("show full fields FROM {$list->table_name}");
+							$count = $db->record_count;
+							if($count>8)$count=8;
+							$width = 100/$count;
+							for($i=1;$i<$count;$i++){
+						?>
 						<td width="<?php echo $width;?>%" valign="middle">
-								<?php if($fields[$i]->Key=='MUL'){
-									$desc1 = ($order==$fields[$i]->Field)?!$desc:'1';
-									if($page_type=='static'){
-										$url = "/list/{$id}/{$fields[$i]->Field}/{$desc1}";
-									}else{
-										$url = "show_list.php?id={$id}&order={$fields[$i]->Field}&desc={$desc1}";
-									}
-									if($order==$fields[$i]->Field||(empty($order)&&$i==1)){
-										echo "<a style='color:#000; font-weight:bold;' href='{$url}'>{$fields[$i]->Comment}</a>";
-									}else{
-										echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
-									}
+							<?php if($fields[$i]->Key=='MUL'){
+								$desc1 = ($order==$fields[$i]->Field)?!$desc:'1';
+								if($page_type=='static'){
+									$url = "/list/{$id}/{$fields[$i]->Field}/{$desc1}";
 								}else{
-									echo $fields[$i]->Comment;	
+									$url = "show_list.php?id={$id}&order={$fields[$i]->Field}&desc={$desc1}";
 								}
-								?>
+								if($order==$fields[$i]->Field||(empty($order)&&$i==1)){
+									echo "<a style='color:#000; font-weight:bold;' href='{$url}'>{$fields[$i]->Comment}</a>";
+								}else{
+									echo "<a href='{$url}'>{$fields[$i]->Comment}</a>";
+								}
+							}else{
+								echo $fields[$i]->Comment;	
+							}
+							?>
 						</td>
-							<?php }?>
+						<?php }?>
 					</tr>
 					<?php
 						if(empty($order)){
@@ -199,6 +216,7 @@
 				</table>
 			<?php }?>
 			</div>
+			<div id="list_desc"><?php echo $description;?></div>
 			<div id="list_paginate">
 				<?php paginate();?>
 			</div>
