@@ -185,7 +185,7 @@
 				<div id=column_btnl style="background:none; cursor:auto;"></div>
 				<div id="column_box" >
 				<?php 
-					for($i=0;$i<8;$i++){ 
+					for($i=0;$i<9;$i++){ 
 						$pos_name = "index_author".$i;
 				?>
 					<div class=content <?php show_page_pos($pos_name,'index_column');?> name="<?php echo 'author'.$i;?>">

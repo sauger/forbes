@@ -209,7 +209,6 @@ function update_column($type,$limit,$position_name,$news_limit='',$news_position
 
 function update_column2($type,$limit,$position_name,$news_limit,$news_position,$flag=true){
 	$db = get_db();
-	
 	for($k=0;$k<$limit;$k++){
 		$pos_name = $position_name.$k;
 		$column = $db->query("select t2.id,t2.name from fb_page_pos t1 join fb_user t2 on t1.alias=t2.name where t1.name='{$pos_name}' ");
