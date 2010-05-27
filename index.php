@@ -199,7 +199,7 @@
 				<div id=column_btnr></div>
 				
 				<?php 
-					for($i=0;$i<8;$i++){
+					for($i=0;$i<9;$i++){
 				?>
 				<div name="<?php echo 'author'.$i;?>" <?php if($i==0){?>style="display:inline"<?php }?> class="cloumn_news_box">
 					<div class=list1>
