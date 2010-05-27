@@ -15,9 +15,10 @@ $(function(){
 	
 	$("input[type=submit]").click(function(){
 		var all = true;
+		var type = $(".s2_c_radio input").attr('type');
 		$(".s2_content").each(function(){
 			var flag = false;
-			$(this).find("input[type=checkbox]").each(function(){
+			$(this).find("input[type="+type+"]").each(function(){
 				if($(this).attr("checked")){
 					flag = true;
 				}
