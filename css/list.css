@@ -70,6 +70,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #list_top_tr a{color:#003399; text-decoration:none;}
 #list_top_tr a:visited{color:#6699CC;}
 #list_top_tr a:hover{text-decoration:underline;}
+#head_tr{height:13px;}
+#head_tr td{border:0; height:13px; line-height:13px; font-size:12px;}
+#head_tr .td2{border-left:1px solid #CCCCCC; border-right:1px solid #CCCCCC;}
 
 .list_btr td{text-align:center; word-break:break-all; word-wrap:break-word; font-size:12px; line-height:16px;}
 .list_btr a{color:#000000; text-decoration:none;}
