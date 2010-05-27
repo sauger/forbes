@@ -65,7 +65,7 @@
 				
 				switch($record[$i]->limit_type) {
 					case "user_id":
-						$limit_name = "工号登录";
+						$limit_name = "会员登录";
 						break;
 					case "ip":
 						$limit_name = "IP控制";

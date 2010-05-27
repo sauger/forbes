@@ -61,9 +61,9 @@
 			<td align="center">控制方式：</td>
 			<td align="left">
 				<select id=select_limit_type name="vote[limit_type]">
-					<option value="user_id">工号登录</option>
-					<option value="ip">IP控制</option>
 					<option value="no_limit">不设限制</option>
+					<option value="user_id">会员登录</option>
+					<option value="ip">IP控制</option>
 				</select>
 			</td>
 		</tr>
