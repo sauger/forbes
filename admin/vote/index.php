@@ -110,6 +110,10 @@
 </html>
 <script>
 	$(".del_vote").click(function(){
+		if(!window.confirm("确定要删除吗"))
+		{
+			return false;
+		}
 		$.post('vote.post.php',{'post_type':'del','del_id':$(this).attr('name')});
 		$(this).parent().parent().remove();
 	});
