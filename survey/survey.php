@@ -86,7 +86,6 @@
 			<div id="s2_submit"><input type="submit" value="提交"></div>
 			<input type="hidden" name="verify" value="<?php echo$_SESSION['survey'.$id];?>">
 			<input type="hidden" name="vote_id" value="<?php echo $id;?>">
-			<input type="hidden" name="vote_limit" value="<?php echo $vote->max_vote_count;?>">
 			</form>
 		</div>
 		<?php }?>

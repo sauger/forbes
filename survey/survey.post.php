@@ -15,23 +15,28 @@
 		if(!is_numeric($k)){
 			redirect('/error/');
 			die();
-		}
-		if(isset($_POST[$k])){
+		}else{
 			foreach($_POST[$k] as $v){
+				if(!is_numeric($v)){
+					redirect('/error/');
+					die();
+				}
 			}
 		}
 	}
 	
-	
 	#var_dump($_POST);
 	#die();
+	$vote = new table_class('fb_vote');
+	
+	
 	$record = new table_class("fb_survey_record");
 	if(isset($_SESSION['user_id'])){
 		$record->source = $_SESSION['user_id'];
 	}else{
 		$record->source = $_SERVER['REMOTE_ADDR'];
 	}
-	$record->vote_id = intval($_POST['vote_id']);
+	$record->vote_id = $id;
 	$record->created_at = now();
 	$record->save();
 	
