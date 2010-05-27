@@ -25,6 +25,7 @@
 		if(empty($author)){
 			$author = $_SESSION['admin_nick_name'];
 		}
+		$news->author = $author;
 		if($_SESSION['admin_nick_name'] != $author){
 			$db->query("select id from fb_user where (name='{$author}' or nick_name='{$author}') and role_name like 'column_%'");
 			if($db->record_count > 0 ){
