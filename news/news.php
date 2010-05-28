@@ -113,7 +113,7 @@
 								<div id=info_resource><?php echo $news->top_info;?></div>
 						<?php }
 							if($news->author!='' && $news->author != '福布斯中文网'){
-								$record = $db->query("select id,created_at,short_title,title from fb_news where author='{$news->author}' and title!='{$title}' group by title limit 3");
+								$record = $db->query("select id,created_at,short_title,title from fb_news where author='{$news->author}' and is_adopt=1 and title!='{$title}' group by title limit 3");
 								if(count($record)>0){
 						?>
 						<div class=info_title style="margin-top:15px;">该作者其他文章</div>
@@ -142,7 +142,7 @@
 										$inds[]=$val->industry_id;
 									}
 									$inds = implode(',',$inds);
-									$ind_news = $db->query("select news_id,b.id,title,created_at,short_title from fb_news_industry a left join fb_news b on a.news_id=b.id where industry_id in ($inds) and news_id != {$news->id} limit " .($related_max - $related_count));
+									$ind_news = $db->query("select news_id,b.id,title,created_at,short_title from fb_news_industry a left join fb_news b on a.news_id=b.id where is_adopt=1 and industry_id in ($inds) and news_id != {$news->id} limit " .($related_max - $related_count));
 									if ($db->record_count > 0 ){
 										$related_count += $db->record_count;
 										$record = array_merge($record,$ind_news);
@@ -150,7 +150,7 @@
 								}
 							}
 							if($related_count<$related_max){
-								$ind_news = $db->query("select id,title,created_at,short_title from fb_news where category_id ={$news->category_id} order by rand()  limit " .($related_max - $related_count));
+								$ind_news = $db->query("select id,title,created_at,short_title from fb_news where is_adopt=1 and category_id ={$news->category_id} order by rand()  limit " .($related_max - $related_count));
 								if ($db->record_count > 0 ){
 									$related_count += $db->record_count;
 									$record = array_merge($record,$ind_news);
