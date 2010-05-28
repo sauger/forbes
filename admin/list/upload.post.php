@@ -1,16 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-	<meta http-equiv=Content-Language content=zh-CN>
-	<title></title>
-</head>
 <?php
     include_once('../../frame.php');
-	include_once('../../inc/reader.php');
 	$db = get_db();
 	
+	//选择插入数据的表
 	$id = intval($_POST['list_id']);
+	unset($_POST['list_id']);
 	$table = $db->query("select * from fb_custom_list_type where id=$id");
 	if($db->record_count==1){
 		$table_name = $table[0]->table_name;
@@ -18,146 +12,114 @@
 		alert("error id");
 		die();
 	}
+	$list = new table_class($table_name);
+	$fields = $list->fields;
 	
-	
-	
+	//处理上传CSV文件
 	$upload = new upload_file_class();
 	$upload->save_dir = "/upload/xls/";
 	$xls = $upload->handle('xls');
 	$file = ROOT_DIR.'upload/xls/'.$xls;
+	$lines = read_csv($file);
+	unlink($file);
+	unset($lines[0]);
 	
-	$data = new Spreadsheet_Excel_Reader();
-    $data->setOutputEncoding('utf-8');
-    $data->read($file);
-	
-	
+	//初始化信息
 	$success = 0;
 	$fail = 0;
 	$fail_info = array();
-
+	$fail_id = 0;
+	$fail_id_info = array();
+	$sql_array = array();
+	$db = get_db();
 	
+	//富豪名人榜处理
 	if($table_name=='fb_rich_list_items'||$table_name=='fb_famous_list_items'){
-		if($table_name=='fb_rich_list_items'){
+		if($table_name=='fb_rich_list_items'){//富豪
 			$list_name = "fb_rich";
-			$item_name = "rich_id";
-			$index = 7;
-		}else{
+			$id_name = "rich_id";
+		}else{//名人
 			$list_name = "fb_mr";
-			$item_name = "famous_id";
-			$index = 1;
+			$id_name = "famous_id";
 		}
-		$fail_id = 0;
-		$fail_id_info = array();
-		$table_fields = $db->query("show full fields FROM $table_name where Comment not like '%id%'");
-		for ($i = 2; $i <= $data->sheets[0]['numRows']; $i++) {
+		foreach($lines as $line){
 			$name = array();
 			$value = array();
 			$set = array();
-			$full_set = array();
-			for($j=1;$j<count($table_fields);$j++){
-				if($_POST[$table_fields[$j]->Field]!=''){
-					array_push($name,$table_fields[$j]->Field);
-					array_push($value,"'{$data->sheets[0]['cells'][$i][$_POST[$table_fields[$j]->Field]]}'");
-					if($table_fields[$j]->Key!='UNI'){
-						array_push($set,"{$table_fields[$j]->Field}='{$data->sheets[0]['cells'][$i][$_POST[$table_fields[$j]->Field]]}'");
+			foreach($_POST as $k => $v){
+				if($v){
+					$val = addslashes($line[$v-1]);
+					array_push($value,"'$val'");
+					array_push($name,$k);
+					if($fields[$k]->Key!='UNI'){
+						array_push($set,"{$k}='{$val}'");
 					}
 				}
 			}
-			$name = implode(",", $name);
-			$value = implode(",", $value);
-			$name .= ",list_id";
-			$value .= ",".$id;
-			
-			$pos_name = $data->sheets[0]['cells'][$i][$_POST[$table_fields[$index]->Field]];
+			//加入榜单ID
+			array_push($value,$id);
+			array_push($name,'list_id');
+			//加入人物关联
+			$pos_name = $line[$_POST['name']-1];
 			$pos_id = $db->query("select id from $list_name where name='$pos_name'");
 			if($db->record_count==1){
-				$name .= ",".$item_name;
-				$value .= ",".$pos_id[0]->id;
+				array_push($value,$pos_id[0]->id);
+				array_push($name,$id_name);
+				$value = implode(",",$value);
 			}else{
-				$str = $data->sheets[0]['cells'][$i][$_POST[$table_fields[1]->Field]];
-				for($j=2;$j<count($table_fields);$j++){
-					$str .=",".$data->sheets[0]['cells'][$i][$_POST[$table_fields[$j]->Field]];
-				}
-				array_push($fail_id_info,$str);
+				$value = implode(",",$value);
+				array_push($fail_id_info,$value);
 				$fail_id++;
 			}
-			
+			$name = implode(",",$name);
+			$sql = "insert into {$table_name} ({$name}) values ({$value})";
 			if(!empty($set)){
-				$set = implode(" , ", $set);
-				$sql = "insert into {$table_name} ({$name}) values ({$value}) ON DUPLICATE KEY update {$set}";
-			}else{
-				$sql = "insert into {$table_name} ({$name}) values ({$value})";
+				$set = implode(",", $set);
+				$sql .= " ON DUPLICATE KEY update {$set}";
 			}
-			if($db->execute($sql)){
-				$success++;
-			}else{
-				$str = $data->sheets[0]['cells'][$i][$_POST[$table_fields[1]->Field]];
-				for($j=2;$j<count($table_fields);$j++){
-					$str .=",".$data->sheets[0]['cells'][$i][$_POST[$table_fields[$j]->Field]];
-				}
-				array_push($fail_info,$str);
-				$fail++;
-			}
+			array_push($sql_array,$sql);
 		}
-	}else{
-		
-		for ($i = 2; $i <= $data->sheets[0]['numRows']; $i++) {
-			$company = new table_class($table_name);
-			foreach($_POST as $k => $v){
-				$company->$k = addslashes($data->sheets[0]['cells'][$i][$v]);
-			}
-			if($company->save()){
-				$success++;
-			}else{
-				$fail++;
-				$str = "";
-				foreach($company->fields as $key => $val){
-					$str .= $val->value ." ";
-				}
-				array_push($fail_info,$str);
-			}
-		}
-		/*
-		$table_fields = $db->query("show full fields FROM $table_name");
-		for ($i = 2; $i <= $data->sheets[0]['numRows']; $i++) {
+	}else{//常规榜单处理
+		foreach($lines as $line){
 			$name = array();
 			$value = array();
 			$set = array();
-			$full_set = array();
-			for($j=1;$j<count($table_fields);$j++){
-				if($_POST[$table_fields[$j]->Field]!=''){
-					array_push($name,$table_fields[$j]->Field);
-					array_push($value,"'{$data->sheets[0]['cells'][$i][$_POST[$table_fields[$j]->Field]]}'");
-					if($table_fields[$j]->Key!='UNI'){
-						array_push($set,"{$table_fields[$j]->Field}='{$data->sheets[0]['cells'][$i][$_POST[$table_fields[$j]->Field]]}'");
+			foreach($_POST as $k => $v){
+				if($v){
+					$val = addslashes($line[$v-1]);
+					array_push($value,"'$val'");
+					array_push($name,$k);
+					if($fields[$k]->Key!='UNI'){
+						array_push($set,"{$k}='{$val}'");
 					}
 				}
 			}
 			$name = implode(",", $name);
 			$value = implode(",", $value);
+			$sql = "insert into {$table_name} ({$name}) values ({$value})";
 			if(!empty($set)){
-				$set = implode(" , ", $set);
-				$sql = "insert into {$table_name} ({$name}) values ({$value}) ON DUPLICATE KEY update {$set}";
-			}else{
-				$sql = "insert into {$table_name} ({$name}) values ({$value})";
+				$set = implode(",", $set);
+				$sql .= " ON DUPLICATE KEY update {$set}";
 			}
-			if($db->execute($sql)){
-				$success++;
-			}else{
-				$str = $data->sheets[0]['cells'][$i][$_POST[$table_fields[1]->Field]];
-				for($j=2;$j<count($table_fields);$j++){
-					$str .=",".$data->sheets[0]['cells'][$i][$_POST[$table_fields[$j]->Field]];
-				}
-				array_push($fail_info,$str);
-				$fail++;
-			}
+			array_push($sql_array,$sql);
 		}
-		*/
 	}
 
 	
 	
-	$count = $data->sheets[0]['numRows']-1;
+	//执行SQL语句
+	foreach($sql_array as $sql){
+		if($db->execute($sql)){
+			$success++;
+		}else{
+			$fail++;
+			array_push($fail_info,$value);
+		}
+	}
+	close_db();
+	
+	//错误提示
+	$count = count($lines);
 	echo "共处理XLS数据{$count}条<br/>";
 	echo "成功{$success}条<br/>";
 	echo "失败{$fail}条<br/>";
@@ -172,9 +134,5 @@
 			}
 		}
 	}
-	unlink($file);
-	//alert("数据导入成功");
-	//redirect("/admin/data_upload/",'js');
 ?>
 <a href="index.php">返回</a>
-</html>
