@@ -146,23 +146,6 @@
 				</table>
 			<?php }else{?>
 				<table cellspacing="1" cellpadding="2" border="0" width="100%">
-					<?php
-						$head = $db->query("select * from fb_list_head where list_id=$id");
-						if($db->record_count){
-							$count = $db->record_count;
-					?>
-					<tr id="head_tr">
-						<?php if($head[0]->from_field>1){?>
-						<td colspan="<?php echo $head[0]->from_field-1;?>"></td>
-						<?php }?>
-						<?php for($i=0;$i<$count;$i++){?>
-						<td class="td2"  colspan="<?php echo $head[$i]->end_field-$head[$i]->from_field+1;?>"><?php echo $head[$i]->name?></td>
-						<?php if($i<$count-1&&$head[$i]->end_field!=($head[$i+1]->from_field-1)){?>
-						<td colspan="<?php echo $head[$i+1]->from_field-$head[$i]->end_field-1;?>"></td>
-						<?php }?>
-						<?php }?>
-					</tr>
-					<?php }?>
 					<tr id="list_top_tr">
 						<?php 
 							$fields = $db->query("show full fields FROM {$list->table_name}");
@@ -209,7 +192,7 @@
 						<?php for($j=1;$j<$count;$j++){
 							$field_name = field_.$j;
 						?>
-						<td <?php if($order==$fields[$j]->Field||($order=='id'&&$j==1))echo 'class="selected"';?> width="<?php echo $width;?>%" valign="middle" ><?php echo $list[$i]->$field_name;?></td>
+						<td <?php if($order==$fields[$j]->Field||($order=='id'&&$j==1))echo 'class="selected"';?> width="<?php echo $width;?>%" valign="middle" ><?php if($list[$i]->$field_name=='')echo '&nbsp;';else echo $list[$i]->$field_name;?></td>
 						<?php }?>
 					</tr>
 					<?php }?>
