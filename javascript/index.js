@@ -29,7 +29,7 @@ function head_line2()
 	  if(is_changed=="1")
 	  {
 	  	is_changed=0;
-			setTimeout("head_line2()",5000);
+			setTimeout("head_line2()",6000);
 	  	return false;
 	  }
 		var now_id=headline_id;	
@@ -52,8 +52,8 @@ function head_line2()
 		$("#headline_related_"+now_id).show();		
 		
 		headline_id=now_id;
-		setTimeout("head_line2()",7000);
-}		
+		setTimeout("head_line2()",6000);
+}
 
 $(function(){
 		max_headline_id = $('.headline_btn').length - 1;
