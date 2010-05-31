@@ -5,8 +5,8 @@ var max_headline_id = 3;
 
 function head_line(now_id)
 {
-		$(".headline_btn2").css('background','url(/images/index/slideshow_unactive.gif) no-repeat');
-		$("#b"+now_id).css('background','url(/images/index/slideshow_active.gif) no-repeat');
+		$(".headline_btn").css('background','url(/images/index/roll2.gif) no-repeat');
+		$("#b"+now_id).css('background','url(/images/index/roll1.gif) no-repeat');
 		
 		$(".headline_pic").hide();
 		$("#headline_pic_"+now_id).show();
@@ -36,8 +36,8 @@ function head_line2()
 		now_id=parseInt(headline_id)+1;
     if(now_id>max_headline_id){now_id=0;}
 
-		$(".headline_btn2").css('background','url(/images/index/slideshow_unactive.gif) no-repeat');
-		$("#b"+now_id).css('background','url(/images/index/slideshow_active.gif) no-repeat');
+		$(".headline_btn").css('background','url(/images/index/roll2.gif) no-repeat');
+		$("#b"+now_id).css('background','url(/images/index/roll1.gif) no-repeat');
 	
 		$(".headline_pic").hide();
 		$("#headline_pic_"+now_id).show();
@@ -56,7 +56,7 @@ function head_line2()
 }		
 
 $(function(){
-		max_headline_id = $('.headline_btn2').length - 1;
+		max_headline_id = $('.headline_btn').length - 1;
 		$('#forbes_trt').find('div.title').hover(function(){
 			$('#forbes_trt').find('div.title').removeClass('selected');
 			$(this).addClass('selected');
@@ -64,12 +64,13 @@ $(function(){
 			$('.rt_tab').hide();
 			$('#rt_tab' + index).show();
 		});
-		$(".headline_btn2").click(function()
+		$(".headline_btn").click(function()
 		{
 			var now_id=$(this).attr('param');	
 			head_line(now_id);
 		});
 	
+	/*
 		$(".headline_btn1").click(function()
 		{
 			var now_id=$(this).attr('param');	
@@ -80,7 +81,7 @@ $(function(){
 
 			head_line(now_id);
 		});	
-		
+	*/
 		
 		$("#subject_btnl").click(function()
 		{

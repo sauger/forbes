@@ -29,7 +29,7 @@
   		<div id=headline>
   				<?php $pos_name = "index_hl_0";?>
 				<div class=headline_pic id=headline_pic_0><?php show_page_img(300,200,0)?></div>
-				<?php for($i=1;$i<4;$i++){
+				<?php for($i=1;$i<5;$i++){
 					$pos_name = "index_hl_{$i}";
 				?>
 				<div class=headline_pic id="headline_pic_<?php echo $i;?>" style="display:none;"><?php show_page_img(300,200,0)?></div>
@@ -39,12 +39,13 @@
 					<div class=headline_title id=headline_title_1 style="display:none;" <?php $pos_name ="index_hl_1"; show_page_pos($pos_name,'base_img_withoutime')?>><?php show_page_href();?></div>
 					<div class=headline_title id=headline_title_2 style="display:none;" <?php $pos_name ="index_hl_2"; show_page_pos($pos_name,'base_img_withoutime')?>><?php show_page_href();?></div>
 					<div class=headline_title id=headline_title_3 style="display:none;" <?php $pos_name ="index_hl_3"; show_page_pos($pos_name,'base_img_withoutime')?>><?php show_page_href();?></div>
+					<div class=headline_title id=headline_title_4 style="display:none;" <?php $pos_name ="index_hl_4"; show_page_pos($pos_name,'base_img_withoutime')?>><?php show_page_href();?></div>
 					<div class=headline_description id=headline_description_0><?php echo $pos_items->index_hl_0->description; ?></div>
 					<div class=headline_description id=headline_description_1 style="display:none;"><?php echo $pos_items->index_hl_1->description; ?></div>
 					<div class=headline_description id=headline_description_2 style="display:none;"><?php echo $pos_items->index_hl_2->description; ?></div>
 					<div class=headline_description id=headline_description_3 style="display:none;"><?php echo $pos_items->index_hl_3->description; ?></div>
-					  
-			    <?php for($j=0;$j<4;$j++){?>
+					<div class=headline_description id=headline_description_4 style="display:none;"><?php echo $pos_items->index_hl_4->description; ?></div>
+			    <?php for($j=0;$j<5;$j++){?>
 					<div class=headline_related id=headline_related_<?php echo $j?> <?php if($j<>0){echo "style='display:none'";}?> >
 					<?php				
 							for($i=0;$i<2;$i++)
@@ -58,12 +59,11 @@
 				  <? }?>	
 	
 					<div id=btn>
-						<div class=headline_btn1 id=l param=l style="background:url(/images/index/slideshow_back.gif) no-repeat;"></div>
-						<div class=headline_btn2 id=b0 param=0 style="background:url(/images/index/slideshow_active.gif) no-repeat"></div>
-						<div class=headline_btn2 id=b1 param=1 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
-						<div class=headline_btn2 id=b2 param=2 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
-						<div class=headline_btn2 id=b3 param=3 style="background:url(/images/index/slideshow_unactive.gif) no-repeat"></div>
-						<div class=headline_btn1 id=r param=r  style="background:url(/images/index/slideshow_next.gif) no-repeat"></div>
+						<div class=headline_btn id=b0 param=0 style="background:url(/images/index/roll1.gif) no-repeat">1</div>
+						<div class=headline_btn id=b1 param=1>2</div>
+						<div class=headline_btn id=b2 param=2>3</div>
+						<div class=headline_btn id=b3 param=3>4</div>
+						<div class=headline_btn id=b4 param=4>5</div>
 					</div>
 				</div>
 			</div>
