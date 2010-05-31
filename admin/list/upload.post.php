@@ -43,7 +43,6 @@
 			$id_name = "famous_id";
 		}
 		foreach($lines as $line){
-			var_dump($line);
 			$name = array();
 			$value = array();
 			$set = array();
@@ -82,6 +81,7 @@
 		}
 	}else{//常规榜单处理
 		foreach($lines as $line){
+			var_dump($line);
 			$name = array();
 			$value = array();
 			$set = array();
@@ -106,7 +106,7 @@
 		}
 	}
 
-	
+	die();
 	//执行SQL语句
 	foreach($sql_array as $sql){
 		if($db->execute($sql)){
