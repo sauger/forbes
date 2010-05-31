@@ -21,7 +21,6 @@
 	$xls = $upload->handle('xls');
 	$file = ROOT_DIR.'upload/xls/'.$xls;
 	$lines = read_csv($file);
-	var_dump($lines);
 	unlink($file);
 	unset($lines[0]);
 	
@@ -106,7 +105,6 @@
 		}
 	}
 
-	die();
 	//执行SQL语句
 	foreach($sql_array as $sql){
 		if($db->execute($sql)){
