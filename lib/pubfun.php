@@ -534,7 +534,7 @@ function &read_csv($file,$limit=0,$out_charset='utf-8')
 	}
 	foreach ($result as &$line){
 		foreach ($line as &$v){
-			$v = iconv('gbk',$out_charset,$v);
+			#$v = iconv('gbk',$out_charset,$v);
 		}
 	}
 	fclose($fhandle);
