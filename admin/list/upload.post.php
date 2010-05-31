@@ -21,6 +21,7 @@
 	$xls = $upload->handle('xls');
 	$file = ROOT_DIR.'upload/xls/'.$xls;
 	$lines = read_csv($file);
+	var_dump($lines);
 	unlink($file);
 	unset($lines[0]);
 	
@@ -81,7 +82,6 @@
 		}
 	}else{//常规榜单处理
 		foreach($lines as $line){
-			var_dump($line);
 			$name = array();
 			$value = array();
 			$set = array();
