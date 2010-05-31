@@ -109,7 +109,6 @@
 	
 	//执行SQL语句
 	foreach($sql_array as $sql){
-		echo $sql;
 		if($db->execute($sql)){
 			$success++;
 		}else{
