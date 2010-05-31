@@ -25,7 +25,7 @@
 	<form id="data_upload" enctype="multipart/form-data" action="upload.post.php" method="post">
 		<table cellspacing="1"  align="center">	 
 			<tr class="tr4 add">
-				<td class=td1 width="15%">上传XLS</td>
+				<td class=td1 width="15%">上传CSV</td>
 				<td width="85%">
 					<input type="file" name="xls">
 				</td>

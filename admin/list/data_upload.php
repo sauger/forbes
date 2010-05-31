@@ -37,7 +37,7 @@
 	<table cellspacing=1 border="0">
 
 		<tr class="tr4 add">
-			<td width="30%" class=td1>上传XLS</td>
+			<td width="30%" class=td1>上传CSV</td>
 			<td width="70">
 				<input type="file" name="xls">
 			</td>
