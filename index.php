@@ -125,7 +125,7 @@
 					<?php for($i=0;$i<3;$i++){
 						$pos_name = "index_dyn_list{$i}"; 
 						?>
-						<div class="bottom_list<?php show_page_pos($pos_name,'link_withouttime');?>"><?php show_page_href()?></div>
+						<div class="bottom_list"<?php show_page_pos($pos_name,'link_withouttime');?>><?php show_page_href()?></div>
 					<?php } ?>
 				</div>
 			</div>
@@ -371,7 +371,7 @@
 
 				<div class=inventory_content>
 					<?php $pos_name = "index_survey_0"?>
-					<div class="inventory_title<?php show_page_pos($pos_name,'survey')?>"><?php show_page_href();?></div>
+					<div class="inventory_title"<?php show_page_pos($pos_name,'survey')?>><?php show_page_href();?></div>
 					<div class=inventory_list>
 						<?php show_page_desc(null,null);?>
 					</div>
@@ -379,7 +379,7 @@
 					<div class=inventory_dash></div>
 
 					<?php $pos_name = "index_survey_1"?>
-					<div class="inventory_title<?php show_page_pos($pos_name,'survey')?>"><?php show_page_href();?></div>
+					<div class="inventory_title"<?php show_page_pos($pos_name,'survey')?>><?php show_page_href();?></div>
 					<div class=inventory_list>
 						<?php show_page_desc(null,null);?>
 					</div>
