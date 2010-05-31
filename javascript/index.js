@@ -69,20 +69,8 @@ $(function(){
 			var now_id=$(this).attr('param');	
 			head_line(now_id);
 		});
-	
-	/*
-		$(".headline_btn1").click(function()
-		{
-			var now_id=$(this).attr('param');	
-			if(now_id=="l"){now_id=parseInt(headline_id)-1;}
-			else{now_id=parseInt(headline_id)+1;}
- 	    if(now_id>max_headline_id){now_id=0;}
- 	    if(now_id<0){now_id=max_headline_id;}
-
-			head_line(now_id);
-		});	
-	*/
 		
+	
 		$("#subject_btnl").click(function()
 		{
 			

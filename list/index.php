@@ -18,7 +18,7 @@
 	<meta name="description" content="<?php echo $seo[0]->description ?>" />
 	<?php
 		use_jquery();
-		js_include_tag('public','index','right');
+		js_include_tag('public','list','right');
 		css_include_tag('list','public','right_inc');
 		init_page_items();
 	?>
