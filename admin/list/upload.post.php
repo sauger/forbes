@@ -86,7 +86,7 @@
 			$set = array();
 			foreach($_POST as $k => $v){
 				if($v){
-					$val = addslashes($line[$v-1]);
+					$val = trim(addslashes($line[$v-1]));
 					array_push($value,"'$val'");
 					array_push($name,$k);
 					if($fields[$k]->Key!='UNI'){
@@ -106,9 +106,9 @@
 	}
 
 	
-	
 	//执行SQL语句
 	foreach($sql_array as $sql){
+		echo $sql;
 		if($db->execute($sql)){
 			$success++;
 		}else{
