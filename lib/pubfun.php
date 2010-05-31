@@ -522,6 +522,7 @@ function &read_csv($file,$limit=0,$out_charset='utf-8')
 	if(!file_exists($file)){
 		return false;
 	}
+	setlocale(LC_ALL, 'zh_CN.gbk'); 
 	$fhandle = fopen($file,'r');
 	if(!$fhandle) return false;
 	$count = 0;
@@ -532,11 +533,13 @@ function &read_csv($file,$limit=0,$out_charset='utf-8')
 		$count++;
 		if($limit > 0 && $limit <= $count) break;
 	}
+	
 	foreach ($result as &$line){
 		foreach ($line as &$v){
 			$v = iconv('gbk',$out_charset,$v);
 		}
 	}
+	
 	fclose($fhandle);
 	return $result;
 }
