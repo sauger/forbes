@@ -119,7 +119,7 @@
   										<td height=15></td>
   									</tr>
   									<tr>
-  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》记者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
+  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》作者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
   									</tr>
   								</table>
   							</td>
@@ -133,7 +133,7 @@
   			<tr><td height=3></td></tr>
   			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
   				<td width=100%  style="font-size:12px; font-family:Arial;">
-  						<?php show_href(); ?>《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
+  						<?php show_href(); ?>《福布斯》作者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
   				</td>
   			</tr>
   			<tr><td height=5></td></tr>
@@ -185,7 +185,7 @@
   										<td height=15></td>
   									</tr>
   									<tr>
-  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》记者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
+  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》作者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
   									</tr>
   								</table>
   							</td>
@@ -199,7 +199,7 @@
   			<tr><td height=3></td></tr>
   			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
   				<td width=100%  style="font-size:12px; font-family:Arial;">
-  						<?php show_href(); ?>《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
+  						<?php show_href(); ?>《福布斯》作者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
   				</td>
   			</tr>
   			<tr><td height=5></td></tr>
@@ -251,7 +251,7 @@
   										<td height=15></td>
   									</tr>
   									<tr>
-  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》记者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
+  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》作者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
   									</tr>
   								</table>
   							</td>
@@ -265,7 +265,7 @@
   			<tr><td height=3></td></tr>
   			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
   				<td width=100%  style="font-size:12px; font-family:Arial;">
-  						<?php show_href(); ?>《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
+  						<?php show_href(); ?>《福布斯》作者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
   				</td>
   			</tr>
   			<tr><td height=5></td></tr>
@@ -317,7 +317,7 @@
   										<td height=15></td>
   									</tr>
   									<tr>
-  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》记者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
+  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》作者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
   									</tr>
   								</table>
   							</td>
@@ -331,7 +331,7 @@
   			<tr><td height=3></td></tr>
   			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
   				<td width=100%  style="font-size:12px; font-family:Arial;">
-  						<?php show_href(); ?>《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
+  						<?php show_href(); ?>《福布斯》作者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
   				</td>
   			</tr>
   			<tr><td height=5></td></tr>
@@ -383,7 +383,7 @@
   										<td height=15></td>
   									</tr>
   									<tr>
-  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》记者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
+  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》作者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
   									</tr>
   								</table>
   							</td>
@@ -397,7 +397,7 @@
   			<tr><td height=3></td></tr>
   			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
   				<td width=100%  style="font-size:12px; font-family:Arial;">
-  						<?php show_href(); ?>《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
+  						<?php show_href(); ?>《福布斯》作者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
   				</td>
   			</tr>
   			<tr><td height=5></td></tr>
@@ -449,7 +449,7 @@
   										<td height=15></td>
   									</tr>
   									<tr>
-  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》记者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
+  										<td width=100% align="right" style="font-size:12px; font-family:Arial;">《福布斯》作者：<?php echo $pos_items->$pos->alias;?><br>发布于：<?php echo $pos_items->$pos->reserve; ?></td>
   									</tr>
   								</table>
   							</td>
@@ -463,7 +463,7 @@
   			<tr><td height=3></td></tr>
   			<tr <?php show_page_pos($pos,'edm_news2'); ?>>
   				<td width=100%  style="font-size:12px; font-family:Arial;">
-  						<?php show_href(); ?>《福布斯》记者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
+  						<?php show_href(); ?>《福布斯》作者：<?php echo $pos_items->$pos->alias; ?> 发布于：<?php echo $pos_items->$pos->reserve; ?>
   				</td>
   			</tr>
   			<tr><td height=5></td></tr>
