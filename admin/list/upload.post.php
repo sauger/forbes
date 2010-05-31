@@ -43,6 +43,7 @@
 			$id_name = "famous_id";
 		}
 		foreach($lines as $line){
+			var_dump($line);
 			$name = array();
 			$value = array();
 			$set = array();
