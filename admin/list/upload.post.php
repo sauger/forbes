@@ -21,6 +21,7 @@
 	$xls = $upload->handle('xls');
 	$file = ROOT_DIR.'upload/xls/'.$xls;
 	$lines = read_csv($file);
+	var_dump($lines);
 	unlink($file);
 	unset($lines[0]);
 	
@@ -86,7 +87,7 @@
 			$set = array();
 			foreach($_POST as $k => $v){
 				if($v){
-					$val = addslashes($line[$v-1]);
+					$val = trim(addslashes($line[$v-1]));
 					array_push($value,"'$val'");
 					array_push($name,$k);
 					if($fields[$k]->Key!='UNI'){
@@ -105,8 +106,7 @@
 		}
 	}
 
-	
-	
+	die();
 	//执行SQL语句
 	foreach($sql_array as $sql){
 		if($db->execute($sql)){
