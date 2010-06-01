@@ -194,11 +194,12 @@
 								$icount =0;
 								for($k=0;$k<$len;$k++){
 									if($icount >=4) break;
-									$key_news = $db->query("select id,title,created_at from fb_news where is_adopt=1 and keywords like '%{$keywords[$k]}%' and id != {$news->id} and copy_from=0 order by created_at desc limit 2");
+									$key_word = addlashes($keywords[$k]);
+									$key_news = $db->query("select id,title,created_at from fb_news where is_adopt=1 and keywords like '%{$key_word}%' and id != {$news->id} and copy_from=0 order by created_at desc limit 2");
 									if ($db->record_count <=0) continue;
 									$icount++;
 							?>
-							<div class=info_title style="margin-top:15px;font-size:12px;">与“<?php echo addlashes($keywords[$k]);?>”相关的文章 <span class="info_more"><a href="<?php echo get_news_serach_url($keywords[$k])?>"><img src="/images/news/more.png" border=0></a></span></div>
+							<div class=info_title style="margin-top:15px;font-size:12px;">与“<?php echo $keywords[$k]?>”相关的文章 <span class="info_more"><a href="<?php echo get_news_serach_url($keywords[$k])?>"><img src="/images/news/more.png" border=0></a></span></div>
 							<div class=info_list>
 								<ul>
 									<?php foreach ($key_news as $val){?>
