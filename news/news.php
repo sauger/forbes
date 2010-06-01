@@ -198,7 +198,7 @@
 									if ($db->record_count <=0) continue;
 									$icount++;
 							?>
-							<div class=info_title style="margin-top:15px;font-size:12px;">与“<?php echo$keywords[$k]?>”相关的文章 <span class="info_more"><a href="<?php echo get_news_serach_url($keywords[$k])?>"><img src="/images/news/more.png" border=0></a></span></div>
+							<div class=info_title style="margin-top:15px;font-size:12px;">与“<?php echo addlashes($keywords[$k]);?>”相关的文章 <span class="info_more"><a href="<?php echo get_news_serach_url($keywords[$k])?>"><img src="/images/news/more.png" border=0></a></span></div>
 							<div class=info_list>
 								<ul>
 									<?php foreach ($key_news as $val){?>
