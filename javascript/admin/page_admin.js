@@ -21,4 +21,23 @@ $(function(){
 		});
 	});
 	
+	$("#headline").hover(function(){
+		var top =  parseInt($(this).offset().top);
+		var right =  $(this).offset().left;
+		var str = "<div id='head_line_priroty' pri_tag='headline' style='z-index: 100; position: absolute;left:" +right +"px;top:" +top+"px;' title='编辑头条优先级'><img style='cursor: pointer;width:16px;height:16px;' width=16 height=16 src='/images/admin/btn_edit.png' ></div>";
+		$(this).append(str);
+	},function(){
+		$("#head_line_priroty").remove();
+	});
+	
+	$("#head_line_priroty").live('click',function(e){
+		e.preventDefault();
+		var $this = $(this);
+		parent.$.fn.colorbox({
+			href: '/admin/position/priority.php?type=' + $($this).parent().attr('headline') ,
+			width:'840px',
+			height: '1200px',
+			iframe: true
+		});
+	});
 });

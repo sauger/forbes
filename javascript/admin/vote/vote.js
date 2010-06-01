@@ -18,10 +18,16 @@ $(function() {
 		});
 		//日历框函数
 		
+		$("#add_file").click(function(){
+			$(".btools").before("<tr class='tr4 s_file'><td align='center'>资料上传：</td><td><input name='vote_fils[]' type='file'><a class='del_file' style='cursor:pointer;' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a></td></tr>");
+		});
 		
+		$(".del_file").live('click',function(){
+			$(this).parent().parent().remove();
+		});
 		
 		$("#add_item").click(function(){
-			$(".btools").before("<tr class='tr4 s_item'><td align='center'>投票项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='"+empty+"' style='display:"+display+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a></td></tr>");
+			$("#file").before("<tr class='tr4 s_item'><td align='center'>调查表项目：</td><td><input type='text' name='vote_item[title][]' class='required'>&nbsp;<input name='vote_item[]' type='file' class='"+empty+"' style='display:"+display+";'><a class='del_item' style='cursor:pointer;' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a></td></tr>");
 		});
 		//添加一个投票项目
 		/*

@@ -24,6 +24,42 @@
 			}
 			$vote->photo_url = "/upload/images/" .$img;
 		}//如果投票上传图片，做处理
+		$files = array();
+		$upload = new upload_file_class();
+		$upload->save_dir = '/upload/vote/';
+		$result = $upload->handle('old_fils');
+		$count = count($result);
+		foreach($result as $k => $v){
+			if($v["result"]){
+				array_push($files,$v["name"]);
+			}else{
+				if($v["reason"]==1){
+					alert('上传文件太大，请重新上传！');
+					redirect($_SERVER['HTTP_REFERER']);
+					die();
+				}elseif($v["reason"]==4){
+					array_push($files,$_POST['old_fils_info'][$k]);
+				}
+			}
+		}
+		$upload = new upload_file_class();
+		$upload->save_dir = '/upload/vote/';
+		$result = $upload->handle('vote_fils');
+		foreach($result as $k => $v){
+			if($v["result"]){
+				array_push($files,$v["name"]);
+			}else{
+				if($v["reason"]==1){
+					alert('上传文件太大，请重新上传！');
+					redirect($_SERVER['HTTP_REFERER']);
+					die();
+				}
+			}
+		}
+		if($files){
+			$files = implode(',',$files);
+		}
+		$vote->file_url = $files;
 		
 		$vote->update_attributes($_POST['vote'],false);
 		if($_POST['started_at']){

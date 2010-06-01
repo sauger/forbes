@@ -18,7 +18,7 @@
 <?php 
 	css_include_tag('admin','thickbox','jquery_ui');
 	use_jquery_ui();
-	js_include_tag('admin/vote/vote','thickbox');
+	js_include_tag('admin/vote/vote','thickbox','../ckeditor/ckeditor.js');
 	validate_form("vote_form");
 ?>
 </head>
@@ -37,7 +37,7 @@
 		</tr>
 		<tr class=tr4>
 			<td align="center">描述：</td>
-			<td align="left"><textarea cols=70 name="vote[description]"><?php echo $vote->description;?></textarea></td>
+			<td align="left"><?php show_fckeditor('vote[description]','Admin',false,"120",$vote->description);?></td>
 		</tr>
 		<tr class=tr4>
 			<td align="center">添加图片：</td>
@@ -127,6 +127,31 @@
 			</tr>
 			<?php }?>
 		<?php }?>
+		<tr class="tr4" id="file">
+			<td align="center">资料上传：</td>
+			<td align="left">
+			<input type="file" name="vote_fils[]">
+			<a id="add_file" style="cursor:pointer;" title="继续添加"><img src="/images/admin/btn_add.png" border="0"></a>
+			</td>
+		</tr>
+		<?php
+			if($vote->file_url){
+				$files = explode(',',$vote->file_url);
+			}
+			foreach($files as $k){
+		?>
+		<tr class="tr4">
+			<td align="center">资料上传：</td>
+			<td align="left">
+			<input type="file" name="old_fils[]">
+			<a class='del_file' style='cursor:pointer;' title='删除'><img src='/images/admin/btn_delete.png' border='0'></a>
+			<a href="<?php echo $k;?>" target="_blank">点击下载</a>
+			<input type="hidden" name="old_fils_info[]" value="<?php echo $k;?>">
+			</td>
+		</tr>
+		<?php 
+			}
+		?>
 		<tr class=btools>
 			<td colspan="10" align="center"><input id="submit" type="submit" value="发布调查表"></td>
 			<input type="hidden" name="vote[is_sub_vote]" value="0">
