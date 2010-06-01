@@ -7,6 +7,7 @@
 		$db->execute("delete from fb_vote_item where vote_id=$id");
 		$db->execute("delete from fb_vote where id=$id");
 	}else{
+		
 		$vote = new table_class('fb_vote');
 		if($_POST['vote_id']!=''){
 			$vote->find($_POST['vote_id']);
@@ -31,14 +32,14 @@
 		$count = count($result);
 		foreach($result as $k => $v){
 			if($v["result"]){
-				array_push($files,$v["name"]);
+				array_push($files,'/upload/vote/'.$v["name"]);
 			}else{
 				if($v["reason"]==1){
 					alert('上传文件太大，请重新上传！');
 					redirect($_SERVER['HTTP_REFERER']);
 					die();
 				}elseif($v["reason"]==4){
-					array_push($files,$_POST['old_fils_info'][$k]);
+					array_push($files,'/upload/vote/'.$_POST['old_fils_info'][$k]);
 				}
 			}
 		}
@@ -47,7 +48,7 @@
 		$result = $upload->handle('vote_fils');
 		foreach($result as $k => $v){
 			if($v["result"]){
-				array_push($files,$v["name"]);
+				array_push($files,'/upload/vote/'.$v["name"]);
 			}else{
 				if($v["reason"]==1){
 					alert('上传文件太大，请重新上传！');
