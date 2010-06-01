@@ -194,7 +194,7 @@
 								$icount =0;
 								for($k=0;$k<$len;$k++){
 									if($icount >=4) break;
-									$key_word = addlashes($keywords[$k]);
+									$key_word = addslashes($keywords[$k]);
 									$key_news = $db->query("select id,title,created_at from fb_news where is_adopt=1 and keywords like '%{$key_word}%' and id != {$news->id} and copy_from=0 order by created_at desc limit 2");
 									if ($db->record_count <=0) continue;
 									$icount++;
