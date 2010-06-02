@@ -20,7 +20,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>新闻检索_福布斯中文网</title>
+	<title><?php echo $key;?>_新闻检索_福布斯中文网</title>
 	<?php
 		use_jquery();
 		js_include_tag('public','right','search/news_highlight.js');

@@ -21,22 +21,25 @@ $(function(){
 		});
 	});
 	
-	$("#headline").hover(function(){
-		var top =  parseInt($(this).offset().top);
+	$(".edit_pri").hover(function(){
+		var top =  parseInt($(this).offset().top)+20;
 		var right =  $(this).offset().left;
-		var str = "<div id='head_line_priroty' pri_tag='headline' style='z-index: 100; position: absolute;left:" +right +"px;top:" +top+"px;' title='编辑头条优先级'><img style='cursor: pointer;width:16px;height:16px;' width=16 height=16 src='/images/admin/btn_edit.png' ></div>";
-		$(this).append(str);
+		var str = "<div id='edit_priority' style='z-index: 100; position: absolute;left:" +right +"px;top:" +top+"px;' title='编辑显示优先级'><img style='cursor: pointer;width:30px;height:30px;' width=30 height=30 src='/images/admin/priority.png' ></div>";
+		//$(this).append(str);
 	},function(){
-		$("#head_line_priroty").remove();
+		//$("#edit_priority").remove();
 	});
 	
-	$("#head_line_priroty").live('click',function(e){
+	$("#edit_priority").live('click',function(e){
 		e.preventDefault();
-		var $this = $(this);
+		var type = $(this).parent().attr('id');
+		var cwidth= '900px';
+		var cheight = '1200px';
+		if(type!='headline'){cwidth='970px'; cheight='700px';}
 		parent.$.fn.colorbox({
-			href: '/admin/position/priority.php?type=' + $($this).parent().attr('headline') ,
-			width:'840px',
-			height: '1200px',
+			href: '/admin/position/priority.php?type=' + type,
+			width:cwidth,
+			height: cheight,
 			iframe: true
 		});
 	});
