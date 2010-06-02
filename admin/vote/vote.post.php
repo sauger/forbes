@@ -41,7 +41,7 @@
 						redirect($_SERVER['HTTP_REFERER']);
 						die();
 					}elseif($v["reason"]==4){
-						array_push($files,'/upload/vote/'.$_POST['old_fils_info'][$k]);
+						array_push($files,$_POST['old_fils_info'][$k]);
 					}
 				}
 			}

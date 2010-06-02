@@ -33,7 +33,7 @@
 <body>
 	<div id=ibody>
 		<div id=icaption>
-		    <div id=title><?php echo $vote->name;?></div>
+		    <div id=title style="font-size:20px;overflow:hidden"><?php echo $vote->name;?></div>
 			  <a href="result.php" id=btn_back></a>
 		</div>
 		<div id="question_div2">
@@ -46,14 +46,12 @@
 			?>
 				<div class="survey2_z2">
 					<div class="s2_top2">
-						<div class="top_lpg"></div>
-							<div class="top_pg2">
-								<div class="title_pic"><img src="/images/survey/top2_redio.jpg"></div>
-								<div class="s2_title">
-									<?php echo $record[$i]->name;?>
-								</div>
+						<div class="top_pg2">
+							<div class="title_pic"><img src="/images/survey/top2_redio.jpg"></div>
+							<div class="s2_title2">
+								<?php echo $record[$i]->name;?>
 							</div>
-						<div class="top_rpg"></div>
+						</div>
 					</div>
 					<div class="s2_content">
 						<input type="hidden" name="record_id[]" value="<?php echo $record[$i]->id;?>">
@@ -62,6 +60,7 @@
 						?>
 							<div class="s2_c2">
 								<div class="s2_c_content2">
+									<div style="width:50px;">
 									<?php
 										$flag = 0;
 										for($k=0;$k<count($result);$k++){
@@ -71,8 +70,7 @@
 											}
 										}
 										if($flag==0)echo '0';
-									?>%　　
-									<?php echo $item[$j]->title;?></div>
+									?>%</div><div style="width:800px;"><?php echo $item[$j]->title;?></div></div>
 							</div>
 						<?php }}?>
 					</div>

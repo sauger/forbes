@@ -47,9 +47,19 @@
 		<div id=bread><a href="/survey/">问卷调查</a> > <?php echo $vote->name;?>
 		</div>
 		<div id=bread_line></div>
-		<?php if(now()>$vote->ended_at&&$vote->ended_at!='')echo '<div>(已经结束)</div>';elseif(now()<$vote->started_at&&$vote->started_at!='')echo "<div>(还未开始)</div>";else $flag=1;?>
-		<?php if($flag==1){?>
 		<div id="question_div">
+			<div id="desc">
+				<?php 
+					if(now()>$vote->ended_at&&$vote->ended_at!='')echo '(已经结束)';
+					elseif(now()<$vote->started_at&&$vote->started_at!='')echo "(还未开始)";
+					else {
+						$flag=1;
+						echo $vote->description;
+				?>
+				
+				<?php }?>
+			</div>
+			<?php if($flag==1){?>
 			<form action="survey.post.php" method="post">
 			<?php 
 				for($i=0;$i<$count;$i++){
@@ -61,14 +71,12 @@
 			?>
 				<div class="survey2_z <?php if($limit)echo ' limit_item'?>" <?php if($limit)echo "limit=".$limit;?>>
 					<div class="s2_top">
-						<div class="top_lpg"></div>
-							<div class="top_pg">
-								<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
-								<div class="s2_title">
-									<?php echo $record[$i]->name;?>
-								</div>
+						<div class="top_pg">
+							<div class="title_pic"><img src="../images/survey/top2_redio.jpg"></div>
+							<div class="s2_title">
+								<?php echo $record[$i]->name;?>
 							</div>
-						<div class="top_rpg"></div>
+						</div>
 					</div>
 					<div class="s2_content">
 						<input type="hidden" name="record_id[]" value="<?php echo $record[$i]->id;?>">
@@ -87,8 +95,20 @@
 			<input type="hidden" name="verify" value="<?php echo$_SESSION['survey'.$id];?>">
 			<input type="hidden" name="vote_id" value="<?php echo $id;?>">
 			</form>
+			<?php
+				if($vote->file_url){
+					$file = explode(',',$vote->file_url);
+			?>
+				<div id="files">
+					资料下载：<?php foreach($file as $k => $v){?>
+					资料<?php echo $k+1?>:<a href="<?php echo $v;?>" target="_blank">点击下载</a>　
+					<?php }?>
+				</div>
+			<?php
+				}
+			?>
+			<?php }?>
 		</div>
-		<?php }?>
 		<div id="right_inc">
 		 	<?php include_right("ad")?>
 			<?php include_right("favor")?>

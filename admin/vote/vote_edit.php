@@ -16,7 +16,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title></title>
 <?php 
-	css_include_tag('admin','thickbox','jquery_ui');
+	css_include_tag('admin2','thickbox','jquery_ui');
 	use_jquery_ui();
 	js_include_tag('admin/vote/vote','thickbox','../ckeditor/ckeditor.js');
 	validate_form("vote_form");
