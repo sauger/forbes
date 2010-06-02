@@ -28,21 +28,25 @@
 		$files = array();
 		$upload = new upload_file_class();
 		$upload->save_dir = '/upload/vote/';
-		$result = $upload->handle('old_fils');
-		$count = count($result);
-		foreach($result as $k => $v){
-			if($v["result"]){
-				array_push($files,'/upload/vote/'.$v["name"]);
-			}else{
-				if($v["reason"]==1){
-					alert('上传文件太大，请重新上传！');
-					redirect($_SERVER['HTTP_REFERER']);
-					die();
-				}elseif($v["reason"]==4){
-					array_push($files,'/upload/vote/'.$_POST['old_fils_info'][$k]);
+		if($_FILES['old_fils']){
+			$result = $upload->handle('old_fils');
+		}
+		if($result){
+			foreach($result as $k => $v){
+				if($v["result"]){
+					array_push($files,'/upload/vote/'.$v["name"]);
+				}else{
+					if($v["reason"]==1){
+						alert('上传文件太大，请重新上传！');
+						redirect($_SERVER['HTTP_REFERER']);
+						die();
+					}elseif($v["reason"]==4){
+						array_push($files,'/upload/vote/'.$_POST['old_fils_info'][$k]);
+					}
 				}
 			}
 		}
+		
 		$upload = new upload_file_class();
 		$upload->save_dir = '/upload/vote/';
 		$result = $upload->handle('vote_fils');

@@ -49,18 +49,13 @@ $(function() {
 		
 		$("#select_vote_type").change(function(){
 			if($(this).attr('value')=="word_vote"||$(this).attr('value')=="image_vote"){ 
-				$(".del_vote").each(function(){
-					del_vote($(this).attr('name'));
-					$(this).parent().parent().remove();
-				});
-				$(".del_old_vote").each(function(){
-					del_vote($(this).attr('name'));
-					del_item($(this).prev().prev().val());
-					$(this).parent().parent().remove();
-				});
 				$("#first_item").attr('class','required');
 				$("#single").show();
 				$("#many").hide();
+				$('.s_item').show();
+				$(".sub_vote").hide();
+				$(".del_old_vote").parent().parent().hide();
+				$(".del_old_item").parent().parent().show();
 				if($(this).attr('value')=="image_vote"){
 					$(".item_image").show();
 					display = "inline";
@@ -73,15 +68,14 @@ $(function() {
 					empty = "item_image";
 				}
 			}else{ //如果投票类型是复合投票，则首先将添加过的投票选择都删除，然后将添加子投票的链接显示出来
-				$(".s_item").remove();
-				$(".del_old_item").each(function(){
-					del_item($(this).attr('name'));
-					$(this).parent().parent().remove();
-				});
 				$(".item_image").attr('class','item_image');
 				$("#first_item").attr('class','');
 				$("#single").hide();
 				$("#many").show();
+				$('.s_item').hide();
+				$(".sub_vote").show();
+				$(".del_old_vote").parent().parent().show();
+				$(".del_old_item").parent().parent().hide();
 			}
 		});
 		//当投票类型选择框变化时，通过类型来显示不同的投票项目
@@ -104,6 +98,29 @@ $(function() {
 		$(".del_old_item").click(function(){
 			del_item($(this).attr('name'));
 			$(this).parent().parent().remove();
+		});
+		
+		
+		$("#save").click(function(){
+			if($("#select_vote_type").attr('value')=="word_vote"||$("#select_vote_type").attr('value')=="image_vote"){ 
+				$(".del_vote").each(function(){
+					del_vote($(this).attr('name'));
+					$(this).parent().parent().remove();
+				});
+				$(".del_old_vote").each(function(){
+					del_vote($(this).attr('name'));
+					del_item($(this).prev().prev().val());
+					$(this).parent().parent().remove();
+				});
+			}else{
+				$(".s_item").remove();
+				$(".del_old_item").each(function(){
+					del_item($(this).attr('name'));
+					$(this).parent().parent().remove();
+				});
+			}
+			
+			$("#vote_form").submit();
 		});
 });
 

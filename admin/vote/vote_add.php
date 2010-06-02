@@ -101,7 +101,7 @@
 			</td>
 		</tr>
 		<tr class=btools>
-			<td colspan="10" align="center"><input id="submit" type="submit" value="发布调查表"><input type="hidden" name="vote[is_sub_vote]" value="0"></td>
+			<td colspan="10" align="center"><input id="save" type="button" value="发布调查表"><input type="hidden" name="vote[is_sub_vote]" value="0"></td>
 		</tr>
  	</table>
 	</div>

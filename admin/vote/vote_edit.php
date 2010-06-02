@@ -109,9 +109,9 @@
 		<tr class=tr4 id="item">
 			<td align="center">调查表项目：</td>
 			<td align="left" id="single" <?php if($vote->vote_type=="more_vote"){?>style="display:none;"<?php }?>>
-				<input type="text" name="vote_item[title][]" style="width:300px" id="first_item">
+				<input type="text" name="vote_item[title][]" style="width:300px">
 				<input type="file" name="vote_item[]" class="item_image" style="display:none;">
-				<a id="add_item" value="1" style="cursor:pointer;" title="继续添加"><img src="/images/admin/btn_add.png" border="0"></a>
+				<a id="add_item" style="cursor:pointer;" title="继续添加"><img src="/images/admin/btn_add.png" border="0"></a>
 			</td>
 			<td align="left" <?php if($vote->vote_type!="more_vote"){?>style="display:none;"<?php }?> id="many">
 					<a  href="vote_add.ajax.php?KeepThis=true&TB_iframe=true&height=600&width=560" class="thickbox" id="add_sub_vote" title="添加子调查表"><img src="/images/admin/btn_add.png" border="0"></a>
@@ -137,7 +137,6 @@
 		<?php
 			if($vote->file_url){
 				$files = explode(',',$vote->file_url);
-			}
 			foreach($files as $k){
 		?>
 		<tr class="tr4">
@@ -150,12 +149,14 @@
 			</td>
 		</tr>
 		<?php 
-			}
+			}}
 		?>
 		<tr class=btools>
-			<td colspan="10" align="center"><input id="submit" type="submit" value="发布调查表"></td>
-			<input type="hidden" name="vote[is_sub_vote]" value="0">
-			<input type="hidden" name="vote_id" value="<?php echo $id;?>">
+			<td colspan="10" align="center">
+				<input id="save" type="button" value="发布调查表">
+				<input type="hidden" name="vote[is_sub_vote]" value="0">
+				<input type="hidden" name="vote_id" value="<?php echo $id;?>">
+			</td>
 		</tr>
  	</table>
 	</div>
