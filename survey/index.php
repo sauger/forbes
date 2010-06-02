@@ -37,7 +37,7 @@
 			?>
 				<div class="content">
 					<div class="c_c">
-						<div class="c_title"><a href="survey.php?id=<?php echo $value[$i]->id;?>"><?php echo $value[$i]->name;?></a></div><div class="time">发布于：<?php echo $value[$i]->created_at ?></div>
+						<div class="c_title"><a href="/survey/<?php echo $value[$i]->id;?>"><?php echo $value[$i]->name;?></a></div><div class="time">发布于：<?php echo $value[$i]->created_at ?></div>
 					</div>
 					<div class="c_bottom"><?php echo $value[$i]->description?></div>
 				</div>
