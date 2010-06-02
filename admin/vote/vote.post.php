@@ -63,8 +63,12 @@
 		}
 		if($files){
 			$files = implode(',',$files);
+			$vote->file_url = $files;
+		}else{
+			$vote->file_url = '';
 		}
-		$vote->file_url = $files;
+		
+		
 		
 		$vote->update_attributes($_POST['vote'],false);
 		if($_POST['started_at']){
