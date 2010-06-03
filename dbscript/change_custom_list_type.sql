@@ -1,0 +1,1 @@
+update fb_custom_list_type set use_pos=1 where list_type in (1,2,3)

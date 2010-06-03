@@ -7,7 +7,7 @@ if($id){
 	$list_type->find($id);	
 }
 $list_type->update_attributes($_POST['mlist'],false);
-$list_type->table_name = 'fb_picture_list_items';
+$list_type->table_name = 'fb_file_list_items';
 if($_FILES['image_src']['name'] != ''){
 		$upload = new upload_file_class();
 		$upload->save_dir = '/upload/news/';
