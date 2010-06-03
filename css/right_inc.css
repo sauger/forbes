@@ -108,3 +108,11 @@ ul{list-style:none; padding:0; margin:0;}
 #right_inc .context1{width:290px; height:16px; line-height:16px; margin-left:13px; color:#999999;}
 #right_inc .context1 a{color:#999999; text-decoration:none;}
 #right_inc .context1 a:hover{ text-decoration:underline;}
+
+#right_inc .plist_box{width:80px; height:125px; margin:12px;}
+#right_inc .plist_pic img{width:80px; height:80px;}
+#right_inc .piist_title{width:80px; height:40px; margin-top:5px; line-height:20px; overflow:hidden; font-size:13px;}
+#right_inc .piist_title a{color:#333333; text-decoration:none;}
+#right_inc .plist_line{width:280px; height:25px; line-height:25px; overflow:hidden; font-size:13px; padding-left:15px;}
+#right_inc .plist_line a{color:#003899; text-decoration:none;}
+
