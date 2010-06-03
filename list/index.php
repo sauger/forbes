@@ -94,7 +94,7 @@
 			<div class=caption>
 					<div class=captions>常规榜单</div>
 					<div class=line>|</div>
-					<a href="#" class=more target="_blank"></a>
+					<a href="/list/more/" class=more target="_blank"></a>
 			</div>
 
 			<div id="normal_list">

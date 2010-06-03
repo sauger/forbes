@@ -103,7 +103,7 @@
 				}
 				else if($bdid<9)
 				{
-					$sql = 'select * from fb_custom_list_type where position="'.$bdid.'" and list_type not in (4,5) order by priority asc,created_at desc';
+					$sql = 'select * from fb_custom_list_type where position="'.$bdid.'" and use_pos=1 order by priority asc,created_at desc';
 					
 				}
 				else if($bdid==9)
