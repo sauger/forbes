@@ -9,7 +9,7 @@
 ?>
 <style type="text/css">
 div{font-size:15px; text-align:center;}
-.top{border-bottom:2px solid #ADD8E6}
+.top{border-bottom:2px solid #ADD8E6; margin-top:30px;}
 .bleft{border-bottom:2px solid #ADD8E6; border-right:2px solid #ADD8E6}
 .bright{border-bottom:2px solid #ADD8E6;}
 </style>

@@ -24,10 +24,10 @@ $(function(){
 	$(".edit_pri").hover(function(){
 		var top =  parseInt($(this).offset().top)+20;
 		var right =  $(this).offset().left;
-		var str = "<div id='edit_priority' style='z-index: 100; position: absolute;left:" +right +"px;top:" +top+"px;' title='编辑显示优先级'><img style='cursor: pointer;width:30px;height:30px;' width=30 height=30 src='/images/admin/priority.png' ></div>";
-		//$(this).append(str);
+		var str = "<div id='edit_priority' style='z-index: 150; position: absolute;left:" +right +"px;top:" +top+"px;' title='编辑显示优先级'><img style='cursor: pointer;width:30px;height:30px;' width=30 height=30 src='/images/admin/priority.png' ></div>";
+		$(this).append(str);
 	},function(){
-		//$("#edit_priority").remove();
+		$("#edit_priority").remove();
 	});
 	
 	$("#edit_priority").live('click',function(e){

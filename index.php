@@ -130,7 +130,6 @@
 				</div>
 			</div>
 		</div>
-		
 	
 		<div class=forbes_l>
 			<div class=caption>
