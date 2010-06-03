@@ -17,7 +17,7 @@ global $pos_name;?>
 		$lists = $db->query("select * from fb_custom_list_type where list_type=4 order by priority asc,created_at desc limit 4");
 		foreach($lists as $list){ 
 	?>
-	<div class="plist_line"><a href=""><?php echo $list->name;?></a></div>
+	<div class="plist_line"><a href="/list/<?php echo $list->id;?>"><?php echo $list->name;?></a></div>
 	<?php }?>
 </div>
 <div class=bottom_line></div>

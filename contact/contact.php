@@ -123,6 +123,7 @@
 					<div class="link">
 						<div class="link_title"><a href="<?php echo $v->link;?>"><?php echo $v->title;?></a></div>
 						<div class="link_img"><a href="<?php echo $v->link;?>"><img src="<?php echo $v->img_url;?>"></a></div>
+						<div class="link_title"><a href="<?php echo $v->link;?>"><?php echo $v->link;?></a>
 					</div>
 					<?php }}?>
 					</div>

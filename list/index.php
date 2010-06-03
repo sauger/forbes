@@ -150,7 +150,7 @@
 		<div id="right_inc" style="margin-top:10px;">
 		  		<?php include_right('ad');?>
 		  		<?php include_right('right_list')?>
-		  		<?php include_right('pic_list');?>
+		  		<?php #include_right('pic_list');?>
 		  		<?php include_right('article');?>
 		 </div>
 		
