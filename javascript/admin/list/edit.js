@@ -85,4 +85,12 @@ $(function(){
 		$(this).parent().parent().remove();
 		//alert('<input type="hidden" name="del[]" value="' +$(this).parent().find('input:last').val() + '"');
 	});
+	
+	$("#use_pos").change(function(){
+		if($(this).attr('checked')){
+			$('#position').show();
+		}else{
+			$('#position').hide();
+		}
+	});
 });

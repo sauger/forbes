@@ -76,7 +76,7 @@
 				
 		?>
 				<tr class=tr3 id=<?php echo $record[$i]->id;?> >
-					<td><?php echo $record[$i]->name;?></td>
+					<td><a href="/survey/survey.php?id=<?php echo $record[$i]->id;?>"><?php echo $record[$i]->name;?></a></td>
 					<td><?php echo $limit_name;?></td>
 					<td><?php if($record[$i]->max_vote_count!=0){echo $record[$i]->max_vote_count;}else{echo "无限制";}?></td>
 					<td><?php echo $vote_name;?></td>

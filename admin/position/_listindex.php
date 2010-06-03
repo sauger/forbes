@@ -41,7 +41,7 @@ function update_list_pos($pos){
 	global $db;
 	$table = new table_class('fb_page_pos');
 	$type = pos_type($pos);
-	$items = $db->query("select name,comment,image_src,id from fb_custom_list_type where position = {$pos} and list_type in (1,2,3) order by created_at desc limit 4");
+	$items = $db->query("select name,comment,image_src,id from fb_custom_list_type where position = {$pos} and use_pos=1 order by created_at desc limit 4");
 	$exist_items = $table->find('all',array('conditions' => "name like 'listindex_{$type}%' and (end_time <= now() or end_time is null)",'order' =>"name"));
 	
 	$len = empty($exist_items)? 0 : count($exist_items);

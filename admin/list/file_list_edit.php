@@ -41,11 +41,32 @@
 				<input type="text" name="mlist[name]" value="<?php echo $record->name;?>" class="required">
 			</td>
 		</tr>
+		<!--
 		<tr class=tr4>
 			<td class=td1>优先级</td><td align="left"><input type="text" name="mlist[priority]"></input></td>
 		</tr>
 		<tr class=tr4>
 			<td class=td1>推荐优先级</td><td  align="left"><input type="text" name="mlist[recommend_priority]"></input></td>
+		</tr>
+		-->
+		<tr class=tr4>
+			<td class=td1>是否使用位置发布</td><td align="left"><input id="use_pos" type="checkbox" <?php if($record->use_pos)echo 'checked="checked"'?> name="use_pos"><label for="use_pos">开启</label></td>
+		</tr>
+		<tr class=tr4 id="position" <?php if(!$record->use_pos){?>style="display:none;"<?php }?>>
+			<td class=td1>榜单位置</td>
+			<td>
+				<select name="mlist[position]" id="list_position" value="<?php echo $record->position;?>" style="width:155px;">
+					<option value="1">富豪</option>
+					<option value="2">投资</option>
+					<option value="3">公司</option>
+					<option value="4">城市</option>
+					<option value="5">人物</option>
+					<option value="6">体育</option>
+					<option value="7">生活</option>
+					<option value="8">教育</option>
+				</select>
+				<script type="text/javascript">$('#list_position').val('<?php echo $record->position;?>');</script>
+			</td>
 		</tr>
 		<tr class=tr4>
 			<td class=td1>榜单图片</td>
