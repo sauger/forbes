@@ -51,6 +51,12 @@
 				<tr class="tr3" id="<?php echo $record[$i]->id;?>">
 					<td><a href="/list/show_list.php?id=<?php echo $record[$i]->id;?>" target="_blank"><?php echo $record[$i]->name;?></a></td>
 					<td>
+						<?php if($record[$i]->is_adopt=="1"){?>
+							<span class="revocation" name="<?php echo $record[$i]->id;?>" title="撤消"><img src="/images/admin/btn_apply.png" border=0></span>
+						<?php }?>
+						<?php if($record[$i]->is_adopt=="0"){?>
+							<span class="publish" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border=0></span>
+						<?php }?>
 						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" title="关联"><img border=0 src="/images/admin/btn_relation.png"></a>
 						<a href="file_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img border=0 src="/images/admin/btn_edit.png"></a>
 						<a href="file_list_items_list.php?id=<?php echo $record[$i]->id;?>" class="edit" title="榜单项管理"><img border=0 src="/images/admin/btn_item.png"></a>

@@ -99,30 +99,30 @@
 				}
 				if($bdid=="")
 				{
-					$sql = 'select * from fb_custom_list_type order by priority asc,created_at desc';
+					$sql = 'select * from fb_custom_list_type where is_adopt=1 order by priority asc,created_at desc';
 				}
 				else if($bdid<9)
 				{
-					$sql = 'select * from fb_custom_list_type where position="'.$bdid.'" and use_pos=1 order by priority asc,created_at desc';
+					$sql = 'select * from fb_custom_list_type where position="'.$bdid.'" and use_pos=1 and is_adopt=1 order by priority asc,created_at desc';
 					
 				}
 				else if($bdid==9)
 				{
-					$sql = 'select * from fb_custom_list_type where list_type=4 order by priority asc,created_at desc';
+					$sql = 'select * from fb_custom_list_type where list_type=4 and is_adopt=1 order by priority asc,created_at desc';
 					
 				}
 				else if($bdid==10)
 				{
-					$sql = 'select * from fb_custom_list_type where list_type=5 order by priority asc,created_at desc';
+					$sql = 'select * from fb_custom_list_type where list_type=5 and is_adopt=1 order by priority asc,created_at desc';
 					
 				}
 				if($year){
 					$bdname = $year."年榜单";
-					$sql = "select * from fb_custom_list_type where created_at>'{$year}-01-01 00:00:00' and created_at<'{$year}-12-31 23:59:59' order by priority asc,created_at desc";
+					$sql = "select * from fb_custom_list_type where created_at>'{$year}-01-01 00:00:00' and created_at<'{$year}-12-31 23:59:59' and is_adopt=1 order by priority asc,created_at desc";
 				}
 				if($key){
 					$bdname = '您搜索的关键字"'.$key.'"榜单';
-					$sql = "select * from fb_custom_list_type where name like '%$key%'";
+					$sql = "select * from fb_custom_list_type where name like '%$key%' and is_adopt=1";
 				}
 				$bd=$db->paginate($sql,10);
 			?>

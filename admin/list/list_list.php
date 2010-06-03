@@ -120,7 +120,7 @@
 <div id=itable>
 	<table cellspacing="1" align="center">
 		<tr class="itable_title">
-			<td width="50%">榜单名称</td><td width="10%">榜单类型</td><td width="10%">发布位置</td><td width="10%">推荐优先级</td><td width="20%">操作</td>
+			<td width="50%">榜单名称</td><td width="10%">榜单类型</td><td width="10%">发布位置</td><td width="8%">推荐优先级</td><td width="22%">操作</td>
 		</tr>
 		<?php
 			for($i=0;$i<$count;$i++){
@@ -137,6 +137,12 @@
 						<?php echo $record[$i]->recommend_priority;?>
 					</td>
 					<td>
+						<?php if($record[$i]->is_adopt=="1"){?>
+							<span class="revocation" name="<?php echo $record[$i]->id;?>" title="撤消"><img src="/images/admin/btn_apply.png" border=0></span>
+						<?php }?>
+						<?php if($record[$i]->is_adopt=="0"){?>
+							<span class="publish" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border=0></span>
+						<?php }?>
 						<a href="relation_list.php?id=<?php echo $record[$i]->id;?>" title="关联"><img border=0 src="/images/admin/btn_relation.png"></a>
 						<a href="custom_list_edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" title="编辑"><img border=0 src="/images/admin/btn_edit.png"></a>
 						<a href="data_upload.php?id=<?php echo $record[$i]->id;?>" title="数据导入"><img src="/images/admin/btn_import.png" border=0></a>
