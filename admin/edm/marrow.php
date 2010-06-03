@@ -88,7 +88,7 @@
   				<td height=24 style="background-color:#125295; font-weight:bold;">
   					<table width=100%>
   						<tr>
-  							<td width="90%" style="font-size:14px; font-family:Arial; color:#ffffff;">&nbsp;富豪本周精华文章</td>
+  							<td width="90%" style="font-size:14px; font-family:Arial; color:#ffffff;">&nbsp;本周精华文章</td>
   							<td width="10%" align="right" style="font-size:14px; font-family:Arial;"><a style="text-decoration:none; color:#ffffff;" href="http://www.forbeschina.com/billionaires/">更多</a></td>
   						</tr>
   					</table>
