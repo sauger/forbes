@@ -91,11 +91,7 @@
 		});
 		
 		$("#submit").click(function(){
-<<<<<<< HEAD
-			var title = $(input "#title").val();
-=======
 			var title = $("#pic_title").val();
->>>>>>> 6aee8f0c917f722cf7820659e90fefc2d91bacf9
 			if(title==""){
 				alert("请输入标题！");
 				return false;

@@ -113,14 +113,19 @@
 					<div id="right_hr"></div>
 					
 					<div id="right_content" style="">
-
-						<?php echo $news_count[0]->content;?>
-						
+					<?php 
+						if($name!='links'){
+							echo $news_count[0]->content;
+						}else{
+							$links = $db->query("select * from fb_links order by priority");
+							foreach($links as $v){
+					?>
+					<div class="link">
+						<div class="link_title"><a href="<?php echo $v->link;?>"><?php echo $v->title;?></a></div>
+						<div class="link_img"><a href="<?php echo $v->link;?>"><img src="<?php echo $v->img_url;?>"></a></div>
 					</div>
-					
-						
-				
-				
+					<?php }}?>
+					</div>
 			</div>
 			
 			<div id="right_b"></div>

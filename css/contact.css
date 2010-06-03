@@ -41,3 +41,8 @@ div{margin:0; padding:0; }
 
 #right_content{width:700px; margin-left:25px; margin-top:20px; font-size:14px; line-height:25px;}
 #right_content p{text-indent:2em; margin-bottom:15px;}
+
+.link{width:220px; padding-bottom:30px;}
+.link_title{width:150px; height:25px; font-size:14px; line-height:25px;}
+.link_title a{color:#000; text-decoration:none;}
+.link_img img{width:150px; height:70px; border:0;}
