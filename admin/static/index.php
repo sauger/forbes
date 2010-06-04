@@ -48,7 +48,7 @@ switch ($type) {
 		}
 		break;
 	case 'right':
-		$a = array('activities','ad','article','column_c','column','favor','forum','four','investment_list','magazine','rich','right_list','comment');
+		$a = array('activities','ad','article','column_c','column','favor','forum','four','investment_list','magazine','rich','right_list','comment','pic_list');
 		foreach($a as $v){
 			if(!static_right($v)){
 				die("静态化右侧'{$v}'失败");
