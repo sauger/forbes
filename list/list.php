@@ -82,7 +82,7 @@
 						$bdname="体育榜";
 						break;
 					case "7":
-						$bdname="科技榜";
+						$bdname="生活榜";
 						break;
 					case "8":
 						$bdname="教育榜";
