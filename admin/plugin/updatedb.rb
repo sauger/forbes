@@ -10,7 +10,7 @@ my.query("select d.id,d.name,sum(a.stock_value*c.rate*b.stock_count) as fortune 
 	count = count.to_i / 100000000
 	index += 1	
 	last_index = 0	
-	if index <= 100
+	if index <= 200
 		my.query("select current_index from fb_dynamic_fortune_history where richer_id = #{id} order by regdate desc limit 1").each do |last|
 			last_index = last.to_s
 		end
