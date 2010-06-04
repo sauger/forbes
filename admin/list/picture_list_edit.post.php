@@ -6,6 +6,12 @@ $list_type = new table_class('fb_custom_list_type');
 if($id){
 	$list_type->find($id);	
 }
+if($_POST['use_pos']){
+	$list_type->use_pos = 1;
+}else{
+	$list_type->use_pos = 0;
+}
+
 $list_type->update_attributes($_POST['mlist'],false);
 $list_type->table_name = 'fb_picture_list_items';
 if($_FILES['image_src']['name'] != ''){

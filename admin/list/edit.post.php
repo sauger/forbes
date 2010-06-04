@@ -7,6 +7,7 @@ $list_type = new table_class('fb_custom_list_type');
 if($id){
 	$list_type->find($id);	
 }
+$list_type->use_pos = 1;
 $list_type->update_attributes($_POST['mlist'],false);
 if($post_type == 2){
 	$list_type->table_name = 'fb_rich_list_items';

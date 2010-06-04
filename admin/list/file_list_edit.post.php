@@ -8,6 +8,8 @@ if($id){
 }
 if($_POST['use_pos']){
 	$list_type->use_pos = 1;
+}else{
+	$list_type->use_pos = 0;
 }
 $list_type->update_attributes($_POST['mlist'],false);
 $list_type->table_name = 'fb_file_list_items';
