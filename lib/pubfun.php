@@ -522,12 +522,12 @@ function &read_csv($file,$limit=0,$out_charset='utf-8')
 	if(!file_exists($file)){
 		return false;
 	}
-	setlocale(LC_ALL, 'zh_CN.gbk'); 
+	#setlocale(LC_ALL, 'zh_CN.gbk'); 
 	$fhandle = fopen($file,'r');
 	if(!$fhandle) return false;
 	$count = 0;
 	while (!feof($fhandle) ) {
-		$line_of_text = fgetcsv($fhandle);
+		$line_of_text = fgetcsv_reg($fhandle);
 		if(!$line_of_text) continue;
 		$result[] = $line_of_text;
 		$count++;
@@ -542,5 +542,25 @@ function &read_csv($file,$limit=0,$out_charset='utf-8')
 	
 	fclose($fhandle);
 	return $result;
+}
+function fgetcsv_reg(& $handle, $length = null, $d = ',', $e = '"') {
+	$d = preg_quote($d);
+	$e = preg_quote($e);
+	$_line = "";
+	$eof=false;
+	while ($eof != true) {
+		$_line .= (empty ($length) ? fgets($handle) : fgets($handle, $length));
+		$itemcnt = preg_match_all('/' . $e . '/', $_line, $dummy);
+		if ($itemcnt % 2 == 0)$eof = true;
+	}
+	$_csv_line = preg_replace('/(?: |[ ])?$/', $d, trim($_line));
+	$_csv_pattern = '/(' . $e . '[^' . $e . ']*(?:' . $e . $e . '[^' . $e . ']*)*' . $e . '|[^' . $d . ']*)' . $d . '/';
+	preg_match_all($_csv_pattern, $_csv_line, $_csv_matches);
+	$_csv_data = $_csv_matches[1];
+	for ($_csv_i = 0; $_csv_i < count($_csv_data); $_csv_i++) {
+		$_csv_data[$_csv_i] = preg_replace('/^' . $e . '(.*)' . $e . '$/s', '$1', $_csv_data[$_csv_i]);
+		$_csv_data[$_csv_i] = str_replace($e . $e, $e, $_csv_data[$_csv_i]);
+	}
+	return empty ($_line) ? false : $_csv_data;
 }
 ?>

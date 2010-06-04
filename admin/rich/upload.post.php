@@ -10,7 +10,6 @@
 	$xls = $upload->handle('xls');
 	$file = ROOT_DIR.'upload/xls/'.$xls;
 	$lines = read_csv($file);
-	var_dump($lines);die();
 	unlink($file);
 	unset($lines[0]);
 	
@@ -63,15 +62,12 @@
 	}
 	
 	foreach($sql_array as $sql){
-		echo $sql;
-		/*
 		if($db->execute($sql)){
 			$success++;
 		}else{
 			$fail++;
 			array_push($fail_info,$value);
 		}
-		*/
 	}
 	close_db();
 
