@@ -50,20 +50,36 @@ function change_images(step){
 function timeout_func(){
 	change_images(1);
 }
+function show_text(){
+	$('#content').show(500);
+	$("#hider").html("关闭");
+	$("#hider").css('background','url("/images/list/open-close.gif") no-repeat scroll right bottom')
+}
+function hide_text(){
+	$("#content").hide(700);
+	$("#hider").html("打开");
+	$("#hider").css('background','url("/images/list/open-close.gif") no-repeat scroll right top')
+}
+
+
 $(function(){
 	$.getJSON("/ajax/json.php?id=" + $('#list_id').val(),function(data){
 		items = data;
 		timeout_handler = setTimeout("timeout_func()",interval);
 	});
+	hide_text();
 	$('#picture_list img').click(function(){
 		display_index = $('#picture_list img').index($(this));
+		hide_text();
 		change_images(0);
 	});
 	$('#btn_prev').click(function(){
 		change_images(-1);
+		hide_text();
 	});
 	$('#btn_next').click(function(){
 		change_images(1);
+		hide_text();
 	});
 	
 	$('#btn_play').toggle(function(){
@@ -85,5 +101,15 @@ $(function(){
 		max:17,
 		value:10,
 		animate:true
+	});
+	
+	
+	$("#pic_content").hover(function(){
+		show_text();
+	},function(){
+	});
+	
+	$("#hider").live('click',function(){
+		hide_text();
 	});
 });

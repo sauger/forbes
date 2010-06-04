@@ -29,6 +29,7 @@
 			$tmp['comment'] = str_replace("\t","",$tmp['comment']);
 			$litems[] = $tmp;
 		}
+		init_page_items();
 	?>
 	<title><?php echo $list->name;?>_福布斯中文网</title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
@@ -41,44 +42,48 @@
 	<? include_top();?>
 		<div id=bread><a href="/list">榜单</a> > <?php echo $list->name;?></div>
 		<div id=bread_line></div>
-		<div id="list_name"><?php echo $list->name;?></div>
-		<div id=pic_list>
-			<div id=p_flash>
-				<div id="control_panel">
-					<div id="btns">
-						<img id="btn_prev" src="/images/list/prev.jpg" title="上一张" />
-						<img id="btn_play" src="/images/list/pause.jpg" title="暂停" />
-						<img id="btn_next" src="/images/list/next.jpg" title="下一张" />
+		<div id="left">
+			<div id="list_name"><?php echo $list->name;?></div>
+			<div id=pic_list>
+				<div id=p_flash>
+					<div id="control_panel">
+						<div id="btns">
+							<img id="btn_prev" src="/images/list/prev.jpg" title="上一张" />
+							<img id="btn_play" src="/images/list/pause.jpg" title="暂停" />
+							<img id="btn_next" src="/images/list/next.jpg" title="下一张" />
+						</div>
+						<div id="slider"></div>
+						<span id="speed">播放速度</span>
 					</div>
-					<div id="slider"></div>
-					<span id="speed">播放速度</span>
+					<div id=email>
+						<div id=pic><img border=0 src="/images/list/email.jpg"></div>
+						<div id=wz><a href="<?php echo $static_site?>/pic_list/<?php echo $id;?>/share">分享给好友</a></div>
+					</div>
+					<div id="picture_content">
+						<img id="main_picture" src="<?php echo $items[0]->image;?>">
+						<div id=pic_content>
+							<div id=title><?php echo $items[0]->name?></div>
+							<div id=hider>打开</div>
+							<div id=content><?php echo $items[0]->comment?></div>
+						</div>
+					</div>
+					<div id="picture_list">
+						<img class="selected" src="<?php echo $items[0]->image;?>" />
+						<img src="<?php echo $items[1]->image;?>" />
+						<img style="margin-right:0px;" src="<?php echo $items[2]->image;?>" />
+					</div>
 				</div>
-				<div id="picture_content">
-					<img id="main_picture" src="<?php echo $items[0]->image;?>" />
-				</div>
-				<div id="picture_list">
-					<img class="selected" src="<?php echo $items[0]->image;?>" />
-					<img src="<?php echo $items[1]->image;?>" />
-					<img style="margin-right:0px;" src="<?php echo $items[2]->image;?>" />
-				</div>
-			</div>
-			<div id=email>
-					<div id=pic><img border=0 src="/images/list/email.jpg"></div>
-					<div id=wz><a href="<?php echo $static_site?>/pic_list/<?php echo $id;?>/share">分享给好友</a></div>
-			</div>
-			<div id=pic_content>
-				<div id=title><?php echo $items[0]->name?></div>
-				<div id=content><?php echo $items[0]->comment?></div>
 			</div>
 			<div id=pic_recommend>
 				<div id=wz>图片榜单推荐</div>
+				<?php 
+				for($i=0;$i<8;$i++){$pos_name='pic_list'.$i;?>
+				<div class=cl <?php show_page_pos($pos_name,'link_img');?>>
+					<div class="cl_img"><?php show_page_img();?></div>
+					<div class="cl_title"><?php show_page_href();?></div>
+				</div>
+				<?php } ?>
 			</div>
-			<?php 
-			$db = get_db();
-			$lists = $db->query("select a.name,a.id from fb_custom_list_type a left join fb_list_relation b  on a.id = b.rela_id where b.list_id = {$id} order by b.id desc limit 3");
-			for($i=0;$i<3;$i++){ ?>
-			<div class=cl><a href="<?php echo "$static_site/list/{$lists[$i]->id}"?>">·<?php echo $lists[$i]->name;?></a></div>
-			<?php } ?>
 		</div>
 		<input type="hidden" id="list_id" value="<?php echo $id;?>" />
 		<div id="right_inc">
