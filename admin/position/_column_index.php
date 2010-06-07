@@ -16,7 +16,7 @@ $len = count($items);
 $table = new table_class("fb_page_pos");
 $selected_news = array();
 for($i=0;$i< $len;$i++){
-	$news = $db->query("select distinct(a.title) as title,a.id,a.created_at,a.description,b.name from fb_news a left join fb_user b on a.publisher = b.id where publisher = {$items[$i]->publisher} and a.is_adopt=1  order by created_at desc limit 3");
+	$news = $db->query("select a.title,a.id,a.created_at,a.description,b.name from fb_news a left join fb_user b on a.publisher = b.id where publisher = {$items[$i]->publisher} and a.is_adopt=1 group by a.title order by created_at desc limit 3");
 	$pos = 'column_recommend_top_l_'.$i;
 	$table->find('first',array("conditions" => "name = '{$pos}'"));
 	#if(strtotime($table->end_time) && strtotime($table->end_time) >= time()){
@@ -50,7 +50,7 @@ for($i=0;$i< $len;$i++){
 }
 
 $selected_news = implode(',',$selected_news);
-$news = $db->query("select distinct(a.title) as title,a.id,a.created_at,a.description,b.nick_name,b.name from fb_news a left join fb_user b on a.publisher = b.id where b.role_name='$role' and a.is_adopt=1  and a.id not in ({$selected_news}) order by created_at desc limit 11");
+$news = $db->query("select a.title,a.id,a.created_at,a.description,b.nick_name,b.name from fb_news a left join fb_user b on a.publisher = b.id where b.role_name='$role' and a.is_adopt=1  and a.id not in ({$selected_news}) group by a.title order by created_at desc limit 11");
 $len = count($news);
 for($i=0;$i<$len;$i++){
 	$pos = 'column_edit_t'.$i;	
@@ -87,7 +87,7 @@ $len = count($items);
 $table = new table_class("fb_page_pos");
 $selected_news = array();
 for($i=0;$i< $len;$i++){
-	$news = $db->query("select distinct(a.title) as title,a.id,a.created_at,a.description,b.name from fb_news a left join fb_user b on a.publisher = b.id where publisher = {$items[$i]->publisher} and a.is_adopt=1  order by created_at desc limit 3");
+	$news = $db->query("select a.title,a.id,a.created_at,a.description,b.name from fb_news a left join fb_user b on a.publisher = b.id where publisher = {$items[$i]->publisher} and a.is_adopt=1 group by a.title order by created_at desc limit 3");
 	$pos = 'column_r_t_l'.$i;
 	$table->find('first',array("conditions" => "name = '{$pos}'"));
 	#if(strtotime($table->end_time) && strtotime($table->end_time) >= time()){
@@ -121,7 +121,7 @@ for($i=0;$i< $len;$i++){
 }
 
 $selected_news = implode(',',$selected_news);
-$news = $db->query("select distinct(a.title) as title,a.id,a.created_at,a.description,b.nick_name,b.name from fb_news a left join fb_user b on a.publisher = b.id where b.role_name='$role' and a.is_adopt=1  and a.id not in ({$selected_news}) order by created_at desc limit 11");
+$news = $db->query("select a.title,a.id,a.created_at,a.description,b.nick_name,b.name from fb_news a left join fb_user b on a.publisher = b.id where b.role_name='$role' and a.is_adopt=1  and a.id not in ({$selected_news}) group by a.title order by created_at desc limit 11");
 $len = count($news);
 for($i=0;$i<$len;$i++){
 	$pos = 'column_edit_edit_t2_'.$i;	
