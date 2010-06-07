@@ -119,7 +119,6 @@
 	}
 	
 	//news saved
-	
 	if($news->is_adopt){
 		static_news($news,'page');
 	}
@@ -179,6 +178,7 @@
 	if($_SESSION['admin_user_name'] == 'editor1' || $_SESSION['admin_user_name'] == 'editor2' || $_SESSION['admin_user_name'] == 'editor3'){
 		$href = "news_list.php";
 	}
+	
 	redirect($href.'?category='.$_POST['news']['category_id']);
 	#var_dump($news);
 	

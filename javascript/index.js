@@ -26,10 +26,15 @@ function head_line(now_id)
 
 function head_line2()
 {
+	if(is_changed=="2")
+	{
+		return false;
+	}
+	
 	  if(is_changed=="1")
 	  {
 	  	is_changed=0;
-			setTimeout("head_line2()",6000);
+		setTimeout("head_line2()",6000);
 	  	return false;
 	  }
 		var now_id=headline_id;	
@@ -70,6 +75,12 @@ $(function(){
 			head_line(now_id);
 		});
 		
+		$("#headline").hover(function(){
+			is_changed = 2;
+		},function(){
+			is_changed = 0;
+			setTimeout("head_line2()",1000);
+		});
 	
 		$("#subject_btnl").click(function()
 		{
