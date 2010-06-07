@@ -87,8 +87,11 @@
 		</div>
 		<input type="hidden" id="list_id" value="<?php echo $id;?>" />
 		<div id="right_inc">
-		 	<?php include_right( "ad");?>
-	 		<?php include_right( "favor");?>
+		 	<?php include_right("ad");?>
+			<?php include_right("favor");?>
+			<?php include_right("four");?>
+			<?php include_right("forum");?>
+			<?php include_right("magazine");?>
 		</div>
 	<? include_bottom();?>
 	</div>
