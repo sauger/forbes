@@ -90,7 +90,7 @@
 						<div id="steven_name"><a href="<?php echo "{$static_site}/column/".$news[0]->name;?>">史蒂夫·福布斯</a></div>
 					</div>
 					<div id=piccontent>
-						<div id=title><a href="<?php echo column_article_url($news[0]->name,$news[0]->id,'static');?>" title="<?php echo $news[2]->title; ?>"><?php echo $news[0]->title; ?></a></div>
+						<div id=title><a href="<?php echo column_article_url($news[0]->name,$news[0]->id,'static');?>" title="<?php echo $news[0]->title; ?>"><?php echo $news[0]->title; ?></a></div>
 						<div id=content title="<?php echo strip_tags($news[0]->description); ?>"><?php echo $news[0]->description; ?></div>
 					</div>
 					<?php for($i=1;$i<5;$i++){?>
