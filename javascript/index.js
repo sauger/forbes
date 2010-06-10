@@ -71,8 +71,11 @@ $(function(){
 		$("#headline").hover(function(){
 			is_changed = 2;
 		},function(){
-			is_changed = 0;
-			setTimeout("head_line2()",6000);
+			
+			setTimeout(function(){
+				is_changed = 0;
+				head_line2();
+			},3000);
 		});
 	
 		$("#subject_btnl").click(function()
