@@ -95,7 +95,7 @@
 					<?php } ?>
 				</div>
 			<?php } ?>
-			<div id="football" <?php show_page_pos('football','only_link2')?>><a title="<?php echo $pos_items->football->title;?>" href="<?php echo $pos_items->football->href;?>"><img border="0" src="/images/index/football.jpg"></a></div>
+			<div id="football" <?php show_page_pos('football','only_link2')?>><a title="<?php echo $pos_items->football->title;?>" href="<?php echo $pos_items->football->href;?>"><img border="0" src="/images/index/football2.jpg"></a></div>
 	</div>
 </div>
 <script>
