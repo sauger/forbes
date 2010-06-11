@@ -1,5 +1,6 @@
 var headline_id=0;
 var is_changed=0;
+var change_lock = 0;
 var subject_id=0;
 var max_headline_id = 3;
 
@@ -29,6 +30,10 @@ function head_line2()
 	{
 		return false;
 	}
+	if(change_lock){
+		setTimeout("head_line2()",3000);
+		return false;
+	}
 	
 	var now_id=headline_id;	
 	now_id=parseInt(headline_id)+1;
@@ -50,6 +55,8 @@ function head_line2()
 	$("#headline_related_"+now_id).show();		
 	
 	headline_id=now_id;
+	change_lock = 1;
+	setTimeout(function(){change_lock = 0;},5000);
 	setTimeout("head_line2()",6000);
 }
 
@@ -71,10 +78,10 @@ $(function(){
 		$("#headline").hover(function(){
 			is_changed = 2;
 		},function(){
-			
 			setTimeout(function(){
-				is_changed = 0;
-				head_line2();
+				if(is_changed){
+					is_changed = 0;
+					head_line2();}
 			},3000);
 		});
 	
