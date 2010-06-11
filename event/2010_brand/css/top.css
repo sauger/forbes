@@ -7,20 +7,23 @@
 }
 
 #menu{
-	width:100%;
+	width:954px;
 	height:49px;
+	border-left:4px solid #990000;
+	border-right:4px solid #990000;
 	background-image:url(../images/menu_bg.gif);
-	float:left;
+	margin:0 auto;
 }
 
 #menu_center{
-	width:962px;
+	width:954px;
 	height:22px;
 	margin:0 auto;
 	margin-top:15px;
+	float:left;
 }
 #menu_center div{
-	width:16.5%;
+	width:19.9%;
 	line-height:22px;
 	font-size:20px;
 	text-align:center;
