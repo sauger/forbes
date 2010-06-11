@@ -52,12 +52,13 @@ div.ad_banner{position: relative;}
 #navigation2 .nav2{ height:27px; font-size:12px;  line-height:27px; margin-left:10px; display:none;}
 #navigation2 .nav2 a{color:#003399; text-decoration:none;}
 #navigation2 .nav2 a:hover{color:#000000;}
+#navigation2 #football{width:222px; height:27px; float:right;}
 
 #navigation2 #nav10{margin-left:100px}
 #navigation2 #nav15{margin-left:420px;}
 #navigation2 #nav21{margin-left:160px;}
 #navigation2 #nav38{margin-left:220px;}
-#navigation2 #nav25{margin-left:100px;}
+#navigation2 #nav25{margin-left:40px;}
 #navigation2 #nav51{margin-left:220px;}
 #navigation2 #nav56{margin-left:645px;}
 
