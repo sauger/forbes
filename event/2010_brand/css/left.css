@@ -15,18 +15,34 @@
 
 #left_top2{
 	width:310px;
-	height:81px;
+	height:225px;
 	margin-left:15px;
 	background-image:url(../images/left_top.png);
 }
 #left_top2 div{
-	font-size:12px;
-	line-height:27px;
+	font-size:13px;
+	line-height:20px;
 	color:#A96023;
-	text-indent:20px;
+	padding:0 20px 10px 20px;
 }
 
 #list{
 	padding-top:40px;
 	padding-left:20px;
+}
+
+#bottom{
+	width:300px;
+	margin-top:50px;
+	margin-left:15px;
+	padding-top:50px;
+	padding-left:15px;
+	background:url(../images/left_bottom.gif) no-repeat;
+}
+#bottom p{
+	margin:0;
+	font-size:13px;
+	line-height:25px;
+	font-weight:bolder;
+	color:#A96023;
 }
