@@ -1,7 +1,6 @@
 parent.$("#admin_iframe").attr("height","1300px");
 
 $(function(){
-	
 	$("#a_select_all").click(function(e){
 		e.preventDefault();
 		if($(this).data('selected')){
@@ -12,6 +11,7 @@ $(function(){
 			$(this).data('selected',true);
 		}
 	});
+	
 	
 	$(function(){
 		$('#btn_delete2').click(function(e){

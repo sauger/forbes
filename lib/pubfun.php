@@ -539,7 +539,6 @@ function &read_csv($file,$limit=0,$out_charset='utf-8')
 			$v = iconv('gbk',$out_charset,$v);
 		}
 	}
-	
 	fclose($fhandle);
 	return $result;
 }

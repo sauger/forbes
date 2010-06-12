@@ -1,4 +1,8 @@
 @CHARSET "UTF-8";
+body{
+	font-family:Arial,SimSun;
+}
+
 #top{
 	width:962px;
 	height:293px;
