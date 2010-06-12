@@ -13,7 +13,7 @@
 	$c = array();
 	array_push($c, "language_tag=$language_tag");
 	if($title!= ''){
-		array_push($c, "title like '%".trim($title)."%' or keywords like '%".trim($title)."%' or description like '%".trim($title)."%' or author like '%{$title}%'");
+		array_push($c, "title like '%".trim($title)."%' or keywords like '%".trim($title)."%' or description like '%".trim($title)."%' or author like '%{$title}%' or content like '%{$title}%'");
 	}
 	if($category_id > 0){
 		$cate_ids = implode(',',$category->children_map($category_id));
