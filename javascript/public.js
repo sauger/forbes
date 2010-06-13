@@ -13,11 +13,6 @@ $(function(){
 		}
 	});
 	
-	$("#football").hover(function(){
-		$("#football img").attr('src','/images/index/football.jpg');
-	},function(){
-		$("#football img").attr('src','/images/index/football2.jpg');
-	});
 });
 
 

@@ -5,8 +5,8 @@
 		global $pos_items;
 		init_page_items();
 ?>
-	<div id=top_>
-		<div id=top_banner class="ad_banner">
+<div id=top_>
+	<div id=top_banner class="ad_banner">
 		<!--
 	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="778" height="90">
         <param name="movie" value="/flash/banner.swf">
@@ -95,7 +95,13 @@
 					<?php } ?>
 				</div>
 			<?php } ?>
-			<div id="football" <?php show_page_pos('football','only_link2')?>><a title="<?php echo $pos_items->football->title;?>" href="<?php echo $pos_items->football->href;?>"><img border="0" src="/images/index/football2.jpg"></a></div>
+			<div id=football_hy <?php show_page_pos('football','only_link2')?>>
+				<a id=football_member></a>
+			</div>
+			<div style="float:none; display:none;">clear_float</div>
+			<div id="football2" >
+				<a href="<?php echo $pos_items->football->href;?>" title="<?php echo $pos_items->football->title;?>"><img border="0" src="/images/index/football.gif"></a>
+			</div>
 	</div>
 </div>
 <script>

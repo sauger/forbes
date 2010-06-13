@@ -4,6 +4,7 @@ var change_lock = 0;
 var subject_id=0;
 var max_headline_id = 3;
 
+
 function head_line(now_id)
 {
 		$(".headline_btn").css('background','url(/images/index/roll2.gif) no-repeat');
