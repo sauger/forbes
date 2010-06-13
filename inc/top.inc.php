@@ -68,7 +68,7 @@
   <div id=navigation>
   <?php foreach($countnav as $v){?>
   		<div class="menu">
-			<a href="<?php echo $v->href; ?>" id="<?php echo $v->id; ?>"><div class="nav" id="<?php echo $v->id_name;?>"></div></a>
+			<a href="<?php echo $v->href;?>" id="<?php echo $v->id; ?>"><div class="nav" id="<?php echo $v->id_name;?>"></div></a>
 		</div>
   <?php }?>
 			<div id=top_function2>
