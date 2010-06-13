@@ -28,13 +28,13 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true,$ignore
 		$pos_table->name = $pos;
 		$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 		$pos_table->end_time = $end_time;
-		$pos_table->display = $news[$fill_count]->title;
-		$pos_table->title = $news[$fill_count]->title;
-		$pos_table->alias = $news[$fill_count]->author;
+		$pos_table->display = htmlspecialchars($news[$fill_count]->title);
+		$pos_table->title = htmlspecialchars($news[$fill_count]->title);
+		$pos_table->alias = htmlspecialchars($news[$fill_count]->author);
 		$pos_table->image1 = $news[$fill_count]->video_photo_src;
-		$pos_table->description = $news[$fill_count]->description;
+		$pos_table->description = htmlspecialchars($news[$fill_count]->description);
 		$pos_table->href = dynamic_news_url($news[$fill_count]);
-		$pos_table->reserve = $news[$fill_count]->short_title;
+		$pos_table->reserve = htmlspecialchars($news[$fill_count]->short_title);
 		$pos_table->static_href = static_news_url($news[$fill_count]);
 		$pos_table->save();
 		$fill_count++;
