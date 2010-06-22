@@ -5,6 +5,7 @@ body{
 	font-size:0px;
 	line-height:0px;
 	background-image:url(../images/bg.jpg);
+	background-image:none;
 	font-family:Arial,SimSun;
 }
 
