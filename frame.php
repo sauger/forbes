@@ -1,6 +1,6 @@
 <?php	
 	define(CURRENT_DIR, dirname(__FILE__) ."/");
-	define(ROOT_DIR_NONE, dirname(__FILE__));	
+	define(ROOT_DIR_NONE, dirname(__FILE__));
 	define(ROOT_DIR,CURRENT_DIR);
 	require('config/config.php');
 	include_once(CURRENT_DIR ."lib/pubfun.php");
