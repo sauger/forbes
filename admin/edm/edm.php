@@ -47,7 +47,10 @@
 	if($_GET['file_name']){
 		use_jquery();
 	}
-	
+	$sql = "select * from fb_edm where edm_type='edm' order by created_at desc limit 1";
+	$db = get_db();
+	$new_edm = $db->query($sql);
+	close_db();
 ?>
 <style type="text/css">
 <!--
@@ -357,7 +360,7 @@ a:active {text-decoration: none;}
 	                  			</script>
 	                  		</td>
 	                  	<?php }else{?>
-	  						<td style="padding-top:10px;"><a style="color:#4649B0; font-size:13px; font-family:Arial;" href="<?php echo $doman ."/edm/"?>">往期福布斯精华查询</a></td>
+	  						<td style="padding-top:10px;"><a style="color:#4649B0; font-size:13px; font-family:Arial;" href="<?php echo $doman ."/edm/".$new_edm[0]->file_name?>">往期福布斯精华查询</a></td>
 	  					<?php }?>
 	  				  </tr>
 	                  </table></td>

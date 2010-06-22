@@ -28,6 +28,7 @@
 		$fields['magazine_index'] = array("杂志标题","","出版日期","链接","","杂志图片","","过期时间","杂志name","","说明");
 		$fields['simple_magazine'] = array("杂志标题","","mouseover","链接","","杂志图片","","过期时间","","","说明");
 		$fields['only_link'] = array("","","mouseover","链接","静态链接","","","","","","说明");
+		$fields['only_link2'] = array("","","mouseover","链接","","","","","","","");
 		$fields['only_title']=array("标题","","mouserover","链接","静态链接","","","","","","");
 		$fields['default']=array("标题","描述","mouseover","链接","静态链接","图片一","","过期时间","备用字段","备用字段2","说明");
 		$fields['life_index']=array("标题","描述","mouseover","链接","静态链接","图片","","","","","说明");

@@ -12,7 +12,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true,$ignore
 		return false;
 	}
 	$ids = $has_children ? implode(',',$category->children_map($category_id)) : $category_id ;
-	$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) and copy_from=0 order by created_at desc limit {$count}";
+	$sql = "select distinct(title) as title,id,short_title,created_at,description,video_photo_src,author from fb_news where is_adopt=1 and (block_endtime = '0000-00-00 00:00:00' or block_endtime is null or block_endtime <= now()) and category_id in ($ids) and copy_from=0 order by created_at desc limit {$count}";
 	$news = $db->query($sql);
 	$news_count = $db->record_count;
 	if($news_count <= 0 ) return false;
@@ -28,12 +28,13 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true,$ignore
 		$pos_table->name = $pos;
 		$end_time = date('Y-m-d H:00:00',strtotime("+1hours", time()));
 		$pos_table->end_time = $end_time;
-		$pos_table->display = $news[$fill_count]->title;
-		$pos_table->title = $news[$fill_count]->title;
+		$pos_table->display = addslashes($news[$fill_count]->title);
+		$pos_table->title = addslashes($news[$fill_count]->title);
+		$pos_table->alias = addslashes($news[$fill_count]->author);
 		$pos_table->image1 = $news[$fill_count]->video_photo_src;
-		$pos_table->description = $news[$fill_count]->description;
+		$pos_table->description = addslashes($news[$fill_count]->description);
 		$pos_table->href = dynamic_news_url($news[$fill_count]);
-		$pos_table->reserve = $news[$fill_count]->short_title;
+		$pos_table->reserve = addslashes($news[$fill_count]->short_title);
 		$pos_table->static_href = static_news_url($news[$fill_count]);
 		$pos_table->save();
 		$fill_count++;
@@ -367,7 +368,7 @@ function update_news_column($category_name,$limit,$type,$position_name){
 
 include "./_index.php";
 include "_listindex.php";
-#include "_richindex.php";
+include "_richindex.php";
 include "./_fiveindex.php";
 include "./_right.php";
 #include "./_life.php";

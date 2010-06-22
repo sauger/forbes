@@ -1,8 +1,5 @@
 ﻿$(document).ready(function(){
    	
-	  
-	
-	
 		$(".tgcan").click(function(){
 			$.post('/admin/admin.post.php',{'id':$(this).next().attr('value'),'type':'tgcan'},function(data){
 				 if(data=="OK")

@@ -55,6 +55,11 @@
 		</tr>
 		
 		<tr class=tr4>
+			<td class=td1>杂志来源</td>
+			<td><input type="text" name="news[from_magazine]" value="<?php echo $news->from_magazine;?>"></input></td>
+		</tr>
+		
+		<tr class=tr4>
 			<td class=td1>wap标题</td>
 			<td><input type="text" name="news[wap_title]" id="news_wap_title" value="<?php echo strip_tags($news->wap_title);?>"></input></td>
 		</tr>		

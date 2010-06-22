@@ -83,7 +83,7 @@
 		<div id=bread_line></div>
 		<div id=l>
 			<div id=news_title><?php echo $title;?></div>
-			<div id=news_info>作者：<?php echo $news->author ? $news->author : '福布斯中文网';?>　　发布于：<?php echo substr($news->created_at,0,10);?></div>
+			<div id=news_info>作者：<?php echo $news->author ? $news->author : '福布斯中文网';?>　　发布于：<?php echo substr($news->created_at,0,10);?>　　<?php echo $news->from_magazine;?></div>
 			<?php if(trim(strip_tags($news->description))!=''){?><div id="news_desc"><?php echo $news->description;?></div><?php }?>
 			<div id=news_tools>
 				<?php if(false){?>

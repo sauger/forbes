@@ -238,7 +238,7 @@
 			 	<div class=list1 >
 					<div class=list1_title <?php $pos_name ="index_invest0"; show_page_pos($pos_name,'base_img')?>><?php show_page_href();?></div>
 					<div class=list1_description2>
-						<div class="list1_pic"><a href="<?php echo $pos_items->index_invest0->href;?>" target="_blank"><img border=0  src="<?php echo $pos_items->index_invest0->image1;?>"></a></div>
+					<!-- <div class="list1_pic"><a href="<?php echo $pos_items->index_invest0->href;?>" target="_blank"><img border=0  src="<?php echo $pos_items->index_invest0->image1;?>"></a></div> -->
 						<div class="list1_piccontent"><?php show_page_desc('index_invest0');?></a></div>
 					</div>
 					<?php for($i=1;$i<=5;$i++){ $pos_name = "index_invest".$i;?>

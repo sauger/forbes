@@ -1,0 +1,116 @@
+@CHARSET "UTF-8";
+body{
+	margin:0;
+	padding:0;
+	font-size:0px;
+	line-height:0px;
+	background-image:url(../images/bg.jpg);
+	font-family:Arial,SimSun;
+}
+
+#ibody{
+	width:962px;
+	margin:0 auto;
+}
+#left{
+	width:350px;
+	float:left;
+}
+#right{
+	width:600px;
+	float:left;
+}
+
+#menu_bottom{
+	width:100%;
+	height:47px;
+	background-image:url(../images/menu_bom_bg.png);
+}
+
+#main{
+	width:954px;
+	border-left:4px solid #990000;
+	border-right:4px solid #990000;
+	background-color:#fff;
+	float:left;
+}
+
+
+/* main_title start */
+#title{
+	width:567px;
+	height:40px;
+}
+#title1{
+	font-size:20px;
+	line-height:22px;
+	margin-top:17px;
+	margin-left:10px;
+	color:#A96023;
+	font-weight:bolder;
+	font-family:Microsoft YaHei;
+	float:left;
+}
+#title2{
+	font-size:39px;
+	line-height:39px;
+	margin-top:5px;
+	margin-right:10px;
+	color:#CCCCCC;
+	font-weight:bolder;
+	font-family:Arial;
+	float:right;
+}
+#line{
+	width:567px;
+	height:10px;
+	background-image:url(../images/line.gif);
+}
+/* main_title end */
+
+#text{
+	width:540px;
+	margin-top:15px;
+	padding:15px;
+	border:1px solid #EEC38E;
+	background-color:#FEF8E9;
+	float:left;
+}
+#text p{
+	margin:0;
+	font-size:14px;
+	line-height:2em;
+	text-indent:2em;
+}
+
+
+/* guest start */
+.guest{
+	width:25%;
+	height:200px;
+	text-align:center;
+	font-size:14px;
+	line-height:30px;
+	float:left;
+}
+.guest img{
+	border:1px solid #999999;
+	font-size:0;
+}
+.name{
+	width:100%;
+	margin:0 auto;
+}
+/* guest end */
+
+.blue{
+ 	color:#0000ff;
+}
+.big{
+	font-weight:bolder;
+	font-size:16px;
+	padding-top:10px; 
+ }
+.text_right{
+	padding-left:200px;
+}

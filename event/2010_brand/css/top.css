@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+body{
+	font-family:Arial,SimSun;
+}
+
+#top{
+	width:962px;
+	height:293px;
+	margin:0 auto;
+	font-size:0;
+}
+
+#menu{
+	width:954px;
+	height:49px;
+	border-left:4px solid #990000;
+	border-right:4px solid #990000;
+	background-image:url(../images/menu_bg.gif);
+	margin:0 auto;
+}
+
+#menu_center{
+	width:954px;
+	height:22px;
+	margin:0 auto;
+	margin-top:15px;
+	float:left;
+}
+#menu_center div{
+	width:19.9%;
+	line-height:22px;
+	font-size:20px;
+	text-align:center;
+	font-weight:bolder;
+	font-family:SimSun;
+	border-right:1px solid #990000;
+	float:left;
+}
+#menu_center a{
+	color:#990000;
+	text-decoration:none;
+}

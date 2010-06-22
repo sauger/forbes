@@ -1,7 +1,9 @@
 var headline_id=0;
 var is_changed=0;
+var change_lock = 0;
 var subject_id=0;
 var max_headline_id = 3;
+
 
 function head_line(now_id)
 {
@@ -21,7 +23,6 @@ function head_line(now_id)
 		$("#headline_related_"+now_id).show();		
 		
 		headline_id=now_id;
-		is_changed=1;
 }
 
 function head_line2()
@@ -30,34 +31,34 @@ function head_line2()
 	{
 		return false;
 	}
+	if(change_lock){
+		setTimeout("head_line2()",3000);
+		return false;
+	}
 	
-	  if(is_changed=="1")
-	  {
-	  	is_changed=0;
-		setTimeout("head_line2()",6000);
-	  	return false;
-	  }
-		var now_id=headline_id;	
-		now_id=parseInt(headline_id)+1;
+	var now_id=headline_id;	
+	now_id=parseInt(headline_id)+1;
     if(now_id>max_headline_id){now_id=0;}
 
-		$(".headline_btn").css('background','url(/images/index/roll2.gif) no-repeat');
-		$("#b"+now_id).css('background','url(/images/index/roll1.gif) no-repeat');
+	$(".headline_btn").css('background','url(/images/index/roll2.gif) no-repeat');
+	$("#b"+now_id).css('background','url(/images/index/roll1.gif) no-repeat');
+
+	$(".headline_pic").hide();
+	$("#headline_pic_"+now_id).show();
+
+	$(".headline_title").hide();
+	$("#headline_title_"+now_id).show();		
+
+	$(".headline_description").hide();
+	$("#headline_description_"+now_id).show();		
+
+	$(".headline_related").hide();
+	$("#headline_related_"+now_id).show();		
 	
-		$(".headline_pic").hide();
-		$("#headline_pic_"+now_id).show();
-
-		$(".headline_title").hide();
-		$("#headline_title_"+now_id).show();		
-
-		$(".headline_description").hide();
-		$("#headline_description_"+now_id).show();		
-
-		$(".headline_related").hide();
-		$("#headline_related_"+now_id).show();		
-		
-		headline_id=now_id;
-		setTimeout("head_line2()",6000);
+	headline_id=now_id;
+	change_lock = 1;
+	setTimeout(function(){change_lock = 0;},5000);
+	setTimeout("head_line2()",6000);
 }
 
 $(function(){
@@ -78,8 +79,11 @@ $(function(){
 		$("#headline").hover(function(){
 			is_changed = 2;
 		},function(){
-			is_changed = 0;
-			setTimeout("head_line2()",1000);
+			setTimeout(function(){
+				if(is_changed){
+					is_changed = 0;
+					head_line2();}
+			},3000);
 		});
 	
 		$("#subject_btnl").click(function()
