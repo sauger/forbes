@@ -39,7 +39,7 @@
 	  		</div>
 	  		<div class="line_div">
 	  		 <div>期　限：</div>
-	  		 <select type="text" name="time">
+	  		 <select name="time">
 		  		 <option value="0">不保存</option>
 		  		 <option value="1">一天</option>
 		  		 <option value="7">一周</option>
