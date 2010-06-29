@@ -35,7 +35,7 @@
 <body>
 	<div id=ibody>
 		<? include_top();?>
-		<div id=bread><a href='/column'>专栏</a> > <?php echo $column->nick_name;?></div>
+		<div id=bread><a href='/column'>专栏</a> > <?php echo $column->nick_name;?> <?php if($column->nick_name=='周健工'){?>sina微博地址：<a href="http://t.sina.com.cn/1666430060">http://t.sina.com.cn/1666430060</a><?php }?></div>
 		<div id=bread_line></div>
 		<div id=column_person_left>
 			<div id=column_person_left_t></div>
