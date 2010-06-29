@@ -6,7 +6,7 @@ CREATE TABLE  `forbes`.`fb_subject` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `created_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE  `forbes`.`fb_subject_category` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -16,7 +16,7 @@ CREATE TABLE  `forbes`.`fb_subject_category` (
   `category_type` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `Index_2` (`subject_id`)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE  `forbes`.`fb_subject_items` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -29,7 +29,7 @@ CREATE TABLE  `forbes`.`fb_subject_items` (
   PRIMARY KEY (`id`),
   KEY `Index_2` (`subject_id`,`category_id`),
   KEY `Index_3` (`category_type`,`resource_id`)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE TABLE  `forbes`.`fb_subject_modules` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `subject_id` int(10) unsigned DEFAULT NULL,
@@ -47,5 +47,5 @@ CREATE TABLE  `forbes`.`fb_subject_modules` (
   PRIMARY KEY (`id`),
   KEY `Index_2` (`subject_id`),
   KEY `Index_3` (`category_type`,`category_id`)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

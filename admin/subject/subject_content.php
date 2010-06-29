@@ -1,15 +1,18 @@
 <?php
+	session_start();
+	
 	$subject_id = $_REQUEST['subject_id'];
 	if(!$subject_id){
 		die('非法的专题ID');
 	}
 	$content_type= $_REQUEST['content_type'] ? $_REQUEST['content_type'] : 'news';
-	require_once('../../frame.php');	
+	require_once('../../frame.php');
+	judge_role();
+	
 	$db = get_db();
 	$subject = new table_class('fb_subject');
 	$subject = $subject->find($subject_id);
 	$title = urldecode($_REQUEST['title']);
-	$user = judge_role('admin');	
 	$category_id = $_REQUEST['category_id'] ? $_REQUEST['category_id'] : -1;
 	$is_adopt = $_REQUEST['adopt'];
 	$c = array("a.subject_id=$subject_id");
@@ -74,7 +77,7 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-CN>
-	<title>smg</title>
+	<title>forbes</title>
 	<?php
 		css_include_tag('admin');
 		use_jquery();
@@ -83,38 +86,36 @@
 </head>
 
 <body>
-	<table width="795" border="0" id="list">
-		<tr class="tr1">
-			<td colspan="6">
-				<select id="content_type">
-					<option value="news" <?php if($_REQUEST['content_type'] == 'news') echo ' selected="selected"';?>>新闻</option>
-					<option value="video"<?php if($_REQUEST['content_type'] == 'video') echo ' selected="selected"';?>>视频</option>
-					<option value="photo"<?php if($_REQUEST['content_type'] == 'photo') echo ' selected="selected"';?>>图片</option>
-				</select>　
-				<a href="<?php echo $content_type;?>_edit.php?subject_id=<?php echo $subject_id;?>">添加<?php echo conver_type($content_type);?></a>
-				　　　搜索　<input id=key type="text" value="<? echo $title;?>">
-				
-				<select id="sel_category">
-					<option value=-1>请选择</option>
-					<?php
-					for($i=0;$i < count($categories);$i++){ ?>
-					<option value="<?php echo $categories[$i]->id;?>" <?php if($_REQUEST['category_id'] == $categories[$i]->id) echo 'selected="selected"';?>><?php echo $categories[$i]->name;?></option>
-					<?php }					
-					?>
-				</select>
-				<select id=adopt style="width:100px" class="select_new">
-					<option value="">发布状况</option>
-					<option value="1" <? if($_REQUEST['adopt']=="1"){?>selected="selected"<? }?>>已发布</option>
-					<option value="0" <? if($_REQUEST['adopt']=="0"){?>selected="selected"<? }?>>未发布</option>
-				</select>
-				
-				<input type="button" value="搜索" id="search_button" style="border:1px solid #0000ff; height:21px">
-				<input type="hidden" value="<?php echo $category_id;?>" id="category">
-			</td>
-		</tr>
-		<tr class="tr2">
-
-			<td></td><td width="220">标题</td><td width="100">所属类别</td><td width="120">发布时间</td><td width="200">操作</td>
+<div id=icaption>
+	<div id=title>内容管理</div>
+	<a href="<?php echo $content_type;?>_edit.php?subject_id=<?php echo $subject_id;?>" id=btn_add></a>
+</div>
+<div id=isearch>
+	<select id="content_type">
+		<option value="news" <?php if($_REQUEST['content_type'] == 'news') echo ' selected="selected"';?>>新闻</option>
+		<option value="video"<?php if($_REQUEST['content_type'] == 'video') echo ' selected="selected"';?>>视频</option>
+		<option value="photo"<?php if($_REQUEST['content_type'] == 'photo') echo ' selected="selected"';?>>图片</option>
+	</select>　
+	<input id=key type="text" value="<? echo $title;?>">
+	<select id="sel_category">
+		<option value=-1>请选择</option>
+		<?php
+		for($i=0;$i < count($categories);$i++){ ?>
+		<option value="<?php echo $categories[$i]->id;?>" <?php if($_REQUEST['category_id'] == $categories[$i]->id) echo 'selected="selected"';?>><?php echo $categories[$i]->name;?></option>
+		<?php }					
+		?>
+	</select>
+	<select id=adopt style="width:100px" class="select_new">
+		<option value="">发布状况</option>
+		<option value="1" <? if($_REQUEST['adopt']=="1"){?>selected="selected"<? }?>>已发布</option>
+		<option value="0" <? if($_REQUEST['adopt']=="0"){?>selected="selected"<? }?>>未发布</option>
+	</select>
+	<input type="button" value="搜索" id="search_button">
+</div>
+<div id=itable>
+	<table cellspacing="1"  align="center">
+		<tr class=itable_title>
+			<td width="40%">标题</td><td width="20%">所属类别</td><td width="20%">发布时间</td><td width="20%">操作</td>
 		</tr>
 		<?php
 			//--------------------
@@ -149,12 +150,14 @@
 			}
 			//--------------------
 		?>
-		<tr class="tr3">
-			<td colspan=6><button id="select_all">全选</button><button id="button_delete">删除/退回</button><?php paginate();?><button id=clear_priority>清空优先级</button><button id=edit_priority>编辑优先级</button></td>
+		<tr class="btools">
+			<td colspan=10>
+				<button id="select_all">全选</button><button id="button_delete">删除/退回</button><?php paginate();?><button id=clear_priority>清空优先级</button><button id=edit_priority>编辑优先级</button>
+				<input type="hidden" id="db_talbe" value="fb_subject_items">
+			</td>
 		</tr>
-		<input type="hidden" id="db_talbe" value="fb_subject_items">
-
 	</table>
+</div>
 </body>
 </html>
 

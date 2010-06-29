@@ -1,4 +1,5 @@
 <?php
+session_start();
 	require_once('../../frame.php');
 	$role = judge_role();	
 	$news = new table_class('fb_news');

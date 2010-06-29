@@ -5,9 +5,11 @@
  	
 	require "../../frame.php";
 	parse_str($_SERVER['QUERY_STRING']);
-	$category_id = $cate[0];
+	$id = $_GET['id'];
+	$module = new table_class('fb_subject_modules');
+	$module->find($id);
 	$db = get_db();
-	switch ($category_type[0]) {
+	switch ($module->category_type) {
 		case 'news':
 			$record_limit[0] = 1;
 			$table = 'fb_news';
@@ -34,7 +36,7 @@
 		break;
 	}
 	$db = get_db();
-	$items = $db->paginate('select b.* from fb_subject_items a left join ' .$table .' b on a.resource_id = b.id where a.category_id=' .$cate_id[0] .' order by a.priority',20);
+	$items = $db->paginate('select b.* from fb_subject_items a left join ' .$table .' b on a.resource_id = b.id where a.category_id=' .$module->category_id.' order by a.priority',20);
 ?>
 <div id=div_top>
 	<h3>筛选属于<?php echo $name[0];?>相关内容 </h3>
@@ -68,17 +70,6 @@
 <div id="div_right_box">
 	<div id="search_box">
 		<label for="keywrods">关键字:</label><input type="text" name="keywords">
-		<label for="dept_s">部门:</label>
-		<select name="dept_s" id="dept_s">
-			<option>请选择</option>
-		<?php 
-			$dept_infos = $db->query('select * from fb_dept');
-			foreach ($dept_infos as $v) {?>
-				<option value="<?php echo $v->id;?>"><?php echo $v->name;?></option>
-			<?php
-			}
-		?>
-		</select>
 		<button id="search_bt">搜索</button>
 	</div>
 	<div id="item_list">
@@ -93,7 +84,7 @@
 <script>
 	$(function(){
 		$('#search_bt').click(function(){
-			$.post('subject_select_items.php?' + '<?php echo $_SERVER['QUERY_STRING'];?>',{'keywords':$('#search_box input:first').attr('value'),'dept':$('#search_box select').attr('value')});
+			$.post('subject_select_items.php?' + '<?php echo $_SERVER['QUERY_STRING'];?>',{'keywords':$('#search_box input:first').attr('value')});
 		});
 	})
 </script>
