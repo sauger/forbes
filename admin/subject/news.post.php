@@ -1,6 +1,6 @@
 <?php 
 	include "../../frame.php";
-	$news  = new table_class('smg_news');
+	$news  = new table_class('fb_news');
 	if($_POST['id']){
 		//edit
 		$news = $news->find($_POST['id']);
@@ -36,7 +36,7 @@
 			$news->photo_src = "";
 		}
 		$news->save();
-		$item = new table_class('smg_subject_items');
+		$item = new table_class('fb_subject_items');
 		$item = $item->find($_POST['item_id']);
 		$item->category_id = $_POST['category_id'];
 		$item->priority = $_POST['priority'];
@@ -81,7 +81,7 @@
 			$news->photo_src = "";
 		}
 		$news->save();
-		$item = new table_class('smg_subject_items');
+		$item = new table_class('fb_subject_items');
 		$item->subject_id = $_POST['subject_id'];
 		$item->category_id = $_POST['category_id'];
 		$item->category_type='news';

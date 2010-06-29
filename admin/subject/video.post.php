@@ -2,8 +2,8 @@
 	include "../../frame.php";
 	$id = $_POST['id'];
 	$item_id = $_POST['item_id'];
-	$subject_item = new table_class('smg_subject_items');
-	$video = new table_class('smg_video');
+	$subject_item = new table_class('fb_subject_items');
+	$video = new table_class('fb_video');
 	if($id){
 		$video = $video->find($id);
 		$subject_item = $subject_item->find($item_id);		
@@ -35,7 +35,7 @@
 		$subject_item->id = 0 ;
 		$video->created_at = now();
 		$video->is_adopt = true;
-		$video->publisher = $_COOKIE['smg_user_nickname'];			
+		$video->publisher = $_COOKIE['fb_user_nickname'];			
 	}
 	$video->save();	
 	$subject_item->resource_id = $video->id;

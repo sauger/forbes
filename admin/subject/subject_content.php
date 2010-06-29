@@ -6,7 +6,7 @@
 	$content_type= $_REQUEST['content_type'] ? $_REQUEST['content_type'] : 'news';
 	require_once('../../frame.php');	
 	$db = get_db();
-	$subject = new table_class('smg_subject');
+	$subject = new table_class('fb_subject');
 	$subject = $subject->find($subject_id);
 	$title = urldecode($_REQUEST['title']);
 	$user = judge_role('admin');	
@@ -30,18 +30,18 @@
 	$conditions = implode(' and ' ,$c);
 	switch ($content_type) {
 		case 'news':
-			$items = $db->paginate("select b.*,a.is_adopt as adopt, a.category_id as subject_category, a.priority as subject_priority, a.id as item_id, c.name as category_name from smg_subject_items a left join smg_news b on a.resource_id=b.id left join smg_subject_category c on c.id=a.category_id where a.category_type='news' and $conditions order by subject_priority asc, b.created_at desc",20);;
-			$categories = $db->query("select * from smg_subject_category where subject_id=$subject_id and category_type='news'");
+			$items = $db->paginate("select b.*,a.is_adopt as adopt, a.category_id as subject_category, a.priority as subject_priority, a.id as item_id, c.name as category_name from fb_subject_items a left join fb_news b on a.resource_id=b.id left join fb_subject_category c on c.id=a.category_id where a.category_type='news' and $conditions order by subject_priority asc, b.created_at desc",20);;
+			$categories = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='news'");
 			$title_name = 'short_title';
 		break;
 		case 'video':
-			$items = $db->paginate("select b.*,a.is_adopt as adopt,a.category_id as subject_category, a.priority as subject_priority, a.id as item_id, c.name as category_name  from smg_subject_items a left join smg_video b on a.resource_id=b.id left join smg_subject_category c on c.id=a.category_id  where a.category_type='video' and $conditions order by subject_priority asc, b.created_at desc",20);;
-			$categories = $db->query("select * from smg_subject_category where subject_id=$subject_id and category_type='video'");
+			$items = $db->paginate("select b.*,a.is_adopt as adopt,a.category_id as subject_category, a.priority as subject_priority, a.id as item_id, c.name as category_name  from fb_subject_items a left join fb_video b on a.resource_id=b.id left join fb_subject_category c on c.id=a.category_id  where a.category_type='video' and $conditions order by subject_priority asc, b.created_at desc",20);;
+			$categories = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='video'");
 			$title_name = 'title';
 		break;
 		case 'photo':
-			$items = $db->paginate("select b.*,a.is_adopt as adopt,a.category_id as subject_category, a.priority as subject_priority, a.id as item_id, c.name as category_name  from smg_subject_items a left join smg_images b on a.resource_id=b.id left join smg_subject_category c on c.id=a.category_id  where a.category_type='photo' and $conditions order by subject_priority asc, b.created_at desc",20);;
-			$categories = $db->query("select * from smg_subject_category where subject_id=$subject_id and category_type='photo'");
+			$items = $db->paginate("select b.*,a.is_adopt as adopt,a.category_id as subject_category, a.priority as subject_priority, a.id as item_id, c.name as category_name  from fb_subject_items a left join fb_images b on a.resource_id=b.id left join fb_subject_category c on c.id=a.category_id  where a.category_type='photo' and $conditions order by subject_priority asc, b.created_at desc",20);;
+			$categories = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='photo'");
 			$title_name = 'title';
 		break;
 		default:
@@ -152,7 +152,7 @@
 		<tr class="tr3">
 			<td colspan=6><button id="select_all">全选</button><button id="button_delete">删除/退回</button><?php paginate();?><button id=clear_priority>清空优先级</button><button id=edit_priority>编辑优先级</button></td>
 		</tr>
-		<input type="hidden" id="db_talbe" value="smg_subject_items">
+		<input type="hidden" id="db_talbe" value="fb_subject_items">
 
 	</table>
 </body>

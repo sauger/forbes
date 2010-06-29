@@ -10,31 +10,31 @@
 	switch ($category_type[0]) {
 		case 'news':
 			$record_limit[0] = 1;
-			$table = 'smg_news';
+			$table = 'fb_news';
 		break;
 		case 'newslist':
-			$table = 'smg_news';
+			$table = 'fb_news';
 		break;
 		case 'photo':
 			$record_limit[0] = 1;
-			$table = 'smg_images';
+			$table = 'fb_images';
 		break;
 		case 'photolist':
-			$table = 'smg_images';
+			$table = 'fb_images';
 		break;
 		case 'video':
 			$record_limit[0] = 1;
-			$table = 'smg_video';
+			$table = 'fb_video';
 		break;
 		case 'videolist':
-			$table = 'smg_video';
+			$table = 'fb_video';
 		break;
 		default:
 			;
 		break;
 	}
 	$db = get_db();
-	$items = $db->paginate('select b.* from smg_subject_items a left join ' .$table .' b on a.resource_id = b.id where a.category_id=' .$cate_id[0] .' order by a.priority',20);
+	$items = $db->paginate('select b.* from fb_subject_items a left join ' .$table .' b on a.resource_id = b.id where a.category_id=' .$cate_id[0] .' order by a.priority',20);
 ?>
 <div id=div_top>
 	<h3>筛选属于<?php echo $name[0];?>相关内容 </h3>
@@ -47,11 +47,11 @@
 	<div class="selected_item">
 		<a href="#">
 		<?php 
-		if($table == 'smg_images'){
+		if($table == 'fb_images'){
 			?>
 			<img src="<?php echo $exist_items[$i]->src_path('small');?>" width=20 height=20 border=0>
 			<?php
-		}elseif($table == 'smg_video'){
+		}elseif($table == 'fb_video'){
 			?>
 			<img src="<?php echo $exist_items[$i]->photo_url;?>" width=20 height=20 border=0>
 			<?php
@@ -72,7 +72,7 @@
 		<select name="dept_s" id="dept_s">
 			<option>请选择</option>
 		<?php 
-			$dept_infos = $db->query('select * from smg_dept');
+			$dept_infos = $db->query('select * from fb_dept');
 			foreach ($dept_infos as $v) {?>
 				<option value="<?php echo $v->id;?>"><?php echo $v->name;?></option>
 			<?php

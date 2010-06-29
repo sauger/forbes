@@ -1,6 +1,7 @@
-<?php require "../../frame.php";
+<?php 
+	require "../../frame.php";
 	#var_dump($_GET);
-	$item = new table_class('smg_subject_modules');
+	$item = new table_class('fb_subject_modules');
 	if($_REQUEST['id']){
 		$item->find($_REQUEST['id']);
 	}else{
@@ -28,10 +29,9 @@
 		<?php
 	}
 	
-	$category = new table_class('smg_subject_category');
+	$category = new table_class('fb_subject_category');
 	
 	$category = $category->find('all',array('conditions' => 'subject_id =' .$item->subject_id));
-
 ?>
 <div id="subject_item_container">
 	<p>
@@ -112,7 +112,7 @@
 <script>	
 	category = [];
 	<?php
-		if(count($category)>0){
+		if(count($category)>0&&$category){
 	  	foreach ($category as $v) {?>
 		category.push(new Array('<?php echo $v->id;?>','<?php echo $v->name;?>','<?php echo $v->category_type;?>'));
 	<?php }}?>	
@@ -132,6 +132,13 @@
 		});
 		$('#category_id').html(str);
 		
+	}
+
+	function check_valdate(){
+		if($('#subject_name').attr('value') == ''){
+			alert('请输入模块名称');
+			return false;
+		}
 	}
 	
 	$(function(){
@@ -156,14 +163,7 @@
 			toggle_category_type();
 		});
 		
-		function check_valdate(){
-			if($('#subject_name').attr('value') == ''){
-				alert('请输入模块名称');
-				return false;
-			}
-		}		
-		
-		$('#a_quick_add').click(function(e){
+		$('#a_quick_add').live('click',function(e){
 			e.preventDefault();
 			str = '<input type="text" name="text_quick_add" id="text_quick_add"> <a href="#" style="color:blue;" id="a_quick_add_save">添加</a>';	
 			$('#span_quick_add').html(str);
@@ -178,6 +178,7 @@
 				});
 			});
 		});
+		
 		toggle_category_type();
 	});
 	

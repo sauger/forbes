@@ -57,7 +57,7 @@ a{text-decoration:none; color:black;}
 
 
 #itable{width:1026px; margin-top:5px; margin-left:10px; }
-table{width:1026px; border:none; text-align:center; background:#e7e7e7;}
+table{ border:none; text-align:center; background:#e7e7e7;}
 
 .itable_title{height:25px; font-size:12px; font-weight:bold; color:#666666; text-align:center; background:#f0f0f0;}
 .itable_title td{border-bottom:1px solid #999999;}

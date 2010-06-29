@@ -3,19 +3,19 @@
 	$role = judge_role();
 	$id = $_REQUEST['id'];
 	
-	$video = new table_class("smg_video");	
+	$video = new table_class("fb_video");	
 	if($id){
 		$video = $video->find($id);
 	}
 	
-	$subject_item = new table_class('smg_subject_items');
+	$subject_item = new table_class('fb_subject_items');
 	$subject_id = $_REQUEST['subject_id'];
 	$item_id = $_REQUEST['item_id'];
 	if($item_id){
 		$subject_item = $subject_item->find($item_id);
 	}	
 	$db = get_db();
-	$category = $db->query("select * from smg_subject_category where subject_id=$subject_id and category_type='video'");
+	$category = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='video'");
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">

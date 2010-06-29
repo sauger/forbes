@@ -2,7 +2,7 @@
 	require_once('../../frame.php');
 	$role = judge_role();
 	$subject_id=$_REQUEST['subject_id'];
-	$category = new table_class('smg_subject_category');
+	$category = new table_class('fb_subject_category');
 	if($_REQUEST['id'])	{
 		$category->find($_REQUEST['id']);
 	}else{

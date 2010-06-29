@@ -17,12 +17,12 @@
 			die('非法的专题id!');
 		}
 		$db = get_db();
-		$subject = $db->query("select * from smg_subject where id=$subject_id");
+		$subject = $db->query("select * from fb_subject where id=$subject_id");
 		if($subject === false){
 			die("非法的专题id!");			
 		}
 		$subject = $subject[0];
-		$categories = $db->query("select * from smg_subject_category where subject_id={$subject->id} order by category_type");
+		$categories = $db->query("select * from fb_subject_category where subject_id={$subject->id} order by category_type");
 		$cate_len = count($categories);
 	?>
 </head>
@@ -114,7 +114,7 @@
 			</tr>
 		</table>
 	</div>
-	<input type="hidden" id="db_talbe" value="smg_subject_category">
+	<input type="hidden" id="db_talbe" value="fb_subject_category">
 </body>
 </html>
 <script>

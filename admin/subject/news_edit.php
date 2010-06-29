@@ -1,11 +1,11 @@
 <?php
 	require_once('../../frame.php');
 	$role = judge_role();	
-	$news = new table_class('smg_news');
+	$news = new table_class('fb_news');
 	$subject_id = $_REQUEST['subject_id'];
 	if($_GET['id']){
 		$news = $news->find($_GET['id']);
-		$item = new table_class('smg_subject_items');
+		$item = new table_class('fb_subject_items');
 		$item = $item->find($_REQUEST['item_id']);
 	}	
 ?>
@@ -26,7 +26,7 @@
 <?php 
 //initialize the categroy;
 	$db = get_db();
-	$category = $db->query("select * from smg_subject_category where subject_id=$subject_id and category_type='news'");
+	$category = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='news'");
 ?>
 <body style="background:#E1F0F7">
 	<form id="news_add" enctype="multipart/form-data" action="news.post.php" method="post"> 

@@ -1,6 +1,6 @@
 <?php 
 	include "../../frame.php";
-	$category = new table_class('smg_subject_category');
+	$category = new table_class('fb_subject_category');
 	if($_REQUEST['id']){
 		$category->find($_REQUEST['id']);		
 	}

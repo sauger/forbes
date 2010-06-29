@@ -2,19 +2,19 @@
 	require_once('../../frame.php');
 	$role = judge_role();
 	$id = $_REQUEST['id'];	
-	$photo = new table_class("smg_images");	
+	$photo = new table_class("fb_images");	
 	if($id){
 		$photo = $photo->find($id);
 	}
 	
-	$subject_item = new table_class('smg_subject_items');
+	$subject_item = new table_class('fb_subject_items');
 	$subject_id = $_REQUEST['subject_id'];
 	$item_id = $_REQUEST['item_id'];
 	if($item_id){
 		$subject_item = $subject_item->find($item_id);
 	}	
 	$db = get_db();
-	$category = $db->query("select * from smg_subject_category where subject_id=$subject_id and category_type='photo'");
+	$category = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='photo'");
 
 ?>
 

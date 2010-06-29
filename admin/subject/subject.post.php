@@ -1,6 +1,6 @@
 ﻿<?php
 	require_once "../../frame.php";
-	$subject = new table_class('smg_subject');
+	$subject = new table_class('fb_subject');
 	$subject->update_attributes($_POST['subject'],false);
 	$subject->identity = strtolower($subject->identity);
 	$subject_id = $_POST['subject']['id'] ? $_POST['subject']['id'] : 0;
@@ -50,7 +50,7 @@
 	/*
 	 * 处理分类
 
-	$cate = new table_class('smg_subject_category');
+	$cate = new table_class('fb_subject_category');
 	foreach ($_POST['cate_id'] as $k => $v) {
 		$cate->id = $v;
 		$cate->subject_id = $subject->id;

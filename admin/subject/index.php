@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require_once('../../frame.php');
 	$key = $_REQUEST['key'];
 ?>
@@ -10,6 +11,7 @@
 	<meta http-equiv=Content-Language content=zh-CN>
 	<title>福布斯中文网</title>
 	<?php
+		judge_role();
 		css_include_tag('admin');
 		use_jquery();
 		js_include_tag('admin_pub');

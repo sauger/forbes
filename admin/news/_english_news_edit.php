@@ -34,7 +34,7 @@
 </div>
 <div id=itable>
 	<form id="news_edit_en" enctype="multipart/form-data" action="english_news.post.php" method="post"> 
-	<table cellspacing="1" align="center">
+	<table cellspacing="1" align="center" width="1026">
 		<tr class=tr4>
 			<td width="15%" class=td1>Title</td>
 			<td width="85%"><input id="title_en" type="text" name="news[title]" value="<?php echo $news->title;?>"></td>
