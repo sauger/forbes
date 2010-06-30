@@ -39,7 +39,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true,$ignore
 		$pos_table->reserve = addslashes($news[$fill_count]->short_title);
 		$pos_table->static_href = static_news_url($news[$fill_count]);
 		$pos_table->save();
-		echo $pos_table->display;
+		#echo $pos_table->display;
 		$fill_count++;
 	}
 }
