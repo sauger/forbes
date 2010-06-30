@@ -23,9 +23,9 @@
 		array_push($c, "a.is_adopt=$is_adopt");
 	}
 	if($title){
-		$tmp = "(b.title like '%$title%' or b.description like '%title%'";
+		$tmp = "(b.title like '%$title%' or b.description like '%$title%'";
 		if($content_type == 'news'){
-			$tmp .= " or b.short_title like '%title%'";
+			$tmp .= " or b.short_title like '%$title%'";
 		}
 		$tmp .= ')';
 		$c[] = $tmp;
@@ -51,7 +51,6 @@
 			;
 		break;
 	}
-	
 	
 	function conver_type($type){
 		switch ($type) {
@@ -124,7 +123,6 @@
 				$url = "/subject/{$subject->identity}/{$content_type}.php?id={$items[$i]->id}";
 		?>
 				<tr class=tr3 id=<?php echo $items[$i]->item_id;?> >
-					<td><input style="width:12px;" type="checkbox" name="<?php echo $var_name;?>" value="<?php echo $items[$i]->id;?>"></td>					
 					<td><a href="<?php echo $url;?>" target="_blank"><?php echo strip_tags($items[$i]->$title_name);?></a></td>
 					<td>
 						<a href="?category_id=<?php echo $items[$i]->subject_category;?>&subject_id=<?php echo $subject_id; ?>" style="color:#0000FF">
@@ -152,8 +150,8 @@
 		?>
 		<tr class="btools">
 			<td colspan=10>
-				<button id="select_all">全选</button><button id="button_delete">删除/退回</button><?php paginate();?><button id=clear_priority>清空优先级</button><button id=edit_priority>编辑优先级</button>
-				<input type="hidden" id="db_talbe" value="fb_subject_items">
+				<?php paginate();?><button id=clear_priority>清空优先级</button><button id=edit_priority>编辑优先级</button>
+				<input type="hidden" id="db_table" value="fb_subject_items">
 			</td>
 		</tr>
 	</table>

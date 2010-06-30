@@ -3,6 +3,8 @@
 	include_once('../../frame.php');
 	judge_role();
 	$sub_id = $_GET['subject_id'];
+	$id = $_GET['id'];
+	$item_id = $_GET['item_id'];
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -47,6 +49,12 @@
 		if($db->move_first()){
 			$news_industry = $db->field_by_name('ids');
 		}
+	}
+	if($id){
+		$news = new table_class('fb_news');
+		$news->find($id);
+		$item = new table_class('fb_subject_items');
+		$item->find($item_id);
 	}
 	//if(empty($category_id)) $category_id = -1;
 	if (!$news->news_type){
@@ -108,10 +116,10 @@
 					$category = $db->query("select * from fb_subject_category where subject_id=$sub_id order by priority");
 					!$category && $category = array();
 				?>
-				<select name="subject_cid">
-					<option value='0'>请选择</option>
+				<select name="subject_cid" class="category_select">
+					<option value='-1'>请选择</option>
 					<?php foreach($category as $v){?>
-					<option value='<?php echo $v->id;?>'><?php echo $v->name;?></option>
+					<option <?php if($item->category_id==$v->id)echo "selected='selected'"?> value='<?php echo $v->id;?>'><?php echo $v->name;?></option>
 					<?php }?>
 				</select>
 			</td>

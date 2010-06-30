@@ -79,9 +79,9 @@ $(function(){
 		$("#headline").hover(function(){
 			is_changed = 2;
 		},function(){
+			is_changed = 0;
 			setTimeout(function(){
-				if(is_changed){
-					is_changed = 0;
+				if(!is_changed){
 					head_line2();}
 			},3000);
 		});
