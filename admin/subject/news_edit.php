@@ -1,265 +1,258 @@
 <?php
-session_start();
-	require_once('../../frame.php');
-	$role = judge_role();	
-	$news = new table_class('fb_news');
-	$subject_id = $_REQUEST['subject_id'];
-	if($_GET['id']){
-		$news = $news->find($_GET['id']);
-		$item = new table_class('fb_subject_items');
-		$item = $item->find($_REQUEST['item_id']);
-	}	
+	session_start();
+	include_once('../../frame.php');
+	judge_role();
+	$sub_id = $_GET['subject_id'];
 ?>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-CN>
-	<title>SMG-编辑新闻</title>
+	<title>发布新闻</title>
 	<?php 
-		css_include_tag('admin');
-		use_jquery();
-		validate_form("news_add");
-	
+
+		css_include_tag('admin2','colorbox','jquery_ui');
+		use_jquery_ui();
+		validate_form("news_edit");
+		js_include_tag('category_class.js', 'admin/news_pub', 'admin/news_edit','jquery.colorbox-min.js','../ckeditor/ckeditor.js','pubfun');
+		$column_roles = array('column_editor','column_writer');
 	?>
 </head>
 <?php 
 //initialize the categroy;
-	$db = get_db();
-	$category = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='news'");
+	//$category = new category_class('news');
+	//$category->echo_jsdata();
+	if(role_name() == 'column_editor' || role_name()=='column_writer'){ ?>
+	<script>
+		var uncheck_keyword = true;
+	</script>		
+<?php
+	}
 ?>
-<body style="background:#E1F0F7">
-	<form id="news_add" enctype="multipart/form-data" action="news.post.php" method="post"> 
-	<table width="795" border="0">
-		<tr class=tr1>
-			<td colspan="6" width="795">　　编辑新闻</td>
+<body>
+	<?php
+	if($id){
+		//$category_id = $news->category_id;
+		$db = get_db();
+		$db->query("select english_news_id from fb_news_relationship where chinese_news_id = $id ");
+		if ($db->move_first()){
+			$english_id = $db->field_by_index(0);		
+		}
+		$db->query("select publish_date,resource_id from fb_publish_schedule where resource_id = {$id} and resource_type='news'");
+		if ($db->move_first()){
+			$publish_date = $db->field_by_name('publish_date');
+		}
+		$db->query("select group_concat(a.industry_id SEPARATOR ',') as ids from fb_news_industry a left join fb_industry b on a.industry_id = b.id where a.news_id={$id}");
+		if($db->move_first()){
+			$news_industry = $db->field_by_name('ids');
+		}
+	}
+	//if(empty($category_id)) $category_id = -1;
+	if (!$news->news_type){
+		$news->news_type = 1;
+	}
+	if($_SESSION["role_name"]=='author'||$_SESSION["role_name"]=='journalist')$href="/admin/column/news_list.php";else $href="news_list.php";
+	$related_news = $news->related_news  ? explode(',',$news->related_news) : array();
+	$sub_headline = $news->sub_headline  ? explode(',',$news->sub_headline) : array();
+?>
+<div id=icaption>
+    <div id=title>发布新闻</div>
+	  <a href="subject_content.php?subject_id=<?php echo $sub_id;?>" id=btn_back></a>
+</div>
+<div id=itable>
+	<form id="news_edit" enctype="multipart/form-data" action="news.post.php" method="post"> 
+	<table cellspacing="1" width="1026" align="center">
+		
+		<?php if(has_right('schedule_news')){?>
+		<tr class=tr4>
+			<td class=td1 width="15%" >定时发布</td>
+			<td width="85%"><input type="text" name="publish_schedule_date" id="publish_schedule" class="publish_schedule" <?php if(!$publish_date) echo "disabled=true;";?> value="<?php echo $publish_date;?>"></input><input style="width:20px;" type="checkbox" id="publish_schedule_select" <?php if($publish_date) echo "checked='checked'"?>></input>(格式：2010-03-03 16:00:00)</td>
 		</tr>
-		<tr class=tr3>
-			<td width="130">标题</td><td width="695" align="left"><input type="text" name="news[title]" id="news_title" value="<?php echo $news->title;?>"></td>
+		<?php }?>
+		<?php if(has_right('schedule_news')){?>
+		<tr class=tr4>
+			<td class=td1 width="15%" >恢复自动抓取止日</td>
+			<td width="85%"><input type="text" name="news[block_endtime]" class="publish_schedule"  value="<?php echo $news->block_endtime;?>"></input>(格式：2010-03-03 16:00:00)</td>
 		</tr>
-		<tr class=tr3>
-			<td width="130">短标题</td><td width="695" align="left"><input type="text" name="news[short_title]" id="news_short_title" value="<?php echo $news->short_title;?>"><span id="max_len"></span></td>
+		<?php }?>
+		<tr class=tr4>
+			<td class=td1>标题</td>
+			<td><input type="text" name="news[title]" id="news_title" value="<?php echo strip_tags($news->title);?>"></td>
 		</tr>
-		<tr class=tr3>
-			<td>分　类</td>
-			<td align="left" class="newsselect1" >
-				<select id="sel_category" name="category_id">
-					<option value=0>请选择</option>
-					<?php
-					for($i=0;$i < count($category);$i++){ ?>
-					<option value="<?php echo $category[$i]->id;?>" <?php if($item->category_id == $category[$i]->id) echo 'selected="selected"';?>><?php echo $category[$i]->name;?></option>
-					<?php }					
-					?>
+
+		<tr class=tr4>
+			<td class=td1>短标题</td>
+			<td><input type="text" name="news[short_title]" id="news_short_title" value="<?php echo strip_tags($news->short_title);?>"></input></td>
+		</tr>
+		
+		<tr class=tr4>
+			<td class=td1>作者名</td>
+			<td><input type="text" name="news[author]" id="news_short_title" value="<?php echo strip_tags($news->author ? $news->author : $_SESSION['admin_nick_name']);?>"></input></td>
+		</tr>
+		
+		<tr class=tr4>
+			<td class=td1>杂志来源</td>
+			<td><input type="text" name="news[from_magazine]" value="<?php echo $news->from_magazine;?>"></input></td>
+		</tr>
+		
+		<tr class=tr4>
+			<td class=td1>wap标题</td>
+			<td><input type="text" name="news[wap_title]" id="news_wap_title" value="<?php echo strip_tags($news->wap_title);?>"></input></td>
+		</tr>
+		<tr class=tr4>
+			<td class=td1>分类</td>
+			<td>
+				<?php
+					$db = get_db();
+					$category = $db->query("select * from fb_subject_category where subject_id=$sub_id order by priority");
+					!$category && $category = array();
+				?>
+				<select name="subject_cid">
+					<option value='0'>请选择</option>
+					<?php foreach($category as $v){?>
+					<option value='<?php echo $v->id;?>'><?php echo $v->name;?></option>
+					<?php }?>
 				</select>
 			</td>
 		</tr>
-					
-		<tr class=tr4 id=newsshow3 >
-			<td>类别</td>
-			<td align="left" id="td_newstype">
-				<input type="radio" name="news[news_type]" value="1" checked="checked">默认
-				<input type="radio" name="news[news_type]" value="2" <?php if($news->news_type==2){ ?>checked="checked"<?php } ?>>文件
-				<input type="radio" name="news[news_type]" value="3" <?php if($news->news_type==3){ ?>checked="checked"<?php } ?>>URL
-			</td>
-		</tr>
-		<tr class=tr4 id=newsshow3 >
-			<td>关键词</td>
-			<td align="left">
-				<input type="text" size="20" name=news[keywords] id="news_keywords"  value="<?php echo $news->keywords;?>">(空格分隔)
-			</td>
-		</tr>	
+		
+		<!--
 		<tr class=tr4>
-			<td>优先级</td>
-			<td align="left">
-				<input type="text" size="20" name=priority id="priority"  value="<?php echo $item->priority;?>">(0~100)
-			</td>
-		</tr>			
-		<tr class=tr3 id=tr_file_name >
-			<td>上传文件</td>
-			<td align="left" id="tr_file_name">
-				<input type="file" name=file_name id="file_name" value="<?php echo $news->file_name;?>">
-				<?php
-					if($news->news_type == 2 && $news->file_name){
-						?>
-						　<a href="<?php echo $news->file_name;?>" target="_blank" style="color:blue;">查看</a>
-						<?php
-					}
-				?>
-			</td>
+			<td class=td1>分类</td>
+			<td><span id="span_category"></span><a href="#" id="copy_news" style="color:blue">复制到其他分类</a></td>
+		</tr>
+		 
+		<tr class=tr4 style="display:none;" id="tr_copy_news">
+			<td class=td1>复制到分类</td>
+			<td><span id="span_category_copy"></span><a href="#" id="delete_copy_news" style="color:blue">删除</a><input type="hidden" name="copy_news" id="hidden_copy_news" value="0"></input></td>
 		</tr>	
-		
-		<tr class=tr3 id=target_url>
-			<td>URL</td><td align="left"><input type="text" size="50" name=news[target_url] value="<?php echo $news->target_url; ?>"></td>
+		 -->
+		<tr class=tr4>
+			<td class=td1>关键词</td>
+			<td>
+				<select multiple="multiple" id="sel_keywords">
+					<?php $keywords = explode('||',$news->keywords);
+						if(!empty($keywords)){
+							foreach($keywords as $key){ 
+								if(empty($key)) continue;
+								?>
+							<option value="<?php echo $key?>"><?php echo $key?></option>			
+						<?php }
+						}
+					?>
+				</select>
+				<img src="/images/admin/btn_delete.png" style="cursor:pointer; float:left;" id="delete_keyword" />
+				<input type="text" id="auto_keywords" />
+				<input type="hidden" name="news[keywords]" id="news_keywords"/>
+				<img id="add_keyword" style="cursor:pointer; float:left;" src="/images/admin/btn_add.png" />
+			</td>
 		</tr>
-				
-		<tr id=newsshow3  class="normal_news tr4">
-			<td>视频</td>
-			<td align="left" id="td_video">			
-				视频<input type="file" name="video_src" id="video_src">　	
-				<?php 
-				if($news->video_src){
-						echo "<a href=\"{$news->video_src}\" target=\"_blank\">查看</a>";
-					}
-				?>
-				缩略图<input type="file" name="video_pic" id="video_pic">　
-				<?php					
-					if($news->video_photo_src){
-						echo "<a href=\"{$news->video_photo_src}\" target=\"_blank\">查看</a>";
-					}
-				?>
-				<input type="checkbox" id="ch_low_quality" <?php if($news->low_quality) echo ' checked="checked"';?>>低清
-				<input type="hidden" name="news[low_quality]" id="hidden_low_quality" value="<?php echo $news->low_quality?>">
+
+		<tr class=tr4 style="display:none">
+			<td class=td1>优先级</td>
+			<td><input type="text" name=news[priority] id="priority"  class="number" value="<?php echo $news->priority;?>">(0~100)</td>
+		</tr>
+		<!--
+		<tr class=tr4>
+			<td class=td1>头条新闻关联</td>
+			<td id="td_related_sub_headline">已关联　<span id="span_sub_headline"></span>　条新闻 <a href="#" id="a_sub_headline" style="color:blue">编辑</a></td>
+		</tr>
+		-->
+		
+		<tr class=tr4>
+			<td class=td1>相关新闻关联</td>
+			<td id="td_related_news">已关联　<span id="span_related_news"></span>　条新闻 <a href="#" id="a_related_news" style="color:blue">编辑</a></td>
+		</tr>
+		
+		<tr class=tr4>
+			<td class=td1>相关行业</td>
+			<td id="td_related_industry">
+				已关联　<span id="span_related_industry"></span>　个行业 <a href="<?php echo $news->id;?>" id="a_related_industry" style="color:blue">编辑</a>
+				<input type="hidden" id="hidden_related_industry" name="related_industry" value="<?php echo $news_industry;?>"></input>
+			</td>
+		</tr>
+		<tr class=tr4>
+			<td class=td1>上传PDF版</td>
+			<td>
+				<input type="file" name="pdf_src" id="pdf_src">
+				<?php if($news->pdf_src){?>
+				<a href="<?php echo $news->pdf_src?>" target="_blank">下载</a> <a href="#" id="a_delete_pdf">删除</a>
+				<?php }?>
 			</td>
 		</tr>
 		
-		<tr id=newsshow3  class="normal_news tr4">
-			<td>其他选项</td>
-			<td align="left">
-				<input type="checkbox" name="news[forbbide_copy]" value="1" <?php if($news->forbbide_copy==1){?>checked="checked" <?php } ?>>禁止复制   				
-				<input type="checkbox" id="check_box_commentable" <?php if($news->is_commentable) echo 'checked="checked"';?>>开启评论  
+		<tr class=tr4>
+			<td class=td1>上传封面图片</td>
+			<td>
+				<input type="file" name="news_pic">
+				<?php if($news->video_photo_src){?>
+				<a href="<?php echo $news->video_photo_src?>" target="_blank">查看</a> <a href="#" id="a_delete_pic">删除</a>
+				<?php }?>
+				<span style="color:blue;">支持格式：jpg,png,gif，小于100K</span>
+			</td>
+		</tr>		
+		<?php if($id!=''){?>
+		
+		<tr class="tr4">
+			<td class=td1>英文版</td>
+			<td>
+			<?php if(!isset($english_id)) { ?>
+			<a id="add_english_news" href="news_edit.php?chinese_id=<?php echo $news->id;?>">添加</a>
+			<?php } else { ?>
+			<a id="edit_english_news" href="news_edit.php?id=<?php echo $english_id;?>">编辑</a> <a id="delete_english_news" href="<?php echo $english_id;?>">删除</a>
+			<?php } ?>
 			</td>
 		</tr>
-		<tr id=newsshow1  class="normal_news tr3">
-			<td height=100>简短描述</td><td><?php show_fckeditor('news[description]','Admin',true,"100",$news->description);?></td>
+		<?php }?>
+		
+		<tr class="tr4">
+			<td  class=td1>放置广告</td>
+			<td><input style="width:20px;"  type="checkbox" id="news_ad_id" <?php if($news->ad_id == 1) echo "checked='checked'";?>><label for="news_ad_id">放置广告</label><input type="hidden" id="input_news_ad_id" name="news[ad_id]" value="<?php echo $news->ad_id;?>"></input></td>
 		</tr>
-		<tr id=newsshow1 class="normal_news tr3">
-			<td height=265>新闻内容</td><td><?php show_fckeditor('news[content]','Admin',true,"265",$news->content);?></td>
+
+		<tr class="tr4">
+			<td class=td1>禁止复制</td>
+			<td><input style="width:20px;"  type="checkbox" id="news_forbbide_copy" <?php if($news->forbbide_copy == 1) echo "checked='checked'";?>></input><label for="news_forbbide_copy">禁止复制</label><input type="hidden" id="input_news_forbbide_copy"  name="news[forbbide_copy]" value="<?php echo $news->forbbide_copy;?>"></input></td>
 		</tr>
-		<tr class=tr3>
-			<td colspan="2" width="795" align="center"><input id="submit" type="submit" value="发布新闻"></td>
+
+		<tr class="tr4">
+			<td class=td1>英文来源</td><td><?php show_fckeditor('news[top_info]','Admin',false,"100",$news->top_info);?></td>
+		</tr>
+		
+		<tr class="tr4">
+			<td  class=td1>简短描述</td><td><?php show_fckeditor('news[description]','Admin',false,"100",$news->description);?></td>
+		</tr>
+		
+		<tr class="tr4">
+			<td  class=td1>新闻内容</td><td><?php show_fckeditor('news[content]','Admin',false,"215",$news->content);?></td>
+		</tr>
+		
+		<tr class="btools">
+			<td colspan="2">
+				<input id="submit" type="submit" value="提交">
+				<input type="hidden" name="news[category_id]" id="category_id" value="<?php echo $news->category_id;?>">
+				<input type="hidden" name="news[image_flag]" value="<?php echo $news->image_flag;?>" id="hidden_image_flag">
+				<input type="hidden" name="id" id="hidden_news_id" value="<?php echo $news->id; ?>">
+				<input type="hidden" name="news[related_news]" id="hidden_related_news" value="<?php echo $news->related_news ? $news->related_news : "";?>"></input>
+				<input type="hidden" name="news[sub_headline]" id="hidden_sub_headline" value="<?php echo $news->sub_headline ? $news->sub_headline : "";?>"></input>
+				<input type="hidden" name="news[is_adopt] value="<?php $news->is_adopt;?>"></input>
+				<input type="hidden" name="subject_id" value="<?php echo $sub_id;?>"></input>
+			</td>
 		</tr>	
 	</table>
-		<input type="hidden" name="news[is_recommend]" id="hidden_is_recommend" value="<?php echo $news->is_recommed;?>">
-		<input type="hidden" name="id" value="<?php echo $news->id;?>">
-		<input type="hidden" name="news[is_commentable]" value="<?php echo $news->is_commentable;?>" id="hidden_is_commentable">
-		<input type="hidden" name="item_id" value="<?php echo $_REQUEST['item_id'];?>">
-		<input type="hidden" name="subject_id" value="<?php echo $subject_id;?>">
 	</form>
+</div>
+<script>
+
+$(function(){
+	
+	//	category.display_select('category_select',$('#span_category'),<?php echo $category_id;?>,'', function(id){			
+	//	});
+	//	category.display_select('category_select_copy',$('#span_category_copy'),<?php echo $category_id;?>,'', function(id){			
+	//	});
+	});	
+
+</script>
 </body>
 </html>
-
-<script>
-	$(function(){
-		$('#td_newstype input').click(function(){
-			toggle_news_type();			
-		});
-		$('#image_flag_checkbox').click(function(){
-			if($(this).attr('checked')){
-				$('#hidden_image_flag').val('1');
-			}else{
-				$('#hidden_image_flag').val('0');
-			}	
-		});
-		$('#forbbide_copy_checkbox').click(function(){
-			if($(this).attr('checked')){
-				$('#hidden_forbbide_copy').val('1');
-			}else{
-				$('#hidden_forbbide_copy').val('0');
-			}		
-		});
-		$('#check_box_commentable').click(function(){
-			if($(this).attr('checked')){
-				$('#hidden_is_commentable').val(1);
-			}else{
-				$('#hidden_is_commentable').val(0);
-			}
-			
-		});
-		$('#ch_low_quality').change(function(){
-			if($(this).attr('checked')){
-				$('#hidden_low_quality').val(1);
-			}else{
-				$('#hidden_low_quality').val(0);
-			}
-		});
-		
-		$('#news_add').submit(function(){
-			var video_array = new Array('flv','wmv','wav','mp3','mp4','avi','rm');
-			var pic_array = new Array('jpg','png','bmp','gif','icon');
-			if($('#video_src').val() != ''){
-				var video_src = $('#video_src').val().replace(/.+\./,'');
-				video_src = video_src.toLowerCase();
-				if(jQuery.inArray(video_src,video_array) == -1){
-					alert('视频格式不支持,请转换格式后再上传!可上传格式:' + video_array.join('|'));
-					return false;
-				}
-			}
-			if($('#video_pic').val() != ''){
-				var video_pic = $('#video_pic').val().replace(/.+\./,'');
-				video_pic = video_pic.toLowerCase();
-				if(jQuery.inArray(video_pic,pic_array) == -1){
-					alert('图片格式不支持,请转换格式后再上传!可上传格式:' + pic_array.join('|'));
-					return false;
-				}
-			}
-			
-			var title= $('#news_title').val();
-			if(title==""){
-				alert("请输入标题！");
-				return false;
-			}	
-			
-			var short_title= $('#news_short_title').val();
-			if($('#news_keywords').val()==''){
-				alert("请输入关键字!");
-				return false;
-			}
-			if(short_title==""){
-				alert("请输入短标题！");
-				return false;
-			}
-			if(news_type == 1){
-				var oEditor = FCKeditorAPI.GetInstance('news[content]') ;
-				var title = oEditor.GetHTML();
-				if(news_type==1&&title==""){
-					alert("请输入新闻内容！");
-					return false;
-				}
-			}
-			
-			priority = $('#priority').attr('value');
-			if(priority == '') priority = 100;
-			
-			$('#priority').attr('value', priority);	
-			if($('#sel_category').val()==0){
-				alert('请选择分类!');
-				return false;
-			}
-			news_type=  $('#td_newstype').find('input:checked').attr('value');
-			if(news_type == 3){
-				if($('#target_url input').attr('value')== ''){
-					alert('请输入新闻目标地址!');
-					return false;
-				}
-			}else if(news_type==2 && $('#file_name').next('a').length <= 0 && $('#file_name').val() == ''){
-				alert('请选择上传的文件!');
-				return false;
-			}
-	
-			if($('#video_src').attr('value') != '' && $('#video_pic').attr('value') == ''){
-				alert('请选择视频图片!');
-				return false;
-			}
-				
-			return true;
-		});	
-		toggle_news_type();	
-	});
-	function toggle_news_type(){
-		news_type=  $('#td_newstype').find('input:checked').attr('value');
-		if (news_type == 1){
-			$('.normal_news').show();
-			$('#target_url').hide();
-			$('#tr_file_name').hide();
-		}else if(news_type == 2){
-			$('.normal_news').hide();
-			$('#target_url').hide();
-			$('#tr_file_name').show();
-		}else if(news_type == 3){
-			$('.normal_news').hide();
-			$('#target_url').show();
-			$('#tr_file_name').hide();
-		}
-	}	
-</script>
