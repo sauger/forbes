@@ -20,7 +20,7 @@ function update_pos($category_name,$count=1,$pos_name,$has_children=true,$ignore
 	#$pos_count = count($positions);
 	$fill_count = 0;
 	for($i=0;$i<$news_count;$i++){
-		echo $news[$fill_count]->title;
+		echo $news[$i]->title;
 		$pos = $count == 1 ? $pos_name : $pos_name .$i;
 		$pos_table->find("first",array("conditions" => "name = '$pos'"));
 		if($pos_table->id && $pos_table->end_time > date(now()) && !$ignore_time){
