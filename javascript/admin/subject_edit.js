@@ -19,12 +19,10 @@ var menu2 = [
 				
 				tb_show('编辑','subject_module_edit.php?height=420&width=400&pos_name=' + $(this).parent().attr('id') + '&subject_id=' + $('#hidden_id').attr('value') + '&id=' + $(this).attr('id'),false)
 			}},
-			/*
 			$.contextMenu.separator,
 			{'关联内容':function(menuItem,menu){
 				tb_show('编辑','subject_select_items.php?height=420&width=700&id=' + $(this).attr('id'),false)
 			}},
-			*/
 			$.contextMenu.separator,
 			{'删除该模块':function(menuItem,menu){
 				if(confirm('确认删除?')){delete_module(this);}

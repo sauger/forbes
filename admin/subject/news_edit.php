@@ -239,7 +239,7 @@
 		<tr class="btools">
 			<td colspan="2">
 				<input id="submit" type="submit" value="提交">
-				<input type="hidden" name="news[category_id]" id="category_id" value="<?php echo $news->category_id;?>">
+				<!-- <input type="hidden" name="news[category_id]" id="category_id" value="<?php echo $news->category_id;?>"> -->
 				<input type="hidden" name="news[image_flag]" value="<?php echo $news->image_flag;?>" id="hidden_image_flag">
 				<input type="hidden" name="id" id="hidden_news_id" value="<?php echo $news->id; ?>">
 				<input type="hidden" name="news[related_news]" id="hidden_related_news" value="<?php echo $news->related_news ? $news->related_news : "";?>"></input>
