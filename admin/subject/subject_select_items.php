@@ -66,7 +66,7 @@
 <div id="div_right_box">
 	<div id="search_box">
 		<label for="keywrods">关键字:</label><input type="text" name="keywords">
-		<button id="search_bt">搜索</button>
+		<button id="search_bt">搜索</button><span style="display:none;" id="search_info">搜索中。。。</span>
 	</div>
 	<div id="item_list">
 	<div class="title">文章标题</div>
@@ -137,6 +137,7 @@
 	}
 
 	function search(){
+		$("#search_info").show();
 		$("#TB_ajaxContent").load('subject_select_items.php?' + '<?php echo $_SERVER['QUERY_STRING'];?>',{'keywords':$('#search_box input:first').attr('value')});
 	}
 </script>
