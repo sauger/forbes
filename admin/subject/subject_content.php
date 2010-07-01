@@ -87,6 +87,7 @@
 <body>
 <div id=icaption>
 	<div id=title>内容管理</div>
+	<a href="index.php" id=btn_back></a>
 	<a href="<?php echo $content_type;?>_edit.php?subject_id=<?php echo $subject_id;?>" id=btn_add></a>
 </div>
 <div id=isearch>
@@ -139,7 +140,6 @@
 							<span style="color:#0000FF;cursor:pointer" class="publish" name="<?php echo $items[$i]->item_id;?>">发布</span>
 						<?php }?>
 						<a href="<?php echo $content_type;?>_edit.php?subject_id=<?php echo $subject_id;?>&item_id=<?php echo $items[$i]->item_id;?>&id=<?php echo $items[$i]->id;?>" class="edit" name="<?php echo $items[$i]->id;?>" style="cursor:pointer">编辑</a>
-						<a href="/admin/comment/comment.php?id=<?php echo $items[$i]->id;?>&type=<?php echo $content_type;?>" style="color:#000000; text-decoration:none">评论</a>
 						<span style="cursor:pointer;color:#FF0000" class="del" name="<?php echo $items[$i]->item_id;?>">删除</span>
 						<input type="text" class="priority"  name="<?php echo $items[$i]->item_id;?>"  value="<?php if('100'!=$items[$i]->subject_priority){echo $items[$i]->subject_priority;};?>" style="width:40px;">
 					</td>

@@ -194,8 +194,8 @@
 	
 	
 	
-	
-	redirect($href.'?category='.$_POST['news']['category_id']);
+	redirect('subject_content.php?subject_id='.$_POST['subject_id']);
+	#redirect($href.'?category='.$_POST['news']['category_id']);
 	#var_dump($news);
 	
 ?>

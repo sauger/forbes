@@ -1,12 +1,12 @@
 <?php
+	session_start();
 	require_once('../../frame.php');
-	$role = judge_role();
+	judge_role();
 	$subject_id=$_REQUEST['subject_id'];
 	$category = new table_class('fb_subject_category');
 	if($_REQUEST['id'])	{
 		$category->find($_REQUEST['id']);
 	}else{
-		$category->category_type=$_REQUEST['type'];
 		$category->subject_id = $_REQUEST['subject_id'];
 	}
 ?>
@@ -16,30 +16,45 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-CN>
-	<title>smg</title>
+	<title>forbes</title>
 	<?php
 		css_include_tag('admin');
 		validate_form("category_form");
 	?>
 </head>
 <body>
+<div id=icaption>
+    <div id=title>编辑类别</div>
+	<a href="subject_category.php?id=<?php echo $category->subject_id;?>" id=btn_back></a>
+</div>
+<div id=itable>
+<form id="category_form" method="post" action="subject_category.post.php">
 	<table width="795" border="0" id="list">
-	<form id="category_form" method="post" action="subject_category.post.php">
-		<tr class=tr1>
-			<td colspan="2">　<?php echo $category->category_type;?>类别</td>
+		<tr class=tr4>
+			<td class=td1 width=15%>类别名称</td>
+			<td width=85%>
+				<input type="text" name="category[name]" class="required" value="<?php echo $category->name;?>">
+			</td>
 		</tr>
-		<tr class=tr3>
-			<td width=150>名称：</td>
-			<td width=645 align="left"><input type="text" name="category[name]"  class="required" value="<?php echo $category->name;?>"></td>
+		<tr class=tr4>
+			<td class=td1>类型</td>
+			<td>
+				<select name="category[category_type]" class="required">
+					<option value="">请选择</option>
+					<option value="news" <?php if($category->category_type=='news'){?>selected="selected"<?php }?>>新闻</option>
+					<option value="image" <?php if($category->category_type=='image'){?>selected="selected"<?php }?>>图片</option>
+				</select>
+			</td>
 		</tr>
-		
-		<tr class=tr3>
-			<td colspan="2"><button type="submit">提 交</button></td>
+		<tr class="btools">
+			<td colspan="10">
+				<input id="submit" type="submit" value="完成">
+				<input type="hidden" name="id" value="<?php echo $_REQUEST['id'];?>">
+				<input type="hidden" name="category[subject_id]" value="<?php echo $category->subject_id;?>">
+			</td>
 		</tr>
-		<input type="hidden" name="id" value="<?php echo $_REQUEST['id'];?>">
-		<input type="hidden" name="category[category_type]" value="<?php echo $category->category_type;?>">
-		<input type="hidden" name="category[subject_id]" value="<?php echo $category->subject_id;?>">
-	</form>
-	<table>
+	</table>
+</form>
+</div>
 </body>
 </html>
