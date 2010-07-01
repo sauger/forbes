@@ -116,7 +116,7 @@
 			<tr class="btools">
 				<td colspan="10">
 					<input type="hidden" name="subject[id]" id="hidden_id" value="<?php echo $subject_id;?>">
-					<input id="submit" type="submit" value="完成">	
+					<input id="submit" type="submit" value="提交更改">	
 				</td>
 			</tr>	
 			</table>
