@@ -40,16 +40,15 @@
 	<p>
 		<label>模块类型:</label>
 		<select name="module[category_type]" id="category_type">
-			<option name="newslist" value="newslist">新闻列表</option>
-			<option name="newslist" value="news">新闻内容</option>
-			<option name="newslist" value="photolist">图片列表</option>	
-			<option name="newslist" value="photo">图片展示</option>	
-			<option name="newslist" value="videolist">视频列表</option>	
-			<option name="newslist" value="video">视频展示</option>				
-			<option name="newslist" value="commet">专题评论</option>	
-		</select>	
+			<option value="newslist">新闻列表</option>
+			<option value="word">文字展示</option>
+			<option value="photolist">图片列表</option>	
+			<option value="column">专栏列表</option>	
+			<option value="list">榜单列表</option>	
+			<option value="link">链接</option>				
+		</select>
 	</p>
-	<p>
+	<p id="category_p">
 		<label>内容类别:</label>
 		<select name="module[category_id]" id="category_id">
 			<? foreach ($category as $v) {?>
@@ -58,7 +57,7 @@
 		</select>	
 		<span id="span_quick_add"><a href="#" style="color:blue;" id="a_quick_add">快速添加</a></span>
 	</p>
-	<p id="height_p">
+	<p id="height_p" style="display:none">
 		<label for="height">高度:</label><input type="text" name="module[height]" id="height" value="">像素
 	</p>
 	<p id="limit_p">
@@ -68,34 +67,37 @@
 		<label for="eheight">元素高度:</label><input type="text" name="module[element_height]" id="eheight" value="">	
 	</p>
 	<p id="ewidth_p">
-		<label for="ewidth">元素高度:</label><input type="text" name="module[element_width]" id="ewidth" value="">	
+		<label for="ewidth">元素宽度:</label><input type="text" name="module[element_width]" id="ewidth" value="">	
 	</p>
 	<p id="show_pic_p">
-		<label for="show_pic">显示新闻图片:</label>
+		<label for="show_pic">是否显示图片:</label>
 		<select name="module[show_pic]" id="show_pic">
 			<option value="0">不显示</option>
 			<option value="1">显示</option>
 		</select>	
 	</p>
 	<p id="show_title_p">
-		<label for="show_pic">显示title:</label>
+		<label for="show_pic">是否显示标题栏:</label>
 		<select name="module[show_title]" id="show_title">
 			<option value="0">不显示</option>
 			<option value="1">显示</option>
 		</select>	
-	</p>	
+	</p>
 	<p id="scroll_type_p">
 		<label>滚动类型:</label>
 		<select name="module[scroll_type]" id="scroll_type">
-			<option name="newslist" value="0">不滚动</option>
-			<option name="newslist" value="1">向左滚动</option>
-			<option name="newslist" value="2">向上滚动</option>				
-			<option name="newslist" value="3">向右滚动</option>
-			<option name="newslist" value="4">向下滚动</option>
+			<option value="0">不滚动</option>
+			<option value="1">向左滚动</option>
+			<option value="2">向上滚动</option>				
+			<option value="3">向右滚动</option>
+			<option value="4">向下滚动</option>
 		</select>	
 	</p>	
 	<p>
 		<label for="description">描述:</label><textarea name="module[description]" id="description"></textarea>
+	</p>
+	<p id="background_img_p">
+		<label for="image">背景图片:</label><input type="file" id="image"><input type="button" id="upload" value="上传">
 	</p>
 	<p>
 		<button id="save">确定</button>

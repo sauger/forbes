@@ -6,12 +6,23 @@ include_once('../../frame.php');
 $type = $_POST['type'];
 switch ($_POST['category_type']){
 	case 'newslist':$category_type='news';break;
+	case 'photolist':$category_type='image';break;
+	default:$category_type=$_POST['category_type'];
 }
 
 if($_POST['type']=='add'){
 	$item = new table_class('fb_subject_items');
 	$item->subject_id = $_POST['subject_id'];
-	$item->category_id = $_POST['category_id'];
+	switch ($category_type){
+		case 'news':
+			$item->category_id = $_POST['category_id'];
+		break;
+		case 'image':
+			$item->category_id = $_POST['category_id'];
+		break;
+		default:
+			$item->category_id = $_POST['module_id'];
+	}
 	$item->category_type = $category_type;
 	$item->resource_id = $_POST['id'];
 	$item->save();

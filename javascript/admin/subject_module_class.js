@@ -67,86 +67,85 @@ function subject_module_class(){
 		case 'newslist':
 			return '[新闻列表]('+limit+'条)';
 			break;
-		case 'news':
-			return '[新闻内容]';
+		case 'word':
+			return '[文字展示]';
 			break;
 		case 'photolist':
 			return '[图片列表]('+limit+'条)';
 			break;
-		case 'photo':
-			return '[图片展示]';
+		case 'column':
+			return '[专栏列表]('+limit+'条)';
 			break;	
-		case 'videolist':
-			return '[视频列表]('+limit+'条)';
+		case 'list':
+			return '[榜单列表]('+limit+'条)';
 			break;	
-		case 'video':
-			return '[视频展示]';
+		case 'link':
+			return '[链接]('+limit+'条)';
 			break;
+		/*	
 		case 'commet':
 			return '[专题评论]('+limit+'条)';
-			break;				
+			break;
+		*/				
 	}
 }
 	this.refresh_p = function(){
 		var cate = $('#category_type').attr('value');
 		switch(cate){
 			case 'newslist':
+				$("#category_p").show();
 				$('#limit_p').show();
-				$('#eheight_p').hide();
-				$('#ewidth_p').hide();
-				$('#scroll_type_p').show();
-				$('#show_pic_p').show();
-				break;
-			case 'news':
-				$('#limit_p').hide();
-				$('#eheight_p label').html('新闻高度:');
 				$('#eheight_p').show();
-				$('#ewidth_p label').html('新闻宽度:');
+				$('#ewidth_p').show();
+				$('#scroll_type_p').show();
+				$('#background_img_p').hide();
+				$('#show_pic_p').hide();
+				break;
+			case 'word':
+				$("#category_p").hide();
+				$('#limit_p').hide();
+				$('#eheight_p').show();
 				$('#ewidth_p').show();
 				$('#scroll_type_p').hide();
+				$('#background_img_p').hide();
 				$('#show_pic_p').hide();
 				break;				
 			case 'photolist':
+				$("#category_p").hide();
 				$('#limit_p').show();
-				$('#eheight_p label').html('图片高度:');
 				$('#eheight_p').show();
-				$('#ewidth_p label').html('图片宽度:');
 				$('#ewidth_p').show();
 				$('#scroll_type_p').show();
+				$('#background_img_p').hide();
 				$('#show_pic_p').hide();
 				break;
-			case 'photo':
-				$('#limit_p').hide();
-				$('#eheight_p label').html('图片高度:');
+			case 'column':
+				$("#category_p").hide();
+				$('#limit_p').show();
 				$('#eheight_p').show();
-				$('#ewidth_p label').html('图片宽度:');
 				$('#ewidth_p').show();
 				$('#scroll_type_p').hide();
-				$('#show_pic_p').hide();
+				$('#background_img_p').hide();
+				$('#show_pic_p').show();
 				break;	
-			case 'videolist':
+			case 'list':
+				$("#category_p").hide();
 				$('#limit_p').show();
-				$('#eheight_p').hide();
-				$('#ewidth_p').hide();
+				$('#eheight_p').show();
+				$('#ewidth_p').show();
 				$('#scroll_type_p').show();
+				$('#background_img_p').hide();
 				$('#show_pic_p').hide();
 				break;
-			case 'video':
-				$('#limit_p').hide();
-				$('#eheight_p label').html('视频高度:');
+			case 'link':
+				$("#category_p").hide();
+				$('#limit_p').show();
 				$('#eheight_p').show();
-				$('#ewidth_p label').html('视频宽度:');
 				$('#ewidth_p').show();
 				$('#scroll_type_p').hide();
+				$('#background_img_p').show();
 				$('#show_pic_p').hide();
 				break;
-			case 'commet':
-				$('#limit_p').show();
-				$('#eheight_p').hide();
-				$('#ewidth_p').hide();
-				$('#scroll_type_p').show();
-				$('#show_pic_p').hide();
-				break;										
 		}
 	}
 };

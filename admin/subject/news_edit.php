@@ -65,7 +65,7 @@
 	$sub_headline = $news->sub_headline  ? explode(',',$news->sub_headline) : array();
 ?>
 <div id=icaption>
-    <div id=title>发布新闻</div>
+    <div id=title>编辑文章</div>
 	  <a href="subject_content.php?subject_id=<?php echo $sub_id;?>" id=btn_back></a>
 </div>
 <div id=itable>

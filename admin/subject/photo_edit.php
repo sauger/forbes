@@ -1,6 +1,7 @@
 <?php
+	session_start();
 	require_once('../../frame.php');
-	$role = judge_role();
+	judge_role();
 	$id = $_REQUEST['id'];	
 	$photo = new table_class("fb_images");	
 	if($id){
@@ -14,7 +15,7 @@
 		$subject_item = $subject_item->find($item_id);
 	}	
 	$db = get_db();
-	$category = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='photo'");
+	$category = $db->query("select * from fb_subject_category where subject_id=$subject_id and category_type='image'");
 
 ?>
 
@@ -23,36 +24,35 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-CN>
-	<title>SMG</title>
+	<title></title>
 	<?php 
 		css_include_tag('admin');
 		use_jquery();		
 	?>
 </head>
-<body style="background:#E1F0F7">
+<body>
+<div id=icaption>
+    <div id=title>编辑图片</div>
+	  <a href="subject_content.php?subject_id=<?php echo $subject_id;?>&content_type=photo" id=btn_back></a>
+</div>
+<div id=itable>
 	<form id="picture_edit" enctype="multipart/form-data" action="photo.post.php" method="post"> 
-	<table width="795" border="0">
-		<tr bgcolor="#f9f9f9" height="25px;" style="font-weight:bold; font-size:13px;">
-			<td colspan="2" width="795">　　编辑图片</td>
-		</tr>
-		<tr align="center" bgcolor="#f9f9f9" height="25px;">
-			<td width="100">标　题</td>
-			<td width="695" align="left">
+	<table cellspacing="1" width="1026" align="center">
+		
+		<tr class=tr4>
+			<td class=td1 width="15%" >标　题</td>
+			<td width="85%">
 				<input type="text" name="photo[title]" id="photo_title" value="<?php echo $photo->title;?>">
 			</td>
 		</tr>
-		<tr align="center" bgcolor="#f9f9f9" height="25px;">
-			<td>优先级</td><td align="left"><input type="text" size="10" id="priority" name="photo[priority]" value="<?php if($photo->subject_priority!=100){echo $photo->subject_priority;}?>">(1-100)</td>
+		<tr class=tr4>
+			<td class=td1>优先级</td><td align="left"><input type="text" size="10" id="priority" name="photo[priority]" value="<?php if($photo->subject_priority!=100){echo $photo->subject_priority;}?>">(1-100)</td>
 		</tr>
-		<tr align="center" bgcolor="#f9f9f9" height="25px;" id=newsshow3 >
-			<td>关键词</td><td align="left"><input type="text" size="50" name="photo[keywords]" value="<?php echo $photo->keywords;?>">(请用空格或者","分隔开关键词,比如:高考 升学)</td>
+		<tr class=tr4 >
+			<td class=td1>关键词</td><td align="left"><input type="text" size="50" name="photo[keywords]" value="<?php echo $photo->keywords;?>">(请用空格或者","分隔开关键词,比如:高考 升学)</td>
 		</tr>
-		<tr align="center" bgcolor="#f9f9f9" height="25px;">
-			<td>开启评论</td><td align="left"><input type="checkbox" name="photo[commentable]" id=commentable <?php if($photo->commentable==="on"){?>checked="checked"<?php }?> ></td>
-		</tr>			
-		
-		<tr align="center" bgcolor="#f9f9f9" height="25px;">
-			<td>分　类</td>
+		<tr class=tr4>
+			<td class=td1>分　类</td>
 			<td align="left">
 			<select id="sel_category" name="item[category_id]">
 				<option value=0>请选择</option>
@@ -64,28 +64,28 @@
 			</select>
 			</td>
 		</tr>
-		<tr align="center" bgcolor="#f9f9f9" height="25px;" id=newsshow3 >
-			<td>图片链接</td><td align="left"><input type="text" size="50" name="photo[url]" id="online" value="<?php echo $photo->url;?>"></td>
+		<tr class=tr4>
+			<td class=td1>图片链接</td><td align="left"><input type="text" size="50" name="photo[url]" id="online" value="<?php echo $photo->url;?>"></td>
 		</tr>
-		<tr align="center" bgcolor="#f9f9f9" height="25px;" id=newsshow3 >
-			<td>选择图片</td><td align="left"><input type="hidden" name="MAX_FILE_SIZE1" value="2097152"><input name="image" id="upfile" type="file">(请上传小于2M的图片，格式支持jpg、gif、png)<?php if($photo->src!=''){?><a href="<?php echo $photo->src;?>" target="_blank" style="color:#0000FF">点击查看图片</a><?php } ?></td>
+		<tr class=tr4>
+			<td class=td1>选择图片</td><td align="left"><input type="hidden" name="MAX_FILE_SIZE1" value="2097152"><input name="image" id="upfile" type="file">(请上传小于2M的图片，格式支持jpg、gif、png)<?php if($photo->src!=''){?><a href="<?php echo $photo->src;?>" target="_blank" style="color:#0000FF">点击查看图片</a><?php } ?></td>
 		</tr>
-		<tr align="center" bgcolor="#f9f9f9" height="150px;" id=newsshow1>
-			<td>简短描述</td><td align="left"><textarea cols="80" rows="8" name="photo[description]" class="required" ><?php echo $photo->description;?></textarea></td>
+		<tr class=tr4>
+			<td class=td1>简短描述</td><td align="left"><textarea cols="80" rows="8" name="photo[description]" class="required" ><?php echo $photo->description;?></textarea></td>
 		</tr>
 
-		<tr bgcolor="#f9f9f9" height="30px;">
+		<tr class="btools">
 			<td colspan="2" width="795" align="center"><input id="submit" type="submit" value="发布图片"></td>
 		</tr>	
 	</table>
 
 	<input type="hidden" name="id" value="<?php echo $id;?>">
-	<input type="hidden" name="photo[is_recommend]" id="recommend" value="1">
 	<input type="hidden" name="item_id" value="<?php echo $_REQUEST['item_id'];?>">
 	<input type="hidden" name="item[subject_id]" value="<?php echo $subject_id;?>">
-	<input type="hidden" name="item[category_type]" value="photo">
+	<input type="hidden" name="item[category_type]" value="image">
 	<input type="hidden" name="item[resource_id]" value="<?php echo $id;?>">
 	</form>
+</div>
 </body>
 </html>
 
