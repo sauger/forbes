@@ -9,4 +9,5 @@
 		$("#sy"+num).css('display','none');	
 		$("#sy"+(parseInt(num)-1)).css('display','inline');	
 	});
+	
 });
