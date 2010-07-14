@@ -21,6 +21,7 @@
 		<?php echo $js_name;?>.element_height = '<?php echo $item->element_height;?>';
 		<?php echo $js_name;?>.element_width = '<?php echo $item->element_width;?>';
 		<?php echo $js_name;?>.scroll_type = '<?php echo $item->scroll_type;?>';
+		<?php echo $js_name;?>.show_title = '<?php echo $item->show_title;?>';	
 		<?php echo $js_name;?>.record_limit = '<?php echo $item->record_limit;?>';
 		<?php echo $js_name;?>.name = '<?php echo $item->name;?>';
 		<?php echo $js_name;?>.pos_name = '<?php echo $item->pos_name;?>';		
@@ -92,12 +93,14 @@
 			<option value="3">向右滚动</option>
 			<option value="4">向下滚动</option>
 		</select>	
-	</p>	
+	</p>
+	<!-- 
 	<p>
 		<label for="description">描述:</label><textarea name="module[description]" id="description"></textarea>
-	</p>
+	</p> -->
 	<p id="background_img_p">
-		<label for="image">背景图片:</label><input type="file" id="image"><input type="button" id="upload" value="上传">
+		<label for="image">背景图片:</label><input id="fileToUpload" size="10" type="file" name="fileToUpload"><input type="button" id="upload" value="上传"><?php if($item->image!=''){?><a target="_blank" href='<?php echo $item->image;?>'>点击查看</a><?php }?><img id="loading" style="display:none" src="/images/admin/loading.gif">
+		<input type="hidden" id='image' name="module[image]">
 	</p>
 	<p>
 		<button id="save">确定</button>
@@ -111,7 +114,50 @@
 <?php 
   assing_to_js($item, 'module');
 ?>
-<script>	
+<script>
+function ajaxFileUpload()
+{
+	$("#loading")
+	.ajaxStart(function(){
+		$(this).show();
+	})
+	.ajaxComplete(function(){
+		$(this).hide();
+	});
+
+	$.ajaxFileUpload
+	(
+		{
+			url:'doajaxfileupload.php',
+			secureuri:false,
+			fileElementId:'fileToUpload',
+			dataType: 'json',
+			success: function (data, status)
+			{
+				if(typeof(data.error) != 'undefined')
+				{
+					if(data.error != '')
+					{
+						alert(data.error);
+					}else
+					{
+						$("#image").val(data.msg);
+						alert('上传成功');
+					}
+				}
+			},
+			error: function (data, status, e)
+			{
+				alert(e);
+			}
+		}
+	)
+	
+	return false;
+
+}
+
+
 	category = [];
 	<?php
 		if(count($category)>0&&$category){
@@ -145,11 +191,17 @@
 	
 	$(function(){
 		module.refresh();
+		module.refresh_p();
 		$('#cancel').click(function(){
 			tb_remove();
 			return false;
 		});
 		//var id = <?php echo $_REQUEST['id'] ?>;
+		
+		$('#upload').click(function(){
+				ajaxFileUpload();
+		});
+		
 		$('#save').click(function(){
 			if(check_valdate()==false) return;
 			$.post('subject_module.post.php',$('#subject_item_container input,#subject_item_container textarea,#subject_item_container select').serializeArray(),function(data){				

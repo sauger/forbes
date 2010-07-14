@@ -11,6 +11,7 @@ function subject_module_class(){
 	this.element_width;
 	this.element_height;
 	this.scroll_type = 'none';
+	this.show_title;
 	this.name;
 	this.record_limit;
 	this.refresh_dom = '#subject_item_container';
@@ -27,6 +28,7 @@ function subject_module_class(){
 		$(this.refresh_dom + ' #ewidth').attr('value',this.element_width);
 		$(this.refresh_dom + ' #scroll_type').attr('value',this.scroll_type);
 		$(this.refresh_dom + ' #hidden_module_id').attr('value',this.id);
+		$(this.refresh_dom + ' #show_title').attr('value',this.show_title);
 		$(this.refresh_dom + ' #hidden_subject_id').attr('value',this.subject_id);
 		$(this.refresh_dom + ' #description').attr('value',this.description);
 		$(this.refresh_dom + ' #hidden_pos_name').attr('value',this.pos_name);
@@ -41,6 +43,7 @@ function subject_module_class(){
 		this.element_height = $(this.refresh_dom + ' #eheight').attr('value');
 		this.element_width = $(this.refresh_dom + ' #ewidth').attr('value');
 		this.scroll_type = $(this.refresh_dom + ' #scroll_type').attr('value');
+		this.show_title = $(this.refresh_dom + ' #show_title').attr('value');
 		this.id = $(this.refresh_dom + ' #hidden_module_id').attr('value');
 		this.subject_id = $(this.refresh_dom + ' #hidden_subject_id').attr('value');
 		this.pos_name = $(this.refresh_dom + ' #hidden_pos_name').attr('value');

@@ -15,7 +15,7 @@
 			css_include_tag("admin2","subject/subject.css","subject/subject1.css","contextmenu/jquery.contextmenu","thickbox");			
 			use_jquery_ui();
 
-			js_include_tag('jquery.contextmenu','admin/subject_edit','thickbox','admin/subject_module_class');
+			js_include_tag('jquery.contextmenu','admin/subject_edit','thickbox','admin/subject_module_class','ajaxfileupload');
 			
 			/*
 			 * get data
@@ -69,7 +69,7 @@
 						<?php
 							if($subject->templet_name == "templet1"){
 						?>
-						<div id="menu" class="bder">menu</div>
+						<div id="menu" class="bder subject_pos">menu</div>
 						<div id="pos1" class="bder subject_pos">left</div>
 						<div id="right_box" class="bder">
 							<div id="pos2" class="bder subject_pos">top</div>
