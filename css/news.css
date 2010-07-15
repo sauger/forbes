@@ -14,7 +14,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #l{width:665px; margin-top:10px; overflow:hidden;}
 
-#news_title{width:650px; margin-left:10px; overflow:hidden; font-size:30px; color:#1E448D; line-height:40px; font-weight:bold; font-family:微软雅黑,宋体; clear:both;}
+#news_title{width:650px; margin-left:10px; overflow:hidden; font-size:30px; color:#1E448D; line-height:40px; font-weight:bold; font-family:黑体,微软雅黑,宋体; clear:both;}
 
 #news_info{width:650px; height:18px; margin-top:10px; margin-left:12px; color:#97ABCA; line-height:18px; font-size:14px; overflow:hidden;}
 #news_desc{width:630px; margin-top:10px; margin-left:10px; font-size:14px; line-height:20px;  padding:10px; background:#DFDFDF}
