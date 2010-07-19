@@ -30,7 +30,7 @@
 </div>
 <form id="vote_form" method="post" enctype="multipart/form-data" action="vote.post.php">
 	<div id=itable>
- 	<table cellspacing="1" align="center">
+ 	<table cellspacing="1" align="center" width="1026">
 		<tr class=tr4>
 			<td align="center" width="15%">标题：</td>
 			<td width="85%" align="left"><input type="text" class="required" name="vote[name]" value="<?php echo $vote->name;?>"></td>

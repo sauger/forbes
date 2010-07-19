@@ -30,7 +30,7 @@
 </div>
 <div id=itable>
 	<form id="news_edit" enctype="multipart/form-data" action="news.post.php" method="post"> 
-	<table cellspacing="1" align="center">
+	<table cellspacing="1" align="center" width="1026">
 		
 		<?php if(has_right('schedule_news')){?>
 		<tr class=tr4>

@@ -1,0 +1,31 @@
+body {
+	
+}
+#pos1{width:30%;float:left;}
+#right_box{width:60%;float:right;}
+#pos2{width:93%;float:left;margin-top:10px;}
+#pos3{width:45%;float:left;margin-top:10px;}
+#pos4{width:45%;float:left;margin-top:10px;}
+#pos5{margin-top:10px;width:93%;}
+#pos6{width:45%;float:left;margin-top:10px;}
+#pos7{width:45%;float:left;margin-top:10px;}
+#pos8{margin-top:10px;width:93%;}
+#menu{width:100%;margin-bottom:10px;}
+
+#sub2_tl{width:30%;float:left;}
+#sub2_tc{width:30%;float:left;}
+#sub2_tr{width:30%;float:left;}
+#sub2_m{width:93%;float:left;margin-top:10px;}
+#sub2_bl{width:45%;float:left;margin-top:10px;}
+#sub2_br{width:45%;float:left;margin-top:10px;}
+
+#sub3_tl{width:25%;float:left; display:inline;}
+#sub3_tc{width:25%;float:left;display:inline;}
+#sub3_tr{width:25%;float:left;display:inline;}
+#middle_left{width:45%; margin-bottom:10px; float:left;display:inline;}
+#sub3_mt{width:95%;float:left;margin-top:10px;display:inline;}
+#sub3_mbl{width:45%;float:left;margin-top:10px;display:inline;}
+#sub3_mbr{width:45%;float:left;margin-top:10px;display:inline;}
+#sub3_mr{width:35%;float:left;margin-top:10px;display:inline;}
+#sub3_bl{width:40%;float:left;display:inline;}
+#sub3_br{width:40%;float:left;display:inline;}

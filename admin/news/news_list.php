@@ -12,6 +12,7 @@
 	$db = get_db();
 	$c = array();
 	array_push($c, "language_tag=$language_tag");
+	array_push($c, "category_id is not null");
 	if($title!= ''){
 		array_push($c, "title like '%".trim($title)."%' or keywords like '%".trim($title)."%' or description like '%".trim($title)."%' or author like '%{$title}%' or content like '%{$title}%'");
 	}

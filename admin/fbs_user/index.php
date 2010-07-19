@@ -65,6 +65,7 @@
 			<td colspan=10><?php paginate();?></td>
 		</tr>
 	</table>
+	</div>
 </body>
 </html>
 <script>

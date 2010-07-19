@@ -5,7 +5,7 @@
 	$dept_id = $_REQUEST['dept_id'];
 	
 	if($role=='admin'){
-		$category = new table_class("smg_category");
+		$category = new table_class("fb_category");
 		$url = 'picture_list.php';
 		if($type==""){	
 			$category_menu = $category->find("all",array('conditions' => "category_type='picture'","order" => "platform,priority"));
@@ -13,18 +13,18 @@
 			$category_menu = $category->find("all",array('conditions' => "category_type='picture' and name='".$type."'","order" => "platform,priority"));	
 		}
 	}else{
-		$category = new table_class("smg_category_dept");
+		$category = new table_class("fb_category_dept");
 		$url = 'picture_list2.php';
 		if($type==""){	
 			$category_menu = $category->find("all",array('conditions' => "category_type='picture' and dept_id=".$dept_id,"order" => "priority"));
 		}else{
 			$category_menu = $category->find("all",array('conditions' => "category_type='picture' and name='".$type."' and dept_id=".$dept_id,"order" => "priority"));	
 		}
-		$category = new table_class("smg_category");
+		$category = new table_class("fb_category");
 		$category_menu2 = $category->find("all",array('conditions' => "category_type='picture'","order" => "platform,priority"));
 	}
 	
-	$dept = new table_class("smg_dept");
+	$dept = new table_class("fb_dept");
 	$rows_dept = $dept->find("all");
 ?>
 
