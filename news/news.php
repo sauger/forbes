@@ -35,7 +35,7 @@
 		if($page_type == 'static'){
 			return get_news_en_static_url($news);
 		}
-		return "news.php?id={$news->id}&lang=en";o
+		return "news.php?id={$news->id}&lang=en";
 	}
 	
 	$db->query("select text as words from fb_filte_words");
@@ -209,7 +209,7 @@
 							
 							</div>
 						<?php
-								} 
+							} 
 						}
 						?>
 				</div>
