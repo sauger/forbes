@@ -1,0 +1,211 @@
+.box-left ,.box-right{
+	width:652px;
+	float:left;
+	}
+.overview-main ,.activities-main{
+	border-top:3px solid #ca0016;	
+	margin-top:8px;
+	padding-bottom:6px;
+	background:#FFFFFF;	
+
+}
+.overview-title ,.activities-title ,.aboutlist-title ,.topic-title ,.news-title ,.scene-pic-title ,.process-title ,.guests-title{
+	background:url(../images/over_1.gif) 55px top no-repeat;
+	padding:15px 0 0 15px;
+	width:95%;
+}
+.activities-title{
+	background:url(../images/avtivities_1.gif) 55px top no-repeat;
+}
+
+.content-box-tex{
+	width:618px;
+	border:2px solid #DCDCDC;
+	margin:0 auto;
+	padding:0 10px 5px 10px;	
+}
+.content-box-tex p{
+	line-height:20px;
+	margin-top:20px;
+}
+.content-box-pic{
+	width:631px;
+	margin:0 auto;
+	
+}
+.content-box-pic ul ,.scene-pic ul{
+	width:631px;
+	overflow:hidden;
+	margin-top:8px;
+	background:#f3f3f3;
+	border:1px solid #dadada;
+}
+.content-box-pic ul li ,.scene-pic ul li{
+	width:139px;
+	overflow:hidden;
+	float:left;
+	text-align:center;
+	margin:8px 11px 2px 6px;
+}
+.content-box-pic ul li a ,.scene-pic ul li{
+	color:#868888;
+}
+.content-box-pic img ,.scene-pic img{
+	border:3px solid #FFFFFF;	
+	width:130px;
+	height:91px;
+	display:block;
+}
+.box-right{
+	width:329px;
+	float:left;
+	line-height:18px;
+	margin-left:8px;
+	overflow:hidden;
+}
+.box-right-new{	
+	width:91%;
+	float:left;
+	padding:0 14px;
+	background:url(../images/r_new_bg_1.gif) repeat-y;
+}
+.box-right-new .title{
+	margin:20px 0 5px 0;
+	text-align:center;
+}
+.box-right-new .title_2{
+	margin:0 auto 8px;
+	padding:0 5px;
+	background:#eaebeb;	
+}
+.box-right-new .text{
+	color:#89898c;
+}
+.box-right-new .text img{
+	float:right;
+	margin:10px 0;
+}
+.box-right-new .bottom{	
+	float:left;
+}
+
+/* ============================== aboutlist ==================================== */
+.aboutlist-title{
+	background:url(../images/list_1.gif) 55px top no-repeat;
+}
+/* ============================== topic ==================================== */
+.topic-title{
+	background:url(../images/topic_1.gif) 55px top no-repeat;
+}
+/* ============================== scene ==================================== */
+.scene-tex{
+	background:#f3f3f3;
+	padding:8px;
+	float:left;
+}
+#scene-box{
+	height:500px;
+	overflow:hidden;
+	float:left;
+}
+.scene-pic{
+	clear:both;
+}
+.scene-pic ul{
+	width:98%;
+	margin:0 auto;
+	overflow:hidden;
+}
+.scene-pic ul li{
+	margin:8px 10px;
+	display:inline;
+	display:block;
+}
+.scene-pic ul li a{	color:#868888;line-height:18px;}
+.scene-pic-title{
+	background:url(../images/scene-pic-title.gif) 55px top no-repeat;
+}
+/* ============================== page ==================================== */
+ul.page-main{
+	width:80%;	
+	text-align:center;
+	margin:0 auto 0px;
+	overflow:hidden;
+	}
+ul.page-main li{
+	width:14px;
+	height:14px;
+	margin:0 4px;
+	float:left;
+	background:url(../images/page-bg.gif) no-repeat;
+}
+ ul.page-main li a:hover,ul.page-main li a:active{
+	color:#f80909;
+}
+ul.page-main li a:hover ,a:active{
+	color:#f80909;
+}
+/* ==========================  news ============================================ */
+.news-title{
+	background:url(../images/news_1.gif) 55px top no-repeat;
+}
+/* ==========================  process ============================================ */
+.process-title{
+	background:url(../images/process_title.gif) 55px top no-repeat;
+}
+.scene-tex table{
+	width:85%;
+	margin:0 auto;		
+}
+.scene-tex td{
+	border-bottom:2px solid #FFFFFF;
+	line-height:35px;	
+}
+/* ==========================  guests ============================================ */
+.guests-title{
+	background:url(../images/guests_title.gif) 55px top no-repeat;
+}
+.guests-pic-box{
+	width:98%;
+	height:305px;
+	margin:0 auto;
+	border:2px solid #dcdcdc;
+	background:#ececec;
+	position:relative;
+	overflow:hidden;
+}
+.guests-pic-box img{
+	float:left;
+}
+
+ul.guests-pic-little {
+	float:left;
+	width:178px;
+	margin-left:4px;
+}
+ul.guests-pic-little li{
+	float:left;
+	width:57px;
+	height:73px;
+	text-align:right;
+	border-top:1px solid #FFFFFF;
+	border-right:1px solid #FFFFF;
+	display:block;
+	margin-left:1px;
+}
+ul.guests-pic-little li a{display:block;overflow:hidden;width:55px;height:55px}
+ul.guests-pic-little li a img{
+	width:55px;
+	height:55px;
+	display:block
+}
+ul.guests-pic-little li a:hover,ul.guests-pic-little li a:active{
+	border:2px solid red;
+}
+.guests-pic-tex{
+	position:absolute;
+	color:#780202;
+	text-align:right;
+	bottom:20px;
+	right:194px;
+}

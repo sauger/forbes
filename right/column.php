@@ -13,7 +13,7 @@
 	?>
 	<div class="column_box">
 		<div class="col_pic">
-			<img src="<?php echo $record[$i]->image_src;?>">
+			<a href="/column/<?php echo $record[$i]->name;?>"><img border="0" src="<?php echo $record[$i]->image_src;?>"></a>
 		</div>
 		<div class="clo_name">
 			<a href="/column/<?php echo $record[$i]->name;?>"><?php echo $record[$i]->nick_name;?></a>
@@ -37,7 +37,7 @@
 	?>
 	<div class="column_box">
 		<div class="col_pic">
-			<img src="<?php echo $record[$i]->image_src3;?>">
+			<a href="/column/<?php echo $record[$i]->name;?>"><img border="0" src="<?php echo $record[$i]->image_src;?>"></a>
 		</div>
 		<div class="clo_name">
 			<a href="/column/<?php echo $record[$i]->name;?>"><?php echo $record[$i]->nick_name;?></a>
