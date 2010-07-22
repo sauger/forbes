@@ -68,8 +68,6 @@
 			</div>
 			<div id="top_menu2_right"></div>
 		</div>
-		
-		
 		<div id="content">
 			<div id="content_left">
 				<div id="content_banner_left">
@@ -137,7 +135,6 @@
 						<font>创业</font>
 						<a href="">更多</a>
 					</div>
-					
 					<div class="keysword_banner">
 						<div class="keysword_value">
 							<ul>
@@ -213,7 +210,6 @@
 						<font>科技</font>
 						<a href="">更多</a>
 					</div>
-					
 				</div>
 				<div id="content_right">
 					<div class="content_pg_title">观点<a href="">更多</a></div>
@@ -351,11 +347,8 @@
 							<?php }?>
 						</div>
 					</div>
-						
 				</div>
 			</div>
-			
-				
 			<div id="contentc_right">
 				<div class="content_right_top"></div>
 				<div class="content_right_banner">
@@ -400,7 +393,6 @@
 				<div id="right_img">
 					<a href=""><img src="/images/index_two/ao.jpg"></a>
 				</div>
-				
 				<div class="content_right_top" style="margin-top:15px;"></div>
 				<div class="content_right_banner">
 					<div class="c_r_title" style="margin-top:5px;">
@@ -427,7 +419,6 @@
 					<div class="teacher_btn3"><a href="">报名理财师&nbsp;&nbsp;</a></div>
 				</div>
 				<div class="content_right_bottom"></div>
-				
 				<div class="content_right_top" style="margin-top:15px;"></div>
 				<div class="content_right_banner">
 					<div class="c_r_title" style="margin-top:5px;">
@@ -459,13 +450,13 @@
 				</div>
 				<div class="content_right_top" style="margin-top:15px;"></div>
 				<div class="content_right_banner">
-						<div class="c_r_title" style="margin-top:5px;">
-							<div>城  市</div>
-							<a href=""><img src="/images/index_two/g4.jpg"/></a>
-						</div>
-						<div class="con_r_hr">
-							<div style="width:35px;"></div>	
-						</div>
+					<div class="c_r_title" style="margin-top:5px;">
+						<div>城  市</div>
+						<a href=""><img src="/images/index_two/g4.jpg"/></a>
+					</div>
+					<div class="con_r_hr">
+						<div style="width:35px;"></div>	
+					</div>
 					<div class="city">
 						<a href="" style="font-weight:bold; color:#004276;">撒旦发射点撒旦发射点发散发杀死撒旦发射点发散发杀死发散发杀死</a>
 					</div>
@@ -489,22 +480,22 @@
 				<div class="content_right_bottom"></div>
 				<div class="content_right_top" style="margin-top:15px;"></div>
 				<div class="content_right_banner">
-						<div class="c_r_title" style="margin-top:5px;">
-							<div>在线调查</div>
-							<a href=""><img src="/images/index_two/g4.jpg"/></a>
-						</div>
-						<div class="con_r_hr">
-							<div style="width:55px;"></div>	
-						</div>
-						<div class="survey">
-							<a href="">阿斯顿法守法说法阿阿斯顿法守法说法阿斯顿法守法说法大萨芬斯顿法守法说法大萨芬</a>
-						</div>
-						<div class="survey_submit"><a href="">...进入调查</a></div>
-						<div class="h_h" style="width: 285px; margin-top:8px;"></div>
-						<div class="survey">
-							<a href="">阿斯顿法守法说法阿阿斯顿法守法说法阿斯顿法守法说法大萨芬斯顿法守法说法大萨芬</a>
-						</div>
-						<div class="survey_submit"><a href="">...进入调查</a></div>
+					<div class="c_r_title" style="margin-top:5px;">
+						<div>在线调查</div>
+						<a href=""><img src="/images/index_two/g4.jpg"/></a>
+					</div>
+					<div class="con_r_hr">
+						<div style="width:55px;"></div>	
+					</div>
+					<div class="survey">
+						<a href="">阿斯顿法守法说法阿阿斯顿法守法说法阿斯顿法守法说法大萨芬斯顿法守法说法大萨芬</a>
+					</div>
+					<div class="survey_submit"><a href="">...进入调查</a></div>
+					<div class="h_h" style="width: 285px; margin-top:8px;"></div>
+					<div class="survey">
+						<a href="">阿斯顿法守法说法阿阿斯顿法守法说法阿斯顿法守法说法大萨芬斯顿法守法说法大萨芬</a>
+					</div>
+					<div class="survey_submit"><a href="">...进入调查</a></div>
 				</div>
 				<div class="content_right_bottom"></div>
 			</div>
@@ -545,9 +536,9 @@
 		</div>
 		<div id="con_banner">
 			<div class="content_pg_title">观点<a href="">更多</a></div>
-						<div class="pg_hr">
-						<div class="content_pg_hr"></div>
-						<div class="dian_hr"></div>
+				<div class="pg_hr">
+				<div class="content_pg_hr"></div>
+				<div class="dian_hr"></div>
 			</div>
 			<?php for($i = 0 ; $i < 4 ; $i ++){?>
 			<div class="con_ban_title">
@@ -563,31 +554,30 @@
 		<div id="right_bottom">
 			<div class="content_right_top"></div>
 			<div class="content_right_banner">
-						<div class="c_r_title">
-							<div>最受欢迎文章</div>
-							<a href=""><img src="/images/index_two/g4.jpg"/></a>
-						</div>
-						<div class="con_r_hr">
-							<div style="width:80px;"></div>	
-						</div>
-						<div id="day">
-							<div style="border-left:0px solid #A4A4A4;"><a href="" style="color:#A50203;">一天</a></div>
-							<div><a href="" >一周</a></div>
-							<div><a href="">一月</a></div>
-						</div>
-						<?php for($i = 0 ; $i < 10 ; $i++){?> 
-						<div class="day_banner"  style="<?php if($i == 0){ echo 'background:#F7F7F7;';}?>">
-							<div class="day_banner_number" style="<?php if($i == 0){ echo 'color:#ffffff;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $i+1;?></div>
-							<div class="day_banner_value"><a href="">撒旦发射的发放</a></div>
-							<?php if($i != 9 ){?> 
-							<div class="h_h" style=" width:248px;"></div>
-							<?php }?>
-						</div>
-						<?php }?>
+				<div class="c_r_title">
+					<div>最受欢迎文章</div>
+					<a href=""><img src="/images/index_two/g4.jpg"/></a>
+				</div>
+				<div class="con_r_hr">
+					<div style="width:80px;"></div>	
+				</div>
+				<div id="day">
+					<div style="border-left:0px solid #A4A4A4;"><a href="" style="color:#A50203;">一天</a></div>
+					<div><a href="" >一周</a></div>
+					<div><a href="">一月</a></div>
+				</div>
+				<?php for($i = 0 ; $i < 10 ; $i++){?> 
+				<div class="day_banner"  style="<?php if($i == 0){ echo 'background:#F7F7F7;';}?>">
+					<div class="day_banner_number" style="<?php if($i == 0){ echo 'color:#ffffff;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $i+1;?></div>
+					<div class="day_banner_value"><a href="">撒旦发射的发放</a></div>
+					<?php if($i != 9 ){?> 
+					<div class="h_h" style=" width:248px;"></div>
+					<?php }?>
+				</div>
+				<?php }?>
 			</div>
 			<div class="content_right_bottom"></div>
 		</div>
-		
 		<div id="bottom_banner">
 			<div class="bottom_value">
 				<ul>

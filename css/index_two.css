@@ -179,7 +179,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 		#content_logon{width:648px; height:103px; margin-top:10px; overflow:hidden; border:1px solid #AEB7C0; float:right;}
 			#content_logon a img{width:646px; height:101px; margin:1px; border:0px solid red;}
 			
-		#con_banner{width:348px;  margin-top:5px; overflow:hidden;}
+		#con_banner{width:348px;  margin-left:5px; margin-top:5px; overflow:hidden;}
 			.con_ban_title{width:340px; height:36px; margin-top:15px; margin-left:10px; font-size:12px; line-height:18px;}
 				.con_ban_title a{font-size:12px; color:#4A4A4A; text-decoration:none;}
 			.con_ban_value{width:330px; height:16px; font-weight:bold; margin-left:10px; font-size:12px; line-height:16px; text-align:right;}
