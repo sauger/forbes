@@ -12,7 +12,7 @@
 	<meta name="description" content="" />
 	<?php
 		use_jquery();
-		#js_include_tag();
+		js_include_tag('public');
 		css_include_tag('index_two','top2');
 	?>
 </head>

@@ -14,10 +14,15 @@
 <div id="top_bg">
 	<div id="top_logon"></div>
 	<div id="top_banner">
-		<select>
-		 <option>assadf</option>
-		</select>
-		<input style="width:312px;" type="text"/>
+		<div class=forbes_search>
+				<select name="selsearch" class="iselect">
+					<option value="list">榜单</option>
+					<option value="rich">富豪</option>
+					<option value="author_news">作者</option>
+					<option value="news">文章</option>
+				</select>
+		</div>
+		<input id="top_input" style="width:312px;" type="text"/>
 		<input type="button" id="top_select" value="查  询"/>
 	</div>
 	<div id="top_right_banner">
