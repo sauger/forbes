@@ -6,33 +6,6 @@ div{margin:0; padding:0; float:left; display:inline;}
 
 #ibody{width:1000px; margin:0 auto; float:none; display:block;}
 
-#top_img_left{width:727px; height:88px; border:1px solid #898B8B;}
-#top_img_left img{width:725px; height:86px; margin-left:1px; margin-top:1px; }
-#top_img_right{width:264px; height:88px; border:1px solid #898B8B; float:right;}
-#top_img_right img{width:262px; height:86px; border:0px solid #000000;}
-#top_bg{width:1000px; height:96px; margin-top:3px; background: url(/images/index_two/top_pg.jpg) repeat-x;}
-	#top_logon{width:170px; height:76px; margin-top:7px; margin-left:8px; background:url(/images/index_two/logon.jpg) no-repeat; }
-	#top_banner{width:640px; height:76px;}
-		#top_banner select{width:98px; height:22px; line-height:22px; margin-top:35px; margin-left:105px;}
-		#top_banner .input{ height:22px; margin-top:35px; margin-left:5px;}
-		#top_select{width:71px; height:24px; margin-top:35px; line-height:24px; text-align:center; color:#ffffff; background:url(/images/index_two/top_btn1.jpg) no-repeat; border:0px solid #000000;}
-	#top_right_banner{width:170px; height:66px; padding-top:10px; float:right;}
-		.top_login{width:65px; height:12px; border-left:1px solid #8C8E8F; text-align: center;}
-		#top_login{width:35px; height:12px; }
-		#top_right_banner a{font-size:12px; text-decoration: none; color:#8C8E8F;}
-		#top_right_banner font{font-size:12px; text-decoration: none; color:#11B9F8;}
-	#top_menu_banner{width:1000px; height:32px; margin-top:2px; }
-		#top_menu_left{width:5px; height:31px; background:url(/images/index_two/menu1.jpg) no-repeat;}
-		#top_menu_content{width:990px; height:32px; background:url(/images/index_two/menu_pg.jpg) repeat-x;}
-			#top_menu_content div{width:8.9%; height:12px; margin-top:5px; border-left:1px solid #77BDDF; border-right:1px solid #036AB9; color:#ffffff; font-weight: bold; text-align: center;}
-		#top_menu_right{width:5px; height:31px; background:url(/images/index_two/menu2.jpg) no-repeat;}
-	#top_menu2_banner{height:35px; margin-top: -7px;}
-		#top_menu2_left{width:7px; height:35px; background:url(/images/index_two/menu3.jpg) no-repeat;}
-		#top_menu2_content{ height:35px; background:url(/images/index_two/menu2_pg.jpg) repeat-x;}
-			.t_content{width:90px; height:20px; margin-top: 5px; line-height: 20px;}
-				.t_content div{width: 3px; height: 3px; margin-top: 8px; background: #3089C3; font-size: 0px; }
-				.t_content a{margin-left:7px; color:#807C7C; font-size: 12px; text-decoration: none;}
-		#top_menu2_right{width:8px; height:35px; background:url(/images/index_two/menu4.jpg) no-repeat;}
 
 #content{width:1000px; overflow: hidden;}
 	#content_left{width:686px; }

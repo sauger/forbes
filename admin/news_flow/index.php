@@ -13,11 +13,15 @@
 		css_include_tag('admin');
 		use_jquery();
 		js_include_tag('admin_pub','category_class','admin/pub/search','admin/news/news_list');
+		$category = new category_class('news');
+		$category->echo_jsdata();
 	?>
 </head>
 <body>
 <?php 
 if($_SESSION['role_name']=='sys_admin'){
 	include '_edit.php';
+}elseif($_SESSION['role_name']=='column_writer'||$_SESSION['role_name']=='column_editor'){
+	include '_column.php';
 }
 ?>

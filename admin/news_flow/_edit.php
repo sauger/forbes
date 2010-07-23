@@ -1,5 +1,4 @@
 <?php
-$category = new category_class('news');
 	$title = $_REQUEST['title'];
 	$category_id = $_REQUEST['category'] ? $_REQUEST['category'] : -1;
 	$is_adopt = $_REQUEST['adopt'];
@@ -28,7 +27,6 @@ $category = new category_class('news');
 	}
 	$news = new table_class($tb_news);
 	$record = $news->paginate('all',array('conditions' => implode(' and ', $c),'order' => 'created_at desc,category_id'),30);
-	$category->echo_jsdata();
 ?>
 <div id=icaption>
     <div id=title>新闻管理</div>

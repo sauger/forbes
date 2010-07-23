@@ -13,63 +13,12 @@
 	<?php
 		use_jquery();
 		#js_include_tag();
-		css_include_tag('index_two');
+		css_include_tag('index_two','top2');
 	?>
 </head>
 <body>
 	<div id=ibody>
-		<div id="top_img_left">
-			<img src="/images/index_two/top1.jpg"/>
-		</div>
-		<div id="top_img_right">
-			<a href="#"><img src="/images/index_two/top2.jpg"/></a>
-		</div>
-		<div id="top_bg">
-			<div id="top_logon"></div>
-			<div id="top_banner">
-				<select>
-				 <option>assadf</option>
-				</select>
-				<input style="width:312px;" type="text"/>
-				<input type="button" id="top_select" value="查  询"/>
-			</div>
-			<div id="top_right_banner">
-				<div id="top_login"><a href="">登录</a></div>
-				<div class="top_login"><a href="">注册会员</a></div>
-				<div class="top_login"><a href=""><font>会员专区</font></a></div>
-			</div>
-		</div>
-		<div id="top_menu_banner">
-			<div id="top_menu_left"></div>
-			<div id="top_menu_content">
-				<div style="border-left:0px solid #000000;">首页</div>
-				<div>榜单</div>
-				<div>富豪</div>
-				<div>创业</div>
-				<div>科技</div>
-				<div>商业</div>
-				<div>投资</div>
-				<div>城市</div>
-				<div>生活</div>
-				<div>专栏</div>
-				<div style="border-right:0px solid #000000;">会议</div>
-			</div>
-			<div id="top_menu_right"></div>
-		</div>
-		<div id="top_menu2_banner">
-			<div id="top_menu2_left"></div>
-			<div id="top_menu2_content">
-			<?php for($i = 0 ; $i < 4 ; $i++){?>
-				<div class="t_content">
-					<div></div>
-					<a href="">阿桑</a>
-				</div>
-				<?php }?>
-			</div>
-			<div id="top_menu2_right"></div>
-		</div>
-		
-		
+	<?php include_once(dirname(__FILE__).'/inc/top2.inc.php');?>
 		<div id="content">
 			<div id="content_left">
 				<div id="content_banner_left">
