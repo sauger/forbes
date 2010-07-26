@@ -41,7 +41,7 @@ for($i=0;$i<$count;$i++){
 	$out_str .= '"'.$record[$i]->CompanyType."\",";
 	$out_str .= ($record[$i]->StockCompany == 1 ? "\"是": "\"否") ."\",";
 	$out_str .= '"'.$record[$i]->Product."\",";
-	$out_str .= '"'.$record[$i]->turnove."\",";
+	$out_str .= '"'.$record[$i]->turnover."\",";
 	$out_str .= '"'.$record[$i]->Earning .'"';
 	$out_str .= "\n";
 	
