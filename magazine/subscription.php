@@ -243,7 +243,7 @@
                 <tr>
 
                   <td>&nbsp; 贵公司年营业额（可选）</td>
-                  <td><select  name="sub[turnove]" id="turnover"  size="1">
+                  <td><select  name="sub[turnover]" id="turnover"  size="1">
                       <option value=""> </option>
                       <option value="1.500万以下">1. 500万以下</option>
                       <option value="2.501万--1000万">2. 501万--1,000万</option>
