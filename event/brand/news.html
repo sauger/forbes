@@ -5,6 +5,7 @@
 <title>2010年度最佳中国品牌价值排行榜发布会</title>
 <link href="css/basic.css" rel="stylesheet" type="text/css" />
 <link href="css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="/javascript/jquery.js"></script>
 </head>
 <body>
 	<div id="container"><!-- container begin -->
@@ -19,13 +20,13 @@
 					<div class="header-nav">
 						<div class="h-nav-left"><img src="images/hna_bgleft.gif" /></div>
 						<ul>
-								<li><a href="index.html">发布会背景</a></li>
-								<li><a href="guests.html">活动嘉宾</a></li>
-								<li><a href="Scene.html">活动现场</a></li>
-								<li><a href="activities.html">现场流程</a></li>
-								<li><a href="abouttop.html">关于榜单</a></li>
-								<li class="nav-end"><a href="topic.html">论坛议题</a></li>
-							</ul>
+							<li><a href="index.html">发布会背景</a></li>
+							<li><a href="guests.html">活动嘉宾</a></li>
+							<li><a href="Scene.html">活动现场</a></li>
+							<li><a href="process.html">现场流程</a></li>
+							<li><a href="abouttop.html">关于榜单</a></li>
+							<li class="nav-end"><a href="topic.html">论坛议题</a></li>
+						</ul>
 						<div class="h-nav-right"><img src="images/hna_bgright.gif" /></div>							
 					</div>
 				</div><!-- header-inner end -->
@@ -36,46 +37,57 @@
 						<div id="content-inner" class="clear"><!-- content-inner begin -->
 							<div class="box-left"><!-- box-left begin -->
 								<div class="overview-main">
-									<div class="news-title"><strong>新闻稿</strong></div>
-									<div class="content-box-tex" style="border:none;min-height:600px;height:auto;_height:600px;overflow:hidden;">
-										<p class="scene-tex" style="text-indent:0;"><strong>《福布斯》中文版/Interbrand联合发布“2010中国品牌价值排行榜”<br>中国移动位列第一<br>腾讯、太平洋保险首次入榜并跻身前十<br>百度、李宁、平安强势增长但国际优秀品牌对于企业创造价值的作用仍远高于中国优秀品牌</strong></p>
-										<p>2010年7月6日，北京——《福布斯》中文版和Interbrand今天联合发布“2010中国品牌价值排行榜”，中国移动、中国人寿、建设银行、工商银行和中国银行夺得前五名，成为最大赢家。腾讯和太平洋保险首次入榜，并成为“十佳俱乐部”的新成员。在过去3年间（2007年-2010年），百度、李宁、中国平安的品牌价值增长速度最快，其年复合增长率分别高达85%、60%和39%。</p>
-										<p>“2010中国品牌价值排行榜”是Interbrand第三次针对中国市场运用它首创的品牌价值评估方法为中国企业设立品牌发展的坐标空间。在力求与Interbrand全球评估方法保持一致的前提下，本次排行榜仍然一如既往地采用经过第三方独立审计的财务资料以及广泛的消费者研究和市场资料，评出了中国最具价值的50个品牌。入榜品牌都来自国内和海外的中国上市公司。榜单计算出的品牌价值，体现了入选品牌在2009年及未来时期内品牌收益价值的净现值。这种稳定的、始终如一的和透明的做法，为最终评选结果的公平性，以及全球和历年间的可比性提供了坚实的基础。</p>
-										<p>相比较2007年的结果，今年上榜品牌比2007年多出了一倍，而最后一名的品牌价值为11.5亿元，大体上与2007年持平（当年入选门槛为11亿元）。除个别品牌的品牌价值下滑之外，今年榜单前25个品牌的品牌价值总和较2007年上升了近40％。这充分表明了在中国经济强势增长的大背景下，中国优秀企业的品牌价值集体上升态势。</p>
-										<p>
-虽然上榜品牌中已经有一批企业的品牌价值在数量上接近、甚至超过了国际同类企业，但是如果将这些企业的品牌价值与他们创造的经济增加值相比较，就可以看到，国际优秀品牌价值对经济增加值的杠杆作用明显要高于中国的同行（相关比较见附表及查询网站 www.forbeschina.com, www.interbrand.com）。</p>
-										<p>根据入榜品牌的行业统计，此次上榜的50个品牌中，金融品牌占16席，其比例比2007年有所下降（2007年，25个上榜品牌中，有10个是金融品牌）。另一方面，在竞争更为激烈的消费品、IT和互联网服务行业，一批品牌在相对特殊的2009年，由于恰当地运用了他们的品牌资产而使品牌价值明显上升，进入了50强的行列，其中腾讯和茅台甚至进入了前10位。这其中，固然可以看到中国互联网经济的飞速发展，以及消费品市场的持续启动和上升的影响，但也可以看到健康的市场竞争在长时间的尺度上将会使品牌作用日益凸现。</p>
+									<div class="content-box-tex" style="border:none;">
+										<p style="margin-top:25px;line-height:25px;font-size:14px;text-align:center"><strong>《福布斯》中文版/Interbrand联合发布“2010中国品牌价值排行榜”</strong></p>
+										<p style="text-align:center">中国移动位列第一，<br>腾讯、太平洋保险首次入榜并跻身前十，<br>百度、李宁、平安强势增长<br>但国际优秀品牌对于企业创造价值的作用仍远高于中国优秀品牌</p>
+										<div class="scene-tex">
+											<div id="scene-box">
+												<p id="first_p">2010年7月6日，北京——《福布斯》中文版和Interbrand今天联合发布“2010中国品牌价值排行榜”，中国移动、中国人寿、建设银行、工商银行和中国银行夺得前五名，成为最大赢家。腾讯和太平洋保险首次入榜，并成为“十佳俱乐部”的新成员。在过去3年间（2007年-2010年），百度、李宁、中国平安的品牌价值增长速度最快，其年复合增长率分别高达85%、60%和39%。</p>
+												<p>“2010中国品牌价值排行榜”是Interbrand第三次针对中国市场运用它首创的品牌价值评估方法为中国企业设立品牌发展的坐标空间。在力求与Interbrand全球评估方法保持一致的前提下，本次排行榜仍然一如既往地采用经过第三方独立审计的财务资料以及广泛的消费者研究和市场资料，评出了中国最具价值的50个品牌。入榜品牌都来自国内和海外的中国上市公司。榜单计算出的品牌价值，体现了入选品牌在2009年及未来时期内品牌收益价值的净现值。这种稳定的、始终如一的和透明的做法，为最终评选结果的公平性，以及全球和历年间的可比性提供了坚实的基础。</p>
+												<p>相比较2007年的结果，今年上榜品牌比2007年多出了一倍，而最后一名的品牌价值为11.5亿元，大体上与2007年持平（当年入选门槛为11亿元）。除个别品牌的品牌价值下滑之外，今年榜单前25个品牌的品牌价值总和较2007年上升了近40％。这充分表明了在中国经济强势增长的大背景下，中国优秀企业的品牌价值集体上升态势。</p>
+												<p>虽然上榜品牌中已经有一批企业的品牌价值在数量上接近、甚至超过了国际同类企业，但是如果将这些企业的品牌价值与他们创造的经济增加值相比较，就可以看到，国际优秀品牌价值对经济增加值的杠杆作用明显要高于中国的同行（相关比较见附表及查询网站 www.forbeschina.com, www.interbrand.com）。</p>
+												<p>根据入榜品牌的行业统计，此次上榜的50个品牌中，金融品牌占16席，其比例比2007年有所下降（2007年，25个上榜品牌中，有10个是金融品牌）。另一方面，在竞争更为激烈的消费品、IT和互联网服务行业，一批品牌在相对特殊的2009年，由于恰当地运用了他们的品牌资产而使品牌价值明显上升，进入了50强的行列，其中腾讯和茅台甚至进入了前10位。这其中，固然可以看到中国互联网经济的飞速发展，以及消费品市场的持续启动和上升的影响，但也可以看到健康的市场竞争在长时间的尺度上将会使品牌作用日益凸现。</p>
+												<p>在过去的一年中，敢于并坚持通过有力的市场竞争有所作为的工商银行、招商银行和平安集团的品牌价值有了明显高于平均水平的增长。而腾讯、百度、阿里巴巴等互联网品牌扩大了整个互联网行业对中国社会的影响力，丰富和引领行业在娱乐、媒体和商务上的运营模式的变革。 茅台、李宁、青岛啤酒、五粮液、格力、蒙牛等消费品品牌则把品牌的重心投入到满足市场的个性化消费需求以及对于健康生活追求的消费趋势上，在提升品牌价值的市场运作中越来越显得自信和成熟。</p>
+												<p>但是，不少作为高速发展阶段的行业领头企业，其品牌价值增长速度并未超过其业务扩张的速度。这说明，与整体国民经济快速增长的大背景相比，这些优秀企业的品牌价值提升应该还有更大的空间。</p>
+												<p>《福布斯》中文版将于2010年7月刊登载关于2010中国品牌价值排行榜的详细报道。更多分析，包括排行榜的研究方法等可以通过以下方式获得：<br>网站：<br>www.forbeschina.com<br>www.interbrand.com<br>电子邮件：<br>event@forbeschina.com<br>ibchina@interbrandcn.com<br>微博：<br>http://t.sina.com.cn/forbeschina<br>http://t.sina.com.cn/interbrand</p>
+												<p><strong>关于《福布斯》中文版</strong><br>　　《福布斯》中文版于2003年进入中国，已成为中国最有影响力的财经杂志之一。2009年4月起，全球著名的出版及媒体集团福布斯授权复星传媒许可出版《福布斯》中文版。</p>
+												<p>《福布斯》中文版贴近中国企业家和创业家，发现其背后一切推动财富创造与财富增长的力量：企业家精神、科技创新、管理创新、商业模式创新、财富管理创新，以及有利于创业与创富的商业环境。我们报道赢家与输家，展示创业与投资的永恒魅力。秉承“创业精神、创富利器”的理念，《福布斯》中文版为中国几十万顶尖读者提供关于财富创造、财富管理、财富伦理、财富生活更深入、更独到的分析与报道，力争在中国不断扩大的创富与精英人群中成为一本必读的商业杂志。</p>
+												<p>2010年5月，福布斯中文版推出网站www.forbeschina.com，致力于成为中国创富首页，并推动中国创新与创富的全球化。</p>
+												<p><strong>关于Interbrand 及品牌价值研究</strong><br>国际领先的综合性品牌战略顾问和设计公司Interbrand 致力于将严谨的管理顾问式的战略分析实践与充满创意激情的品牌创造与设计相结合，为客户创建、管理其最宝贵的无形资产——品牌提供全面的服务。Interbrand 创建于1974年，在全球20多个国家设有30多个办事处，其客户遍布全球以及中国。Interbrand 2002年进入中国，目前在上海、北京与广州设有分支机构。欲查详情，请访问Interbrand网站www.interbrand.com，以及Interbrand 品牌专业交流网站： www.brandchannel.com。</p>
+												<p>Interbrand 自1984年起在行业内开创品牌价值的研究，20多年来一直在商业和学术领域持续推进品牌价值评估的方法和实践，其整个分析体系被业界公认为具有特殊战略管理价值的工具。同时Interbrand 的价值评估得到众多国家的法律、税务、审计、证券交易等专业机构广泛认同，具有良好的市场声誉。迄今为止，Interbrand在全球已经完成了超过5000个价值评估案例，并为客户的品牌资产的规划和提升提供管理上的和运作上的长期指导。</p>
+											</div>
+										</div>
 									</div>
-									<ul class="page-main">
-										<li class="left"><a href="#"><img src="images/page-left.gif" /></a></li>
-										<li><a href="#">1</a></li>
-										<li><a href="#">2</a></li>
-										<li><a href="#">3</a></li>
-										<li><a href="#">4</a></li>
-										<li><a href="#">5</a></li>
-										<li><a href="#">6</a></li>
-										<li><a href="#">7</a></li>
-										<li><a href="#">8</a></li>
-										<li><a href="#">9</a></li>
-										<li><a href="#">10</a></li>
-										<li><a href="#">11</a></li>
-										<li><a href="#">12</a></li>
-										<li><a href="#">13</a></li>
-										<li><a href="#">14</a></li>
-										<li><a href="#">15</a></li>
-										<li><a href="#">16</a></li>
-										<li><a href="#">17</a></li>
-										<li><a href="#">18</a></li>
-										<li><a href="#">19</a></li>
-										<li><a href="#">20</a></li>
-										<li class="left"><a href="#"><img src="images/page-right.gif" /></a></li>
-									</ul>									
-								</div>								
+									<ul class="page-main" style="width:15%">
+										<li class="page_li"><a class="page" href="1">1</a></li>
+										<li class="page_li"><a class="page" href="2">2</a></li>
+										<li class="page_li"><a class="page" href="3">3</a></li>
+									</ul>
+								</div>
 							</div><!-- box-left end-->
-							<div class="box-right">
-								<a href="#"><img src="images/r_bennter1.gif" /></a>
-								<a href="#"><img src="images/r_bennter2.gif" /></a>							
-							</div>
+							<div class="box-right"><!-- box-right begin-->
+								<div class="box-right-new">
+									<a href="news.html"><p class="title"><strong>“2010中国品牌价值排行榜”《福布斯》中文版/Interbrand联合发布</strong></p>
+	 							    <p class="title_2">中国移动位列第一; 腾讯、太平洋保险首次入榜并跻身前十，百度、李宁、平安强势增长;但国际优秀品牌对于企业创造价值的作用仍远高于中国优秀品牌</p>
+									<p class="tex">2010年7月6日，北京——《福布斯》中文版和Interbrand今天联合发布“2010中国品牌价值排行榜”，中国移动、中国人寿、建设银行、工商银行和中国银行夺得前五名，成为最大赢家。腾讯和太平洋保险首次入榜，并成为“十佳俱乐部”的新成员。在过去3年间（2007年-2010年），百度、李宁、中国平安的品牌价值增长速度最快，其年复合增长率分别高达85%、60%和39%。“2010中国品牌价值排行榜”是Interbrand第三次针对中国市场运用它首创的品牌价值评估方法为中国企业设立品牌发展的坐标空间。在力求与Interbrand全球评估方法保持一致的前提下，本次排行榜...<img src="images/r_new_bg_but.gif" /></p></a>
+								</div>
+								<div class="bottom"><img src="images/r_new_bg_2.gif" /></div>
+								<a href="http://www.forbeschina.com/list/601"><img src="images/r_bennter1.gif" /></a>
+								<img src="images/r_bennter2.gif" />
+							</div><!-- box-right end-->
+							<div class="overview-main" style="overflow:hidden;width:100%"><!-- 活动图片 begin-->
+								<div class="scene-pic-title"><span class="right"><a href="activities.html"> >>查看更多</a></span><strong>活动图片</strong></div>					
+								<div class="scene-pic">
+									<ul>
+										<li><a href="activities.html"><img src="images/scene_1.gif" />50强上榜企业颁奖现场</a></li>
+										<li><a href="activities.html"><img src="images/scene_2.gif" />来宾交流</a></li>
+										<li><a href="activities.html"><img src="images/scene_3.gif" />论坛现场</a></li>
+										<li><a href="activities.html"><img src="images/scene_4.gif" />嘉宾签到</a></li>
+										<li><a href="activities.html"><img src="images/scene_5.gif" />VIP嘉宾互动交流</a></li>
+										<li><a href="activities.html"><img src="images/scene_6.gif" />高层领导相互交流</a></li>
+									</ul>
+								</div>
+							</div><!-- 活动图片 end-->
 						</div><!-- content-inner end -->
 					</div><!-- content end -->				
 				</div><!-- body-inner end -->
@@ -83,8 +95,8 @@
 					<div id="footer-inner">
 						<table width="983" align="center">
 							<tr>
-								<td><a href="#"><img src="images/foot_logo.gif" /></a></td>
-								<td><a href="">首页</a><span>┊</span><a href=""> 榜单 </a><span>┊</span><a href=""> 富豪 </a><span>┊</span><a href="">科技</a><span>┊</span><a href=""> 商业</a><span>┊</span><a href=""> 投资  </a><span>┊</span><a href="">城市 </a><span>┊</span><a href="">生活</a><span>┊</span><a href="">专栏</a>								</td>
+								<td><a href="/"><img src="images/foot_logo.gif" /></a></td>
+								<td><a href="/">首页</a><span>┊</span><a href="/list/"> 榜单 </a><span>┊</span><a href="/billionaires/"> 富豪 </a><span>┊</span><a href="/tech/">科技</a><span>┊</span><a href="/business/"> 商业</a><span>┊</span><a href="/investment/"> 投资  </a><span>┊</span><a href="/city/">城市 </a><span>┊</span><a href="/life/">生活</a><span>┊</span><a href="/column/">专栏</a>								</td>
 							</tr>
 					  </table>
 					</div>				
@@ -94,5 +106,33 @@
 	</div>
 </body>
 </html>
-
+<script>
+	$(function(){
+		$(".page").click(function(e){
+			e.preventDefault();
+			var height = $(this).attr('href');
+			height = -(height*500-500);
+			if(height==0){
+				height = 20;
+			}
+			$("#first_p").css('margin-top',height+'px');
+		});
+		
+		$("#turn_left").click(function(e){
+			e.preventDefault();
+			if($(".page_li:visible:last").children().attr('href')>20){
+				$(".page_li:visible:last").hide();
+				$(".page_li:visible:first").prev().show();
+			}
+		});
+		
+		$("#turn_right").click(function(e){
+			e.preventDefault();
+			if($(".page_li:visible:first").children().attr('href')<19){
+				$(".page_li:visible:first").hide();
+				$(".page_li:visible:last").next().show();
+			}
+		});
+	});
+</script>
 

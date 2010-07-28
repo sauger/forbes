@@ -27,10 +27,10 @@
 			#top_menu_content div{width:8.9%; height:12px; margin-top:5px; border-left:1px solid #77BDDF; border-right:1px solid #036AB9; color:#ffffff; font-weight: bold; text-align: center;}
 			#top_menu_content div a{color:#ffffff; text-decoration:none;}
 		#top_menu_right{width:5px; height:31px; background:url(/images/index_two/menu2.jpg) no-repeat;}
-	#top_menu2_banner{height:35px; margin-top: -7px;}
-		#top_menu2_left{width:7px; height:35px; background:url(/images/index_two/menu3.jpg) no-repeat;}
-		#top_menu2_content{ height:35px; background:url(/images/index_two/menu2_pg.jpg) repeat-x;}
-			.t_content{width:90px; height:20px; margin-top: 5px; line-height: 20px;}
+	.top_menu2_banner{height:35px; margin-top: -7px; display:none;}
+		.top_menu2_left{width:7px; height:35px; background:url(/images/index_two/menu3.jpg) no-repeat;}
+		.top_menu2_content{ height:35px; background:url(/images/index_two/menu2_pg.jpg) repeat-x;}
+			.t_content{height:20px; margin-top: 5px; line-height: 20px;}
 				.t_content div{width: 3px; height: 3px; margin-top: 8px; background: #3089C3; font-size: 0px; }
 				.t_content a{margin-left:7px; color:#807C7C; font-size: 12px; text-decoration: none;}
-		#top_menu2_right{width:8px; height:35px; background:url(/images/index_two/menu4.jpg) no-repeat;}
+		.top_menu2_right{width:8px; height:35px; background:url(/images/index_two/menu4.jpg) no-repeat;}

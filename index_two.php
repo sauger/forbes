@@ -12,8 +12,9 @@
 	<meta name="description" content="" />
 	<?php
 		use_jquery();
-		js_include_tag('public');
+		js_include_tag('index_two');
 		css_include_tag('index_two','top2');
+		init_page_items();
 	?>
 </head>
 <body>
@@ -26,7 +27,7 @@
 					<div id="qie_menu">
 						<a href=""><img id="qie_img_left" src="/images/index_two/btn_l.jpg"/></a>
 						<div id="qie_banner">
-							<?php for($i = 0 ; $i < 4 ; $i++){?>
+							<?php for($i = 0 ; $i < 7 ; $i++){?>
 							<div class="qie_banner" style="<?php if($i == 0){echo 'margin-left:7px;';}?>">
 								<div class="qie_banner_top">城市</div>
 								<div class="qie_banner_img"><img src="/images/index_two/32.jpg"/></div>
