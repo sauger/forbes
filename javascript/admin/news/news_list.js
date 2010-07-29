@@ -23,8 +23,9 @@ $(function(){
 	
 	$('.publish_news').click(function(e){
 		e.preventDefault();
+		var id = $(this).attr('name');
 		$.get($(this).attr('url'),function(){
-			$.post('/admin/static/static_news.php?type=publish&id='+ $(this).attr('name'),function(data){
+			$.post('/admin/static/static_news.php?type=publish&id='+ id,function(data){
 				eval(data);
 			});
 		});
