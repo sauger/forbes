@@ -16,6 +16,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 				#qie_banner{width:395px;  height:152px; float:left; display:inline;}
 					.qie_banner{width:91px; height:152px; margin-left:6px; margin-top:10px; float:left; display: inline;}
 						.qie_banner_top{width:91px; height:20px; color:#838486; font-size:12px; text-align: left;}
+						.qie_banner_top a{text-decoration:none; color:#838486;}
 						.qie_banner_img{width:91px; height:92px; background:url(/images/index_two/img_pg.jpg) no-repeat; float:left; display: inline;}
 						.qie_banner_img img{width:85px; height:86px;  margin-left:3px; margin-top:3px; border:0px solid #000; float:left; display: inline;}
 						.qie_banner_value{width:91px; height:28px; margin-top:5px; color:#838486; font-size:12px; line-height:14px; overflow:hidden; text-align: left; float:left; display: inline;}

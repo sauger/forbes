@@ -19,7 +19,8 @@ if($type=='publish'){
 }else{
 	$date = date('Ym',strtotime($news->created_at));
 	$dir  = "{$static_dir}/review/{$date}";
-	$file = $dir ."/{$news->id}.shtml";
+	$news_id = str_pad($news->id,7,'0',STR_PAD_LEFT);
+	$file = $dir ."/{$news_id}.shtml";
 	@unlink($file);
 	$news->is_adopt = 0;
 	$news->save();

@@ -96,8 +96,16 @@
 						if(has_right('publish_news')){ 
 							if($record[$i]->is_adopt=="1"){?>
 					<span style="cursor:pointer" class="unpublish_news" name="<?php echo $record[$i]->id;?>" title="撤销"><img src="/images/admin/btn_apply.png" border="0"></span>
-					<?php	}else{?>
-					<span style="cursor:pointer" class="publish_news" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border="0"></span>
+					<?php	}else{
+						$name = 'forbeschina';
+						$password = 'yE0ybMaX';
+						$date = date('Ym',strtotime($record[$i]->created_at));
+						$news_id = str_pad($record[$i]->id,7,'0',STR_PAD_LEFT);
+						$url = "www.forbeschina.com/review/{$date}/{$news_id}.shtml";
+						$pass = md5($name.$password.$url);
+						$str = 'http://wscp.lxdns.com:8080/wsCP/servlet/contReceiver?username='.$name.'&passwd='.$pass.'&url='.$url;
+					?>
+					<span style="cursor:pointer" url="<?php echo $str;?>" class="publish_news" name="<?php echo $record[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border="0"></span>
 					<?php }
 						}?>
 					<?php

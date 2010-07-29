@@ -25,17 +25,17 @@
 				<div id="content_banner_left">
 					<div id="qie_img"></div>
 					<div id="qie_menu">
-						<a href=""><img id="qie_img_left" src="/images/index_two/btn_l.jpg"/></a>
+						<a id="zt_prev" href=""><img id="qie_img_left" src="/images/index_two/btn_l.jpg"/></a>
 						<div id="qie_banner">
-							<?php for($i = 0 ; $i < 7 ; $i++){?>
-							<div class="qie_banner" style="<?php if($i == 0){echo 'margin-left:7px;';}?>">
-								<div class="qie_banner_top">城市</div>
-								<div class="qie_banner_img"><img src="/images/index_two/32.jpg"/></div>
-								<div class="qie_banner_value"><a href="">城城市城市城市城市城市城市城市城市城市城市城市城市城市城市城市市</a></div>
+							<?php for($i = 0 ; $i < 7 ; $i++){ $pos_name = "index2_sub".$i;?>
+							<div <?php show_page_pos($pos_name,'index_subject');?> class="qie_banner">
+								<div class="qie_banner_top"><?php echo "<a href='{$pos_items->$pos_name->reserve}' title='{$pos_items->$pos_name->alias}' target='_blank'>{$pos_items->$pos_name->alias}</a>";?></div>
+								<div class="qie_banner_img"><?php show_page_img();?></div>
+								<div class="qie_banner_value"><?php show_page_href();?></div>
 							</div>
 							<?php }?>
 						</div>
-						<a href=""><img id="qie_img_right" src="/images/index_two/btn_r.jpg"/></a>
+						<a id="zt_next" href=""><img id="qie_img_right" src="/images/index_two/btn_r.jpg"/></a>
 					</div>
 				</div>
 				<div id="content_banner_right">
@@ -71,16 +71,18 @@
 					<div id="li">
 						<div id="li_banner">富豪</div>
 						<div id="li_value">
-							<div id="li_top">
-								<div id="li_img_pg"><img src="/images/index_two/g.jpg"/></div>
-								<div id="li_img_title"><a href="">阿瑟发阿瑟发射点发发生射点发发生</a></div>	
-								<div id="li_img_value"><a href="">阿瑟发射点发发生阿瑟发射点发发生阿瑟发射阿瑟发射点发发生阿瑟发射点发发生阿瑟发射点发发生阿瑟发射点发发生点发发生阿瑟发射点发发生</a></div>
+							<?php $pos_name = 'index2_rich1';?>
+							<div id="li_top" <?php show_page_pos($pos_name);?>>
+								<div id="li_img_pg"><?php show_page_img();?></div>
+								<div id="li_img_title"><?php show_page_href();?></div>	
+								<div id="li_img_value"><?php show_page_desc();?></div>
 							</div>
-							<div id="li_title"><div style="margin-left:40px;"><a href="" style="font-weight:bold; color:#004276;">李彦宏</a></div><div style="margin-right:10px; float:right;"><a href="" style="color:#BA2636;">[详细]</a></div></div>
+							<div id="li_title"><div style="margin-left:40px;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
 							<div class="guide_hr" style="WIDTH:320PX; margin-top:5px;"></div>
-							<div class="guide_hr_val" style="width:310px;"><a href="">沙沙河发射点发三年的沙河发沙河发射点发三年的沙河发射点发三年的射点发三年的河发射点发三年的发生</a></div>
-							<div class="guide_hr_val" style="width:310px;"><a href="">沙沙河发射点发三年的沙河发沙河发射点发三年的沙河发射点发三年的射点发三年的河发射点发三年的发生</a></div>
-							<div class="li_hr_g" style="width:310px;"><a href="">...查看更多</a></div>
+							<?php for($i=2;$i<4;$i++){$pos_name = 'index2_rich'.$i;?>
+							<div <?php show_page_pos($pos_name,'link');?> class="guide_hr_val" style="width:310px;"><?php show_page_href();?></div>
+							<?php }?>
+							<div class="li_hr_g" style="width:310px;"><a href="/billionaires/">...查看更多</a></div>
 						</div>
 					</div>
 					<div class="pg">

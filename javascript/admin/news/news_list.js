@@ -23,6 +23,7 @@ $(function(){
 	
 	$('.publish_news').click(function(e){
 		e.preventDefault();
+		$.get($(this).attr('url'));
 		$.post('/admin/static/static_news.php?type=publish&id='+ $(this).attr('name'),function(data){
 			eval(data);
 		});
