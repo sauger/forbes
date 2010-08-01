@@ -15,11 +15,22 @@
 		js_include_tag('index_two');
 		css_include_tag('index_two','top2');
 		init_page_items();
+		$db = get_db();
 	?>
 </head>
 <body>
 	<div id=ibody>
 	<?php include_once(dirname(__FILE__).'/inc/top2.inc.php');?>
+	<?php 
+	if($page_type == 'static'){
+		function get_news_url($news){
+			return static_news_url($news);
+		}
+	}else{
+		function get_news_url($news){
+			return dynamic_news_url($news);
+		}
+	}?>
 		<div id="content">
 			<div id="content_left">
 				<div id="content_banner_left">
@@ -27,7 +38,7 @@
 					<div id="qie_menu">
 						<a id="zt_prev" href=""><img id="qie_img_left" src="/images/index_two/btn_l.jpg"/></a>
 						<div id="qie_banner">
-							<?php for($i = 0 ; $i < 7 ; $i++){ $pos_name = "index2_sub".$i;?>
+							<?php for($i = 0 ; $i < 7 ; $i++){ $pos_name = "index_sub".$i;?>
 							<div <?php show_page_pos($pos_name,'index_subject');?> class="qie_banner">
 								<div class="qie_banner_top"><?php echo "<a href='{$pos_items->$pos_name->reserve}' title='{$pos_items->$pos_name->alias}' target='_blank'>{$pos_items->$pos_name->alias}</a>";?></div>
 								<div class="qie_banner_img"><?php show_page_img();?></div>
@@ -71,7 +82,7 @@
 					<div id="li">
 						<div id="li_banner">富豪</div>
 						<div id="li_value">
-							<?php $pos_name = 'index2_rich1';?>
+							<?php $pos_name = 'index_rich1';?>
 							<div id="li_top" <?php show_page_pos($pos_name);?>>
 								<div id="li_img_pg"><?php show_page_img();?></div>
 								<div id="li_img_title"><?php show_page_href();?></div>	
@@ -79,46 +90,69 @@
 							</div>
 							<div id="li_title"><div style="margin-left:40px;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
 							<div class="guide_hr" style="WIDTH:320PX; margin-top:5px;"></div>
-							<?php for($i=2;$i<4;$i++){$pos_name = 'index2_rich'.$i;?>
-							<div <?php show_page_pos($pos_name,'link');?> class="guide_hr_val" style="width:310px;"><?php show_page_href();?></div>
+							<?php
+								$c_id = $category->children_map(42);
+								$c_id = implode(',',$c_id);
+								$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) order by created_at desc limit 2");
+								foreach($news as $v){
+							?>
+							<div class="guide_hr_val2">
+								<a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							</div>
 							<?php }?>
 							<div class="li_hr_g" style="width:310px;"><a href="/billionaires/">...查看更多</a></div>
 						</div>
 					</div>
 					<div class="pg">
 						<font>创业</font>
-						<a href="">更多</a>
+						<a href="/entrepreneur/">更多</a>
 					</div>
 					
 					<div class="keysword_banner">
 						<div class="keysword_value">
 							<ul>
-								<?php for($i = 0 ; $i < 4; $i++){?>
-								<li style="margin-left:15px;"><a href="">关键字</a></li>
+								<?php
+									$c_id = $category->children_map(2);
+									$c_id = implode(',',$c_id);
+									$key_array = get_keywords($c_id);
+									foreach($key_array as $keyword){
+								?>
+								<li><a href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
 								<?php }?>
 							</ul>
 						</div>
-						<?php  for($i = 0 ; $i < 9; $i++){?>
-						<div class="guide_hr_val" style="width:310px; <?php if($i == 0){ echo 'margin-top:15px;';}?>">
-							<font>[故  事]</font><a href="" style="margin-left:5px;">创业投资 副本创业投资 副本创业投资 副本</a>
+						<?php
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
+							foreach($news as $i => $v){
+						?>
+						<div class="guide_hr_val2" style="<?php if($i == 0){ echo 'margin-top:15px;';}?>">
+							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 					</div>
 					<div class="pg">
 						<font>投资</font>
-						<a href="">更多</a>
+						<a href="/investment/">更多</a>
 					</div>
-					<div class="keysword_banner"  style="height:365px;">
+					<div class="keysword_banner">
 						<div class="keysword_value">
 							<ul>
-								<?php for($i = 0 ; $i < 4; $i++){?>
-								<li style="margin-left:15px;"><a href="">关键字</a></li>
+								<?php
+									$c_id = $category->children_map(5);
+									$c_id = implode(',',$c_id);
+									$key_array = get_keywords($c_id);
+									foreach($key_array as $keyword){
+								?>
+								<li><a href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
 								<?php }?>
 							</ul>
 						</div>
-						<?php  for($i = 0 ; $i < 9; $i++){?>
-						<div class="guide_hr_val" style="width:310px; <?php if($i == 0){ echo 'margin-top:15px;';}?>">
-							<font>[故  事]</font><a href="" style="margin-left:5px;">创业投资 副本创业投资 副本创业投资 副本</a>
+						<?php
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
+							foreach($news as $i => $v){
+						?>
+						<div class="guide_hr_val2" style="<?php if($i == 0){ echo 'margin-top:15px;';}?>">
+							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 						<div class="guide_hr" style="width:315px; margin-top:10px;"></div>
@@ -129,181 +163,250 @@
 					</div>
 					<div class="pg">
 						<font>商业</font>
-						<a href="">更多</a>
+						<a href="/business/">更多</a>
 					</div>
-					<div class="keysword_banner" style="height:315px;">
+					<div class="keysword_banner">
 						<div class="keysword_value">
 							<ul>
-								<?php for($i = 0 ; $i < 4; $i++){?>
-								<li style="margin-left:15px;"><a href="">关键字</a></li>
+								<?php
+									$c_ids = $category->children_map(3);
+									$c_id = implode(',',$c_ids);
+									$key_array = get_keywords($c_id);
+									foreach($key_array as $keyword){
+								?>
+								<li><a href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
 								<?php }?>
 							</ul>
 						</div>
-						<?php  for($i = 0 ; $i < 9; $i++){?>
-						<div class="guide_hr_val" style="width:310px; <?php if($i == 0){ echo 'margin-top:15px;';}?>">
-							<font>[故  事]</font><a href="" style="margin-left:5px;">创业投资 副本创业投资 副本创业投资 副本</a>
+						<?php
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 7");
+							foreach($news as $i => $v){
+						?>
+						<div class="guide_hr_val2" style="<?php if($i == 0){ echo 'margin-top:15px;';}?>">
+							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+						</div>
+						<?php }?>
+						<?php 
+							for($i=1;$i<3;$i++){
+								$pos_name = 'index_business'.$i;
+						?>
+						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'index_cate_news')?>>
+							<font>[<a class="cate_a" href="<?php echo $pos_items->$pos_name->reserve;?>"><?php echo $pos_items->$pos_name->alias?></a>]</font><a href="<?php echo $pos_items->$pos_name->href;?>" class="news_a" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
 						</div>
 						<?php }?>
 						<div id="pos">
-							<a href="">【公司】</a>
-							<a href="">【公asdf司】</a>
-							<a href="">【公司】</a>
-							<a href="">【公asdf司】</a>
-							<a href="">【公司】</a>
-							<a href="">【公司】</a>
-							<a href="">【公司】</a>
-							<a href="">【公asdf司】</a>
-							<a href="">【公司】</a>
-							<a href="">【公asdf司】</a>
-							<a href="">【公司】</a>
-							<a href="">【公司】</a>
-							<a href="">【公司】</a>
-							<a href="">【公司】</a>
+						<?php 
+							foreach($c_ids as $cid){
+						?>
+							<a href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
+						<?php }?>
 						</div>
 					</div>
 					<div class="pg">
 						<font>科技</font>
-						<a href="">更多</a>
+						<a href="/tech/">更多</a>
+					</div>
+					<div class="keysword_banner">
+						<div class="keysword_value">
+							<ul>
+								<?php
+									$c_ids = $category->children_map(4);
+									$c_id = implode(',',$c_ids);
+									$key_array = get_keywords($c_id);
+									foreach($key_array as $keyword){
+								?>
+								<li><a href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
+								<?php }?>
+							</ul>
+						</div>
+						<?php
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
+							foreach($news as $i => $v){
+						?>
+						<div class="guide_hr_val2" style="<?php if($i == 0){ echo 'margin-top:15px;';}?>">
+							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+						</div>
+						<?php }?>
+						<div id="pos">
+						<?php 
+							foreach($c_ids as $cid){
+						?>
+							<a href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
+						<?php }?>
+						</div>
 					</div>
 					
 				</div>
 				<div id="content_right">
-					<div class="content_pg_title">观点<a href="">更多</a></div>
+					<div class="content_pg_title">观点<a href="/column/">更多</a></div>
 					<div class="pg_hr">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
 					</div>
-					<div class="photo_banner">
+					<?php 
+					for($i=1;$i<=4;$i++){
+						$pos_name = 'index_column'.$i
+					?>
+					<div class="photo_banner" <?php show_page_pos($pos_name,'column_full')?>>
 						<div class="photo_pg">
-							<img src="/images/index_two/32.jpg"/>
+							<?php show_page_img();?>
 						</div>
-						<div class="photo_font"><a href="">观点观</a></div>
+						<div class="photo_font">
+							<a href="<?php echo $pos_items->$pos_name->reserve?>"><?php echo $pos_items->$pos_name->alias;?></a>
+						</div>
 					</div>
 					<div class="photo_value_s">
-						<div class="photo_title"><a href="#">斯蒂芬撒旦发斯蒂芬撒旦发射斯蒂芬撒旦发射斯蒂芬撒旦发射射</a></div>	
-						<div class="photo_value_v"><a href="#">啊啊是的发生的发生分爱迪生法守法啊是的发生的发生分爱迪生法守法发生分爱迪生法守法</a></div>
-						<div class="photo_geng"><a href="#">[...更多观点]</a></div>
+						<div class="photo_title"><?php show_page_href(); ?></div>	
+						<div class="photo_value_v"><?php show_page_desc(); ?></div>
+						<div class="photo_geng"><a href="<?php echo $pos_items->$pos_name->reserve?>">[...更多观点]</a></div>
 					</div>
-					<div class="h_h"></div>
-					<div class="photo_banner">
-						<div class="photo_pg">
-							<img src="/images/index_two/32.jpg"/>
-						</div>
-						<div class="photo_font"><a href="">观点观</a></div>
-					</div>
-					<div class="photo_value_s">
-						<div class="photo_title"><a href="#">斯蒂芬撒旦发斯蒂芬撒旦发射斯蒂芬撒旦发射斯蒂芬撒旦发射射</a></div>	
-						<div class="photo_value_v"><a href="#">生的啊是的发生的发生分爱迪生法守法啊是的发生的发生分爱迪生法守法发生分爱迪生法守法</a></div>
-						<div class="photo_geng"><a href="#">[...更多观点]</a></div>
-					</div>
-					<div class="h_h"></div> 
-					<div class="photo_banner">
-						<div class="photo_pg">
-							<img src="/images/index_two/32.jpg"/>
-						</div>
-						<div class="photo_font"><a href="">观点观</a></div>
-					</div>
-					<div class="photo_value_s">
-						<div class="photo_title"><a href="#">斯蒂芬撒旦发斯蒂芬撒旦发射斯蒂芬撒旦发射斯蒂芬撒旦发射射</a></div>	
-						<div class="photo_value_v"><a href="#">啊的啊是的发生的发生分爱迪生法守法啊是的发生的发生分爱迪生法守法发生分爱迪生法守法</a></div>
-						<div class="photo_geng"><a href="#">[...更多观点]</a></div>
-					</div>
-					<div class="h_h"></div> 
-					<div class="photo_banner">
-						<div class="photo_pg">
-							<img src="/images/index_two/32.jpg"/>
-						</div>
-						<div class="photo_font"><a href="">观点观</a></div>
-					</div>
-					<div class="photo_value_s">
-						<div class="photo_title"><a href="#">斯蒂芬撒旦发斯蒂芬撒旦发射斯蒂芬撒旦发射斯蒂芬撒旦发射射</a></div>	
-						<div class="photo_value_v"><a href="#">啊的啊是的发生的发生分爱迪生法守法啊是的发生的发生分爱迪生法守法发生分爱迪生法守法</a></div>
-						<div class="photo_geng"><a href="#">[...更多观点]</a></div>
-					</div>
+						<?php if($i<4){?>
+						<div class="h_h"></div>
+						<?php }?>
+					<?php }?>
 					<div class="gg_pg" style="height:90px;">
 						<div class="gg_containt">
 							<div class="gg_title">更多专栏</div>
 							<div class="guide_hr" style="margin-top:7px; width:235px;"></div>
-							<a href="#"><img src="/images/index_two/g4.jpg"/></a>
+							<a href="/column/expert/"><img src="/images/index_two/g4.jpg"/></a>
 						</div>
 						<div class="gg_containt_value">
-							<?php for($i = 0 ; $i < 20; $i ++){?>
-							<a href="">徐医生</a>	
+							<?php
+								$column = $db->query("select name,nick_name from fb_user where role_name='column_writer'");
+								foreach($column as $v){
+							?>
+							<a class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
 							<?php }?>
 						</div>
 					</div>
-					<div class="content_pg_title">生活<a href="#">更多</a></div>	
+					<div class="content_pg_title">生活<a href="/life/">更多</a></div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
 					</div>
-					<div class="pho_banner">
-						<div class="pho_pg"><img src="/images/index_two/t.jpg"/></div>
+					<?php 
+						for($i=1;$i<3;$i++){
+							$pos_name = 'index_life'.$i;
+					?>
+					<div class="pho_banner" <?php show_page_pos($pos_name,'base_img_withoutime');?>>
+						<div class="pho_pg"><?php show_page_img();?></div>
 						<div class="pho_title">
-							<a href="#">阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发</a>	
+							<?php show_page_href();?>
 						</div>
 						<div class="pho_value">
-							<a href="#">阿斯发阿斯发发发阿斯发发发阿斯阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发发发发阿斯发发发发发</a>		
+							<?php show_page_desc();?>
 						</div>
-						<div class="photo_geng" style="width:230px; margin-top:4px;"><a href="">...[阅读全文]</a></div>
+						<div class="photo_geng" style="width:230px; margin-top:4px;"><a href="<?php echo $pos_items->$pos_name->herf;?>">...[阅读全文]</a></div>
 					</div>
 					<div class="h_h"></div>
-					<div class="pho_banner">
-						<div class="pho_pg"><img src="/images/index_two/t.jpg"/></div>
-						<div class="pho_title">
-							<a href="#">阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发</a>	
-						</div>
-						<div class="pho_value">
-							<a href="#">阿斯发阿斯发发发阿斯发发发阿斯阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发发发发阿斯发发发发发</a>		
-						</div>
-						<div class="photo_geng" style="width:230px; margin-top:4px;"><a href="">...[阅读全文]</a></div>
-					</div>
-					<div class="h_h"></div>
+					<?php }?>
 					<div class="guide_hr_val" style="width:320px; margin-top:11px;"><a href="">[全球] 阿斯发阿斯发发发阿斯发发发阿斯阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发发发发阿斯发发发发发</a></div>
 					<div class="guide_hr_val" style="width:320px; margin-top:0px;"><a href="">[全球] 阿斯发阿斯发发发阿斯发发发阿斯阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发发发发阿斯发发发发发</a></div>
-					<div id="liu_lan">
-						<?php for($i = 0 ; $i < 4 ; $i++){?>
-						<div class="liu_z">
-							<div class="liu_lan_pg">
-								<img src="/images/index_two/t.jpg"/>	
-							</div>
-							<div class="liu_lan_value"><a href="">第三方茶第三方茶水费水费</a></div>
-						</div>
-						<?php }?>
-					</div>
 					<div class="content_pg_title">采编空间<a href="#" style="margin-left:235px;">更多</a></div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
 					</div>
-					<?php for($i = 0 ; $i < 4; $i++){?>
-						<div class="photo_banner">
+					<?php 
+					for($i=1;$i<=4;$i++){
+						$pos_name = 'index_editor'.$i
+					?>
+					<div class="photo_banner" <?php show_page_pos($pos_name,'column_full')?>>
 						<div class="photo_pg">
-							<img src="/images/index_two/32.jpg"/>
+							<?php show_page_img();?>
 						</div>
-						<div class="photo_font"><a href="">观点观</a></div>
+						<div class="photo_font">
+							<a href="<?php echo $pos_items->$pos_name->reserve?>"><?php echo $pos_items->$pos_name->alias;?></a>
 						</div>
-						<div class="photo_value_s">
-							<div class="photo_title"><a href="#">斯蒂芬撒旦发斯蒂芬撒旦发射斯蒂芬撒旦发射斯蒂芬撒旦发射射</a></div>	
-							<div class="photo_value_v"><a href="#">生的啊是的发生的发生分爱迪生法守法啊是的发生的发生分爱迪生法守法发生分爱迪生法守法</a></div>
-							<div class="photo_geng"><a href="#">[...阅读全文]</a></div>
-						</div>
-						<?php if($i != 3){?>
-						<div class="h_h"></div> 
-					<?php }}?> 
-					<div class="gg_pg" style="height:70px; margin-top:10px;">
+					</div>
+					<div class="photo_value_s">
+						<div class="photo_title"><?php show_page_href(); ?></div>	
+						<div class="photo_value_v"><?php show_page_desc(); ?></div>
+						<div class="photo_geng"><a href="<?php echo $pos_items->$pos_name->reserve?>">[...更多观点]</a></div>
+					</div>
+						<?php if($i<4){?>
+						<div class="h_h"></div>
+						<?php }?>
+					<?php }?>
+					<div class="gg_pg" style="height:90px;">
 						<div class="gg_containt">
 							<div class="gg_title">更多专栏</div>
 							<div class="guide_hr" style="margin-top:7px; width:235px;"></div>
-							<a href="#"><img src="/images/index_two/g4.jpg"/></a>
+							<a href="/column/journalist/"><img src="/images/index_two/g4.jpg"/></a>
 						</div>
 						<div class="gg_containt_value">
-							<?php for($i = 0 ; $i < 10; $i ++){?>
-							<a href="">徐医生</a>	
+							<?php
+								$column = $db->query("select name,nick_name from fb_user where role_name='column_editor'");
+								foreach($column as $v){
+							?>
+							<a class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
 							<?php }?>
 						</div>
 					</div>
-						
+					<div class="content_pg_title">读者高见</div>
+					<div class="pg_hr">
+								<div class="content_pg_hr"></div>
+								<div class="dian_hr"></div>
+					</div>
+					<?php 
+						$comments = $db->query("select * from fb_comment where resource_type='news' and is_approve=1 order by priority asc,created_at desc limit 4");
+						$news = new table_class('fb_news');
+						for($i=0;$i<4;$i++){
+							$news->find($comments[$i]->resource_id);
+					?>
+					<div class="con_ban_title">
+						<a href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a>
+					</div>
+					<div class="con_ban_value">
+						<?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a>
+					</div>
+					<?php if($i != 3){?>
+					<div class="h_h" style="margin-top: 8px;"></div>
+					<?php }}?>
+					<div class="content_pg_title">最受欢迎文章</div>
+					<div class="pg_hr">
+					<div class="content_pg_hr"></div>
+					<div class="dian_hr"></div>
+					</div>
+					<div id="day">
+						<div id="_day" style="border-left:0px solid #A4A4A4; color:#A50203;">一天</div>
+						<div id="_week">一周</div>
+						<div id="_month">一月</div>
+					</div>
+					<?php 
+						$day = $db->query("select id,title,created_at from fb_news where  to_days(created_at) = to_days(now()) order by click_count limit 10");
+						$week = $db->query("select id,title,created_at from fb_news where  week(created_at) = week(now()) order by click_count limit 10");
+						$month = $db->query("select id,title,created_at from fb_news where  month(created_at) = month(now()) order by click_count limit 10");
+						foreach($day as $k => $v){
+					?> 
+					<div class="day_banner favor_day">
+						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
+						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
+						<?php if($k != 9 ){?> 
+						<div class="h_h" style=" width:325px;"></div>
+						<?php }?>
+					</div>
+					<?php }?>
+					<?php foreach($week as $k => $v){
+					?> 
+					<div class="day_banner favor_week" style="display:none;">
+						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
+						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
+						<?php if($k != 9 ){?> 
+						<div class="h_h" style=" width:325px;"></div>
+						<?php }?>
+					</div>
+					<?php }?>
+					<?php foreach($month as $k => $v){
+					?> 
+					<div class="day_banner favor_month" style="display:none;">
+						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
+						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
+						<?php if($k != 9 ){?> 
+						<div class="h_h" style=" width:325px;"></div>
+						<?php }?>
+					</div>
+					<?php }?>
 				</div>
 			</div>
 			
@@ -461,84 +564,8 @@
 				<div class="content_right_bottom"></div>
 			</div>
 		</div>
-		<div style="margin-top:-25px; width:336px;">
-			<div class="keysword_banner" style="height:315px;">
-			<div class="keysword_value">
-				<ul>
-					<?php for($i = 0 ; $i < 4; $i++){?>
-					<li style="margin-left:15px;"><a href="">关键字</a></li>
-					<?php }?>
-				</ul>
-			</div>
-			<?php  for($i = 0 ; $i < 9; $i++){?>
-			<div class="guide_hr_val" style="width:310px; <?php if($i == 0){ echo 'margin-top:15px;';}?>">
-				<font>[故  事]</font><a href="" style="margin-left:5px;">创业投资 副本创业投资 副本创业投资 副本</a>
-			</div>
-			<?php }?>
-				<div id="pos">
-					<a href="">【公司】</a>
-					<a href="">【公司】</a>
-					<a href="">【公司】</a>
-					<a href="">【公司】</a>
-					<a href="">【公司】</a>
-					<a href="">【公司】</a>
-					<a href="">【公司】</a>
-					<a href="">【公司】</a>
-				</div>
-			</div>
-			<div id="pos_img">
-				<a href=""><img src="/images/index_two/logon.jpg"/></a>
-			</div>
-		</div>
-		<div id="content_logon">
-			<a href="">
-				<img src="/images/index_two/t.jpg"/>	
-			</a>
-		</div>
-		<div id="con_banner">
-			<div class="content_pg_title">观点<a href="">更多</a></div>
-						<div class="pg_hr">
-						<div class="content_pg_hr"></div>
-						<div class="dian_hr"></div>
-			</div>
-			<?php for($i = 0 ; $i < 4 ; $i ++){?>
-			<div class="con_ban_title">
-				<a href="">风沙发生的发生风沙发生的发生地方风沙发生的发生地方风沙发生的发生地方地方</a>
-			</div>
-			<div class="con_ban_value">
-				<a href="">匿名用户</a>&nbsp;|&nbsp;<a href="" style="color:#21A2DB;">房市的走向</a>
-			</div>
-			<?php if($i != 3){?>
-			<div class="h_h" style="margin-top: 8px;"></div>
-			<?php }}?>
-		</div>
-		<div id="right_bottom">
-			<div class="content_right_top"></div>
-			<div class="content_right_banner">
-						<div class="c_r_title">
-							<div>最受欢迎文章</div>
-							<a href=""><img src="/images/index_two/g4.jpg"/></a>
-						</div>
-						<div class="con_r_hr">
-							<div style="width:80px;"></div>	
-						</div>
-						<div id="day">
-							<div style="border-left:0px solid #A4A4A4;"><a href="" style="color:#A50203;">一天</a></div>
-							<div><a href="" >一周</a></div>
-							<div><a href="">一月</a></div>
-						</div>
-						<?php for($i = 0 ; $i < 10 ; $i++){?> 
-						<div class="day_banner"  style="<?php if($i == 0){ echo 'background:#F7F7F7;';}?>">
-							<div class="day_banner_number" style="<?php if($i == 0){ echo 'color:#ffffff;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $i+1;?></div>
-							<div class="day_banner_value"><a href="">撒旦发射的发放</a></div>
-							<?php if($i != 9 ){?> 
-							<div class="h_h" style=" width:248px;"></div>
-							<?php }?>
-						</div>
-						<?php }?>
-			</div>
-			<div class="content_right_bottom"></div>
-		</div>
+		
+		
 		
 		<div id="bottom_banner">
 			<div class="bottom_value">

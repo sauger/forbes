@@ -49,6 +49,13 @@ class category_class
 		return false;
 	}
 	
+	public function &find_name_by_id($id){
+		foreach($this->items as $k => $v){
+			if($v->id == $id) return $v->name;
+		}	
+		return false;
+	}
+	
 	public function tree_map($current_id){
 		$result = array();
 		$result[] = $current_id;

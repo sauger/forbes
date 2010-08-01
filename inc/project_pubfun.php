@@ -446,4 +446,21 @@ function front_login($name,$password){
 		return false;
 	}
 }
+
+function get_keywords($ids,$num = 5){
+	if(empty($ids)){
+		return false;
+	}else{
+		$db = get_db();
+		$keywords = $db->query("select keywords from fb_news where category_id in ($ids) and keywords is not null order by created_at desc limit $num");
+		$key_array = array();
+		foreach($keywords as $kd){
+			$keys = explode('||',$kd->keywords);
+			$key_array = array_merge($keys,$key_array);
+		}
+		$key_array = array_unique($key_array);
+		$key_array = array_slice($key_array,0,$num);
+		return $key_array;
+	}
+}
 ?>
