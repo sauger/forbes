@@ -377,6 +377,9 @@
 						$day = $db->query("select id,title,created_at from fb_news where  to_days(created_at) = to_days(now()) order by click_count limit 10");
 						$week = $db->query("select id,title,created_at from fb_news where  week(created_at) = week(now()) order by click_count limit 10");
 						$month = $db->query("select id,title,created_at from fb_news where  month(created_at) = month(now()) order by click_count limit 10");
+						!$day && $day = array();
+						!$week && $week = array();
+						!$month && $month = array();
 						foreach($day as $k => $v){
 					?> 
 					<div class="day_banner favor_day">
