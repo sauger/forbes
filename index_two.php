@@ -34,7 +34,9 @@
 		<div id="content">
 			<div id="content_left">
 				<div id="content_banner_left">
-					<div id="qie_img"></div>
+					<div id="qie_img">
+						<img src="/images/index_two/t.jpg">
+					</div>
 					<div id="qie_menu">
 						<a id="zt_prev" href=""><img id="qie_img_left" src="/images/index_two/btn_l.jpg"/></a>
 						<div id="qie_banner">

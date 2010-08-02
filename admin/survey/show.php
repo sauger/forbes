@@ -17,6 +17,9 @@
 		$item = $db->query("SELECT t1.id as vote_id,t3.title,t3.id FROM fb_vote t1 join fb_vote_item t2 on t1.id=t2.sub_vote_id join fb_vote_item t3 on t1.id=t3.vote_id where t2.vote_id=$id");
 		$item_count = $db->record_count;
 	}
+	$vote_num = $db->query("select count(id) as num from fb_survey_record where vote_id=$id");
+	$vote_num = $vote_num[0]->num;
+	#var_dump($vote_num);
 	#$in_type = "radio";
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -33,7 +36,7 @@
 <body>
 	<div id=ibody>
 		<div id=icaption>
-		    <div id=title style="font-size:20px;overflow:hidden"><?php echo $vote->name;?></div>
+		    <div id=title style="font-size:20px;overflow:hidden">(共<?php echo $vote_num;?>人)<?php echo $vote->name;?></div>
 			  <a href="result.php" id=btn_back></a>
 		</div>
 		<div id="question_div2">
@@ -42,14 +45,16 @@
 			    $result = $db->query("select count(item_id) as num,item_id from fb_survey_record2 where vote_id={$record[$i]->id} group by item_id");
 				for($k=0;$k<count($result);$k++){
 					$total = $total+$result[$k]->num;
-				}	
+				}
+				$qustion_num = $db->query("SELECT id FROM fb_survey_record2 f where vote_id={$record[$i]->id} group by record_id,vote_id");
+				$qustion_num = $db->record_count;
 			?>
 				<div class="survey2_z2">
 					<div class="s2_top2">
 						<div class="top_pg2">
 							<div class="title_pic"><img src="/images/survey/top2_redio.jpg"></div>
 							<div class="s2_title2">
-								<?php echo $record[$i]->name;?>
+								(共<?php echo $qustion_num;?>人)<?php echo $record[$i]->name;?>
 							</div>
 						</div>
 					</div>
