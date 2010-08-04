@@ -34,9 +34,7 @@
 		<div id="content">
 			<div id="content_left">
 				<div id="content_banner_left">
-					<div id="qie_img">
-						<img src="/images/index_two/t.jpg">
-					</div>
+					<?php include 'include.php';?>
 					<div id="qie_menu">
 						<a id="zt_prev" href=""><img id="qie_img_left" src="/images/index_two/btn_l.jpg"/></a>
 						<div id="qie_banner">
@@ -376,9 +374,9 @@
 						<div id="_month">一月</div>
 					</div>
 					<?php 
-						$day = $db->query("select id,title,created_at from fb_news where  to_days(created_at) = to_days(now()) order by click_count limit 10");
-						$week = $db->query("select id,title,created_at from fb_news where  week(created_at) = week(now()) order by click_count limit 10");
-						$month = $db->query("select id,title,created_at from fb_news where  month(created_at) = month(now()) order by click_count limit 10");
+						$day = $db->query("select id,title,created_at from fb_news where  to_days(created_at) = to_days(now()) group by title order by click_count desc limit 10");
+						$week = $db->query("select id,title,created_at from fb_news where  week(created_at) = week(now()) group by title order by click_count desc limit 10");
+						$month = $db->query("select id,title,created_at from fb_news where  month(created_at) = month(now()) group by title order by click_count desc limit 10");
 						!$day && $day = array();
 						!$week && $week = array();
 						!$month && $month = array();
