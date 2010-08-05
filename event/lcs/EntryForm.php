@@ -188,7 +188,7 @@
 																<td class="bb">您的工作地点</td>
 																<td colspan="3">
 																	<select class="se-lect2 reqired" name="work_place1">
-																		<option value="">请选择分类</option>
+																		<option vlue="">请选择</option>
 																		<option value="北京赛区">北京赛区</option>
 																		<option value="上海赛区">上海赛区</option>
 																		<option value="深圳赛区">深圳赛区</option>
@@ -197,39 +197,10 @@
 																		<option value="郑州赛区">郑州赛区</option>
 																	</select>
 																	<select class="se-lect2 reqired" name="work_place2">
-																		<option>请选择分类</option>
-																		<option belong="北京赛区" value="北京">北京</option>
-																		<option belong="北京赛区" value="天津">天津</option>
-																		<option belong="北京赛区" value="河北">河北</option>
-																		<option belong="北京赛区" value="山西">山西</option>
-																		<option belong="北京赛区" value="陕西">陕西</option>
-																		<option belong="北京赛区" value="内蒙">内蒙</option>
-																		<option belong="上海赛区" value="上海">上海</option>
-																		<option belong="上海赛区" value="江苏">江苏</option>
-																		<option belong="上海赛区" value="浙江">浙江</option>
-																		<option belong="深圳赛区" value="广东">广东</option>
-																		<option belong="深圳赛区" value="福建">福建</option>
-																		<option belong="深圳赛区" value="广西">广西</option>
-																		<option belong="深圳赛区" value="海南">海南</option>
-																		<option belong="深圳赛区" value="云南">云南</option>
-																		<option belong="沈阳赛区" value="山东">山东</option>
-																		<option belong="沈阳赛区" value="辽宁">辽宁</option>
-																		<option belong="沈阳赛区" value="吉林">吉林</option>
-																		<option belong="沈阳赛区" value="黑龙江">黑龙江</option>
-																		<option belong="成都赛区" value="重庆市">重庆市</option>
-																		<option belong="成都赛区" value="四川省">四川省</option>
-																		<option belong="成都赛区" value="湖北">湖北</option>
-																		<option belong="成都赛区" value="湖南">湖南</option>
-																		<option belong="成都赛区" value="贵州省">贵州省</option>
-																		<option belong="成都赛区" value="西藏自治区">西藏自治区</option>
-																		<option belong="成都赛区" value="青海">青海</option>
-																		<option belong="成都赛区" value="宁夏">宁夏</option>
-																		<option belong="郑州赛区" value="河南">河南</option>
-																		<option belong="郑州赛区" value="江西">江西</option>
-																		<option belong="郑州赛区" value="安徽">安徽</option>
-																		<option belong="郑州赛区" value="新疆">新疆</option>
-																		<option belong="郑州赛区" value="新疆">新疆</option>
-																	</select>																</td>
+																		<option vlue="">请选择</option>
+																	</select>
+																	
+																									</td>
 															</tr>
 															<tr>
 																<td class="bb">您目前所在的工作单位请明确到<br>（部门、网点、职务）</td>
@@ -471,6 +442,55 @@
 			</div><!-- body-inner end -->	
 		</div><!-- body end -->						
 	</div>
+			<select id="北京赛区" style="display:none">
+		<option vlue="">请选择</option>
+		<option belong="北京赛区" value="北京">北京</option>
+		<option belong="北京赛区" value="天津">天津</option>
+		<option belong="北京赛区" value="河北">河北</option>
+		<option belong="北京赛区" value="山西">山西</option>
+		<option belong="北京赛区" value="陕西">陕西</option>
+		<option belong="北京赛区" value="内蒙">内蒙</option>
+	</select>
+	<select id="上海赛区" style="display:none">
+		<option vlue="">请选择</option>
+		<option belong="上海赛区" value="上海">上海</option>
+		<option belong="上海赛区" value="江苏">江苏</option>
+		<option belong="上海赛区" value="浙江">浙江</option>
+	</select>
+	<select id="深圳赛区" style="display:none">
+		<option vlue="">请选择</option>
+		<option belong="深圳赛区" value="广东">广东</option>
+		<option belong="深圳赛区" value="福建">福建</option>
+		<option belong="深圳赛区" value="广西">广西</option>
+		<option belong="深圳赛区" value="海南">海南</option>
+		<option belong="深圳赛区" value="云南">云南</option>
+	</select>
+	<select id="沈阳赛区" style="display:none">
+		<option vlue="">请选择</option>
+		<option belong="沈阳赛区" value="山东">山东</option>
+		<option belong="沈阳赛区" value="辽宁">辽宁</option>
+		<option belong="沈阳赛区" value="吉林">吉林</option>
+		<option belong="沈阳赛区" value="黑龙江">黑龙江</option>
+	</select>
+	<select id="成都赛区" style="display:none">
+		<option vlue="">请选择</option>
+		<option belong="成都赛区" value="重庆市">重庆市</option>
+		<option belong="成都赛区" value="四川省">四川省</option>
+		<option belong="成都赛区" value="湖北">湖北</option>
+		<option belong="成都赛区" value="湖南">湖南</option>
+		<option belong="成都赛区" value="贵州省">贵州省</option>
+		<option belong="成都赛区" value="西藏自治区">西藏自治区</option>
+		<option belong="成都赛区" value="青海">青海</option>
+		<option belong="成都赛区" value="宁夏">宁夏</option>
+	</select>
+	<select id="郑州赛区" style="display:none">
+		<option vlue="">请选择</option>
+		<option belong="郑州赛区" value="河南">河南</option>
+		<option belong="郑州赛区" value="江西">江西</option>
+		<option belong="郑州赛区" value="安徽">安徽</option>
+		<option belong="郑州赛区" value="新疆">新疆</option>
+		<option belong="郑州赛区" value="新疆">新疆</option>
+	</select>		
 </body>
 </html>
 

@@ -1,22 +1,16 @@
 $(function(){
-	$("[name=work_place2] option").hide();
-	$("[name=work_place2] option").css('display','none');
-	$("[name=work_place2] option").eq(0).show();
-	
+	var html = $("[name=work_place2]").html();
 	$("[name=work_place1]").change(function(){
-		$("[name=work_place2]").val('');
-		var place = $(this).val();
-		$("[name=work_place2] option").hide();
-		$("[name=work_place2] option").eq(0).show();
-		if(place!=''){
-			$("[belong="+place+"]").show();
+		if($(this).val()!=''){
+			$("[name=work_place2]").html($("#"+$(this).val()+"").html());
+		}else{
+			$("[name=work_place2]").html(html);
 		}
 	});
 	
 	
 	$("#form_submit").click(function(e){
 		e.preventDefault();
-		
 		
 		
 		var reqired_flag = true;
@@ -137,6 +131,12 @@ $(function(){
 			return false;
 		}
 		
+		if(!isEmail($("[name=email]").val())){
+			alert("邮箱格式不对");
+			$("[name=email]")[0].focus();
+			return false;
+		}
+		
 		if($("#agree").attr('checked')&&!$("#disagree").attr('checked')){
 			$("form").submit();
 		}
@@ -144,3 +144,10 @@ $(function(){
 		
 	});
 });
+
+
+function isEmail( str ){ 
+	var myReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; 
+	if(myReg.test(str)) return true; 
+	return false; 
+} 
