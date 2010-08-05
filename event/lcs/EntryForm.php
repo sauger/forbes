@@ -188,7 +188,7 @@
 																<td class="bb">您的工作地点</td>
 																<td colspan="3">
 																	<select class="se-lect2 reqired" name="work_place1">
-																		<option vlue="">请选择</option>
+																		<option value="">请选择</option>
 																		<option value="北京赛区">北京赛区</option>
 																		<option value="上海赛区">上海赛区</option>
 																		<option value="深圳赛区">深圳赛区</option>
