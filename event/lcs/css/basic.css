@@ -1,0 +1,43 @@
+
+body{font-famiyl:"ËÎÌו";}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,buttom,textarea,p,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+a{text-decoration:none;color:#000;}
+
+.clear{
+	overflow:hidden;
+	zoom:1;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}	
+
+#container{
+	text-align:center;
+}
+#container-inner{
+	width:1000px;
+	margin:0 auto;
+	text-align:left;
+}
+#content{
+	width:1000px;
+	background:url(../images/bg-1.gif) top repeat-x;
+}
+#content-inner{
+	font-size:12px;
+}
+
+/* ==================== header begin  ===================== */
+
+.header_bg{
+	width:1000px;
+	height:268px;
+	overflow:hidden;
+}

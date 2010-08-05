@@ -1,0 +1,255 @@
+.box-one ,.box-two{
+	width:1000px;
+	overflow:hidden;
+}
+/* ----------------------- left ----------------------------------- */
+
+.left-warp ,.right-warp ,.left-two-warp ,.right-two-warp ,.right-three-warp{ 	
+	width:358px;
+	float:left;
+	margin-top:5px;
+	border:1px solid #cbcbc9;
+	overflow:hidden;
+	background:#FFFFFF;
+	}
+.left-one-main ,.right-one-main ,.left-two-main ,.background-main{
+	width:98%;
+	margin:0 auto 3px;
+	line-height:22px;
+	background:url(../images/bg-5.gif) bottom repeat-x;
+}
+.left-tex ,.right-tex{
+	width:88%;
+	margin:0 auto;
+	padding-bottom:5px;
+	overflow:hidden;}
+
+
+.left-tex p ,.right-tex p ,.left-two-tex p{
+	margin-top:15px;
+}
+.more a{
+	color:#976402;
+	float:right;
+	overflow:hidden;
+}
+.left-title ,.right-title ,.left-two-title ,.background-title ,.entryform-title{
+	border-bottom:1px dashed #af9f7d;
+	color:#755c02;
+	font-size:14px;
+	margin:10px auto;
+	text-align:center;
+	padding:15px 0;	
+}
+.left-two-title{
+	width:98%;
+}
+.left-two-main .t{
+	color:#905f02;
+}
+.left-two-main{
+	width:100%;
+	line-height:18px;
+	background:url(../images/left-bg2.gif) right bottom no-repeat;	
+}
+
+/* ----------------------- right ----------------------------------- */
+.right-warp ,.right-two-warp ,.right-three-warp{
+	width:631px;
+	margin-left:3px;
+}
+.right-title{
+	border-bottom:1px border #af9f7d;
+	color:#000000;
+}
+.right-one-main{
+	background:	url(../images/body-right-bg.gif) no-repeat bottom;
+}
+.ae4red{
+	color:#af4200;
+}
+.right-two-title ,.right-three-title{
+	width:620px;
+	height:112px;
+	margin:5px auto;
+}
+.right-pic-warp{
+	width:612px;
+	margin:0 auto;
+}
+.right-pic-warp ul{
+	float:left;
+	overflow:hidden;
+	color:#000;
+}
+.right-pic-warp ul li{
+	float:left;
+	width:113px;
+	height:165px;
+	overflow:hidden;
+	margin:6px 4px;
+	line-height:16px;
+	text-align:right;
+}
+.right-pic-warp ul li img{
+	border:1px solid #999999;
+	margin-bottom:2px;
+	padding:1px;
+	width:109px;
+	height:99px;	
+}
+.right-pic-warp ul li .t{
+	color:#999999
+}
+.right-three-main{
+	background:url(../images/bg-7.gif) repeat-y;
+	overflow:hidden;
+	}
+.right-three-title{
+	width:165px;
+	height:14px;
+	padding:10px 0;
+	overflow:hidden;
+}
+
+.right-three-list{
+	width:584px;
+	margin:8px auto;
+	overflow:hidden;	
+}
+#li_container{
+	width:100%;
+	padding-top:10px;
+	height:97px;
+	overflow:hidden;
+	position:relative;
+}
+.right-three-main .more a{
+	text-align:right;
+	color:#97021b;
+	float:right;
+	margin-top:5px;
+}
+.right-three-list ul{
+	width:100%;
+	overflow:hidden;
+	position:absolute; top:0px; left:0px;
+}
+.right-three-list ul li{
+	width:175px;
+	float:left;
+	height:20px;
+	margin:8px 5px;
+	text-align:right;
+	border-bottom:2px #CCCCCC solid;
+}
+.right-three-list ul li .name ,.right-three-list ul li .age ,.right-three-list ul li .job{
+	float:left;display:block;
+}
+.right-three-list ul li .name{
+	color:#cd7134;width:40px;
+}
+.right-three-list ul li .age{
+	color:#32b2f0;width:60px;
+}
+.right-three-list ul li .job {	
+	color:#064ca5;width:70px;
+}
+.background-main{
+	background:	url(../images/bg-8.gif) repeat-x bottom;
+	margin-bottom:5px;
+}
+.background-warp{
+	width:98%;
+	margin:0 auto;
+	background:	#FFFFFF;
+	border:1px solid #d3b27e;
+}
+.background-title ,.entryform-title{width:98%;padding:35px 0;margin:15px auto;}
+
+.entryform-main{
+	margin:0 auto;
+}
+.entryform-title{
+	border-bottom:1px solid #af9f7d;
+}
+.entryform-box{
+	width:888px;
+	margin:0 auto;
+}
+.entryform-head{
+	height:10px;
+	margin-top:20px;
+}
+.entryform-bottom{
+	height:19px;
+}
+.entryform-content{
+	background:url(../images/entry_2.gif) repeat-y;
+}
+
+.sure-but{
+	background:	url(../images/sure-but.gif);
+	height:21px;
+	line-height:20px;
+	margin:10px auto;
+	width:113px;
+	text-align:center;
+}
+.tex-tarea {
+	height:110px;
+	width:95%;
+}
+.tex-tarea-o{
+	height:45px;
+	width:354px;	
+}
+.entryform-content table{
+	border:none;
+	width:95%;
+	line-height:24px;
+	margin:0 auto;
+}
+.entryform-content table2{
+	width:100%;
+	margin:25px 0;
+}
+.entryform-content td{
+	height:40px;
+}
+.entryform-content td.aa{
+	text-align:right;
+	width:300px;
+}
+.entryform-content td.bb{
+	text-align:right;	
+}
+.entryform-main .bg{
+	background:#f1eff0;
+	height:116px;
+	line-height:24px;
+	padding:10px 20px 0 20px;
+	}
+.iput-title ,.tex-tarea ,.tex-tarea-o ,.se-lect2 ,.radio,.in-check{
+	margin:0 10px;
+
+}
+.iput-title ,.tex-tareao{
+	width:150px;
+}
+.tex-tarea {
+	margin-left:10px;
+}
+.td2{
+	background:	#F5F5F5;
+	line-height:22px;
+	border:1px solid #CCCCCC;
+	text-align:center
+}
+.td3{
+	border:1px solid #CCCCCC;
+	padding-left:5px;
+	}
+.td4{
+	border-bottom:1px dashed #CCCCCC;
+}
