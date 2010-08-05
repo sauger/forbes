@@ -1,6 +1,5 @@
 $(function(){
 	var sa = new ScrollAction($('#li_container ul'), 'li', 30, true);
-	
 	sa.start();
 });
 

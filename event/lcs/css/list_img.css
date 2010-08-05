@@ -1,0 +1,9 @@
+body {font-size:12px; font-family:宋体,Arial; color:#000000; margin:0 auto; padding:0;}
+div{margin:0; padding:0; float:left; display:inline;}
+
+#ibody{width:1000px; margin:0 auto; float:none; display:block;}
+
+#img_banner{width:1000px; height:658px;}
+	#img_banner img{width:1000px; height:658px; border:0px solid red;}
+#img_fun{width:1000px; height:30px; padding-bottom:20px; text-align:center;}
+	#img_fun a{margin-left:10px; font-size:16px; font-weight:bold; color:#003399;}
