@@ -95,13 +95,14 @@
 					<?php } ?>
 				</div>
 			<?php } ?>
+			<!-- 
 			<div id=football_hy <?php show_page_pos('football','only_link2')?>>
 				<a id=football_member></a>
 			</div>
 			<div style="float:none; display:none;">clear_float</div>
 			<div id="football2" >
 				<a href="<?php echo $pos_items->football->href;?>" title="<?php echo $pos_items->football->title;?>"><img border="0" src="/images/index/football.gif"></a>
-			</div>
+			</div> -->
 	</div>
 </div>
 <script>
