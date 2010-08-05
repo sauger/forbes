@@ -66,7 +66,7 @@
 												</tr>
 												<tr>
 													<td class="bb">手机</td>
-													<td><input class="iput-title reqired number" maxlength="12" type="text" name="phone" ></td>
+													<td><input class="iput-title reqired number" maxlength="11" surelength="11" type="text" name="phone" ></td>
 												</tr>
 												<tr>
 													<td class="bb">填写所在省份及所属城市</td>
@@ -143,16 +143,16 @@
 																<td class="td3"><input type="text" error_msg="起止日期" maxlength="30" class="reqired" style="border:0" name="info_rq[]"></td>
 															</tr>
 															<tr>
-																<td class="td3"><input type="text" error_msg="毕业院校" maxlength="20" class="reqired" style="border:0" name="info_school[]"></td>
-																<td class="td3"><input type="text" error_msg="主修专业" maxlength="20" class="reqired" style="border:0" name="info_zy[]"></td>
-																<td class="td3"><input type="text" error_msg="学历学位" maxlength="20" class="reqired" style="border:0" name="info_xw[]"></td>
-																<td class="td3"><input type="text" error_msg="起止日期" maxlength="30" class="reqired" style="border:0" name="info_rq[]"></td>
+																<td class="td3"><input type="text" error_msg="毕业院校" maxlength="20" style="border:0" name="info_school[]"></td>
+																<td class="td3"><input type="text" error_msg="主修专业" maxlength="20" style="border:0" name="info_zy[]"></td>
+																<td class="td3"><input type="text" error_msg="学历学位" maxlength="20" style="border:0" name="info_xw[]"></td>
+																<td class="td3"><input type="text" error_msg="起止日期" maxlength="30" style="border:0" name="info_rq[]"></td>
 															</tr>
 															<tr>
-																<td class="td3"><input type="text" error_msg="毕业院校" maxlength="20" class="reqired" style="border:0" name="info_school[]"></td>
-																<td class="td3"><input type="text" error_msg="主修专业" maxlength="20" class="reqired" style="border:0" name="info_zy[]"></td>
-																<td class="td3"><input type="text" error_msg="学历学位" maxlength="20" class="reqired" style="border:0" name="info_xw[]"></td>
-																<td class="td3"><input type="text" error_msg="起止日期" maxlength="30" class="reqired" style="border:0" name="info_rq[]"></td>
+																<td class="td3"><input type="text" error_msg="毕业院校" maxlength="20" style="border:0" name="info_school[]"></td>
+																<td class="td3"><input type="text" error_msg="主修专业" maxlength="20" style="border:0" name="info_zy[]"></td>
+																<td class="td3"><input type="text" error_msg="学历学位" maxlength="20" style="border:0" name="info_xw[]"></td>
+																<td class="td3"><input type="text" error_msg="起止日期" maxlength="30" style="border:0" name="info_rq[]"></td>
 															</tr>
 														</table>													</td>
 												</tr>
@@ -314,14 +314,14 @@
 																<td class="td3" ><input type="text" maxlength="25" error_msg="信息证明人联系电话" class="reqired" style="border:0" name="zm_phone[]"></td>
 															</tr>
 															<tr>
-																<td class="td3" ><input type="text" maxlength="6" error_msg="信息证明人姓名" class="reqired" style="border:0" name="zm_name[]"></td>
-																<td class="td3" ><input type="text" maxlength="20" error_msg="信息证明人单位及职务" class="reqired" style="border:0" name="zm_zw[]"></td>
-																<td class="td3" ><input type="text" maxlength="25" error_msg="信息证明人联系电话" class="reqired" style="border:0" name="zm_phone[]"></td>
+																<td class="td3" ><input type="text" maxlength="6" error_msg="信息证明人姓名" style="border:0" name="zm_name[]"></td>
+																<td class="td3" ><input type="text" maxlength="20" error_msg="信息证明人单位及职务" style="border:0" name="zm_zw[]"></td>
+																<td class="td3" ><input type="text" maxlength="25" error_msg="信息证明人联系电话" style="border:0" name="zm_phone[]"></td>
 															</tr>
 															<tr>
-																<td class="td3" ><input type="text" maxlength="6" error_msg="信息证明人姓名" class="reqired" style="border:0" name="zm_name[]"></td>
-																<td class="td3" ><input type="text" maxlength="20" error_msg="信息证明人单位及职务" class="reqired" style="border:0" name="zm_zw[]"></td>
-																<td class="td3" ><input type="text" maxlength="25" error_msg="信息证明人联系电话" class="reqired" style="border:0" name="zm_phone[]"></td>
+																<td class="td3" ><input type="text" maxlength="6" error_msg="信息证明人姓名" style="border:0" name="zm_name[]"></td>
+																<td class="td3" ><input type="text" maxlength="20" error_msg="信息证明人单位及职务" style="border:0" name="zm_zw[]"></td>
+																<td class="td3" ><input type="text" maxlength="25" error_msg="信息证明人联系电话" style="border:0" name="zm_phone[]"></td>
 															</tr>
 															</table>														
 														</td>

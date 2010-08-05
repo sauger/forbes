@@ -95,4 +95,6 @@
 		$data->nmgm = $_POST['nmgm'][$i];
 		$data->save();
 	}
+	
+	redirect('index.html');
 ?>

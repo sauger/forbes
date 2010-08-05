@@ -1,5 +1,6 @@
 $(function(){
 	$("[name=work_place2] option").hide();
+	$("[name=work_place2] option").css('display','none');
 	$("[name=work_place2] option").eq(0).show();
 	
 	$("[name=work_place1]").change(function(){
@@ -15,6 +16,9 @@ $(function(){
 	
 	$("#form_submit").click(function(e){
 		e.preventDefault();
+		
+		
+		
 		var reqired_flag = true;
 		$(".reqired").each(function(){
 			if($(this).attr("error_msg") == undefined){
@@ -90,7 +94,7 @@ $(function(){
 		}
 		var length_flag = true;
 		
-		$("input[type=text]").each(function(){
+		$(".reqired").each(function(){
 			if($(this).attr("error_msg") == undefined){
 				var error_msg = $(this).parent().prev().text();
 			}else{
@@ -106,7 +110,30 @@ $(function(){
 				}
 			}
 		});
+		
 		if(!length_flag){
+			return false;
+		}
+		
+		var sure_flag = true;
+		
+		$("input[type=text]").each(function(){
+			if($(this).attr("error_msg") == undefined){
+				var error_msg = $(this).parent().prev().text();
+			}else{
+				var error_msg = $(this).attr('error_msg');
+			}
+			if($(this).attr('surelength')!=undefined){
+				if($(this).val().length!=$(this).attr('surelength')){
+					alert(error_msg+"的长度一定要等于"+$(this).attr('surelength'));
+					$(this)[0].focus();
+					sure_flag = false;
+					return false;
+				}
+			}
+		});
+		
+		if(!sure_flag){
 			return false;
 		}
 		
