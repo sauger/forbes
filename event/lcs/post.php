@@ -65,15 +65,15 @@
 	$lcs->punish = $_POST['long']['punish'];
 
 	$info_school = implode('&',$_POST['info_school']);
-	$info_zy = implode('&',$_POST['info_zy']);
-	$info_xw = implode('&',$_POST['info_xw']);
-	$info_rq = implode('&',$_POST['info_rq']);
+	$info_zy = implode('+',$_POST['info_zy']);
+	$info_xw = implode('+',$_POST['info_xw']);
+	$info_rq = implode('+',$_POST['info_rq']);
 	$lcs->school_info = $info_school."&&".$info_zy."&&".$info_xw."&&".$info_rq;
 	$certificate = implode('&&',$_POST['certificate']);
 	$lcs->certificate = $certificate;
-	$zm_name = implode('&',$_POST['zm_name']);
-	$zm_zw = implode('&',$_POST['zm_zw']);
-	$zm_phone = implode('&',$_POST['zm_phone']);
+	$zm_name = implode('+',$_POST['zm_name']);
+	$zm_zw = implode('+',$_POST['zm_zw']);
+	$zm_phone = implode('+',$_POST['zm_phone']);
 	$lcs->information_references = $zm_name."&&".$zm_zw."&&".$zm_phone;
 	$lcs->money_time = implode('&&',$_POST['money_time']);
 	
