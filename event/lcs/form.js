@@ -12,7 +12,6 @@ $(function(){
 	$("#form_submit").click(function(e){
 		e.preventDefault();
 		
-		
 		var reqired_flag = true;
 		$(".reqired").each(function(){
 			if($(this).attr("error_msg") == undefined){
@@ -137,13 +136,14 @@ $(function(){
 			return false;
 		}
 		
-		var money_time;
+		var money_time = 0;
 		
 		$("[name=money_time[]]").each(function(){
 			money_time += Number($(this).val());
 		});
 		if(money_time!=100){
 			alert("您用于各理财领域的时间之和必须为100");
+			alert(money_time);
 			$("[name=money_time[]]")[0].focus();
 			return false;
 		}

@@ -64,7 +64,7 @@
 	$lcs->award = $_POST['long']['award'];
 	$lcs->punish = $_POST['long']['punish'];
 
-	$info_school = implode('&',$_POST['info_school']);
+	$info_school = implode('+',$_POST['info_school']);
 	$info_zy = implode('+',$_POST['info_zy']);
 	$info_xw = implode('+',$_POST['info_xw']);
 	$info_rq = implode('+',$_POST['info_rq']);
@@ -95,6 +95,6 @@
 		$data->nmgm = $_POST['nmgm'][$i];
 		$data->save();
 	}
-	
+	alert("报名成功");
 	redirect('index.html');
 ?>
