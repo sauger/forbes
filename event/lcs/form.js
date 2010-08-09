@@ -1,12 +1,4 @@
 $(function(){
-	var html = $("[name=work_place2]").html();
-	$("[name=work_place1]").change(function(){
-		if($(this).val()!=''){
-			$("[name=work_place2]").html($("#"+$(this).val()+"").html());
-		}else{
-			$("[name=work_place2]").html(html);
-		}
-	});
 	
 	
 	$("#form_submit").click(function(e){

@@ -60,11 +60,7 @@
 													<td><?php echo $lcs->phone;?></td>
 												</tr>
 												<tr>
-													<td class="bb">填写所在省份及所属城市：</td>
-													<td><?php echo $lcs->city;?></td>
-												</tr>
-												<tr>
-													<td class="bb">所选参赛区：</td>
+													<td class="bb">您的工作地点：</td>
 													<td>
 														<?php echo $lcs->ccq;?>
 													</td>
@@ -87,7 +83,7 @@
 													<td colspan="2">
 														<table class="table2">
 															<tr>
-																<td colspan="4" align="left">本科学历的毕业院校为</td>
+																<td colspan="4" align="left">清填写您的学业经历（从高往底开始填写）</td>
 															</tr>
 															<tr>
 																<td class="td2"><strong>毕业院校</strong></td>

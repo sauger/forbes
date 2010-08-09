@@ -47,13 +47,13 @@
 	$lcs->email = $_POST['email'];
 	$lcs->fix_phone = $_POST['fix_phone'];
 	$lcs->phone = $_POST['phone'];
-	$lcs->city = $_POST['city'];
+	$lcs->city = '已删除';
 	$lcs->ccq = $_POST['ccq'];
 	$lcs->education = $_POST['education'];
 	$lcs->school = $_POST['school'];
 	$lcs->specialty = $_POST['specialty'];
-	$lcs->work_place = $_POST['work_place1'].'&&'.$_POST['work_place2'];
-	$lcs->ssjg = $_POST['ssjg'];
+	$lcs->work_place = '已删除';
+	$lcs->ssjg = '已删除';
 	$lcs->work_space = $_POST['work_space1'].'&&'.$_POST['work_space2'];
 	$lcs->work_year = $_POST['work_year'];
 	$lcs->money_year = $_POST['money_year'];
@@ -83,7 +83,7 @@
 		$data = new table_class('fb_lcs_data');
 		$data->lcs_id = $lcs->id;
 		$data->year = 1998+$i;
-		$data->khrs = $_POST['khrs'][$i];
+		$data->khrs = '已删除';
 		$data->nmzj = $_POST['nmzj'][$i];
 		$data->npjzc = $_POST['npjzc'][$i];
 		$data->nmzc = $_POST['nmzc'][$i];
