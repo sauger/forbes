@@ -62,7 +62,7 @@
 												</tr>
 												<tr>
 													<td class="bb">固定电话</td>
-													<td><input class="iput-title reqired" maxlength="20" type="text" name="fix_phone" ></td>
+													<td><input class="iput-title" maxlength="20" type="text" name="fix_phone" ></td>
 												</tr>
 												<tr>
 													<td class="bb">手机</td>
@@ -381,9 +381,9 @@
 															</tr>
 															<tr>
 																<td class="td3">全年金融产品（含基金、银行理财产品、债券、股票等）销售量（万元）</td>
-																<td class="td3" ><input type="hidden" maxlength="10" error_msg="2008年度全年金融产品" class="reqired number"  name="qncp[]"></td>
-																<td class="td3" ><input type="hidden" maxlength="10" error_msg="2009年度全年金融产品" class="reqired number"  name="qncp[]"></td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度全年金融产品" class="reqired number"  name="qncp[]"></td>
+																<td class="td3" ><input type="hidden" maxlength="10" error_msg="2008年度全年金融产品" name="qncp[]"></td>
+																<td class="td3" ><input type="hidden" maxlength="10" error_msg="2009年度全年金融产品" name="qncp[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度全年金融产品" class="number"  name="qncp[]"></td>
 															</tr>
 															<tr>
 																<td class="td3">全年保单销售量（万元）</td>

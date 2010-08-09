@@ -126,7 +126,7 @@
 													<td colspan="2">
 														<table class="table2">                                            
 															<tr>
-																<td rowspan="4" valign="top" span class="bb" >您获得的资格或认证有（可多选）</td>
+																<td rowspan="6" width="30%" valign="top" span class="bb" >您获得的资格或认证有（可多选）</td>
 																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('国际金融理财师（CFP）',$certificate))echo "checked='checked'";?> value="国际金融理财师（CFP）" />国际金融理财师（CFP）</td>
 															  	<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('金融理财师（AFP）',$certificate))echo "checked='checked'";?> value="金融理财师（AFP）" />金融理财师（AFP）</td>
 																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('金融理财管理师（EFP）',$certificate))echo "checked='checked'";?> value="金融理财管理师（EFP）" />金融理财管理师（EFP）</td>
