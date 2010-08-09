@@ -48,8 +48,8 @@
 												<tr>
 													<td class="bb">性别</td>
 													<td>
-														<input type="radio" value="男" class="radio reqired" name="sex" />男
-														<input type="radio" value="女" class="radio reqired" name="sex" />女													
+														<input type="radio" value="男" class="radio" name="sex" />男
+														<input type="radio" value="女" class="radio" name="sex" />女													
 													</td>
 												</tr>
 												<tr>
@@ -149,7 +149,7 @@
 													<td colspan="2">
 														<table class="table2">
 															<tr>
-																<td colspan="4" align="left">清填写您的学业经历（从高往底开始填写）</td>
+																<td colspan="4" align="left">请填写您的学业经历（从高往底开始填写）</td>
 															</tr>
 															<tr>
 																<td class="td2"><strong>毕业院校</strong></td>
@@ -362,10 +362,10 @@
 																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度年末在您名下或直接管理和维护的" class="reqired number"  name="nmzj[]"></td>
 															</tr>
 															<tr>
-																<td class="td3">年平均管理资产总量（万元）*</td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2008年度年平均管理资产总量" class="reqired number"  name="npjzc[]"></td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2009年度年平均管理资产总量" class="reqired number"  name="npjzc[]"></td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度年平均管理资产总量" class="reqired number"  name="npjzc[]"></td>
+																<td class="td3">年平均管理资产总量（万元）</td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2008年度年平均管理资产总量" class="number"  name="npjzc[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2009年度年平均管理资产总量" class="number"  name="npjzc[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度年平均管理资产总量" class="number"  name="npjzc[]"></td>
 															</tr>
 															<tr>
 																<td class="td3">年末在管资产存量市值（万元）*</td>
@@ -381,8 +381,8 @@
 															</tr>
 															<tr>
 																<td class="td3">全年金融产品（含基金、银行理财产品、债券、股票等）销售量（万元）</td>
-																<td class="td3" ><input type="hidden" maxlength="10" error_msg="2008年度全年金融产品" name="qncp[]"></td>
-																<td class="td3" ><input type="hidden" maxlength="10" error_msg="2009年度全年金融产品" name="qncp[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2008年度全年金融产品" class="number" name="qncp[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2009年度全年金融产品" class="number" name="qncp[]"></td>
 																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度全年金融产品" class="number"  name="qncp[]"></td>
 															</tr>
 															<tr>
@@ -406,10 +406,10 @@
 												 	  </table>													</td>
 												</tr>
 												<tr>
-													<td colspan="2"><strong>何时何地受过何奖励*</strong></td>
+													<td colspan="2"><strong>何时何地受过何奖励</strong></td>
 												</tr>
 												<tr>
-													<td colspan="2"><textarea class="tex-tarea reqired" maxlength="100" error_msg="何时何地受过何奖励" name="long[award]" cols="" rows=""></textarea></td>
+													<td colspan="2"><textarea class="tex-tarea" maxlength="100" error_msg="何时何地受过何奖励" name="long[award]" cols="" rows=""></textarea></td>
 												</tr>
 												<tr>
 													<td colspan="2"><strong>您是否受到过监管机构或行业协会（如CFA、CPA）的任何处罚以及因违规或违法受过法律处罚？如是，请具体说明：*</strong></td>
