@@ -362,16 +362,16 @@
 																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度年末在您名下或直接管理和维护的" class="reqired number"  name="nmzj[]"></td>
 															</tr>
 															<tr>
-																<td class="td3">年平均管理资产总量（万元）</td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2008年度年平均管理资产总量" class="number"  name="npjzc[]"></td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2009年度年平均管理资产总量" class="number"  name="npjzc[]"></td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度年平均管理资产总量" class="number"  name="npjzc[]"></td>
+																<td class="td3">年平均管理资产总量（万元）*</td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2008年度年平均管理资产总量" class="number reqired"  name="npjzc[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2009年度年平均管理资产总量" class="number reqired"  name="npjzc[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度年平均管理资产总量" class="number reqired"  name="npjzc[]"></td>
 															</tr>
 															<tr>
-																<td class="td3">年末在管资产存量市值（万元）*</td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2008年度年末在管资产存量市值" class="reqired number"  name="nmzc[]"></td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2009年度年末在管资产存量市值" class="reqired number"  name="nmzc[]"></td>
-																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度年末在管资产存量市值" class="reqired number"  name="nmzc[]"></td>
+																<td class="td3">年末在管资产存量市值（万元）</td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2008年度年末在管资产存量市值" class="number"  name="nmzc[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2009年度年末在管资产存量市值" class="number"  name="nmzc[]"></td>
+																<td class="td3" ><input type="text" maxlength="10" error_msg="2010年度年末在管资产存量市值" class="number"  name="nmzc[]"></td>
 															</tr>
 															<tr>
 																<td class="td3">年金融产品销售量（万）*</td>
