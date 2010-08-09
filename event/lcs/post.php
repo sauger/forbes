@@ -39,6 +39,7 @@
 	}
 	
 	
+	
 	$lcs = new table_class('fb_lcs');
 	
 	$lcs->name = $_POST['name'];

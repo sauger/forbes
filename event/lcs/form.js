@@ -47,7 +47,7 @@ $(function(){
 					return false;
 				}
 			}else{
-				if($(this).val()==''){
+				if($.trim($(this).val())==''){
 					alert("请填写"+error_msg);
 					$(this)[0].focus();
 					reqired_flag = false;
@@ -135,7 +135,7 @@ $(function(){
 		});
 		if(money_time!=100){
 			alert("您用于各理财领域的时间之和必须为100");
-			alert(money_time);
+			//alert(money_time);
 			$("[name=money_time[]]")[0].focus();
 			return false;
 		}
