@@ -142,22 +142,19 @@
 																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('注册会计师（CPA）',$certificate))echo "checked='checked'"?> value="注册会计师（CPA）" />注册会计师（CPA）</td>
 															</tr>
 															<tr>
+																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('注册财务策划师（RFP）',$certificate))echo "checked='checked'"?> value="注册财务策划师（RFP）" />注册财务策划师（RFP）</td>
+																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('v',$certificate))echo "checked='checked'"?> value="国际认证财务顾问师（RFC）" />国际认证财务顾问师（RFC）</td>
+																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('特许财富管理师（CWM）',$certificate))echo "checked='checked'"?> value="特许财富管理师（CWM）" />特许财富管理师（CWM）</td>
+															</tr>
+															<tr>
+																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('中国注册理财规划师协会（CICFP）',$certificate))echo "checked='checked'"?> value="中国注册理财规划师协会（CICFP）" />中国注册理财规划师协会（CICFP）</td>
+																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('理财规划师国家职业资格认证（CHFP）',$certificate))echo "checked='checked'"?> value="理财规划师国家职业资格认证（CHFP）" />理财规划师国家职业资格认证（CHFP）</td>
+																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('中国银行业从业人员资格认证（CCBP）',$certificate))echo "checked='checked'"?> value="中国银行业从业人员资格认证（CCBP）" />中国银行业从业人员资格认证（CCBP）</td>
+															</tr>
+															<tr>
 																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('国际注册内部审计师（CIA）',$certificate))echo "checked='checked'"?> value="国际注册内部审计师（CIA）" />国际注册内部审计师（CIA）</td>
 																<td><input class="in-check reqired" name="certificate[]" type="checkbox" <?php if(in_array('其他（请具体写明）',$certificate))echo "checked='checked'"?> value="其他（请具体写明）" />其他（请具体写明）</td>
 																<td>&nbsp;</td>
-															</tr>
-															<tr>
-																<td class="bb">理财师所属机构：</td>
-																<td colspan="3"><?php echo $lcs->ssjg;?></td>
-															</tr>
-															<tr>
-																<td class="bb">您的工作地点：</td>
-																<td colspan="3">
-																	<?php
-																		$workplace = explode("&&",$lcs->work_place);
-																		echo $workplace[0].'-'.$workplace[1];
-																	?>
-																									</td>
 															</tr>
 															<tr>
 																<td class="bb">您目前所在的工作单位请明确到<br>（部门、网点、职务）：</td>
@@ -293,13 +290,7 @@
 																<td width="25%" align="center" class="td2"><strong>2010年（截止2010-6-30）</strong></td>
 															</tr>
 															<tr>
-																<td class="td3">客户人数</td>
-																<td class="td3" ><?php echo $info[0]->khrs;?></td>
-																<td class="td3" ><?php echo $info[1]->khrs;?></td>
-																<td class="td3" ><?php echo $info[2]->khrs;?></td>
-															</tr>
-															<tr>
-																<td class="td3">年末在您名下或直接管理和维护的</td>
+																<td class="td3">年末在您名下或直接管理和维护的客户数*</td>
 																<td class="td3" ><?php echo $info[0]->nmzj;?></td>
 																<td class="td3" ><?php echo $info[1]->nmzj;?></td>
 																<td class="td3" ><?php echo $info[2]->nmzj;?></td>
