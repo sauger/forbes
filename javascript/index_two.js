@@ -62,6 +62,20 @@ $(function(){
 	}
 	
 	$("#content_qie_left").hover(function(){
+		$(".guide").hide();
+		$("#ljzzc").show();
+		$("#content_qie_left img").show();
+		$("#content_qie_right img").hide();
+		$("#content_qie_left").css({'background-image':'url(/images/index_two/right_u.jpg)','color':'#B00001','font-weight':'bold'});
+		$("#content_qie_right").css({'background-image':'url(/images/index_two/left_s.jpg)','color':'#B5B5B5','font-weight':'normal'});
+	},function(){});
+	$("#content_qie_right").hover(function(){
+		$(".guide").hide();
+		$("#jhdd").show();
+		$("#content_qie_right img").show();
+		$("#content_qie_left img").hide();
+		$("#content_qie_left").css({'background-image':'url(/images/index_two/right_s.jpg)','color':'#B5B5B5','font-weight':'normal'});
+		$("#content_qie_right").css({'background-image':'url(/images/index_two/left_u.jpg)','color':'#B00001','font-weight':'bold'});
 		
 	},function(){});
 	
