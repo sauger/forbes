@@ -270,12 +270,12 @@
 												<tr>
 												  <td colspan="2"><table class="table2">
                                                     <tr>
-                                                      <td colspan="3" align="left">理财工作心得（控制在200字内） </td>
+                                                      <td colspan="3" align="left">理财工作心得（控制在200字内）*</td>
                                                     </tr>
                                                     
                                                     <tr>
                                                       <td colspan="3">
-                                                        <textarea class="tex-tarea" maxlength="200" error_msg="理财工作心得" name="long[experience]" cols="" rows=""></textarea>
+                                                        <textarea class="tex-tarea reqired" maxlength="200" error_msg="理财工作心得" name="long[experience]" cols="" rows=""></textarea>
                                                       </td>
                                                     </tr>
                                                     

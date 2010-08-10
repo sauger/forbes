@@ -36,8 +36,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 						.qie_banner_value a{ color:#838486; font-size:12px; text-decoration: none;}
 				#qie_img_right{width:7px; height:18px; margin-top:64px; margin-right:3px; border:0px solid #B5B5B5; float: left; display:inline;}
 		#content_banner_right{width:265px; height:375px; float:right;}
-			#content_qie_left{width:132px; height:34px; background: url(/images/index_two/l.jpg) no-repeat; cursor:pointer;  text-align: center; font-size: 12px; color:#B5B5B5; line-height:34px;}
-			#content_qie_right{width:133px; height:24px; padding-top:10px; background: url(/images/index_two/r.jpg) no-repeat; cursor:pointer;  text-align: center; font-size: 12px; color:#B00001; font-weight:bold;}
+			#content_qie_left{width:132px; height:34px; background-image: url(/images/index_two/right_s.jpg); cursor:pointer;  text-align: center; font-size: 12px; color:#B5B5B5; line-height:34px;}
+			#content_qie_right{width:133px; height:24px; padding-top:10px; background-image: url(/images/index_two/left_u.jpg); cursor:pointer;  text-align: center; font-size: 12px; color:#B00001; font-weight:bold;}
 				#content_qie_right img{width:5px; height:3px; margin-left:5px;  border:0px solid red;}
 			#guide{width:263px; height:342px; border:1px solid #B5B5B5; border-top: 0px solid #B5B5B5; overflow: hidden;}
 				.guide_title{height:14px; margin-left:5px; margin-top:15px; line-height:14px; color:#B5B5B5; font-weight: bold; font-size:12px;}

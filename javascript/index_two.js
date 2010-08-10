@@ -61,6 +61,10 @@ $(function(){
 		$(".top_box:eq("+index+")").show();
 	}
 	
+	$("#content_qie_left").hover(function(){
+		
+	},function(){});
+	
 	setTimeout(function(){
 		auto_turn_top();
 	},5000);
