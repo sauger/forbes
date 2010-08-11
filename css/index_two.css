@@ -36,7 +36,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 						.qie_banner_value a{ color:#838486; font-size:12px; text-decoration: none;}
 				#qie_img_right{width:7px; height:18px; margin-top:64px; margin-right:3px; border:0px solid #B5B5B5; float: left; display:inline;}
 		#content_banner_right{width:265px; height:375px; float:right;}
-			#content_qie_left{width:132px; height:34px; background-image: url(/images/index_two/right_s.jpg); cursor:pointer;  text-align: center; font-size: 12px; color:#B5B5B5; line-height:34px;}
+			#content_qie_left{width:132px; height:24px; padding-top:10px; background-image: url(/images/index_two/right_s.jpg); cursor:pointer;  text-align: center; font-size: 12px; color:#B5B5B5;}
 				#content_qie_left img{width:5px; height:3px; margin-left:5px;  border:0px solid red;}
 			#content_qie_right{width:133px; height:24px; padding-top:10px; background-image: url(/images/index_two/left_u.jpg); cursor:pointer;  text-align: center; font-size: 12px; color:#B00001; font-weight:bold;}
 				#content_qie_right img{width:5px; height:3px; margin-left:5px;  border:0px solid red;}
@@ -54,7 +54,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 				.gg_title{height: 14px; margin-left:5px; font-size:12px; color:#336699; font-weight:bold; float:left; display:inline;}
 				.guide_hr_val{width:230px; height:18px; margin-top:5px; padding-left:8px; background:url(/images/index_two/dian.gif) NO-REPEAT 0 7px; overflow:hidden; line-height:18px; margin-left:15px;}
 				.guide_hr_val a{font-size:12px; color:#000; text-decoration:none;}
-				.guide_hr_val2{width:310px; height:18px; margin-top:5px; margin-left:15px; padding-left:8px; background:url(/images/index_two/dian.gif) NO-REPEAT 0 7px; overflow:hidden; line-height:18px;}
+				.guide_hr_val3{width:270px; height:18px; padding-left:8px; background:url(/images/index_two/dian.gif) NO-REPEAT 0 7px; overflow:hidden; line-height:18px; margin-left:15px;}
+				.guide_hr_val3 a{font-size:12px; color:#000; text-decoration:none;}
+				.guide_hr_val2{width:310px; height:18px; margin-top:5px; margin-left:15px; padding-left:8px; background:url(/images/index_two/dian_blue.gif) NO-REPEAT 0 7px; overflow:hidden; line-height:18px;}
 				.guide_hr_val2 .news_a{font-size:12px; color:#000; margin-left:5px; text-decoration:none;}
 				.guide_hr_val2 .cate_a{font-size:12px; color:#336699; text-decoration:none;}
 	#content_left_c{width:338px; margin-top:15px; overflow:hidden;}
@@ -76,10 +78,16 @@ div{margin:0; padding:0; float:left; display:inline;}
 		.pg{width:338px; height:23px; margin-top:15px; background: url(/images/index_two/pg.jpg) no-repeat; line-height: 23px; float: left; display: inline;}
 			.pg font{margin-left: 40px; font-size:12px; color:#ffffff; float:left; display: inline;}
 			.pg a{margin-right:16px; font-size:12px; text-decoration:none; color:#949391; float:right;}
-		.keysword_banner{width:336px; padding-bottom:15px; margin-top:9px;  border: 1px solid #C0C3CA;}
+		.keysword_banner{width:336px; padding-bottom:15px; margin-top:9px;  border: 1px solid #C0C3CA; background-color:#F6F6F8;}
 			.keysword_value{width:336px; height:20px; margin-top:10px; overflow: hidden; line-height: 20px;}
 			.keysword_value ul li{margin:0px; margin-left:15px; padding:0px; list-style-type: none; float: left; display:inline;}
 			.keysword_value ul li a{color: #B80418; font-weight:bold; font-size: 12px;}
+			#topkeyword{width:255px; margin-left:13px; height:35px; padding-left:55px; line-height:35px; font-weight:bolder; border-bottom:1px solid #C0C3CA;}
+			.top_kdiv{margin-left:30px; width:55px; overflow:hidden; height:35px;}
+			#topkeyword a{color:#66ADCD; text-decoration:none;}
+			#bottomkeyword{width:100%; line-height:25px; margin-top:10px; padding-bottom:30px;}
+			.bottom_kdiv{width:40%; height:25px; margin-left:5%; text-indent:7px;  background:url(/images/index_two/dian_blue.gif) NO-REPEAT 0 10px; overflow:hidden;}
+			#bottomkeyword a{color:#336799; text-decoration:none;}
 		.guide_hr_val font{font-size: 12px; color: #336699;}
 		#dictionary{width:300px; height:102px;  background: url(/images/index_two/dictionary_t.jpg) no-repeat 15px 10px;}
 			#dict_1{width:280px; height:20px; margin-left:17px; margin-top:50px; text-align:center; }
@@ -136,9 +144,16 @@ div{margin:0; padding:0; float:left; display:inline;}
 					.c_r_title div{height:16px;line-height:16px; font-size:12px; font-weight:bold;}
 					.c_r_title img{width:29px; height:11px; margin-top:4px; border:0px solid red; float:right;}
 			#recommend_banner{width:300px; height:18px; margin-top:10px;}
-				.recommend_title{height:18px; text-align:center; cursor:pointer; line-height:18px; font-size:12px; color:#838486;}
+				#recommend_left{width:74px; background:url('/images/index_two/list_l.jpg'); font-weight:bolder;}
+				#recommend_left a{color:#000000; text-decoration:none;}
+				#recommend_right{width:74px; background:url('/images/index_two/list_r2.jpg');}
+				.recommend_center{width:75px; background:url('/images/index_two/list_c2.jpg');}
+				.recommend_title{height:18px; text-align:center; cursor:pointer; line-height:18px; font-size:12px; overflow:hidden;}
+				.recommend_title a{color:#838486; text-decoration:none;}
 				#recommend_btn{width:216px; height:23px; margin-left:40px; margin-top:7px; text-align:center; line-height:23px; background:url(/images/index_two/btn5.jpg) no-repeat;}
-					#recommend_btn a{font-size:12px; font-weight:bold; color:#B20002; text-decoration:none; }
+					#recommend_btn a{font-size:12px; font-weight:bold; color:#B20002; text-decoration:none; display:none;}
+				.rt_tab{width:300px; height:280px; display:none;}
+				.rt_tab img{width:300px; height:280px; border:0;}
 				.recommend_menu{width:290px; height:16px; margin-top:5px; margin-left:3px; line-height:16px;}
 					.recommend_menu font{font-size:12px; color:#848486; font-weight:bold;}
 				.recommend_menu_pg{width:290px; margin-left:4px; line-height:26px; overflow:hidden;}
@@ -156,14 +171,17 @@ div{margin:0; padding:0; float:left; display:inline;}
 				#right_img img{width:298px; height:249px; border:0px solid red;}
 			#right_m_img{width:298px; height:128px; margin-top:10px; border:1px solid #C8C8C6; overflow:hidden;}
 				#right_m_img img{width:294px; height:124px; margin:2px; border:0px solid red;}
-			.city{width:275px; height:36px; margin-left:8px;  margin-top:10px; line-height:18px;}
-			.city a{ font-size:12px; text-decoration:none; color:#838486;}
+			.city{width:275px; margin-left:8px;  margin-top:10px; line-height:18px; font-weight:bolder;}
+			.city a{font-size:12px; text-decoration:none; color:#034275;}
+			.city_desc{width:275px; margin-left:8px;  margin-top:5px; line-height:18px;}
+			.city_desc a{font-size:12px; text-decoration:none; color:#838383;}
+			.city_title{font-weight:bolder;}
 			.pp_4_banner{width:116px; height:120px; margin-left:15px; margin-top:10px; overflow:hidden;}
 				.pp_4_pg{width:116px; height:80px; background:url(/images/index_two/pp_4.jpg) no-repeat;}
 					.pp_4_pg img{width:112px; height:76px; margin:2px; border:0px solid red;}
 				.pp_4_value{width:116px; height:30px; margin-top:7px; line-height:15px; overflow:Hidden;}
 					.pp_4_value a{font-size:12px; color:#838385; text-decoration:none;}
-			.survey{width:270px; height:38px; margin-top:10px; margin-left:8px; line-height:19px; overflow:hidden;}
+			.survey{width:270px; margin-top:10px; margin-left:8px; line-height:19px; overflow:hidden;}
 				.survey a{font-weight:bold; color:#004378; font-size:14px; text-decoration:none;}
 			.survey_submit{width:270px; height:12px; margin-left:8px; text-align:right;}
 				.survey_submit a{ color:#8D2025; font-size:12px; text-decoration:none;}
@@ -188,6 +206,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 			.h_h{width:335px; height:1px; margin-left:8px; margin-top:5px; font-size:0px; overflow:hidden;  background: url(/images/index_two/g_hr.jpg) repeat-x;}
 			.con_r_hr{width:280px; height:2px; margin-left:8px; margin-top:5px;  font-size:0px; background:#E6E8ED;}
 			.con_r_hr div{width:145px; height:2px; font-size:0px; background:#A50205;}
+		#lang_ad{width:300px; height:600px; margin-top:10px;}
 
 #bottom_banner{width:1000px; height: 220px; margin-top:15px; border-bottom: 6px solid #013B7B; border-top: 6px solid #013B7B;  overflow: hidden;}
 	.bottom_value{width:12.2%; height: 210px; margin-top:5px; border-right:1px solid #BAACAB; text-align: center; }

@@ -40,6 +40,7 @@
 		$fields['rich']=array("富豪","公司","mouseover","链接","静态链接","富豪照片","","","财富数（亿）","","说明");
 		$fields['rich_pic']=array("富豪","公司","mouseover","","","富豪照片","","","财富数（亿）","","说明");
 		$fields['survey']=array("调查标题","描述","mouseover","链接","静态链接","","","","","","说明");
+		$fields['survey_title']=array("调查标题","","mouseover","链接","静态链接","","","","","","说明");
 		$fields['survey_pic']=array("调查标题","描述","mouseover","链接","静态链接","图片","","","","","说明");
 		$fields['activity']=array("活动标题","","mouseover","链接","静态链接","活动图片","","","","","说明");
 		$fields['list_head']=array("榜单标题","榜单描述","mouseover","链接","静态链接","榜单图片","","","","","说明");

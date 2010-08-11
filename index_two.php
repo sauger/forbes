@@ -71,7 +71,61 @@
 						<a id="zt_next" href=""><img id="qie_img_right" src="/images/index_two/btn_r.jpg"/></a>
 					</div>
 				</div>
-				<?php include 'include.php';?>
+				<div id="content_banner_right">
+					<div id="content_qie_left">陆家嘴早餐<img style="display:none;" src="/images/index_two/x.jpg"/></div>
+					<div id="content_qie_right">精华导读<img src="/images/index_two/x.jpg"/></div>
+					
+					<div class="guide" id="ljzzc" style="display:none">
+						<?php $pos_name = 'index_jjjl_0';?>
+						<div class="guide_title">基金经理看市</div>
+						<div class="guide_hr"></div>
+						<a href="#"><img class="guide_more" src="/images/index_two/g4.jpg"/></a>
+						<div class="gg_banner" <?php show_page_pos($pos_name,'base_img')?>>
+							<div class="g_pg"><?php show_page_img();?></div>
+							<div class="g_pg_title"><?php show_page_href();?></div>
+							<div class="g_pg_value"><?php show_page_desc();?></div>
+						</div>
+						<div class="gg_title">早餐资讯</div>
+						<div class="guide_hr" style="width:150px; margin-top:5px;"></div>
+						<a href="#"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:0px;"/></a>
+						<?php for($i=1;$i<3;$i++){$pos_name = "index_zczx_".$i;?>
+						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
+						<?php }?>
+						<div class="gg_title" style="margin-top:10px;">投票之选</div>
+						<div class="guide_hr" style="width:150px; margin-top:15px;"></div>
+						<a href="#"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:10px;"/></a>
+						<?php for($i=1;$i<3;$i++){$pos_name = "index_tpzx_".$i;?>
+						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
+						<?php }?>
+						<div class="gg_title" style="margin-top:10px;">环球一周前瞻</div>
+						<div class="guide_hr" style="width:120px; margin-top:15px;"></div>
+						<a href="#"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:10px;"/></a>
+						<?php for($i=1;$i<3;$i++){$pos_name = "index_hqyz_".$i;?>
+						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
+						<?php }?>
+					</div>
+					<div class="guide" id="jhdd">
+						<?php $pos_name = 'index_jhdd_0';?>
+						<div class="gg_banner" style="height:90px;" <?php show_page_pos($pos_name,'base_img')?>>
+							<div class="g_pg"><?php show_page_img();?></div>
+							<div class="g_pg_title"><?php show_page_href();?></div>
+							<div class="g_pg_value"><?php show_page_desc();?></div>
+						</div>
+						<?php for($i=1;$i<4;$i++){$pos_name = "index_jhdd_".$i;?>
+						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
+						<?php }?>
+						<div class="guide_hr" style="width:240px; margin-top:15px;"></div>
+						<?php $pos_name = 'index_jhdd_4';?>
+						<div class="gg_banner" style="height:90px;" <?php show_page_pos($pos_name,'base_img')?>>
+							<div class="g_pg"><?php show_page_img();?></div>
+							<div class="g_pg_title"><?php show_page_href();?></div>
+							<div class="g_pg_value"><?php show_page_desc();?></div>
+						</div>
+						<?php for($i=5;$i<8;$i++){$pos_name = "index_jhdd_".$i;?>
+						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
+						<?php }?>
+					</div>
+				</div>
 				<div id="content_left_c">
 					<div id="li">
 						<div id="li_banner">富豪</div>
@@ -119,7 +173,7 @@
 							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
 							foreach($news as $i => $v){
 						?>
-						<div class="guide_hr_val2" style="<?php if($i == 0){ echo 'margin-top:15px;';}?>">
+						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
 							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
@@ -145,7 +199,7 @@
 							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
 							foreach($news as $i => $v){
 						?>
-						<div class="guide_hr_val2" style="<?php if($i == 0){ echo 'margin-top:15px;';}?>">
+						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
 							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
@@ -176,7 +230,7 @@
 							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 7");
 							foreach($news as $i => $v){
 						?>
-						<div class="guide_hr_val2" style="<?php if($i == 0){ echo 'margin-top:15px;';}?>">
+						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
 							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
@@ -217,7 +271,7 @@
 							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
 							foreach($news as $i => $v){
 						?>
-						<div class="guide_hr_val2" style="<?php if($i == 0){ echo 'margin-top:15px;';}?>">
+						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
 							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
@@ -229,7 +283,22 @@
 						<?php }?>
 						</div>
 					</div>
-					
+					<div class="keysword_banner">
+						<div id="topkeyword">
+							<?php for($i=1;$i<3;$i++){ $pos_name = 'index_ad_'.$i;?>
+							<div class="top_kdiv" <?php show_page_pos($pos_name,'link');?>>
+							<?php show_page_href();?>
+							</div>
+							<?php }?>
+						</div>
+						<div id="bottomkeyword">
+							<?php for($i=3;$i<19;$i++){$pos_name = 'index_ad_'.$i;?>
+							<div  class="bottom_kdiv" <?php show_page_pos($pos_name,'link')?>>
+							<?php show_page_href();?>
+							</div>
+							<?php }?>
+						</div>
+					</div>
 				</div>
 				<div id="content_right">
 					<div class="content_pg_title">观点<a href="/column/">更多</a></div>
@@ -411,32 +480,26 @@
 			<div id="contentc_right">
 				<div class="content_right_top"></div>
 				<div class="content_right_banner">
-					<div class="c_r_title">
-						<div>汇丰福布斯精华榜单推荐</div>
+					<div class="c_r_title" <?php $pos_name = "index_right_list0";show_page_pos($pos_name,'link');?>>
+						<div><?php echo $pos_items->$pos_name->display;?></div>
 						<a href=""><img src="/images/index_two/g4.jpg"/></a>
 					</div>
 					<div class="con_r_hr">
 						<div></div>	
 					</div>
 					<div id="recommend_banner">
-						<div class="recommend_title" style="width:68px; font-weight:bold; background:url(/images/index_two/11.jpg) no-repeat;">女继承人</div>	
-						<div class="recommend_title" style="width:70px; background:url(/images/index_two/12.jpg) no-repeat;">城  市</div>	
-						<div class="recommend_title" style="width:77px; background:url(/images/index_two/13.jpg) no-repeat;">最佳CEO</div>	
-						<div class="recommend_title" style="width:83px; background:url(/images/index_two/14.jpg) no-repeat;">CEO薪酬榜</div>	
+						<div class="recommend_title" id="recommend_left" <?php $pos_name = "index_right_list1";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>	
+						<div class="recommend_title recommend_center" <?php $pos_name = "index_right_list2";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
+						<div class="recommend_title recommend_center" <?php $pos_name = "index_right_list3";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
+						<div class="recommend_title" id="recommend_right" <?php $pos_name = "index_right_list4";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>	
 					</div>
-					<div id="recommend_btn"><a href="">女继承人排行榜</a></div>
-					<div class="recommend_menu">
-						<font style="margin-left:10px;">排名</font>
-						<font style="margin-left:30px;">姓名</font>
-						<font style="margin-left:80px;">净资产(亿美元)</font>	
+					<div id="recommend_btn">
+						<?php for($i=1;$i<5;$i++){$pos_name = "index_right_list".$i;?>
+						<a <?php if($i==1){?>style="display:inline;"<?php }?> href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->title;?></a>
+						<?php }?>
 					</div>
-					<div class="recommend_menu_hr"></div>
-					<?php for($i = 0 ; $i < 10 ; $i++){?>
-					<div class="recommend_menu_pg" style="<?php if($i % 2 !=1){ echo 'height:26px; background:url(/images/index_two/re_1.jpg) repeat-x;';}else{ echo 'height:25px; background:Url(/images/index_two/re_2.jpg) repeat-x;';} if($i == 9){ echo 'height:32px; background:Url(/images/index_two/re_3.jpg) no-repeat;';}?> ">
-						<div class="recommend_ranking" style="<?php if($i < 3){echo ' color:#B20000;';}else{ echo 'color:#000000;';}?>"><?php echo $i+1;?></div>
-						<div class="recommend_name">asdf</div>
-						<div class="recommend_money">23423</div>
-					</div>
+					<?php for($i=1;$i<5;$i++){$pos_name = "index_right_list".$i;?>
+					<div class="rt_tab" <?php if($i==1){?>style="display:block;"<?php }?>><?php show_page_img();?></div>
 					<?php }?>
 					<div class="c_r_title" style="margin-top:14px;">
 						<div>眼光财富观察</div>
@@ -445,8 +508,11 @@
 					<div class="con_r_hr">
 						<div style="width:80px;"></div>	
 					</div>
-					<div class="guide_hr_val" style="width:270px;">啊沙发上发生发生法撒旦发射发生艾弗森的发烧地方</div>
-					<div class="guide_hr_val" style="margin-top:0px; width:270px;">啊沙发上发生发生法撒旦发射发生艾弗森的发烧地方</div>
+					<?php for($i=1;$i<3;$i++){
+						$pos_name = "index_dyn_list{$i}"; 
+						?>
+					<div class="guide_hr_val3" <?php show_page_pos($pos_name,'link');if($i==1){?>style="margin-top:10px;"<?php }?>><?php show_page_href();?></div>
+					<?php }?>
 				</div>
 				<div class="content_right_bottom"></div>
 				<div id="right_img">
@@ -511,29 +577,31 @@
 				</div>
 				<div class="content_right_top" style="margin-top:15px;"></div>
 				<div class="content_right_banner">
-						<div class="c_r_title" style="margin-top:5px;">
-							<div>城  市</div>
-							<a href=""><img src="/images/index_two/g4.jpg"/></a>
-						</div>
-						<div class="con_r_hr">
-							<div style="width:35px;"></div>	
-						</div>
-					<div class="city">
-						<a href="" style="font-weight:bold; color:#004276;">撒旦发射点撒旦发射点发散发杀死撒旦发射点发散发杀死发散发杀死</a>
+					<div class="c_r_title" style="margin-top:5px;">
+						<div>城  市</div>
+						<a href="/city/"><img src="/images/index_two/g4.jpg"/></a>
 					</div>
-					<div class="city" style="margin-top:5px;">
-						<a href="" style="font-weight:none;">撒旦发射点发散撒旦发射点发散发杀死撒旦发射点发散发杀死撒旦发射点发散发杀死发杀死</a>
+					<div class="con_r_hr">
+						<div style="width:35px;"></div>	
 					</div>
-					<div class="guide_hr_val" style="width:270px; margin-left:10px; font-weight:bold;">啊沙发上发生发生法撒旦发射发生艾弗森的发烧地方</div>
-					<div class="guide_hr_val" style="width:270px; margin-top:0px; margin-left:10px; font-weight:bold;">啊沙发上发生发生法撒旦发射发生艾弗森的发烧地方</div>
+					<?php $pos_name = "index_city0"; ?>
+					<div class="city" <?php show_page_pos($pos_name,'base');?>>
+						<?php show_page_href();?>
+					</div>
+					<div class="city_desc">
+						<?php show_page_desc();?>
+					</div>
+					<?php for($i=1;$i<3;$i++){$pos_name = "index_city{$i}";?>
+					<div class="guide_hr_val3 city_title" <?php show_page_pos($pos_name,'link');if($i==1){?>style="margin-top:5px;"<?php }?>><?php show_page_href();?></div>
+					<?php }?>
 					<div class="h_h" style="width: 285px;"></div>
-					<?php for($i = 0 ; $i < 2 ; $i++){?>
-					<div class="pp_4_banner" style="<?php if($i == 1){echo 'margin-left:30px;;';} ?>">
+					<?php for($i = 3 ; $i < 5 ; $i++){$pos_name = "index_city{$i}";?>
+					<div class="pp_4_banner" <?php if($i == 3)echo 'style="margin-left:30px;"'; show_page_pos($pos_name,'link_img');?>>
 						<div class="pp_4_pg">
-							<a href=""><img src="/images/index_two/t.jpg"/></a>	
+							<?php show_page_img();?>
 						</div>
 						<div class="pp_4_value">
-							<a href="">阿斯顿法阿斯顿阿斯顿阿斯顿阿斯顿阿斯顿阿斯顿</a>
+							<?php show_page_href();?>
 						</div>
 					</div>
 					<?php }?>
@@ -543,22 +611,24 @@
 				<div class="content_right_banner">
 						<div class="c_r_title" style="margin-top:5px;">
 							<div>在线调查</div>
-							<a href=""><img src="/images/index_two/g4.jpg"/></a>
+							<a href="/survey/"><img src="/images/index_two/g4.jpg"/></a>
 						</div>
 						<div class="con_r_hr">
 							<div style="width:55px;"></div>	
 						</div>
-						<div class="survey">
-							<a href="">阿斯顿法守法说法阿阿斯顿法守法说法阿斯顿法守法说法大萨芬斯顿法守法说法大萨芬</a>
-						</div>
-						<div class="survey_submit"><a href="">...进入调查</a></div>
+						<?php $pos_name = "index_survey_0"?>
+						<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
+						<div class="survey_submit"><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">...进入调查</a></div>
 						<div class="h_h" style="width: 285px; margin-top:8px;"></div>
-						<div class="survey">
-							<a href="">阿斯顿法守法说法阿阿斯顿法守法说法阿斯顿法守法说法大萨芬斯顿法守法说法大萨芬</a>
-						</div>
-						<div class="survey_submit"><a href="">...进入调查</a></div>
+						<?php $pos_name = "index_survey_1"?>
+						<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
+						<div class="survey_submit"><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">...进入调查</a></div>
 				</div>
 				<div class="content_right_bottom"></div>
+				
+				<div id="lang_ad">
+					<img src="/images/index_two/adb.jpg">
+				</div>
 			</div>
 		</div>
 		
