@@ -41,7 +41,7 @@
 	}else{
 		$sql .= ",sh=0";
 	}
-	$sql .= " yh_id=$uid";
+	$sql .= " where yh_id=$uid";
 	$db = get_db();
 	$db->execute($sql);
 	close_db();
