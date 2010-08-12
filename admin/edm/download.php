@@ -4,7 +4,6 @@ $db = get_db();
 $recrod = $db->query("select t1.name,t1.email,t2.* from fb_yh t1 join fb_yh_dy t2 on t1.id=t2.yh_id");
 $count  = $db->record_count;
 $str2 = "name|email|fh|cy|sy|kj|tz|sh\n";
-echo $count;
 
 for($i=0;$i<$count;$i++){
 	$str = $recrod[$i]->name."|".$recrod[$i]->email."|";
@@ -52,7 +51,6 @@ for($i=0;$i<$count;$i++){
 	}
 }
 
-echo $str2;die();
 
 Header("Content-type: application/octet-stream"); 
 
