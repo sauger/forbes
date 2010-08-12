@@ -51,6 +51,8 @@ for($i=0;$i<$count;$i++){
 	}
 }
 
+echo $str2;die();
+
 Header("Content-type: application/octet-stream"); 
 
 Header("Accept-Ranges: bytes"); 

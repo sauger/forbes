@@ -20,7 +20,6 @@ for($i=0;$i<$count;$i++){
 		$str2 .= $str."\n";
 	}
 }
-echo $str2;die();
 
 Header("Content-type: application/octet-stream"); 
 
