@@ -634,72 +634,7 @@
 		
 		
 		
-		<div id="bottom_banner">
-			<div class="bottom_value">
-				<ul>
-					<li style="list-style-type: none;">[榜单]</li>
-					<?php for($i = 0 ; $i < 7 ; $i++){?>
-					<li><img src="/images/index_two/dian.gif"/><a href="">富豪榜</a></li>
-					<?php }?>					
-				</ul>
-			</div>
-			<div class="bottom_value">
-				<ul>
-					<li style="list-style-type: none;">[榜单]</li>
-					<?php for($i = 0 ; $i < 7 ; $i++){?>
-					<li><img src="/images/index_two/dian.gif"/><a href="">富豪榜</a></li>
-					<?php }?>					
-				</ul>
-			</div>
-			<div class="bottom_value">
-				<ul>
-					<li style="list-style-type: none;">[榜单]</li>
-					<?php for($i = 0 ; $i < 7 ; $i++){?>
-					<li><img src="/images/index_two/dian.gif"/><a href="">富豪榜</a></li>
-					<?php }?>					
-				</ul>
-			</div>
-			<div class="bottom_value">
-				<ul>
-					<li style="list-style-type: none;">[榜单]</li>
-					<?php for($i = 0 ; $i < 7 ; $i++){?>
-					<li><img src="/images/index_two/dian.gif"/><a href="">富豪榜</a></li>
-					<?php }?>					
-				</ul>
-			</div>
-			<div class="bottom_value">
-				<ul>
-					<li style="list-style-type: none;">[榜单]</li>
-					<?php for($i = 0 ; $i < 7 ; $i++){?>
-					<li><img src="/images/index_two/dian.gif"/><a href="">富豪榜</a></li>
-					<?php }?>					
-				</ul>
-			</div>
-			<div class="bottom_value">
-				<ul>
-					<li style="list-style-type: none;">[榜单]</li>
-					<?php for($i = 0 ; $i < 7 ; $i++){?>
-					<li><img src="/images/index_two/dian.gif"/><a href="">富豪榜</a></li>
-					<?php }?>					
-				</ul>
-			</div>
-			<div class="bottom_value">
-				<ul>
-					<li style="list-style-type: none;">[榜单]</li>
-					<?php for($i = 0 ; $i < 7 ; $i++){?>
-					<li><img src="/images/index_two/dian.gif"/><a href="">富豪榜</a></li>
-					<?php }?>					
-				</ul>
-			</div>
-			<div class="bottom_value" id="bottom_value">
-				<ul>
-					<li style="list-style-type: none;">[榜单]</li>
-					<?php for($i = 0 ; $i < 7 ; $i++){?>
-					<li><img src="/images/index_two/dian.gif"/><a href="">富豪榜</a></li>
-					<?php }?>					
-				</ul>
-			</div>
-		</div>
+		<?php include 'include.php';?>
 		<div id="bottom">
 			<a href="">关于福布斯</a> - 
 			<a href="">动态新闻</a> - 
