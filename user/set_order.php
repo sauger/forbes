@@ -42,6 +42,7 @@
 		$sql .= ",sh=0";
 	}
 	$sql .= " where yh_id=$uid";
+	echo $sql;
 	$db = get_db();
 	$db->execute($sql);
 	close_db();

@@ -5,11 +5,9 @@
 		global $pos_items;
 		init_page_items();
 ?>
-<div id="top_img_left">
-	<img src="/images/index_two/top1.jpg"/>
+<div id="top_img_left" class="ad_banner">
 </div>
-<div id="top_img_right">
-	<a href="#"><img src="/images/index_two/top2.jpg"/></a>
+<div id="top_img_right" class="ad_banner">
 </div>
 <div id="top_bg">
 	<div id="top_logon"></div>
@@ -65,7 +63,7 @@ for($i=0;$i<count($countnav);$i++){
 		?>
 			<div class="t_content">
 				<div></div>
-				<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $url; ?>"><?php echo $navigation2[$j]->name; ?></a><?php if($j<(count($navigation2)-1)){ ?>　　<?php } ?>
+				<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $url; ?>"><?php echo $navigation2[$j]->name; ?></a><?php if($j<(count($navigation2)-1)){ ?><?php } ?>
 			</div>
 		<?php } ?>
 		</div>
@@ -73,16 +71,3 @@ for($i=0;$i<count($countnav);$i++){
 		<?php }else{echo "&nbsp;";}?>
 	</div>
 <?php } ?>
-<script>
-	$("#top_menu_content a").hover(function(){
-		var id = $(this).attr('id');
-		var index = $(this).attr('index');
-		$('.top_menu2_banner').hide();
-		$("#nav"+id).show();
-		if($("#nav"+id).css('width')>'500px'){
-			$("#nav"+id).css('float','right');
-		}else{
-			$("#nav"+id).css('margin-left',(index*88.5)+'px');
-		}
-	});
-</script>

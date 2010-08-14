@@ -12,7 +12,7 @@
 	<meta name="description" content="" />
 	<?php
 		use_jquery();
-		js_include_tag('index_two');
+		js_include_tag('index_two','top2');
 		css_include_tag('index_two','top2');
 		init_page_items();
 		$db = get_db();
@@ -342,10 +342,14 @@
 							<?php }?>
 						</div>
 					</div>
-					<div class="content_pg_title">生活<a href="/life/">更多</a></div>	
+					<div id="life_div">
+					<div class="content_pg_title">生活</div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
+					</div>
+					</div>
+					<div id="index_little" class="ad_banner">
 					</div>
 					<?php 
 						for($i=1;$i<3;$i++){
@@ -515,8 +519,11 @@
 					<?php }?>
 				</div>
 				<div class="content_right_bottom"></div>
-				<div id="right_img">
-					<a href=""><img src="/images/index_two/ao.jpg"></a>
+				<div id="both_button">
+					<a href=""><img src="/images/index_two/index_yl.jpg"></a>
+					<a href=""><img style="margin-left:2px;" src="/images/index_two/index_dy.jpg"></a>
+				</div>
+				<div id="right_img" class="ad_banner">
 				</div>
 				
 				<div class="content_right_top" style="margin-top:15px;"></div>
@@ -572,8 +579,7 @@
 					<div class="teacher_btn3"><a href="">报名理财师&nbsp;&nbsp;</a></div>
 				</div>
 				<div class="content_right_bottom"></div>
-				<div id="right_m_img">
-					<a href=""><img src="/images/index_two/ao.jpg"/></a>	
+				<div id="right_m_img" class="ad_banner">
 				</div>
 				<div class="content_right_top" style="margin-top:15px;"></div>
 				<div class="content_right_banner">
@@ -626,8 +632,7 @@
 				</div>
 				<div class="content_right_bottom"></div>
 				
-				<div id="lang_ad">
-					<img src="/images/index_two/adb.jpg">
+				<div id="lang_ad" class="ad_banner">
 				</div>
 			</div>
 		</div>
@@ -646,5 +651,6 @@
 			<a href="">网站声明</a>
 		</div>
 	</div>
+	<?php js_include_tag('get_ad')?>
 </body>
 </html>

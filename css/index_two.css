@@ -207,6 +207,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 			.con_r_hr{width:280px; height:2px; margin-left:8px; margin-top:5px;  font-size:0px; background:#E6E8ED;}
 			.con_r_hr div{width:145px; height:2px; font-size:0px; background:#A50205;}
 		#lang_ad{width:300px; height:600px; margin-top:10px;}
+		
+		#both_button{width:296px; height:46px; padding:1px; margin-top:10px; border:1px solid #CCCCCC;}
+		#both_button a{width:148px; float:left;}
+		#both_button img{border:0; float:left;}
 
 #bottom_banner{width:1000px; height: 220px; margin-top:15px; border-bottom: 6px solid #013B7B; border-top: 6px solid #013B7B;  overflow: hidden;}
 	.bottom_value{width:12.2%; height: 210px; margin-top:5px; border-right:1px solid #BAACAB; text-align: center; }
