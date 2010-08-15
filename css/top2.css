@@ -1,8 +1,9 @@
+#top_div{width:1000px; height:244px; overflow:hidden;}
 #top_img_left{width:727px; height:88px; border:1px solid #898B8B;}
 #top_img_left img{width:725px; height:86px; margin-left:1px; margin-top:1px; }
 #top_img_right{width:264px; height:88px; border:1px solid #898B8B; float:right;}
 #top_img_right img{width:262px; height:86px; border:0px solid #000000;}
-#top_bg{width:1000px; height:96px; margin-top:3px; background: url(/images/index_two/top_pg.jpg) repeat-x;}
+#top_bg{width:1000px; height:90px; margin-top:3px; background: url(/images/index_two/top_pg.jpg) repeat-x;}
 	#top_logon{width:170px; height:76px; margin-top:7px; margin-left:8px; background:url(/images/index_two/logon.jpg) no-repeat; }
 	#top_banner{width:640px; height:76px;}
 		.forbes_search{width:102px; height:28px; font-size:12px; background:url(/images/public/tm2008-select.gif) no-repeat 0 0; margin-top:34px; margin-left:72px; overflow:hidden;}
@@ -27,7 +28,7 @@
 			#top_menu_content div{width:8.9%; height:12px; margin-top:5px; border-left:1px solid #77BDDF; border-right:1px solid #036AB9; color:#ffffff; font-weight: bold; text-align: center;}
 			#top_menu_content div a{color:#ffffff; text-decoration:none;}
 		#top_menu_right{width:5px; height:31px; background:url(/images/index_two/menu2.jpg) no-repeat;}
-	.top_menu2_banner{height:35px; margin-top: -7px; display:none;}
+	.top_menu2_banner{height:35px; margin-top: -7px;}
 		.top_menu2_left{width:7px; height:35px; background:url(/images/index_two/menu3.jpg) no-repeat;}
 		.top_menu2_content{ height:35px; background:url(/images/index_two/menu2_pg.jpg) repeat-x;}
 			.t_content{height:20px; margin-top: 5px; line-height: 20px; padding-right:15px;}

@@ -1,10 +1,15 @@
 <?php
-		if(!function_exists("get_config"))
-			include_once(dirname(__FILE__).'/../frame.php');
-		$db=get_db();
-		global $pos_items;
-		init_page_items();
+if(!function_exists("get_config"))
+	include_once(dirname(__FILE__).'/../frame.php');
+$db=get_db();
+global $pos_items;
+init_page_items();
+global $category;
+if(empty($category)){
+	$category = new category_class('news');
+}
 ?>
+<div id="top_div">
 <div id="top_img_left" class="ad_banner">
 </div>
 <div id="top_img_right" class="ad_banner">
@@ -39,20 +44,16 @@
 	?>
 	 <?php foreach($countnav as $k => $v){?>
   		<div <?php if($k==0){?>style="border-left:0px;"<?php }elseif($k==10){?>style="border-right:0px;"<?php }?>>
-			<a href="<?php echo $v->href;?>" index="<?php echo $k;?>" id="<?php echo $v->id; ?>"><?php echo $v->name;?></a>
+			<a href="<?php echo $v->href;?>" id="<?php echo $v->id; ?>"><?php echo $v->name;?></a>
 		</div>
  	 <?php }?>
 	</div>
 	<div id="top_menu_right"></div>
 </div>
 <?php 
-global $category;
-if(empty($category)){
-	$category = new category_class('news');
-} 
 for($i=0;$i<count($countnav);$i++){ 
 	$navigation2=$db->query('select name,target,href from fb_navigation where parent_id='.$countnav[$i]->id.' order by priority asc'); ?>	
-	<div class="top_menu2_banner" <?php if($i==0){?>style="display:inline;"<?php }?> id="nav<?php echo $countnav[$i]->id; ?>">
+	<div class="top_menu2_banner" <?php if($i!=0){?>style="display:none;"<?php }?> id="nav<?php echo $countnav[$i]->id; ?>">
 		<?php if($navigation2){?>
 		<div class="top_menu2_left"></div>
 		<div class="top_menu2_content">
@@ -63,7 +64,7 @@ for($i=0;$i<count($countnav);$i++){
 		?>
 			<div class="t_content">
 				<div></div>
-				<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $url; ?>"><?php echo $navigation2[$j]->name; ?></a><?php if($j<(count($navigation2)-1)){ ?><?php } ?>
+				<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $url; ?>"><?php echo $navigation2[$j]->name; ?></a>
 			</div>
 		<?php } ?>
 		</div>
@@ -71,3 +72,4 @@ for($i=0;$i<count($countnav);$i++){
 		<?php }else{echo "&nbsp;";}?>
 	</div>
 <?php } ?>
+</div>

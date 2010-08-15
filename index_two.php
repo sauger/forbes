@@ -349,8 +349,7 @@
 						<div class="dian_hr"></div>
 					</div>
 					</div>
-					<div id="index_little" class="ad_banner">
-					</div>
+					<div id="index_little" class="ad_banner"></div>
 					<?php 
 						for($i=1;$i<3;$i++){
 							$pos_name = 'index_life'.$i;
@@ -369,7 +368,7 @@
 					<?php }?>
 					<div class="guide_hr_val" style="width:320px; margin-top:11px;"><a href="">[全球] 阿斯发阿斯发发发阿斯发发发阿斯阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发发发发阿斯发发发发发</a></div>
 					<div class="guide_hr_val" style="width:320px; margin-top:0px;"><a href="">[全球] 阿斯发阿斯发发发阿斯发发发阿斯阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发发发发阿斯发发发发发</a></div>
-					<div class="content_pg_title">采编空间<a href="#" style="margin-left:235px;">更多</a></div>	
+					<div class="content_pg_title">采编空间<a href="/column/journalist/" style="margin-left:235px;">更多</a></div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
@@ -410,7 +409,7 @@
 							<?php }?>
 						</div>
 					</div>
-					<div class="content_pg_title">读者高见</div>
+					<div class="content_pg_title"><div>读者高见</div><div class="hidden_more"></div></div>
 					<div class="pg_hr">
 								<div class="content_pg_hr"></div>
 								<div class="dian_hr"></div>
@@ -430,7 +429,7 @@
 					<?php if($i != 3){?>
 					<div class="h_h" style="margin-top: 8px;"></div>
 					<?php }}?>
-					<div class="content_pg_title">最受欢迎文章</div>
+					<div class="content_pg_title"><div>最受欢迎文章</div><div class="hidden_more"></div></div>
 					<div class="pg_hr">
 					<div class="content_pg_hr"></div>
 					<div class="dian_hr"></div>
@@ -640,17 +639,6 @@
 		
 		
 		<?php include 'include.php';?>
-		<div id="bottom">
-			<a href="">关于福布斯</a> - 
-			<a href="">动态新闻</a> - 
-			<a href="">广告服务</a> - 
-			<a href="">诚聘英才</a> - 
-			<a href="">友情链接</a> - 
-			<a href="">会员活动</a> - 
-			<a href="">隐私声明</a> - 
-			<a href="">网站声明</a>
-		</div>
 	</div>
-	<?php js_include_tag('get_ad')?>
 </body>
 </html>
