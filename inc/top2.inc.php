@@ -35,12 +35,12 @@ if(empty($category)){
 					var str = '<div class="login_left">'+$.cookie('name')+',你好</div>'
 							+ '<div class="login_right"><a href="javascript:void(0)" id="logout">退出</a></div>'
 							+ '<div class="login_left"><a href="/user">会员中心</a></div>'
-							+ '<div class="login_right"><a href=""><font>会员专区</font></a></div>';
+							+ '<div class="login_right"><a href="http://www.forbeschina.com/userclub/">会员专区</a></div>';
 					$('#top_right_banner').html(str);
 				}else{
 					var str = '<div id="top_login"><a href="/login/">登录</a></div>'
 							+ '<div class="top_login"><a href="/register/">注册会员</a></div>'
-							+ '<div class="top_login"><a href=""><font>会员专区</font></a></div>';
+							+ '<div class="top_login"><a href="http://www.forbeschina.com/userclub/">会员专区</a></div>';
 					$('#top_right_banner').html(str);
 				}
 				$(function(){
