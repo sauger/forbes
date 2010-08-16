@@ -1,65 +1,38 @@
 @CHARSET "UTF-8";
-body{width:1028px; margin: 0 auto; line-height:14px; font-size:12px;font-family:宋体,Arial; background:#EFFFFF;}
+body{width:1018px; margin: 0 auto; line-height:14px; font-size:12px;font-family:宋体,Arial; background:#EFFFFF;}
 body div{float:left; display:inline;}
 body a{text-decoration:none;}
 
 #ibody{background:url("../images/cs_bj.jpg") repeat-y;}
-#part1{width:1000px; height:319px; margin-left:14px; background:url("../images/CS_TOP.jpg") no-repeat;}
+#part1{width:1000px; height:319px; margin-left:9px; background:url("../images/CS_TOP.jpg") no-repeat;}
 
-#part2{width:1000px; height:43px; margin-left:14px;background:url("../images/nav_bj.jpg") repeat-x;}
+#part2{width:1000px; height:43px; margin-left:9px;background:url("../images/nav_bj.jpg") repeat-x;}
 	#p2_navbox{width:832px; height:43px; margin-left:84px; color:#ffffff;font-size:16px; font-weight:bold; line-height:44px;}
 		.nav_menu{padding:0px 26px; cursor:pointer;}
 		.hinder{width:2px; height:43px; background:url("../images/hinder.jpg") no-repeat;}
+#part4{width:1000px; height:62px; margin-top:20px; margin-left:9px; border-top:1px solid #a9a9a9;}
+#copyright{width:1000px; margin-top:20px; color:#999999; text-align:center;}
 
-
-#part3{width:1000px; height:1202px; margin-left:14px; margin-top:18px; background:#FFF;}
+#part3{width:1000px; margin-left:9px; margin-top:18px; background:#FFF;}
 	#p_left{width:242px; color:#333333;}
-		.framwork{width:243px;}
-			.fram_title{width:222px; height:30px; font-size:16px; line-height:30px; font-weight:bold; color:#005f9b; padding-left:20px; border-right:1px solid #a9a9a9; background:url("../images/left_titlebj.jpg") repeat-x;}
-			.fram_line{width:242px; height:2px; line-height:0px; font-size:0; border-right:1px solid #a9a9a9;}
-				.line_left{width:50%; height:2px; background:#005f9b;}
+	#left_border{width:242px; border-right:1px solid #a9a9a9; border-bottom:1px solid #a9a9a9;}
+		.framwork{width:242px;}
+			.fram_title{width:222px; height:30px; font-size:16px; line-height:30px; font-weight:bold; color:#005f99; padding-left:20px; background:url("../images/left_titlebj.jpg") repeat-x;}
+			.fram_line{width:242px; height:2px; line-height:0px; font-size:0;}
+				.line_left{width:50%; height:2px; background:#149bd0;}
 				.line_right{width:50%; height:2px; background:#a9a9a9;}
-			.fram_content{width:242px; border-right:1px solid #a9a9a9;}
-			.fram_filing{width:242px; border-right:1px solid #a9a9a9;}
-				#no1{height:10px;}
-				#no2{height:25px;}
-				#no3{height:8px;}
+			.fram_content{width:242px;}
+			.fram_filing{width:242px;}
 				.c_line{width:215px; height:12px; margin-top:17px; margin-left:14px;}
 					.c_name{font-weight:bold;}
 					#c_time{width:100px; margin-left:12px;}
-				#logobox{width:210px; font-size:12px; line-height:14px; font-weight:bold; margin-top:12px; margin-left:14px;}
-					#logo_sina{width:125px;}
-					#logo_sina img{margin-top:17px;}
-					#logo_msn{width:85px;}
-					#logo_msn img{margin-top:9px;}
-					#logo_JRJ{width:125px; margin-top:16px;}
-					#logo_JRJ img{margin-top:9px;}
-				.logo_box{width:190px; margin-top:12px; margin-left:14px;}
-					#logo_21{width:190px;}
-				#f_text{width:202px;font-size:12px; line-height:20px; text-align:justify; margin-top:8px; margin-left:17px;}
+					.logo_title{width:167px; font-size:12px; line-height:14px; font-weight:bold; margin-top:12px; margin-left:75px;}
+					.logo_body{width:242px; margin-top:12px; text-align:center;}
+					.logo2{margin-left:10px;}
+				#f_text{width:202px; font-size:12px; line-height:20px; text-align:justify; margin-top:8px; margin-left:17px;}
 				#down_apply{width:205px; margin-left:15px; margin-top:30px;}
-	
-	#p_middle{width:443px; margin-left:10px; color:#666666; background:url("../images/CS_MIDDLE.jpg") no-repeat;}
-		#m_photo{height:29px; width:442px; border-bottom:2px solid #DFDFDF; border-top:2px solid #DFDFDF; background:#f7f7f7;}
-			#m_title{font-size:14px; line-height:33px; font-weight:bold; color:#005f9b; margin-left:8px;}
-			#m_tl{font-size:24px; line-height:28px; font-weight:bold; color:#ece9d8; margin-left:8px;}
-		#p4_box{width:443px; height:341px; border-bottom:2px solid #DFDFDF; background:#f7f7f7;}
-		#p4_box img{height:130px; width:200px; }
-			#p4_left{width:200px; margin-left:18px; margin-top:9px; color:#666666;}
-				.pho_name{width:200px; height:33px; line-height:34px; text-align:center;}
-			#p4_right{width:200px; margin-left:12px; margin-top:9px;}
-		#m_textbox{width:443px; height:345px; border-bottom:2px solid #DFDFDF; background:#f7f7f7;}
-			#m_text{width:420px; text-align:justify; margin-left:7px; margin-top:14px;}
-			#m_text img{width:156px; height:102px;}
-			#m_text span{line-height:24px;}
-	
-	#p_right{width:294px; height:300px;margin-left:10px; color:#666666;}
-		#r_box{width:294px;}
-		#r_photo{height:29px; width:294px; border-bottom:2px solid #DFDFDF; border-top:2px solid #DFDFDF; background:#f7f7f7;}
-			#r_title{font-size:14px; line-height:33px; font-weight:bold; color:#005f9b; margin-left:8px;}
-			#r_tl{font-size:24px; line-height:28px; font-weight:bold; color:#ece9d8; margin-left:8px;}
-		#r_textbox{width:294px; height:341px; border-bottom:2px solid #DFDFDF; background:#f7f7f7;}
-			#r_text{width:254px; height:300px; text-align:justify; color:#666666; margin-top:10px; margin-left:18px; font-size:12px; line-height:22px;}
-		
-	
+				#info_text{width:189px; height:121px; font-size:12px; line-height:20px; margin:17px 0 17px 25px;}
+				
+		#right_html{width:757px; float:right;}
+		#drd_iframe{Scrolling=no; border:0;}
 		

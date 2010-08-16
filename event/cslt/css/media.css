@@ -1,0 +1,22 @@
+﻿@CHARSET "UTF-8";
+body{width:757px;float:right; margin: 0 auto;line-height:28px;line-weight:800; font-size:16px;font-family:宋体,Arial; background:#FFF;}
+body div{float:left;display:inline;}
+body a{text-decoration:none;}
+
+
+#media{width:747px;height:800px;background:#f7f7f7;margin-left:10px; color:#666666;float:right;}
+#m_photo{height:40px; width:747px; border-bottom:2px solid #DFDFDF; border-top:2px solid #DFDFDF; background:#f7f7f7;}
+#m_title{font-size:24px; line-height:40px; font-weight:bold; color:#005f9b; margin-left:12px;}
+#m_tl{font-size:36px; line-height:44px; font-weight:bold; color:#ece9d8; margin-left:12px;}
+.center{margin:20px 30px;width:600px;}
+.center font{line-height:32px;float:left;width:135px;}
+.center img{float:left;margin-left:50px;}
+#msn font{line-height:70px;float:left}
+#jrj font{line-height:76px;float:left;}
+#vote{width:600px;height:32px;}
+#p_21{margin-left:10px;margin-top:26px;}
+#weekly img{margin-top:10px;margin-left:40px;}
+#sound{margin-left:40px;}
+#friend font{line-height:72px;}
+#ce{margin-top:11px;}
+#cjw{margin-left:40px;}

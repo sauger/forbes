@@ -115,7 +115,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 			.photo_value_s{width:275px; margin-top:10px; overflow:Hidden; float:right; display:inline;}
 				.photo_title{width:270px; height:32px; line-height:16px;}
 					.photo_title a{font-size:12px; font-weight:bold; text-decoration:none; color:#494A4A;}
-				.photo_value_v{width:270px; height:32px; margin-top:3px; line-height:16px;}
+				.photo_value_v{width:270px; height:32px; margin-top:3px; line-height:16px; overflow:hidden;}
 					.photo_value_v a{font-size:12px; color:#838486; text-decoration:none;}
 				.photo_geng{width:270px; height:16px; line-height:16px; text-align:right; overflow:Hidden;}
 					.photo_geng a{color:#BA2636; font-size:12px; text-decoration:none;}

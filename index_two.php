@@ -160,7 +160,7 @@
 						<div class="keysword_value">
 							<ul>
 								<?php
-									$c_id = $category->children_map(2);
+									$c_id = $category->children_map(2,false);
 									$c_id = implode(',',$c_id);
 									$key_array = get_keywords($c_id);
 									foreach($key_array as $keyword){
@@ -186,7 +186,7 @@
 						<div class="keysword_value">
 							<ul>
 								<?php
-									$c_id = $category->children_map(5);
+									$c_id = $category->children_map(5,false);
 									$c_id = implode(',',$c_id);
 									$key_array = get_keywords($c_id);
 									foreach($key_array as $keyword){
@@ -217,7 +217,7 @@
 						<div class="keysword_value">
 							<ul>
 								<?php
-									$c_ids = $category->children_map(3);
+									$c_ids = $category->children_map(3,false);
 									$c_id = implode(',',$c_ids);
 									$key_array = get_keywords($c_id);
 									foreach($key_array as $keyword){
@@ -258,7 +258,7 @@
 						<div class="keysword_value">
 							<ul>
 								<?php
-									$c_ids = $category->children_map(4);
+									$c_ids = $category->children_map(4,false);
 									$c_id = implode(',',$c_ids);
 									$key_array = get_keywords($c_id);
 									foreach($key_array as $keyword){
@@ -366,8 +366,14 @@
 					</div>
 					<div class="h_h"></div>
 					<?php }?>
-					<div class="guide_hr_val" style="width:320px; margin-top:11px;"><a href="">[全球] 阿斯发阿斯发发发阿斯发发发阿斯阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发发发发阿斯发发发发发</a></div>
-					<div class="guide_hr_val" style="width:320px; margin-top:0px;"><a href="">[全球] 阿斯发阿斯发发发阿斯发发发阿斯阿斯发阿斯发发发阿斯发发发阿斯发发发阿斯发发发发发发发发阿斯发发发发发</a></div>
+					<?php
+						$c_ids = $category->children_map(81);
+						$c_id = implode(',',$c_ids);
+						$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 2");
+						foreach($news as $i => $v){
+					?>
+					<div class="guide_hr_val" style="width:320px;<?php if($i==0){?>margin-top:11px;<?php }?>"><a href="<?php echo get_news_url($v);?>">[<?php echo $category->find_name_by_id($v->category_id);?>] <?php echo $v->title;?></a></div>
+					<?php }?>
 					<div class="content_pg_title">采编空间<a href="/column/journalist/" style="margin-left:235px;">更多</a></div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
@@ -505,7 +511,7 @@
 					<div class="rt_tab" <?php if($i==1){?>style="display:block;"<?php }?>><?php show_page_img();?></div>
 					<?php }?>
 					<div class="c_r_title" style="margin-top:14px;">
-						<div>眼光财富观察</div>
+						<div>阳光财富观察</div>
 						<a href=""><img src="/images/index_two/g4.jpg"/></a>
 					</div>
 					<div class="con_r_hr">
