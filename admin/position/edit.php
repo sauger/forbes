@@ -57,7 +57,7 @@
 		$fields['edm_news2']=array("文章标题","文章描述","","链接","","","","","作者","发布于","");
 		$fields['index_subject']=array("标题","描述","mouseover","链接","静态链接","图片","","","专题名","专题链接","说明");
 		$fields['index_cate_news']=array("标题","","mouseover","链接","静态链接","","","","类别名","类别链接","说明");
-		$fields['index_subject'] = array("标题","描述","mouseover","链接","静态链接","","","过期时间","","","说明");
+		$fields['index_subject'] = array("标题","描述","mouseover","链接","静态链接","图片","","过期时间","图片名","","说明");
 		$names = array_key_exists($_GET['name'],$fields) ?  $fields[$_GET['name']] : $fields['default'];  
 		
 	?>

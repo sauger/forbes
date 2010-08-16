@@ -540,21 +540,22 @@
 					<div class="con_r_hr">
 						<div style="width:80px;"></div>	
 					</div>
+					<?php $pos_name="index_lcs";?>
 					<div class="photo_banner">
 						<div class="photo_pg">
-							<img src="/images/index_two/32.jpg"/>
+							<?php show_page_img();?>
 						</div>
-						<div class="photo_font"><a href="">观点观</a></div>
+						<div class="photo_font"><a href="<?php echo $pos_items->$pos_name->href;?>"><?php  echo $pos_items->$pos_name->alias;?></a></div>
 					</div>
-					<div class="photo_value_s" style="overflow:Hidden; width:225px;">
-						<div class="photo_title" style="width:225px; overflow:hidden;"><a href="#">斯蒂芬撒旦发斯蒂芬撒旦发射斯蒂芬撒旦发射斯蒂芬撒旦发射射</a></div>	
-						<div class="photo_value_v" style="width:225px; overflow:hidden;"><a href="#">啊啊是的发生的发生分爱迪生法守法啊是的发生的发生分爱迪生法守法发生分爱迪生法守法</a></div>
-						<div class="photo_geng" style=" width:220px;"><a href="#">...[阅读全文]</a></div>
+					<div class="photo_value_s" style="overflow:Hidden; width:225px;"  <?php show_page_pos($pos_name,'index_subject');?>>
+						<div class="photo_title" style="width:225px; overflow:hidden;"><?php show_page_href();?></div>	
+						<div class="photo_value_v" style="width:225px; overflow:hidden;"><?php show_page_desc();?></div>
+						<div class="photo_geng" style=" width:220px;"><a href="<?php echo $pos_items->$pos_name->href;?>">...[阅读全文]</a></div>
 					</div>
 					<div class="h_h" style="width:285px;"></div>
-					<div class="teacher_btn1"><a href="">更多理财师&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn2"><a href="">更多咨询&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn3"><a href="">报名理财师&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn1"><a href="http://www.forbeschina.com/event/lcs/list_1.html">更多理财师&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn2"><a href="http://www.forbeschina.com/event/lcs/">更多咨询&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn3"><a href="http://www.forbeschina.com/event/lcs/EntryForm.php">报名理财师&nbsp;&nbsp;</a></div>
 				</div>
 				<div class="content_right_bottom"></div>
 				
@@ -567,16 +568,17 @@
 					<div class="con_r_hr">
 						<div style="width:80px;"></div>	
 					</div>
+					<?php $pos_name="index_zzh";?>
 					<div class="photo_banner">
 						<div class="photo_pg">
-							<img src="/images/index_two/32.jpg"/>
+							<?php show_page_img();?>
 						</div>
-						<div class="photo_font"><a href="">观点观</a></div>
+						<div class="photo_font"><a href="<?php echo $pos_items->$pos_name->href;?>"><?php  echo $pos_items->$pos_name->alias;?></a></div>
 					</div>
-					<div class="photo_value_s" style="overflow:Hidden; width:225px;">
-						<div class="photo_title" style="width:225px; overflow:hidden;"><a href="#">斯蒂芬撒旦发斯蒂芬撒旦发射斯蒂芬撒旦发射斯蒂芬撒旦发射射</a></div>	
-						<div class="photo_value_v" style="width:225px; overflow:hidden;"><a href="#">啊啊是的发生的发生分爱迪生法守法啊是的发生的发生分爱迪生法守法发生分爱迪生法守法</a></div>
-						<div class="photo_geng" style=" width:220px;"><a href="#">...[阅读全文]</a></div>
+					<div class="photo_value_s" style="overflow:Hidden; width:225px;"  <?php show_page_pos($pos_name,'index_subject');?>>
+						<div class="photo_title" style="width:225px; overflow:hidden;"><?php show_page_href();?></div>	
+						<div class="photo_value_v" style="width:225px; overflow:hidden;"><?php show_page_desc();?></div>
+						<div class="photo_geng" style=" width:220px;"><a href="<?php echo $pos_items->$pos_name->href;?>">...[阅读全文]</a></div>
 					</div>
 					<div class="h_h" style="width:285px;"></div>
 					<div class="teacher_btn1"><a href="">更多理财师&nbsp;&nbsp;</a></div>
