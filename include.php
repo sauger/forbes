@@ -86,13 +86,6 @@
 	</div>
 </div>
 <div id="bottom">
-	<a href="">关于福布斯</a> - 
-	<a href="">动态新闻</a> - 
-	<a href="">广告服务</a> - 
-	<a href="">诚聘英才</a> - 
-	<a href="">友情链接</a> - 
-	<a href="">会员活动</a> - 
-	<a href="">隐私声明</a> - 
-	<a href="">网站声明</a>
+<?php for($i=0;$i<10;$i++){ ?><a <?php show_page_pos('forbes_td5_'.$i); $posname='forbes_td5_'.$i;?> href="<?php echo $pos_items->$posname->href; ?>">　<?php echo $pos_items->$posname->display; ?><?php if($i<9){ ?>　-<?php }} ?></a>
 </div>
 <?php js_include_tag('get_ad')?>

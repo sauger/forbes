@@ -20,6 +20,8 @@
 	#top_right_banner{width:170px; height:66px; padding-top:10px; float:right;}
 		.top_login{width:65px; height:12px; border-left:1px solid #8C8E8F; text-align: center;}
 		#top_login{width:35px; height:12px; }
+		.login_left{width:110px; height:15px; overflow:hidden;}
+		.login_right{width:60px; height:15px; overflow:hidden;}
 		#top_right_banner a{font-size:12px; text-decoration: none; color:#8C8E8F;}
 		#top_right_banner font{font-size:12px; text-decoration: none; color:#11B9F8;}
 	#top_menu_banner{width:1000px; height:32px; margin-top:2px; }
