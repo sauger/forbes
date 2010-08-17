@@ -13,6 +13,8 @@ $(function(){
 		$("#qie_banner").append(str);
 	});
 	
+	$(".colorbox").colorbox();
+	
 	$("#day div").hover(function(){
 		$("#day div").css('color','#525250');
 		$(this).css('color','#A50203')

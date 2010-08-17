@@ -12,8 +12,8 @@
 	<meta name="description" content="" />
 	<?php
 		use_jquery();
-		js_include_tag('index_two','top2');
-		css_include_tag('index_two','top2');
+		js_include_tag('index_two','top2','jquery.colorbox-min.js');
+		css_include_tag('index_two','top2','colorbox');
 		init_page_items();
 		$db = get_db();
 	?>
@@ -544,8 +544,8 @@
 				</div>
 				<div class="content_right_bottom"></div>
 				<div id="both_button">
-					<a href=""><img src="/images/index_two/index_yl.jpg"></a>
-					<a href=""><img style="margin-left:2px;" src="/images/index_two/index_dy.jpg"></a>
+					<a href="/images/register/email.jpg" class="colorbox"><img src="/images/index_two/index_yl.jpg"></a>
+					<a href="/user/user_order.php"><img style="margin-left:2px;" src="/images/index_two/index_dy.jpg"></a>
 				</div>
 				<div id="right_img" class="ad_banner">
 				</div>
