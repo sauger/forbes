@@ -510,7 +510,7 @@
 				<div class="content_right_banner">
 					<div class="c_r_title" <?php $pos_name = "index_right_list0";show_page_pos($pos_name,'link');?>>
 						<div><?php echo $pos_items->$pos_name->display;?></div>
-						<a href=""><img src="/images/index_two/g4.jpg"/></a>
+						<a href="/list/"><img src="/images/index_two/g4.jpg"/></a>
 					</div>
 					<div class="con_r_hr">
 						<div></div>	
