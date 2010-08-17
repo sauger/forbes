@@ -11,13 +11,8 @@ $(function(){
 	        demo.scrollLeft(demo.scrollLeft()+1);   
 	    }   
 	}    
-	var MyMar1=setInterval(Marquee1,speed)    
-	demo.mouseover(function() {   
-	    clearInterval(MyMar1);   
-	} );
-	demo.mouseout(function() {   
-	    MyMar1=setInterval(Marquee1,speed);   
-	} );
+	var MyMar1=setInterval(Marquee1,speed) 
+
 	
 	var speed=30;   
 	var demo3 = $("#demo3");   
@@ -31,13 +26,8 @@ $(function(){
 	        demo3.scrollLeft(demo3.scrollLeft()-1);   
 	    }     
 	}    
-	var MyMar2=setInterval(Marquee2,speed)    
-	demo3.mouseover(function() {   
-	    clearInterval(MyMar2);   
-	} );   
-	demo3.mouseout(function() {   
-	    MyMar2=setInterval(Marquee2,speed);   
-	} );
+	var MyMar2=setInterval(Marquee2,speed)
+
 
 	var speed=30;   
 	var demo7 = $("#demo7");   
