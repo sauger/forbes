@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+#past{width:747px;height:2000px;background:#f7f7f7;color:#666666;}
+#m_photo{height:40px; width:747px; border-bottom:2px solid #DFDFDF; border-top:2px solid #DFDFDF; background:#f7f7f7;}
+#m_title{font-size:24px; line-height:40px; font-weight:bold; color:#005f9b; margin-left:12px;}
+#m_tl{font-size:36px; line-height:44px; font-weight:bold; color:#ece9d8; margin-left:12px;}
+#note{width:720px;margin:20px 15px;}
+
+.mm{width:747px;height:279px; margin-left:15px;}
+.nn{width:114px;margin:20px 0 0 25px;}
+.kk{width:114px;height:145px;border:1px solid #CCCCCC;}
+.kk  img{margin:6px;float:left;}
+.tt{width:114px; font-size:14px;text-align:center; line-height:28px;}
