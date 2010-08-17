@@ -79,7 +79,7 @@
 						<?php $pos_name = 'index_jjjl_0';?>
 						<div class="guide_title">基金经理看市</div>
 						<div class="guide_hr"></div>
-						<a href="#"><img class="guide_more" src="/images/index_two/g4.jpg"/></a>
+						<a href="/review/list/145"><img class="guide_more" src="/images/index_two/g4.jpg"/></a>
 						<div class="gg_banner" <?php show_page_pos($pos_name,'base_img')?>>
 							<div class="g_pg"><?php show_page_img();?></div>
 							<div class="g_pg_title"><?php show_page_href();?></div>
@@ -87,19 +87,19 @@
 						</div>
 						<div class="gg_title">早餐资讯</div>
 						<div class="guide_hr" style="width:150px; margin-top:5px;"></div>
-						<a href="#"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:0px;"/></a>
+						<a href="/review/list/146"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:0px;"/></a>
 						<?php for($i=1;$i<3;$i++){$pos_name = "index_zczx_".$i;?>
 						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
 						<div class="gg_title" style="margin-top:10px;">投票之选</div>
 						<div class="guide_hr" style="width:150px; margin-top:15px;"></div>
-						<a href="#"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:10px;"/></a>
+						<a href="/review/list/147"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:10px;"/></a>
 						<?php for($i=1;$i<3;$i++){$pos_name = "index_tpzx_".$i;?>
 						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
 						<div class="gg_title" style="margin-top:10px;">环球一周前瞻</div>
 						<div class="guide_hr" style="width:120px; margin-top:15px;"></div>
-						<a href="#"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:10px;"/></a>
+						<a href="/review/list/148"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:10px;"/></a>
 						<?php for($i=1;$i<3;$i++){$pos_name = "index_hqyz_".$i;?>
 						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
@@ -531,8 +531,7 @@
 					<?php }?>
 					<div class="c_r_title" style="margin-top:14px;">
 						<div>阳光财富观察</div>
-						<!-- 
-						<a href=""><img src="/images/index_two/g4.jpg"/></a> -->
+						<a href="/review/list/121"><img src="/images/index_two/g4.jpg"/></a>
 					</div>
 					<div class="con_r_hr">
 						<div style="width:80px;"></div>	
