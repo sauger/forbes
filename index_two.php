@@ -357,7 +357,7 @@
 								$column = $db->query("select name,nick_name from fb_user where role_name='column_writer'");
 								foreach($column as $v){
 							?>
-							<a class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
+							<a class="column_a" href="/column/<?php echo $v->na看武侠小说me;?>"><?php echo $v->nick_name;?></a>	
 							<?php }?>
 						</div>
 					</div>
@@ -531,7 +531,8 @@
 					<?php }?>
 					<div class="c_r_title" style="margin-top:14px;">
 						<div>阳光财富观察</div>
-						<a href=""><img src="/images/index_two/g4.jpg"/></a>
+						<!-- 
+						<a href=""><img src="/images/index_two/g4.jpg"/></a> -->
 					</div>
 					<div class="con_r_hr">
 						<div style="width:80px;"></div>	
