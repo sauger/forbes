@@ -24,7 +24,7 @@ $(function(){
 				window.location.href="./test_media.html";
 			}
 		else if(selected === 6){
-			window.location.href="./test_past.html";
+			window.location.href="./test_pasttime.html";
 			}
 	});
 });
