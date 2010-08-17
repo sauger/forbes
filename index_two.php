@@ -127,16 +127,16 @@
 					</div>
 				</div>
 				<div id="content_left_c">
-					<div id="li">
-						<div id="li_banner">富豪</div>
-						<div id="li_value">
+					<div class="li">
+						<div class="li_banner">富豪</div>
+						<div class="li_value">
 							<?php $pos_name = 'index_rich1';?>
-							<div id="li_top" <?php show_page_pos($pos_name);?>>
-								<div id="li_img_pg"><?php show_page_img();?></div>
-								<div id="li_img_title"><?php show_page_href();?></div>	
-								<div id="li_img_value"><?php show_page_desc();?></div>
+							<div class="li_top" <?php show_page_pos($pos_name);?>>
+								<div class="li_img_pg"><?php show_page_img();?></div>
+								<div class="li_img_title"><?php show_page_href();?></div>	
+								<div class="li_img_value"><?php show_page_desc();?></div>
 							</div>
-							<div id="li_title"><div style="margin-left:40px;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
+							<div class="li_title"><div style="margin-left:40px;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
 							<div class="guide_hr" style="WIDTH:320PX; margin-top:5px;"></div>
 							<?php
 								$c_id = $category->children_map(42);
@@ -203,11 +203,6 @@
 							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
-						<div class="guide_hr" style="width:315px; margin-top:10px;"></div>
-						<div id="dictionary">
-							<div id="dict_1"><a href="">Shadow Banking System</a></div>
-							<div id="dict_2"><a href="">哈哈银行</a></div>
-						</div>
 					</div>
 					<div class="pg">
 						<font>商业</font>
@@ -248,6 +243,30 @@
 						?>
 							<a href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
 						<?php }?>
+						</div>
+					</div>
+					<div class="li" style="margin-top:10px;">
+						<div class="li_banner">CEO</div>
+						<div class="li_value">
+							<?php $pos_name = 'index_ceo1';?>
+							<div class="li_top" <?php show_page_pos($pos_name);?>>
+								<div class="li_img_pg"><?php show_page_img();?></div>
+								<div class="li_img_title"><?php show_page_href();?></div>	
+								<div class="li_img_value"><?php show_page_desc();?></div>
+							</div>
+							<div class="li_title"><div style="margin-left:40px;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
+							<div class="guide_hr" style="WIDTH:320PX; margin-top:5px;"></div>
+							<?php
+								$c_id = $category->children_map(143);
+								$c_id = implode(',',$c_id);
+								$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) order by created_at desc limit 2");
+								foreach($news as $v){
+							?>
+							<div class="guide_hr_val2">
+								<a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							</div>
+							<?php }?>
+							<div class="li_hr_g" style="width:310px;"><a href="/review/list/143">...查看更多</a></div>
 						</div>
 					</div>
 					<div class="pg">
@@ -446,9 +465,9 @@
 						<div id="_month">一月</div>
 					</div>
 					<?php 
-						$day = $db->query("select id,title,created_at from fb_news where  to_days(created_at) = to_days(now()) group by title order by click_count desc limit 10");
-						$week = $db->query("select id,title,created_at from fb_news where  week(created_at) = week(now()) group by title order by click_count desc limit 10");
-						$month = $db->query("select id,title,created_at from fb_news where  month(created_at) = month(now()) group by title order by click_count desc limit 10");
+						$day = $db->query("select id,title,created_at from fb_news where date(created_at) = date_sub(curdate(), interval 1 day) group by title order by click_count desc limit 10");
+						$week = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= date(created_at) group by title order by click_count desc limit 10");
+						$month = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 1 MONTH) <= date(created_at) group by title order by click_count desc limit 10");
 						!$day && $day = array();
 						!$week && $week = array();
 						!$month && $month = array();
@@ -581,9 +600,9 @@
 						<div class="photo_geng" style=" width:220px;"><a href="<?php echo $pos_items->$pos_name->href;?>">...[阅读全文]</a></div>
 					</div>
 					<div class="h_h" style="width:285px;"></div>
-					<div class="teacher_btn1"><a href="">更多理财师&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn2"><a href="">更多咨询&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn3"><a href="">报名理财师&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn1"><a href="">理事风采&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn2"><a href="">会员互动&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn3"><a href="">加入增长会&nbsp;&nbsp;</a></div>
 				</div>
 				<div class="content_right_bottom"></div>
 				<div id="right_m_img" class="ad_banner">
