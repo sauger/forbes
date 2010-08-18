@@ -311,7 +311,7 @@
 							<?php }?>
 						</div>
 						<div id="bottomkeyword">
-							<?php for($i=3;$i<19;$i++){$pos_name = 'index_ad_'.$i;?>
+							<?php for($i=3;$i<11;$i++){$pos_name = 'index_ad_'.$i;?>
 							<div  class="bottom_kdiv" <?php show_page_pos($pos_name,'link')?>>
 							<?php show_page_href();?>
 							</div>
@@ -357,12 +357,12 @@
 								$column = $db->query("select name,nick_name from fb_user where role_name='column_writer'");
 								foreach($column as $v){
 							?>
-							<a class="column_a" href="/column/<?php echo $v->na看武侠小说me;?>"><?php echo $v->nick_name;?></a>	
+							<a class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
 							<?php }?>
 						</div>
 					</div>
 					<div id="life_div">
-					<div class="content_pg_title">生活</div>	
+					<div class="content_pg_title"><div>生活</div><div id="life_more"><a href="/life/">+更多</a></div></div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>

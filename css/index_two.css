@@ -84,7 +84,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 			#topkeyword{width:255px; margin-left:13px; height:35px; padding-left:55px; line-height:35px; font-weight:bolder; border-bottom:1px solid #C0C3CA;}
 			.top_kdiv{margin-left:30px; width:55px; overflow:hidden; height:35px;}
 			#topkeyword a{color:#66ADCD; text-decoration:none;}
-			#bottomkeyword{width:100%; line-height:25px; margin-top:10px; padding-bottom:30px;}
+			#bottomkeyword{width:100%; line-height:25px; margin-top:10px; padding-bottom:10px;}
 			.bottom_kdiv{width:40%; height:25px; margin-left:5%; text-indent:7px;  background:url(/images/index_two/dian_blue.gif) NO-REPEAT 0 10px; overflow:hidden;}
 			#bottomkeyword a{color:#336799; text-decoration:none;}
 		.guide_hr_val font{font-size: 12px; color: #336699;}
@@ -211,3 +211,6 @@ div{margin:0; padding:0; float:left; display:inline;}
 		#both_button{width:296px; height:46px; padding:1px; margin-top:10px; border:1px solid #CCCCCC;}
 		#both_button a{width:148px; float:left;}
 		#both_button img{border:0; float:left;}
+		
+		#life_more{width:40px; height:15px; border:1px solid #9D9D9D; margin-left:150px; margin-top:4px; text-align:center; background-color:#fff;}
+		#life_more a{margin:0; width:40px; height:15px; line-height:15px; font-size:12px; color:#000;}
