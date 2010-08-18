@@ -5,24 +5,22 @@
 .center{margin:20px 30px;width:600px;}
 .center font{font-size:16px; line-height:32px;float:left;width:155px;font-weight:600;}
 .center img{float:left;margin-left:50px;}
-#sina img{margin-left:95px;}
+#sina img{margin-left:85px;}
 #msn font{line-height:70px;float:left;}
-#msn img{margin-left:90px;}
+#msn img{margin-left:80px;}
 #jrj font{line-height:76px;float:left;}
-#jrj img{margin-left:110px;}
+#jrj img{margin-left:100px;}
 #wsj font{line-height:60px;float:left;}
-#wsj img{margin-left:85px;}
+#wsj img{margin-left:68px;}
 #vote{width:155px;height:133px;line-height:133px;}
-#p_21{margin-top:17px;width:500px;margin-left:50px;}
-#p_21 img{margin-left:55px;}
-#weekly img{margin-left:35px;margin-top:30px;}
+#p_21{margin-top:17px;width:500px;margin-left:35px;}
+#weekly img{margin-left:15px;margin-top:30px;}
 #sound{margin-left:40px;margin-top:30px;}
-#friend{margin-bottom:50px;width:700px;}
+#friend{margin-bottom:50px;width:600px;}
 #friend font{line-height:120px;}
-#friend img{}
 #help{width:155px;height:120px;line-height:120px;}
-#ce{margin-left:55px;width:400px;}
-#qjw{margin-left:55px;margin-top:20px;width:400px;}
+#ce{margin-left:30px;width:200px;}
+#qjw{margin-left:30px;margin-top:20px;width:200px;}
 
 #t1{height:28px;width:500px;margin-left:30px; line-height:18px;}
 #t2{height:28px;width:500px;margin-left:30px; line-height:18px;}
