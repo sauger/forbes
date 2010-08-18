@@ -1,0 +1,7 @@
+#p_middle{width:747px; color:#666666;}
+		#m_photo{height:40px; width:747px; border-bottom:2px solid #DFDFDF; border-top:2px solid #DFDFDF; background:#f7f7f7;}
+			#m_title{font-size:24px; line-height:40px; font-weight:bold; color:#005f9b; margin-left:8px;}
+			#m_tl{font-size:36px; line-height:44px; font-weight:bold; color:#ece9d8; margin-left:8px;}
+		
+		#m_textbox{width:747px; background:#f7f7f7;}
+			#m_text{width:650px; font-size:20px; text-align:justify; line-height:36px; margin:30px 0 100px 40px;}

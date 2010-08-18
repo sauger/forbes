@@ -9,22 +9,22 @@ $(function(){
 			window.location.href="./index.html";
 			}
 		else if (selected ==1){
-			window.location.href="./test_lt_bj.html";
+			window.location.href="./bg_forum.html";
 			}
 		else if(selected === 2){
-			window.location.href="./test_intr_luntan.html";
+			window.location.href="./meeting.html";
 			}
 		else if(selected === 3){
-			window.location.href="./test_guest.html";
+			window.location.href="./guest.html";
 			}
 		else if(selected === 4){
-			window.location.href="./test_intr_cs.html";
+			window.location.href="./intr_cs.html";
 			}
 		else if(selected === 5){
-				window.location.href="./test_media.html";
+				window.location.href="./media.html";
 			}
 		else if(selected === 6){
-			window.location.href="./test_pasttime.html";
+			window.location.href="./review.html";
 			}
 	});
 });
