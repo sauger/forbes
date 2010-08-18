@@ -4,4 +4,5 @@
 			#m_tl{font-size:36px; line-height:44px; font-weight:bold; color:#ece9d8; margin-left:8px;}
 		
 		#m_textbox{width:747px; background:#f7f7f7;}
-			#m_text{width:650px; font-size:20px; text-align:justify; line-height:36px; margin:30px 0 100px 40px;}
+			#m_text{width:650px; font-size:14px; text-align:justify; line-height:28px; margin:30px 0 100px 40px;}
+			#more{float:right; margin-top:30px;line-height:34px; font-size:16px;}
