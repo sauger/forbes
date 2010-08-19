@@ -141,7 +141,7 @@
 							<?php
 								$c_id = $category->children_map(42);
 								$c_id = implode(',',$c_id);
-								$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) order by created_at desc limit 2");
+								$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) group by title order by created_at desc limit 2");
 								foreach($news as $v){
 							?>
 							<div class="guide_hr_val2">
@@ -170,7 +170,7 @@
 							</ul>
 						</div>
 						<?php
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 9");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
@@ -196,7 +196,7 @@
 							</ul>
 						</div>
 						<?php
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 9");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
@@ -222,7 +222,7 @@
 							</ul>
 						</div>
 						<?php
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 7");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 7");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
@@ -233,8 +233,8 @@
 							for($i=1;$i<3;$i++){
 								$pos_name = 'index_business'.$i;
 						?>
-						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'index_cate_news')?>>
-							<font>[<a class="cate_a" href="<?php echo $pos_items->$pos_name->reserve;?>"><?php echo $pos_items->$pos_name->alias?></a>]</font><a href="<?php echo $pos_items->$pos_name->href;?>" class="news_a" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
+						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?>>
+							<a href="<?php echo $pos_items->$pos_name->href;?>" class="news_a" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
 						</div>
 						<?php }?>
 						<div id="pos">
@@ -259,7 +259,7 @@
 							<?php
 								$c_id = $category->children_map(143);
 								$c_id = implode(',',$c_id);
-								$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) order by created_at desc limit 2");
+								$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) group by title order by created_at desc limit 2");
 								foreach($news as $v){
 							?>
 							<div class="guide_hr_val2">
@@ -287,7 +287,7 @@
 							</ul>
 						</div>
 						<?php
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 9");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 9");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
@@ -581,7 +581,7 @@
 				<div class="content_right_top" style="margin-top:15px;"></div>
 				<div class="content_right_banner">
 					<div class="c_r_title" style="margin-top:5px;">
-						<div>增张会</div>
+						<div>增长会</div>
 						<a href=""><img src="/images/index_two/g4.jpg"/></a>
 					</div>
 					<div class="con_r_hr">
