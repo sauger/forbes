@@ -82,7 +82,7 @@ for($i=0;$i<count($countnav);$i++){
 		?>
 			<div class="t_content">
 				<div></div>
-				<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $url; ?>"><?php echo $navigation2[$j]->name; ?></a>
+				<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $navigation2[$j]->href; ?>"><?php echo $navigation2[$j]->name; ?></a>
 			</div>
 		<?php } ?>
 		</div>
