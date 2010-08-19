@@ -102,7 +102,7 @@ for($i=0;$i< $len;$i++){
 	}
 }
 
-update_pos("城市",3,"index_city",true,true);
+#update_pos("城市",3,"index_city",true,true);
 update_pos("早餐资讯",2,"index_zczx_",true,true);
 update_pos("投票之选",2,"index_tpzx_",true,true);
 update_pos("环球一周前瞻",2,"index_hqyz_",true,true);
