@@ -66,7 +66,7 @@
 				<div class=list_box>
 						<div class="head_line">
 							<div class=title><a title="<?php echo $record[$i]->title;?>" href="<?php echo static_news_url($record[$i]);?>"><?php echo $record[$i]->title?></a></div>
-							<div class=info>记者：<?php echo $record[$i]->author;?>　发布于：<?php echo substr($record[$i]->created_at,0,10);?></div>
+							<div class=info>作者：<?php echo $record[$i]->author;?>　发布于：<?php echo substr($record[$i]->created_at,0,10);?></div>
 						</div>
 						<div class=description ><?php echo strip_tags($record[$i]->description);?></div>
 				</div>

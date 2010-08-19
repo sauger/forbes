@@ -1,6 +1,7 @@
 <?php
 	include_once( dirname(__FILE__) .'/frame.php');
 	$db = get_db();
+	$seo=$db->query('select * from fb_seo where name="网站首页"');
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,8 +9,8 @@
 	<title><?php echo $seo[0]->title ?></title>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
+	<meta name="keywords" content="<?php echo $seo[0]->keywords ?>" />
+	<meta name="description" content="<?php echo $seo[0]->description ?>" />
 	<?php
 		use_jquery();
 		js_include_tag('index_two','top2','jquery.colorbox-min.js');
