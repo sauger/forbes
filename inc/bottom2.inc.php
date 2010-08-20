@@ -86,7 +86,7 @@ if(empty($category)){
 			<?php 
 				$c_ids = $category->children_map(3,false);
 				$c_id = implode(',',$c_ids);
-				foreach($c_ids as $cid){
+				foreach($c_ids as $k => $cid){
 			?>
 			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
 			<?php }?>

@@ -24,7 +24,7 @@ $(function(){
 	});
 	$(".bottom_bottom").click(function(){
 		if($(this).parent().find(".sub_cate:visible").length>7){
-			$(this).parent().find(".sub_cate:visible:first").hide();
+			$(this).parent().find(".sub_cate:visible:first").css('display','none');
 		}
 	});
 	
