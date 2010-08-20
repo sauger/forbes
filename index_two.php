@@ -375,7 +375,7 @@
 						<div class="pho_value">
 							<?php show_page_desc();?>
 						</div>
-						<div class="photo_geng" style="width:230px; margin-top:4px;"><a target="_blank" href="<?php echo $pos_items->$pos_name->herf;?>">...[阅读全文]</a></div>
+						<div class="photo_geng" style="width:230px; margin-top:4px;"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>">...[阅读全文]</a></div>
 					</div>
 					<div class="h_h"></div>
 					<?php }?>
