@@ -15,9 +15,12 @@
 		use_jquery();
 		js_include_tag('index_two','top2','jquery.colorbox-min.js');
 		css_include_tag('index_two','top2','colorbox');
+		global $pos_items;
 		init_page_items();
-		$db = get_db();
-		$category = new category_class('news');
+		global $category;
+		if(empty($category)){
+			$category = new category_class('news');
+		}
 	?>
 </head>
 <body>
