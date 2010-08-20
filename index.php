@@ -2,6 +2,9 @@
 	include_once( dirname(__FILE__) .'/frame.php');
 	$db = get_db();
 	$seo=$db->query('select * from fb_seo where name="网站首页"');
+	if(empty($category)){
+		$category = new category_class('news');
+	}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
