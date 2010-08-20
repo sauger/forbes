@@ -23,7 +23,7 @@
 <body>
 	<div id=ibody>
 	<?php
-		include_top2();
+		#include_top2();
 	?>
 		<div id="content">
 			<div id="content_left">
