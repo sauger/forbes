@@ -17,6 +17,7 @@
 		css_include_tag('index_two','top2','colorbox');
 		init_page_items();
 		$db = get_db();
+		$category = new category_class('news');
 	?>
 </head>
 <body>
