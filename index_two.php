@@ -21,17 +21,9 @@
 </head>
 <body>
 	<div id=ibody>
-	<?php include_once(dirname(__FILE__).'/inc/top2.inc.php');?>
-	<?php 
-	if($page_type == 'static'){
-		function get_news_url($news){
-			return static_news_url($news);
-		}
-	}else{
-		function get_news_url($news){
-			return dynamic_news_url($news);
-		}
-	}?>
+	<?php
+		include_top2();
+	?>
 		<div id="content">
 			<div id="content_left">
 				<div id="content_banner_left">
@@ -666,7 +658,7 @@
 		
 		
 		
-		<?php include 'include.php';?>
+		<?php include_bottom2();?>
 	</div>
 </body>
 </html>

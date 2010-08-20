@@ -74,6 +74,23 @@ switch ($type) {
 		}
 		echo '静态化二级首页成功!';
 		break;
+	case 'index2':
+		if(static_index2()){
+			echo '静态化首页成功!';
+		}else{
+			echo '静态化首页失败!';
+		}
+		if(static_top2()){
+			echo '静态化顶部成功!';
+		}else{
+			echo '静态化顶部失败!';
+		}
+		if(static_bottom2()){
+			echo '静态化底部成功!';
+		}else{
+			echo '静态化底部失败!';
+		}
+		break;
 	default:
 		;
 	break;

@@ -120,6 +120,28 @@ function static_bottom() {
 	return write_to_file("{$static_dir}/review/inc/bottom.inc.shtml",$content,'w');
 }
 
+function static_index2() {
+	global $static_dir;
+	global $static_url;
+	$content = file_get_contents("{$static_url}/index_two.php?page_type=static");
+	return write_to_file("{$static_dir}/testindex.html",$content,'w');
+}
+
+
+function static_top2(){
+	global $static_dir;
+	global $static_url;
+	$content = file_get_contents("{$static_url}/inc/top2.inc.php?page_type=static");
+	return write_to_file("{$static_dir}/review/inc/top2.inc.shtml",$content,'w');
+}
+
+function static_bottom2() {
+	global $static_dir;
+	global $static_url;
+	$content = file_get_contents("{$static_url}/inc/bottom2.inc.php?page_type=static");
+	return write_to_file("{$static_dir}/review/inc/bottom2.inc.shtml",$content,'w');
+}
+
 function static_right($name){
 	global $static_dir;
 	global $static_url;
@@ -210,6 +232,33 @@ function include_bottom(){
 		echo '<!--#include  virtual="/review/inc/bottom.inc.shtml"  -->';
 	}else{
 		include_once(dirname(__FILE__).'/bottom.inc.php');
+	}
+}
+
+
+function include_top2(){
+	global $page_type;
+	global $page_items;
+	if($page_type == 'static'){
+		function get_news_url($news){
+			return static_news_url($news);
+		}
+		echo '<!--#include virtual="/review/inc/top2.inc.shtml"  -->';
+	}else{
+		function get_news_url($news){
+			return dynamic_news_url($news);
+		}
+		include_once(dirname(__FILE__).'/top2.inc.php');
+	}
+}
+
+function include_bottom2(){
+	global $page_type;
+	global $pos_items;
+	if($page_type == 'static'){
+		echo '<!--#include  virtual="/review/inc/bottom2.inc.shtml"  -->';
+	}else{
+		include_once(dirname(__FILE__).'/bottom2.inc.php');
 	}
 }
 
