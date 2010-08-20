@@ -130,7 +130,7 @@
 								<div class="li_img_title"><?php show_page_href();?></div>	
 								<div class="li_img_value"><?php show_page_desc();?></div>
 							</div>
-							<div class="li_title"><div style="margin-left:40px;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
+							<div class="li_title"><div style="margin-left:40px;"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
 							<div class="guide_hr" style="WIDTH:320PX; margin-top:5px;"></div>
 							<?php
 								$c_id = $category->children_map(42);
@@ -139,15 +139,15 @@
 								foreach($news as $v){
 							?>
 							<div class="guide_hr_val2">
-								<a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+								<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 							</div>
 							<?php }?>
-							<div class="li_hr_g" style="width:310px;"><a href="/billionaires/">...查看更多</a></div>
+							<div class="li_hr_g" style="width:310px;"><a target="_blank" href="/billionaires/">...查看更多</a></div>
 						</div>
 					</div>
 					<div class="pg">
 						<font>创业</font>
-						<a href="/entrepreneur/">更多</a>
+						<a target="_blank" href="/entrepreneur/">更多</a>
 					</div>
 					
 					<div class="keysword_banner">
@@ -168,13 +168,13 @@
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
-							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 					</div>
 					<div class="pg">
 						<font>投资</font>
-						<a href="/investment/">更多</a>
+						<a target="_blank" href="/investment/">更多</a>
 					</div>
 					<div class="keysword_banner">
 						<div class="keysword_value">
@@ -185,7 +185,7 @@
 									$key_array = get_keywords($c_id);
 									foreach($key_array as $keyword){
 								?>
-								<li><a href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
+								<li><a target="_blank" href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
 								<?php }?>
 							</ul>
 						</div>
@@ -194,7 +194,7 @@
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
-							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 					</div>
@@ -220,7 +220,7 @@
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
-							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 						<?php 
@@ -228,14 +228,14 @@
 								$pos_name = 'index_business'.$i;
 						?>
 						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?>>
-							<a href="<?php echo $pos_items->$pos_name->href;?>" class="news_a" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
+							<a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" class="news_a" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
 						</div>
 						<?php }?>
 						<div id="pos">
 						<?php 
 							foreach($c_ids as $cid){
 						?>
-							<a href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
+							<a target="_blank" href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
 						<?php }?>
 						</div>
 					</div>
@@ -248,7 +248,7 @@
 								<div class="li_img_title"><?php show_page_href();?></div>	
 								<div class="li_img_value"><?php show_page_desc();?></div>
 							</div>
-							<div class="li_title"><div style="margin-left:40px;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
+							<div class="li_title"><div style="margin-left:40px;"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
 							<div class="guide_hr" style="WIDTH:320PX; margin-top:5px;"></div>
 							<?php
 								$c_id = $category->children_map(143);
@@ -257,15 +257,15 @@
 								foreach($news as $v){
 							?>
 							<div class="guide_hr_val2">
-								<a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+								<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 							</div>
 							<?php }?>
-							<div class="li_hr_g" style="width:310px;"><a href="/review/list/143">...查看更多</a></div>
+							<div class="li_hr_g" style="width:310px;"><a target="_blank" href="/review/list/143">...查看更多</a></div>
 						</div>
 					</div>
 					<div class="pg">
 						<font>科技</font>
-						<a href="/tech/">更多</a>
+						<a target="_blank" href="/tech/">更多</a>
 					</div>
 					<div class="keysword_banner">
 						<div class="keysword_value">
@@ -276,7 +276,7 @@
 									$key_array = get_keywords($c_id);
 									foreach($key_array as $keyword){
 								?>
-								<li><a href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
+								<li><a target="_blank" href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
 								<?php }?>
 							</ul>
 						</div>
@@ -285,14 +285,14 @@
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
-							<a class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 						<div id="pos">
 						<?php 
 							foreach($c_ids as $cid){
 						?>
-							<a href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
+							<a target="_blank" href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
 						<?php }?>
 						</div>
 					</div>
@@ -314,7 +314,7 @@
 					</div>
 				</div>
 				<div id="content_right">
-					<div class="content_pg_title">观点<a href="/column/">更多</a></div>
+					<div class="content_pg_title">观点<a target="_blank" href="/column/">更多</a></div>
 					<div class="pg_hr">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
@@ -334,7 +334,7 @@
 					<div class="photo_value_s">
 						<div class="photo_title"><?php show_page_href(); ?></div>	
 						<div class="photo_value_v"><?php show_page_desc(); ?></div>
-						<div class="photo_geng"><a href="<?php echo $pos_items->$pos_name->reserve?>">[...更多观点]</a></div>
+						<div class="photo_geng"><a target="_blank" href="<?php echo $pos_items->$pos_name->reserve?>">[...更多观点]</a></div>
 					</div>
 						<?php if($i<4){?>
 						<div class="h_h"></div>
@@ -344,19 +344,19 @@
 						<div class="gg_containt">
 							<div class="gg_title">更多专栏</div>
 							<div class="guide_hr" style="margin-top:7px; width:235px;"></div>
-							<a href="/column/expert/"><img src="/images/index_two/g4.jpg"/></a>
+							<a target="_blank" href="/column/expert/"><img src="/images/index_two/g4.jpg"/></a>
 						</div>
 						<div class="gg_containt_value">
 							<?php
 								$column = $db->query("select name,nick_name from fb_user where role_name='column_writer'");
 								foreach($column as $v){
 							?>
-							<a class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
+							<a target="_blank" class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
 							<?php }?>
 						</div>
 					</div>
 					<div id="life_div">
-					<div class="content_pg_title"><div>生活</div><div id="life_more"><a href="/life/">+更多</a></div></div>	
+					<div class="content_pg_title"><div>生活</div><div id="life_more"><a target="_blank" href="/life/">+更多</a></div></div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
@@ -375,7 +375,7 @@
 						<div class="pho_value">
 							<?php show_page_desc();?>
 						</div>
-						<div class="photo_geng" style="width:230px; margin-top:4px;"><a href="<?php echo $pos_items->$pos_name->herf;?>">...[阅读全文]</a></div>
+						<div class="photo_geng" style="width:230px; margin-top:4px;"><a target="_blank" href="<?php echo $pos_items->$pos_name->herf;?>">...[阅读全文]</a></div>
 					</div>
 					<div class="h_h"></div>
 					<?php }?>
@@ -387,7 +387,7 @@
 					?>
 					<div class="guide_hr_val" style="width:320px;<?php if($i==0){?>margin-top:11px;<?php }?>"><a href="<?php echo get_news_url($v);?>">[<?php echo $category->find_name_by_id($v->category_id);?>] <?php echo $v->title;?></a></div>
 					<?php }?>
-					<div class="content_pg_title">采编空间<a href="/column/journalist/" style="margin-left:235px;">更多</a></div>	
+					<div class="content_pg_title">采编空间<a target="_blank" href="/column/journalist/" style="margin-left:235px;">更多</a></div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
@@ -401,7 +401,7 @@
 							<?php show_page_img();?>
 						</div>
 						<div class="photo_font">
-							<a href="<?php echo $pos_items->$pos_name->reserve?>"><?php echo $pos_items->$pos_name->alias;?></a>
+							<a target="_blank" href="<?php echo $pos_items->$pos_name->reserve?>"><?php echo $pos_items->$pos_name->alias;?></a>
 						</div>
 					</div>
 					<div class="photo_value_s">
@@ -424,7 +424,7 @@
 								$column = $db->query("select name,nick_name from fb_user where role_name='column_editor'");
 								foreach($column as $v){
 							?>
-							<a class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
+							<a target="_blank" class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
 							<?php }?>
 						</div>
 					</div>
@@ -440,7 +440,7 @@
 							$news->find($comments[$i]->resource_id);
 					?>
 					<div class="con_ban_title">
-						<a href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a>
+						<a target="_blank" href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a>
 					</div>
 					<div class="con_ban_value">
 						<?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a>
@@ -566,9 +566,9 @@
 						<div class="photo_geng" style=" width:220px;"><a href="<?php echo $pos_items->$pos_name->href;?>">...[阅读全文]</a></div>
 					</div>
 					<div class="h_h" style="width:285px;"></div>
-					<div class="teacher_btn1"><a href="http://www.forbeschina.com/event/lcs/list_1.html">更多理财师&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn2"><a href="http://www.forbeschina.com/event/lcs/">更多咨询&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn3"><a href="http://www.forbeschina.com/event/lcs/EntryForm.php">报名理财师&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn1"><a target="_blank" href="http://www.forbeschina.com/event/lcs/list_1.html">更多理财师&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn2"><a target="_blank" href="http://www.forbeschina.com/event/lcs/">更多咨询&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn3"><a target="_blank" href="http://www.forbeschina.com/event/lcs/EntryForm.php">报名理财师&nbsp;&nbsp;</a></div>
 				</div>
 				<div class="content_right_bottom"></div>
 				
@@ -644,11 +644,11 @@
 						</div>
 						<?php $pos_name = "index_survey_0"?>
 						<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
-						<div class="survey_submit"><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">...进入调查</a></div>
+						<div class="survey_submit"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">...进入调查</a></div>
 						<div class="h_h" style="width: 285px; margin-top:8px;"></div>
 						<?php $pos_name = "index_survey_1"?>
 						<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
-						<div class="survey_submit"><a href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">...进入调查</a></div>
+						<div class="survey_submit"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">...进入调查</a></div>
 				</div>
 				<div class="content_right_bottom"></div>
 				
