@@ -91,3 +91,27 @@ for($i=0;$i<count($countnav);$i++){
 	</div>
 <?php } ?>
 </div>
+<?php 
+global $page_type;
+if($page_type == 'static'){?>
+function top_search(){
+	var type = $(".iselect").val();
+	var text = $("#search_text").val();
+	window.location.href="/search/" + type +"/key/"+encodeURI(text);
+}
+<?php }else{?>
+function top_search(){
+	var type = $(".iselect").val();
+	var text = $("#search_text").val();
+	
+	if(type=='list'){
+		window.location.href="/list/list.php?key="+encodeURI(text);
+	}else if(type=='news'){
+		window.location.href="/search/news.php?key="+encodeURI(text);
+	}else if(type=='author_news'){
+		window.location.href="/search/author_news.php?key="+encodeURI(text);
+	}else if(type=='rich'){
+		window.location.href="/search/rich.php?name="+encodeURI(text);
+	}
+}
+<?php }?>;
