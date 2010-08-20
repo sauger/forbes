@@ -57,6 +57,9 @@ if(empty($category)){
 			?>
 			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
 			<?php }?>
+			<div style="float:left; display:none">clear_float</div>
+			<div class="top_bottom"></div>
+			<div class="bottom_bottom"></div>
 	</div>
 	<div class="bottom_value">
 			<div>[城市]</div>
@@ -66,7 +69,10 @@ if(empty($category)){
 				foreach($c_ids as $cid){
 			?>
 			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
-			<?php }?>			
+			<?php }?>
+			<div style="float:left; display:none">clear_float</div>
+			<div class="top_bottom"></div>
+			<div class="bottom_bottom"></div>
 	</div>
 	<div class="bottom_value">
 			<div>[生活]</div>
