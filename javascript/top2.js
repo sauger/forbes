@@ -27,6 +27,16 @@ $(function(){
 			$(this).parent().find(".sub_cate:visible:first").hide();
 		}
 	});
+	
+	$("#top_select").click(function(){
+		top_search();
+	});
+	
+	$('#top_input').keypress(function(e){
+		if(e.keyCode == 13){
+			top_search();
+		}
+	});
 });
 
 var selects = document.getElementsByName('selsearch');
