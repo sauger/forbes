@@ -115,5 +115,5 @@ function top_search(){
 		window.location.href="/search/rich.php?name="+encodeURI(text);
 	}
 }
+<?php }?>
 </script>
-<?php }?>;
