@@ -91,6 +91,7 @@ for($i=0;$i<count($countnav);$i++){
 	</div>
 <?php } ?>
 </div>
+<script>
 <?php 
 global $page_type;
 if($page_type == 'static'){?>
@@ -114,4 +115,5 @@ function top_search(){
 		window.location.href="/search/rich.php?name="+encodeURI(text);
 	}
 }
+</script>
 <?php }?>;
