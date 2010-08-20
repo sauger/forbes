@@ -4,7 +4,7 @@ $channel = $_GET['channel'];
 $banner = $_GET['banner'];
 if(!is_ajax()) die();
 $banners = array('top_banner','index_middle_banner','right_banner','rich_banner2','rich_banner1','news_banner','list_banner','magazine_banner1','magazine_banner2','login_banner','club_banner','top_img_right','top_img_left','right_img','right_m_img','lang_ad','index_little');
-$channels = array('billionaires','business','city','club','column','entrepreneur','index','investment','investor','life','list','magazine','news','search','survey','tech','login','register','user','getpwd','review','comments','pic_list','event','contact','file_list','index_two.php');
+$channels = array('billionaires','business','city','club','column','entrepreneur','index','investment','investor','life','list','magazine','news','search','survey','tech','login','register','user','getpwd','review','comments','pic_list','event','contact','file_list','index_two.php','testindex.shtml');
 if(!in_array($_GET['channel'],$channels) || !in_array($_GET['banner'],$banners)){
 }
 if ($channel == 'review') $channel = 'news';
