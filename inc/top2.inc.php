@@ -97,13 +97,13 @@ global $page_type;
 if($page_type == 'static'){?>
 function top_search(){
 	var type = $(".iselect").val();
-	var text = $("#search_text").val();
+	var text = $("#top_input").val();
 	window.location.href="/search/" + type +"/key/"+encodeURI(text);
 }
 <?php }else{?>
 function top_search(){
 	var type = $(".iselect").val();
-	var text = $("#search_text").val();
+	var text = $("#top_input").val();
 	
 	if(type=='list'){
 		window.location.href="/list/list.php?key="+encodeURI(text);
