@@ -344,7 +344,7 @@
 						<div class="gg_containt">
 							<div class="gg_title">更多专栏</div>
 							<div class="guide_hr" style="margin-top:7px; width:235px;"></div>
-							<a target="_blank" href="/column/expert/"><img src="/images/index_two/g4.jpg"/></a>
+							<a target="_blank" href="/column/"><img src="/images/index_two/g4.jpg"/></a>
 						</div>
 						<div class="gg_containt_value">
 							<?php
@@ -417,7 +417,7 @@
 						<div class="gg_containt">
 							<div class="gg_title">更多专栏</div>
 							<div class="guide_hr" style="margin-top:7px; width:235px;"></div>
-							<a href="/column/journalist/"><img src="/images/index_two/g4.jpg"/></a>
+							<a href="/column/"><img src="/images/index_two/g4.jpg"/></a>
 						</div>
 						<div class="gg_containt_value">
 							<?php
