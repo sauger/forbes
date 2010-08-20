@@ -124,7 +124,7 @@ function static_index2() {
 	global $static_dir;
 	global $static_url;
 	$content = file_get_contents("{$static_url}/index_two.php?page_type=static");
-	return write_to_file("{$static_dir}/testindex.html",$content,'w');
+	return write_to_file("{$static_dir}/review/testindex.shtml",$content,'w');
 }
 
 
