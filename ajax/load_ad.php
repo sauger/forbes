@@ -8,6 +8,7 @@ $channels = array('billionaires','business','city','club','column','entrepreneur
 if(!in_array($_GET['channel'],$channels) || !in_array($_GET['banner'],$banners)){
 }
 if ($channel == 'review') $channel = 'news';
+if ($channel == 'testindex.shtml') $channel = 'index_two.php';
 $db = get_db();
 $db->query("select id from forbes_ad.fb_channel where parttern='$channel'");
 if($db->record_count <= 0) die('1');
