@@ -387,7 +387,7 @@
 					?>
 					<div class="guide_hr_val" style="width:320px;<?php if($i==0){?>margin-top:11px;<?php }?>"><a href="<?php echo get_news_url($v);?>">[<?php echo $category->find_name_by_id($v->category_id);?>] <?php echo $v->title;?></a></div>
 					<?php }?>
-					<div class="content_pg_title">采编空间<a target="_blank" href="/column/journalist/" style="margin-left:235px;">更多</a></div>	
+					<div class="content_pg_title">采编空间<a target="_blank" href="/column/journalist" style="margin-left:235px;">更多</a></div>	
 					<div class="pg_hr" style="margin-left:8px;">
 						<div class="content_pg_hr"></div>
 						<div class="dian_hr"></div>
