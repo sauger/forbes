@@ -17,16 +17,22 @@
 		css_include_tag('index_two','top2','colorbox');
 		global $pos_items;
 		init_page_items();
-		global $category;
-		if(empty($category)){
-			$category = new category_class('news');
-		}
+		$category = new category_class('news');
 	?>
 </head>
 <body>
 	<div id=ibody>
 	<?php
 		#include_top2();
+		if($page_type == 'static'){
+		function get_news_url($news){
+			return static_news_url($news);
+		}
+	}else{
+		function get_news_url($news){
+			return dynamic_news_url($news);
+		}
+	}
 	?>
 		<div id="content">
 			<div id="content_left">

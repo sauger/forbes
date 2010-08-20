@@ -22,7 +22,7 @@
 	<div id=ibody>
 	<?php 
 	init_page_items();
-	#include_top();
+	include_top();
 	
 	?>
 		<div id=forbes_tlt>
