@@ -10,7 +10,7 @@ $news = $db->query("select t1.title,t2.nick_name,t1.author from fb_news t1 join 
 </tr>
 <?php foreach($news as $news){?>
 <tr>
-<td><?php echo $news->title;?></td><td><?php echo $news->author;?></td><td><?php echo $news->publisher;?></td>
+<td><?php echo $news->title;?></td><td><?php echo $news->author;?></td><td><?php echo $news->nick_name;?></td>
 </tr>
 <?php }?>
 </table>
