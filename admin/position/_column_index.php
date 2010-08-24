@@ -4,7 +4,7 @@ $role = "column_writer";
 
 $ids[] = 72;
 for($i=0;$i<4;$i++){
-	vardump($ids);
+	var_dump($ids);
 	$nid = '('.implode(',',$ids).')';
 	$item = $db->query("select publisher,b.name,b.nick_name,b.column_name,image_src,b.role_name from fb_news a left join fb_user b on a.publisher = b.id where role_name = '$role' and a.is_adopt=1 and b.id not in {$nid}  order by created_at desc limit 1");
 	echo "select publisher,b.name,b.nick_name,b.column_name,image_src,b.role_name from fb_news a left join fb_user b on a.publisher = b.id where role_name = '$role' and a.is_adopt=1 and b.id not in {$nid}  order by created_at desc limit 1";
