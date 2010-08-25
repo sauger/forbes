@@ -7,7 +7,7 @@ body a{text-decoration:none;}
 #part1{width:1000px; height:319px; margin-left:9px; background:url("../images/CS_TOP.jpg") no-repeat;}
 
 #part2{width:1000px; height:43px; margin-left:9px;background:url("../images/nav_bj.jpg") repeat-x;}
-	#p2_navbox{width:832px; height:43px; margin-left:84px; color:#ffffff;font-size:16px; font-weight:bold; line-height:44px;}
+	#p2_navbox{width:980px; height:43px; margin-left:20px; color:#ffffff;font-size:16px; font-weight:bold; line-height:44px;}
 		.nav_menu{padding:0px 26px; cursor:pointer;}
 		.hinder{width:2px; height:43px; background:url("../images/hinder.jpg") no-repeat;}
 #part4{width:1000px; height:62px; margin-top:20px; margin-left:9px; border-top:1px solid #a9a9a9;}

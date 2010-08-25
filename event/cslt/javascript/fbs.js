@@ -26,5 +26,8 @@ $(function(){
 		else if(selected === 6){
 			window.location.href="./review.html";
 			}
+		else if(selected === 7){
+			window.location.href="./contact.html";
+			}
 	});
 });
