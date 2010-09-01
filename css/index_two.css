@@ -59,21 +59,18 @@ div{margin:0; padding:0; float:left; display:inline;}
 				.guide_hr_val2 .news_a{font-size:14px; color:#003399; margin-left:5px; text-decoration:none;}
 				.guide_hr_val2 .cate_a{font-size:12px; color:#336699; text-decoration:none;}
 	#content_left_c{width:338px; margin-top:15px; overflow:hidden;}
-		.li{width:338px; float: left;}
-		.li_banner{width:338px; height:26px;  text-indent:30px; line-height:26px; background:url(/images/index_two/li_top.jpg) no-repeat;}
-		.li_value{width:336px; height:250px; border:1px solid #B3B6BD; float: left; display: inline;}
-			.li_top{width:320px; height:105px; padding-bottom:20px; margin-left:15px; margin-top:15px;float: left;}
-				.li_img_pg img{width:108px; height:101px; margin-left:1px; margin-top:1px; border:0px solid red;}
-				.li_img_pg{width:110px; height:105px; background:url(/images/index_two/li_pg.jpg) no-repeat; float:left;}
+		.normal_box{width:336px; padding-bottom:20px; margin-top:15px; border:1px solid #B3B6BD;}
+			.li_top{width:320px; height:105px; padding-bottom:20px; margin-left:15px; margin-top:10px;float: left;}
+				.li_img_pg img{width:110px; height:105px;}
+				.li_img_pg{width:110px; height:105px; border:1px solid #666666; float:left;}
 				.li_img_title{width:190px; height:36px; margin-right:10px; overflow:hidden; line-height:18px; float:right;}
 				.li_img_title a{color:#003399; font-size:14px; font-weight:bold; text-decoration:none;}
 				.li_img_value{width:190px; height:57px; margin-right:10px; margin-top:14px; overflow:hidden; line-height:16px; float:right;}
 				.li_img_value a{color:#040100; font-size:14px; line-height:19px; text-decoration:none;}
 			.li_title{width:320px; height:20px; margin-left:15px; margin-top:5px;}
 			.li_title div a{text-decoration: none; font-size:14px;}
-			.normal_title{width:100%; height:30px; line-height:30px; color:#990000; font-weight:bolder; font-size:14px;}
-			.normal_title span{background:url(/images/index_two/dian_red.gif) NO-REPEAT 0 13px; text-indent:10px;}
-			.normal_title a{color:#9C9B9B; text-decoration:none; font-size:12px; float:right;}
+			.normal_title{width:100%; height:30px; line-height:30px; color:#990000; font-weight:bolder; font-size:14px; background:url(/images/index_two/dian_red.gif) NO-REPEAT 10px 13px; text-indent:20px;}
+			.normal_title a{color:#9C9B9B; text-decoration:none; margin-right:20px; font-weight:normal; font-size:12px; float:right;}
 			
 			.li_hr_g{width:230px; height:18px; margin-top:5px; text-align:right; overflow:hidden; line-height:18px; margin-left:15px;}
 			.li_hr_g a{font-size:12px; color:#000000; text-decoration:none;}
@@ -197,12 +194,12 @@ div{margin:0; padding:0; float:left; display:inline;}
 				.con_ban_title a{font-size:12px; color:#4A4A4A; text-decoration:none;}
 			.con_ban_value{width:330px; height:16px;  color:#4A4A4A; font-weight:bold; margin-left:10px; font-size:12px; line-height:16px; text-align:right;}
 				.con_ban_value a{font-size:12px; color:#4A4A4A; font-weight:bold; text-decoration:none;}
-			#day{width:339px; height:20px; margin-left:8px; margin-top:7px; background:#E8E8E8;}
+			#day{width:94%; height:20px; margin-left:3%; margin-top:7px; background:#E8E8E8;}
 				#day div{width:33%; height:14px; cursor:pointer; color:#525250; line-height:14px; border-left:1px solid #A4A4A4; text-align:center; margin-top:3px;}
 					#day div a{font-size:12px; color:#525250; text-decoration:none;}
-			.day_banner{width:339px; height:26px; margin-left:8px; margin-top:1px; overflow: hidden;}
+			.day_banner{width:94%; height:26px; margin-left:3%; margin-top:1px; overflow: hidden;}
 				.day_banner_number{width:13px; height:13px; margin-left:2px; margin-top:4px; font-weight:bold; font-size:12px; line-height:13px; text-align:center; color:#999999; background:url(/images/index_two/pg_1.jpg.) no-repeat;}
-				.day_banner_value{width:310px; height:18px; margin-top:2px; margin-left:10px; overflow:hidden; line-height:20px;}
+				.day_banner_value{width:290px; height:18px; margin-top:2px; margin-left:10px; overflow:hidden; line-height:20px;}
 					.day_banner_value a{font-size:12px; color:#000; text-decoration:none;}
 			#right_bottom{width:340px; margin-top:15px;}
 			

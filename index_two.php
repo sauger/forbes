@@ -121,179 +121,145 @@
 					</div>
 				</div>
 				<div id="content_left_c">
-					<div class="li">
-						<div class="li_value">
-							<div class="normal_title">
-							<span>富豪</span>
-							</div>
-							<?php $pos_name = 'index_rich1';?>
-							<div class="li_top" <?php show_page_pos($pos_name);?>>
-								<div class="li_img_pg"><?php show_page_img();?></div>
-								<div class="li_img_title"><?php show_page_href();?></div>	
-								<div class="li_img_value"><?php show_page_desc();?></div>
-							</div>
-							<?php
-								$c_id = $category->children_map(42);
-								$c_id = implode(',',$c_id);
-								$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) group by title order by created_at desc limit 2");
-								foreach($news as $v){
-							?>
-							<div class="guide_hr_val2">
-								<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
-							</div>
-							<?php }?>
+					<div class="normal_box"  style="margin-top:0;">
+						<div class="normal_title"><div>富豪</div><a href="/review/list/42">[...更多]</a>
 						</div>
-					</div>
-					<div class="pg">
-						<font>创业</font>
-						<a target="_blank" href="/entrepreneur/">更多</a>
-					</div>
-					
-					<div class="keysword_banner">
-						<div class="keysword_value">
-							<ul>
-								<?php
-									$c_id = $category->children_map(2,false);
-									$c_id = implode(',',$c_id);
-									$key_array = get_keywords($c_id);
-									foreach($key_array as $keyword){
-								?>
-								<li><a href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
-								<?php }?>
-							</ul>
+						<?php $pos_name = 'index_rich1';?>
+						<div class="li_top" <?php show_page_pos($pos_name);?>>
+							<div class="li_img_pg"><?php show_page_img();?></div>
+							<div class="li_img_title"><?php show_page_href();?></div>	
+							<div class="li_img_value"><?php show_page_desc();?></div>
 						</div>
 						<?php
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 9");
-							foreach($news as $i => $v){
+							$c_id = $category->children_map(42);
+							$c_id = implode(',',$c_id);
+							$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) group by title order by created_at desc limit 2");
+							foreach($news as $v){
 						?>
-						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
-							<a target="_blank" class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+						<div class="guide_hr_val2">
+							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 					</div>
-					<div class="pg">
-						<font>投资</font>
-						<a target="_blank" href="/investment/">更多</a>
-					</div>
-					<div class="keysword_banner">
-						<div class="keysword_value">
-							<ul>
-								<?php
-									$c_id = $category->children_map(5,false);
-									$c_id = implode(',',$c_id);
-									$key_array = get_keywords($c_id);
-									foreach($key_array as $keyword){
-								?>
-								<li><a target="_blank" href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
-								<?php }?>
-							</ul>
+					<div class="normal_box">
+						<div class="normal_title"><div>CEO</div><a href="/review/list/143">[...更多]</a>
+						</div>
+						<?php $pos_name = 'index_ceo1';?>
+						<div class="li_top" <?php show_page_pos($pos_name);?>>
+							<div class="li_img_pg"><?php show_page_img();?></div>
+							<div class="li_img_title"><?php show_page_href();?></div>	
+							<div class="li_img_value"><?php show_page_desc();?></div>
 						</div>
 						<?php
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 9");
-							foreach($news as $i => $v){
+							$c_id = $category->children_map(143);
+							$c_id = implode(',',$c_id);
+							$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) group by title order by created_at desc limit 2");
+							!$news && $news = array();
+							foreach($news as $v){
 						?>
-						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
-							<a target="_blank" class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+						<div class="guide_hr_val2">
+							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 					</div>
-					<div class="pg">
-						<font>商业</font>
-						<a href="/business/">更多</a>
-					</div>
-					<div class="keysword_banner">
-						<div class="keysword_value">
-							<ul>
-								<?php
-									$c_ids = $category->children_map(3,false);
-									$c_id = implode(',',$c_ids);
-									$key_array = get_keywords($c_id);
-									foreach($key_array as $keyword){
-								?>
-								<li><a href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
-								<?php }?>
-							</ul>
-						</div>
-						<?php
+					<div class="normal_box">
+						<div class="normal_title"><div>创业</div><a href="/review/list/2">[...更多]</a></div>
+						<?php 
+							$c_id = $category->children_map(2,false);
+							$c_id = implode(',',$c_id);
 							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 7");
 							foreach($news as $i => $v){
 						?>
-						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
-							<a target="_blank" class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+						<div class="guide_hr_val2" <?php if($i == 6){ echo 'style="margin-bottom:15px;"';}?>>
+							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+						</div>
+						<?php }?>
+						<div class="normal_title"><div>投资</div><a href="/review/list/5">[...更多]</a></div>
+						<?php 
+							$c_id = $category->children_map(5,false);
+							$c_id = implode(',',$c_id);
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 7");
+							foreach($news as $i => $v){
+						?>
+						<div class="guide_hr_val2" <?php if($i == 6){ echo 'style="margin-bottom:15px;"';}?>>
+							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+						</div>
+						<?php }?>
+						<div class="normal_title"><div>商业</div><a href="/review/list/143">[...更多]</a></div>
+						<?php 
+							$c_id = $category->children_map(3,false);
+							$c_id = implode(',',$c_id);
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 5");
+							foreach($news as $i => $v){
+						?>
+						<div class="guide_hr_val2">
+							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 						<?php 
 							for($i=1;$i<3;$i++){
 								$pos_name = 'index_business'.$i;
 						?>
-						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?>>
+						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?> <?php if($i == 2){ echo 'style="margin-bottom:15px;"';}?>>
 							<a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" class="news_a" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
 						</div>
 						<?php }?>
-						<div id="pos">
+						<div class="normal_title"><div>科技</div><a href="/review/list/143">[...更多]</a></div>
 						<?php 
-							foreach($c_ids as $cid){
-						?>
-							<a target="_blank" href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
-						<?php }?>
-						</div>
-					</div>
-					<div class="li" style="margin-top:10px;">
-						<div class="li_banner">CEO</div>
-						<div class="li_value">
-							<?php $pos_name = 'index_ceo1';?>
-							<div class="li_top" <?php show_page_pos($pos_name);?>>
-								<div class="li_img_pg"><?php show_page_img();?></div>
-								<div class="li_img_title"><?php show_page_href();?></div>	
-								<div class="li_img_value"><?php show_page_desc();?></div>
-							</div>
-							<div class="li_title"><div style="margin-left:40px;"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
-							<div class="guide_hr" style="WIDTH:320PX; margin-top:5px;"></div>
-							<?php
-								$c_id = $category->children_map(143);
-								$c_id = implode(',',$c_id);
-								$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) group by title order by created_at desc limit 2");
-								foreach($news as $v){
-							?>
-							<div class="guide_hr_val2">
-								<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
-							</div>
-							<?php }?>
-							<div class="li_hr_g" style="width:310px;"><a target="_blank" href="/review/list/143">...查看更多</a></div>
-						</div>
-					</div>
-					<div class="pg">
-						<font>科技</font>
-						<a target="_blank" href="/tech/">更多</a>
-					</div>
-					<div class="keysword_banner">
-						<div class="keysword_value">
-							<ul>
-								<?php
-									$c_ids = $category->children_map(4,false);
-									$c_id = implode(',',$c_ids);
-									$key_array = get_keywords($c_id);
-									foreach($key_array as $keyword){
-								?>
-								<li><a target="_blank" href="/search/news/key/<?php echo $keyword;?>"><?php echo $keyword;?></a></li>
-								<?php }?>
-							</ul>
-						</div>
-						<?php
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 9");
+							$c_id = $category->children_map(4,false);
+							$c_id = implode(',',$c_id);
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 7");
 							foreach($news as $i => $v){
 						?>
-						<div class="guide_hr_val2" <?php if($i == 0){ echo 'style="margin-top:15px;"';}?>>
-							<a target="_blank" class="cate_a" href="/review/list/<?php echo $v->category_id;?>">[<?php echo $category->find_name_by_id($v->category_id);?>]</a><a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+						<div class="guide_hr_val2">
+							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
-						<div id="pos">
-						<?php 
-							foreach($c_ids as $cid){
-						?>
-							<a target="_blank" href="/review/list/<?php echo $cid;?>">【<?php echo $category->find_name_by_id($cid);?>】</a>
+					</div>
+					<div class="normal_box">
+						<div class="normal_title"><div>最受欢迎文章</div><a href="/review/list/143">[...更多]</a></div>
+						<div id="day">
+						<div id="_day" style="border-left:0px solid #A4A4A4; color:#A50203;">一天</div>
+						<div id="_week">一周</div>
+						<div id="_month">一月</div>
+					</div>
+					<?php 
+						$day = $db->query("select id,title,created_at from fb_news where date(created_at) = date_sub(curdate(), interval 1 day) group by title order by click_count desc limit 10");
+						$week = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= date(created_at) group by title order by click_count desc limit 10");
+						$month = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 1 MONTH) <= date(created_at) group by title order by click_count desc limit 10");
+						!$day && $day = array();
+						!$week && $week = array();
+						!$month && $month = array();
+						foreach($day as $k => $v){
+					?> 
+					<div class="day_banner favor_day">
+						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
+						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
+						<?php if($k != 9 ){?> 
+						<div class="h_h" style=" width:310px;"></div>
 						<?php }?>
-						</div>
+					</div>
+					<?php }?>
+					<?php foreach($week as $k => $v){
+					?> 
+					<div class="day_banner favor_week" style="display:none;">
+						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
+						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
+						<?php if($k != 9 ){?> 
+						<div class="h_h" style=" width:310px;"></div>
+						<?php }?>
+					</div>
+					<?php }?>
+					<?php foreach($month as $k => $v){
+					?> 
+					<div class="day_banner favor_month" style="display:none;">
+						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
+						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
+						<?php if($k != 9 ){?> 
+						<div class="h_h" style=" width:310px;"></div>
+						<?php }?>
+					</div>
+					<?php }?>
 					</div>
 					<div class="keysword_banner">
 						<div id="topkeyword">
