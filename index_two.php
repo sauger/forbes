@@ -123,7 +123,9 @@
 				<div id="content_left_c">
 					<div class="li">
 						<div class="li_value">
-							<div class="">富豪</div>
+							<div class="normal_title">
+							<span>富豪</span>
+							</div>
 							<?php $pos_name = 'index_rich1';?>
 							<div class="li_top" <?php show_page_pos($pos_name);?>>
 								<div class="li_img_pg"><?php show_page_img();?></div>
