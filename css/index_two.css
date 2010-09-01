@@ -55,8 +55,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 				.guide_hr_val a{font-size:12px; color:#000; text-decoration:none;}
 				.guide_hr_val3{width:270px; height:18px; padding-left:8px; background:url(/images/index_two/dian.gif) NO-REPEAT 0 7px; overflow:hidden; line-height:18px; margin-left:15px;}
 				.guide_hr_val3 a{font-size:12px; color:#000; text-decoration:none;}
-				.guide_hr_val2{width:310px; height:18px; margin-top:5px; margin-left:15px; padding-left:8px; background:url(/images/index_two/dian_blue.gif) NO-REPEAT 0 7px; overflow:hidden; line-height:18px;}
-				.guide_hr_val2 .news_a{font-size:12px; color:#000; margin-left:5px; text-decoration:none;}
+				.guide_hr_val2{width:310px; height:30px; margin-left:15px; padding-left:8px; background:url(/images/index_two/dian_blue.gif) NO-REPEAT 0 13px; overflow:hidden; line-height:30px;}
+				.guide_hr_val2 .news_a{font-size:14px; color:#003399; margin-left:5px; text-decoration:none;}
 				.guide_hr_val2 .cate_a{font-size:12px; color:#336699; text-decoration:none;}
 	#content_left_c{width:338px; margin-top:15px; overflow:hidden;}
 		.li{width:338px; float: left;}
@@ -65,9 +65,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 			.li_top{width:320px; height:105px; margin-left:15px; margin-top:15px;float: left;}
 				.li_img_pg img{width:108px; height:101px; margin-left:1px; margin-top:1px; border:0px solid red;}
 				.li_img_pg{width:110px; height:105px; background:url(/images/index_two/li_pg.jpg) no-repeat; float:left;}
-				.li_img_title{width:190px; height:36px; overflow:hidden; line-height:18px; float:right;}
+				.li_img_title{width:190px; height:36px; margin-right:10px; overflow:hidden; line-height:18px; float:right;}
 				.li_img_title a{color:#003399; font-size:14px; font-weight:bold; text-decoration:none;}
-				.li_img_value{width:190px; height:51px; margin-top:14px; overflow:hidden; line-height:16px; float:right;}
+				.li_img_value{width:190px; height:51px; margin-right:10px; margin-top:14px; overflow:hidden; line-height:16px; float:right;}
 				.li_img_value a{color:#040100; font-size:14px; line-height:17px; text-decoration:none;}
 			.li_title{width:320px; height:20px; margin-left:15px; margin-top:5px;}
 			.li_title div a{text-decoration: none; font-size:14px;}
