@@ -1,5 +1,5 @@
 
-body{font-famiyl:"ËÎÌå";font-size:12px;background:url(../images/body-bg2.gif)}
+body{font-famiyl:"ï¿½ï¿½ï¿½ï¿½";font-size:12px;background:url(../images/body-bg2.gif)}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,buttom,textarea,p,th,td{margin:0;padding:0;}
 table{border-collapse:collapse;border-spacing:0;}
 img{border:0;}
@@ -153,7 +153,7 @@ a:focus{text-decoration:underline}
 	width:721px;
 	height:5px;
 }
-/* ====================== Ôö³¤»á½éÉÜ ================================== */
+/* ====================== ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ================================== */
 .r-m-t-title{
 	line-height:24px;
 	white-space:normal;
@@ -235,7 +235,7 @@ a:focus{text-decoration:underline}
 	float:left;
 	margin-right:10px;
 }
-/* ----------------------- ¸ü¶à»î¶¯ ---------------------------------- */
+/* ----------------------- ï¿½ï¿½ï¿½î¶¯ ---------------------------------- */
 ul.r-m-t-t-main , ul.m-activites , ul.style-list{
  	width:100%;
 }
@@ -302,7 +302,7 @@ ul.r-m-t-t-main li .pic ,.more-activites .pic{
 	margin-right:10px;
 	background:url(../images/t-m-bg.gif) bottom right no-repeat;
 }
-/* ----------------------- ÀíÊÂÈ¦×Ó ---------------------------------- */
+/* ----------------------- ï¿½ï¿½ï¿½ï¿½È¦ï¿½ï¿½ ---------------------------------- */
 .vip-style{
 	border:1px solid #CCC;
 	width:95%;color:
@@ -322,7 +322,7 @@ ul.r-m-t-t-main li .pic ,.more-activites .pic{
   padding:1px;
   border:1px solid #666666;
 }
-/* ----------------------- ÀíÊÂÁªÏµ·½Ê½ ---------------------------------- */
+/* ----------------------- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½Ê½ ---------------------------------- */
 .vip-co-box .pic1 ,.vip-co-box .pic2{
 	width:277px;
 	height:281px;
@@ -341,7 +341,7 @@ ul.r-m-t-t-main li .pic ,.more-activites .pic{
 	color:#1879ce;
 }
 
-/* --------------------ºÏ×÷»ï°é------------------------------------- */
+/* --------------------ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½------------------------------------- */
 .r-cooperation{
 	width:470px;
 	margin:0 auto;
@@ -366,7 +366,7 @@ ul.r-m-t-t-main li a.aa-pic{
 	text-align:left;
 	background:url(../images/t-m-bg2.gif) bottom right no-repeat;	
 }
-/* --------------------ÌîÐ´ÐÅÏ¢------------------------------------- */
+/* --------------------ï¿½ï¿½Ð´ï¿½ï¿½Ï¢------------------------------------- */
 .name{
 	color:#FF9900;
 }
@@ -460,10 +460,10 @@ ul.r-m-t-t-main li a.aa-pic{
 .input-title2{
 	width:50%;
 }
-/* ----------------------·­Ò³------------------------------- */
+/* ----------------------ï¿½ï¿½Ò³------------------------------- */
 
 .page{
-	width:40%;
+	width:39%;
 	overflow:hidden;
 	margin:10px auto;
 }

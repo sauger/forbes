@@ -13,9 +13,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 			#qie_img{width:414px; height:213px; margin-left:1px; margin-top:1px; position:relative; overflow:hidden;}
 			#qie_img img{width:414px; height:213px;}
 				.top_box{width:414px; height:213px; overflow:hidden; top:0; left:0; position:absolute; background:url(/images/index_two/alpha.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/index_two/alpha.png);}
-					.top_title{width:250px; font-size:25px; line-height:25px;  color:#ffffff; margin-top:25px; margin-left:10px;}
+					.top_title{width:250px; font-size:25px; line-height:25px; font-weight:bolder; color:#ffffff; margin-top:25px; margin-left:10px;}
 					.top_title a{color:#003399; text-decoration:none;}
-					.top_desc{width:250px; margin-top:15px; margin-left:10px; padding-bottom:10px; text-indent:2em; font-size:12px; line-height:1.5em; color:#ffffff}
+					.top_desc{width:220px; margin-top:15px; margin-left:10px; padding-bottom:10px; text-indent:2em; font-size:12px; line-height:1.5em; color:#ffffff}
 					.top_desc a{color:#333333; text-decoration:none;}
 					.top_news{width:235px; font-size:12px; line-height:2em; color:#ffffff; padding-left:15px; background:url('/images/index_two/top_link.gif') no-repeat 10px 9px;}
 					.top_news a{color:#003399; text-decoration:none;}
@@ -32,7 +32,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 						.qie_banner_img{width:91px; height:92px; background:url(/images/index_two/img_pg.jpg) no-repeat; float:left; display: inline;}
 						.qie_banner_img img{width:85px; height:86px;  margin-left:3px; margin-top:3px; border:0px solid #000; float:left; display: inline;}
 						.qie_banner_value{width:91px; height:28px; margin-top:5px; color:#838486; font-size:12px; line-height:14px; overflow:hidden; text-align: left; float:left; display: inline;}
-						.qie_banner_value a{ color:#838486; font-size:12px; text-decoration: none;}
+						.qie_banner_value a{ color:#003399; font-size:12px; text-decoration: none;}
 				#qie_img_right{width:7px; height:18px; margin-top:64px; margin-right:3px; border:0px solid #B5B5B5; float: left; display:inline;}
 		#content_banner_right{width:265px; height:375px; float:right;}
 			#content_qie_left{width:132px; height:24px; padding-top:10px; background-image: url(/images/index_two/right_s.jpg); cursor:pointer;  text-align: center; font-size: 12px; color:#B5B5B5;}
@@ -61,16 +61,16 @@ div{margin:0; padding:0; float:left; display:inline;}
 	#content_left_c{width:338px; margin-top:15px; overflow:hidden;}
 		.li{width:338px; float: left;}
 		.li_banner{width:338px; height:26px;  text-indent:30px; line-height:26px; background:url(/images/index_two/li_top.jpg) no-repeat;}
-		.li_value{width:336px; height:227px; border:1px solid #B3B6BD; float: left; display: inline;}
+		.li_value{width:336px; height:250px; border:1px solid #B3B6BD; float: left; display: inline;}
 			.li_top{width:320px; height:105px; margin-left:15px; margin-top:15px;float: left;}
-				.li_img_pg img{width:118px; height:101px; margin-left:1px; margin-top:1px; border:0px solid red;}
-				.li_img_pg{width:120px; height:105px; background:url(/images/index_two/li_pg.jpg) no-repeat; float:left;}
+				.li_img_pg img{width:108px; height:101px; margin-left:1px; margin-top:1px; border:0px solid red;}
+				.li_img_pg{width:110px; height:105px; background:url(/images/index_two/li_pg.jpg) no-repeat; float:left;}
 				.li_img_title{width:190px; height:36px; overflow:hidden; line-height:18px; float:right;}
-				.li_img_title a{color:#004276; font-size:12px; font-weight:bold; text-decoration:none;}
-				.li_img_value{width:190px; height:64px; overflow:hidden; line-height:16px; float:right;}
-				.li_img_value a{color:#040100; font-size:12px; text-decoration:none;}
+				.li_img_title a{color:#003399; font-size:14px; font-weight:bold; text-decoration:none;}
+				.li_img_value{width:190px; height:51px; margin-top:14px; overflow:hidden; line-height:16px; float:right;}
+				.li_img_value a{color:#040100; font-size:14px; line-height:17px; text-decoration:none;}
 			.li_title{width:320px; height:20px; margin-left:15px; margin-top:5px;}
-			.li_title div a{text-decoration: none; font-size:12px;}
+			.li_title div a{text-decoration: none; font-size:14px;}
 			
 			.li_hr_g{width:230px; height:18px; margin-top:5px; text-align:right; overflow:hidden; line-height:18px; margin-left:15px;}
 			.li_hr_g a{font-size:12px; color:#000000; text-decoration:none;}

@@ -122,7 +122,6 @@
 				</div>
 				<div id="content_left_c">
 					<div class="li">
-						<div class="li_banner">富豪</div>
 						<div class="li_value">
 							<?php $pos_name = 'index_rich1';?>
 							<div class="li_top" <?php show_page_pos($pos_name);?>>
@@ -130,8 +129,6 @@
 								<div class="li_img_title"><?php show_page_href();?></div>	
 								<div class="li_img_value"><?php show_page_desc();?></div>
 							</div>
-							<div class="li_title"><div style="margin-left:40px;"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" style="font-weight:bold; color:#004276;"><?php echo $pos_items->$pos_name->alias?></a></div><div style="margin-right:10px; float:right;"><a href="<?php echo $pos_items->$pos_name->href;?>" style="color:#BA2636;">[详细]</a></div></div>
-							<div class="guide_hr" style="WIDTH:320PX; margin-top:5px;"></div>
 							<?php
 								$c_id = $category->children_map(42);
 								$c_id = implode(',',$c_id);
@@ -142,7 +139,6 @@
 								<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 							</div>
 							<?php }?>
-							<div class="li_hr_g" style="width:310px;"><a target="_blank" href="/billionaires/">...查看更多</a></div>
 						</div>
 					</div>
 					<div class="pg">
