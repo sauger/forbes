@@ -85,7 +85,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 			.top_kdiv{margin-left:30px; width:55px; overflow:hidden; height:35px;}
 			#topkeyword a{color:#66ADCD; text-decoration:none;}
 			#bottomkeyword{width:100%; line-height:25px; margin-top:10px; padding-bottom:10px;}
-			.bottom_kdiv{width:40%; height:25px; line-height:25px; font-size:14px; margin-left:5%; margin-top:10px; text-indent:7px;  background:url(/images/index_two/dian_blue.gif) NO-REPEAT 0 10px; overflow:hidden;}
+			.bottom_kdiv{width:40%; height:25px; line-height:25px; font-size:14px; margin-left:5%; margin-top:10px; text-indent:10px;  background:url(/images/index_two/dian_blue.gif) NO-REPEAT 0 10px; overflow:hidden;}
 			.bottom_kdiv a{color:#336799; text-decoration:none;}
 		.guide_hr_val font{font-size: 12px; color: #336699;}
 		#dictionary{width:300px; height:102px;  background: url(/images/index_two/dictionary_t.jpg) no-repeat 15px 10px;}
