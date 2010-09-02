@@ -189,20 +189,18 @@ div{margin:0; padding:0; float:left; display:inline;}
 				#right_img img{width:298px; height:249px; border:0px solid red;}
 			#right_m_img{width:298px; height:128px; margin-top:10px; border:1px solid #C8C8C6; overflow:hidden;}
 				#right_m_img img{width:294px; height:124px; margin:2px; border:0px solid red;}
-			.city{width:275px; margin-left:8px;  margin-top:10px; line-height:18px; font-weight:bolder;}
-			.city a{font-size:12px; text-decoration:none; color:#034275;}
-			.city_desc{width:275px; margin-left:8px;  margin-top:5px; line-height:18px;}
-			.city_desc a{font-size:12px; text-decoration:none; color:#838383;}
+			.city{width:90%; margin-left:5%;  margin-top:10px; line-height:20px; font-weight:bolder;}
+			.city a{font-size:14px; text-decoration:none; color:#034275;}
+			.city_desc{width:90%; margin-left:5%;  margin-top:10px; line-height:20px;}
+			.city_desc a{font-size:14px; text-decoration:none; color:#838383;}
 			.city_title{font-weight:bolder;}
 			.pp_4_banner{width:116px; height:120px; margin-left:15px; margin-top:10px; overflow:hidden;}
 				.pp_4_pg{width:116px; height:80px; background:url(/images/index_two/pp_4.jpg) no-repeat;}
 					.pp_4_pg img{width:112px; height:76px; margin:2px; border:0px solid red;}
-				.pp_4_value{width:116px; height:30px; margin-top:7px; line-height:15px; overflow:Hidden;}
-					.pp_4_value a{font-size:12px; color:#838385; text-decoration:none;}
-			.survey{width:270px; margin-top:10px; margin-left:8px; line-height:19px; overflow:hidden;}
+				.pp_4_value{width:116px; height:30px; margin-top:5px; line-height:30px; overflow:Hidden;}
+					.pp_4_value a{font-size:14px; color:#636363; text-decoration:none;}
+			.survey{width:262px; margin-top:15px; margin-left:8px; padding-left:18px; line-height:18px; background:url(/images/index_two/dian_blue.gif) NO-REPEAT 8px 8px; overflow:hidden;}
 				.survey a{font-weight:bold; color:#004378; font-size:14px; text-decoration:none;}
-			.survey_submit{width:270px; height:12px; margin-left:8px; text-align:right;}
-				.survey_submit a{ color:#8D2025; font-size:12px; text-decoration:none;}
 			
 		#content_logon{width:648px; height:103px; margin-top:10px; overflow:hidden; border:1px solid #AEB7C0; float:right;}
 			#content_logon a img{width:646px; height:101px; margin:1px; border:0px solid red;}
@@ -233,3 +231,14 @@ div{margin:0; padding:0; float:left; display:inline;}
 		#life_more{width:40px; height:15px; border:1px solid #9D9D9D; margin-left:150px; margin-top:4px; text-align:center; background-color:#fff;}
 		#life_more a{margin:0; width:40px; height:15px; line-height:15px; font-size:12px; color:#000;}
 
+
+#dictionary{width:332px; height:90px; margin-top:15px; padding-top:5px; border:1px solid #B3B6BD; float:right;}
+#dictionary_t{width:332px; height:20px; color:#ffffff; text-indent:10px; padding-top:10px; font-size:14px; line-height:20px; background:url("/images/index_two/dictionary_t.jpg") no-repeat;}
+#dictionary_t a{color:#FFFFFF;text-decoration: none; }
+#dictionary_r{width:322px; height:60px;  padding-left:10px; background:#f1f1f1;}
+#dictionary_r a{color:#003399; text-decoration:none;}
+#dictionary_r #content1{width:200px; height:20px; line-height:20px; font-weight:bold; overflow:hidden;}
+#dictionary_r #more{width:70px; height:20px; font-size:14px; line-height:20px; font-weight:bold; text-align:right; float:right;}
+#dictionary_r #more a{color:#993333;}
+#dictionary_r #content2{width:310px; max-height: 36px; font-size:16px; line-height:18px; margin-top:4px;text-align:center; overflow:hidden;}
+#dictionary_r #content3{width:310px; height:20px; font-size:14px; line-height:20px; text-align:right; overflow:hidden;}

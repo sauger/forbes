@@ -8,6 +8,7 @@ global $category;
 if(empty($category)){
 	$category = new category_class('news');
 }
+global $pos_name;
 ?>
 <div id="top_div">
 <div id="top_img_left" class="ad_banner">
@@ -17,6 +18,29 @@ if(empty($category)){
 <div id="top_bg">
 	<div id="top_logon"></div>
 	<div id="top_banner">
+		<div id="top_right_banner">
+			<?php js_include_tag('jquery.cookie')?>
+				<script>
+					if($.cookie('cache_name') && $.cookie('name')){
+						var str = '<div class="login_left">'+$.cookie('name')+',你好</div>'
+								+ '<div class="login_left"><a href="javascript:void(0)" id="logout">退出</a></div>'
+								+ '<div class="top_login"><a href="/user">会员中心</a></div>'
+								+ '<div class="top_login"><a href="http://www.forbeschina.com/userclub/">会员专区</a></div>';
+						$('#top_right_banner').html(str);
+					}else{
+						var str = '<div id="top_login"><a href="/login/">登录</a></div>'
+								+ '<div class="top_login"><a href="/register/">注册会员</a></div>'
+								+ '<div class="top_login"><a href="http://www.forbeschina.com/userclub/">会员专区</a></div>';
+						$('#top_right_banner').html(str);
+					}
+					$(function(){
+						$("#logout").click(function(){
+							$.cookie('cache_name','',{path: '/'});
+							location.reload();
+						});
+					});
+				</script>
+		</div>
 		<div class=forbes_search>
 				<select name="selsearch" class="iselect">
 					<option value="list">榜单</option>
@@ -28,28 +52,11 @@ if(empty($category)){
 		<input id="top_input" style="width:312px;" type="text"/>
 		<input type="button" id="top_select" value="查  询"/>
 	</div>
-	<div id="top_right_banner">
-		<?php js_include_tag('jquery.cookie')?>
-			<script>
-				if($.cookie('cache_name') && $.cookie('name')){
-					var str = '<div class="login_left">'+$.cookie('name')+',你好</div>'
-							+ '<div class="login_right"><a href="javascript:void(0)" id="logout">退出</a></div>'
-							+ '<div class="login_left"><a href="/user">会员中心</a></div>'
-							+ '<div class="login_right"><a href="http://www.forbeschina.com/userclub/">会员专区</a></div>';
-					$('#top_right_banner').html(str);
-				}else{
-					var str = '<div id="top_login"><a href="/login/">登录</a></div>'
-							+ '<div class="top_login"><a href="/register/">注册会员</a></div>'
-							+ '<div class="top_login"><a href="http://www.forbeschina.com/userclub/">会员专区</a></div>';
-					$('#top_right_banner').html(str);
-				}
-				$(function(){
-					$("#logout").click(function(){
-						$.cookie('cache_name','',{path: '/'});
-						location.reload();
-					});
-				});
-			</script>
+	<div id="magazine">
+		<?php $pos_name = 'index_top_magazine';?>
+		<div id="photo"><?php show_page_img();?></div>
+		<div id="m_title" <?php show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
+		<div id="m_bottom"><a href="/magazine/subscription"><img src="/images/index_two/magazine.jpg"></a></div>
 	</div>
 </div>
 <div id="top_menu_banner">

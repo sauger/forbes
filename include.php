@@ -1,34 +1,32 @@
 <div class="right_box">
-	<div class="normal_title"><div>理财师园地</div></div>
-	<?php $pos_name="index_lcs";?>
-	<div class="photo_banner">
-		<div class="photo_pg">
-			<?php show_page_img();?>
-		</div>
+	<div class="normal_title"><div>城市</div><a target="_blank" href="/city/">[...更多]</a></div>
+	<?php $pos_name = "index_city0"; ?>
+	<div class="city" <?php show_page_pos($pos_name,'base');?>>
+		<?php show_page_href();?>
 	</div>
-	<div class="photo_value_s"<?php show_page_pos($pos_name,'index_subject');?>>
-		<div class="photo_title"><?php show_page_href();?></div>	
-		<div class="photo_value_v"><?php show_page_desc();?></div>
+	<div class="city_desc">
+		<?php show_page_desc();?>
 	</div>
 	<div class="h_h"></div>
-	<div class="teacher_btn1"><a target="_blank" href="http://www.forbeschina.com/event/lcs/list_1.html">更多理财师&nbsp;&nbsp;</a></div>
-	<div class="teacher_btn2"><a target="_blank" href="http://www.forbeschina.com/event/lcs/">更多咨询&nbsp;&nbsp;</a></div>
-	<div class="teacher_btn3"><a target="_blank" href="http://www.forbeschina.com/event/lcs/EntryForm.php">报名理财师&nbsp;&nbsp;</a></div>
+	<?php for($i=1;$i<3;$i++){$pos_name = "index_city{$i}";?>
+	<div class="guide_hr_val2 " <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
+	<?php }?>
+	
+	<?php for($i = 3 ; $i < 5 ; $i++){$pos_name = "index_city{$i}";?>
+	<div class="pp_4_banner" <?php if($i == 4)echo 'style="margin-left:30px;"'; show_page_pos($pos_name,'link_img');?>>
+		<div class="pp_4_pg">
+			<?php show_page_img();?>
+		</div>
+		<div class="pp_4_value">
+			<?php show_page_href();?>
+		</div>
+	</div>
+	<?php }?>
 </div>
 <div class="right_box">
-	<div class="normal_title"><div>增长会</div></div>
-	<?php $pos_name="index_zzh";?>
-	<div class="photo_banner">
-		<div class="photo_pg">
-			<?php show_page_img();?>
-		</div>
-	</div>
-	<div class="photo_value_s"<?php show_page_pos($pos_name,'index_subject');?>>
-		<div class="photo_title"><?php show_page_href();?></div>	
-		<div class="photo_value_v"><?php show_page_desc();?></div>
-	</div>
-	<div class="h_h"></div>
-	<div class="teacher_btn1"><a href="">理事风采&nbsp;&nbsp;</a></div>
-	<div class="teacher_btn2"><a href="">会员互动&nbsp;&nbsp;</a></div>
-	<div class="teacher_btn3"><a href="">加入增长会&nbsp;&nbsp;</a></div>
+	<div class="normal_title"><div>在线调查</div><a target="_blank" href="/survey/">[...更多]</a></div>
+	<?php $pos_name = "index_survey_0"?>
+	<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
+	<?php $pos_name = "index_survey_1"?>
+	<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
 </div>

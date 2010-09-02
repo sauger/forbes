@@ -306,6 +306,13 @@
 						<div class="guide_hr_val" <?php if($i==0){?>style="margin-top:15px;"<?php }?>><a href="<?php echo get_news_url($v);?>">[<?php echo $category->find_name_by_id($v->category_id);?>] <?php echo $v->title;?></a></div>
 						<?php }?>
 					</div>
+					<div id=dictionary>
+						<div id="dictionary_t"><a href="<?php echo get_newslist_url($category->find_by_name('财经词典')->id);?>" target="_blank">财经词典</a></div>
+						<div id=dictionary_r>
+							<div id=content2 <?php $pos_name ="dictionary_r_content1"; show_page_pos($pos_name,'dictionary');?>><?php show_page_href()?></div>
+							<div id=content3 <?php #$pos_name ="dictionary_r_content2"; #show_page_pos($pos_name,'dictionary');?>><?php show_page_desc()?></div>
+						</div>
+					</div>
 					<div class="center_box">
 						<div class="normal_title"><div>采编空间</div><a target="_blank" href="/column/journalist">[...更多]</a></div>
 						<?php 
@@ -392,19 +399,44 @@
 				</div>
 				<div id="right_img" class="ad_banner">
 				</div>
-				<?php include 'include.php';?>
-				
-				<div id="right_m_img" class="ad_banner">
+				<div class="right_box">
+					<div class="normal_title"><div>理财师园地</div></div>
+					<?php $pos_name="index_lcs";?>
+					<div class="photo_banner">
+						<div class="photo_pg">
+							<?php show_page_img();?>
+						</div>
+					</div>
+					<div class="photo_value_s"<?php show_page_pos($pos_name,'index_subject');?>>
+						<div class="photo_title"><?php show_page_href();?></div>	
+						<div class="photo_value_v"><?php show_page_desc();?></div>
+					</div>
+					<div class="h_h"></div>
+					<div class="teacher_btn1"><a target="_blank" href="http://www.forbeschina.com/event/lcs/list_1.html">更多理财师&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn2"><a target="_blank" href="http://www.forbeschina.com/event/lcs/">更多咨询&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn3"><a target="_blank" href="http://www.forbeschina.com/event/lcs/EntryForm.php">报名理财师&nbsp;&nbsp;</a></div>
 				</div>
-				<div class="content_right_top" style="margin-top:15px;"></div>
-				<div class="content_right_banner">
-					<div class="c_r_title" style="margin-top:5px;">
-						<div>城  市</div>
-						<a href="/city/"><img src="/images/index_two/g4.jpg"/></a>
+				<div class="right_box">
+					<div class="normal_title"><div>增长会</div></div>
+					<?php $pos_name="index_zzh";?>
+					<div class="photo_banner">
+						<div class="photo_pg">
+							<?php show_page_img();?>
+						</div>
 					</div>
-					<div class="con_r_hr">
-						<div style="width:35px;"></div>	
+					<div class="photo_value_s"<?php show_page_pos($pos_name,'index_subject');?>>
+						<div class="photo_title"><?php show_page_href();?></div>	
+						<div class="photo_value_v"><?php show_page_desc();?></div>
 					</div>
+					<div class="h_h"></div>
+					<div class="teacher_btn1"><a href="">理事风采&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn2"><a href="">会员互动&nbsp;&nbsp;</a></div>
+					<div class="teacher_btn3"><a href="">加入增长会&nbsp;&nbsp;</a></div>
+				</div>
+				
+				<div id="right_m_img" class="ad_banner"></div>
+				<div class="right_box">
+					<div class="normal_title"><div>城市</div><a target="_blank" href="/city/">[...更多]</a></div>
 					<?php $pos_name = "index_city0"; ?>
 					<div class="city" <?php show_page_pos($pos_name,'base');?>>
 						<?php show_page_href();?>
@@ -412,12 +444,13 @@
 					<div class="city_desc">
 						<?php show_page_desc();?>
 					</div>
+					<div class="h_h"></div>
 					<?php for($i=1;$i<3;$i++){$pos_name = "index_city{$i}";?>
-					<div class="guide_hr_val3 city_title" <?php show_page_pos($pos_name,'link');if($i==1){?>style="margin-top:5px;"<?php }?>><?php show_page_href();?></div>
+					<div class="guide_hr_val2 " <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
 					<?php }?>
-					<div class="h_h" style="width: 285px;"></div>
+					
 					<?php for($i = 3 ; $i < 5 ; $i++){$pos_name = "index_city{$i}";?>
-					<div class="pp_4_banner" <?php if($i == 3)echo 'style="margin-left:30px;"'; show_page_pos($pos_name,'link_img');?>>
+					<div class="pp_4_banner" <?php if($i == 4)echo 'style="margin-left:30px;"'; show_page_pos($pos_name,'link_img');?>>
 						<div class="pp_4_pg">
 							<?php show_page_img();?>
 						</div>
@@ -427,25 +460,13 @@
 					</div>
 					<?php }?>
 				</div>
-				<div class="content_right_bottom"></div>
-				<div class="content_right_top" style="margin-top:15px;"></div>
-				<div class="content_right_banner">
-						<div class="c_r_title" style="margin-top:5px;">
-							<div>在线调查</div>
-							<a href="/survey/"><img src="/images/index_two/g4.jpg"/></a>
-						</div>
-						<div class="con_r_hr">
-							<div style="width:55px;"></div>	
-						</div>
-						<?php $pos_name = "index_survey_0"?>
-						<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
-						<div class="survey_submit"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">...进入调查</a></div>
-						<div class="h_h" style="width: 285px; margin-top:8px;"></div>
-						<?php $pos_name = "index_survey_1"?>
-						<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
-						<div class="survey_submit"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" target="_blank">...进入调查</a></div>
+				<div class="right_box">
+					<div class="normal_title"><div>在线调查</div><a target="_blank" href="/survey/">[...更多]</a></div>
+					<?php $pos_name = "index_survey_0"?>
+					<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
+					<?php $pos_name = "index_survey_1"?>
+					<div class="survey" <?php show_page_pos($pos_name,'survey_title')?>><?php show_page_href();?></div>
 				</div>
-				<div class="content_right_bottom"></div>
 				
 				<div id="lang_ad" class="ad_banner">
 				</div>
