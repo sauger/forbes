@@ -66,57 +66,18 @@
 					</div>
 				</div>
 				<div id="content_banner_right">
-					<div id="content_qie_left">陆家嘴早餐<img style="display:none;" src="/images/index_two/x.jpg"/></div>
-					<div id="content_qie_right">精华导读<img src="/images/index_two/x.jpg"/></div>
-					
-					<div class="guide" id="ljzzc" style="display:none">
-						<?php $pos_name = 'index_jjjl_0';?>
-						<div class="guide_title">基金经理看市</div>
-						<div class="guide_hr"></div>
-						<a href="/review/list/145"><img class="guide_more" src="/images/index_two/g4.jpg"/></a>
-						<div class="gg_banner">
-							<div class="g_pg" <?php show_page_pos($pos_name,'base_img')?>><?php show_page_img();?></div>
-							<div class="g_pg_title"><?php show_page_href();?></div>
-							<div class="g_pg_value"><?php show_page_desc();?></div>
-						</div>
-						<div class="gg_title">早餐资讯</div>
-						<div class="guide_hr" style="width:150px; margin-top:5px;"></div>
-						<a href="/review/list/146"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:0px;"/></a>
-						<?php for($i=1;$i<3;$i++){$pos_name = "index_zczx_".$i;?>
-						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
+					<div class="ljz">
+						<div class="ljz_title">陆家嘴早餐</div>
+						<?php for($i=1;$i<4;$i++){$pos_name = "index_zczx_".$i;?>
+						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
-						<div class="gg_title" style="margin-top:10px;">股票之选</div>
-						<div class="guide_hr" style="width:150px; margin-top:15px;"></div>
-						<a href="/review/list/147"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:10px;"/></a>
-						<?php for($i=1;$i<3;$i++){$pos_name = "index_tpzx_".$i;?>
-						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
-						<?php }?>
-						<div class="gg_title" style="margin-top:10px;">环球一周前瞻</div>
-						<div class="guide_hr" style="width:120px; margin-top:15px;"></div>
-						<a href="/review/list/148"><img class="guide_more" src="/images/index_two/g4.jpg"  style="margin-top:10px;"/></a>
-						<?php for($i=1;$i<3;$i++){$pos_name = "index_hqyz_".$i;?>
-						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
-						<?php }?>
+						<div class="guide_hr_val2" <?php $pos_name = "index_zczx_5";show_page_pos($pos_name,'link_withouttime')?>><a href="">基金经理看市:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo mb_substr($pos_items->$pos_name->display,0,5,'utf-8')  ."...";?></a><a style="color:#666;margin:0;" href="">[更多]</a></div>
+						<div class="guide_hr_val2" <?php $pos_name = "index_zczx_6";show_page_pos($pos_name,'link_withouttime')?>><a href="">股票之选:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
 					</div>
-					<div class="guide" id="jhdd">
-						<?php $pos_name = 'index_jhdd_0';?>
-						<div class="gg_banner" style="height:90px;">
-							<div class="g_pg" <?php show_page_pos($pos_name,'base_img')?>><?php show_page_img();?></div>
-							<div class="g_pg_title"><?php show_page_href();?></div>
-							<div class="g_pg_value"><?php show_page_desc();?></div>
-						</div>
-						<?php for($i=1;$i<4;$i++){$pos_name = "index_jhdd_".$i;?>
-						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
-						<?php }?>
-						<div class="guide_hr" style="width:240px; margin-top:15px;"></div>
-						<?php $pos_name = 'index_jhdd_4';?>
-						<div class="gg_banner" style="height:90px;">
-							<div class="g_pg" <?php show_page_pos($pos_name,'base_img')?>><?php show_page_img();?></div>
-							<div class="g_pg_title"><?php show_page_href();?></div>
-							<div class="g_pg_value"><?php show_page_desc();?></div>
-						</div>
-						<?php for($i=5;$i<8;$i++){$pos_name = "index_jhdd_".$i;?>
-						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
+					<div class="ljz" style="margin-top:8px;">
+						<div class="ljz_title">精华导读</div>
+						<?php for($i=1;$i<6;$i++){$pos_name = "index_jhdd_".$i;?>
+						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
 					</div>
 				</div>
@@ -137,7 +98,7 @@
 							foreach($news as $v){
 						?>
 						<div class="guide_hr_val2">
-							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 					</div>
@@ -158,7 +119,7 @@
 							foreach($news as $v){
 						?>
 						<div class="guide_hr_val2">
-							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 					</div>
@@ -171,7 +132,7 @@
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 6){ echo 'style="margin-bottom:15px;"';}?>>
-							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 						<div class="normal_title"><div>投资</div><a href="/review/list/5">[...更多]</a></div>
@@ -182,7 +143,7 @@
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 6){ echo 'style="margin-bottom:15px;"';}?>>
-							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 						<div class="normal_title"><div>商业</div><a href="/review/list/143">[...更多]</a></div>
@@ -193,7 +154,7 @@
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2">
-							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 						<?php 
@@ -201,7 +162,7 @@
 								$pos_name = 'index_business'.$i;
 						?>
 						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?> <?php if($i == 2){ echo 'style="margin-bottom:15px;"';}?>>
-							<a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" class="news_a" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
+							<a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
 						</div>
 						<?php }?>
 						<div class="normal_title"><div>科技</div><a href="/review/list/143">[...更多]</a></div>
@@ -212,7 +173,7 @@
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2">
-							<a target="_blank" class="news_a" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
+							<a target="_blank" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
 					</div>
@@ -261,309 +222,178 @@
 					</div>
 					<?php }?>
 					</div>
-					<div class="keysword_banner">
-						<div id="topkeyword">
-							<?php for($i=1;$i<3;$i++){ $pos_name = 'index_ad_'.$i;?>
-							<div class="top_kdiv" <?php show_page_pos($pos_name,'link');?>>
+					<div class="normal_box">
+						<div class="normal_title"><div>广告链接</div></div>
+						<?php for($i=1;$i<9;$i++){ $pos_name = 'index_ad_'.$i;?>
+							<div class="bottom_kdiv" <?php show_page_pos($pos_name,'link');?>>
 							<?php show_page_href();?>
 							</div>
-							<?php }?>
-						</div>
-						<div id="bottomkeyword">
-							<?php for($i=3;$i<11;$i++){$pos_name = 'index_ad_'.$i;?>
-							<div  class="bottom_kdiv" <?php show_page_pos($pos_name,'link')?>>
-							<?php show_page_href();?>
-							</div>
-							<?php }?>
-						</div>
+						<?php }?>
 					</div>
 				</div>
 				<div id="content_right">
-					<div class="content_pg_title">观点<a target="_blank" href="/column/">更多</a></div>
-					<div class="pg_hr">
-						<div class="content_pg_hr"></div>
-						<div class="dian_hr"></div>
-					</div>
-					<?php 
-					for($i=1;$i<=4;$i++){
-						$pos_name = 'index_column'.$i
-					?>
-					<div class="photo_banner">
-						<div class="photo_pg" <?php show_page_pos($pos_name,'column_full')?>>
-							<?php show_page_img();?>
+					<div class="center_box">
+						<div class="normal_title"><div>观点</div><a target="_blank" href="/column/">[...更多]</a></div>
+						<?php 
+						$ids = array();
+						for($i=0;$i<3;$i++){
+						$nid = '('.implode(',',$ids).')';
+						if($ids){
+							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t1.publisher not in $nid and t2.role_name='column_writer' order by t1.created_at desc;");
+						}else{
+							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t2.role_name='column_writer' order by t1.created_at desc;");
+						}
+						$ids[]=$item[0]->publisher;
+						?>
+						<div class="column_box">
+							<div class="column_photo"><a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><img src="<?php echo $item[0]->image_src;?>"></a></div>
+							<div class="column_title"><a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->author."：".$item[0]->title;?></a></div>
+							<div class="colum_desc"><a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo strip_tags($item[0]->description);?></a></div>
 						</div>
-						<div class="photo_font">
-							<a href="<?php echo $pos_items->$pos_name->reserve?>"><?php echo $pos_items->$pos_name->alias;?></a>
+						<?php }?>
+						<?php 
+						for($i=0;$i<5;$i++){
+							$nid = '('.implode(',',$ids).')';
+							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t1.publisher not in $nid and t2.role_name='column_writer' order by t1.created_at desc;");
+							$ids[]=$item[0]->publisher;
+						?>
+						<div class="guide_hr_val2">
+							<a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->author."：".$item[0]->title;?></a>
 						</div>
+						<?php }?>
 					</div>
-					<div class="photo_value_s">
-						<div class="photo_title"><?php show_page_href(); ?></div>	
-						<div class="photo_value_v"><?php show_page_desc(); ?></div>
-						<div class="photo_geng"><a target="_blank" href="<?php echo $pos_items->$pos_name->reserve?>">[...更多观点]</a></div>
-					</div>
-						<?php if($i<4){?>
+					<div class="center_box">
+						<div id="lift_left"><div>生活</div><a target="_blank" href="/life/">[...更多]</a></div>
+						<div id="index_little" class="ad_banner"></div>
+						<div class="pho_banner" <?php $pos_name = 'index_life1';show_page_pos($pos_name,'base_img_withoutime');?>>
+							<div class="pho_pg"><?php show_page_img();?></div>
+							<div class="pho_title">
+								<?php show_page_href();?>
+							</div>
+							<div class="pho_value">
+								<?php show_page_desc();?>
+							</div>
+						</div>
 						<div class="h_h"></div>
-						<?php }?>
-					<?php }?>
-					<div class="gg_pg" style="height:90px;">
-						<div class="gg_containt">
-							<div class="gg_title">更多专栏</div>
-							<div class="guide_hr" style="margin-top:7px; width:235px;"></div>
-							<a target="_blank" href="/column/"><img src="/images/index_two/g4.jpg"/></a>
+						<div class="pho_banner" <?php $pos_name = 'index_life2';show_page_pos($pos_name,'base_img_withoutime');?>>
+						<div id="life_box">
+							<div class="pho_title">
+								<?php show_page_href();?>
+							</div>
+							<div class="pho_value">
+								<?php show_page_desc();?>
+							</div>
+						</div>	
+							<div class="pho_pg"><?php show_page_img();?></div>
 						</div>
-						<div class="gg_containt_value">
-							<?php
-								$column = $db->query("select name,nick_name from fb_user where role_name='column_writer'");
-								foreach($column as $v){
-							?>
-							<a target="_blank" class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
-							<?php }?>
-						</div>
-					</div>
-					<div id="life_div">
-					<div class="content_pg_title"><div>生活</div><div id="life_more"><a target="_blank" href="/life/">+更多</a></div></div>	
-					<div class="pg_hr" style="margin-left:8px;">
-						<div class="content_pg_hr"></div>
-						<div class="dian_hr"></div>
-					</div>
-					</div>
-					<div id="index_little" class="ad_banner"></div>
-					<?php 
-						for($i=1;$i<3;$i++){
-							$pos_name = 'index_life'.$i;
-					?>
-					<div class="pho_banner" <?php show_page_pos($pos_name,'base_img_withoutime');?>>
-						<div class="pho_pg"><?php show_page_img();?></div>
-						<div class="pho_title">
-							<?php show_page_href();?>
-						</div>
-						<div class="pho_value">
-							<?php show_page_desc();?>
-						</div>
-						<div class="photo_geng" style="width:230px; margin-top:4px;"><a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>">...[阅读全文]</a></div>
-					</div>
-					<div class="h_h"></div>
-					<?php }?>
-					<?php
-						$c_ids = $category->children_map(81);
-						$c_id = implode(',',$c_ids);
-						$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 2");
-						foreach($news as $i => $v){
-					?>
-					<div class="guide_hr_val" style="width:320px;<?php if($i==0){?>margin-top:11px;<?php }?>"><a href="<?php echo get_news_url($v);?>">[<?php echo $category->find_name_by_id($v->category_id);?>] <?php echo $v->title;?></a></div>
-					<?php }?>
-					<div class="content_pg_title">采编空间<a target="_blank" href="/column/journalist" style="margin-left:235px;">更多</a></div>	
-					<div class="pg_hr" style="margin-left:8px;">
-						<div class="content_pg_hr"></div>
-						<div class="dian_hr"></div>
-					</div>
-					<?php 
-					for($i=1;$i<=4;$i++){
-						$pos_name = 'index_editor'.$i
-					?>
-					<div class="photo_banner" <?php show_page_pos($pos_name,'column_full')?>>
-						<div class="photo_pg">
-							<?php show_page_img();?>
-						</div>
-						<div class="photo_font">
-							<a target="_blank" href="<?php echo $pos_items->$pos_name->reserve?>"><?php echo $pos_items->$pos_name->alias;?></a>
-						</div>
-					</div>
-					<div class="photo_value_s">
-						<div class="photo_title"><?php show_page_href(); ?></div>	
-						<div class="photo_value_v"><?php show_page_desc(); ?></div>
-						<div class="photo_geng"><a href="<?php echo $pos_items->$pos_name->reserve?>">[...更多观点]</a></div>
-					</div>
-						<?php if($i<4){?>
 						<div class="h_h"></div>
-						<?php }?>
-					<?php }?>
-					<div class="gg_pg" style="height:90px;">
-						<div class="gg_containt">
-							<div class="gg_title">更多专栏</div>
-							<div class="guide_hr" style="margin-top:7px; width:235px;"></div>
-							<a href="/column/"><img src="/images/index_two/g4.jpg"/></a>
+						<div class="pho_banner" <?php $pos_name = 'index_life3';show_page_pos($pos_name,'base_img_withoutime');?>>
+							<div class="pho_pg"><?php show_page_img();?></div>
+							<div class="pho_title">
+								<?php show_page_href();?>
+							</div>
+							<div class="pho_value">
+								<?php show_page_desc();?>
+							</div>
 						</div>
-						<div class="gg_containt_value">
-							<?php
-								$column = $db->query("select name,nick_name from fb_user where role_name='column_editor'");
-								foreach($column as $v){
-							?>
-							<a target="_blank" class="column_a" href="/column/<?php echo $v->name;?>"><?php echo $v->nick_name;?></a>	
-							<?php }?>
+						<div class="h_h"></div>
+						<?php
+							$c_ids = $category->children_map(81);
+							$c_id = implode(',',$c_ids);
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 3");
+							foreach($news as $i => $v){
+						?>
+						<div class="guide_hr_val" <?php if($i==0){?>style="margin-top:15px;"<?php }?>><a href="<?php echo get_news_url($v);?>">[<?php echo $category->find_name_by_id($v->category_id);?>] <?php echo $v->title;?></a></div>
+						<?php }?>
+					</div>
+					<div class="center_box">
+						<div class="normal_title"><div>采编空间</div><a target="_blank" href="/column/journalist">[...更多]</a></div>
+						<?php 
+						$ids = array();
+						for($i=0;$i<3;$i++){
+						$nid = '('.implode(',',$ids).')';
+						if($ids){
+							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t1.publisher not in $nid and t2.role_name='column_editor' order by t1.created_at desc;");
+						}else{
+							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t2.role_name='column_writer' order by t1.created_at desc;");
+						}
+						if($item){
+							$ids[]=$item[0]->publisher;
+						}
+						?>
+						<div class="column_box">
+							<div class="column_photo"><a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><img src="<?php echo $item[0]->image_src;?>"></a></div>
+							<div class="column_title"><a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->author."：".$item[0]->title;?></a></div>
+							<div class="colum_desc"><a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo strip_tags($item[0]->description);?></a></div>
 						</div>
-					</div>
-					<div class="content_pg_title"><div>读者高见</div><div class="hidden_more"></div></div>
-					<div class="pg_hr">
-								<div class="content_pg_hr"></div>
-								<div class="dian_hr"></div>
-					</div>
-					<?php 
-						$comments = $db->query("select * from fb_comment where resource_type='news' and is_approve=1 order by priority asc,created_at desc limit 4");
-						$news = new table_class('fb_news');
-						for($i=0;$i<4;$i++){
-							$news->find($comments[$i]->resource_id);
-					?>
-					<div class="con_ban_title">
-						<a target="_blank" href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a>
-					</div>
-					<div class="con_ban_value">
-						<?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a>
-					</div>
-					<?php if($i != 3){?>
-					<div class="h_h" style="margin-top: 8px;"></div>
-					<?php }}?>
-					<div class="content_pg_title"><div>最受欢迎文章</div><div class="hidden_more"></div></div>
-					<div class="pg_hr">
-					<div class="content_pg_hr"></div>
-					<div class="dian_hr"></div>
-					</div>
-					<div id="day">
-						<div id="_day" style="border-left:0px solid #A4A4A4; color:#A50203;">一天</div>
-						<div id="_week">一周</div>
-						<div id="_month">一月</div>
-					</div>
-					<?php 
-						$day = $db->query("select id,title,created_at from fb_news where date(created_at) = date_sub(curdate(), interval 1 day) group by title order by click_count desc limit 10");
-						$week = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= date(created_at) group by title order by click_count desc limit 10");
-						$month = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 1 MONTH) <= date(created_at) group by title order by click_count desc limit 10");
-						!$day && $day = array();
-						!$week && $week = array();
-						!$month && $month = array();
-						foreach($day as $k => $v){
-					?> 
-					<div class="day_banner favor_day">
-						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
-						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
-						<?php if($k != 9 ){?> 
-						<div class="h_h" style=" width:325px;"></div>
+						<?php }?>
+						<?php 
+						for($i=0;$i<5;$i++){
+							$nid = '('.implode(',',$ids).')';
+							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t1.publisher not in $nid and t2.role_name='column_editor' order by t1.created_at desc;");
+							$ids[]=$item[0]->publisher;
+						?>
+						<div class="guide_hr_val2">
+							<a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->author."：".$item[0]->title;?></a>
+						</div>
 						<?php }?>
 					</div>
-					<?php }?>
-					<?php foreach($week as $k => $v){
-					?> 
-					<div class="day_banner favor_week" style="display:none;">
-						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
-						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
-						<?php if($k != 9 ){?> 
-						<div class="h_h" style=" width:325px;"></div>
-						<?php }?>
+					<div class="center_box">
+						<div class="normal_title"><div>读者高见</div><a target="_blank" href="/column/journalist">[...更多]</a></div>
+						<?php 
+							$comments = $db->query("select * from fb_comment where resource_type='news' and is_approve=1 order by priority asc,created_at desc limit 4");
+							$news = new table_class('fb_news');
+							for($i=0;$i<4;$i++){
+								$news->find($comments[$i]->resource_id);
+						?>
+						<div class="con_ban_title">
+							<a target="_blank" href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a>
+						</div>
+						<div class="con_ban_value">
+							<?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a>
+						</div>
+						<?php if($i != 3){?>
+						<div class="h_h"></div>
+						<?php }}?>
 					</div>
-					<?php }?>
-					<?php foreach($month as $k => $v){
-					?> 
-					<div class="day_banner favor_month" style="display:none;">
-						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
-						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
-						<?php if($k != 9 ){?> 
-						<div class="h_h" style=" width:325px;"></div>
-						<?php }?>
-					</div>
-					<?php }?>
 				</div>
 			</div>
 			
 				
 			<div id="contentc_right">
-				<div class="content_right_top"></div>
-				<div class="content_right_banner">
-					<div class="c_r_title" <?php $pos_name = "index_right_list0";show_page_pos($pos_name,'link');?>>
-						<div><?php echo $pos_items->$pos_name->display;?></div>
-						<a href="/list/"><img src="/images/index_two/g4.jpg"/></a>
-					</div>
-					<div class="con_r_hr">
-						<div></div>	
-					</div>
-					<div id="recommend_banner">
-						<div class="recommend_title" id="recommend_left" <?php $pos_name = "index_right_list1";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>	
-						<div class="recommend_title recommend_center" <?php $pos_name = "index_right_list2";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
-						<div class="recommend_title recommend_center" <?php $pos_name = "index_right_list3";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
-						<div class="recommend_title" id="recommend_right" <?php $pos_name = "index_right_list4";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>	
-					</div>
-					<div id="recommend_btn">
+				<div class="right_box" style="margin:0;">
+					<div class="normal_title"><div>精华榜单推荐</div><a target="_blank" href="/list/">[...更多]</a></div>
+					<div class="content_right_banner">
+						<div id="recommend_banner">
+							<div class="recommend_title" id="recommend_left" <?php $pos_name = "index_right_list1";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>	
+							<div class="recommend_title recommend_center" <?php $pos_name = "index_right_list2";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
+							<div class="recommend_title recommend_center" <?php $pos_name = "index_right_list3";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
+							<div class="recommend_title" id="recommend_right" <?php $pos_name = "index_right_list4";show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>	
+						</div>
+						<div id="recommend_btn">
+							<?php for($i=1;$i<5;$i++){$pos_name = "index_right_list".$i;?>
+							<a <?php if($i==1){?>style="display:inline;"<?php }?> href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->title;?></a>
+							<?php }?>
+						</div>
 						<?php for($i=1;$i<5;$i++){$pos_name = "index_right_list".$i;?>
-						<a <?php if($i==1){?>style="display:inline;"<?php }?> href="<?php echo $pos_items->$pos_name->href?>"><?php echo $pos_items->$pos_name->title;?></a>
+						<div class="rt_tab" <?php if($i==1){?>style="display:block;"<?php }?>><?php show_page_img();?></div>
+						<?php }?>
+						<div class="normal_title" style="margin-top:10px;"><div>阳光财富观察</div></div>
+						<?php for($i=1;$i<3;$i++){
+							$pos_name = "index_dyn_list{$i}"; 
+							?>
+						<div class="guide_hr_val" <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
 						<?php }?>
 					</div>
-					<?php for($i=1;$i<5;$i++){$pos_name = "index_right_list".$i;?>
-					<div class="rt_tab" <?php if($i==1){?>style="display:block;"<?php }?>><?php show_page_img();?></div>
-					<?php }?>
-					<div class="c_r_title" style="margin-top:14px;">
-						<div>阳光财富观察</div>
-						<a href="/review/list/121"><img src="/images/index_two/g4.jpg"/></a>
-					</div>
-					<div class="con_r_hr">
-						<div style="width:80px;"></div>	
-					</div>
-					<?php for($i=1;$i<3;$i++){
-						$pos_name = "index_dyn_list{$i}"; 
-						?>
-					<div class="guide_hr_val3" <?php show_page_pos($pos_name,'link');if($i==1){?>style="margin-top:10px;"<?php }?>><?php show_page_href();?></div>
-					<?php }?>
 				</div>
-				<div class="content_right_bottom"></div>
 				<div id="both_button">
 					<a href="/images/register/email.jpg" class="colorbox"><img src="/images/index_two/index_yl.jpg"></a>
 					<a href="/user/user_order.php"><img style="margin-left:2px;" src="/images/index_two/index_dy.jpg"></a>
 				</div>
 				<div id="right_img" class="ad_banner">
 				</div>
+				<?php include 'include.php';?>
 				
-				<div class="content_right_top" style="margin-top:15px;"></div>
-				<div class="content_right_banner">
-					<div class="c_r_title" style="margin-top:5px;">
-						<div>理财师园地</div>
-						<a href=""><img src="/images/index_two/g4.jpg"/></a>
-					</div>
-					<div class="con_r_hr">
-						<div style="width:80px;"></div>	
-					</div>
-					<?php $pos_name="index_lcs";?>
-					<div class="photo_banner">
-						<div class="photo_pg">
-							<?php show_page_img();?>
-						</div>
-						<div class="photo_font"><a href="<?php echo $pos_items->$pos_name->href;?>"><?php  echo $pos_items->$pos_name->alias;?></a></div>
-					</div>
-					<div class="photo_value_s" style="overflow:Hidden; width:225px;"  <?php show_page_pos($pos_name,'index_subject');?>>
-						<div class="photo_title" style="width:225px; overflow:hidden;"><?php show_page_href();?></div>	
-						<div class="photo_value_v" style="width:225px; overflow:hidden;"><?php show_page_desc();?></div>
-						<div class="photo_geng" style=" width:220px;"><a href="<?php echo $pos_items->$pos_name->href;?>">...[阅读全文]</a></div>
-					</div>
-					<div class="h_h" style="width:285px;"></div>
-					<div class="teacher_btn1"><a target="_blank" href="http://www.forbeschina.com/event/lcs/list_1.html">更多理财师&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn2"><a target="_blank" href="http://www.forbeschina.com/event/lcs/">更多咨询&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn3"><a target="_blank" href="http://www.forbeschina.com/event/lcs/EntryForm.php">报名理财师&nbsp;&nbsp;</a></div>
-				</div>
-				<div class="content_right_bottom"></div>
-				
-				<div class="content_right_top" style="margin-top:15px;"></div>
-				<div class="content_right_banner">
-					<div class="c_r_title" style="margin-top:5px;">
-						<div>增长会</div>
-						<a href=""><img src="/images/index_two/g4.jpg"/></a>
-					</div>
-					<div class="con_r_hr">
-						<div style="width:80px;"></div>	
-					</div>
-					<?php $pos_name="index_zzh";?>
-					<div class="photo_banner">
-						<div class="photo_pg">
-							<?php show_page_img();?>
-						</div>
-						<div class="photo_font"><a href="<?php echo $pos_items->$pos_name->href;?>"><?php  echo $pos_items->$pos_name->alias;?></a></div>
-					</div>
-					<div class="photo_value_s" style="overflow:Hidden; width:225px;"  <?php show_page_pos($pos_name,'index_subject');?>>
-						<div class="photo_title" style="width:225px; overflow:hidden;"><?php show_page_href();?></div>	
-						<div class="photo_value_v" style="width:225px; overflow:hidden;"><?php show_page_desc();?></div>
-						<div class="photo_geng" style=" width:220px;"><a href="<?php echo $pos_items->$pos_name->href;?>">...[阅读全文]</a></div>
-					</div>
-					<div class="h_h" style="width:285px;"></div>
-					<div class="teacher_btn1"><a href="">理事风采&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn2"><a href="">会员互动&nbsp;&nbsp;</a></div>
-					<div class="teacher_btn3"><a href="">加入增长会&nbsp;&nbsp;</a></div>
-				</div>
-				<div class="content_right_bottom"></div>
 				<div id="right_m_img" class="ad_banner">
 				</div>
 				<div class="content_right_top" style="margin-top:15px;"></div>
