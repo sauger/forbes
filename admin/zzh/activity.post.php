@@ -11,6 +11,11 @@
 	
 	$activity->update_attributes($_POST['post'],false);
 	$activity->update_file_attributes('post');
+	if($_POST['is_old']=='on'){
+		$activity->is_old = 1;
+	}else{
+		$activity->is_old = 0;
+	}
 	$activity->save();
 	
 	redirect('activity.php');

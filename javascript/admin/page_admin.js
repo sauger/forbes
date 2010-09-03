@@ -5,10 +5,14 @@ $(function(){
 			if($(this).parent().css('position')=='absolute'){
 				var top = $(this).offset().top-$(this).parent().offset().top;
 				var right =  $(this).offset().left-$(this).parent().offset().left;
+			}else if($(this).css('position')=='relative'){
+				var top = 0;
+				var right = 20;
 			}else{
 				var top =  parseInt($(this).offset().top);
 				var right =  $(this).offset().left;
 			}
+			//alert($(this).offset().top);
 			$('#admin_edit_div').remove();
 			$('#clear_float').remove();
 			var str = "<div id='clear_float' style='float:none;display:none'>clear_float</div><div id='admin_edit_div' pos_tag='" + $(this).attr('pos_tag') + "' pos_name='" + $(this).attr('pos') +"' style='z-index: 100; position: absolute;left:" +right +"px;top:" +top+"px;' title='编辑位置内容'><img style='cursor: pointer;width:16px;height:16px;' width=16 height=16 src='/images/admin/btn_edit.png' ></div>";

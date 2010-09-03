@@ -12,7 +12,7 @@
 	<title></title>
 	<?php 
 		css_include_tag('admin');
-		use_jquery();
+		use_jquery_ui();
 		validate_form("industry");
 	?>
 </head>
@@ -41,7 +41,7 @@
 		</tr>
 		<tr class=tr4>
 			<td class=td1 width=15%>活动日期</td>
-			<td width="85%" align="left"><input type="text" class="required" name="post[time]" value="<?php echo $record->time;?>"></td>
+			<td width="85%" align="left"><input type="text" class="date_jquery required" readonly=readonly name="post[time]" value="<?php echo substr($record->time,0,10);?>"></td>
 		</tr>
 		<tr class=tr4>
 			<td class=td1 width=15%>活动地点</td>
@@ -75,6 +75,10 @@
 			<td class=td1 width=15%>活动简介</td>
 			<td width="85%" align="left"><textarea class="required" name="post[description]"><?php echo $record->extent;?></textarea></td>
 		</tr>
+		<tr class=tr4>
+			<td class=td1 width=15%>是否为往届</td>
+			<td width="85%" align="left"><input name="is_old" type="checkbox" <?php if($record->is_old==1)echo "checked='checked'";?>></td>
+		</tr>
 		<tr class=btools>
 			<td colspan="10" align="center"><input id="submit" type="submit" value="完成"></td>
 		</tr>
@@ -84,3 +88,16 @@
 </div>
 </body>
 </html>
+<script>
+$(".date_jquery").datepicker(
+	{
+		changeMonth: true,
+		changeYear: true,
+		monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+		dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dayNamesMin:["日","一","二","三","四","五","六"],
+		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dateFormat: 'yy-mm-dd'
+	}
+);
+</script>
