@@ -56,7 +56,7 @@ global $pos_name;
 		<?php $pos_name = 'index_top_magazine';?>
 		<div id="photo"><?php show_page_img();?></div>
 		<div id="m_title" <?php show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
-		<div id="m_bottom"><a href="/magazine/subscription"><img src="/images/index_two/magazine.jpg"></a></div>
+		<div id="m_bottom"><a href="/userclub"><img src="/images/index_two/magazine.jpg"></a></div>
 	</div>
 </div>
 <div id="top_menu_banner">
