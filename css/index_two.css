@@ -170,7 +170,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 				.recommend_title a{color:#838486; text-decoration:none;}
 				#recommend_btn{width:222px; height:23px; margin-left:40px; margin-top:7px; text-align:center; line-height:23px; background:url(/images/index_two/list_title.png) bottom no-repeat;}
 					#recommend_btn a{font-size:12px; font-weight:bold; color:#B20002; text-decoration:none; display:none;}
-				.rt_tab{width:300px; height:280px; display:none;}
+				.rt_tab{width:300px; height:280px; margin-top:10px; display:none;}
 				.rt_tab img{width:300px; height:280px; border:0;}
 				.recommend_menu{width:290px; height:16px; margin-top:5px; margin-left:3px; line-height:16px;}
 					.recommend_menu font{font-size:12px; color:#848486; font-weight:bold;}
