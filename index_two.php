@@ -247,7 +247,10 @@
 						?>
 						<div class="column_box">
 							<div class="column_photo"><a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><img src="<?php echo $item[0]->image_src;?>"></a></div>
-							<div class="column_title"><a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->author."：".$item[0]->title;?></a></div>
+							<div class="column_title">
+								<a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author.":";?></a>
+								<a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->title;?></a>
+							</div>
 							<div class="colum_desc"><a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo strip_tags($item[0]->description);?></a></div>
 						</div>
 						<?php }?>
@@ -258,7 +261,8 @@
 							$ids[]=$item[0]->publisher;
 						?>
 						<div class="guide_hr_val2">
-							<a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->author."：".$item[0]->title;?></a>
+							<a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author.":";?></a>
+							<a target="_blank" style="margin:0;" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->title;?></a>
 						</div>
 						<?php }?>
 					</div>
@@ -303,7 +307,7 @@
 							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 3");
 							foreach($news as $i => $v){
 						?>
-						<div class="guide_hr_val" <?php if($i==0){?>style="margin-top:15px;"<?php }?>><a href="<?php echo get_news_url($v);?>">[<?php echo $category->find_name_by_id($v->category_id);?>] <?php echo $v->title;?></a></div>
+						<div class="guide_hr_val" <?php if($i==0){?>style="margin-top:15px;"<?php }?>><a href="<?php echo get_news_url($v);?>"><?php echo $v->title;?></a></div>
 						<?php }?>
 					</div>
 					<div id=dictionary>
@@ -330,7 +334,10 @@
 						?>
 						<div class="column_box">
 							<div class="column_photo"><a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><img src="<?php echo $item[0]->image_src;?>"></a></div>
-							<div class="column_title"><a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->author."：".$item[0]->title;?></a></div>
+							<div class="column_title">
+								<a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author.":";?></a>
+								<a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->title;?></a>
+							</div>
 							<div class="colum_desc"><a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo strip_tags($item[0]->description);?></a></div>
 						</div>
 						<?php }?>
@@ -341,7 +348,8 @@
 							$ids[]=$item[0]->publisher;
 						?>
 						<div class="guide_hr_val2">
-							<a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->author."：".$item[0]->title;?></a>
+							<a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author.":";?></a>
+							<a target="_blank" style="margin:0;" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->title;?></a>
 						</div>
 						<?php }?>
 					</div>

@@ -128,7 +128,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 				.photo_font{width:52px; height:22px; margin-top:6px; line-height: 22px; text-align: center;}
 				.photo_font a{ color:#494A4A; font-size: 12px; text-decoration: none; font-weight:bold;}
 			.photo_value_s{width:220px; margin-top:10px; overflow:Hidden; float:right; display:inline;}
-				.photo_title{width:215px; height:20px; line-height:20px;}
+				.photo_title{width:215px; line-height:20px;}
 					.photo_title a{font-size:14px; font-weight:bold; text-decoration:none; color:#003891;}
 				.photo_value_v{width:215px; height:32px; margin-top:8px; line-height:16px; overflow:hidden;}
 					.photo_value_v a{font-size:14px; color:#000; text-decoration:none;}
@@ -168,7 +168,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 				.recommend_center{width:75px; background:url('/images/index_two/list_c2.jpg');}
 				.recommend_title{height:18px; text-align:center; cursor:pointer; line-height:18px; font-size:12px; overflow:hidden;}
 				.recommend_title a{color:#838486; text-decoration:none;}
-				#recommend_btn{width:216px; height:23px; margin-left:40px; margin-top:7px; text-align:center; line-height:23px; background:url(/images/index_two/btn5.jpg) no-repeat;}
+				#recommend_btn{width:222px; height:23px; margin-left:40px; margin-top:7px; text-align:center; line-height:23px; background:url(/images/index_two/list_title.png) bottom no-repeat;}
 					#recommend_btn a{font-size:12px; font-weight:bold; color:#B20002; text-decoration:none; display:none;}
 				.rt_tab{width:300px; height:280px; display:none;}
 				.rt_tab img{width:300px; height:280px; border:0;}
