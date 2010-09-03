@@ -68,7 +68,7 @@
 				<div id="content_banner_right">
 					<div class="ljz">
 						<div class="ljz_title">陆家嘴早餐</div>
-						<?php for($i=1;$i<4;$i++){$pos_name = "index_zczx_".$i;?>
+						<?php for($i=0;$i<3;$i++){$pos_name = "index_zczx_".$i;?>
 						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
 						<?php }?>
 						<div class="guide_hr_val2" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link')?>><a href="">基金经理看市:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo mb_substr($pos_items->$pos_name->display,0,5,'utf-8')  ."...";?></a><a style="color:#666;margin:0;" href="">[更多]</a></div>
