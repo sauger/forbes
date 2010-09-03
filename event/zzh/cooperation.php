@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<?php 
+	include_once( dirname(__FILE__) .'/../../frame.php');
+	$db = get_db();
+	$partner = $db->query("select * from zzh_partner order by priority asc,created_at desc;");
+	!$partner && $partner = array();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -49,14 +55,9 @@
 									</div><!-- 标题 end -->
 										<div class="r-cooperation">
 											<ul class="r-m-t-t-main">
-												<li class="aa"><a class="aa-pic" href="#"><img src="images/cooperation-1.gif" /></a><strong>合作伙伴名称</strong></li>	
-												<li class="aa"><a class="aa-pic" href="#"><img src="images/cooperation-1.gif" /></a><strong>合作伙伴名称</strong></li>	
-												<li class="aa"><a class="aa-pic" href="#"><img src="images/cooperation-1.gif" /></a><strong>合作伙伴名称</strong></li>	
-												<li class="aa"><a class="aa-pic" href="#"><img src="images/cooperation-1.gif" /></a><strong>合作伙伴名称</strong></li>	
-												<li class="aa"><a class="aa-pic" href="#"><img src="images/cooperation-1.gif" /></a><strong>合作伙伴名称</strong></li>	
-												<li class="aa"><a class="aa-pic" href="#"><img src="images/cooperation-1.gif" /></a><strong>合作伙伴名称</strong></li>	
-												<li class="aa"><a class="aa-pic" href="#"><img src="images/cooperation-1.gif" /></a><strong>合作伙伴名称</strong></li>	
-												<li class="aa"><a class="aa-pic" href="#"><img src="images/cooperation-1.gif" /></a><strong>合作伙伴名称</strong></li>	
+												<?php foreach($partner as $p){?>
+												<li class="aa"><a class="aa-pic" href="<?php echo $p->link;?>"><img src="<?php if($p->image!=''){echo $p->image;}else{?>images/cooperation-1.gif<?php }?>" /></a><strong><a href="<?php echo $p->link;?>"><?php echo $p->title;?></a></strong></li>
+												<?php }?>	
 											</ul>
 										</div>								
 									</div>
