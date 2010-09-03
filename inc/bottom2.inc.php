@@ -107,5 +107,9 @@ if(empty($category)){
 <div id="bottom">
 <?php for($i=0;$i<10;$i++){ ?><a <?php show_page_pos('forbes_td5_'.$i); $posname='forbes_td5_'.$i;?> href="<?php echo $pos_items->$posname->href; ?>">　<?php echo $pos_items->$posname->display; ?><?php if($i<9){ ?>　-<?php }} ?></a>
 </div>
-<div id="bottom_word">本站翻译支持由东西网提供<a href="http://www.dongxi.net">http://www.dongxi.net</a></div>
+<div id="bottom_word">
+	<div>本站翻译支持由东西网提供<a href="http://www.dongxi.net">http://www.dongxi.net</a></div><br>
+	Copyright @ 2010 Forbes.com Inc 福布斯公司 版权所有<br>
+	沪ICP备09033453号
+</div>
 <?php js_include_tag('get_ad')?>
