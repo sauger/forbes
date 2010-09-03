@@ -326,7 +326,7 @@
 						if($ids){
 							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t1.publisher not in $nid and t2.role_name='column_editor' order by t1.created_at desc;");
 						}else{
-							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t2.role_name='column_writer' order by t1.created_at desc;");
+							$item = $db->query("select t1.*,t2.name,t2.image_src from fb_news t1 join fb_user t2 on t1.publisher=t2.id where t2.role_name='column_editor' order by t1.created_at desc;");
 						}
 						if($item){
 							$ids[]=$item[0]->publisher;
