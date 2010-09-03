@@ -446,7 +446,7 @@
 				<div class="right_box">
 					<div class="normal_title"><div>城市</div><a target="_blank" href="/city/">[...更多]</a></div>
 					<?php $pos_name = "index_city0"; ?>
-					<div class="city" <?php show_page_pos($pos_name,'base');?>>
+					<div class="city">
 						<?php show_page_href();?>
 					</div>
 					<div class="city_desc">
@@ -454,7 +454,7 @@
 					</div>
 					<div class="h_h"></div>
 					<?php for($i=1;$i<3;$i++){$pos_name = "index_city{$i}";?>
-					<div class="guide_hr_val2 " <?php show_page_pos($pos_name,'link');?>><?php show_page_href();?></div>
+					<div class="guide_hr_val2 "><?php show_page_href();?></div>
 					<?php }?>
 					
 					<?php for($i = 3 ; $i < 5 ; $i++){$pos_name = "index_city{$i}";?>
