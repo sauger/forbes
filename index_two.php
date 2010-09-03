@@ -83,7 +83,7 @@
 				</div>
 				<div id="content_left_c">
 					<div class="normal_box"  style="margin-top:0;">
-						<div class="normal_title"><div>富豪</div><a href="/review/list/42">[...更多]</a>
+						<div class="normal_title"><div>富豪</div><a href="/billionaires/">[...更多]</a>
 						</div>
 						<?php $pos_name = 'index_rich1';?>
 						<div class="li_top" <?php show_page_pos($pos_name);?>>
@@ -124,7 +124,7 @@
 						<?php }?>
 					</div>
 					<div class="normal_box">
-						<div class="normal_title"><div>创业</div><a href="/review/list/2">[...更多]</a></div>
+						<div class="normal_title"><div>创业</div><a href="/entrepreneur/">[...更多]</a></div>
 						<?php 
 							$c_id = $category->children_map(2,false);
 							$c_id = implode(',',$c_id);
@@ -135,7 +135,7 @@
 							<a target="_blank" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
-						<div class="normal_title"><div>投资</div><a href="/review/list/5">[...更多]</a></div>
+						<div class="normal_title"><div>投资</div><a href="/investment/">[...更多]</a></div>
 						<?php 
 							$c_id = $category->children_map(5,false);
 							$c_id = implode(',',$c_id);
@@ -146,7 +146,7 @@
 							<a target="_blank" href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a>
 						</div>
 						<?php }?>
-						<div class="normal_title"><div>商业</div><a href="/review/list/143">[...更多]</a></div>
+						<div class="normal_title"><div>商业</div><a href="/business/">[...更多]</a></div>
 						<?php 
 							$c_id = $category->children_map(3,false);
 							$c_id = implode(',',$c_id);
@@ -165,7 +165,7 @@
 							<a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
 						</div>
 						<?php }?>
-						<div class="normal_title"><div>科技</div><a href="/review/list/143">[...更多]</a></div>
+						<div class="normal_title"><div>科技</div><a href="/tech/">[...更多]</a></div>
 						<?php 
 							$c_id = $category->children_map(4,false);
 							$c_id = implode(',',$c_id);
@@ -178,7 +178,7 @@
 						<?php }?>
 					</div>
 					<div class="normal_box">
-						<div class="normal_title"><div>最受欢迎文章</div><a href="/review/list/143">[...更多]</a></div>
+						<div class="normal_title"><div>最受欢迎文章</div></div>
 						<div id="day">
 						<div id="_day" style="border-left:0px solid #A4A4A4; color:#A50203;">一天</div>
 						<div id="_week">一周</div>
@@ -354,7 +354,7 @@
 						<?php }?>
 					</div>
 					<div class="center_box">
-						<div class="normal_title"><div>读者高见</div><a target="_blank" href="/column/journalist">[...更多]</a></div>
+						<div class="normal_title"><div>读者高见</div></div>
 						<?php 
 							$comments = $db->query("select * from fb_comment where resource_type='news' and is_approve=1 order by priority asc,created_at desc limit 4");
 							$news = new table_class('fb_news');
