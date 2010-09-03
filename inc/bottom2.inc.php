@@ -9,8 +9,10 @@ if(empty($category)){
 }
 ?>	
 <div id="bottom_banner">
+	<div id="bottom_top"></div>
+	<div id="bottom_center">
 	<div class="bottom_value">
-			<div>[<a target="_blank" href="/list/">榜单</a>]</div>
+			<div class="main_cate">[<a target="_blank" href="/list/">榜单</a>]</div>
 			<div class="sub_cate"><a href="">富豪榜</a></div>
 			<div class="sub_cate"><a href="">城市榜</a></div>
 			<div class="sub_cate"><a href="">公司榜</a></div>
@@ -19,7 +21,7 @@ if(empty($category)){
 			<div class="sub_cate"><a href="">教育榜</a></div>
 	</div>
 	<div class="bottom_value">
-			<div>[<a target="_blank" href="/billionaires/">富豪</a>]</div>
+			<div class="main_cate">[<a target="_blank" href="/billionaires/">富豪</a>]</div>
 			<?php 
 				$c_ids = $category->children_map(42,false);
 				$c_id = implode(',',$c_ids);
@@ -29,7 +31,7 @@ if(empty($category)){
 			<?php }?>
 	</div>
 	<div class="bottom_value">
-			<div>[<a target="_blank" href="/investment/">投资</a>]</div>
+			<div class="main_cate">[<a target="_blank" href="/investment/">投资</a>]</div>
 			<?php 
 				$c_ids = $category->children_map(5,false);
 				$c_id = implode(',',$c_ids);
@@ -39,7 +41,7 @@ if(empty($category)){
 			<?php }?>
 	</div>
 	<div class="bottom_value">
-			<div>[<a target="_blank" href="/entrepreneur/">创业</a>]</div>
+			<div class="main_cate">[<a target="_blank" href="/entrepreneur/">创业</a>]</div>
 			<?php 
 				$c_ids = $category->children_map(2,false);
 				$c_id = implode(',',$c_ids);
@@ -49,7 +51,7 @@ if(empty($category)){
 			<?php }?>
 	</div>
 	<div class="bottom_value">
-			<div>[<a target="_blank" href="/tech/">科技</a>]</div>
+			<div class="main_cate">[<a target="_blank" href="/tech/">科技</a>]</div>
 			<?php 
 				$c_ids = $category->children_map(4,false);
 				$c_id = implode(',',$c_ids);
@@ -62,7 +64,7 @@ if(empty($category)){
 			<div class="bottom_bottom"></div>
 	</div>
 	<div class="bottom_value">
-			<div>[<a target="_blank" href="/city/">城市</a>]</div>
+			<div class="main_cate">[<a target="_blank" href="/city/">城市</a>]</div>
 			<?php 
 				$c_ids = $category->children_map(16,false);
 				$c_id = implode(',',$c_ids);
@@ -75,7 +77,7 @@ if(empty($category)){
 			<div class="bottom_bottom"></div>
 	</div>
 	<div class="bottom_value">
-			<div>[<a target="_blank" href="/life/">生活</a>]</div>
+			<div class="main_cate">[<a target="_blank" href="/life/">生活</a>]</div>
 			<?php 
 				$c_ids = $category->children_map(81,false);
 				$c_id = implode(',',$c_ids);
@@ -88,7 +90,7 @@ if(empty($category)){
 			<div class="bottom_bottom"></div>
 	</div>
 	<div class="bottom_value" style="border-right:0px;">
-			<div>[<a target="_blank" href="/business/">商业</a>]</div>
+			<div class="main_cate">[<a target="_blank" href="/business/">商业</a>]</div>
 			<?php 
 				$c_ids = $category->children_map(3,false);
 				$c_id = implode(',',$c_ids);
@@ -99,6 +101,7 @@ if(empty($category)){
 			<div style="float:left; display:none">clear_float</div>
 			<div class="top_bottom"></div>
 			<div class="bottom_bottom"></div>
+	</div>
 	</div>
 </div>
 <div id="bottom">
