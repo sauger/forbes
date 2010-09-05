@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+body {font-size:12px;  font-family:宋体; font-size:12px; color:#000;  margin:0; padding:0;}
+#ibody{width:1002px; margin:0 auto; float:none; display:block;}
+div{margin:0; padding:0; float:left; display:inline;}
+#register{width:1002px; float:left; display:inline;}
+#register .title{width:1000px; height:23px; margin-top:5px; line-height:23px; background:#e9e9e9; overflow:hidden;}
+#register .title_left{margin-left:50px; color:#050000; font-weight:bold;}
+#register .title_right{margin-right:10px; color:#313132; font-weight:bold; float:right;}
+#register .title_right .content{height:23px; padding-left:15px; padding-right:10px; text-align:center;}
+#register .title_right .content.select{background:#f4d14c;}
+#register .title_right .arrow{width:13px; height:23px; background:url(/images/register/title_bg1.jpg) no-repeat;}
+#register .title_right .arrow.select{background:url(/images/register/title_bg2.jpg) no-repeat;}
+table{margin-top:30px; margin-left:140px; float:left; display:inline;}
+tr{height:40px; line-height:40px; }
+.td1{width:80px; color:#333333; font-size:13px; line-height:22px;  }
+.td2{color:#999999; line-height:22px;}
+.td2 a{color:#0066CC; text-decoration:none;}
+.td3{height:25px;  overflow:hidden; }
+.td4{width:120px; line-height:22px; text-align:center;  }
+.td5{width:630px; color:#333333; font-size:13px;  }
+.td6{width:630px; color:#999999; font-size:13px;  }
+.txt{width:190px; height:22px; border:1px solid #CCCCFF;}
+.txt1{width:570px; height:22px; margin-left:30px; border:1px solid #CCCCFF; }
+.txt2{width:180px; height:22px; margin-left:10px; border:1px solid #CCCCFF;}
+.sel1{width:190px; height:22px; }
+.sel2{width:90px; height:22px; border:1px solid #CCCCFF;}
+.ck{margin-left:40px;}
+.display1{}
+.display2{color:#00CC00; float:left; display:none;}
+.display3{color:#FF0000; float:left; display:none;}
+.pic{width:14px; height:14px; }
+.pic_content{margin-left:5px; line-height:14px; }
+.radio_div{width:50px; margin-left:20px;}
+hr{width:840px; height:1px; margin-top:10px; color:#cccccc; }
+#yzm_input{height:25px; line-height:25px; }
+.file {height:22px; margin-left:30px; border:1px solid #CCCCFF; background:#fff;}
+.upload{width:94px; height:26px; margin-left:30px; line-height:26px; font-size:14px; border:0px; font-weight:bold; background:url('/images/register/upload_bg.jpg') no-repeat; }
+#yzm{width:60px; height:25px; margin-left:10px; font-size:16px; font-weight:bold; line-height:25px; }
+button{width:170px; height:35px; line-height:35px; text-align:center; font-size:14px; border:0px; font-weight:bold; background:url('/images/register/button.jpg') no-repeat;}
+#submit{width:840px; height:40px; line-height:40px; text-align:center; }
+
+
+.red{color:#ff0000;}
+.gray{color:#666666; font-size:12px;}
+#chang_pic{width:110px; line-height:25px; cursor:pointer; color:#246BB0; margin-left:15px;}
+.dash{width:900px; height:1px; margin-top:10px; font-size:0; line-height:0; border-bottom:1px dotted #999999;}
