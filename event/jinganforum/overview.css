@@ -15,18 +15,12 @@ body a{text-decoration:none; color:#646464}
 #center{width:100%; background:#F7F7F7;}
 #c_c{width:997px;  margin-left:143px; background:#FFFFFF; }
 
-#left{width:290px;  margin:0 0 0 20px;}
-#left_t{width:270px; height:372px; *height:368px; *height:372px! important;  margin-top:15px; line-height:32px; color:#646464;}
+#left{width:751px;  margin:0 0 0 20px; border-right:1px solid #D1D1D1;}
+#left_t{width:731px; height:833px; *height:829px; *height:833px! important;  margin-top:15px; line-height:32px; color:#646464;}
+#left .content{width:731px; margin-top:20px; color:#646464; line-height:30px;}
+#left .content span{font-weight:bold;}
 
-#middle{height:459px;width:460px; border:1px solid #D1D1D1; border-top:0px;}
-#backg{width:425px; margin:30px 0 10px 18px; color:#646464; line-height:26px; letter-spacing:1px;}
-#more{width:100%; color:#646464; line-height:26px; letter-spacing:1px;}
-#more a{line-height:26px; font-size:12px;line-height:26px; float:right;}
-#activity{width:420px; margin:0px 0 0 20px;}
-.act_t{width:100%; line-height:26px; color:#464444; margin-top:10px;}
-.act_t_r{width:340px; float:right}
-
-#right{width:225px; height:459px; border-bottom:1px solid #D1D1D1;}
+#right{width:225px; height:459px; float:right;}
 #r_c{width:195px; padding:15px 9px ; margin:20px 6px 0 0; background:#F7F7F7; float:right;}
 .right1{width:100%; margin-top:10px; color:#2F2F2F; font-weight:bold;}
 .right2{wisth:185px; margin:10px 0 0 10px; color:#646464;}
@@ -38,10 +32,6 @@ body a{text-decoration:none; color:#646464}
 .t_t3{float:right}
 .t_t3 font{margin-right:10px; float:right; font-size:14px; line-height:18px;}
 
-#guest{width:965px; height:175px; margin:15px; background:#F7F7F7;}
-.guest_m{width:108px; letter-spacing:0px; padding:13px 42px 0 42px; }
-.guest1{width:100%; float:right; margin-top:10px; text-align:right;}
-.guest2{width:100%; float:right; font-size:12px; line-height:16px; color:#999696; text-align:right;}
 
 #bottom{width:971px; height:53px; border:13px solid #D1D1D1;}
 #bottom img{float:left;margin-right:45px}
