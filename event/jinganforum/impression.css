@@ -20,9 +20,9 @@ body a{text-decoration:none; color:#646464 }
 
 #right{width:225px; height:459px; float:right; display:inline;}
 #r_c{width:195px; padding:15px 9px ; margin:20px 6px 0 0; background:#F7F7F7; float:right; display:inline;}
-.right1{width:100%; margin-top:10px; color:#2F2F2F; font-weight:bold; float:right; display:inline;}
-.right2{wisth:185px; margin:10px 0 0 10px; color:#646464; float:right; display:inline;}
-.right3{width:100%; margin:10px 0 0 0; color:#2F2F2F; float:right; display:inline;}
+.right1{width:100%; margin-top:10px; color:#2F2F2F; font-weight:bold; float:left; display:inline;}
+.right2{wisth:185px; margin:10px 0 0 10px; color:#646464; float:left display:inline;}
+.right3{width:100%; margin:10px 0 0 0; color:#2F2F2F; float:left display:inline;}
 
 .t_t{width:100%; height:18px; margin-top:35px; font-weight:bold; border-bottom:1px solid #D1D1D1; over-flow:hidden; float:left; display:inline;}
 .t_t1{ height:18px; font-size:14px; line-height:18px; color:#414040;  border-bottom:1px solid #0388DF; float:left; display:inline;}
