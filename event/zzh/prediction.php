@@ -57,15 +57,15 @@ $old = $db->query("select * from zzh_activity where is_old=1 order by priority a
 										<p class="t-title"><img src="images/t-list.gif" /><strong>活动预告</strong></p>
 										<div class="main">
 											<div class="more-activites">
-												<img class="pic" src="images/pic.gif" />
-												<p><span class="mark">活动名称:</span>2010中国最佳品牌发布会</p>
-												<p><span class="mark">活动日期：</span>2010年7月6日</p>
-												<p><span class="mark">活动地点：</span>北京朝阳区亮马桥路50号凯宾斯基大酒店</p>
-												<p style="height:90px;overflow:hidden;line-height:22px;"><span class="mark">活动介绍：</span><a href="#">活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍</a></p>
-												<p class="right"><a href="#"><strong>查看详情>></strong></a></p>	
+												<img class="pic" src="<?php echo $pos_items->$pos_name->image1;?>" />
+												<p><span class="mark">活动名称:</span><?php echo $pos_items->$pos_name->display;?></p>
+												<p><span class="mark">活动日期：</span><?php echo $pos_items->$pos_name->title;?></p>
+												<p><span class="mark">活动地点：</span><?php echo $pos_items->$pos_name->href;?></p>
+												<p style="height:90px;overflow:hidden;line-height:22px;"><span class="mark">活动介绍：</span><a href="<?php echo $pos_items->$pos_name->static_href?>"><?php echo $pos_items->$pos_name->description;?></a></p>
+												<p class="right"><a href="<?php echo $pos_items->$pos_name->static_href;?>"><strong>查看详情>></strong></a></p>	
 											</div>
-											<p><span class="mark">报名资格：</span>增长会员/所有用户</p>
-											<p><span class="mark">报名资格：</span>增长会员免费（非增长会员300元/人）
+											<p><span class="mark">报名资格：</span><?php echo $pos_items->$pos_name->alias?></p>
+											<p><span class="mark">报名资格：</span><?php echo $pos_items->$pos_name->reserve?>
 										</div>																					
 									</div>
 								<?php }?>
