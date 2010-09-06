@@ -7,7 +7,7 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>福布斯中国增长会</title>
 <?php 
-	use_jquery();
+	use_jquery_ui();
 	init_page_items();
 ?>
 <link href="css/basic.css" rel="stylesheet" type="text/css" />
@@ -32,7 +32,8 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 											<li><a href="contact us.html" onfocus="this.blur()">联系我们</a></li>
 										</ul>
 									</div>
-									<div class="left-calendar"><img src="images/calendar.gif" /></div>
+									<div class="left-calendar"></div>
+									<div id="dialog">阿迪四哦放假啊死哦的房间死哦地方速度哦伐阿斯佛</div>
 									<div class="left-part">
 										<div class="left-part-top">部分会员</div>
 										<div class="left-part-c">
@@ -89,3 +90,23 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 	</div><!-- container end -->	
 </body>
 </html>
+<script>
+$(function() {
+	$(".left-calendar").datepicker({
+		changeMonth: true,
+		changeYear: true,
+		monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+		dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dayNamesMin:["日","一","二","三","四","五","六"],
+		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dateFormat: 'yy-mm-dd'
+	});
+	var top = $(".ui-datepicker-today").offset().top;
+	var left = $(".ui-datepicker-today").offset().left;
+	$("#dialog").dialog({
+		draggable: false,
+		position:[left,top],
+		width:150
+	});
+});
+</script>

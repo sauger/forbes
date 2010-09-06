@@ -499,3 +499,18 @@ ul.r-m-t-t-main li a.aa-pic{
 	padding:10px 10px 10px 0;
 	margin-top:50px;
 }
+
+.ui-datepicker-inline{
+	width:16em;
+	background:none;
+	border:0;
+}
+
+.ui-widget-content{
+	color:#fff;
+}
+
+.ui-datepicker-header{
+	background:none;
+	border:0;
+}

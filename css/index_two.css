@@ -127,10 +127,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 				.photo_pg img{width:55px; height:55px; border:0px;}
 				.photo_font{width:52px; height:22px; margin-top:6px; line-height: 22px; text-align: center;}
 				.photo_font a{ color:#494A4A; font-size: 12px; text-decoration: none; font-weight:bold;}
-			.photo_value_s{width:220px; margin-top:10px; overflow:Hidden; float:right; display:inline;}
+			.photo_value_s{width:220px; overflow:Hidden; float:right; display:inline;}
 				.photo_title{width:215px; line-height:20px;}
 					.photo_title a{font-size:14px; font-weight:bold; text-decoration:none; color:#003891;}
-				.photo_value_v{width:215px; height:32px; margin-top:8px; line-height:16px; overflow:hidden;}
+				.photo_value_v{width:215px; height:48px; margin-top:8px; line-height:16px; overflow:hidden;}
 					.photo_value_v a{font-size:14px; color:#000; text-decoration:none;}
 				.photo_geng{width:220px; height:16px; line-height:16px; text-align:right; overflow:Hidden;}
 					.photo_geng a{color:#BA2636; font-size:12px; text-decoration:none;}
