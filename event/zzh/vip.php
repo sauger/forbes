@@ -5,6 +5,10 @@ $investor = $db->query("select * from fb_investor where is_show=1");
 if($db->record_count==0){
 	$investor = $db->query("select * from fb_investor limit 1");
 }
+$user = $db->query("select * from zzh_member where is_show=1");
+if($db->record_count==0){
+	$user = $db->query("select * from zzh_member limit 1");
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -27,10 +31,10 @@ if($db->record_count==0){
 									<div class="left-application"><a href="#"></a></div>
 									<div class="left-nav">
 										<ul>
-											<li><a href="index.html" onfocus="this.blur()">增长会介绍</a></li>
-											<li><a href="vip.html" class="bc" onfocus="this.blur()">会员专享</a></li>
-											<li><a href="prediction.html" onfocus="this.blur()">活动专区</a></li>
-											<li><a href="cooperation.html" onfocus="this.blur()">合作伙伴</a></li>
+											<li><a href="index.php" onfocus="this.blur()">增长会介绍</a></li>
+											<li><a class="bc" href="vip.php" onfocus="this.blur()">会员专享</a></li>
+											<li><a href="prediction.php" onfocus="this.blur()">活动专区</a></li>
+											<li><a href="cooperation.php" onfocus="this.blur()">合作伙伴</a></li>
 											<li><a href="contact us.html" onfocus="this.blur()">联系我们</a></li>
 										</ul>
 									</div>
@@ -69,7 +73,7 @@ if($db->record_count==0){
 													<input  name="搜索" type="submit" class="sub-but" value="搜索"/>
 												</div>	
 												<div class="vip-style">
-													<div class="vip-style-pic"><img class="vip-style-p" src="<?php echo $investor[0]->image;?>" /><a href="#"><img src="images/Contact-1.gif" /></a></div>
+													<div class="vip-style-pic"><a href="vip_contace.php?id=<?php echo $investor[0]->id;?>"><img class="vip-style-p" src="<?php echo $investor[0]->image;?>" /></a><a href="#"><img src="images/Contact-1.gif" /></a></div>
 													<p class="mark"><?php echo $investor[0]->name;?></p>
 													<p class="mark"><?php echo $investor[0]->post;?></p>
 													<p><span class="mark">投资方向：</span><?php echo $investor[0]->invest_zone;?></p>
@@ -90,13 +94,12 @@ if($db->record_count==0){
 													<input  name="搜索" type="submit" class="sub-but" value="搜索"/>
 												</div>	
 												<div class="vip-style" style="line-height:20px;">
-													<div class="vip-style-pic"><img class="vip-style-p" src="images/style-1.gif" /></div>
-													<p class="mark">比尔盖茨</p>
-													<p>行业性质：<span class="mark">互联网 IT</span></p>
-													<p>公司地点：<span class="mark">上海</span></p>
-													<p>公司寻求：<span class="mark">VC/天使投资</span></p>
-													<p><span class="mark" style="margin-right:15px">上海智慧文化传播</span><a href="#">详情点击>></a></p><p class="mark">项目介绍</p>智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播
-													上海智慧文化传播上海智慧文化传播上海智慧文化传播化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化					传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播上海智慧文化传播</p>		</div>
+													<div class="vip-style-pic"><a href="user.php?id=<?php echo $user[0]->id;?>"><img class="vip-style-p" src="<?php echo $user[0]->image;?>" /></a></div>
+													<p class="mark"><?php echo $user[0]->name;?></p>
+													<p>行业性质：<span class="mark"><?php echo $user[0]->industry;?></span></p>
+													<p>公司地点：<span class="mark"><?php echo $user[0]->address;?></span></p>
+													<p>公司寻求：<span class="mark"><?php echo $user[0]->item_type;?></span></p>
+													<p><span class="mark" style="margin-right:15px"><?php echo $user[0]->company_name;?></span><a href="user.php?id=<?php echo $user[0]->id;?>">详情点击>></a></p><p class="mark">项目介绍</p><?php echo $user[0]->item_description;?></p>		</div>
 											</div>
 										</div>											
 									</div>					

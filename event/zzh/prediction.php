@@ -28,10 +28,10 @@ $old = $db->query("select * from zzh_activity where is_old=1 order by priority a
 									<div class="left-application"><a href="#"></a></div>
 									<div class="left-nav">
 										<ul>
-											<li><a href="index.html" onfocus="this.blur()">增长会介绍</a></li>
-											<li><a href="vip.html" onfocus="this.blur()">会员专享</a></li>
-											<li><a href="prediction.html" class="bc" onfocus="this.blur()">活动专区</a></li>
-											<li><a href="cooperation.html" onfocus="this.blur()">合作伙伴</a></li>
+											<li><a href="index.php" onfocus="this.blur()">增长会介绍</a></li>
+											<li><a href="vip.php" onfocus="this.blur()">会员专享</a></li>
+											<li><a class="bc" href="prediction.php" onfocus="this.blur()">活动专区</a></li>
+											<li><a href="cooperation.php" onfocus="this.blur()">合作伙伴</a></li>
 											<li><a href="contact us.html" onfocus="this.blur()">联系我们</a></li>
 										</ul>
 									</div>

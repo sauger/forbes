@@ -1,5 +1,9 @@
-<?php 
+<?php
+	session_start();
 	include_once( dirname(__FILE__) .'/../../frame.php');
+	if(!isset($_SESSION['zzh'])){
+		 $_SESSION['zzh'] = rand_str();
+	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,10 +27,10 @@
 									<div class="left-application"><a href="on-line.html"></a></div>
 									<div class="left-nav">
 										<ul>
-											<li><a class="bc" href="index.html" onfocus="this.blur()">增长会介绍</a></li>
-											<li><a href="vip.html" class="bc" onfocus="this.blur()">会员专享</a></li>
-											<li><a href="prediction.html" onfocus="this.blur()">活动专区</a></li>
-											<li><a href="cooperation.html" onfocus="this.blur()">合作伙伴</a></li>
+											<li><a href="index.php" onfocus="this.blur()">增长会介绍</a></li>
+											<li><a href="vip.php" onfocus="this.blur()">会员专享</a></li>
+											<li><a class="bc" href="prediction.php" onfocus="this.blur()">活动专区</a></li>
+											<li><a href="cooperation.php" onfocus="this.blur()">合作伙伴</a></li>
 											<li><a href="contact us.html" onfocus="this.blur()">联系我们</a></li>
 										</ul>
 									</div>
@@ -55,8 +59,8 @@
 												  <tr>
 													<td width="30%" class="bb">姓 名<span class="star">*</span></td>
 													<td><input class="input-title reqired" type="text" maxlength="10" name="post[name]">
-													  <input type="radio" error_msg="性别" class="radio reqired" name="post[sex]" />先生
-											          <input type="radio" error_msg="性别" class="radio reqired" name="post[sex]" />女生</td>
+													  <input type="radio" error_msg="性别" class="radio reqired" name="post[sex]" value="先生"/>先生
+											          <input type="radio" error_msg="性别" class="radio reqired" name="post[sex]" value="女生"/>女生</td>
 											      </tr>
 												  <tr>
 												    <td class="bb">公司名称<span class="star">*</span></td>
@@ -64,7 +68,13 @@
 												    </tr>
 												  <tr>
 												    <td class="bb">所属类型<span class="star">*</span></td>
-												    <td><select class="input-title2 reqired" name="post[item_type]" /><option>投资机构-VC</option></select></td>
+												    <td>
+												    	<select class="input-title2 reqired" name="post[item_type]" />
+												    		<option value="风险投资">风险投资</option>
+												    		<option value="出售企业">出售企业</option>
+												    		<option value="天使投资">天使投资</option>
+												    	</select>
+												    </td>
 												    </tr>
 												  <tr>
 												    <td class="bb">所在地域<span class="star">*</span></td>
@@ -72,7 +82,7 @@
 											      </tr>
 												  <tr>
 												    <td class="bb">雇佣人数<span class="star">*</span></td>
-												    <td><input class="input-title2 reqired" type="text" maxlength="10" name="post[people_count]" /></td>
+												    <td><input class="input-title2 reqired" type="text" maxlength="10" name="post[company_size]" /></td>
 											      </tr>
 												  <tr>
 												    <td class="bb">联系人部门<span class="star">*</span></td>
@@ -84,7 +94,7 @@
 												    </tr>
 												  <tr>
 												    <td class="bb">联系人电话<span class="star">*</span></td>
-												    <td><input class="input-title2 reqired" type="text" maxlength="12" name="post[phone]" /></td>
+												    <td><input class="input-title2 reqired" type="text" maxlength="20" name="post[phone]" /></td>
 												    </tr>
 												  <tr>
 												    <td class="bb">手 机<span class="star">*</span></td>
@@ -92,7 +102,7 @@
 												    </tr>
 												  <tr>
 												    <td class="bb">传 真<span class="star">*</span></td>
-												    <td><input class="input-title2 reqired" type="text" name="post[fax]" maxlength="12" /></td>
+												    <td><input class="input-title2 reqired" type="text" name="post[fax]" maxlength="20" /></td>
 												    </tr>
 												  <tr>
 												    <td class="bb">电子邮箱<span class="star">*</span></td>
@@ -111,6 +121,7 @@
 													<td colspan="2" align="center"><a id="form_submit" href="#"><img src="images/submit.gif" /></a></td>
 												  </tr>
 												</table>
+												<input type="hidden" name="session" value="<?php echo $_SESSION['zzh'];?>">
 											</form>
 									  </div>
 									</div>												
