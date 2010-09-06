@@ -28,8 +28,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 	#top_menu_banner{width:1000px; height:32px; margin-top:2px; }
 		#top_menu_left{width:5px; height:31px; background:url(/images/index_two/menu1.jpg) no-repeat;}
 		#top_menu_content{width:990px; height:32px; background:url(/images/index_two/menu_pg.jpg) repeat-x;}
-			#top_menu_content div{width:8.9%; height:12px; margin-top:5px; border-left:1px solid #77BDDF; border-right:1px solid #036AB9; color:#ffffff; font-weight: bold; text-align: center;}
-			#top_menu_content div a{color:#ffffff; text-decoration:none;}
+			#top_menu_content div{width:8.9%; height:17px; margin-top:4px; }
+			#top_menu_content div a{width:100%; height:14px; margin-top:2px; line-height:14px; color:#ffffff; text-decoration:none; border-left:1px solid #77BDDF; border-right:1px solid #036AB9; color:#ffffff; font-weight: bold; text-align: center; float:left;}
 		#top_menu_right{width:5px; height:31px; background:url(/images/index_two/menu2.jpg) no-repeat;}
 	.top_menu2_banner{height:35px; margin-top: -7px;}
 		.top_menu2_left{width:7px; height:35px; background:url(/images/index_two/menu3.jpg) no-repeat;}

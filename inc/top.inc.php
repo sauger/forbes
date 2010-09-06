@@ -68,8 +68,8 @@ global $pos_name;
 		$navigation=$db->query('select name,id,parent_id from fb_navigation where id='.$nav);
 	?>
 	 <?php foreach($countnav as $k => $v){?>
-  		<div <?php if($k==0){?>style="border-left:0px;"<?php }elseif($k==10){?>style="border-right:0px;"<?php }?>>
-			<a href="<?php echo $v->href;?>" id="<?php echo $v->id; ?>"><?php echo $v->name;?></a>
+  		<div>
+			<a <?php if($k==0){?>style="border-left:0px;"<?php }elseif($k==10){?>style="border-right:0px;"<?php }?> href="<?php echo $v->href;?>" id="<?php echo $v->id; ?>"><?php echo $v->name;?></a>
 		</div>
  	 <?php }?>
 	</div>

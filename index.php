@@ -71,8 +71,8 @@
 						<?php for($i=0;$i<3;$i++){$pos_name = "index_zczx_".$i;?>
 						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
 						<?php }?>
-						<div class="guide_hr_val2" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link')?>><a href="">基金经理看市:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo mb_substr($pos_items->$pos_name->display,0,5,'utf-8')  ."...";?></a><a style="color:#666;margin:0;" href="">[更多]</a></div>
-						<div class="guide_hr_val2" <?php $pos_name = "index_gpzx0";show_page_pos($pos_name,'link')?>><a href="">股票之选:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+						<div class="guide_hr_val2" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link')?>><a href="review/list/145">基金经理看市:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo mb_substr($pos_items->$pos_name->display,0,5,'utf-8')  ."...";?></a><a style="color:#666;margin:0;" href="review/list/145">[更多]</a></div>
+						<div class="guide_hr_val2" <?php $pos_name = "index_gpzx0";show_page_pos($pos_name,'link')?>><a href="review/list/147">股票之选:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
 					</div>
 					<div class="ljz" style="margin-top:8px;">
 						<div class="ljz_title">精华导读</div>
@@ -393,7 +393,7 @@
 						<?php for($i=1;$i<5;$i++){$pos_name = "index_right_list".$i;?>
 						<div class="rt_tab" <?php if($i==1){?>style="display:block;"<?php }?>><?php show_page_img();?></div>
 						<?php }?>
-						<div class="normal_title" style="margin-top:10px;"><div>阳光财富观察</div></div>
+						<div class="normal_title" style="margin-top:10px;"><div>阳光财富观察</div><a target="_blank" href="/review/list/121">[...更多]</a></div>
 						<?php for($i=1;$i<3;$i++){
 							$pos_name = "index_dyn_list{$i}"; 
 							?>

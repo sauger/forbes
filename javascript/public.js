@@ -4,6 +4,8 @@ $(function(){
 		var index = $("#top_menu_content a").index($(this)[0])
 		$('.top_menu2_banner').hide();
 		$("#nav"+id).show();
+		$("#top_menu_content div").css('background','none');
+		$(this).parent().css('background','url(/images/index_two/top_back.jpg)');
 		if(id==25||id==51){
 			$("#nav"+id).css('float','right');
 		}else{
