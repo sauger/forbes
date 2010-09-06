@@ -7,6 +7,8 @@
 	$id = intval($_POST['id']);
     if($id!=''){
    		$partner->find($id);
+    }else{
+    	$partner->created_at = now();
     }
 	
 	$partner->update_attributes($_POST['post'],false);

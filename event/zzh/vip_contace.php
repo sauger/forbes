@@ -25,10 +25,10 @@ $investor->find($id);
 									<div class="left-application"><a href="#"></a></div>
 									<div class="left-nav">
 										<ul>
-											<li><a href="index.html" onfocus="this.blur()">增长会介绍</a></li>
-											<li><a href="vip.html" class="bc" onfocus="this.blur()">会员专享</a></li>
-											<li><a href="prediction.html" onfocus="this.blur()">活动专区</a></li>
-											<li><a href="cooperation.html" onfocus="this.blur()">合作伙伴</a></li>
+											<li><a href="index.php" onfocus="this.blur()">增长会介绍</a></li>
+											<li><a href="vip.php" onfocus="this.blur()">会员专享</a></li>
+											<li><a class="bc" href="prediction.php" onfocus="this.blur()">活动专区</a></li>
+											<li><a href="cooperation.php" onfocus="this.blur()">合作伙伴</a></li>
 											<li><a href="contact us.html" onfocus="this.blur()">联系我们</a></li>
 										</ul>
 									</div>
@@ -57,7 +57,8 @@ $investor->find($id);
 											 <p><span class="mark">投资方向：</span><?php echo $investor->invest_zone?></p>
 											 <p class="mark">个人介绍</p>
 										     <p><?php echo $investor->description;?></p>
-										</div>										
+										</div>
+										<!-- 								
 										<div class="r-m-t-two" style="margin-top:80px">
 											<div class="main" style="padding:10px 0;">
 												<p>
@@ -119,6 +120,7 @@ $investor->find($id);
 													</input>												
 												</div>												
 											</div>
+											 -->
 										</div>											
 									</div>					
 								<div class="right-bg-bot"><img src="images/right-bot.gif" /></div>

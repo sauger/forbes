@@ -16,7 +16,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 					.top_title a{color:#003399; text-decoration:none;}
 					.top_desc{width:220px; margin-top:15px; margin-left:10px; padding-bottom:10px; text-indent:2em; font-size:12px; line-height:1.5em; color:#ffffff}
 					.top_desc a{color:#333333; text-decoration:none;}
-					.top_news{width:235px; font-size:12px; line-height:2em; color:#ffffff; padding-left:15px; background:url('/images/index_two/top_link.gif') no-repeat 10px 9px;}
+					.top_news{width:235px; height:2em; font-size:12px; line-height:2em; color:#ffffff; padding-left:15px; background:url('/images/index_two/top_link.gif') no-repeat 10px 9px;}
 					.top_news a{color:#003399; text-decoration:none;}
 				#top_num{width:93px; height:25px; position:absolute; right:0px; bottom:0px;}
 					#top_num div{width:15px; height:15px; margin-left:2px; padding-top:4px; text-align:center; cursor:pointer;}

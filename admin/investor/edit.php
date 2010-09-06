@@ -83,6 +83,10 @@
 			<td class=td1>拼音首字母</td>
 			<td><input type="text" name="post[chinese_name]" class="required" value="<?php echo $record->chinese_name;?>"></td>
 		</tr>
+		<tr class=tr4>
+			<td class=td1>是否显示在首页</td>
+			<td><input type="checkbox" name="post[is_show]" <?php if($record->is_show==1)echo "checked='checked'"?>></td>
+		</tr>
 		<tr class="tr4">
 			<td  class=td1>投资人简介</td><td><?php show_fckeditor('post[description]','Admin',false,"100",$record->description);?></td>
 		</tr>

@@ -209,6 +209,8 @@ a:focus{text-decoration:underline}
 }
 
 .r-m-t-one img{
+	width:677px;
+	height:353px;
 	margin:10px 0;
 }
 .r-m-t-one a ,.r-m-t-two .more1 a{
@@ -229,6 +231,7 @@ a:focus{text-decoration:underline}
 	color:#FFFFFF;
 }
 .title-a img{
+	
 	margin:0 10px 2px 15px;
 }
 .title-tex img{

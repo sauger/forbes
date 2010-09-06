@@ -28,10 +28,10 @@ $old = $db->query("select * from zzh_activity where is_old=1 order by priority a
 									<div class="left-application"><a href="#"></a></div>
 									<div class="left-nav">
 										<ul>
-											<li><a href="index.html" onfocus="this.blur()">增长会介绍</a></li>
-											<li><a href="vip.html" onfocus="this.blur()">会员专享</a></li>
-											<li><a href="prediction.html" class="bc" onfocus="this.blur()">活动专区</a></li>
-											<li><a href="cooperation.html" onfocus="this.blur()">合作伙伴</a></li>
+											<li><a href="index.php" onfocus="this.blur()">增长会介绍</a></li>
+											<li><a href="vip.php" onfocus="this.blur()">会员专享</a></li>
+											<li><a class="bc" href="prediction.php" onfocus="this.blur()">活动专区</a></li>
+											<li><a href="cooperation.php" onfocus="this.blur()">合作伙伴</a></li>
 											<li><a href="contact us.html" onfocus="this.blur()">联系我们</a></li>
 										</ul>
 									</div>
@@ -57,15 +57,15 @@ $old = $db->query("select * from zzh_activity where is_old=1 order by priority a
 										<p class="t-title"><img src="images/t-list.gif" /><strong>活动预告</strong></p>
 										<div class="main">
 											<div class="more-activites">
-												<img class="pic" src="images/pic.gif" />
-												<p><span class="mark">活动名称:</span>2010中国最佳品牌发布会</p>
-												<p><span class="mark">活动日期：</span>2010年7月6日</p>
-												<p><span class="mark">活动地点：</span>北京朝阳区亮马桥路50号凯宾斯基大酒店</p>
-												<p style="height:90px;overflow:hidden;line-height:22px;"><span class="mark">活动介绍：</span><a href="#">活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍活动介绍</a></p>
-												<p class="right"><a href="#"><strong>查看详情>></strong></a></p>	
+												<img class="pic" src="<?php echo $pos_items->$pos_name->image1;?>" />
+												<p><span class="mark">活动名称:</span><?php echo $pos_items->$pos_name->display;?></p>
+												<p><span class="mark">活动日期：</span><?php echo $pos_items->$pos_name->title;?></p>
+												<p><span class="mark">活动地点：</span><?php echo $pos_items->$pos_name->href;?></p>
+												<p style="height:90px;overflow:hidden;line-height:22px;"><span class="mark">活动介绍：</span><a href="<?php echo $pos_items->$pos_name->static_href?>"><?php echo $pos_items->$pos_name->description;?></a></p>
+												<p class="right"><a href="<?php echo $pos_items->$pos_name->static_href;?>"><strong>查看详情>></strong></a></p>	
 											</div>
-											<p><span class="mark">报名资格：</span>增长会员/所有用户</p>
-											<p><span class="mark">报名资格：</span>增长会员免费（非增长会员300元/人）
+											<p><span class="mark">报名资格：</span><?php echo $pos_items->$pos_name->alias?></p>
+											<p><span class="mark">报名资格：</span><?php echo $pos_items->$pos_name->reserve?>
 										</div>																					
 									</div>
 								<?php }?>

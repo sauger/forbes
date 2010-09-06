@@ -7,6 +7,8 @@
 	$id = intval($_POST['id']);
     if($id!=''){
    		$activity->find($id);
+    }else{
+    	$activity->created_at = now();
     }
 	
 	$activity->update_attributes($_POST['post'],false);

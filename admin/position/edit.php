@@ -58,6 +58,7 @@
 		$fields['index_subject']=array("标题","描述","mouseover","链接","静态链接","图片","","","专题名","专题链接","说明");
 		$fields['index_cate_news']=array("标题","","mouseover","链接","静态链接","","","","类别名","类别链接","说明");
 		$fields['index_subject'] = array("标题","描述","mouseover","链接","静态链接","图片","","过期时间","图片名","","说明");
+		$fields['zzh'] = array("活动名称","活动介绍","活动日期","活动地点","查看详情","图片","","","参会资格","参会费用","");
 		$names = array_key_exists($_GET['name'],$fields) ?  $fields[$_GET['name']] : $fields['default'];  
 		
 	?>
