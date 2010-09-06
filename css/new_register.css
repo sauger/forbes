@@ -7,9 +7,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #register .title_left{margin-left:50px; color:#050000; font-weight:bold;}
 #register .title_right{margin-right:10px; color:#313132; font-weight:bold; float:right;}
 #register .title_right .content{height:23px; padding-left:15px; padding-right:10px; text-align:center;}
-#register .title_right .content.select{background:#f4d14c;}
+#register .title_right .content1{height:23px; padding-left:15px; padding-right:10px; text-align:center; background:#f4d14c;}
 #register .title_right .arrow{width:13px; height:23px; background:url(/images/register/title_bg1.jpg) no-repeat;}
-#register .title_right .arrow.select{background:url(/images/register/title_bg2.jpg) no-repeat;}
+#register .title_right .arrow1{width:13px; height:23px; background:url(/images/register/title_bg2.jpg) no-repeat;}
 table{margin-top:30px; margin-left:140px; float:left; display:inline;}
 tr{height:40px; line-height:40px; }
 .td1{width:80px; color:#333333; font-size:13px; line-height:22px;  }

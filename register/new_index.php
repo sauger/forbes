@@ -23,8 +23,8 @@
 			<div class="title_left">新用户注册</div>
 			<div class="title_right">
 				<div class="content">注册流程</div>
-				<div class="content select">Step1: 填写个人基本信息</div>
-				<div class="arrow select"></div>
+				<div class="content1">Step1: 填写个人基本信息</div>
+				<div class="arrow1"></div>
 				<div class="content">Step2: 接收验证mail</div>
 				<div class="arrow"></div>
 				<div class="content">Step3: 完善个人资料</div>
