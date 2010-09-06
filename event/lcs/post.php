@@ -18,8 +18,9 @@
 	foreach($_POST as $normal){
 		if(is_array($normal)&&count($normal)==4){
 			foreach($normal as $long){
-				if(strlen($long)>600){
-					redirect('/error/');
+				if(strlen($long)>3000){
+					alert("心得或者奖励输入太长，请重新输入");
+					redirect('EntryForm.php');
 					die(); 
 				}
 			}
