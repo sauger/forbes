@@ -1,3 +1,5 @@
+div{margin:0; padding:0; float:left; display:inline;}
+
 #top_div{width:1000px; overflow:hidden;}
 #top_img_left{width:728px; font-size:0;}
 #top_img_left img{width:728px; height:90px; border:0;}

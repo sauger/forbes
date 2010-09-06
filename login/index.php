@@ -14,7 +14,7 @@
 		<?php
 			use_jquery();
 			js_include_tag('public');
-			css_include_tag('comlogin','public');
+			css_include_tag('public','comlogin');
 			validate_form('form_login');
 		?>
 </head>
