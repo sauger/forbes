@@ -13,8 +13,8 @@
 	<meta name="description" content="<?php echo $seo[0]->description ?>" />
 	<?php
 		use_jquery();
-		js_include_tag('index_two','top2','jquery.colorbox-min.js');
-		css_include_tag('index_two','top2','colorbox');
+		js_include_tag('index_two','public','jquery.colorbox-min.js');
+		css_include_tag('index_two','public','colorbox');
 		global $pos_items;
 		init_page_items();
 		$category = new category_class('news');
@@ -23,7 +23,7 @@
 <body>
 	<div id=ibody>
 	<?php
-		include_top2();
+		include_top();
 	?>
 		<div id="content">
 			<div id="content_left">
@@ -483,7 +483,7 @@
 		
 		
 		
-		<?php include_bottom2();?>
+		<?php include_bottom();?>
 	</div>
 </body>
 </html>

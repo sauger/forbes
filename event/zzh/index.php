@@ -33,7 +33,7 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 										</ul>
 									</div>
 									<div class="left-calendar"></div>
-									<div id="dialog">阿迪四哦放假啊死哦的房间死哦地方速度哦伐阿斯佛</div>
+									<div id="dialog"><div style="opacity:1;">阿迪四哦放假啊死哦的房间死哦地方速度哦伐阿斯佛</div></div>
 									<div class="left-part">
 										<div class="left-part-top">部分会员</div>
 										<div class="left-part-c">
@@ -101,12 +101,15 @@ $(function() {
 		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
 		dateFormat: 'yy-mm-dd'
 	});
-	var top = $(".ui-datepicker-today").offset().top;
+	var top = $(".ui-datepicker-today").offset().top+20;
 	var left = $(".ui-datepicker-today").offset().left;
 	$("#dialog").dialog({
 		draggable: false,
 		position:[left,top],
-		width:150
+		width:180,
+		height:130,
+		resizable: false
 	});
+	$(".ui-dialog").css('top',top);
 });
 </script>

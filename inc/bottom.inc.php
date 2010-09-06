@@ -3,79 +3,113 @@
 			include_once(dirname(__FILE__).'/../frame.php');
 		init_page_items();
 		$db=get_db();
-?>		
-		<div id=ibottom>
-			<div id=b_top>
-				<div class=b_box>
-					<div <?php show_page_pos('lists_td1_0'); $posname='lists_td1_0';?>><a href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('lists_td1_'.$i); $posname='lists_td1_'.$i;?>><a href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php }?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('billinaires_td1_0'); $posname='billinaires_td1_0'; ?>><a href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('billinaires_td1_'.$i); $posname='billinaires_td1_'.$i;?>><a   href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('investment_td1_0'); $posname='investment_td1_0';?>><a href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('investment_td1_'.$i); $posname='investment_td1_'.$i;?>><a href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('business_td1_0'); $posname='business_td1_0'; ?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('business_td1_'.$i); $posname='business_td1_'.$i;?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('business_td2_0'); $posname='business_td2_0'; ?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('business_td2_'.$i); $posname='business_td2_'.$i;?>><a href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('enterpreneur_td1_0'); $posname='enterpreneur_td1_0'; ?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('enterpreneur_td1_'.$i); $posname='enterpreneur_td1_'.$i;?>><a href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('tech_td1_0'); $posname='tech_td1_0';?>><a href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('tech_td1_'.$i); $posname='tech_td1_'.$i;?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('life_td1_0'); $posname='life_td1_0';?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('life_td1_'.$i); $posname='life_td1_'.$i;?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('life_td2_0'); $posname='life_td2_0';?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('life_td2_'.$i); $posname='life_td2_'.$i;?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('column_td1_0'); $posname='column_td1_0';?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('column_td1_'.$i); $posname='column_td1_'.$i;?>><a   href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-				<div class=b_v></div>
-				<div class=b_box>
-					<div <?php show_page_pos('member_td1_0'); $posname='member_td1_0';?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php if($pos_items->$posname->display!=''){echo '['.$pos_items->$posname->display.']';} ?></a></div>
-					<?php for($i=1;$i<7;$i++){ ?><div class=lists <?php show_page_pos('member_td1_'.$i); $posname='member_td1_'.$i;?>><a  href="<?php echo $pos_items->$posname->href; ?>"><?php echo $pos_items->$posname->display; ?></a></div><?php } ?>
-				</div>
-			</div>
-			<div id=td5><?php for($i=0;$i<10;$i++){ ?><a <?php show_page_pos('forbes_td5_'.$i); $posname='forbes_td5_'.$i;?> href="<?php echo $pos_items->$posname->href; ?>">　<?php echo $pos_items->$posname->display; ?><?php if($i<9){ ?>　-<?php }} ?></a></div>
-		</div>
-		<div <?php show_page_pos('forbes_bottom_about'); $posname='forbes_bottom_about';?> class=ibabout><span><?php echo $pos_items->$posname->description; ?></span></div>
-	<?php js_include_tag('get_ad')?>
-<span style="display:none;">
-<script src="http://s9.cnzz.com/stat.php?id=2154547&web_id=2154547" language="JavaScript"></script>
-</span>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-16303233-1");
-pageTracker._trackPageview();
-} 
-catch(err) {}
-</script>
+		global $category;
+if(empty($category)){
+	$category = new category_class('news');
+}
+?>	
+<div id="bottom_banner">
+	<div id="bottom_top"></div>
+	<div id="bottom_center">
+	<div class="bottom_value">
+			<div class="main_cate">[<a target="_blank" href="/list/">榜单</a>]</div>
+			<div class="sub_cate"><a href="">富豪榜</a></div>
+			<div class="sub_cate"><a href="">城市榜</a></div>
+			<div class="sub_cate"><a href="">公司榜</a></div>
+			<div class="sub_cate"><a href="">体育榜</a></div>
+			<div class="sub_cate"><a href="">人物</a></div>
+			<div class="sub_cate"><a href="">教育榜</a></div>
+	</div>
+	<div class="bottom_value">
+			<div class="main_cate">[<a target="_blank" href="/billionaires/">富豪</a>]</div>
+			<?php 
+				$c_ids = $category->children_map(42,false);
+				$c_id = implode(',',$c_ids);
+				foreach($c_ids as $cid){
+			?>
+			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
+			<?php }?>
+	</div>
+	<div class="bottom_value">
+			<div class="main_cate">[<a target="_blank" href="/investment/">投资</a>]</div>
+			<?php 
+				$c_ids = $category->children_map(5,false);
+				$c_id = implode(',',$c_ids);
+				foreach($c_ids as $cid){
+			?>
+			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
+			<?php }?>
+	</div>
+	<div class="bottom_value">
+			<div class="main_cate">[<a target="_blank" href="/entrepreneur/">创业</a>]</div>
+			<?php 
+				$c_ids = $category->children_map(2,false);
+				$c_id = implode(',',$c_ids);
+				foreach($c_ids as $cid){
+			?>
+			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
+			<?php }?>
+	</div>
+	<div class="bottom_value">
+			<div class="main_cate">[<a target="_blank" href="/tech/">科技</a>]</div>
+			<?php 
+				$c_ids = $category->children_map(4,false);
+				$c_id = implode(',',$c_ids);
+				foreach($c_ids as $cid){
+			?>
+			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
+			<?php }?>
+			<div style="float:left; display:none">clear_float</div>
+			<div class="top_bottom"></div>
+			<div class="bottom_bottom"></div>
+	</div>
+	<div class="bottom_value">
+			<div class="main_cate">[<a target="_blank" href="/city/">城市</a>]</div>
+			<?php 
+				$c_ids = $category->children_map(16,false);
+				$c_id = implode(',',$c_ids);
+				foreach($c_ids as $cid){
+			?>
+			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
+			<?php }?>
+			<div style="float:left; display:none">clear_float</div>
+			<div class="top_bottom"></div>
+			<div class="bottom_bottom"></div>
+	</div>
+	<div class="bottom_value">
+			<div class="main_cate">[<a target="_blank" href="/life/">生活</a>]</div>
+			<?php 
+				$c_ids = $category->children_map(81,false);
+				$c_id = implode(',',$c_ids);
+				foreach($c_ids as $cid){
+			?>
+			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
+			<?php }?>
+			<div style="float:left; display:none">clear_float</div>
+			<div class="top_bottom"></div>
+			<div class="bottom_bottom"></div>
+	</div>
+	<div class="bottom_value" style="border-right:0px;">
+			<div class="main_cate">[<a target="_blank" href="/business/">商业</a>]</div>
+			<?php 
+				$c_ids = $category->children_map(3,false);
+				$c_id = implode(',',$c_ids);
+				foreach($c_ids as $k => $cid){
+			?>
+			<div class="sub_cate"><a href="/review/list/<?php echo $cid;?>"><?php echo $category->find_name_by_id($cid);?></a></div>
+			<?php }?>
+			<div style="float:left; display:none">clear_float</div>
+			<div class="top_bottom"></div>
+			<div class="bottom_bottom"></div>
+	</div>
+	</div>
+</div>
+<div id="bottom">
+<?php for($i=0;$i<10;$i++){ ?><a <?php show_page_pos('forbes_td5_'.$i); $posname='forbes_td5_'.$i;?> href="<?php echo $pos_items->$posname->href; ?>">　<?php echo $pos_items->$posname->display; ?><?php if($i<9){ ?>　-<?php }} ?></a>
+</div>
+<div id="bottom_word">
+	<div>本站翻译支持由东西网提供<a href="http://www.dongxi.net">http://www.dongxi.net</a></div>
+	Copyright @ 2010 Forbes.com Inc 福布斯公司 版权所有<br>
+	沪ICP备09033453号
+</div>
+<?php js_include_tag('get_ad')?>

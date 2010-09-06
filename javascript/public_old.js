@@ -1,44 +1,22 @@
 $(function(){
-	$("#top_menu_content a").hover(function(){
-		var id = $(this).attr('id');
-		var index = $("#top_menu_content a").index($(this)[0])
-		$('.top_menu2_banner').hide();
-		$("#nav"+id).show();
-		if(id==25||id==51){
-			$("#nav"+id).css('float','right');
-		}else{
-			$("#nav"+id).css('margin-left',(index*88.5)+'px');
-		}
-	});
-	
-	$(".bottom_value").hover(function(){
-		$(this).find(".top_bottom").show();
-		$(this).find(".bottom_bottom").show();
-	},function(){
-		$(this).find(".top_bottom").hide();
-		$(this).find(".bottom_bottom").hide();
-	});
-	
-	$(".top_bottom").click(function(){
-		$(this).parent().find(".sub_cate:hidden:last").show();
-	});
-	$(".bottom_bottom").click(function(){
-		if($(this).parent().find(".sub_cate:visible").length>7){
-			$(this).parent().find(".sub_cate:visible:first").css('display','none');
-		}
-	});
-	
-	$("#top_select").click(function(){
+	if(location.host == 'www.ctu.cn') {
+		location.href = "http://www.forbeschina.com";
+		return;
+	}
+	$(".search").click(function(){
 		top_search();
 	});
 	
-	$('#top_input').keypress(function(e){
+	$('#search_text').keypress(function(e){
 		if(e.keyCode == 13){
 			top_search();
 		}
 	});
+	
 });
 
+
+/* top select */
 var selects = document.getElementsByName('selsearch');
 var isIE = (document.all && window.ActiveXObject && !window.opera) ? true : false;
 function gebid(id) {	return document.getElementById(id);}
@@ -186,3 +164,38 @@ window.onload = function(e) {
 		}
 	}
 }
+
+/* top select */
+
+
+/* top favor*/
+var isIE=(document.all&&document.getElementById&&!window.opera)?true:false;
+var isMozilla=(!document.all&&document.getElementById&&!window.opera)?true:false;
+var isOpera=(window.opera)?true:false;
+var seturl='url(#default#homepage)';
+var weburl='http://www.forbeschina.com';
+var webname='福布斯中文网';
+
+
+function myhomepage() {
+	if(isMozilla){
+	   try {netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");}
+	   catch (e){alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]设置为'true'");return}
+	   var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+	   prefs.setCharPref('browser.startup.homepage',weburl);
+	}
+	if(isIE){
+	   this.homepage.style.behavior=seturl;this.homepage.sethomepage(weburl);
+	}
+}
+
+function addfavorite()
+{
+
+	if(isMozilla){
+	   if (document.all){ window.external.addFavorite(weburl,webname);}
+	   else if (window.sidebar){ window.sidebar.addPanel(webname, weburl,"");}
+	}
+	if(isIE){window.external.AddFavorite(weburl, webname);}
+}
+/* top favor*/

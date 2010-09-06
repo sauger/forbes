@@ -511,6 +511,15 @@ ul.r-m-t-t-main li a.aa-pic{
 }
 
 .ui-datepicker-header{
+	background-image:none;
+	border:0;
+}
+
+.ui-dialog{
+	background:url(../images/zzh_tm.png) !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src=/event/zzh/images/zzh_tm.png);
+	border:2px solid #DFD37D;
+}
+.ui-dialog-titlebar{
 	background:none;
 	border:0;
 }

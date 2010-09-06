@@ -1,0 +1,107 @@
+body{background:#ffffff;}
+p{margin:0; padding:0;}
+ul{margin:0; padding:0;}
+li{margin:0; padding:0;} 
+div{margin:0; padding:0; float:left; display:inline;}
+div.ad_banner{position: relative;}
+#top_{width:1000px;  margin:0 auto; position:relative;}
+#football2{width:126px; height:63px; position:absolute; bottom:-1px; _bottom:-2px; right:100px;}
+#football_hy{width:212px; height:27px; background-color:#C1E1EE; background:url(/images/index/football_hy.gif); float:right;}
+#football_member{width:52px; height:12px; margin-top:12px; margin-left:150px; background:url(/images/public/member.png) no-repeat;float:left;}
+#top_banner{width:778px; height:90px; margin-top:8px; padding:1px; border:1px solid #cccccc;}
+
+#top_function{width:215px; height:187px; margin-top:8px; font-size:12px; overflow:hidden; background:url(/images/public/bg_function.png) no-repeat; float:right;}
+#top_function .user_btn{width:200px; height:23px; margin-top:1px; margin-left:15px; color:#ffffff; line-height:22px; overflow:hidden;}
+#top_function .user_btn a{margin-right:5px; font-size:12px; color:#ffffff; text-decoration:none; }
+#top_function .user_btn #uname_span{width:104px; height:22px; overflow:hidden;}
+#top_function #magazine_title{width:130px; height:16px; line-height:16px; margin-top:6px; margin-left:13px; color:#ffffff; font-size:14px; font-weight:bold;}
+#top_function #magazine_title_more{width:50px; height:14px; margin-top:8px; margin-right:15px; line-height:14px; float:right;}
+#top_function #magazine_title_more a{color:#ffffff; text-decoration:none;}
+#top_function #magazine_pic{width:72px; height:93px; margin-top:14px; margin-left:10px;}
+#top_function #magazine_description{width:122px; height:60px; margin-top:15px; margin-left:8px; color:#898989; line-height:20px; overflow:hidden;}
+#magazine_description a{color:#727272;text-decoration:none; font-weight:bold;}
+#top_function #magazine_btn{width:122px; height:23px; margin-top:5px; margin-left:5px;}
+#top_function #magazine_btn a{float:left; display:inline;}
+
+
+#top_logo{width:785px; height:90px; margin-top:3px; background:url(/images/public/bg1.jpg) repeat-x;}
+#top_logo #border{width:2px; height:90px; background:url(/images/public/border.jpg) no-repeat;}
+#top_logo #logo{width:170px; height:75px; margin-top:7px; margin-left:15px;}
+#top_logo .input{width:160px; height:22px;  margin-top:37px; border:1px solid #99CCFF; background:#ffffff; float:left;}
+#top_logo .search{width:83px; height:26px; margin-top:38px; margin-left:5px; border:0px; color:#ffffff; line-height:26px; background:url(/images/public/search_bg.jpg) no-repeat;}
+
+#navigation{width:1000px; height:35px; margin-top:1px; background:url(/images/public/bg2.jpg) repeat-x;}
+#navigation .menu{width:75px; height:35px; text-align:center; overflow:hidden;}
+
+#navigation .vertical{width:2px; height:25px; margin-top:5px; background:url(/images/public/vertical.jpg);}
+#navigation .nav{width:75px; height:35px; cursor:pointer;  background:none; margin:0 auto;}
+
+#navigation .menu #picindex{background:url(/images/public/m_index2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_index2.png);}
+#navigation .menu #piclist{background:url(/images/public/m_lists2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_lists2.png);}
+#navigation .menu #picbillionaires{background:url(/images/public/m_billionaires2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_billionaires2.png);}
+#navigation .menu #picinvestment{background:url(/images/public/m_investment2.png) no-repeat center! important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_investment2.png);}
+#navigation .menu #picentrepreneur{background:url(/images/public/m_entrepreneur2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_entrepreneur2.png);}
+#navigation .menu #picbusiness{background:url(/images/public/m_business2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_business2.png);}
+#navigation .menu #pictech{background:url(/images/public/m_tech2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_tech2.png);}
+#navigation .menu #piccity{background:url(/images/public/m_city2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_city2.png);}
+#navigation .menu #piclife{background:url(/images/public/m_life2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_life2.png);}
+#navigation .menu #piccolumn{background:url(/images/public/m_column2.png) no-repeat center !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src=/images/public/m_column2.png);}
+
+#navigation #top_function2{width:214px; height:29px; margin-top:1px; background:url(/images/public/bg3.jpg) no-repeat; background-position:bottom; float:right;}
+#navigation #member{width:52px; height:12px; margin-top:12px; margin-left:40px; background:url(/images/public/member.png) no-repeat;float:left;}
+#navigation #magazine{width:52px; height:12px; margin-top:12px; margin-right:10px; cursor:pointer; background:url(/images/public/magazine.png); float:right;}
+
+#navigation2{width:1000px; height:27px; background:#C1E1EE;}
+#navigation2 .nav2{ height:27px; font-size:12px;  line-height:27px; margin-left:10px; display:none;}
+#navigation2 .nav2 a{color:#003399; text-decoration:none;}
+#navigation2 .nav2 a:hover{color:#000000;}
+#navigation2 #football{width:208px; height:26px; float:right;}
+
+#navigation2 #nav10{margin-left:100px}
+#navigation2 #nav15{margin-left:420px;}
+#navigation2 #nav21{margin-left:160px;}
+#navigation2 #nav38{margin-left:220px;}
+#navigation2 #nav25{margin-left:40px;}
+#navigation2 #nav51{margin-left:220px;}
+#navigation2 #nav56{margin-left:645px;}
+
+.forbes_search{width:102px; height:28px; font-size:12px; background:url(/images/public/tm2008-select.gif) no-repeat 0 0; margin-top:36px; margin-left:73px; overflow:hidden;}
+.forbes_search .iselect{width:102px; height:28px; display:none;}
+
+.forbes_search div.tag_select{width:82px; height:27px; padding:0 10px; color:#000; line-height:26px; background:url(/images/public/tm2008-select.gif) no-repeat 0 0;  display:block;}
+.forbes_search div.tag_select_hover{width:82px; height:28px;  padding:0 10px; color:#000; line-height:28px; background:url(/images/public/tm2008-select.gif) no-repeat 0 -28px;  display:block;}
+.forbes_search div.tag_select_open{width:82px; height:27px; padding:0 10px; color:#000; line-height:26px; background:url(/images/public/tm2008-select.gif) no-repeat 0 -56px;  float:none; display:block;}
+
+.forbes_search ul.tag_options{width:80px; margin-left:1px; padding:0 0 0; list-style:none; background:url(/images/public/tm2008-select.gif) no-repeat -103px 0; border-bottom:1px solid #56A2D1; position:absolute;}
+.forbes_search ul.tag_options li{width:60px; height:26px; padding:0 10px; color:#000; line-height:26px; text-decoration:none;  background:url(/images/index/tm2008-select.gif) repeat-y -102px 0; float:none; display:block;}
+
+.forbes_search ul.tag_options li.open_hover{color:#000; background:url(/images/public/tm2008-select.gif) no-repeat -1px -113px;}
+.forbes_search ul.tag_options li.open_selected{color:#19555F; background:url(/images/public/tm2008-select.gif) no-repeat -1px -84px;}
+
+#ibottom{width:1000px; height:184px; margin-top:20px; font-size:12px;  background:url(/images/public/bottom_bg.jpg) repeat-x;}
+#ibottom a{color:#ffffff; text-decoration:none;}
+#ibottom .b_v{width:2px; height:133px; margin-top:5px; background:url(/images/public/bottom_vertical.jpg) no-repeat; filter: Alpha(Opacity=50);}
+#ibottom #b_top{width:1000px; height:138px; margin-top:5px; overflow:hidden;}
+#ibottom .b_box{width:80px; height:138px; margin-left:8px; line-height:20px;  text-align:left; overflow:hidden;}
+#ibottom .b_box div{width:100%; height:20px;}
+#ibottom .b_box a{font-weight:bold;}
+#ibottom .lists{width:100%; height:20px; margin-left:2px;}
+#ibottom .lists a{font-weight:normal;}
+
+#ibottom #td5{width:1000px; height:30px; margin-top:5px; line-height:30px; text-align:center; color:#ffffff;}
+.ibabout{width:1000px; height:48px; margin-top:20px; margin-bottom:10px; line-height:16px; font-size:12px; text-align:center; overflow:hidden;}
+
+.public_top1{width:300px; height:30px; background:url(/images/public/bg_top1.jpg) no-repeat; overflow:hidden;}
+.public_bottom1{width:300px; height:10px;  background:url(/images/public/bg_bottom1.jpg) no-repeat; overflow:hidden;}
+.public_caption1{height:20px;  margin-left:15px; margin-top:8px; font-size:14px; font-weight:bold; color:#999999;}
+.public_caption1 span{margin-left:10px; font-family:arial; font-weight:normal; font-size:11px;}
+.public_more1{width:18px; height:8px; margin-top:11px; margin-right:10px; background:url(/images/public/public_more1.jpg) no-repeat; line-height:18px; float:right;}
+.public_box1{width:298px; border-left:1px solid #dfdfdf;  border-right:1px solid #dfdfdf; line-height:20px; overflow:hidden;}
+
+.page_span{height:15px; padding-left:7px; padding-right:7px; font-family:Arial; margin:0; font-size:13px; line-height:15px; border-right:1px solid #666666;}
+.page_span a{color:#003399; text-decoration:none;}
+.page_span2{height:15px; padding-left:7px; padding-right:7px; font-family:Arial; margin:0; font-weight:bolder; font-size:13px; line-height:15px; border-right:1px solid #666666;}
+.page_span2 a{color:#000; text-decoration:none;}
+.paginate_botton{height:16px; color:#666666; font-family:Arial; margin-left:12px; font-size:13px; line-height:16px;}
+.paginate_botton a{color:#003399; text-decoration:none;}
+#bread a:hover{text-decoration:underline; color:#246BB0;}
