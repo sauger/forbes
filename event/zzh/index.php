@@ -46,7 +46,7 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 										<p><a href="<?php echo $today[0]->link;?>">点击了解活动详情</a></p>
 										<?php
 											}
-											$other = $db->query("select * from zzh_activity where TO_DAYS(NOW()) != TO_DAYS(time) and month(now())=month(time)");
+											$activity = $db->query("select * from zzh_activity where month(now())=month(time)");
 										?>
 									</div>
 									<div class="left-part">
@@ -106,6 +106,8 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 </body>
 </html>
 <script>
+var day_array = new Array(1,2);
+
 $(function() {
 	$(".left-calendar").datepicker({
 		changeMonth: true,
@@ -116,34 +118,52 @@ $(function() {
 		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
 		dateFormat: 'yy-mm-dd'
 	});
+	init_month();
 	<?php if(!empty($today)){?>
 	show_today();
-	$(".ui-datepicker-today a").live('click',function(){
-		show_today();
-	});
-	<?php }?>
-	<?php 
-		!$other && $other = array();
-		foreach($other as $d){
-			$day = substr($d->time,8,2);
-			$day = intval($day);
-	?>
-	$(".ui-state-default").each(function(){
-		if($(this).text()==<?php echo $day;?>){
-			$(this).css('color','#ff0000');
-			$(this).addclass('activity');
-		}
-	});
 	<?php }?>
 
-	$(".activity").live('click',function(){
-		
+	$(".ui-state-default").live('click',function(){
+		if($.inArray($(this).text(),day_array)>-1){
+			get_activity($(this),$(this).text());
+		}
+		init_day();
+	});
+
+	$(".ui-datepicker-month").live('change',function(){
+		init_month();
+	});
+
+	$(".ui-datepicker-year").live('change',function(){
+		init_month();
+	});
+
+	$(".ui-icon").live('click',function(){
+		init_month();
 	});
 });
 
+function init_month(){
+	var month = $(".ui-datepicker-month").val();
+	var year = $(".ui-datepicker-year").val();
+	$.post('init_month.php',{'month':month,'year':year},function(data){
+		day_array = data.split("|");
+		init_day();
+	});
+}
+
+function init_day(){
+	$(".ui-state-default").each(function(){
+		if($.inArray($(this).text(),day_array)>-1){
+			$(this).css('color','#ff0000');
+		}
+	});
+}
+
+
 function show_today(){
-	var top = $(".ui-datepicker-today").offset().top+20;
-	var left = $(".ui-datepicker-today").offset().left;
+	var top = $(".hasDatepicker").offset().top+120;
+	var left = $(".hasDatepicker").offset().left+30;
 	$("#dialog").dialog({
 		draggable: false,
 		position:[left,top],
@@ -152,5 +172,28 @@ function show_today(){
 		resizable: false
 	});
 	$(".ui-dialog").css('top',top);
+}
+
+function show_activity(ob){
+	var top = $(".hasDatepicker").offset().top+120;
+	var left = $(".hasDatepicker").offset().left+30;
+	$("#dialog").dialog({
+		draggable: false,
+		position:[left,top],
+		width:180,
+		height:130,
+		resizable: false
+	});
+	$(".ui-dialog").css('top',top);
+}
+
+function get_activity(ob,day){
+	var month = $(".ui-datepicker-month").val();
+	var year = $(".ui-datepicker-year").val();
+	$("#dialog").load('get_activity.php?day='+day+'&month='+month+'&year='+year,function(){
+		show_activity(ob);
+		init_day();
+	});
+	
 }
 </script>
