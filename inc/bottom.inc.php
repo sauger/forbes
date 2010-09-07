@@ -3,10 +3,7 @@
 			include_once(dirname(__FILE__).'/../frame.php');
 		init_page_items();
 		$db=get_db();
-		global $category;
-if(empty($category)){
 	$category = new category_class('news');
-}
 ?>	
 <div id="bottom_banner">
 	<div id="bottom_top"></div>
@@ -22,7 +19,7 @@ if(empty($category)){
 	</div>
 	<div class="bottom_value">
 			<div class="main_cate">[<a target="_blank" href="/billionaires/">富豪</a>]</div>
-			<?php 
+			<?php
 				$c_ids = $category->children_map(42,false);
 				$c_id = implode(',',$c_ids);
 				foreach($c_ids as $cid){
