@@ -33,7 +33,12 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 										</ul>
 									</div>
 									<div class="left-calendar"></div>
-									<div id="dialog"><div style="opacity:1;">阿迪四哦放假啊死哦的房间死哦地方速度哦伐阿斯佛</div></div>
+									<div id="dialog">
+										<?php 
+											$db = get_db();
+											$today = $db->query("select * from zzh_activity where TO_DAYS(NOW()) = TO_DAYS(time)");
+										?>
+									</div>
 									<div class="left-part">
 										<div class="left-part-top">部分会员</div>
 										<div class="left-part-c">
