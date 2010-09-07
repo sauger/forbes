@@ -102,9 +102,9 @@ for($i=0;$i< $len;$i++){
 	}
 }
 
-#update_pos("城市",3,"index_city",true,true);
-update_pos("早餐资讯",3,"index_zczx_",true,true);
-update_pos("基金经理看市",1,"index_jjjl",true,true);
-update_pos("股票之选",1,"index_gpzx",true,true);
+update_pos("城市",3,"index_city",true,true);
+#update_pos("早餐资讯",3,"index_zczx_",true,true);
+#update_pos("基金经理看市",1,"index_jjjl",true,true);
+#update_pos("股票之选",1,"index_gpzx",true,true);
 update_pos("阳光财富观察",2,"index_dyn_list",true,true);
 ?>
