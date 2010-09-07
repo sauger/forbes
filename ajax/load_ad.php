@@ -36,7 +36,7 @@ function generate_ad($ad){
 			$width = $size[0]-2;
 			$height = $size[1]-2;
 			$str = "<a href='/ajax/ad_bridge.php?code={$ad->code}' target='_blank'>";
-			$str .= "<img width='{$width}' height='{$height}' style='border:1px soid #000;' src='{$ad->image}' />";
+			$str .= "<img width='{$width}' height='{$height}' style='border:1px solid #000;' src='{$ad->image}' />";
 			$str .= "</a>";
 		break;
 		case 'video':
