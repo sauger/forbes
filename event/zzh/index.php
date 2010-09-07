@@ -37,6 +37,11 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 										<?php 
 											$db = get_db();
 											$today = $db->query("select * from zzh_activity where TO_DAYS(NOW()) = TO_DAYS(time)");
+											if(!empty($today)){
+										?>
+										<p>活动名称：</p>
+										<?php
+											}
 										?>
 									</div>
 									<div class="left-part">
