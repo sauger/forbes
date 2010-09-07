@@ -1,5 +1,6 @@
 <?php 
 include_once('../../frame.php');
+@header('Content-type: text/html;charset=UTF-8');
 
 if(!is_post()){
 	redirect('/error/'); 
@@ -16,9 +17,12 @@ if(empty($_FILES['word']['name'])){
 
 $docx = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
 $doc = 'application/msword';
-echo $_FILES['word']['type'];
-if($_FILES['word']['type']!=$docx && $_FILES['word']['name']!=$doc){
-	alert("请上传填好的WORD文档");
+
+$type = explode('.',$_FILES['word']['name']);
+$type = $type[1];
+
+if($type!='doc'&&$type!='docx'){
+	alert('请上传填好的WORD文档');
 	redirect('word.html'); 
 	die();
 }
@@ -31,7 +35,7 @@ if($_FILES['word']['size']>200000){
 $ip = $_SERVER["REMOTE_ADDR"];
 $db = get_db();
 $db->query("select * from lcs_word where ip='$ip'");
-if($db->record_count<4){
+if($db->record_count<3){
 	$lcs = new table_class('lcs_word');
 	$lcs->ip = $ip;
 	$lcs->created_at = now();
