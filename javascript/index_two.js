@@ -6,6 +6,7 @@ $(function(){
 		$("#qie_banner").prepend(str);
 	});
 	
+	
 	$("#zt_next").click(function(e){
 		e.preventDefault();
 		var str = $('.qie_banner:first');

@@ -2,7 +2,7 @@ $(function(){
 	$('*[pos]').each(function(){
 		$(this).hover(function(){
 			if($(this).find('#admin_edit_div').length > 0) return;
-			if($(this).parent().css('position')=='absolute'){
+			if($(this).parent().css('position')=='absolute'||$(this).parent().parent().css('position')=='relative'){
 				var top = $(this).offset().top-$(this).parent().offset().top;
 				var right =  $(this).offset().left-$(this).parent().offset().left;
 			}else if($(this).css('position')=='relative'){
