@@ -69,10 +69,10 @@
 					<div class="ljz">
 						<div class="ljz_title">陆家嘴早餐</div>
 						<?php for($i=0;$i<3;$i++){$pos_name = "index_zczx_".$i;?>
-						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?>><?php show_page_href();?></div>
+						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
-						<div class="guide_hr_val2" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link')?>><a href="review/list/145">基金经理看市:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo mb_substr($pos_items->$pos_name->display,0,5,'utf-8')  ."...";?></a><a style="color:#666;margin:0;" href="review/list/145">[更多]</a></div>
-						<div class="guide_hr_val2" <?php $pos_name = "index_gpzx0";show_page_pos($pos_name,'link')?>><a href="review/list/147">股票之选:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+						<div class="guide_hr_val2" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link_withouttime')?>><a href="review/list/145">基金经理看市:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo mb_substr($pos_items->$pos_name->display,0,5,'utf-8')  ."...";?></a><a style="color:#666;margin:0;" href="review/list/145">[更多]</a></div>
+						<div class="guide_hr_val2" <?php $pos_name = "index_gpzx0";show_page_pos($pos_name,'link_withouttime')?>><a href="review/list/147">股票之选:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
 					</div>
 					<div class="ljz" style="margin-top:8px;">
 						<div class="ljz_title">精华导读</div>
