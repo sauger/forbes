@@ -56,6 +56,6 @@ if($db->record_count<3){
 	redirect($_SERVER['HTTP_REFERER']);
 }else{
 	alert('一个IP只能上传3次，请不要重复上传');
-	redirect($_SERVER['HTTP_REFERER']);
+	redirect('/event/lcs/');
 }
 ?>
