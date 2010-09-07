@@ -39,7 +39,7 @@
 							<div class="top_title" <?php show_page_pos($pos_name,'base_img_withoutime');?>><?php show_page_href();?></div>
 							<div class="top_desc"><?php show_page_desc();?></div>
 							<?php for($j=0;$j<2;$j++){$pos_name = "index_hl".$j."_r".$i;?>
-							<div class="top_news" <?php if($j==0){?>style="margin-top:10px;"<?php }?> <?php show_page_pos($pos_name,'link_withouttime');?>><?php show_page_href();?></div>
+							<div class="top_news" <?php show_page_pos($pos_name,'link_withouttime');?>><?php show_page_href();?></div>
 							<?php }?>
 						</div>
 						<?php }?>
