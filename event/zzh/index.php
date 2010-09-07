@@ -46,6 +46,7 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 										<p><a href="<?php echo $today[0]->link;?>">点击了解活动详情</a></p>
 										<?php
 											}
+											$other = $db->query("select * from zzh_activity where TO_DAYS(NOW()) != TO_DAYS(time) and month(now())=month(time)");
 										?>
 									</div>
 									<div class="left-part">
@@ -117,10 +118,27 @@ $(function() {
 	});
 	<?php if(!empty($today)){?>
 	show_today();
-	$(".ui-datepicker-today a").click(function(){
+	$(".ui-datepicker-today a").live('click',function(){
 		show_today();
 	});
 	<?php }?>
+	<?php 
+		!$other && $other = array();
+		foreach($other as $d){
+			$day = substr($d->time,8,2);
+			$day = intval($day);
+	?>
+	$(".ui-state-default").each(function(){
+		if($(this).text()==<?php echo $day;?>){
+			$(this).css('color','#ff0000');
+			$(this).addclass('activity');
+		}
+	});
+	<?php }?>
+
+	$(".activity").live('click',function(){
+		
+	});
 });
 
 function show_today(){
