@@ -94,7 +94,7 @@ a:active {text-decoration: none;}
 	    <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="0" style="margin-top:20px;">
 	      <tr>
 	      	<?php $pos ="edm_hl_img";?>
-	        <td width="324" style="font-weight:bold; font-family:Arial;" <?php show_page_pos($pos,'edm_img');?>><a href="<?php echo $pos_items->$pos->href;?>"><img border="0" src="<?php img_src()?>" width="324" height="234" /></a></td>
+	        <td width="324" style="font-weight:bold; font-family:Arial;" <?php show_page_pos($pos,'edm_img');?>><a href="<?php echo $pos_items->$pos->href;?>"><img border="0" src="<?php img_src()?>" width="300" height="250" /></a></td>
 	        <td width="10" height="230">&nbsp;</td>
 	        <td><table width="314" border="0" cellspacing="0" cellpadding="0">
 	          <tr>
