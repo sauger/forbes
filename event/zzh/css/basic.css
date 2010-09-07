@@ -520,6 +520,15 @@ ul.r-m-t-t-main li a.aa-pic{
 	border:2px solid #DFD37D;
 }
 .ui-dialog-titlebar{
-	background:none;
 	border:0;
+}
+
+#dialog p{
+	padding-bottom:3px;
+	color:#000;
+}
+#dialog a{
+	float:right;
+	color:#7C4609;
+	text-decoration:underline;
 }

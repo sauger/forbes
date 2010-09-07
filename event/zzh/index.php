@@ -40,6 +40,10 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 											if(!empty($today)){
 										?>
 										<p>活动名称：</p>
+										<p>　　　<?php echo $today[0]->name;?></p>
+										<p>活动日期：</p>
+										<p>　　　<?php echo substr($today[0]->time,0,10);?></p>
+										<p><a href="<?php echo $today[0]->link;?>">点击了解活动详情</a></p>
 										<?php
 											}
 										?>
@@ -111,6 +115,15 @@ $(function() {
 		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
 		dateFormat: 'yy-mm-dd'
 	});
+	<?php if(!empty($today)){?>
+	show_today();
+	$(".ui-datepicker-today a").click(function(){
+		show_today();
+	});
+	<?php }?>
+});
+
+function show_today(){
 	var top = $(".ui-datepicker-today").offset().top+20;
 	var left = $(".ui-datepicker-today").offset().left;
 	$("#dialog").dialog({
@@ -121,5 +134,5 @@ $(function() {
 		resizable: false
 	});
 	$(".ui-dialog").css('top',top);
-});
+}
 </script>
