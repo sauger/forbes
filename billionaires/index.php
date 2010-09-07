@@ -59,7 +59,7 @@
 					<?php }?>
 				</div>
 				<div id=ranking_bottom>
-					<?php for($i=0;$i<10;$i++){ $pos_name = "richindex_middle_img".$i;?>
+					<?php for($i=0;$i<15;$i++){ $pos_name = "richindex_middle_img".$i;?>
 					<div class="piccontent" <?php echo show_page_pos($pos_name,'link_img_withouttime');?>>
 						<div class=pic><?php show_page_img();?></div>
 						<div class=pictitle><?php show_page_href();?></div>
