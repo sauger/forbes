@@ -33,10 +33,10 @@ function generate_ad($ad){
 			$str .= "<a href=\"/ajax/ad_bridge.php?code={$ad->code}\" target='_blank' style=\"left:0; top:0; width:{$size[0]}px; height:{$size[1]}px; border:1px solid; z-index:100; background:#ffffff; filter: alpha(opacity=0);-moz-opacity: 0;opacity: 0;  position:absolute; float:left;\"></a>"; 
 		break;
 		case 'image':
-			$width = $size[0]-2;
-			$height = $size[1]-2;
+			$width = $size[0];
+			$height = $size[1];
 			$str = "<a href='/ajax/ad_bridge.php?code={$ad->code}' target='_blank'>";
-			$str .= "<img width='{$width}' height='{$height}' style='border:1px solid #000;' src='{$ad->image}' />";
+			$str .= "<img width='{$width}' height='{$height}' border=0 src='{$ad->image}' />";
 			$str .= "</a>";
 		break;
 		case 'video':

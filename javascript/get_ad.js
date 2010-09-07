@@ -1,3 +1,4 @@
+$(function(){
 	var parttern = /\/([^\/]*)\/?\s*/;
 	var channel =  parttern.exec(location.pathname);
 	if(channel){
@@ -13,3 +14,5 @@
 	$('div.ad_banner').live('click',function(e){
 		$.post('/ajax/add_click_ad.php',{'code':$(this).find('input:first').val(),url:location.pathname});
 	});
+	
+});
