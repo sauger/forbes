@@ -191,7 +191,7 @@
 							for($i=1;$i<3;$i++){
 								$pos_name = 'index_business'.$i;
 						?>
-						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link')?> <?php if($i == 2){ echo 'style="margin-bottom:15px;"';}?>>
+						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link_withouttime')?> <?php if($i == 2){ echo 'style="margin-bottom:15px;"';}?>>
 							<a target="_blank" href="<?php echo $pos_items->$pos_name->href;?>" title="<?php echo $pos_items->$pos_name->title;?>"><?php echo $pos_items->$pos_name->title;?></a>
 						</div>
 						<?php }?>
@@ -520,7 +520,7 @@
 						<?php show_page_href();?>
 					</div>
 					<div class="city_desc">
-						<?php show_page_desc();?>
+						<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),34);?></a>
 					</div>
 					<div class="h_h"></div>
 					<?php for($i=1;$i<3;$i++){$pos_name = "index_city{$i}";?>

@@ -370,7 +370,7 @@ function update_news_column($category_name,$limit,$type,$position_name){
 }
 
 include "./_index2.php";
-include "./_index.php";
+#include "./_index.php";
 include "_listindex.php";
 include "_richindex.php";
 include "./_fiveindex.php";
