@@ -176,7 +176,7 @@
 						</div>
 						<div class=num1></div>
 					</div>
-					<?php for($i=2;$i<16;$i++){ 
+					<?php for($i=2;$i<21;$i++){ 
 						$pos_name = "richindex_list_{$i}";
 					?>
 					<div class=content2 <?php show_page_pos($pos_name,'rich');?>>
