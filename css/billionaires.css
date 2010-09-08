@@ -63,7 +63,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_lists_top #content .context .point{width:4px; height:4px; margin-top:8px; background:url('/images/billionaires/r_t_point.jpg') no-repeat;}
 #billionaires_lists_top #content .context .cl{width:185px; height:20px; line-height:20px; overflow:hidden; float:right;}
 #billionaires_lists_top #content .context .cl a{color:#003193; text-decoration:none;}
-#billionaires_lists_bottom{width:225px; height:451px; margin-top:10px; border:1px solid #dfdfdf;}
+#billionaires_lists_bottom{width:225px; margin-top:10px; border:1px solid #dfdfdf;}
 #billionaires_lists_bottom .content1{width:223px; height:70px; margin-top:1px; margin-left:1px; background:#f1f7f8;}
 #billionaires_lists_bottom .content1 .pic1{width:52px; height:52px; margin-top:9px; margin-left:10px; border:1px solid #e1e4e5; overflow:hidden;}
 #billionaires_lists_bottom .content1 .pic1 img{width:50px; height:50px; margin:1px;}
@@ -91,6 +91,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_lists_bottom .content2 .num18{width:26px; height:18px; margin-top:3px; background:url(/images/billionaires/18.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/billionaires/18.png");}
 #billionaires_lists_bottom .content2 .num19{width:26px; height:18px; margin-top:3px; background:url(/images/billionaires/19.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/billionaires/19.png");}
 #billionaires_lists_bottom .content2 .num20{width:26px; height:18px; margin-top:3px; background:url(/images/billionaires/20.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/billionaires/20.png");}
+#billionaires_lists_bottom .content2 .num21{width:26px; height:18px; margin-top:3px; background:url(/images/billionaires/21.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/billionaires/21.png");}
+#billionaires_lists_bottom .content2 .num22{width:26px; height:18px; margin-top:3px; background:url(/images/billionaires/22.png) no-repeat !important; background-image:none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="/images/billionaires/22.png");}
+
 #billionaires_lists_bottom #billionaires_inventory{width:195px; height:22px; margin-top:10px; margin-left:10px;  line-height:22px; font-size:14px; font-weight:bold; }
 #billionaires_lists_bottom #billionaires_inventory select{width:118px; height:22px;}
 #billionaires_lists_bottom #lists{width:195px; margin-top:5px; margin-left:10px; line-height:20px;}
