@@ -72,11 +72,13 @@
 						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
 						<div class="ljz_news" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link_withouttime')?>>
-							<a class="ljz_cate">基金经理看市</a>
+							<a class="ljz_cate" href="review/list/145">基金经理看市</a>
 							<a class="ljz_ntitle" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a>
 						</div>
-						<div class="guide_hr_val2" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link_withouttime')?>><a href="review/list/145">基金经理看市:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo mb_substr($pos_items->$pos_name->display,0,5,'utf-8')  ."...";?></a><a style="color:#666;margin:0;" href="review/list/145">[更多]</a></div>
-						<div class="guide_hr_val2" <?php $pos_name = "index_gpzx0";show_page_pos($pos_name,'link_withouttime')?>><a href="review/list/147">股票之选:</a><a style="margin:0;color:#666666;" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a></div>
+						<div class="ljz_news" <?php $pos_name = "index_gpzx0";show_page_pos($pos_name,'link_withouttime')?>>
+							<a class="ljz_cate" href="review/list/147">股票之选</a>
+							<a class="ljz_ntitle" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a>
+						</div>
 					</div>
 					<div class="ljz" style="margin-top:8px;">
 						<div class="ljz_title">精华导读</div>
@@ -92,8 +94,20 @@
 						<?php $pos_name = 'index_rich1';?>
 						<div class="li_top" <?php show_page_pos($pos_name);?>>
 							<div class="li_img_pg"><?php show_page_img();?></div>
-							<div class="li_img_title"><?php show_page_href();?></div>	
-							<div class="li_img_value"><?php show_page_desc();?></div>
+							<div class="rich_right">
+								<div class="li_img_title"><?php show_page_href();?></div>	
+								<div class="li_img_value">
+									<?php
+										if(mb_strlen($pos_items->$pos_name->display,'utf-8')>13){
+									?>
+										<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),37);?></a>
+									<?php }else{?>
+										<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),50);?></a>
+									<?php 	
+										}
+									?>
+								</div>
+							</div>
 						</div>
 						<?php
 							$c_id = $category->children_map(42);
@@ -112,8 +126,20 @@
 						<?php $pos_name = 'index_ceo1';?>
 						<div class="li_top" <?php show_page_pos($pos_name);?>>
 							<div class="li_img_pg"><?php show_page_img();?></div>
-							<div class="li_img_title"><?php show_page_href();?></div>	
-							<div class="li_img_value"><?php show_page_desc();?></div>
+							<div class="rich_right">
+								<div class="li_img_title"><?php show_page_href();?></div>	
+								<div class="li_img_value">
+									<?php
+										if(mb_strlen($pos_items->$pos_name->display,'utf-8')>13){
+									?>
+										<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),37);?></a>
+									<?php }else{?>
+										<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),50);?></a>
+									<?php 	
+										}
+									?>
+								</div>
+							</div>
 						</div>
 						<?php
 							$c_id = $category->children_map(143);
@@ -252,10 +278,18 @@
 						<div class="column_box">
 							<div class="column_photo"><a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><img src="<?php echo $item[0]->image_src;?>"></a></div>
 							<div class="column_title">
-								<a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author.":";?></a>
+								<a target="_blank" style="color:#057FE4" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author;?></a>
 								<a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->title;?></a>
 							</div>
-							<div class="colum_desc"><a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo strip_tags($item[0]->description);?></a></div>
+							<div class="colum_desc">
+								<?php 
+									if((mb_strlen($item[0]->name,'utf-8')+mb_strlen($item[0]->author,'title'))>14){
+								?>
+								<a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo mb_string(strip_tags($item[0]->description),25);?></a>
+								<?php }else{?>
+								<a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo mb_string(strip_tags($item[0]->description),40);?></a>
+								<?php }?>
+							</div>
 						</div>
 						<?php }?>
 						<?php 
@@ -265,7 +299,7 @@
 							$ids[]=$item[0]->publisher;
 						?>
 						<div class="guide_hr_val2">
-							<a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author.":";?></a>
+							<a target="_blank" style="color:#057FE4" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author;?></a>
 							<a target="_blank" style="margin:0;" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->title;?></a>
 						</div>
 						<?php }?>
@@ -279,7 +313,15 @@
 								<?php show_page_href();?>
 							</div>
 							<div class="pho_value">
-								<?php show_page_desc();?>
+								<?php
+									if(mb_strlen($pos_items->$pos_name->display,'utf-8')>12){
+								?>
+									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),24);?></a>
+								<?php }else{?>
+									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),24);?></a>
+								<?php 	
+									}
+								?>
 							</div>
 						</div>
 						<div class="h_h"></div>
@@ -339,10 +381,18 @@
 						<div class="column_box">
 							<div class="column_photo"><a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><img src="<?php echo $item[0]->image_src;?>"></a></div>
 							<div class="column_title">
-								<a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author.":";?></a>
+								<a target="_blank" style="color:#057FE4" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author;?></a>
 								<a target="_blank" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->title;?></a>
 							</div>
-							<div class="colum_desc"><a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo strip_tags($item[0]->description);?></a></div>
+							<div class="colum_desc">
+								<?php 
+									if((mb_strlen($item[0]->name,'utf-8')+mb_strlen($item[0]->author,'title'))>14){
+								?>
+								<a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo mb_string(strip_tags($item[0]->description),25);?></a>
+								<?php }else{?>
+								<a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo mb_string(strip_tags($item[0]->description),40);?></a>
+								<?php }?>
+							</div>
 						</div>
 						<?php }?>
 						<?php 
@@ -352,7 +402,7 @@
 							$ids[]=$item[0]->publisher;
 						?>
 						<div class="guide_hr_val2">
-							<a target="_blank" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author.":";?></a>
+							<a target="_blank" style="color:#057FE4" href="<?php echo "/column/".$item[0]->name;?>"><?php echo $item[0]->author;?></a>
 							<a target="_blank" style="margin:0;" title="<?php echo strip_tags($item[0]->title);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo $item[0]->title;?></a>
 						</div>
 						<?php }?>
@@ -366,7 +416,7 @@
 								$news->find($comments[$i]->resource_id);
 						?>
 						<div class="con_ban_title">
-							<a target="_blank" href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo $comments[$i]->comment?></a>
+							<a target="_blank" href="http://www.forbeschina.com<?php echo static_news_url($news) ."/comments/{$comments[$i]->id}"?>"><?php echo mb_string(htmlspecialchars($comments[$i]->comment),35);?></a>
 						</div>
 						<div class="con_ban_value">
 							<?php echo $comments[$i]->nick_name;?>　|　<a href="<?php echo get_news_url($news);?>" target="_blank" title="<?php echo $news->title;?>"><?php echo $news->short_title;?></a>

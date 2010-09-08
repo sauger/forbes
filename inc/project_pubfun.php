@@ -340,6 +340,15 @@ function show_page_href($pos=null,$title=null,$target=null,$max_len = 0){
 	echo "<a href='{$pos_items->$pos->href}'" .($title ? " title='{$_title}'" : ""). ($target ? " target='{$target}'":"") .">{$display}</a>";
 }
 
+function mb_string($str,$max_len){
+	$len = mb_strlen($str,'utf-8');
+	if($len > $max_len){
+		echo mb_substr($str,0,$max_len-1,'utf-8')  ."...";
+	}else{
+		echo $str;
+	}
+}
+
 
 function show_page_desc($pos=null,$link="href",$title='description',$target="_blank"){
 	global $pos_items;
