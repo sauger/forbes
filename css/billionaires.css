@@ -25,9 +25,9 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_head_right{width:3px; height:236px; background:url('/images/billionaires/billionaires_head_right.jpg') no-repeat; overflow:hidden;}
 #billionaires_ranking{width:460px; margin-top:20px;}
 #billionaires_ranking #ranking_top{width:450px; height:250px; border-bottom:1px dotted #cccccc;}
-#billionaires_ranking #ranking_top .piccontent{width:143px; height:238px; margin-right:7px; overflow:hidden;}
-#billionaires_ranking #ranking_top .pic{width:141px; height:196px; border:1px solid #cccccc; overflow:hidden;}
-#billionaires_ranking #ranking_top .pic img{width:137px; height:192px; border:none; margin:2px;}
+#billionaires_ranking #ranking_top .piccontent{width:141px; height:236px; margin-right:9px; overflow:hidden;}
+#billionaires_ranking #ranking_top .pic{width:139px; height:194px; border:1px solid #cccccc; overflow:hidden;}
+#billionaires_ranking #ranking_top .pic img{width:135px; height:190px; border:none; margin:2px;}
 #billionaires_ranking #ranking_top .pictitle{width:145px; height:30px; margin-top:10px; line-height:30px; font-size:18px; font-weight:bold; text-align:center; overflow:hidden;}
 #billionaires_ranking #ranking_top .pictitle a{color:#666666; text-decoration:none;}
 #billionaires_ranking #ranking_bottom{width:450px; margin-top:5px;}
