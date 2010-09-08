@@ -63,7 +63,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #billionaires_lists_top #content .context .point{width:4px; height:4px; margin-top:8px; background:url('/images/billionaires/r_t_point.jpg') no-repeat;}
 #billionaires_lists_top #content .context .cl{width:185px; height:20px; line-height:20px; overflow:hidden; float:right;}
 #billionaires_lists_top #content .context .cl a{color:#003193; text-decoration:none;}
-#billionaires_lists_bottom{width:225px; height:451px; margin-top:10px; border:1px solid #dfdfdf;}
+#billionaires_lists_bottom{width:225px; margin-top:10px; border:1px solid #dfdfdf;}
 #billionaires_lists_bottom .content1{width:223px; height:70px; margin-top:1px; margin-left:1px; background:#f1f7f8;}
 #billionaires_lists_bottom .content1 .pic1{width:52px; height:52px; margin-top:9px; margin-left:10px; border:1px solid #e1e4e5; overflow:hidden;}
 #billionaires_lists_bottom .content1 .pic1 img{width:50px; height:50px; margin:1px;}
