@@ -30,7 +30,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>福布斯中国增长会</title>
 <?php 
-use_jquery();
+	use_jquery_ui();
 ?>
 <link href="css/basic.css" rel="stylesheet" type="text/css" />
 </head>
@@ -42,31 +42,7 @@ use_jquery();
 					<div id="content"><!-- content begin -->
 						<div id="content-inner" class="clear"><!-- content-inner begin -->
 							<div id="body-left"><!-- body-left begin -->
-								<div class="logo"><img src="images/logo.gif" /></div>
-								<div class="left-main">
-									<div class="left-application"><a href="on-line.html"></a></div>
-									<div class="left-nav">
-										<ul>
-											<li><a href="index.php" onfocus="this.blur()">增长会介绍</a></li>
-											<li><a class="bc" href="vip.php" onfocus="this.blur()">会员专享</a></li>
-											<li><a href="prediction.php" onfocus="this.blur()">活动专区</a></li>
-											<li><a href="cooperation.php" onfocus="this.blur()">合作伙伴</a></li>
-											<li><a href="contact us.html" onfocus="this.blur()">联系我们</a></li>
-										</ul>
-									</div>
-									<div class="left-calendar"><img src="images/calendar.gif" /></div>
-									<div class="left-part">
-										<div class="left-part-top">部分会员</div>
-										<div class="left-part-c">
-										<a class="left-part-pic" href="#"><img src="images/logo0.gif" /></a>
-										<a class="left-part-pic" href="#"><img src="images/logo2.gif" /></a>
-										<a class="left-part-pic" href="#"><img src="images/logo3.gif" /></a>
-										<a class="left-part-pic" href="#"><img src="images/logo2.gif" /></a>
-									</div>
-										<div class="left-part-bot"><img src="images/part-bot.gif" /></div>	
-									</div>
-									<!--<div class="left-banner"><img src="images/banner.gif" /></div>-->
-								</div>	
+								<?php include 'left.php';?>
 							</div><!-- left end-->
 							<div id="body-right"><!-- right begin-->
 								<div class="right-bg-top"><img src="images/right-top.gif" /></div>
