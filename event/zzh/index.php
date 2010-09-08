@@ -171,7 +171,9 @@ function show_activity(){
 function get_activity(date){
 	$("#dialog").load('get_activity.php?date='+date,function(){
 		show_activity();
-		init_day();
+		setTimeout(function(){
+			init_day();
+		},1000);
 	});
 	
 }

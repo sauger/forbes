@@ -94,7 +94,7 @@
 						<?php
 							$c_id = $category->children_map(42);
 							$c_id = implode(',',$c_id);
-							$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) group by title order by created_at desc limit 2");
+							$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) and is_adopt=1 group by title order by created_at desc limit 2");
 							foreach($news as $v){
 						?>
 						<div class="guide_hr_val2">
@@ -114,7 +114,7 @@
 						<?php
 							$c_id = $category->children_map(143);
 							$c_id = implode(',',$c_id);
-							$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) group by title order by created_at desc limit 2");
+							$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) and is_adopt=1 group by title order by created_at desc limit 2");
 							!$news && $news = array();
 							foreach($news as $v){
 						?>
@@ -128,7 +128,7 @@
 						<?php 
 							$c_id = $category->children_map(2,false);
 							$c_id = implode(',',$c_id);
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 7");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) and is_adopt=1 group by title order by created_at desc limit 7");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 6){ echo 'style="margin-bottom:15px;"';}?>>
@@ -139,7 +139,7 @@
 						<?php 
 							$c_id = $category->children_map(5,false);
 							$c_id = implode(',',$c_id);
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 7");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) and is_adopt=1 group by title order by created_at desc limit 7");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2" <?php if($i == 6){ echo 'style="margin-bottom:15px;"';}?>>
@@ -150,7 +150,7 @@
 						<?php 
 							$c_id = $category->children_map(3,false);
 							$c_id = implode(',',$c_id);
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 5");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) and is_adopt=1 group by title order by created_at desc limit 5");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2">
@@ -169,7 +169,7 @@
 						<?php 
 							$c_id = $category->children_map(4,false);
 							$c_id = implode(',',$c_id);
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) group by title order by created_at desc limit 7");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) and is_adopt=1 group by title order by created_at desc limit 7");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val2">
@@ -185,9 +185,9 @@
 						<div id="_month">一月</div>
 					</div>
 					<?php 
-						$day = $db->query("select id,title,created_at from fb_news where date(created_at) = date_sub(curdate(), interval 1 day) group by title order by click_count desc limit 10");
-						$week = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= date(created_at) group by title order by click_count desc limit 10");
-						$month = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 1 MONTH) <= date(created_at) group by title order by click_count desc limit 10");
+						$day = $db->query("select id,title,created_at from fb_news where date(created_at) = date_sub(curdate(), interval 1 day) and is_adopt=1 group by title order by click_count desc limit 10");
+						$week = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= date(created_at) and is_adopt=1 group by title order by click_count desc limit 10");
+						$month = $db->query("select id,title,created_at from fb_news where DATE_SUB(CURDATE(), INTERVAL 1 MONTH) <= date(created_at) and is_adopt=1 group by title order by click_count desc limit 10");
 						!$day && $day = array();
 						!$week && $week = array();
 						!$month && $month = array();
