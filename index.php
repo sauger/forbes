@@ -67,16 +67,16 @@
 				</div>
 				<div id="content_banner_right">
 					<div class="ljz">
-						<div class="ljz_title"><a target="_blank" href="review/list/146">陆家嘴早餐</a></div>
+						<div class="ljz_title"><a target="_blank" href="review/list/146">陆家嘴早餐》</a></div>
 						<?php for($i=0;$i<2;$i++){$pos_name = "index_zczx_".$i;?>
 						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
 						<div class="ljz_news" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link_withouttime')?>>
-							<a class="ljz_cate" href="review/list/145">基金经理看市</a>
+							<a class="ljz_cate" href="review/list/145">基金经理看市》</a>
 							<a class="ljz_ntitle" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a>
 						</div>
 						<div class="ljz_news" <?php $pos_name = "index_gpzx0";show_page_pos($pos_name,'link_withouttime')?>>
-							<a class="ljz_cate" href="review/list/147">股票之选</a>
+							<a class="ljz_cate" href="review/list/147">股票之选》</a>
 							<a class="ljz_ntitle" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a>
 						</div>
 					</div>
