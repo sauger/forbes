@@ -107,7 +107,6 @@ include_once( dirname(__FILE__) .'/../../frame.php');
 </html>
 <script>
 var day_array = new Array(1,2);
-
 $(function() {
 	$(".left-calendar").datepicker({
 		changeMonth: true,
@@ -116,36 +115,18 @@ $(function() {
 		dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
 		dayNamesMin:["日","一","二","三","四","五","六"],
 		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
-		dateFormat: 'yy-mm-dd'
+		dateFormat: 'yy-mm-dd',
+		onChangeMonthYear: function(year, month, inst) {init_month(year,month);},
+		onSelect: function(dateText, inst) {get_activity(dateText);}
 	});
-	init_month();
+	init_month($(".ui-datepicker-year").val(),$(".ui-datepicker-month").val()-(-1));
 	<?php if(!empty($today)){?>
 	show_today();
 	<?php }?>
 
-	$(".ui-state-default").live('click',function(){
-		if($.inArray($(this).text(),day_array)>-1){
-			get_activity($(this),$(this).text());
-		}
-		init_day();
-	});
-
-	$(".ui-datepicker-month").live('change',function(){
-		init_month();
-	});
-
-	$(".ui-datepicker-year").live('change',function(){
-		init_month();
-	});
-
-	$(".ui-icon").live('click',function(){
-		init_month();
-	});
 });
 
-function init_month(){
-	var month = $(".ui-datepicker-month").val();
-	var year = $(".ui-datepicker-year").val();
+function init_month(year,month){
 	$.post('init_month.php',{'month':month,'year':year},function(data){
 		day_array = data.split("|");
 		init_day();
@@ -174,7 +155,7 @@ function show_today(){
 	$(".ui-dialog").css('top',top);
 }
 
-function show_activity(ob){
+function show_activity(){
 	var top = $(".hasDatepicker").offset().top+120;
 	var left = $(".hasDatepicker").offset().left+30;
 	$("#dialog").dialog({
@@ -187,11 +168,9 @@ function show_activity(ob){
 	$(".ui-dialog").css('top',top);
 }
 
-function get_activity(ob,day){
-	var month = $(".ui-datepicker-month").val();
-	var year = $(".ui-datepicker-year").val();
-	$("#dialog").load('get_activity.php?day='+day+'&month='+month+'&year='+year,function(){
-		show_activity(ob);
+function get_activity(date){
+	$("#dialog").load('get_activity.php?date='+date,function(){
+		show_activity();
 		init_day();
 	});
 	
