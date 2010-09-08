@@ -314,7 +314,7 @@
 							</div>
 							<div class="pho_value">
 								<?php
-									if(mb_strlen($pos_items->$pos_name->display,'utf-8')>12){
+									if(mb_strlen($pos_items->$pos_name->display,'utf-8')>13){
 								?>
 									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),24);?></a>
 								<?php }else{?>
@@ -332,11 +332,11 @@
 							</div>
 							<div class="pho_value">
 								<?php
-									if(mb_strlen($pos_items->$pos_name->display,'utf-8')>12){
+									if(mb_strlen($pos_items->$pos_name->display,'utf-8')>13){
 								?>
 									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),24);?></a>
 								<?php }else{?>
-									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),38);?></a>
+									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),34);?></a>
 								<?php 	
 									}
 								?>
@@ -352,11 +352,11 @@
 							</div>
 							<div class="pho_value">
 								<?php
-									if(mb_strlen($pos_items->$pos_name->display,'utf-8')>12){
+									if(mb_strlen($pos_items->$pos_name->display,'utf-8')>13){
 								?>
 									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),24);?></a>
 								<?php }else{?>
-									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),38);?></a>
+									<a href='<?php echo $pos_items->$pos_name->href;?>' title='<?php echo strip_tags($pos_items->$pos_name->description)?>' target='_blank'><?php echo mb_string(strip_tags($pos_items->$pos_name->description),34);?></a>
 								<?php 	
 									}
 								?>
