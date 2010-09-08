@@ -227,7 +227,7 @@
 						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
 						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
 						<?php if($k != 9 ){?> 
-						<div class="h_h" style=" width:310px;"></div>
+						<div class="h_h2"></div>
 						<?php }?>
 					</div>
 					<?php }?>
@@ -237,7 +237,7 @@
 						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
 						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
 						<?php if($k != 9 ){?> 
-						<div class="h_h" style=" width:310px;"></div>
+						<div class="h_h2"></div>
 						<?php }?>
 					</div>
 					<?php }?>
@@ -247,7 +247,7 @@
 						<div class="day_banner_number" style="<?php if($k == 0){ echo 'color:#ffffff; background:url(/images/index_two/news.gif) no-repeat;';}else{ echo 'background:url(/images/index_two/pg_2.jpg) no-repeat;';}?>"><?php echo $k+1;?></div>
 						<div class="day_banner_value"><a href="<?php echo get_news_url($v);?>" title="<?php echo $v->title;?>"><?php echo $v->title;?></a></div>
 						<?php if($k != 9 ){?> 
-						<div class="h_h" style=" width:310px;"></div>
+						<div class="h_h2"></div>
 						<?php }?>
 					</div>
 					<?php }?>
