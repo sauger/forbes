@@ -39,8 +39,8 @@ body a{text-decoration:none; color:#646464 }
 .t_t3{float:right }
 .t_t3 font{margin-right:10px; float:right; dispaly:inline; font-size:14px; line-height:18px;}
 
-#guest{width:965px; height:175px; background:#F7F7F7;  float:left; display:inline; border-top:1px solid #d1d1d1;margin:0 15px 15px 15px;}
-.guest_m{width:108px; letter-spacing:0px; padding:13px 42px 0 42px;  float:left; display:inline;  }
+#guest{width:965px; height:200px; background:#F7F7F7;  float:left; display:inline; border-top:1px solid #d1d1d1;margin:0 15px 15px 15px;}
+.guest_m{width:108px; letter-spacing:0px; padding:13px 26px 0 26px;  float:left; display:inline;  }
 .guest1{width:100%; float:right; dispaly:inline; margin-top:10px; text-align:right; }
 .guest2{width:100%; float:right; dispaly:inline; font-size:12px; line-height:16px; color:#999696; text-align:right;}
 
