@@ -26,7 +26,7 @@
 	
 	?>
 		<div id=forbes_tlt>
-  		<div id=headline>
+  		<div id=headline class="edit_pri">
   				<?php $pos_name = "index_hl_0";?>
 				<div class=headline_pic id=headline_pic_0><?php show_page_img(300,200,0)?></div>
 				<?php for($i=1;$i<5;$i++){
