@@ -54,7 +54,7 @@ $(function(){
 		var type = $(this).parent().attr('id');
 		var cwidth= '900px';
 		var cheight = '1200px';
-		if(type!='qie_img'){cwidth='970px'; cheight='700px';}
+		if(type=='forbes_trt'){cwidth='970px'; cheight='700px';}else if(type=='qie_menu'){cwidth='600px'; cheight='700px';}
 		parent.$.fn.colorbox({
 			href: '/admin/position/priority.php?type=' + type,
 			width:cwidth,

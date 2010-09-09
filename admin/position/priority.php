@@ -54,6 +54,17 @@ div{font-size:15px; text-align:center;}
 	</div>
 	<?php }?>
 	<input type="button" id="save" value="保存" style="width:400px; margin-left:265px;">
+<?php }elseif($type=='qie_menu'){?>
+<div class="top" style="width:400px;">标题</div><div class="top" style="width:100px;">优先级</div>
+	<?php for($i=0;$i<7;$i++){
+		$pos_name = "index_sub{$i}";
+	?>
+	<div>
+	<div class="bleft" style="width:400px; height:30px;"><?php echo $pos_items->$pos_name->alias.":".$pos_items->$pos_name->display;?></div>
+	<div class="bright" style="width:100px; height:30px;"><input type="text" name="<?php echo $pos_name?>" style="width:50px;" value="<?php echo $i+1;?>"></div>
+	</div>
+	<?php }?>
+	<input type="button" id="save" value="保存" style="width:200px; margin-left:150px;">
 <?php }?>
 <script>
 	$(function(){

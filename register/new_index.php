@@ -10,7 +10,7 @@
 	<title>注册_福布斯中文网</title>
 	<?php
 		use_jquery();
-		js_include_tag('public','jquery.colorbox-min.js');
+		js_include_tag('register/register','public','jquery.colorbox-min.js');
 		css_include_tag('new_register','public','colorbox');
 	?>
 </head>
