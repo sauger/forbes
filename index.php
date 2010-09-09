@@ -28,7 +28,7 @@
 		<div id="content">
 			<div id="content_left">
 				<div id="content_banner_left">
-					<div id="qie_img">
+					<div id="qie_img" class="edit_pri">
 						<?php for($i=0;$i<5;$i++){
 							$pos_name = 'index_hl_'.$i;
 						?>

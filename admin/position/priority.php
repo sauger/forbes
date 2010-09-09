@@ -14,7 +14,7 @@ div{font-size:15px; text-align:center;}
 .bright{border-bottom:2px solid #ADD8E6;}
 </style>
 <?php
-	if($type == 'headline'){
+	if($type == 'qie_img'){
 ?>
 <div class="top" style="width:680px;">头条内容</div>
 <div class="top" style="width:150px;">优先级（1-5不重复）</div>

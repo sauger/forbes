@@ -213,7 +213,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 		#con_banner{width:348px;  margin-left:5px; margin-top:5px; overflow:hidden;}
 			.con_ban_title{width:90%; margin-top:15px; margin-left:5%; font-size:14px; line-height:18px;}
 				.con_ban_title a{color:#000; text-decoration:none;}
-			.con_ban_value{width:90%; height:16px; margin-left:5%; margin-top:10px; color:#4C4C4C; font-size:14px; line-height:16px; text-align:right;}
+			.con_ban_value{width:90%; height:16px; margin-left:5%; margin-top:10px; overflow:hidden; color:#4C4C4C; font-size:14px; line-height:16px; text-align:right;}
 				.con_ban_value a{color:#003891; text-decoration:none;}
 			#day{width:94%; height:20px; margin-left:3%; margin-top:7px; background:#E8E8E8;}
 				#day div{width:33%; height:14px; cursor:pointer; color:#525250; line-height:14px; border-left:1px solid #A4A4A4; text-align:center; margin-top:3px;}

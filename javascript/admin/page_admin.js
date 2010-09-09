@@ -32,8 +32,17 @@ $(function(){
 	});
 	
 	$(".edit_pri").hover(function(){
-		var top =  parseInt($(this).offset().top)+20;
-		var right =  $(this).offset().left;
+		if($(this).parent().css('position')=='absolute'||$(this).parent().parent().css('position')=='relative'){
+			var top = $(this).offset().top-$(this).parent().offset().top;
+			var right =  $(this).offset().left-$(this).parent().offset().left;
+		}else if($(this).css('position')=='relative'){
+			var top = 0;
+			var right = 20;
+		}else{
+			var top =  parseInt($(this).offset().top)+20;
+			var right =  $(this).offset().left;
+		}
+		
 		var str = "<div id='edit_priority' style='z-index: 150; position: absolute;left:" +right +"px;top:" +top+"px;' title='编辑显示优先级'><img style='cursor: pointer;width:30px;height:30px;' width=30 height=30 src='/images/admin/priority.png' ></div>";
 		$(this).append(str);
 	},function(){
@@ -45,7 +54,7 @@ $(function(){
 		var type = $(this).parent().attr('id');
 		var cwidth= '900px';
 		var cheight = '1200px';
-		if(type!='headline'){cwidth='970px'; cheight='700px';}
+		if(type!='qie_img'){cwidth='970px'; cheight='700px';}
 		parent.$.fn.colorbox({
 			href: '/admin/position/priority.php?type=' + type,
 			width:cwidth,
