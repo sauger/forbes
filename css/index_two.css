@@ -16,7 +16,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 					.top_title a{color:#003399; text-decoration:none; position:relative;}
 					.top_desc{width:220px; padding-bottom:10px; margin-top:15px; margin-left:10px; font-weight:bolder; text-indent:2em; font-size:14px; line-height:1.5em; color:#ffffff}
 					.top_desc a{color:#333333; text-decoration:none; width:220px; height:63px; overflow:hidden; float:left; position:relative;;}
-					.top_news{width:235px; height:1.5em; font-size:14px; line-height:1.5em; font-weight:bolder; color:#ffffff; padding-left:15px; background:url('/images/index_two/top_link.gif') no-repeat 10px 9px;}
+					.top_news{width:235px; height:1.5em; font-size:14px; line-height:1.5em; font-weight:bolder; color:#ffffff; padding-left:15px; overflow:hidden; background:url('/images/index_two/top_link.gif') no-repeat 10px 9px;}
 					.top_news a{color:#003399; text-decoration:none; position:relative;}
 				#top_num{width:93px; height:25px; position:absolute; right:0px; bottom:0px;}
 					#top_num div{width:15px; height:15px; margin-left:2px; padding-top:4px; text-align:center; cursor:pointer;}
@@ -37,6 +37,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 			.ljz{width:100%; height:190px; border:1px solid #B3B6BD;}
 			.ljz_title{width:100%; height:30px; margin-top:5px; line-height:30px; font-weight:bolder; color:#9A0000; font-size:14px; text-indent:10px;}
 			.ljz_title a{color:#9A0000; text-decoration:none;}
+			.ljz_icon{border:0;}
 			.ljz_news{width:100%; height:45px; font-size:14px; line-height:22px; overflow:hidden;}
 				.ljz_cate{width:100%; height:22px; font-weight:bolder; color:#003399; text-indent:10px; text-decoration:none; float:left;}
 				.ljz_ntitle{width:100%; height:22px; color:#666666; text-indent:25px; background:url(/images/index_two/dian_blue.gif) NO-REPEAT 15px 10px; text-decoration:none; overflow:hidden; float:left;}

@@ -28,7 +28,7 @@
 		<div id="content">
 			<div id="content_left">
 				<div id="content_banner_left">
-					<div id="qie_img">
+					<div id="qie_img" class="edit_pri">
 						<?php for($i=0;$i<5;$i++){
 							$pos_name = 'index_hl_'.$i;
 						?>
@@ -51,7 +51,7 @@
 							<div class="normal_top_num">5</div>
 						</div>
 					</div>
-					<div id="qie_menu">
+					<div id="qie_menu" class="edit_pri">
 						<a id="zt_prev" href=""><img id="qie_img_left" src="/images/index_two/btn_l.jpg"/></a>
 						<div id="qie_banner">
 							<?php for($i = 0 ; $i < 7 ; $i++){ $pos_name = "index_sub".$i;?>
@@ -67,16 +67,16 @@
 				</div>
 				<div id="content_banner_right">
 					<div class="ljz">
-						<div class="ljz_title"><a target="_blank" href="review/list/146">陆家嘴早餐》</a></div>
+						<div class="ljz_title"><a target="_blank" href="review/list/146">陆家嘴早餐<img class="ljz_icon" src="/images/index_two/ljz_icon.gif"></a></div>
 						<?php for($i=0;$i<2;$i++){$pos_name = "index_zczx_".$i;?>
 						<div class="guide_hr_val2" <?php show_page_pos($pos_name,'link_withouttime')?>><?php show_page_href();?></div>
 						<?php }?>
 						<div class="ljz_news" <?php $pos_name = "index_jjjl0";show_page_pos($pos_name,'link_withouttime')?>>
-							<a class="ljz_cate" href="review/list/145">基金经理看市》</a>
+							<a class="ljz_cate" href="review/list/145">基金经理看市<img class="ljz_icon" src="/images/index_two/ljz_icon.gif"></a>
 							<a class="ljz_ntitle" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a>
 						</div>
 						<div class="ljz_news" <?php $pos_name = "index_gpzx0";show_page_pos($pos_name,'link_withouttime')?>>
-							<a class="ljz_cate" href="review/list/147">股票之选》</a>
+							<a class="ljz_cate" href="review/list/147">股票之选<img class="ljz_icon" src="/images/index_two/ljz_icon.gif"></a>
 							<a class="ljz_ntitle" title="<?php echo $pos_items->$pos_name->title;?>" target="_blank" href="<?php echo $pos_items->$pos_name->href;?>"><?php echo $pos_items->$pos_name->display;?></a>
 						</div>
 					</div>
@@ -446,7 +446,7 @@
 			
 				
 			<div id="contentc_right">
-				<div class="right_box" style="margin:0;">
+				<div class="right_box edit_pri" style="margin:0;" id="forbes_trt">
 					<div class="normal_title"><div>精华榜单推荐</div><a target="_blank" href="/list/">[...更多]</a></div>
 					<div class="content_right_banner">
 						<div id="recommend_banner">
