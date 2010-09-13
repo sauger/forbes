@@ -283,7 +283,7 @@
 							</div>
 							<div class="colum_desc">
 								<?php 
-									if((mb_strlen($item[0]->name,'utf-8')+mb_strlen($item[0]->author,'title'))>14){
+									if((mb_strlen($item[0]->name,'utf-8')+mb_strlen($item[0]->author,'utf-8'))>14){
 								?>
 								<a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo mb_string(strip_tags($item[0]->description),25);?></a>
 								<?php }else{?>
@@ -402,7 +402,7 @@
 							</div>
 							<div class="colum_desc">
 								<?php 
-									if((mb_strlen($item[0]->name,'utf-8')+mb_strlen($item[0]->author,'title'))>14){
+									if((mb_strlen($item[0]->name,'utf-8')+mb_strlen($item[0]->author,'utf-8'))>14){
 								?>
 								<a target="_blank" title="<?php echo strip_tags($item[0]->description);?>" href="<?php echo column_article_url($item[0]->name,$item[0],'static')?>"><?php echo mb_string(strip_tags($item[0]->description),25);?></a>
 								<?php }else{?>
