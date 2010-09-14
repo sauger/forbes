@@ -121,7 +121,7 @@
 						<?php }?>
 					</div>
 					<div class="normal_box">
-						<div class="normal_title"><div>CEO</div><a href="/review/list/143">[...更多]</a>
+						<div class="normal_title"><div>CEO</div><a href="/review/list/151">[...更多]</a>
 						</div>
 						<?php $pos_name = 'index_ceo1';?>
 						<div class="li_top" <?php show_page_pos($pos_name);?>>
@@ -142,7 +142,7 @@
 							</div>
 						</div>
 						<?php
-							$c_id = $category->children_map(143);
+							$c_id = $category->children_map(151);
 							$c_id = implode(',',$c_id);
 							$news = $db->query("select id,created_at,title from fb_news where category_id in ($c_id) and is_adopt=1 group by title order by created_at desc limit 2");
 							!$news && $news = array();
