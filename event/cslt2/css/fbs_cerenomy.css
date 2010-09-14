@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+body{width:1018px; margin: 0 auto; line-height:14px; font-size:12px; font-faminly:宋体,Arail; background:#bbe1ff;}
+body div{float:left; display:inline;}
+body a{text-decoration:none;}
+
+#ibody{background:url("../images/cs_zc_bj.jpg") repeat-y;}
+#part1{width:1000px; height:319px; margin-left:12px; background:url("../images/ceremony_title.jpg") no-repeat;}
+
+#part2{width:1000px; height:43px; margin-left:12px; background:url("../images/nav_bj.jpg") repeat-x;}
+	#p2_navbox{width:832px; height:43px; margin-left:84px; color:#ffffff;font-size:16px; font-weight:bold; line-height:44px;}
+		.nav_menu{padding:0px 26px; cursor:pointer;}
+		.hinder{width:2px; height:43px; background:url("../images/hinder.jpg") no-repeat;}
+#part4{width:1000px; height:62px; margin-top:20px; margin-left:12px; border-top:1px solid #a9a9a9;}
+#copyright{width:1000px; margin-top:20px; color:#999999; text-align:center;}
+
+#part3{width:1000px; margin-left:12px; margin-top:18px; background:#FFF;}
+	#flashbox{width:355px; height:294px; margin-left:21px; border:1px solid #737373; background:url("../images/flash_photo.jpg") no-repeat;}
+		#f_n_box{width:138px; height:16px; float:right; margin-top:278px;}
+		.f_n_t{width:22px; height:3px; margin-right:1px;}
+		.f_n_t img{display:none;}
+		.f_num{width:22ppx; height:3px; margin-right:1px; cursor:pointer;}
+	
+	
+	#intr{width:330px; margin-left:16px; border-top:1px solid #aca899; border-bottom:1px solid #aca899; background:#f7f7f7;}
+		#intr_title{width:330px; line-height:28px; font-size:16px; font-weight:bold; color:#005f99; text-align:center; border-bottom:1px solid #aca899;}
+		.intr_word{width:302px; line-height:20px; color:#333333; text-align:justify; padding:8px 14px; border-bottom:1px solid #aca899;}		
+		.intr_news{width:330px; margin-top:14px; padding-bottom:2px; border-top:1px solid #aca899;}
+			.newstitle{width:316px; line-height:28px; font-weight:bold; font-size:14px; color:#ac7927; padding-left:14px;}
+			.news_sc{width:316px; line-height:16px; margin-left:14px;}
+			.newsword {padding-bottom:8px;}
+			.newsword font{float:right;}
+			.newsword font a{color:#333333; font-size: 12px;}
+		#p_right{width:242px; margin-left:15px; height:267px; border-right:1px solid #a9a9a9; border-bottom:1px solid #a9a9a9; background:#f5f5f5;}
+		#fram_t{width:243px; margin-left:15px;}
+		.framwork{width:242px;}
+			.fram_title{width:222px; height:30px; font-size:16px; line-height:30px; font-weight:bold; color:#005f99; padding-left:20px; background:url("../images/left_titlebj.jpg") repeat-x;}
+			.fram_line{width:242px; height:2px; line-height:0px; font-size:0;}
+				.line_left{width:50%; height:2px; background:#149bd0;}
+				.line_right{width:50%; height:2px; background:#a9a9a9;}
+			.fram_content{width:242px; line-height:20px; padding-top:10px; padding-bottom:20px;}
+			.fram_filing{width:242px;}
+		#secbox{width:957px; margin-left:21px; margin-top:20px; background:#f2f2f2;}
+			.boxwork{width:957px;}
+			.box_title{width:936px; height:26px; font-size:14px; line-height:26px; font-weight:bold; color:#005f99; padding-left:20px; background:url("../images/zc_title_bj.jpg") repeat-x;}
+				.box_line{width:956px; height:2px; line-height:0px; font-size:0;}
+				.box_left{width:15%; height:2px; background:#149bd0;}
+				.box_right{width:85%; height:2px; background:#a9a9a9;}
+			#table{width:919px; height:249px; padding:16px;}
+				.box_1{height:249px;}
+				.title1{text-align:center; font-size:14px; font-weight:bold; color:#ffffff; padding:7px 12px; background:#bb8835; }
+			#linex{height:6px; width:}
+			.infobox1{ background:#ede0c7; text-align:center; line-height:26px;}
+			.infobox2{ background:#f6efe3; text-align:center; line-height:26px;}
+				.info1{width:62px; height:26px;  font-weight:bold; padding-left:5px;}
+				.info2{width:50px; height:26px;  font-weight:bold; }
+				.info3{width:84px; height:26px;}
+				.info4{width:110px; height:26px;}
+				.info5{width:108px; height:26px; padding:0 5px;}
+				.info6{width:102px; height:26px;}
+				.info7{width:114px; height:26px;}
+				.info8{width:84px; height:26px;}
+				
+		.thirdbox{width:961px; margin-left:21px; margin-top:20px; background:#ffffff;}
+			.zcbox{width:478px; height:257px; margin-top:12px; background:url("../images/zc_bj.jpg") no-repeat;}
+				.zcphoto{width:182px; margin-left:11px; margin-top:11px; height:228px; border:1px solid #cccccc; background:#ffffff; }
+				.zcphoto img{width:173px; height:220px; margin:3px 4px;}
+				.zcword{width:260px; height:228px; margin-top:11px; margin-left:8px; border:1px solid #cccccc; background:#ffffff;}
+					.zc_w_t{width:240px; line-height:20px; font-weight:bold; color:#ac7927; padding:10px 10px;}
+					.zc_w_w{width:240px; padding:0px 10px 16px 10px; line-height:20px; text-align:justify;}
+					.zc_w_m{width:240px; padding:0px 10px; line-height:20px; text-align:right; }
+					.zc_w_m a{color:#666666;}
+		.fourbox{width:960px; margin-left:21px; margin-top:20px; background:#ffffff;}
+			.ceremony{width:960px; height:414px; background:url("../images/banjiang_bj.jpg") no-repeat;}
+				.ce_photo{width:221px; height:151px; margin-top:10px; border:1px solid #cccccc; background:#ffffff;}
+				.ce_photo img{width:211px; height:141px; margin:5px;}
+					.ce_p_t{width:221px; line-height:36px; text-align:center; }
+				.wid{width:221px;  margin-left:12px;}
+			
+				.t_photo{width:259px; height:189px; margin-left:12px; margin-top:5px; border:1px solid #cccccc;}
+				.t_photo img{width:247; height:177px; margin:6px; display:inline;}
+				.t_word{width:662px; height:188px; margin-left:12px; margin-top:10px; border:1px solid #cccccc;}
+				.ttbox{width:454px; height:188px;}
+					.t_w_w{width:428px; line-height:22px; padding-left:24px; padding-top:10px;}
+					.t_w_m{width:454px; text-align:right;}
+					.t_w_m a{color:#666666;}
+				.sc{width:2px; height:166px; margin-left:20px; margin-top:10px;}
+				.tt_t{width: 137px; line-height:28px; padding-left:30px; margin-top:50px;}
+				.tt_t font{font-weight:bold;}
+				
+			.dx{width:960px; height:467px; background:url("../images/zc_bj_main.gif") repeat-y;}
+				.dx_photo{width:356px; height:212px; margin-left:12px; margin-top:8px; border:1px solid #cccccc; border-bottom:2px solid #cccccc;}
+				.dx_photo img{width:341px; height:195px; margin:7px;}
+				.dx_word{width:568px; height:212px;  margin-left:12px; margin-top:10px; border:1px solid #cccccc;}
+					.dx_w_t{width:160px; height:212px; padding-left:35px; padding-right:100px;}
+					.dx_w_n{margin-top:15px;}
+						.dx_w_n1{width:160px; font-size:12px; line-height:16px; }
+						.dx_w_n1 font{font-weight:bold}
+				#dx_tt_t{margin-left:30px;}
+				.dxp2_box{width:150px; height:188px; margin-top:20px; margin-left:30px; margin-right:10px;}
+					.dx_pho_2{width:148px; height:186px; border:1px solid #cccccc; background:#ffffff;}
+					.dx_pho_2 img{width:142px; height:180px; margin:3px;}
+					.dxp2_t{width:150px; line-height:24px; margin-top:10px; text-align:center;}
+				.dx_btn{line-height:0px; font-size:0px;}
+			
+			.cy{width:960px; height:413px; background:url("../images/zc_bj_main.gif") repeat-y;}
+				.cyp_box{width:164px; margin-top:20px; margin-left:25px;}
+					.cy_pho{width:164px; height:114px; border:1px solid #cccccc; background:#ffffff;}
+					.cy_pho img{width:156px; height:104px; margin:5px 4px;}
+					.cy_t{width:156px; line-height:20px; margin-top:10px; text-align:center;}
+					
+			#scence{width:960px; height:228px; background:url("../images/zc_bj_main.gif") repeat-y;}
+				#sp_box{width:940px; height:199px; margin-top:15px; margin-left:8px; border:1px solid #cccccc;}
+					.sp_photo{width:221px; height:172px; margin-left:12px; margin-top:12px;border:1px solid #cccccc;}
+					.sp_photo img{width:209px; height:160px; margin:6px;}
