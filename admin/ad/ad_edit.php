@@ -43,7 +43,7 @@
 		<tr class=tr4 id=target_url>
 			<td class=td1>广告类型</td>
 			<td align="left">
-				<select name="ad[ad_type]" id="select_upload"><option value=''></option><option value='video'>视频</option><option value='flash'>flash</option><option value='image'>图片</option></select>
+				<select name="ad[ad_type]" id="select_upload"><option value=''></option><option value='video'>视频</option><option value='flash'>flash</option><option value='image'>图片</option><option value="word">代码</option></select>
 			</td>
 		</tr>
 		<?php if($id){?>
@@ -72,6 +72,12 @@
 			<td class=td1>上传FLASH</td>
 			<td align="left">
 				<input type="file" name="flash" style="width:250px;"><?php if($ad->flash!=''){?><a class="color" title="flash展示" href="/admin/show/show_flash.php?id=<?php echo $id;?>&table=forbes_ad.fb_ad">点击查看</a><?php }?>
+			</td>
+		</tr>
+		<tr class="tr4 ad_upload" id="ad_word" style="display:none;">
+			<td class=td1>上传广告代码</td>
+			<td align="left">
+				<textarea name="ad[word]"><?php echo $ad->word;?></textarea>
 			</td>
 		</tr>
 		<tr class=tr4>

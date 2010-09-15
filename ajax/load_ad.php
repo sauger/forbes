@@ -42,7 +42,10 @@ function generate_ad($ad){
 		case 'video':
 		;
 		break;
-		
+		case 'word':
+			$str = htmlspecialchars($ad->word);
+		;
+		break;
 		default:
 			;
 		break;

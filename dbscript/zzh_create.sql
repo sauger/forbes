@@ -14,7 +14,7 @@ CREATE TABLE  `forbes`.`zzh_activity` (
   `is_old` int(11) NOT NULL DEFAULT '0',
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 CREATE TABLE  `forbes`.`zzh_comment` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `investor_id` int(11) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE  `forbes`.`zzh_comment` (
   `reply_time` datetime DEFAULT NULL,
   `is_adopt` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 CREATE TABLE  `forbes`.`zzh_member` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) DEFAULT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE  `forbes`.`zzh_member` (
   `image` varchar(255) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 CREATE TABLE  `forbes`.`zzh_member_income` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `sign_id` int(10) unsigned NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE  `forbes`.`zzh_member_income` (
   `income` int(10) unsigned NOT NULL,
   `type` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=82 DEFAULT CHARSET=utf8
+) ENGINE=MyISAM AUTO_INCREMENT=82 DEFAULT CHARSET=utf8;
 CREATE TABLE  `forbes`.`zzh_partner` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -77,4 +77,4 @@ CREATE TABLE  `forbes`.`zzh_partner` (
   `created_at` datetime NOT NULL,
   `is_adopt` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
