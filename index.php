@@ -366,7 +366,7 @@
 						<?php
 							$c_ids = $category->children_map(81);
 							$c_id = implode(',',$c_ids);
-							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) order by created_at desc limit 3");
+							$news = $db->query("select id,created_at,title,category_id from fb_news where category_id in ($c_id) and is_adopt=1 group by title order by created_at desc limit 3");
 							foreach($news as $i => $v){
 						?>
 						<div class="guide_hr_val" <?php if($i==0){?>style="margin-top:15px;"<?php }?>><a href="<?php echo get_news_url($v);?>"><?php echo $v->title;?></a></div>
