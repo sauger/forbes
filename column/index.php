@@ -24,7 +24,137 @@
 </head>
 <body>
 <div id=ibody>
-		<? include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
+		<?php
+if(!function_exists("get_config"))
+	include_once(dirname(__FILE__).'/../frame.php');
+$db=get_db();
+global $pos_items;
+init_page_items();
+global $category;
+if(empty($category)){
+	$category = new category_class('news');
+}
+global $pos_name;
+?>
+<div id="top_div">
+<div id="top_img_left">
+<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=1767086&PluID=0&w=728&h=90&ord=[timestamp]&ucm=true&z=0"></script>
+<noscript>
+<a href="http://bs.serving-sys.com/BurstingPipe/BannerRedirect.asp?FlightID=1767086&Page=&PluID=0&Pos=8352" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/BannerSource.asp?FlightID=1767086&Page=&PluID=0&Pos=8352" border=0 width=728 height=90></a>
+</noscript>
+</div>
+<div id="top_img_right" class="ad_banner">
+</div>
+<div id="top_bg">
+	<div id="top_logon"></div>
+	<div id="top_banner">
+		<div id="top_right_banner">
+			<?php js_include_tag('jquery.cookie')?>
+				<script>
+					if($.cookie('cache_name') && $.cookie('name')){
+						var str = '<div class="login_left">'+$.cookie('name')+',你好</div>'
+								+ '<div class="login_left"><a href="javascript:void(0)" id="logout">退出</a></div>'
+								+ '<div class="top_login"><a href="/user">会员中心</a></div>'
+								+ '<div class="top_login"><a href="http://www.forbeschina.com/userclub/">会员专区</a></div>';
+						$('#top_right_banner').html(str);
+					}else{
+						var str = '<div id="top_login"><a href="/login/">登录</a></div>'
+								+ '<div class="top_login"><a href="/register/">注册会员</a></div>'
+								+ '<div class="top_login"><a href="http://www.forbeschina.com/userclub/">会员专区</a></div>';
+						$('#top_right_banner').html(str);
+					}
+					$(function(){
+						$("#logout").click(function(){
+							$.cookie('cache_name','',{path: '/'});
+							location.reload();
+						});
+					});
+				</script>
+		</div>
+		<div class=forbes_search>
+				<select name="selsearch" class="iselect">
+					<option value="list">榜单</option>
+					<option value="rich">富豪</option>
+					<option value="author_news">作者</option>
+					<option value="news">文章</option>
+				</select>
+		</div>
+		<input id="top_input" style="width:312px;" type="text"/>
+		<input type="button" id="top_select" value="查  询"/>
+	</div>
+	<div id="magazine">
+		<?php $pos_name = 'index_top_magazine';?>
+		<div id="photo"><?php show_page_img();?></div>
+		<div id="m_title" <?php show_page_pos($pos_name,'link_img');?>><?php show_page_href();?></div>
+		<div id="m_bottom"><a href="/magazine/subscription"><img src="/images/index_two/magazine.jpg"></a></div>
+	</div>
+</div>
+<div id="top_menu_banner">
+	<div id="top_menu_left"></div>
+	<div id="top_menu_content">
+	<?php
+		if($nav==""){	$nav=3;	}
+		$countnav=$db->query("select * from fb_navigation where parent_id=0 order by priority asc");
+		$navigation=$db->query('select name,id,parent_id from fb_navigation where id='.$nav);
+	?>
+	 <?php foreach($countnav as $k => $v){?>
+  		<div>
+			<a <?php if($k==0){?>style="border-left:0px;"<?php }elseif($k==10){?>style="border-right:0px;"<?php }?> href="<?php echo $v->href;?>" id="<?php echo $v->id; ?>"><?php echo $v->name;?></a>
+		</div>
+ 	 <?php }?>
+	</div>
+	<div id="top_menu_right"></div>
+</div>
+<?php 
+for($i=0;$i<count($countnav);$i++){ 
+	$navigation2=$db->query('select name,target,href from fb_navigation where parent_id='.$countnav[$i]->id.' order by priority asc'); ?>	
+	<div class="top_menu2_banner" <?php if($i!=0){?>style="display:none;"<?php }?> id="nav<?php echo $countnav[$i]->id; ?>">
+		<?php if($navigation2){?>
+		<div class="top_menu2_left"></div>
+		<div class="top_menu2_content">
+		<?php 
+			$except = array("picindex","piclist","picbillionaires","piclife","piccolumn","life");
+			for($j=0;$j<count($navigation2);$j++){ 
+			$url = !in_array($countnav[$i]->id_name,$except) ? get_newslist_url($category->find_by_name($navigation2[$j]->name)->id) : $navigation2[$j]->href;
+		?>
+			<div class="t_content">
+				<div></div>
+				<a target="<?php echo $navigation2[$i]->target; ?>" href="<?php echo $navigation2[$j]->href; ?>"><?php echo $navigation2[$j]->name; ?></a>
+			</div>
+		<?php } ?>
+		</div>
+		<div class="top_menu2_right"></div>
+		<?php }else{echo "&nbsp;";}?>
+	</div>
+<?php } ?>
+</div>
+<script>
+<?php 
+global $page_type;
+if($page_type == 'static'){?>
+function top_search(){
+	var type = $(".iselect").val();
+	var text = $("#top_input").val();
+	window.location.href="/search/" + type +"/key/"+encodeURI(text);
+}
+<?php }else{?>
+function top_search(){
+	var type = $(".iselect").val();
+	var text = $("#top_input").val();
+	
+	if(type=='list'){
+		window.location.href="/list/list.php?key="+encodeURI(text);
+	}else if(type=='news'){
+		window.location.href="/search/news.php?key="+encodeURI(text);
+	}else if(type=='author_news'){
+		window.location.href="/search/author_news.php?key="+encodeURI(text);
+	}else if(type=='rich'){
+		window.location.href="/search/rich.php?name="+encodeURI(text);
+	}
+}
+<?php }?>
+</script>
+		<? #include_once(dirname(__FILE__).'/../inc/top.inc.php');?>
 		<div id=bread>专栏</div>
 		<div id=bread_line></div>
 		<div id=column_left>
