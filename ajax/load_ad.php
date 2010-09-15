@@ -43,7 +43,7 @@ function generate_ad($ad){
 		;
 		break;
 		case 'word':
-			$str = htmlspecialchars($ad->word);
+			$str = urldecode($ad->word);
 		;
 		break;
 		default:

@@ -243,7 +243,13 @@ global $pos_name;
 			</div>
 		</div>
 		<div id="right_inc">
-			<?php include_once(dirname(__FILE__)."/../right/ad.php");?>
+			<div id="right_banner">
+				<script src="http://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=rsb&c=28&pli=1767091&PluID=0&w=300&h=250&ord=[timestamp]&ucm=true&z=0"></script>
+				<noscript>
+				<a href="http://bs.serving-sys.com/BurstingPipe/BannerRedirect.asp?FlightID=1767091&Page=&PluID=0&Pos=206" target="_blank"><img src="http://bs.serving-sys.com/BurstingPipe/BannerSource.asp?FlightID=1767091&Page=&PluID=0&Pos=206" border=0 width=300 height=250></a>
+				</noscript>
+			</div>
+			<?php #include_once(dirname(__FILE__)."/../right/ad.php");?>
 			<?php include_once(dirname(__FILE__)."/../right/column_c.php");?>
 			<?php include_once(dirname(__FILE__)."/../right/column.php");?>
 			<?php include_once(dirname(__FILE__)."/../right/forum.php");?>
