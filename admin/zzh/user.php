@@ -49,6 +49,7 @@
 					<td><?php echo $record[$i]->name;?></td>
 					<td><?php echo $record[$i]->mobile;?></td>
 					<td>
+						<a href="add_user.php?id=<?php echo $record[$i]->id;?>" style="cursor:pointer"><img src="/images/admin/btn_add.png" border="0"></a>
 						<a href="user.edit.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer"><img src="/images/admin/btn_edit.png" border="0"></a>
 						<span style="cursor:pointer;color:#FF0000" class="del" name="<?php echo $record[$i]->id;?>"><img src="/images/admin/btn_delete.png" border="0"></span>
 					</td>

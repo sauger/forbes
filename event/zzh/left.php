@@ -7,11 +7,11 @@
 			$url = $_SERVER['PHP_SELF'];
 			$filename= substr( $url,strrpos($url,'/')+1 );
 		?>
-			<li><a class="bc" href="index.php" onfocus="this.blur()">增长会介绍</a></li>
-			<li><a href="vip.php" onfocus="this.blur()">会员专享</a></li>
-			<li><a href="prediction.php" onfocus="this.blur()">活动专区</a></li>
-			<li><a href="cooperation.php" onfocus="this.blur()">合作伙伴</a></li>
-			<li><a href="contact us.html" onfocus="this.blur()">联系我们</a></li>
+			<li><a <?php if($filename=='index.php'){?>class="bc"<?php }?> href="index.php" onfocus="this.blur()">增长会介绍</a></li>
+			<li><a <?php if($filename=='vip.php'){?>class="bc"<?php }?> href="vip.php" onfocus="this.blur()">会员专享</a></li>
+			<li><a <?php if($filename=='prediction.php'){?>class="bc"<?php }?> href="prediction.php" onfocus="this.blur()">活动专区</a></li>
+			<li><a <?php if($filename=='cooperation.php'){?>class="bc"<?php }?> href="cooperation.php" onfocus="this.blur()">合作伙伴</a></li>
+			<li><a <?php if($filename=='contact us.html'){?>class="bc"<?php }?> href="contact us.html" onfocus="this.blur()">联系我们</a></li>
 		</ul>
 	</div>
 	<div class="left-calendar"></div>
@@ -34,11 +34,14 @@
 	<div class="left-part">
 		<div class="left-part-top">部分会员</div>
 		<div class="left-part-c">
-		<a class="left-part-pic" href="#"><img src="images/logo0.gif" /></a>
-		<a class="left-part-pic" href="#"><img src="images/logo2.gif" /></a>
-		<a class="left-part-pic" href="#"><img src="images/logo3.gif" /></a>
-		<a class="left-part-pic" href="#"><img src="images/logo2.gif" /></a>
-	</div>
+		<?php 
+			$partner = $db->query("select * from zzh_partner order by priority limit 4");
+			!$partner && $partner = array();
+			foreach($partner as $v){
+		?>
+			<a class="left-part-pic" href="<?php echo $v->link;?>"><img src="<?php echo $v->image;?>" /></a>
+		<?php }?>
+		</div>
 		<div class="left-part-bot"><img src="images/part-bot.gif" /></div>	
 	</div>
 	<!--<div class="left-banner"><img src="images/banner.gif" /></div>-->

@@ -35,8 +35,21 @@ if($db->record_count==0){
 									<div class="right-warp">
 										<div class="r-m-t-one clear" >
 											<div class="r-m-t-title" style="font-size:12px;color:#464646;margin:0px;"><!-- 标题 begin-->
-												<strong>加入增长会成为会员后可以在线查看福布斯增长会投资人理事的联系方式和投资动态，也可以在线留言给各位理事，同时，您也可以以查看其他增长会会员的动态，进行相关会员之间的沟通和经验分享...</strong>
-											</div>	
+												<strong>
+													<?php 
+														$uid = front_user_id();
+														if(empty($uid)){
+													?>
+													此页面只对增长会的会员开放，如果您已经是增长会的会员，请点击<a href="/login/?last_url=/event/zzh/vip.php">这里</a>进行登录
+													<?php die();}else{
+														$user = $db->query("select * from zzh_member where user_id=$uid");
+														if(!$user){	
+													?>
+													此页面只对增长会的会员开放，如果您已经是增长会的会员，请点击<a href="/login/?last_url=/event/zzh/vip.php">这里</a>进行登录
+													<?php die();}}?>
+													加入增长会成为会员后可以在线查看福布斯增长会投资人理事的联系方式和投资动态，也可以在线留言给各位理事，同时，您也可以以查看其他增长会会员的动态，进行相关会员之间的沟通和经验分享...
+												</strong>
+											</div>
 										</div><!-- 标题 end -->		
 										<div class="r-m-t-two">
 											<div class="main" style="padding:10px 0;">
@@ -45,10 +58,12 @@ if($db->record_count==0){
 													<span class="t-title"><img src="images/t-list.gif" /><strong>理事圈子</strong></span>
 												</p>						
 												<div class="r-m-t-one" style="text-align:right;margin:15px 0">
+												<!-- 
 													<span class="mark">搜索理事</span>
 													<input class="input-title" name="" type=""></input>
 													<select class="input-title" name=""><option>全部/IT/化工</option></select>
 													<input  name="搜索" type="submit" class="sub-but" value="搜索"/>
+												 -->
 												</div>	
 												<div class="vip-style">
 													<div class="vip-style-pic"><a href="vip_contace.php?id=<?php echo $investor[0]->id;?>"><img class="vip-style-p" src="<?php echo $investor[0]->image;?>" /></a><a href="#"><img src="images/Contact-1.gif" /></a></div>
@@ -62,14 +77,16 @@ if($db->record_count==0){
 										<div class="r-m-t-two" style="margin-top:80px">
 											<div class="main" style="padding:10px 0;">
 												<p>
-													<span class="more1"><a href="style.html"><img style="margin:0 5px 2px" src="images/more1.gif" />更多会员</a></span>
+													<span class="more1"><a href="style2.php"><img style="margin:0 5px 2px" src="images/more1.gif" />更多会员</a></span>
 													<span class="t-title"><img src="images/t-list.gif" /><strong>会员展示</strong></span>
 												</p>						
 												<div class="r-m-t-one" style="text-align:right;margin:15px 0">
+												<!-- 
 													<span class="mark">搜索理事</span>
 													<input class="input-title" name="" type=""></input>
 													<select class="input-title" name=""><option>全部/IT/化工</option></select>
 													<input  name="搜索" type="submit" class="sub-but" value="搜索"/>
+												-->
 												</div>	
 												<div class="vip-style" style="line-height:20px;">
 													<div class="vip-style-pic"><a href="user.php?id=<?php echo $user[0]->id;?>"><img class="vip-style-p" src="<?php echo $user[0]->image;?>" /></a></div>

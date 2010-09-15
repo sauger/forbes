@@ -124,6 +124,9 @@ a:focus{text-decoration:underline}
 	padding:2px 0;
 	background:url(../images/part-3.gif) 30px 0 repeat-y;
 }
+.left-part-c img{
+	width:60%;
+}
 .left-part-pic{
 	margin:10px 0;
 	display:block

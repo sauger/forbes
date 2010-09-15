@@ -8,7 +8,7 @@ if(empty($id)){
 $investor = new table_class('fb_investor');
 $investor->find($id);
 $db = get_db();
-$comment = $db->query("select * from zzh_comment where investor_id=$id and is_adopt=1 order by created_at desc limit 3");
+$comment = $db->paginate("select * from zzh_comment where investor_id=$id and is_adopt=1 order by created_at desc",10);
 !$comment && $comment = array();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -72,12 +72,9 @@ $comment = $db->query("select * from zzh_comment where investor_id=$id and is_ad
 													</tr>
 													<?php }?>
 												</table>
-												<div class="main" style="padding:10px 0;border:none;">
-												 	<p><strong>向理事咨询和提问</strong></p> 
-													<textarea class="tex-tarea2" style="margin-bottom:8px" id="comment_text"></textarea>
-													<input type="checkbox" id="no_name"/><span style="margin-right:10px">匿名</span><input type="submit" class="sub-but2" id="submit_input" value="发表提问" />
-													</input>												
-												</div>												
+											</div>
+											<div class="page">
+												<?php paginate();?>
 											</div>
 										</div>											
 									</div>					
@@ -91,18 +88,3 @@ $comment = $db->query("select * from zzh_comment where investor_id=$id and is_ad
 	</div><!-- container end -->	
 </body>
 </html>
-<script>
-$(function(){
-	$("#submit_input").click(function(){
-		var no_name = $("#no_name").attr("checked");
-		$.post('comment.post.php',{'id':<?php echo $id;?>,'comment':$("#comment_text").val(),'no_name':no_name},function(data){
-			if(data=='ok'){
-				alert("您的留言已成功提交，请等待回复");
-				$("#comment_text").attr('value','');
-			}else{
-				alert(data);
-			}
-		});
-	});
-});
-</script>
