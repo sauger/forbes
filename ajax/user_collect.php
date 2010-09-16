@@ -5,7 +5,9 @@ if(is_ajax()){
 	if(require_login(false)===false){
 		echo '请先登录!';
 		die();
-	}	
+	}else{
+		$uid = front_user_id();
+	}
 }
 $resource_type = $_REQUEST['resource_type'];
 $resource_id = $_REQUEST['resource_id'];
@@ -29,7 +31,7 @@ if($method == 'get'){
 $collection = new table_class('fb_collection');
 $collection->resource_type = $resource_type;
 $collection->resource_id = $resource_id;
-$collection->user_id = $_SESSION['user_id'];
+$collection->user_id = $uid;
 $collection->created_at = now();
 if($collection->save()){
 	if(is_ajax()){

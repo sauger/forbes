@@ -30,7 +30,9 @@ function generate_ad($ad){
 				        <PARAM NAME=\"WMode\" VALUE=\"transparent\">
 				        <embed src=\"{$ad->flash}\" quality=\"high\" WMode=\"transparent\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" width=\"{$size[0]}\" height=\"{$size[1]}\"></embed>
 				     </object>";
-			$str .= "<a href=\"/ajax/ad_bridge.php?code={$ad->code}\" target='_blank' style=\"left:0; top:0; width:{$size[0]}px; height:{$size[1]}px; border:1px solid; z-index:100; background:#ffffff; filter: alpha(opacity=0);-moz-opacity: 0;opacity: 0;  position:absolute; float:left;\"></a>"; 
+			$str .= "<a href=\"/ajax/ad_bridge.php?code={$ad->code}\" target='_blank' style=\"left:0; top:0; width:{$size[0]}px; height:{$size[1]}px; border:1px solid; z-index:100; background:#ffffff; filter: alpha(opacity=0);-moz-opacity: 0;opacity: 0;  position:absolute; float:left;\"></a>";
+			$str .= "<input type='hidden' value='{$ad->id}' />";
+			$array = array("type" => "normal","content" => $str);
 		break;
 		case 'image':
 			$width = $size[0];
@@ -38,20 +40,25 @@ function generate_ad($ad){
 			$str = "<a href='/ajax/ad_bridge.php?code={$ad->code}' target='_blank'>";
 			$str .= "<img width='{$width}' height='{$height}' border=0 src='{$ad->image}' />";
 			$str .= "</a>";
+			$str .= "<input type='hidden' value='{$ad->id}' />";
+			$array = array("type" => "normal","content" => $str);
 		break;
 		case 'video':
+			$str .= "<input type='hidden' value='{$ad->id}' />";
+			$array = array("type" => "normal","content" => $str);
 		;
 		break;
 		case 'word':
-			$str = urldecode($ad->word);
+			$size = $ad->ad_size;
+			$size = explode('*',$size);
+			$array = array("type" => "word",'id' => $ad->id,'width' => $size[0],'height' => $size[1]);
 		;
 		break;
 		default:
 			;
 		break;
 	}
-	$str .= "<input type='hidden' value='{$ad->id}' />";
-	return $str;
+	return $array;
 	
 }
 
@@ -75,5 +82,5 @@ foreach ($ads as $ad) {
 $len = count($valid_ads);
 $index = mt_rand(0,$len-1);
 insert_ad_record($valid_ads[$index]);
-echo generate_ad($valid_ads[$index]);
+echo json_encode(generate_ad($valid_ads[$index]));
 ?>
