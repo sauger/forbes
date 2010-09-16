@@ -1,6 +1,6 @@
 <div class="logo"><img src="images/logo.gif" /></div>
 <div class="left-main">
-	<div class="left-application"><a href="#"></a></div>
+	<div class="left-application"><a href="on-line.php"></a></div>
 	<div class="left-nav">
 		<ul>
 		<?php 
