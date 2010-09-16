@@ -352,6 +352,21 @@ function require_login($type="redirect"){
 	}
 }
 
+function require_zzh(){
+	$uid = front_user_id();
+	if(empty($uid)){
+		redirect('/event/zzh/vip.php');
+		die();
+	}else{
+		$db = get_db();
+		$user = $db->query("select * from zzh_member where user_id=$uid");
+		if(!$user){
+			redirect('/event/zzh/vip.php');
+			die();
+		}
+	}
+}
+
 function search_content($key,$table_name='fb_news',$conditions=null,$page_count = 10, $order='',$full_text=false){
 	$db = get_db();
 	if($key){
