@@ -10,7 +10,7 @@ div{margin:0; padding:0; float:left; display:inline;}
 #register .title_right .content1{height:23px; padding-left:15px; padding-right:10px; text-align:center; background:#f4d14c;}
 #register .title_right .arrow{width:13px; height:23px; background:url(/images/register/title_bg1.jpg) no-repeat;}
 #register .title_right .arrow1{width:13px; height:23px; background:url(/images/register/title_bg2.jpg) no-repeat;}
-.rtable{margin-top:30px; margin-left:140px; float:left; display:inline;}
+.rtable{margin-top:30px; width:712px; margin-left:140px; float:left; display:inline;}
 .rtable tr{height:40px; line-height:40px; }
 .td1{width:80px; color:#333333; font-size:13px; line-height:22px;  }
 .td2{color:#999999; line-height:22px;}
@@ -44,3 +44,4 @@ button{width:170px; height:35px; line-height:35px; text-align:center; font-size:
 .gray{color:#666666; font-size:12px;}
 #chang_pic{width:110px; line-height:25px; cursor:pointer; color:#246BB0; margin-left:15px;}
 .dash{width:900px; height:1px; margin-top:10px; font-size:0; line-height:0; border-bottom:1px dotted #999999;}
+#register_info{padding:20px;}

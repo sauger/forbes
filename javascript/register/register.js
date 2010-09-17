@@ -1,6 +1,8 @@
 $(function(){
 	$(".colorbox").colorbox();
 	
+	$("#info_text").colorbox({width:"80%", inline:true, href:"#register_info"});
+	
 	$("#user_year").datepicker({
 		changeMonth: true,
 		changeYear: true,
