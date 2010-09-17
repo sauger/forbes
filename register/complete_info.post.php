@@ -14,9 +14,8 @@
 		die();
 	}
 	
-	if($_POST['yzm']!=$_SESSION['user_info']||empty($_SESSION['user_info'])){
-		alert('验证码错误！');
-		redirect($_SERVER['HTTP_REFERER']);
+	if($_POST['session']!=$_SESSION['complete_info']||empty($_SESSION['complete_info'])){
+		redirect('/error');
 		die();
 	}
 	if(strlen($_POST['post']['xm'])>30){

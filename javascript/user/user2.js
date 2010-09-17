@@ -1,16 +1,6 @@
 $(function(){
 	$("#info_submit").click(function(){
-		if($("#rvcode").val()==''){
-			alert('请输入验证码！');
-		}else{
-			$.post('/user/check_session.php',{'verify':$("#rvcode").val()},function(data){
-				if(data=='success'){
-					$('form').submit();
-				}else{
-					alert('验证码错误！');
-				}
-			});
-		}
+		$('form').submit();
 	});
 	
 	$("#province").change(function(){

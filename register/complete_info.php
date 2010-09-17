@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include_once( dirname(__FILE__) .'/../frame.php');
 	require_login();
 	$db = get_db();
@@ -12,6 +13,9 @@
 		$uname = $_COOKIE['name'];
 	}else{
 		$uname = $_COOKIE['login_name'];
+	}
+	if(!isset($_SESSION['complete_info'])){
+		$_SESSION['complete_info'] = rand_str();
 	}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
@@ -212,14 +216,7 @@
 							<td align="right">QQ：</td>
 							<td colspan="3"><input class="txt1" maxlength="10" value="<?php echo htmlspecialchars($user->qq);?>" name="post[qq]" type="text"></td>
 						</tr>
-						<tr>
-							<td align="right">验证码：</td>
-							<td colspan="3">
-								<div><input id="rvcode" maxlength="4" name="yzm" class="txt3" type="text"></div>
-								<div id=yzm><img id="pic" src="/user/yz.php"></div>
-								<div id="chang_pic">看不清楚？换张图片</div>
-							</td>
-						</tr>
+						<input type="hidden" name="session" value="<?php echo $_SESSION['complete_info'];?>">
 					</table>
 				</div>
 				<div id="content_bottom">
