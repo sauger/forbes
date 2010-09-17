@@ -323,6 +323,7 @@ ul.r-m-t-t-main li .pic ,.more-activites .pic{
 }
 .vip-style-pic{
 	width:100px;
+	float:left;
 	margin-right:25px;
 	text-align:center;
 }
