@@ -66,8 +66,8 @@ if($db->record_count==0){
 												 -->
 												</div>	
 												<div class="vip-style">
-													<div class="vip-style-pic"><a href="vip_contace.php?id=<?php echo $investor[0]->id;?>"><img class="vip-style-p" src="<?php echo $investor[0]->image2;?>" /></a><a href="#"><img src="images/Contact-1.gif" /></a></div>
-													<p class="mark"><?php echo $investor[0]->name;?></p>
+													<div class="vip-style-pic"><a href="vip_contace.php?id=<?php echo $investor[0]->id;?>"><img class="vip-style-p" src="<?php echo $investor[0]->image2;?>" /></a><a href="vip_contace.php?id=<?php echo $investor[0]->id;?>"><img src="images/Contact-1.gif" /></a></div>
+													<p class="mark"><a href="vip_contace.php?id=<?php echo $investor[0]->id;?>"><?php echo $investor[0]->name;?></a></p>
 													<p class="mark"><?php echo $investor[0]->post;?></p>
 													<p><span class="mark">投资方向：</span><?php echo $investor[0]->invest_zone;?></p>
 													<p class="mark">个人介绍：</p>
@@ -90,11 +90,11 @@ if($db->record_count==0){
 												</div>	
 												<div class="vip-style" style="line-height:20px;">
 													<div class="vip-style-pic"><a href="user.php?id=<?php echo $user[0]->id;?>"><img class="vip-style-p" src="<?php echo $user[0]->image;?>" /></a></div>
-													<p class="mark"><?php echo $user[0]->name;?></p>
+													<p class="mark"><a href="user.php?id=<?php echo $user[0]->id;?>"><?php echo $user[0]->name;?></a></p>
 													<p>行业性质：<span class="mark"><?php echo $user[0]->industry;?></span></p>
 													<p>公司地点：<span class="mark"><?php echo $user[0]->address;?></span></p>
 													<p>公司寻求：<span class="mark"><?php echo $user[0]->item_type;?></span></p>
-													<p><span class="mark" style="margin-right:15px"><?php echo $user[0]->company_name;?></span><a href="user.php?id=<?php echo $user[0]->id;?>">详情点击>></a></p><p class="mark">项目介绍</p><?php echo $user[0]->item_description;?></p>		</div>
+													<p><span class="mark" style="margin-right:15px"><?php echo $user[0]->company_name;?></span></p><p class="mark">项目介绍</p><?php echo $user[0]->item_description;?></p>		</div>
 											</div>
 										</div>											
 									</div>					

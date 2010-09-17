@@ -51,7 +51,8 @@
 											</div>																		    		
 									  		<ul class="style-list">
 									  		<?php for($i=0;$i<$i_count;$i++){?>
-												<li><img src="<?php echo $member[$i]->image;?>" /><h4><a href="vip_contace2.php?id=<?php echo $member[$i]->id;?>"><?php echo $member[$i]->name;?></a></h4>
+												<li><a href="vip_contace2.php?id=<?php echo $member[$i]->id;?>"><img src="<?php echo $member[$i]->image;?>" /></a>
+													<h4><a href="vip_contace2.php?id=<?php echo $member[$i]->id;?>"><?php echo $member[$i]->name;?></a></h4>
 													<p><span class="mark">公司名称：</span><?php echo $member[$i]->company_name;?></p>
 													<p><span class="mark">所属类型：</span><?php echo $member[$i]->item_type;?></p>
 												</li>
@@ -85,7 +86,7 @@
 
 <script>
 function investor_search(){
-	window.location.href = "?key="+$("#key").val());
+	window.location.href = "?key="+$("#key").val();
 }
 $(function(){
 	$("#investor_search").click(function(){

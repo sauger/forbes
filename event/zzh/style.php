@@ -59,7 +59,8 @@
 											</div>																		    		
 									  		<ul class="style-list">
 									  		<?php for($i=0;$i<$i_count;$i++){?>
-												<li><img src="<?php echo $investor[$i]->image;?>" /><h4><a href="vip_contace.php?id=<?php echo $investor[$i]->id;?>"><?php echo $investor[$i]->name;?></a></h4>
+												<li><a href="vip_contace.php?id=<?php echo $investor[$i]->id;?>"><img src="<?php echo $investor[$i]->image;?>" /></a>
+													<h4><a href="vip_contace.php?id=<?php echo $investor[$i]->id;?>"><?php echo $investor[$i]->name;?></a></h4>
 													<p><span class="mark">公司机构：</span><?php echo $investor[$i]->company;?></p>
 													<p><span class="mark">投资方向：</span><?php echo $investor[$i]->invest_zone;?></p>
 												</li>
