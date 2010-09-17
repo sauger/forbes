@@ -9,7 +9,7 @@ $(function(){
 		dayNamesMin:["日","一","二","三","四","五","六"],
 		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
 		dateFormat: 'yy-mm-dd',
-		 yearRange: 'c-100,c'
+		yearRange: 'c-100,c'
 	});
 	
 	$("#province").change(function(){
