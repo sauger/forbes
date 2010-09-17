@@ -35,7 +35,7 @@ $comment = $db->query("select * from zzh_comment where investor_id=$id and is_ad
 								<div class="right-bg-top"><img src="images/right-top.gif" /></div>
 									<div class="right-warp">
 										<div class="vip-co-box">	
-											 <img class="pic1" src="<?php echo $investor->image;?>" />
+											 <img class="pic1" src="<?php echo $investor->image2;?>" />
 											 <p class="vip-co-name"><strong><?php echo $investor->name;?></strong></p>
 											 <p><span class="mark">所在公司：</span><?php echo $investor->company;?></p>
 											 <p><span class="mark">身份：</span><?php echo $investor->post;?></p>
