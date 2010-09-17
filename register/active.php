@@ -18,7 +18,7 @@
 			$db->execute("update fb_yh set authenticated=1 where id={$user_id}");
 			adjust_user_score($user_id,50,"用户激活");
 		}
-		$str = '恭喜您，激活成功，感谢您注册成为福布斯中文网会员！';
+		$str = '恭喜您，激活成功，感谢您注册成为福布斯中文网会员！请继续填写完整的个人信息';
 		$cache_name = sprintf('%06s',$user_id) .rand_str(24);
 		$db->execute("update fb_yh set cache_name='{$cache_name}' where id={$user_id}");
 		setcookie("name",$name,0,'/');
@@ -35,5 +35,5 @@
 </head>
 <?php
 alert($str);
-redirect('/');
+redirect('complete_info.php');
 ?>

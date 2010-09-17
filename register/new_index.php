@@ -9,9 +9,10 @@
 	<meta http-equiv=Content-Language content=zh-cn>
 	<title>注册_福布斯中文网</title>
 	<?php
-		use_jquery();
-		js_include_tag('register/register','public','jquery.colorbox-min.js');
 		css_include_tag('new_register','public','colorbox');
+		use_jquery_ui();
+		js_include_tag('register/register','public','jquery.colorbox-min.js');
+		$db = get_db();
 	?>
 </head>
 <body>
@@ -33,7 +34,7 @@
 			</div>
 		</div>
 		<form id="re_form" action="register.post.php" method="post">
-		<table>
+		<table class="rtable">
 			<tr>
 				<td class=td1><span style="color:red;">* </span><label for="user_name">用户名</label></td>
 				<td class=td3><input class="txt" maxlength="20" id="user_name" name="user[name]" type="text"></td>
@@ -76,54 +77,136 @@
 			</tr>
 			</table>
 			<div class="title"></div>
-			<table>
+			<table class="rtable">
 			<tr>
 				<td class=td1><span style="color:red;">* </span>姓名</td>
-				<td class=td3><input class="txt" maxlength="40" name="user[nick_name]" id="nick_name" type="text"></td>
+				<td class=td3><input class="txt" maxlength="40" name="order[xm]" id="nick_name" type="text"></td>
 				<td class=td2>
+					<div id="check_nickname" class="display3"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请输入真实姓名</div></div>
 				</td>
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>性别</td>
-				<td class=td3><div class="radio_div"><input value='男' name="user[gender]" checked=checked id="gender1" type="radio"><label for="gender1">男</label></div><div class="radio_div"><input value='女' name="user[gender]" id="gender2" type="radio"><label for="gender2">女</label></div></td>
+				<td class=td3><div class="radio_div"><input value='男' name="order[xb]" checked=checked id="gender1" type="radio"><label for="gender1">男</label></div><div class="radio_div"><input value='女' name="order[xb]" id="gender2" type="radio"><label for="gender2">女</label></div></td>
 				<td class=td2>
+					<div id="check_gender" class="display3"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请选择性别</div>
 				</td>
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>出生年月</td>
-				<td class=td3><select id="year" name="user[year]" class="sel2" ></select>年　<select id="month" name="user[month]" class="sel2" ></select>月　<select id="day" name="user[day]" class="sel2" ></select>日</td>
+				<td class=td3>
+					<input class="txt" readonly="readonly" maxlength="40" name="user[year]" id="user_year" type="text">
 				<td class=td2>
-					<div id="year1" class="display1 year_check">请选择出生年月</div>
+					<div id="check_year" class="display3"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请选择出生年月</div>
 				</td>
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>教育程度</td>
-				<td class=td3><select  class="sel2" ></select></td>
+				<td class=td3>
+					<select  class="sel2" name="order[xl]" id="edu">
+						<OPTION value=""></OPTION> 
+						<OPTION value="1.博士">1.博士</OPTION> 
+						<OPTION value="2.硕士">2.硕士</OPTION> 
+						<OPTION value="3.大学本科 大学专科">3.大学本科/大学专科</OPTION> 
+						<OPTION value="4.高中 中专">4.高中/中专</OPTION> 
+						<OPTION value=5.其他>5.其他</OPTION>
+					</select>
+				</td>
 				<td class=td2>
+					<div id="check_edu" class="display3"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请选择教育程度</div>
 				</td>
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>地　　区</td>
-				<td class=td3><select  class="sel2" ></select>省　<select  class="sel2" ></select></td>
+				<td class=td3>
+					<select id="province" name="order[sf]" class="sel2">
+						<option value=""></option>
+						<?php
+							$province = $db->query("select * from fb_chinafar where region_type=1");
+							for($i=0;$i<count($province);$i++){
+						?>
+						<option value="<?php echo $province[$i]->id;?>"><?php echo $province[$i]->name;?></option>
+						<?php 
+							}
+						?>
+					</select>省　
+					<select id="city" name="order[cs]" class="sel2">
+						
+					</select></td>
 				<td class=td2>
+					<div id="check_place" class="display3"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请选择地区</div>
 				</td>
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>职　　位</td>
-				<td class=td3><select  class="sel2" ></select></td>
+				<td class=td3>
+					<select id="post" class="sel2" name="order[zw]">
+						<option value=""></option>
+						<OPTION value="1.董事长 总裁 行政总裁 首席执行官 董事">1.董事长/总裁/行政总裁/首席执行官/董事</OPTION> 
+						<OPTION value="2.副总裁 执行董事">2.副总裁/执行董事</OPTION> 
+						<OPTION value="3.总经理 副总经理 厂长 副厂长">3.总经理/副总经理/厂长/副厂长</OPTION> 
+						<OPTION value="4.企业所有人 企业合伙人">4.企业所有人/企业合伙人</OPTION> 
+						<OPTION value="5.财务总监 总会计师">5.财务总监/总会计师</OPTION> 
+						<OPTION value="6.信息系统总监 首席信息官">6.信息系统总监/首席信息官</OPTION> 
+						<OPTION value="7.人事经理 行政经理">7.人事经理/行政经理</OPTION> 
+						<OPTION value="8.总工程师 高级工程师">8.总工程师/高级工程师</OPTION> 
+						<OPTION value="9.市场营销 销售总监">9.市场营销/销售总监</OPTION> 
+						<OPTION value=10.部门经理>10.部门经理</OPTION> 
+						<OPTION value="11.专业人士 会计师 律师 经济师 教授等">11.专业人士（会计师，律师，经济师，教授等）</OPTION> 
+						<OPTION value=12.政府机构官员>12.政府机构官员</OPTION> 
+						<OPTION value=13.其他>13.其他</OPTION>
+					</select>
+				</td>
 				<td class=td2>
+					<div id="check_post" class="display3"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请选择职位</div>
 				</td>
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>公司类型</td>
-				<td class=td3><select  class="sel2" ></select></td>
+				<td class=td3>
+					<select id="company" class="sel2" name="order[gsxz]">
+						<option value=""></option>
+						<option value="1.国有/国有控股企业">1.国有/国有控股企业</option>
+						<option value="2.事业单位">2.事业单位</option>
+						<option value="3.民营企业">3.民营企业</option>
+						<option value="4.外商独资企业">4.外商独资企业</option>
+						<option value="5.中外合资/合作企业">5.中外合资/合作企业</option>
+						<option value="6.其他（请说明）">6.其他（请说明）</option>
+					</select>
+				</td>
 				<td class=td2>
+					<div id="check_type" class="display3"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请选择公司类型</div>
 				</td>
 			</tr>
 			<tr>
 				<td class=td1><span style="color:red;">* </span>所处行业</td>
-				<td class=td3><select  class="sel2" ></select></td>
+				<td class=td3>
+					<select id="industry" class="sel2" name="order[hy]">
+						<option value=""></option>
+						<OPTION value=1.制造业>1.制造业</OPTION> 
+						<OPTION value=2.进出口贸易>2.进出口贸易</OPTION> 
+						<OPTION value="3.批发 零售分销">3.批发/零售/分销</OPTION> 
+						<OPTION value=4.产品代理>4.产品代理</OPTION> 
+						<OPTION value="5.银行 金融">5.银行/金融</OPTION> 
+				        <OPTION value=6.保险业>6.保险业</OPTION>
+						<OPTION value=7.电信服务业>7.电信服务业</OPTION> 
+						<OPTION value=8.邮政服务>8.邮政服务</OPTION> 
+				        <OPTION value="9.网络 信息服务 电子商务">9.网络/信息服务/电子商务</OPTION> 
+						<OPTION value=10.公用事业>10.公用事业</OPTION> 
+						<OPTION value="11.酒店 旅游">11.酒店/旅游</OPTION> 
+						<OPTION value=12.房地产>12.房地产</OPTION> 
+				        <OPTION value=13.建筑>13.建筑</OPTION> 
+						<OPTION value=14.政府机构>14.政府机构</OPTION> 
+						<OPTION value="15.文化 教育 培训">15.文化/教育/培训</OPTION> 
+						<OPTION value="16.交通运输 航空 船务 铁路 货运等 ">16.交通运输(航空，船务，铁路，货运等)</OPTION> 
+						<OPTION value="17.法律 会计">17.法律/会计</OPTION> 
+						<OPTION value="18.商业咨询 顾问服务">18.商业咨询/顾问服务</OPTION> 
+						<OPTION value="19.媒体 公关 出版 广播 广告等 ">19.媒体/公关（出版，广播，广告等）</OPTION> 
+						<OPTION value="20.其他">20.其他</OPTION>
+					</select>
+				</td>
 				<td class=td2>
+					<div id="check_industy" class="display3"><div class=pic><img src="/images/register/error.jpg"></div><div class="pic_content">请选择所处行业</div>
 				</td>
 			</tr>
 			<tr>
@@ -139,7 +222,7 @@
 			</tr>
 		</table>
 		<div class="dash"></div>
-		<table>
+		<table class="rtable">
 			<tr>
 				<td class=td5>是否愿意订阅福布斯精华推荐（一周发送一次）</td>
 				<td class=td2><a href="/images/register/email.jpg" class="colorbox">查看快闻板式</a></td>
@@ -156,7 +239,7 @@
 			</tr>
 		</table>
 		<div class="dash"></div>
-		<table>	
+		<table class="rtable">	
 			<tr>
 				<td class="td5" style="color:#000000; text-align:center;">会员注册意味着您已接受<a href="">《福布斯中文网用户注册协议》</a>，注册成为免费会员</td>
 			</tr>

@@ -1,6 +1,11 @@
 <?php
-	session_start();
-	include_once('../frame.php');
+	include_once( dirname(__FILE__) .'/../frame.php');
+	require_login();
+	$db = get_db();
+	$uid = front_user_id();
+	$order = $db->query("select * from fb_yh_dy where yh_id=$uid");
+	init_page_items();
+	global $pos_name;
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,8 +15,8 @@
 	<title>注册_福布斯中文网</title>
 	<?php
 		use_jquery();
-		js_include_tag('public','jquery.colorbox-min.js');
-		css_include_tag('reg_success','public','colorbox');
+		js_include_tag('public','jquery.colorbox-min.js','right');
+		css_include_tag('public','colorbox','reg_success');
 	?>
 </head>
 <body>
@@ -27,9 +32,9 @@
 				<div class="arrow"></div>
 				<div class="content">Step2: 接收验证mail</div>
 				<div class="arrow"></div>
-				<div class="content1">Step3: 完善个人资料</div>
-				<div class="arrow1"></div>
-				<div class="content">注册成功</div>
+				<div class="content">Step3: 完善个人资料</div>
+				<div class="arrow"></div>
+				<div class="content1">注册成功</div>
 			</div>
 		</div>
 		<div id="success">
@@ -51,10 +56,18 @@
 						<div class="cl"><a href="/column/">专栏</a></div>
 					</div>
 					<div id="subscribe">
-						<span>您未订阅福布斯的：</span><br><br>
-						　　精华文章（每周发送一次） <a style="font-weight:bold;" href="">查看精华文章版式</a><br>
-    　　分类文章精华的： 富豪  创业   商业  科技  生活分类（每周发一次）  <a style="font-weight:bold;" href="">查看精华文章版式</a><br>
-    　　如果您要取消订阅，请 <a href="">点击这里</a> ，并时行相关取消设置<br>
+						<span>您已订阅福布斯的：</span><br><br>
+						<?php 
+							if($order[0]->jhtj==1){
+						?>
+						　　精华文章（每周发送一次） <a style="font-weight:bold;" href="/images/register/email.jpg" class="colorbox">查看精华文章版式</a><br>
+						<?php }?>
+						<?php 
+							if($order[0]->fh==1||$order[0]->cy==1||$order[0]->sh==1||$order[0]->kj==1||$order[0]->tz==1||$order[0]->sy==1){
+						?>
+    　　分类文章精华的： <?php if($order[0]->fh==1){?>富豪　<?php }if($order[0]->cy==1){?>创业　<?php }if($order[0]->sy==1){?>商业　<?php }if($order[0]->kj==1){?>科技　<?php }if($order[0]->tz==1){?>投资　<?php }if($order[0]->sh==1){?>生活　<?php }?>分类（每周发一次）  <a style="font-weight:bold;" href="/images/register/news.jpg" class="colorbox">查看精华文章版式</a><br>
+    					<?php }?>
+    　　如果您要取消订阅，请 <a href="/user/user_order.php">点击这里</a> ，并进行相关取消设置<br>
 					</div>
 				</div>
 			</div>
@@ -63,23 +76,50 @@
 					<div id="title">
 						福布斯杂志<img src="/images/register/right_icon.jpg">
 					</div>
-					<div id="magazine">
-						<div id="pic"><a href=""><img src="/images/register/1.jpg"></a></div>
+					<div id="rmagazine"><?php $pos_name='right_magazine';?>
+						<div id="pic"><?php show_page_img()?></div>
 						<div id="piccontent">
-							<span>7月刊</span><br>
-							　《福布斯》中文版与国际品牌研究机构Interbrand首次联合推出中国品牌50强（全榜单见www.forbeschina.com）
+							<span><?php show_page_href()?></span><br>
+							　<?php show_page_desc()?>
 						</div>
 					</div>
-					<select class="sel1"></select><select class="sel2"></select>
-					<button class="btn1">在线阅读</button><button class="btn2">申请阅读</button><button class="btn2">查看杂志</button>
+					<select id="old_magazine" class="sel1">
+						<?php
+							$db = get_db();
+							$magazine = $db->query("SELECT substring(publish_data,1,4) as year FROM fb_magazine group by substring(publish_data,1,4)");
+							$year_count = $db->record_count;
+							for($i=0;$i<$year_count;$i++){
+						?>
+						<option value="<?php echo $magazine[$i]->year;?>"><?php echo $magazine[$i]->year;?>年</option>
+						<?php }?>
+					</select>
+					<select id="show_magazine" class="sel2">
+						<option value=""></option>
+						<?php 
+							$magazine = $db->query("select * from fb_magazine where publish_data like '%{$magazine[0]->year}%' order by publish_data");
+							$count = $db->record_count;
+							for($i=0;$i<$count;$i++){
+						?>
+							<option url="<?php echo $magazine[$i]->url;?>" value="<?php echo $magazine[$i]->id;?>"><?php echo $magazine[$i]->name;?></option>
+						<?php			
+							}
+						?>
+					</select>
+					<a id="btnonline"></a>
+					<a id="sq" href="http://www.forbeschina.com/magazine/subscription"></a>
+					<a id="jr"></a>
+					<?php
+					$magazine = $db->query("select id from fb_magazine order by publish_data desc limit 1");
+					$sql = "select t1.title,t1.short_title,t1.id,t1.created_at,t1.description,t1.video_photo_src from fb_news t1 join fb_magazine_relation t2 on t1.id=t2.resource_id where t2.magazine_id={$magazine[0]->id} order by t2.priority limit 2";
+					$magazine_news = $db->query($sql);
+					!$magazine_news && $magazine_news = array();
+					foreach($magazine_news as $news){
+					?>
 					<div class="content">
-						<span> ﻿·欧元狂热的极限 </span><br>
-　　市场最近几个月对美元走势的看法有很大的转变，特别是美元兑欧元的表现。东方汇理银行全球外汇策略副主管马赫（Daragh Macher）先生在福布斯专栏中发表最新预测，并不看好欧元
+						<span>·<a href="<?php echo get_news_url($news);?>"><?php echo strip_tags($news->title);?></a></span><br>
+						<?php echo strip_tags($news->description);?>
 					</div>
-					<div class="content">
-						<span> ﻿·欧元狂热的极限 </span><br>
-　　市场最近几个月对美元走势的看法有很大的转变，特别是美元兑欧元的表现。东方汇理银行全球外汇策略副主管马赫（Daragh Macher）先生在福布斯专栏中发表最新预测，并不看好欧元
-					</div>
+					<?php }?>
 				</div>
 			</div>
 		</div>
@@ -90,3 +130,8 @@
 	 </div>
 </body>
 </html>
+<script>
+$(function(){
+	$(".colorbox").colorbox();
+});
+</script>

@@ -102,12 +102,12 @@ $(function(){
 	$("#province").change(function(){
 		$.post("show_city.php",{'id':$(this).val()},function(data){
 			$("#city").html(data);
-		})
+		});
 	});
 	
 	$("#change_pic").click(function(){
 		$("#yz_img").attr('src','yz.php?reload='+Math.round(Math.random()*10000));
-	})
+	});
 	
 	$("#info_submit").click(function(){
 		if($("#verify_text").val()==''){
@@ -122,6 +122,7 @@ $(function(){
 			});
 		}
 	});
+	
 	
 });
 

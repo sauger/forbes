@@ -1,6 +1,22 @@
 $(function(){
 	$(".colorbox").colorbox();
 	
+	$("#user_year").datepicker({
+		changeMonth: true,
+		changeYear: true,
+		monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+		dayNames:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dayNamesMin:["日","一","二","三","四","五","六"],
+		dayNamesShort:["星期日","星期一","星期二","星期三","星期四","星期五","星期六"],
+		dateFormat: 'yy-mm-dd',
+		 yearRange: 'c-100,c'
+	});
+	
+	$("#province").change(function(){
+		$.post("/user/show_city.php",{'id':$(this).val()},function(data){
+			$("#city").html(data);
+		});
+	});
 	
 	$("#user_name").blur(function(){
 		check_name();
@@ -56,6 +72,7 @@ $(function(){
 	})
 	
 	$("#tj").click(function(){
+		
 		if($("#user_name").val()=='') {
 			alert('请输入用户名');
 			$("#user_name").focus();
@@ -96,16 +113,80 @@ $(function(){
 				return false;
 			}
 		}
-		if($("#year").val()==''){
-			alert('请输入年龄');
-			$("#year").focus();
+		if($("#nick_name").val()==''){
+			alert("请输入姓名");
+			$("#nick_name").focus();
 			return false;
 		}else{
-			if(!check_year()){
-				$("#year").focus();
+			if(isChinese($("#nick_name").val())){
+				if($("#nick_name").val().length>5||$("#nick_name").val().length==1){
+					alert("请输入真实姓名");
+					$("#nick_name").focus();
+					return false;
+				}
+			}else{
+				if($("#nick_name").val().length>20||$("#nick_name").val().length==1){
+					alert("请输入真实姓名");
+					$("#nick_name").focus();
+					return false;
+				}
+			}
+		}
+		
+		if($("#gender1").attr('checked')==false&&$("#gender2").attr('checked')==false){
+			alert("请选择性别");
+			$("#gender1").focus();
+			return false;
+		}
+		
+		if($("#user_year").val()==''){
+			alert("请输入出生年月");
+			$("#user_year").focus();
+			return false;
+		}else{
+			if($("#user_year").val().length!=10){
+				alert("请正确输入出生年月");
+				$("#user_year").focus();
 				return false;
 			}
 		}
+		
+		if($("#edu").val==""){
+			alert("请选择教育程度");
+			$("#edu").focus();
+			return false;
+		}
+		
+		if($("#province").val==""){
+			alert("请选择省份");
+			$("#province").focus();
+			return false;
+		}
+		
+		if($("#city").val==""){
+			alert("请选择城市");
+			$("#city").focus();
+			return false;
+		}
+		
+		if($("#post").val==""){
+			alert("请选择职位");
+			$("#post").focus();
+			return false;
+		}
+		
+		if($("#company").val==""){
+			alert("请选择公司类型");
+			$("#company").focus();
+			return false;
+		}
+		
+		if($("#industry").val==""){
+			alert("请选择所处行业");
+			$("#industry").focus();
+			return false;
+		}
+
 		if(!($("#order1").attr('checked')||$("#order2").attr('checked'))){
 			alert('请选择是否愿意订阅福布斯精华推荐');
 			$("#order1").focus();
@@ -142,12 +223,12 @@ $(function(){
 			});
 		}
 	});
-	var checked = $("#sure_check").attr('checked');
-	$("#tj").attr('disabled',!checked);
-	$("#sure_check").click(function(){
-		var checked = $("#sure_check").attr('checked');
-		$("#tj").attr('disabled',!checked);
-	});
+	//var checked = $("#sure_check").attr('checked');
+	//$("#tj").attr('disabled',!checked);
+	//$("#sure_check").click(function(){
+	//	var checked = $("#sure_check").attr('checked');
+	//	$("#tj").attr('disabled',!checked);
+	//});
 });
 
 function userName(){
@@ -269,21 +350,6 @@ function userPassword2(){
 	}
 }
 
-function check_year(){
-	if(isNaN($("#year").val())){
-		$('.year_check').hide();
-		$("#year3").show();
-		return false;
-	}else if($("#year").val()<1||$("#year").val()>150){
-		$('.year_check').hide();
-		$("#year3").show();
-		return false;
-	}else{
-		$('.year_check').hide();
-		$("#year2").show();
-		return true;
-	}
-}
 
 function isNumberOrLetter(s){//判断是否是数字或字母 
 	var regu = "^[0-9a-zA-Z]+$";
@@ -310,4 +376,11 @@ function isEmail( str ){
 	var myReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; 
 	if(myReg.test(str)) return true; 
 	return false; 
+} 
+
+function isChinese(temp)
+{
+	var re = /[^\u4e00-\u9fa5]/;
+	if(re.test(temp)) return false;
+	return true;
 } 

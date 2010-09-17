@@ -24,12 +24,13 @@ div{margin:0; padding:0; float:left; display:inline;}
 #success #content_right{width:300px; height:551px; border:1px solid #dfdfdf; line-height:24px; overflow:hidden; float:right;}
 #success #content_right #context{width:290px; height:541px; margin:5px; background:#f4f4f4;}
 #success #content_right #title{width:270px; margin-top:15px; margin-left:10px; padding-bottom:2px; border-bottom:1px solid #adadad; line-height:20px; font-size:14px; color:#646363;}
-#success #content_right #title img{width:6px; height:7px; margin-top:7px; margin-right:5px; float:right;}
-#success #content_right #magazine{width:270px; height:117px; margin-top:10px; margin-left:10px; padding-bottom:10px; border-bottom:1px dashed #818181; overflow:hidden;}
-#success #content_right #magazine #pic{width:92px; height:117px; overflow:hidden;}
-#success #content_right #magazine #pic img{width:92px; height:117px; border:0px;}
-#success #content_right #magazine #piccontent{width:170px; height:117px; line-height:23px; overflow:hidden; color:#003A7A; float:right;}
-#success #content_right #magazine #piccontent span{font-weight:bold;}
+#success #content_right #title img{width:6px; height:7px; margin-top:7px; margin-right:5px; float:left;}
+#success #content_right #rmagazine{width:270px; height:117px; margin-top:10px; margin-left:10px; padding-bottom:10px; border-bottom:1px dashed #818181; overflow:hidden;}
+#success #content_right #rmagazine #pic{width:92px; height:117px; overflow:hidden;}
+#success #content_right #rmagazine #pic img{width:92px; height:117px; border:0px;}
+#success #content_right #rmagazine #piccontent{width:170px; height:117px; line-height:23px; overflow:hidden; color:#003A7A; float:right;}
+#success #content_right #rmagazine #piccontent span{font-weight:bold;}
+#success #content_right #rmagazine #piccontent a{color:#003A7A; text-decoration:none;}
 #success #content_right select{height:18px; margin-top:10px; border:1px solid #7F9DB9;}
 #success #content_right .sel1{width:78px; margin-left:10px;}
 #success #content_right .sel2{width:179px; margin-left:15px;}
@@ -38,3 +39,10 @@ div{margin:0; padding:0; float:left; display:inline;}
 #success #content_right .btn2{color:#cc9604; font-weight:bold;}
 #success #content_right .content{width:280px; height:106px; margin-top:24px; margin-left:5px; color:#336699;}
 #success #content_right .content span{font-weight:bold;}
+#success #content_right .content a{color:#336699; text-decoration:none;}
+
+#btnonline{width:66px; height:22px; margin-top:10px; margin-left:20px; border:0px; background:url('/images/right/readonline.jpg') no-repeat; float:left; display:inline;}
+#sq{width:66px; height:22px; margin-top:10px; margin-left:20px; border:0px; background:url('/images/right/sqread.jpg') no-repeat; float:left; display:inline;}
+#ck{width:200px; height:20px; margin-right:10px; line-height:20px; font-size:12px; text-align:right; float:right; display:inline;}
+#jr{width:66px; height:22px; margin-top:10px; margin-left:15px; border:0px; background:url(/images/index/sqread2.jpg) no-repeat; float:left; display:inline;}
+#ck a{color:#666666; font-weight:bold;}

@@ -55,14 +55,13 @@
 						<a href="edit_order.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer" title="查看用户订阅"><img src="/images/admin/btn_config1.png" border="0"></a>　
 						<a href="edit_info.php?id=<?php echo $record[$i]->id;?>" class="edit" name="<?php echo $record[$i]->id;?>" style="cursor:pointer" title="查看用户个人信息"><img src="/images/admin/btn_edit.png" border="0"></a>　
 						<span style="cursor:pointer;color:#FF0000" class="del_yh" name="<?php echo $record[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png" border="0"></span>
-						<input type="hidden" id="db_table" value="fb_yh">
 					</td>
 				</tr>
 		<?php
 			}
 		?>
 		<tr class="btools">
-			<td colspan=10><?php paginate();?></td>
+			<td colspan=10><?php paginate();?><input type="hidden" id="db_table" value="fb_yh"></td>
 		</tr>
 	</table>
 	</div>

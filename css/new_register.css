@@ -10,8 +10,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #register .title_right .content1{height:23px; padding-left:15px; padding-right:10px; text-align:center; background:#f4d14c;}
 #register .title_right .arrow{width:13px; height:23px; background:url(/images/register/title_bg1.jpg) no-repeat;}
 #register .title_right .arrow1{width:13px; height:23px; background:url(/images/register/title_bg2.jpg) no-repeat;}
-table{margin-top:30px; margin-left:140px; float:left; display:inline;}
-tr{height:40px; line-height:40px; }
+.rtable{margin-top:30px; margin-left:140px; float:left; display:inline;}
+.rtable tr{height:40px; line-height:40px; }
 .td1{width:80px; color:#333333; font-size:13px; line-height:22px;  }
 .td2{color:#999999; line-height:22px;}
 .td2 a{color:#0066CC; text-decoration:none;}

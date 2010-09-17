@@ -54,8 +54,13 @@
 		redirect('/register/');
 		die();
 	}
-	if(strlen($_POST['user']['gender']) > 10){
-		alert('年龄过长！请重新输入！');
+	if(strlen($_POST['order']['xb']) > 3){
+		alert('性别过长！请重新输入！');
+		redirect('/register/');
+		die();
+	}
+	if(strlen($_POST['order']['xm']) > 30){
+		alert('姓名过长！请重新输入！');
 		redirect('/register/');
 		die();
 	}
@@ -64,6 +69,37 @@
 		redirect('/register/');
 		die();
 	}
+	if(strlen($_POST['order']['xl'])>40){
+		alert('学历过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(strlen($_POST['order']['hy'])>60){
+		alert('行业过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(strlen($_POST['order']['gsxz'])>40){
+		alert('公司类型过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(strlen($_POST['order']['sf'])>20){
+		alert('省份过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(strlen($_POST['order']['cs'])>20){
+		alert('城市过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	if(strlen($_POST['order']['zw'])>70){
+		alert('职位过长！请重新输入！');
+		redirect($_SERVER['HTTP_REFERER']);
+		die();
+	}
+	
 	$user = new table_class('fb_yh');
 	$user->update_attributes($_POST['user'],false);
 	$user->password = md5($user->password);
@@ -73,6 +109,11 @@
 	#$user->created_at = now();
 	$user->save();
 	//echo $user->id;
+	
+	$info = new table_class('fb_yh_xx');
+	$info->yh_id = $user->id;
+	$info->update_attributes($_POST['order'],false);
+	$info->save();
 	
 	$order = new table_class('fb_yh_dy');
 	$order->yh_id = $user->id;
@@ -116,6 +157,7 @@
 	if($order->save()){
 		$mail = $user->email;
 		$content = "{$user->name}，你好：<br/><br/>　　感谢您注册福布斯中文网(<a href='http://www.forbeschina.com/'>http://www.forbeschina.com/</a>)！<br/><br/>　　请点击以下确认链接，以完成身份验证：<br/>　　<a href=\"http://www.forbeschina.com/register/active.php?user={$user->name}&key={$user->authenticate_string}\">http://www.forbeschina.com/register/active.php?user={$user->name}&key={$user->authenticate_string}</a><br/>　　(如果不能点击该链接地址，请复制并粘贴到浏览器的地址输入框)";
+		echo $content;
 		send_mail('smtp.qiye.163.com','userservice@forbeschina.com','userservice','userservice@forbeschina.com',$mail,'福布斯中文网(Forbeschina.com)注册确认邮件',$content);
 		alert('注册成功，系统已经将激活链接发送到您的注册邮箱中，请查收邮件并激活您的账号');
 	};
@@ -131,6 +173,6 @@
 	setcookie("cache_name",$cache_name,time()+$limit,'/');
 	setcookie("password",$password,time()+$limit,'/');
 	*/
-	redirect('/');
+#redirect('/');
 ?>
 </html>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include_once( dirname(__FILE__) .'/../frame.php');
 	require_login();
 	$db = get_db();
@@ -17,151 +17,61 @@
 <head>
 	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 	<meta http-equiv=Content-Language content=zh-cn>
-	<title>用户中心_福布斯中文网</title>
+	<title>注册_福布斯中文网</title>
 	<?php
 		use_jquery();
-		js_include_tag('public','user/user','jquery.colorbox-min');
-		css_include_tag('user/user','public','user/register_user','colorbox');
+		js_include_tag('public','jquery.colorbox-min.js','user/user2');
+		css_include_tag('complete_info','public','colorbox');
 	?>
 </head>
 <body>
-	<div id=ibody>
-		<?php include_top();?>
-		 <div id=bread>用户中心 > 个人基本信息</div>
-	 	 <div id=bread_line></div>
-		<div id=left>
-			<div id=left_top>
-				用户中心
-			</div>
-			<div class="left_list">
-				<div class="icon">
-					<img src="/images/user/c3a.gif">
-					<img style="display:none" src="/images/user/c3b.gif">
+ <div id="ibody">		
+	<?php include_top();?>
+	<div id=bread>用户中心 > 个人信息</div>
+	<div id=bread_line></div>
+	<div id=register>
+		<div id="info">
+			<div id="content">
+				<div id="content_left">
+					<div class="context"><a href="user_favorites.php">我的收藏</a></div>
+					<div class="context"><a href="user_order.php">订阅信息</a></div>
+					<div class="context select"><a href="user_info.php">个人信息</a></div>
+					<div class="context" style="margin-bottom:0px;"><a href="user_password.php">修改密码</a></div>
 				</div>
-				<div class="left_text"><a href="user_favorites.php">我的收藏</a></div>
-				<div class="icon2"><img src="/images/user/coin.gif"></div>
-			</div>
-			<div class="left_list">
-				<div class="icon">
-					<img src="/images/user/c2a.gif">
-					<img style="display:none" src="/images/user/c2b.gif">
-				</div>
-				<div class="left_text"><a href="user_order.php">订阅信息</a></div>
-				<div class="icon2"><img src="/images/user/coin.gif"></div>
-			</div>
-			<div class="left_list2">
-				<div class="iconb">
-					<img style="display:none" src="/images/user/c1a.gif">
-					<img style="display:inline" src="/images/user/c1b.gif">
-				</div>
-				<div class="left_text"><a href="user_info.php">个人信息</div></a>
-				<div class="icon2" style="display:inline"><img src="/images/user/coin.gif"></div>
-			</div>
-			<div class="left_list">
-				<div class="icon">
-					<img src="/images/user/c4a.gif">
-					<img style="display:none" src="/images/user/c4b.gif">
-				</div>
-				<div class="left_text"><a href="user_password.php">修改密码</a></div>
-				<div class="icon2"><img src="/images/user/coin.gif"></div>
-			</div>
-		</div>
-		<div class=right>
-			<div class=right_title>
-				<div id="r_title1"><?php echo $uname;?> 的个人中心</div>
-				<?php $score = $db->query("select score from fb_yh where id=$uid");?>
-				<div id="r_title2">个人积分：<?php echo $score[0]->score;?></div>
-			</div>
-			<div class="right_text2">
-				<div id=register>
-					<div id=person>
-						完善您的个人信息，就有机会获得《福布斯》中文版杂志赠阅机会！<br/>
-						个人资料　（请全部用中文填写完整，所填事项不完整及填写家庭地址恕不受理）<br>
-					</div>
+				<div id="content_right">
+					<span>您已成功注册会员，现在完善您的个人信息后，您就可以获得《福布斯》中文杂志一期，我们会根据您填写的个人真实信息送至您手上</span>
 					<form action="user_info.post.php" method="post" enctype="multipart/form-data">
-					<table cellpadding="0" cellspacing="0">
+					<table>
 						<tr>
-							<td class=td1>姓名</td>
-							<td class=td3><input class="txt" maxlength=10 value="<?php echo htmlspecialchars($user->xm);?>" name="post[xm]" type="text"></td>
-							<td colspan=2></td>
+							<td align="right">姓　　名：</td>
+							<td colspan="3"><input class="txt1" type="text" maxlength=20 value="<?php echo htmlspecialchars($user->xm);?>" name="post[xm]"/></td>
 						</tr>
 						<tr>
-							<td class=td1>性别</td>
-							<td class=td3>
-								<div class=td4><input type="radio" <?php if($user->xb=='男')echo 'checked="checked"'?> value="男" name="post[xb]">男</div>
-								<div class=td4><input type="radio" <?php if($user->xb=='女')echo 'checked="checked"'?> value="女" name="post[xb]">女</div>
-							</td>
-							<td class=td11>学历</td>
-							<td class=td3>
-								<SELECT  class=sel1 name="post[xl]">
+							<td width="120" align="right">性　　别：</td>
+							<td width="200">
+								<div class="radio_div"><input value='男' name="post[xb]" <?php if($user->xb=='男')echo 'checked="checked"'?> id="gender1" type="radio"><label for="gender1">男</label></div>
+								<div class="radio_div"><input value='女' name="post[xb]" <?php if($user->xb=='女')echo 'checked="checked"'?> id="gender2" type="radio"><label for="gender2">女</label></div></td>
+							<td width="100" align="right">学　　历：</td>
+							<td><SELECT  class=sel1 name="post[xl]">
 									<option value=""></option>
 									<OPTION <?php if($user->xl=="1.博士"){?>selected="selected"<?php }?> value=1.博士>1.博士</OPTION> 
 									<OPTION <?php if($user->xl=="2.硕士"){?>selected="selected"<?php }?> value=2.硕士>2.硕士</OPTION> 
 									<OPTION <?php if($user->xl=="3.大学本科 大学专科"){?>selected="selected"<?php }?> value="3.大学本科 大学专科">3.大学本科/大学专科</OPTION> 
 									<OPTION <?php if($user->xl=="4.高中 中专"){?>selected="selected"<?php }?> value="4.高中 中专">4.高中/中专</OPTION> 
 									<OPTION <?php if($user->xl=="5.其他"){?>selected="selected"<?php }?> value=5.其他>5.其他</OPTION>
-								</SELECT>
-							</td>
+								</SELECT></td>
 						</tr>
 						<tr>
-							<td class=td1>行业</td>
-							<td class=td3>
-								<select name="post[hy]" class=sel1>
-									<option value=""></option>
-									<OPTION <?php if($user->hy=="1.制造业"){?>selected="selected"<?php }?> value=1.制造业>1.制造业</OPTION> 
-									<OPTION <?php if($user->hy=="2.进出口贸易"){?>selected="selected"<?php }?> value=2.进出口贸易>2.进出口贸易</OPTION> 
-									<OPTION <?php if($user->hy=="3.批发 零售分销"){?>selected="selected"<?php }?> value="3.批发 零售分销">3.批发/零售/分销</OPTION> 
-									<OPTION <?php if($user->hy=="4.产品代理"){?>selected="selected"<?php }?> value=4.产品代理>4.产品代理</OPTION> 
-									<OPTION <?php if($user->hy=="5.银行 金融"){?>selected="selected"<?php }?> value="5.银行 金融">5.银行/金融</OPTION> 
-							        <OPTION <?php if($user->hy=="6.保险业"){?>selected="selected"<?php }?> value=6.保险业>6.保险业</OPTION>
-									<OPTION <?php if($user->hy=="7.电信服务业"){?>selected="selected"<?php }?> value=7.电信服务业>7.电信服务业</OPTION> 
-									<OPTION <?php if($user->hy=="8.邮政服务"){?>selected="selected"<?php }?> value=8.邮政服务>8.邮政服务</OPTION> 
-							        <OPTION <?php if($user->hy=="9.网络 信息服务 电子商务"){?>selected="selected"<?php }?> value="9.网络 信息服务 电子商务">9.网络/信息服务/电子商务</OPTION> 
-									<OPTION <?php if($user->hy=="10.公用事业"){?>selected="selected"<?php }?> value=10.公用事业>10.公用事业</OPTION> 
-									<OPTION <?php if($user->hy=="11.酒店 旅游"){?>selected="selected"<?php }?> value="11.酒店 旅游">11.酒店/旅游</OPTION> 
-									<OPTION <?php if($user->hy=="12.房地产"){?>selected="selected"<?php }?> value=12.房地产>12.房地产</OPTION> 
-							        <OPTION <?php if($user->hy=="13.建筑"){?>selected="selected"<?php }?> value=13.建筑>13.建筑</OPTION> 
-									<OPTION <?php if($user->hy=="14.政府机构"){?>selected="selected"<?php }?> value=14.政府机构>14.政府机构</OPTION> 
-									<OPTION <?php if($user->hy=="15.文化 教育 培训"){?>selected="selected"<?php }?> value="15.文化 教育 培训">15.文化/教育/培训</OPTION> 
-									<OPTION <?php if($user->hy=="16.交通运输 航空 船务 铁路 货运等"){?>selected="selected"<?php }?> value="16.交通运输 航空 船务 铁路 货运等 ">16.交通运输(航空，船务，铁路，货运等)</OPTION> 
-									<OPTION <?php if($user->hy=="17.法律 会计"){?>selected="selected"<?php }?> value="17.法律 会计">17.法律/会计</OPTION> 
-									<OPTION <?php if($user->hy=="18.商业咨询 顾问服务"){?>selected="selected"<?php }?> value="18.商业咨询 顾问服务">18.商业咨询/顾问服务</OPTION> 
-									<OPTION <?php if($user->hy=="19.媒体 公关 出版 广播 广告等"){?>selected="selected"<?php }?> value="19.媒体 公关 出版 广播 广告等 ">19.媒体/公关（出版，广播，广告等）</OPTION> 
-									<OPTION <?php if($user->hy=="20.其他"){?>selected="selected"<?php }?> value=20.其他>20.其他</OPTION>
-								</select>
-							</td>
-							<td class=td11>职位</td>
-							<td class=td3>
-								<select name="post[zw]" class=sel1>
-									<option value=""></option>
-									<OPTION <?php if($user->zw=="1.董事长 总裁 行政总裁 首席执行官 董事"){?>selected="selected"<?php }?> value="1.董事长 总裁 行政总裁 首席执行官 董事">1.董事长/总裁/行政总裁/首席执行官/董事</OPTION> 
-									<OPTION <?php if($user->zw=="2.副总裁 执行董事"){?>selected="selected"<?php }?> value="2.副总裁 执行董事">2.副总裁/执行董事</OPTION> 
-									<OPTION <?php if($user->zw=="3.总经理 副总经理 厂长 副厂长"){?>selected="selected"<?php }?> value="3.总经理 副总经理 厂长 副厂长">3.总经理/副总经理/厂长/副厂长</OPTION> 
-									<OPTION <?php if($user->zw=="4.企业所有人 企业合伙人"){?>selected="selected"<?php }?> value="4.企业所有人 企业合伙人">4.企业所有人/企业合伙人</OPTION> 
-									<OPTION <?php if($user->zw=="5.财务总监 总会计师"){?>selected="selected"<?php }?> value="5.财务总监 总会计师">5.财务总监/总会计师</OPTION> 
-									<OPTION <?php if($user->zw=="6.信息系统总监 首席信息官"){?>selected="selected"<?php }?> value="6.信息系统总监 首席信息官">6.信息系统总监/首席信息官</OPTION> 
-									<OPTION <?php if($user->zw=="7.人事经理 行政经理"){?>selected="selected"<?php }?> value="7.人事经理 行政经理">7.人事经理/行政经理</OPTION> 
-									<OPTION <?php if($user->zw=="8.总工程师 高级工程师"){?>selected="selected"<?php }?> value="8.总工程师 高级工程师">8.总工程师/高级工程师</OPTION> 
-									<OPTION <?php if($user->zw=="9.市场营销 销售总监"){?>selected="selected"<?php }?> value="9.市场营销 销售总监">9.市场营销/销售总监</OPTION> 
-									<OPTION <?php if($user->zw=="10.部门经理"){?>selected="selected"<?php }?> value=10.部门经理>10.部门经理</OPTION> 
-									<OPTION <?php if($user->zw=="11.专业人士 会计师 律师 经济师 教授等"){?>selected="selected"<?php }?> value="11.专业人士 会计师 律师 经济师 教授等">11.专业人士（会计师，律师，经济师，教授等）</OPTION> 
-									<OPTION <?php if($user->zw=="12.政府机构官员"){?>selected="selected"<?php }?> value=12.政府机构官员>12.政府机构官员</OPTION> 
-									<OPTION <?php if($user->zw=="13.其他"){?>selected="selected"<?php }?> value=13.其他>13.其他</OPTION>
-								</select>
-							</td>
+							<td align="right">工作单位：</td>
+							<td colspan="3"><input class="txt2" maxlength="30" value="<?php echo htmlspecialchars($user->gzdw);?>" name="post[gzdw]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>工作单位</td>
-							<td colspan=3 class=td2><input class="txt1" maxlength="30" value="<?php echo htmlspecialchars($user->gzdw);?>" name="post[gzdw]" type="text"></td>
+							<td align="right">所在部门：</td>
+							<td colspan="3"><input class="txt2" maxlength="20" value="<?php echo htmlspecialchars($user->szbm);?>" name="post[szbm]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>所在部门</td>
-							<td colspan=3 class=td2><input class="txt1" maxlength="20" value="<?php echo htmlspecialchars($user->szbm);?>" name="post[szbm]" type="text"></td>
-						</tr>
-						<tr>
-							<td class=td1>公司性质</td>
-							<td class=td3>
-								<select name="post[gsxz]" class=sel1>
+							<td align="right">公司性质：</td>
+							<td><select name="post[gsxz]" class=sel2>
 									<option value=""></option>
 									<option <?php if($user->gsxz=="1.国有/国有控股企业"){?>selected="selected"<?php }?> value="1.国有/国有控股企业">1.国有/国有控股企业</option>
 									<option <?php if($user->gsxz=="2.事业单位"){?>selected="selected"<?php }?> value="2.事业单位">2.事业单位</option>
@@ -169,11 +79,9 @@
 									<option <?php if($user->gsxz=="4.外商独资企业"){?>selected="selected"<?php }?> value="4.外商独资企业">4.外商独资企业</option>
 									<option <?php if($user->gsxz=="5.中外合资/合作企业"){?>selected="selected"<?php }?> value="5.中外合资/合作企业">5.中外合资/合作企业</option>
 									<option <?php if($user->gsxz=="6.其他（请说明）"){?>selected="selected"<?php }?> value="6.其他（请说明）">6.其他（请说明）</option>
-								</select>
-							</td>
-							<td class=td11>员工规模</td>
-							<td class=td3>
-								<select name="post[gsgm]" class=sel1>
+								</select></td>
+							<td align="right">员工规模：</td>
+							<td><select name="post[gsgm]" class=sel3>
 									<option value=""></option>
 									<OPTION <?php if($user->gsgm=="1.100人以下"){?>selected="selected"<?php }?> value=1.100人以下>1.100人以下</OPTION> 
 									<OPTION <?php if($user->gsgm=="2.101 - 250"){?>selected="selected"<?php }?> value="2.101 - 250">2.101 - 250</OPTION> 
@@ -182,21 +90,17 @@
 									<OPTION <?php if($user->gsgm=="1001 - 5000"){?>selected="selected"<?php }?> value="5.1001 - 5000">5.1001 - 5,000</OPTION> 
 									<OPTION <?php if($user->gsgm=="5001 - 10000"){?>selected="selected"<?php }?> value="6.5001 - 10000">6.5,001 - 10,000</OPTION> 
 									<OPTION <?php if($user->gsgm=="10000以上"){?>selected="selected"<?php }?> value=7.10000以上>7.10,000以上</OPTION>
-								</select>
-							</td>
+								</select></td>
 						</tr>
 						<tr>
-							<td class=td1>上市公司</td>
-							<td class=td3>
-								<select name="post[sfss]" class=sel1>
+							<td align="right">上市公司：</td>
+							<td><select name="post[sfss]" class=sel2>
 									<option value=""></option>
 									<OPTION <?php if($user->sfss=="1"){?>selected="selected"<?php }?> value=1>1.是</OPTION>
 									<OPTION <?php if($user->sfss=="0"){?>selected="selected"<?php }?> value=0>2.否</OPTIN>
-								</select>
-							</td>
-							<td class=td11>制造的产品</td>
-							<td class=td3>
-								<select name="post[gscp]" class=sel1>
+								</select></td>
+							<td align="right">制造的产品：</td>
+							<td><select name="post[gscp]" class=sel2>
 									<option value=""></option>
 									<OPTION <?php if($user->gscp=="1.电脑 电脑配件及外设"){?>selected="selected"<?php }?> value="1.电脑 电脑配件及外设">1.电脑、电脑配件及外设</OPTION> 
 							        <OPTION <?php if($user->gscp=="2.电子元器件 电阻 电容 半导体等零部件"){?>selected="selected"<?php }?> value="2.电子元器件 电阻 电容 半导体等零部件 ">2.电子元器件（电阻、电容、半导体等零部件）</OPTION> 
@@ -215,13 +119,11 @@
 									<OPTION <?php if($user->gscp=="15.钟表 相机及精密仪表"){?>selected="selected"<?php }?> value="15.钟表 相机及精密仪表">15.钟表、相机及精密仪表</OPTION> 
 									<OPTION <?php if($user->gscp=="16.礼品 玩具 珠宝及文教体育用品"){?>selected="selected"<?php }?> value="16.礼品 玩具 珠宝及文教体育用品">16.礼品、玩具、珠宝及文教体育用品</OPTION> 
 									<OPTION <?php if($user->gscp=="17.其他"){?>selected="selected"<?php }?> value=17.其他>17.其他</OPTION>
-								</select>
-							</td>
+								</select></td>
 						</tr>
 						<tr>
-							<td class=td1>年营业额</td>
-							<td class=td3>
-								<select name="post[gsyye]" class=sel1>
+							<td align="right">年营业额：</td>
+							<td><select name="post[gsyye]" class=sel2>
 									<option value=""></option>
 									<OPTION <?php if($user->gsyye=="1.500万以下"){?>selected="selected"<?php }?> value=1.500万以下>1.500万以下</OPTION> 
 									<OPTION <?php if($user->gsyye=="2.501万--1000万"){?>selected="selected"<?php }?> value=2.501万--1000万>2.501万--1,000万</OPTION> 
@@ -230,25 +132,20 @@
 									<OPTION <?php if($user->gsyye=="5.1亿零1万--50亿"){?>selected="selected"<?php }?> value=5.1亿零1万--50亿>5.1亿零1万--50亿</OPTION> 
 									<OPTION <?php if($user->gsyye=="6.50亿零1万--100亿"){?>selected="selected"<?php }?> value=6.50亿零1万--100亿>6.50亿零1万--100亿</OPTION> 
 									<OPTION <?php if($user->gsyye=="7.100亿以上"){?>selected="selected"<?php }?> value=7.100亿以上>7.100亿以上</OPTION>
-								</select>
-							</td>
-							<td class=td11>个人年收入</td>
-							<td class=td3>
-								<select name="post[grsr]" class=sel1>
+								</select></td>
+							<td align="right">个人年收入：</td>
+							<td><select name="post[grsr]" class=sel2>
 									<OPTION value=""></OPTION> 
 									<OPTION <?php if($user->grsr=="1.10万元人民币以内"){?>selected="selected"<?php }?> value="1.10万元人民币以内">1. 10万元人民币以内</OPTION> 
 							        <OPTION <?php if($user->grsr=="2.10万-299999元人民币"){?>selected="selected"<?php }?> value="2.10万-299999元人民币">2. 10万-299,999元人民币</OPTION> 
 									<OPTION <?php if($user->grsr=="3.30万-499999元人民币"){?>selected="selected"<?php }?> value="3.30万-499999元人民币">3. 30万-499,999元人民币</OPTION> 
 									<OPTION <?php if($user->grsr=="4.50万-999999元人民币"){?>selected="selected"<?php }?> value="4.50万-999999元人民币">4. 50万-999,999元人民币</OPTION> 
 									<OPTION <?php if($user->grsr=="5.100万人民币及以上"){?>selected="selected"<?php }?> value="5.100万人民币及以上">5. 100万人民币及以上</OPTION>
-								</select>
-							</td>
+								</select></td>
 						</tr>
-					</table>
-					<table cellpadding="0" cellspacing="0">
 						<tr>
-							<td class=td1>所在区域</td>
-							<td class=td3><select id="province" name="post[sf]" class=sel1>
+							<td align="right">所在区域：</td>
+							<td><select id="province" name="post[sf]" class=sel2>
 								<option value=""></option>
 								<?php
 									$province = $db->query("select * from fb_chinafar where region_type=1");
@@ -259,7 +156,7 @@
 									}
 								?>
 							</select></td>
-							<td class=td3><select id="city" name="post[cs]" class=sel1>
+							<td colspan="2"><select id="city" name="post[cs]" class=sel2>
 								<option value=""></option>
 								<?php 
 									if($user->sf!=''){
@@ -273,60 +170,54 @@
 								?>
 							</select></td>
 						</tr>
-					</table>
-					<table cellpadding="0" style="margin-top:0" cellspacing="0">
 						<tr>
-							<td class=td1>通讯地址</td>
-							<td colspan=3 class=td2><input maxlength="30" value="<?php echo htmlspecialchars($user->txdz);?>" class="txt1" name="post[txdz]" type="text"></td>
+							<td align="right">通信地址：</td>
+							<td colspan="3"><input maxlength="30" value="<?php echo htmlspecialchars($user->txdz);?>" class="txt2" name="post[txdz]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>邮编</td>
-							<td colspan=3 class=td2><input maxlength="20" value="<?php echo htmlspecialchars($user->yb);?>" class="txt1" name="post[yb]" type="text"></td>
+							<td align="right">邮　　编：</td>
+							<td colspan="3"><input maxlength="20" value="<?php echo htmlspecialchars($user->yb);?>" class="txt3" name="post[yb]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>固定电话</td>
-							<td class=td2><input class="txt2" maxlength="4" value="<?php echo $user->gddh1?>" name="post[gddh1]" type="text"></td>
-							<td class=td2><input class="txt2" maxlength="8" value="<?php echo $user->gddh2?>" name="post[gddh2]" type="text"></td>
-							<td class=td2><input class="txt2" maxlength="10" value="<?php echo $user->gddh3?>" name="post[gddh3]" type="text"></td>
+							<td align="right">固定电话：</td>
+							<td colspan="3">
+								<input class="txt3" maxlength="4" value="<?php echo $user->gddh1?>" name="post[gddh1]" type="text">　
+								<input class="txt3" maxlength="8" value="<?php echo $user->gddh2?>" name="post[gddh2]" type="text">　
+								<input class="txt3" maxlength="10" value="<?php echo $user->gddh3?>" name="post[gddh3]" type="text">
+							</td>
 						</tr>
 						<tr>
-							<td class=td1>手机</td>
-							<td colspan=3 class=td2><input class="txt1" maxlength="20" value="<?php echo htmlspecialchars($user->sj);?>" name="post[sj]" type="text"></td>
+							<td align="right">手　　机：</td>
+							<td colspan="3"><input class="txt1" maxlength="20" value="<?php echo htmlspecialchars($user->sj);?>" name="post[sj]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>MSN</td>
-							<td colspan=3 class=td2><input class="txt1" maxlength="40" value="<?php echo htmlspecialchars($user->msn);?>" name="post[msn]" type="text"></td>
+							<td align="right">MSN：</td>
+							<td colspan="3"><input class="txt1" maxlength="40" value="<?php echo htmlspecialchars($user->msn);?>" name="post[msn]" type="text"></td>
 						</tr>
 						<tr>
-							<td class=td1>QQ</td>
-							<td colspan=3 class=td2><input class="txt1" maxlength="10" value="<?php echo htmlspecialchars($user->qq);?>" name="post[qq]" type="text"></td>
+							<td align="right">QQ：</td>
+							<td colspan="3"><input class="txt1" maxlength="10" value="<?php echo htmlspecialchars($user->qq);?>" name="post[qq]" type="text"></td>
 						</tr>
-						<!--
 						<tr>
-							<td class=td1>您的头像：</td>
-							<td colspan=3 class=td2><input class="file" name="tx" type="file"><?php if($user->tx!=''){?><a href="<?php echo $user->tx?>" title="查看头像" class="color_box">点击查看</a><?php }?></td>
-						</tr>
-						-->
-						<tr>
-							<td class=td1>验证码</td>
-							<td colspan=3 class=td2>
-								 <input type="text" id="verify_text" class="txt2" name="yzm">
-								 <img id="yz_img" src="yz.php">
-								 <div id="change_pic">看不清楚？换张图片</div>
-			 				</td>
+							<td align="right">验证码：</td>
+							<td colspan="3">
+								<div><input id="rvcode" maxlength="4" name="yzm" class="txt3" type="text"></div>
+								<div id=yzm><img id="pic" src="/user/yz.php"></div>
+								<div id="chang_pic">看不清楚？换张图片</div>
+							</td>
 						</tr>
 					</table>
-					<div id="submit"><button type="button" id="info_submit">提交并保存个人信息</button></div>
-					</form>
 				</div>
+				<div id="content_bottom">
+					<button type="button" id="info_submit">提　　交</button>　　
+				</div>
+				</form>
 			</div>
 		</div>
-		<?php include_bottom();?>
 	</div>
+	<?php 
+		include_bottom();
+	?>
+	 </div>
 </body>
-
-<script>
-	$(function(){
-		$(".color_box").colorbox();
-	})
-</script>
+</html>
