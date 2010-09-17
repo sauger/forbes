@@ -66,7 +66,7 @@ if($db->record_count==0){
 												 -->
 												</div>	
 												<div class="vip-style">
-													<div class="vip-style-pic"><a href="vip_contace.php?id=<?php echo $investor[0]->id;?>"><img class="vip-style-p" src="<?php echo $investor[0]->image;?>" /></a><a href="#"><img src="images/Contact-1.gif" /></a></div>
+													<div class="vip-style-pic"><a href="vip_contace.php?id=<?php echo $investor[0]->id;?>"><img class="vip-style-p" src="<?php echo $investor[0]->image2;?>" /></a><a href="#"><img src="images/Contact-1.gif" /></a></div>
 													<p class="mark"><?php echo $investor[0]->name;?></p>
 													<p class="mark"><?php echo $investor[0]->post;?></p>
 													<p><span class="mark">投资方向：</span><?php echo $investor[0]->invest_zone;?></p>
