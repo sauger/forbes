@@ -28,7 +28,7 @@ $user->find($id);
 								<div class="right-bg-top"><img src="images/right-top.gif" /></div>
 									<div class="right-warp">
 										<div class="vip-co-box">	
-											 <img class="pic2" src="images/vip-c2.gif" />
+											 <img class="pic2" src="<?php echo $user->image;?>" />
 											 <p class="vip-co-name"><strong><?php echo $user->name;?></strong></p>
 											 <p><span class="mark">行业性质：</span><?php echo $user->industry;?></p>
 											 <p><span class="mark">公司所在地：</span><?php echo $user->address;?></p>
