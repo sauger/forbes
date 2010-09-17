@@ -322,13 +322,12 @@ ul.r-m-t-t-main li .pic ,.more-activites .pic{
 	padding:10px;
 }
 .vip-style-pic{
-	float:left;
+	width:100px;
 	margin-right:25px;
 	text-align:center;
 }
-.vip-style-pic a{float:left;}
 .vip-style-p{
-  height:130px;
+  width:100px;
   margin-bottom:8px;
   padding:1px;
   border:1px solid #666666;
