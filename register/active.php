@@ -34,7 +34,7 @@
 	<title>用户激活_福布斯中文网</title>
 </head>
 <?php
-if(!emtpy($str)){
+if(!empty($str)){
 	alert($str);
 }
 redirect('complete_info.php');
