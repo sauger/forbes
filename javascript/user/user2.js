@@ -72,8 +72,7 @@ $(function(){
 	
 	$("#order_b").click(function(){
 		$.post('set_order.php',$('input:checkbox').serializeArray(),function(data){
-			alert('修改成功！');
-			window.location.reload();
+			window.location.href = "update_order.php";
 		});
 	});
 	

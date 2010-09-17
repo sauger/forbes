@@ -2,9 +2,9 @@
     include_once('../frame.php');
 	if(!is_ajax()){
 	 	die();
-	 }
-	$uid = front_user_id();
+	}
 	$sql = "update fb_yh_dy set";
+	$uid = front_user_id();
 	if(isset($_POST['jhtj'])){
 		$sql .= " jhtj=1";
 	}
@@ -42,7 +42,6 @@
 		$sql .= ",sh=0";
 	}
 	$sql .= " where yh_id=$uid";
-	echo $sql;
 	$db = get_db();
 	$db->execute($sql);
 	close_db();
