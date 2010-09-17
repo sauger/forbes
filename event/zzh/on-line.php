@@ -92,7 +92,7 @@
 												    </tr>
 												  <tr>
 												    <td class="bb">邮 编<span class="star">*</span></span></td>
-											        <td valign="top"><input class="input-title2 reqired number" type="" name="post[zip]" maxlength="6" surelength="6"/></td>
+											        <td><input class="input-title2 reqired number" type="" name="post[zip]" maxlength="6" surelength="6"/></td>
 										          </tr>
 												  
 												  <tr>

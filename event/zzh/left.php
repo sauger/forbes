@@ -31,6 +31,7 @@
 			$activity = $db->query("select * from zzh_activity where month(now())=month(time)");
 		?>
 	</div>
+	<div id="date_word">红色字体代表当天有活动安排，请点击日期数字查看活动概要</div>
 	<div class="left-part">
 		<div class="left-part-top">部分会员</div>
 		<div class="left-part-c">

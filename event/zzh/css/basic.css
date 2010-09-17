@@ -78,8 +78,14 @@ a:focus{text-decoration:underline}
 }
 .left-calendar{
 	width:217px;
-	height:265px;
-	margin:43px 0;
+	height:190px;
+	margin-top:43px;
+}
+#date_word{
+	width:217px;
+	height:100px;
+	color:#fff;
+	text-align:left;
 }
 .left-nav{
 	width:217px;
@@ -274,8 +280,8 @@ ul.style-list li{
 
 }
 ul.style-list li img{
-	width:129px;
-	height:87px;
+	width:96px;
+	height:106px;
 	float:left;
 	margin-right:15px;
 }
