@@ -40,10 +40,12 @@
 		<div id="success">
 			<div id="content_left">
 				<div id=context>
-					<p>您已成功注册为福布斯中文网会员，完善您的个人信息并通过审核后，您就可以获得一期《福布斯》
-中文版杂志免费赠阅，我们会根据您所提供的个人真实信息将杂志送到您手上。此外，您还将有机会获
-得福布斯专属记事本、商务笔、帆布袋等多重惊喜，更有机会赢得一台超炫苹果MP4。更多内容请密切
-关注福布斯中文网即将推出的“新会员注册有礼”及“在线转介绍有礼”活动</p>
+					<p>
+					<?php 
+						$text = $db->query("select description from fb_page_pos where name='register'");
+						echo $text[0]->description;
+					?>
+					</p>
 					<div id="suc_dh">
 						<div class="cl"><a href="/">福布斯中文网首页</a></div>
 						<div class="cl"><a href="/list/">榜单</a></div>
