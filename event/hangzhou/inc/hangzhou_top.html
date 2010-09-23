@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="../css/top.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="top">
+	<div id="top_banner">
+		<img src="../images/banner.jpg">
+	</div>
+	<div id="menu">
+			<div class="context selected" id="top_menu1"><a href="../index.html" target="_parent">首页</a></div>
+			<div class="menu_line" id="menu_line1">|</div>
+			<div class="context" id="top_menu2"><a href="../background.html" target="_parent">发布会背景</a></div>
+			<div class="menu_line" id="menu_line2">|</div>
+			<div class="context" id="top_menu3"><a href="../agenda.html" target="_parent">发布会日程</a></div>
+			<div class="menu_line" id="menu_line3">|</div>
+			<div class="context" id="top_menu4"><a href="../introduction.html" target="_parent">榜单介绍</a></div>
+			<div class="menu_line" id="menu_line4">|</div>
+			<div class="context" id="top_menu5"><a href="../image.html" target="_parent">杭州映像</a></div>
+			<div class="menu_line" id="menu_line5">|</div>
+			<div class="context" id="top_menu6"><a href="../media.html" target="_parent">合作媒体</a></div>
+			<div class="menu_line" id="menu_line6">|</div>
+			<div class="context" id="top_menu7"><a href="../review.html" target="_parent">往届回顾</a></div>
+			<div class="menu_line" id="menu_line7">|</div>
+			<div class="context" id="top_menu8"><a href="../hotel.html" target="_parent">酒店地址</a></div>
+			<div class="menu_line" id="menu_line8">|</div>
+			<div class="context" id="top_menu9"><a href="../guest.html" target="_parent">拟邀嘉宾</a></div>
+	</div>
+</div>
+</body>
+</html>
+<Script language="javascript">
+	var getid=GetQueryString('id');
+if(getid==null||getid==1)
+{
+	for(var i=1;i<9;i++)
+	{
+		document.getElementById("menu_line"+i).style.display="inline";
+	}
+	for(var i=1;i<10;i++)
+	{
+		document.getElementById("top_menu"+i).className="context";
+	}
+	document.getElementById("menu_line1").style.display="none";
+	document.getElementById("top_menu1").className="context selected";	
+}
+else if(getid==9)
+{
+	for(var i=1;i<9;i++)
+	{
+		document.getElementById("menu_line"+i).style.display="inline";
+	}
+	for(var i=1;i<10;i++)
+	{
+		document.getElementById("top_menu"+i).className="context";
+	}
+	document.getElementById("menu_line8").style.display="none";
+	document.getElementById("top_menu9").className="context selected";
+}
+else
+{
+	changebg(getid);	
+}
+function GetQueryString(name) {
+   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+   var r = window.location.search.substr(1).match(reg);
+   if (r!=null) return unescape(r[2]); return null;
+}
+function changebg(gid)
+{
+	for(var i=1;i<9;i++)
+	{
+		document.getElementById("menu_line"+i).style.display="inline";
+	}
+	for(var i=1;i<10;i++)
+	{
+		document.getElementById("top_menu"+i).className="context";
+	}
+	var changeid=parseInt(gid);
+	document.getElementById("menu_line"+(changeid-1)).style.display="none";
+	document.getElementById("menu_line"+changeid).style.display="none";
+	document.getElementById("top_menu"+changeid).className="context selected";	
+}
+
+
+</Script>
