@@ -3,8 +3,8 @@
 	margin:0px;
 }
 iframe{float:left; display:inline;}
-#ibody{width:1004px; margin:0 auto;}
-#ibody_content{width:1000px; border:2px solid #c8c8c8; padding-bottom:20px; background:#ffffff; float:left; display:inline;}
+#ibody{width:1025px; margin:0 auto;  }
+#ibody_content{width:1025px;background:url('../images/border.jpg') repeat-y; float:left; display:inline;}
 #right{width:706px; margin-top:20px; margin-right:14px; float:right; display:inline;}
 #right .title{width:100%; height:24px; overflow:hidden; float:left; display:inline;}
 #right .title .title_left{height:22px; margin-right:-3px; padding-right:5px; border-bottom:2px solid #00583F; color:#00583F; font-size:14px; font-weight:bold; line-height:22px; overflow:hidden; float:left;}
