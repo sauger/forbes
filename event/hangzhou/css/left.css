@@ -1,0 +1,10 @@
+﻿body{
+	font-family:Arial,SimSun;
+	margin:0px;
+}
+#left{width:244px; margin-top:20px; margin-left:14px; border-bottom:1px solid #D8D9DA; background:#f2f2f2; overflow:hidden; float:left; display:inline;}
+#left .title{width:230px; height:35px; padding-left:14px; background:url('../images/left_title_bg.jpg') repeat-x; color:#ffffff; font-size:14px; font-weight:bold; line-height:35px; float:left; display:inline;}
+#left .content{width:242px; padding-bottom:20px; border-left:1px solid #D8D9DA; border-right:1px solid #D8D9DA; float:left; display:inline;}
+#left .content .context{width:210px; margin-left:5px; padding:10px; border:1px solid #D8D9DA; background:#ffffff; color:#333333; font-size:12px; line-height:25px; float:left; display:inline;}
+#left .content .context span{font-weight:bold;}
+#left .content .context img{width:188px; height:44px; margin-left:11px; border:0px;}

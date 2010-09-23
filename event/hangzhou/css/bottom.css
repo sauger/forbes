@@ -1,0 +1,13 @@
+﻿body{
+	font-family:Arial,SimSun;
+	margin:0px;
+}
+#bottom{width:1000px; height:103px; background:url('../images/bottom_bg.jpg') repeat-x; overflow:hidden; margin:0 auto;}
+#bottom #logo{width:150px; height:64px; margin-top:25px; background:url('../images/bottom_logo.jpg') no-repeat; margin-left:20px; float:left; display:inline;}
+#bottom #content{width:780px; height:19px; margin-top:48px; line-height:19px; margin-right:20px; overflow:hidden; float:right; display:inline;}
+#bottom #content .context{width:70px; height:19px; font-weight:bold; font-size:14px; text-align:center; overflow:hidden; float:left; display:inline;}
+#bottom #content .context a{color:#3F5F66; text-decoration:none;}
+#bottom .bottom_line{height:19px; color:#3F5F66; font-weight:bold; line-height:19px; overflow:hidden; float:left; display:inline;}
+#bottom_contact{width:972px; margin:0 auto; margin-top:20px; overflow:hidden;}
+#bottom_contact #title{width:972px; height:22px; float:left; display:inline;}
+#bottom_contact #content{width:930px; height:45px; padding-left:42px; font-size:13px; line-height:45px; background:#eaeaea; float:left; display:inline;}

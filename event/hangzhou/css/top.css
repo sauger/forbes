@@ -1,0 +1,12 @@
+﻿body{
+	font-family:Arial,SimSun;
+	margin:0px;
+}
+#top{width:100%; text-align:center; float:left; display:inline;}
+#top_banner{width:100%; height:317px; background:url('../images/banner_bg.jpg') repeat-x; overflow:hidden; float:left; display:inline;}
+#top img{width:1000px; height:317px; border:0px;}
+#menu{width:1000px; height:41px;  background:url('../images/top_title_bg.jpg') repeat-x; overflow:hidden; margin:0 auto;}
+#menu .context{width:109px; height:41px; font-weight:bold; font-size:14px; text-align:center; line-height:41px; float:left; display:inline;}
+#menu .context.selected{background:url('../images/menu_bg.jpg') no-repeat;}
+#menu .context a{color:#ffffff; text-decoration:none;}
+#menu .menu_line{width:2px; height:19px; margin-top:8px; color:#ffffff; line-height:19px; overflow:hidden; float:left; display:inline;}
