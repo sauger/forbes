@@ -41,14 +41,41 @@
 	<p>
 		<label>模块类型:</label>
 		<select name="module[category_type]" id="category_type">
-			<option value="newslist">新闻列表</option>
-			<option value="word">文字展示</option>
-			<option value="photolist">图片列表</option>	
-			<option value="column">专栏列表</option>	
-			<option value="list">榜单列表</option>	
-			<option value="link">链接</option>				
+			<option value="news">新闻</option>
+			<option value="list">常规榜单</option>
+			<option value="ilist">图片榜单</option>	
+			<option value="image">图片</option>	
 		</select>
 	</p>
+	<p id="show_pic_p">
+		<label for="show_pic">显示图片:</label>
+		<select name="module[show_pic]" id="show_pic">
+			<option value="0">不显示</option>
+			<option value="1">显示</option>
+		</select>	
+	</p>
+	<p id="show_title_p">
+		<label for="show_pic">显示标题栏:</label>
+		<select name="module[show_title]" id="show_title">
+			<option value="0">不显示</option>
+			<option value="1">显示</option>
+		</select>	
+	</p>
+	<p id="show_desc_p">
+		<label for="show_desc">显示描述</label>
+		<select name="module[show_desc]" id="show_desc">
+			<option value="0">不显示</option>
+			<option value="1">显示</option>
+		</select> 
+	</p>
+	<p>
+		<label for="show_desc">图片比例</label>
+		<select name="module[image_scale]" id="image_scale">
+			<option value="0">不显示</option>
+			<option value="1">显示</option>
+		</select>
+	</p>
+	<!--  
 	<p id="category_p">
 		<label>内容类别:</label>
 		<select name="module[category_id]" id="category_id">
@@ -60,30 +87,18 @@
 	</p>
 	<p id="height_p" style="display:none">
 		<label for="height">高度:</label><input type="text" name="module[height]" id="height" value="">像素
-	</p>
+	</p>-->
 	<p id="limit_p">
 		<label for="limit">条数:</label><input type="text" name="module[record_limit]" id="limit" value="">	
 	</p>
+	<!-- 
 	<p id="eheight_p">
 		<label for="eheight">元素高度:</label><input type="text" name="module[element_height]" id="eheight" value="">	
 	</p>
 	<p id="ewidth_p">
 		<label for="ewidth">元素宽度:</label><input type="text" name="module[element_width]" id="ewidth" value="">	
-	</p>
-	<p id="show_pic_p">
-		<label for="show_pic">是否显示图片:</label>
-		<select name="module[show_pic]" id="show_pic">
-			<option value="0">不显示</option>
-			<option value="1">显示</option>
-		</select>	
-	</p>
-	<p id="show_title_p">
-		<label for="show_pic">是否显示标题栏:</label>
-		<select name="module[show_title]" id="show_title">
-			<option value="0">不显示</option>
-			<option value="1">显示</option>
-		</select>	
-	</p>
+	</p> -->
+	<!-- 
 	<p id="scroll_type_p">
 		<label>滚动类型:</label>
 		<select name="module[scroll_type]" id="scroll_type">
@@ -93,15 +108,16 @@
 			<option value="3">向右滚动</option>
 			<option value="4">向下滚动</option>
 		</select>	
-	</p>
-	<!-- 
-	<p>
-		<label for="description">描述:</label><textarea name="module[description]" id="description"></textarea>
-	</p> -->
+	</p> 
 	<p id="background_img_p">
 		<label for="image">背景图片:</label><input id="fileToUpload" size="10" type="file" name="fileToUpload"><input type="button" id="upload" value="上传"><?php if($item->image!=''){?><a target="_blank" href='<?php echo $item->image;?>'>点击查看</a><?php }?><img id="loading" style="display:none" src="/images/admin/loading.gif">
 		<input type="hidden" id='image' name="module[image]">
 	</p>
+	-->
+	<!-- 
+	<p>
+		<label for="description">描述:</label><textarea name="module[description]" id="description"></textarea>
+	</p> -->
 	<p>
 		<button id="save">确定</button>
 		<button id="cancel">取消 </button>			

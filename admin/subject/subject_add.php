@@ -20,7 +20,7 @@
 			  <a href="index.php" id=btn_back></a>
 		</div>
 		<div id=itable>
-			<form method="post" name="add_subject" id="form_add_subject" action="subject.post.php">
+			<form method="post" enctype="multipart/form-data" id="form_add_subject" action="subject.post.php">
 			<table cellspacing="1"  align="center">
 			<tr class=tr4>
 				<td class=td1 width=15%>专题名称</td>
@@ -34,6 +34,7 @@
 					<input type="text" name="subject[identity]" id="subject_identity" class="required">
 				</td>
 			</tr>
+			<!-- 
 			<tr class=tr4>
 				<td class=td1>专题模板</td>
 				<td>
@@ -43,11 +44,23 @@
 						<option value="templet3" >专题模板3</option>	
 					</select>
 				</td>
-			</tr>
+			</tr> -->
 			<tr class=tr4>
-				<td class=td1>描述</td>
+				<td class=td1>导语文字1</td>
 				<td>
 					<textarea name="subject[description]"></textarea>
+				</td>
+			</tr>
+			<tr class=tr4>
+				<td class=td1>导语文字2</td>
+				<td>
+					<textarea name="subject[description2]"></textarea>
+				</td>
+			</tr>
+			<tr class=tr4>
+				<td class=td1>图片</td>
+				<td>
+					<input type="file" name="subject[image]">
 				</td>
 			</tr>
 			<tr class="btools">

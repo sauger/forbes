@@ -2,12 +2,14 @@
 	require_once "../../frame.php";
 	$subject = new table_class('fb_subject');
 	$subject->update_attributes($_POST['subject'],false);
+	$subject->update_file_attributes('subject');
 	$subject->identity = strtolower($subject->identity);
 	$subject_id = $_POST['subject']['id'] ? $_POST['subject']['id'] : 0;
 	if ($subject_id == 0){
 		$optype = 'add';
 		$redirect_url = 'subject_add.php';
 		$subject->created_at = date("Y-m-d H:i:s");
+		$subject->templet_name = 'news_temp';
 	}else{
 		$optype = 'edit';
 		$redirect_url = 'subject_edit.php?id=' .$subject_id;

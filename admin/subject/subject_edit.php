@@ -47,19 +47,21 @@
 				</td>
 			</tr>
 			<tr class=tr4>
-				<td class=td1>专题模板</td>
+				<td class=td1>导语文字1</td>
 				<td>
-					<select name="subject[templet_name]" id="templet_type">
-						<option value="templet1" <?php if($subject->templet_name == "templet1") echo 'selected="selected"';?>>专题模板1</option>
-						<option value="templet2" <?php if($subject->templet_name == "templet2") echo 'selected="selected"';?>>专题模板2</option>
-						<option value="templet3" <?php if($subject->templet_name == "templet3") echo 'selected="selected"';?>>专题模板3</option>	
-					</select>
+					<textarea name="subject[description]"><?php echo $subject->description;?></textarea>
 				</td>
 			</tr>
 			<tr class=tr4>
-				<td class=td1>描述</td>
+				<td class=td1>导语文字2</td>
 				<td>
-					<textarea name="subject[description]"><?php echo $subject->description;?></textarea>
+					<textarea name="subject[description2]"><?php echo $subject->description2;?></textarea>
+				</td>
+			</tr>
+			<tr class=tr4>
+				<td class=td1>图片</td>
+				<td>
+					<input type="file" name="subject[image]"><?php if($subject->image!=''){?><a href="<?php echo $subject->image?>" target="_blank">点击查看<?php }?>
 				</td>
 			</tr>
 			<tr class=tr4>
@@ -107,6 +109,13 @@
 						<div style="clear:both"></div>
 						<div id="sub3_bl" class="bder subject_pos">left</div>
 						<div id="sub3_br" class="bder subject_pos">right</div>
+						<?php
+							}elseif($subject->templet_name == "new_temp"){
+						?>
+						<div class="bder subject_pos" style="width:40%; float:left;" id="left_top">left_top</div>
+						<div class="bder subject_pos" style="width:40%; float:left;" id="right_top">right_top</div>
+						<div class="bder subject_pos" style="width:40%; margin-top:20px; float:left;" id="left_bottom">left_bottom</div>
+						<div class="bder subject_pos" style="width:40%; margin-top:20px; float:left;" id="right_bottom">right_bottom</div>
 						<?php
 							}
 						?>
