@@ -38,7 +38,7 @@
 						<div class="top_box" <?if($i!=0){?>style="display:none;"<?php }?>>
 							<div class="top_title" <?php show_page_pos($pos_name,'base_img_withoutime');?>><?php show_page_href();?></div>
 							<div class="top_desc"><?php show_page_desc();?></div>
-							<?php for($j=0;$j<2;$j++){$pos_name = "index_hl".$j."_r".$i;?>
+							<?php for($j=0;$j<2;$j++){$pos_name = "index_hl".$i."_r".$j;?>
 							<div class="top_news" <?php show_page_pos($pos_name,'link_withouttime');?>><?php show_page_href();?></div>
 							<?php }?>
 						</div>
