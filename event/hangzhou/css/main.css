@@ -46,7 +46,7 @@ iframe{float:left; display:inline;}
 
 /*introduction*/
 .introduction_content{width:676px; margin-top:15px; margin-left:15px; padding-bottom:15px; font-size:12px; line-height:25px; float:left; display:inline;}
-.introduction_content .context{width:315px; height:420px; border:1px solid #CCCDCE; margin:10px; background:url('../images/introduction_content_context.jpg') bottom repeat-x; float:left; display:inline;}
+.introduction_content .context{width:315px; height:400px; border:1px solid #CCCDCE; margin:10px; background:url('../images/introduction_content_context.jpg') bottom repeat-x; float:left; display:inline;}
 .introduction_content .contexttitle{width:301px; height:30px; margin-left:7px; border-bottom:1px dashed #C2C2C2; color:#333333; font-size:14px; font-weight:bold; line-height:30px; float:left; display:inline;}
 .introduction_content .context_content{width:275px; height:20px; margin-top:15px; margin-left:20px; font-size:12px; line-height:20px; float:left; display:inline;}
 .introduction_content .info{width:275px; height:20px; margin-top:15px; margin-left:20px; text-align:right; font-size:12px; line-height:20px; float:left; display:inline;}
