@@ -64,7 +64,7 @@ iframe{float:left; display:inline;}
 /*media*/
 .media_content{width:676px; height:85px; margin-top:20px; padding-left:15px; padding-right:15px; float:left; display:inline;}
 .media_content .content{height:85px; border-bottom:0px dashed #AEAEAE; float:left; display:inline;}
-.media_content img{margin-left:100px; border:0px; float:left; display:inline;}
+.media_content img{ border:0px; float:left; display:inline;}
 .media_content .wz{height:25px; margin-top:30px; font-size:14px; font-weight:bold; color:#333333; line-height:25px; float:left; display:inline;}
 
 /*review*/
