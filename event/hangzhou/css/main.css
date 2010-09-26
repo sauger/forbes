@@ -15,7 +15,7 @@ iframe{float:left; display:inline;}
 #right .title .title_right a{color:#000000; text-decoration:none;}
 
 /*index*/
-#index_left{width:433px; margin-bottom:20px; float:left; display:inline;}
+#index_left{width:433px; float:left; display:inline;}
 #index_left .content{width:433px; margin-top:20px; padding-bottom:20px; font-size:12px; line-height:20px; text-indent:2em; float:left; display:inline;}
 #index_left .content img{width:423px; float:left; display:inline;}
 #index_left .content a{color:#666666; text-decoration:none; float:right; display:inline;}
@@ -31,11 +31,11 @@ iframe{float:left; display:inline;}
 #index_right .title1 .title1_left{float:left; display:inline;}
 #index_right .title1 .title1_right{font-size:12px; font-weight:normal; margin-right:10px; float:right; display:inline;}
 #index_right .title1 .title1_right a{ color:#ffffff; text-decoration:none;}
-.index_bottom_content{width:353px; height:114px; margin-top:30px; float:left; display:inline;}
+.index_bottom_content{width:353px; height:114px; padding-bottom:20px; margin-top:30px; float:left; display:inline;}
 .index_bottom_content img{width:114px; height:114px; border:0px; float:left; display:inline;}
 .index_bottom_content .info{margin-top:21px; margin-left:20px;font-size:12px; line-height:24px; float:left; display:inline;}
 .index_bottom_content .info span{font-weight:bold;}
-
+.content_intro{width:90%; margin-left:5px; margin-top:10px; padding:10px; background:#ffffff; color:#333333; font-size:12px; line-height:20px; float:left; display:inline;}
 /*background*/
 .background_content{width:676px; margin-top:20px; margin-left:15px; padding-bottom:20px; font-size:12px; line-height:25px; float:left; display:inline;}
 .background_list{width:676px; height:25px; border-bottom:1px dotted #BFC0C2; font-size:12px; line-height:25px; float:left; display:inline;}
