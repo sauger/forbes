@@ -64,8 +64,8 @@ iframe{float:left; display:inline;}
 /*media*/
 .media_content{width:676px; height:85px; margin-top:20px; padding-left:15px; padding-right:15px; float:left; display:inline;}
 .media_content .content{height:85px; border-bottom:0px dashed #AEAEAE; float:left; display:inline;}
-.media_content img{margin-left:20px; border:0px; float:left; display:inline;}
-.media_content .wz{height:25px; margin-top:30px; font-size:14px; font-weight:bold; color:#333333; line-height:25px; float:left; display:inline;}
+.media_content img{margin-left:100px; border:0px; float:left; display:inline;}
+.media_content .wz{height:25px; margin-top:30px; margin-left:30px; font-size:14px; font-weight:bold; color:#333333; line-height:25px; float:left; display:inline;}
 
 /*review*/
 #rv_content{width:660px; height:32px; margin-top:25px; margin-left:15px; padding-left:14px; border:1px solid #D8D9DA; font-size:12px; color:#333333; line-height:32px; float:left; display:inline;}
