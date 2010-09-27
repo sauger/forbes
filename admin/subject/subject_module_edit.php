@@ -21,11 +21,14 @@
 		<?php echo $js_name;?>.element_height = '<?php echo $item->element_height;?>';
 		<?php echo $js_name;?>.element_width = '<?php echo $item->element_width;?>';
 		<?php echo $js_name;?>.scroll_type = '<?php echo $item->scroll_type;?>';
-		<?php echo $js_name;?>.show_title = '<?php echo $item->show_title;?>';	
 		<?php echo $js_name;?>.record_limit = '<?php echo $item->record_limit;?>';
 		<?php echo $js_name;?>.name = '<?php echo $item->name;?>';
 		<?php echo $js_name;?>.pos_name = '<?php echo $item->pos_name;?>';		
 		<?php echo $js_name;?>.subject_id = '<?php echo $item->subject_id;?>';
+		<?php echo $js_name;?>.show_title = '<?php echo $item->show_title;?>';
+		<?php echo $js_name;?>.show_pic = '<?php echo $item->show_pic;?>';
+		<?php echo $js_name;?>.show_desc = '<?php echo $item->show_desc;?>';
+		<?php echo $js_name;?>.image_scale = '<?php echo $item->image_scale;?>';
 		</script>
 		<?php
 	}
@@ -68,12 +71,16 @@
 			<option value="1">显示</option>
 		</select> 
 	</p>
-	<p>
-		<label for="show_desc">图片比例</label>
+	<p id="show_image_scale">
+		<label for="image_scale">图片比例</label>
 		<select name="module[image_scale]" id="image_scale">
-			<option value="0">不显示</option>
-			<option value="1">显示</option>
+			<option value="1">1:1</option>
+			<option value="2">3:4</option>
+			<option value="3">4:3</option>
 		</select>
+	</p>
+	<p id="limit_p">
+		<label for="limit">条数:</label><input type="text" name="module[record_limit]" id="limit" value="">	
 	</p>
 	<!--  
 	<p id="category_p">
@@ -88,9 +95,6 @@
 	<p id="height_p" style="display:none">
 		<label for="height">高度:</label><input type="text" name="module[height]" id="height" value="">像素
 	</p>-->
-	<p id="limit_p">
-		<label for="limit">条数:</label><input type="text" name="module[record_limit]" id="limit" value="">	
-	</p>
 	<!-- 
 	<p id="eheight_p">
 		<label for="eheight">元素高度:</label><input type="text" name="module[element_height]" id="eheight" value="">	

@@ -11,23 +11,17 @@
 	$module->find($id);
 	$db = get_db();
 	switch ($module->category_type) {
-		case 'newslist':
-			$sql = 'select a.id as item_id,a.priority,a.is_adopt,b.short_title as name,b.id from fb_subject_items a left join fb_news b on a.resource_id = b.id where a.category_id=' .$module->category_id.' order by a.priority';
-		break;
-		case 'photolist':
-			$sql = 'select a.id as item_id,a.priority,a.is_adopt,b.title as name,b.id from fb_subject_items a left join fb_images b on a.resource_id = b.id where a.category_id=' .$module->category_id.' order by a.priority';
-		break;
-		case 'link':
-			$sql = "select *,title as name from fb_subject_link where module_id=$id order by priority";
-		break;
-		case 'word':
-			$sql = "select * from fb_subject_word where module_id=$id";
-		break;
-		case 'column':
-			$sql = "select t1.id as item_id,t2.id,t1.priority,t1.is_adopt,t2.name,t2.nick_name from fb_subject_items t1 join fb_user t2 on t1.resource_id=t2.id where t1.category_type='column' and t1.category_id=$id order by t1.priority";
+		case 'news':
+			$sql = 'select a.id as item_id,a.priority,a.is_adopt,b.short_title as name,b.id from fb_subject_items a left join fb_news b on a.resource_id = b.id where a.category_id=' .$id.' order by a.priority';
 		break;
 		case 'list':
 			$sql = "select t1.id as item_id,t2.id,t1.priority,t1.is_adopt,t2.name from fb_subject_items t1 join fb_custom_list_type t2 on t1.resource_id=t2.id where t1.category_type='list' and t1.category_id=$id order by t1.priority";
+		break;
+		case 'ilist':
+			$sql = "select t1.id as item_id,t2.id,t1.priority,t1.is_adopt,t2.name from fb_subject_items t1 join fb_custom_list_type t2 on t1.resource_id=t2.id where t1.category_type='ilist' and t1.category_id=$id order by t1.priority";
+		break;
+		case 'image':
+			$sql = "select t1.id as item_id,t2.id,t1.priority,t1.is_adopt,t2.title as name from fb_subject_items t1 join fb_images t2 on t1.resource_id=t2.id where t1.category_type='image' and t1.category_id=$id order by t1.priority";
 		break;
 		default:
 			;
@@ -44,21 +38,21 @@
 		$ids = implode(',',$ids_array);
 		if($keyword){
 			switch ($module->category_type) {
-				case 'newslist':
-					$sql = "select id,short_title as title from fb_news where (title like '%$keyword%' or short_title like '%$keyword%' or author like '%$keyword%' or content like '%$keyword%' or description like '%$keyword%' or keywords like '%$keyword%')";
+				case 'news':
+					$sql = "select id,short_title as title from fb_news where (title like '%$keyword%' or short_title like '%$keyword%' or author like '%$keyword%')";
 					$name = '文章标题';
 				break;
-				case 'photolist':
-					$sql = "select id,title from fb_images where (title like '%$keyword%' or description like '%$keyword%')";
-					$name = '图片标题';
-				break;
-				case 'column':
-					$sql = "select *,name as title from fb_user where (name like '%$keyword%' or nick_name like '%$keyword%')";
-					$name = '用户名';
-				break;
 				case 'list':
-					$sql = "select *,name as title from fb_custom_list_type where (name like '%$keyword%')";
+					$sql = "select id,name as title from fb_custom_list_type where (name like '%$keyword%') and list_type=1";
 					$name = '榜单标题';
+				break;
+				case 'ilist':
+					$sql = "select id,name as title from fb_custom_list_type where (name like '%$keyword%') and list_type=4";
+					$name = '图片榜标题';
+				break;
+				case 'image':
+					$sql = "select id,title from fb_images where (title like '%$keyword%')";
+					$name = '图片标题';
 				break;
 				default:
 					;
@@ -83,7 +77,7 @@
 </div>
 <div id="div_right_box">
 	<div id="search_box">
-		<label for="keywrods">关键字:</label><input type="text" name="keywords">
+		<label for="keywrods">关键字:</label><input type="text" value="<?php echo $keyword;?>" name="keywords">
 		<button id="search_bt">搜索</button><span style="display:none;" id="search_info">搜索中。。。</span>
 	</div>
 	<div id="item_list">

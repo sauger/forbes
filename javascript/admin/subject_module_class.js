@@ -17,6 +17,9 @@ function subject_module_class(){
 	this.refresh_dom = '#subject_item_container';
 	this.id='-1';
 	this.description = '';
+	this.show_desc;
+	this.show_pic;
+	this.image_scale;
 	this.refresh = function(){
 		this.refresh_p();
 		$(this.refresh_dom + ' #name').attr('value',this.name);
@@ -28,11 +31,13 @@ function subject_module_class(){
 		$(this.refresh_dom + ' #ewidth').attr('value',this.element_width);
 		$(this.refresh_dom + ' #scroll_type').attr('value',this.scroll_type);
 		$(this.refresh_dom + ' #hidden_module_id').attr('value',this.id);
-		$(this.refresh_dom + ' #show_title').attr('value',this.show_title);
 		$(this.refresh_dom + ' #hidden_subject_id').attr('value',this.subject_id);
 		$(this.refresh_dom + ' #description').attr('value',this.description);
 		$(this.refresh_dom + ' #hidden_pos_name').attr('value',this.pos_name);
-		
+		$(this.refresh_dom + ' #show_title').attr('value',this.show_title);
+		$(this.refresh_dom + ' #show_desc').attr('value',this.show_desc);
+		$(this.refresh_dom + ' #show_pic').attr('value',this.show_pic);
+		$(this.refresh_dom + ' #image_scale').attr('value',this.image_scale);
 	};
 		
 	this.assign_from_html=function(){
@@ -43,12 +48,15 @@ function subject_module_class(){
 		this.element_height = $(this.refresh_dom + ' #eheight').attr('value');
 		this.element_width = $(this.refresh_dom + ' #ewidth').attr('value');
 		this.scroll_type = $(this.refresh_dom + ' #scroll_type').attr('value');
-		this.show_title = $(this.refresh_dom + ' #show_title').attr('value');
 		this.id = $(this.refresh_dom + ' #hidden_module_id').attr('value');
 		this.subject_id = $(this.refresh_dom + ' #hidden_subject_id').attr('value');
 		this.pos_name = $(this.refresh_dom + ' #hidden_pos_name').attr('value');
 		this.category_id = $(this.refresh_dom + ' #category_id').attr('value');
 		this.description = $(this.refresh_dom + ' #description').attr('value');
+		this.show_title = $(this.refresh_dom + ' #show_title').attr('value');
+		this.show_desc = $(this.refresh_dom + ' #show_desc').attr('value');
+		this.show_pic = $(this.refresh_dom + ' #show_pic').attr('value');
+		this.image_scale = $(this.refresh_dom + ' #image_scale').attr('value');
 	}
 	
 	this.display_info=function(){
@@ -67,23 +75,17 @@ function subject_module_class(){
 	
 	this.conv_category_type=function(itype,limit){
 	switch(itype){
-		case 'newslist':
-			return '[新闻列表]('+limit+'条)';
+		case 'news':
+			return '[新闻]('+limit+'条)';
 			break;
-		case 'word':
-			return '[文字展示]';
-			break;
-		case 'photolist':
-			return '[图片列表]('+limit+'条)';
-			break;
-		case 'column':
-			return '[专栏列表]('+limit+'条)';
-			break;	
 		case 'list':
-			return '[榜单列表]('+limit+'条)';
-			break;	
-		case 'link':
-			return '[链接]('+limit+'条)';
+			return '[常规榜单]('+limit+'条)';
+			break;				
+		case 'ilist':
+			return '[图片榜单]('+limit+'条)';
+			break;
+		case 'image':
+			return '[图片]('+limit+'条)';
 			break;
 		/*	
 		case 'commet':
@@ -95,60 +97,34 @@ function subject_module_class(){
 	this.refresh_p = function(){
 		var cate = $('#category_type').attr('value');
 		switch(cate){
-			case 'newslist':
-				$("#category_p").show();
+			case 'news':
+				$("#show_pic_p").show();
+				$('#show_title_p').show();
+				$('#show_desc_p').show();
+				$('#show_image_scale').show();
 				$('#limit_p').show();
-				$('#eheight_p').show();
-				$('#ewidth_p').show();
-				$('#scroll_type_p').show();
-				$('#background_img_p').hide();
-				$('#show_pic_p').hide();
 				break;
-			case 'word':
-				$("#category_p").hide();
-				$('#limit_p').hide();
-				$('#eheight_p').show();
-				$('#ewidth_p').show();
-				$('#scroll_type_p').hide();
-				$('#background_img_p').hide();
-				$('#show_pic_p').hide();
-				break;				
-			case 'photolist':
-				$("#category_p").hide();
-				$('#limit_p').show();
-				$('#eheight_p').show();
-				$('#ewidth_p').show();
-				$('#scroll_type_p').show();
-				$('#background_img_p').hide();
-				$('#show_pic_p').hide();
-				break;
-			case 'column':
-				$("#category_p").hide();
-				$('#limit_p').show();
-				$('#eheight_p').show();
-				$('#ewidth_p').show();
-				$('#scroll_type_p').hide();
-				$('#background_img_p').hide();
-				$('#show_pic_p').show();
-				break;	
 			case 'list':
-				$("#category_p").hide();
+				$("#show_pic_p").show();
+				$('#show_title_p').show();
+				$('#show_desc_p').show();
+				$('#show_image_scale').show();
 				$('#limit_p').show();
-				$('#eheight_p').show();
-				$('#ewidth_p').show();
-				$('#scroll_type_p').show();
-				$('#background_img_p').hide();
-				$('#show_pic_p').hide();
-				break;
-			case 'link':
-				$("#category_p").hide();
+				break;				
+			case 'ilist':
+				$("#show_pic_p").show();
+				$('#show_title_p').show();
+				$('#show_desc_p').show();
+				$('#show_image_scale').show();
 				$('#limit_p').show();
-				$('#eheight_p').show();
-				$('#ewidth_p').show();
-				$('#scroll_type_p').hide();
-				$('#background_img_p').show();
-				$('#show_pic_p').hide();
 				break;
+			case 'image':
+				$("#show_pic_p").hide();
+				$('#show_title_p').hide();
+				$('#show_desc_p').hide();
+				$('#show_image_scale').show();
+				$('#limit_p').show();
+				break;	
 		}
 	}
 };

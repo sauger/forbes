@@ -32,7 +32,7 @@
 			  <a href="index.php" id=btn_back></a>
 		</div>
 		<div id=itable>
-			<form method="post" name="edit_subject" id="form_add_subject" action="subject.post.php">
+			<form method="post" name="edit_subject" id="form_add_subject" enctype="multipart/form-data" action="subject.post.php">
 			<table cellspacing="1"  align="center" width="1026">
 			<tr class=tr4>
 				<td class=td1 width=15%>专题名称</td>
@@ -56,6 +56,30 @@
 				<td class=td1>导语文字2</td>
 				<td>
 					<textarea name="subject[description2]"><?php echo $subject->description2;?></textarea>
+				</td>
+			</tr>
+			<tr class=tr4>
+				<td class=td1>栏目1</td>
+				<td>
+					<input type="text" name="subject[title1]" value="<?php echo $subject->title1;?>">
+				</td>
+			</tr>
+			<tr class=tr4>
+				<td class=td1>栏目2</td>
+				<td>
+					<input type="text" name="subject[title2]" value="<?php echo $subject->title2;?>">
+				</td>
+			</tr>
+			<tr class=tr4>
+				<td class=td1>栏目3</td>
+				<td>
+					<input type="text" name="subject[title3]" value="<?php echo $subject->title3;?>">
+				</td>
+			</tr>
+			<tr class=tr4>
+				<td class=td1>栏目4</td>
+				<td>
+					<input type="text" name="subject[title4]" value="<?php echo $subject->title4;?>">
 				</td>
 			</tr>
 			<tr class=tr4>
@@ -112,10 +136,14 @@
 						<?php
 							}elseif($subject->templet_name == "new_temp"){
 						?>
-						<div class="bder subject_pos" style="width:40%; float:left;" id="left_top">left_top</div>
-						<div class="bder subject_pos" style="width:40%; float:left;" id="right_top">right_top</div>
-						<div class="bder subject_pos" style="width:40%; margin-top:20px; float:left;" id="left_bottom">left_bottom</div>
-						<div class="bder subject_pos" style="width:40%; margin-top:20px; float:left;" id="right_bottom">right_bottom</div>
+						<div style="float:left; width:40%;">
+							<div class="bder subject_pos" style="width:90%; float:left;" id="left_top">left_top</div>
+							<div class="bder subject_pos" style="width:90%; margin-top:20px; float:left;" id="left_bottom">left_bottom</div>
+						</div>
+						<div style="float:left; margin-left:10%; width:40%;">
+							<div class="bder subject_pos" style="width:90%; float:left;" id="right_top">right_top</div>
+							<div class="bder subject_pos" style="width:90%; margin-top:20px; float:left;" id="right_bottom">right_bottom</div>
+						</div>
 						<?php
 							}
 						?>

@@ -9,7 +9,7 @@
 		$optype = 'add';
 		$redirect_url = 'subject_add.php';
 		$subject->created_at = date("Y-m-d H:i:s");
-		$subject->templet_name = 'news_temp';
+		$subject->templet_name = 'new_temp';
 	}else{
 		$optype = 'edit';
 		$redirect_url = 'subject_edit.php?id=' .$subject_id;

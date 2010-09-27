@@ -26,10 +26,10 @@ if($_POST['type']=='add'){
 		$item->subject_id = $_POST['subject_id'];
 		switch ($category_type){
 			case 'news':
-				$item->category_id = $_POST['category_id'];
+				$item->category_id = $_POST['module_id'];
 			break;
 			case 'image':
-				$item->category_id = $_POST['category_id'];
+				$item->category_id = $_POST['module_id'];
 			break;
 			default:
 				$item->category_id = $_POST['module_id'];
@@ -46,6 +46,7 @@ if($_POST['type']=='add'){
 	}else{
 		$table = 'fb_subject_items';
 	}
+	$table = 'fb_subject_items';
 	$item = new table_class($table);
 	$item->delete($_POST['id']);
 }else if($_POST['type']=='unpub'){
@@ -56,6 +57,7 @@ if($_POST['type']=='add'){
 	}else{
 		$table = 'fb_subject_items';
 	}
+	$table = 'fb_subject_items';
 	$item = new table_class($table);
 	$item->find($_POST['id']);
 	$item->is_adopt=0;
@@ -68,6 +70,7 @@ if($_POST['type']=='add'){
 	}else{
 		$table = 'fb_subject_items';
 	}
+	$table = 'fb_subject_items';
 	$item = new table_class($table);
 	$item->find($_POST['id']);
 	$item->is_adopt=1;

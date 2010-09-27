@@ -19,6 +19,8 @@
 			$show_pic = $this->show_pic;
 			$show_title = $this->show_title;
 			$title = $this->name;
+			$show_desc = $this->show_desc;
+			$image_scale = $this->image_scale;
 			$db = get_db();
 			switch ($this->category_type) {
 				case 'news':					
