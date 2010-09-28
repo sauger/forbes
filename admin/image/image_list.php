@@ -65,10 +65,10 @@
 			<td><?php echo $images[$i]->created_at;?></td>
 			<td>
 				<?php if($images[$i]->is_adopt=="1"){?>
-					<span class="revocation" name="<?php echo $images[$i]->id;?>" title="撤消"><img src="/images/admin/btn_unapply.png" border=0></span>
+					<span class="revocation" name="<?php echo $images[$i]->id;?>" title="撤消"><img src="/images/admin/btn_apply.png" border=0></span>
 				<?php }?>
 				<?php if($images[$i]->is_adopt=="0"){?>
-					<span class="publish" name="<?php echo $images[$i]->id;?>" title="发布"><img src="/images/admin/btn_apply.png" border=0></span>
+					<span class="publish" name="<?php echo $images[$i]->id;?>" title="发布"><img src="/images/admin/btn_unapply.png" border=0></span>
 				<?php }?>
 				<a href="image_edit.php?id=<?php echo $images[$i]->id;?>" title="编辑"><img src="/images/admin/btn_edit.png" border=0></a> 
 				<span class="del" name="<?php echo $images[$i]->id;?>" title="删除"><img src="/images/admin/btn_delete.png" border=0></span>
