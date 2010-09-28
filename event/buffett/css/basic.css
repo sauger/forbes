@@ -1,0 +1,161 @@
+
+body{font-famiyl:"����";background:url(../image/bg2.gif) repeat-x;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,buttom,textarea,p,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;}
+ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+a{text-decoration:none;color:#000;}
+h5{font-size:12px;}
+
+.clear{
+	overflow:hidden;
+	zoom:1;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}	
+
+#container{
+	text-align:center;	
+}
+#container-inner{
+	width:1004px;
+	margin:0 auto;
+}
+#content{
+	width:1004px;
+	height:500px;
+	margin:0 auto;
+	background:url(../image/bg1.gif) top no-repeat;	
+
+}
+#content-inner{
+	font-size:12px;
+}
+
+/* ==================== header begin  ===================== */
+
+.c-main{
+	width:921px;
+	margin:501px auto 10px;
+	border:2px #f80202 solid;
+	overflow:hidden;
+	background:#46292b;
+	padding:15px;
+}
+.flash-box{
+	float:left;
+	width:575px;
+	height:327px;
+	background:#7d6062;
+	padding:2px;
+	overflow:hidden;
+}
+.flash-box img{
+	float:left;
+	margin:5px 4px;	
+	}
+.text-box{
+	width:268px;
+	height:323px;
+	overflow:hidden;
+	float:left;
+	text-align:left;
+	margin-left:25px;
+	line-height:25px;
+}
+.text-box a{color:#FFFFFF;}
+.text-box span{
+	color:#999999;
+	float:right;
+	}
+.headline{
+	border-bottom:1px solid #f80202;
+	padding:5px 0;
+	margin-bottom:15px
+
+}
+.picture-main{
+	width:892px;
+	text-align:left;
+	float:left;
+}
+.picture-c{
+	background:url(../image/picturebg.gif) no-repeat;
+	overflow:hidden;
+	width:892px;
+	height:167px;
+	float:left;
+}
+.picture-c ul{
+	width:833px;
+	float:left;
+	height:136px;
+	margin:15px auto 0;
+	padding-left:5px;
+	overflow:hidden;
+}
+.picture-c li{
+	width:150px;
+	float:left;
+	height:136px;
+	overflow:hidden;
+	border-right:1px dotted #999999;
+	margin:0 7px 0 8px;
+	display:inline;
+}
+.picture-c li.on{
+	border:none;
+}
+.picture-c li img{
+	width:142px;
+	height:107px;
+	display:block;
+	margin-bottom:5px;
+}
+
+#big_img{
+	width:485px;
+	height:314px;
+	margin:5px 4px;
+	overflow:hidden;
+	position:relative;
+	float:left;
+	display:inline;
+}
+#big_img img{
+	width:485px;
+	height:314px;
+	margin:0;
+}
+.img_title{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	left:0;
+	bottom:0;
+	position:absolute;
+	background:#000;
+	opacity:0.80; 
+	filter:alpha(opacity = 80);
+	color:#fff;
+}
+
+#small_img{
+	width:81px;
+	height:288px;
+	overflow:hidden;
+	float:left;
+	display:inline;
+}
+#small_img img{
+	width:73px;
+	height:62px;
+}
+#prev,#prev2,#next,#next2{
+	cursor:pointer;
+}
