@@ -521,4 +521,13 @@ function get_keywords($ids,$num = 5){
 		return $key_array;
 	}
 }
+
+function display_sub_mod($pos,$id){
+	$db = get_db();
+	$mods = $db->query("select * from fb_subject_modules where pos_name='$pos' and subject_id=$id");
+	!$mods && $mods = array();
+	foreach($mods as $mod){
+		
+	}
+}
 ?>

@@ -101,21 +101,21 @@ function subject_module_class(){
 				$("#show_pic_p").show();
 				$('#show_title_p').show();
 				$('#show_desc_p').show();
-				$('#show_image_scale').show();
+				$('#show_image_scale').hide();
 				$('#limit_p').show();
 				break;
 			case 'list':
 				$("#show_pic_p").show();
 				$('#show_title_p').show();
 				$('#show_desc_p').show();
-				$('#show_image_scale').show();
+				$('#show_image_scale').hide();
 				$('#limit_p').show();
 				break;				
 			case 'ilist':
 				$("#show_pic_p").show();
 				$('#show_title_p').show();
 				$('#show_desc_p').show();
-				$('#show_image_scale').show();
+				$('#show_image_scale').hide();
 				$('#limit_p').show();
 				break;
 			case 'image':

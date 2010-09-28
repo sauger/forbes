@@ -31,15 +31,17 @@ $subject = $subject[0];
 	<div id="sub_desc2"><?php echo $subject->description2;?></div>
 	<div id="mod_left">
 		<div class="mod_title"><?php echo $subject->title1;?></div>
-		<div class="mod_box"></div>
+		<div class="mod_box">
+			<?php display_sub_mod('left_top',$subject->id);?>
+		</div>
 		<div class="mod_title"><?php echo $subject->title3;?></div>
-		<div class="mod_box"></div>
+		<div class="mod_box"><?php display_sub_mod('left_bottom',$subject->id);?></div>
 	</div>
 	<div id="mod_right">
 		<div class="mod_title"><?php echo $subject->title2;?></div>
-		<div class="mod_box"></div>
+		<div class="mod_box"><?php display_sub_mod('right_top',$subject->id);?></div>
 		<div class="mod_title"><?php echo $subject->title4;?></div>
-		<div class="mod_box"></div>
+		<div class="mod_box"><?php display_sub_mod('right_bottom',$subject->id);?></div>
 	</div>
 </div>
 <div id="sub_right"></div>
