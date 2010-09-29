@@ -44,7 +44,7 @@
 								</div>
 								<div class="text-box">
 									<?php 
-										$news = $db->query("select title,id,created_at,description from fb_news where category_id=153 and is_adopt=0 order by created_at desc");
+										$news = $db->query("select title,id,created_at,description from fb_news where category_id=153 and is_adopt=1 order by created_at desc");
 										!$news && $news = array();
 										foreach($news as $k => $news){
 											if($k==0){
