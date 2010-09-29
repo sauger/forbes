@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>与沃伦巴菲特面对面</title>
 <link href="css/basic.css" rel="stylesheet" type="text/css" />
-<link href="css/index.css" rel="stylesheet" type="text/css" />
 <?php use_jquery();?>
 </head>
 <body>
