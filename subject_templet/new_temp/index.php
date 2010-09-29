@@ -44,7 +44,11 @@ $subject = $subject[0];
 		<div class="mod_box"><?php display_sub_mod('right_bottom',$subject->id);?></div>
 	</div>
 </div>
-<div id="sub_right"></div>
+<div id="sub_right">
+<?php 
+	include 'right.inc.php';
+?>
+</div>
 <?php 
 	include_bottom();
 ?>
