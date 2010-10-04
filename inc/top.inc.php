@@ -15,6 +15,7 @@ global $pos_name;
 </div>
 <div id="top_img_right" class="ad_banner">
 </div>
+<div id="top_banner2" class="ad_banner" bheight="418"></div>
 <div id="top_bg">
 	<div id="top_logon"></div>
 	<div id="top_banner">

@@ -5,6 +5,8 @@ div{margin:0; padding:0; float:left; display:inline;}
 #top_img_left img{width:728px; height:90px; border:0;}
 #top_img_right{width:260px; float:right; font-size:0;}
 #top_img_right img{width:260px; height:90px; border:0;}
+#top_banner2{width:1000px; font-size:0;}
+#top_banner2 img{width:1000px; height:90px; border:0;}
 #top_bg{width:1000px; height:90px; margin-top:3px; background: url(/images/index_two/top_pg.jpg) repeat-x;}
 	#top_logon{width:170px; height:76px; margin-top:7px; margin-left:8px; background:url(/images/index_two/logon.jpg) no-repeat; }
 	#top_banner{width:580px; height:76px;}

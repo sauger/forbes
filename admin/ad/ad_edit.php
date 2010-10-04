@@ -43,23 +43,23 @@
 		<tr class=tr4 id=target_url>
 			<td class=td1>广告类型</td>
 			<td align="left">
-				<select name="ad[ad_type]" id="select_upload"><option value=''></option><option value='video'>视频</option><option value='flash'>flash</option><option value='image'>图片</option><option value="word">代码</option></select>
+				<select name="ad[ad_type]" id="select_upload"><option value=''></option><option value='video'>视频</option><option value='flash'>flash</option><option value='image'>图片</option><option value="word">代码</option><option value="two">缩放</option></select>
 			</td>
 		</tr>
 		<?php if($id){?>
 		<script>
 			$(function(){
 				$("#select_upload").val("<?php echo $ad->ad_type;?>")
-				$("#ad_<?php echo $ad->ad_type;?>").show();
 				$("#start_hour").val("<?php echo $ad->start_hour;?>");
 				$("#end_hour").val("<?php echo $ad->end_hour;?>");
+				show_type();
 			});	
 		</script>
 		<?php }?>
 		<tr class="tr4 ad_upload" id="ad_image" style="display:none;">
 			<td class=td1>上传图片</td>
 			<td align="left">
-				<input type="file" name="image" style="width:250px;"><?php if($ad->image!=''){?><a class="color" title="图片展示" href="<?php echo $ad->image;?>">点击查看</a><?php }?>
+				<input type="file" name="image" style="width:250px;"><?php if($ad->image!=''&&$ad->ad_type=='image'){?><a class="color" title="图片展示" href="<?php echo $ad->image;?>">点击查看</a><?php }?>
 			</td>
 		</tr>
 		<tr class="tr4 ad_upload" id="ad_video" style="display:none;">
@@ -71,7 +71,21 @@
 		<tr class="tr4 ad_upload" id="ad_flash" style="display:none;">
 			<td class=td1>上传FLASH</td>
 			<td align="left">
-				<input type="file" name="flash" style="width:250px;"><?php if($ad->flash!=''){?><a class="color" title="flash展示" href="/admin/show/show_flash.php?id=<?php echo $id;?>&table=forbes_ad.fb_ad">点击查看</a><?php }?>
+				<input type="file" name="flash" style="width:250px;"><?php if($ad->flash!=''&&$ad->ad_type=='flash'){?><a class="color" title="flash展示" href="/admin/show/show_flash.php?id=<?php echo $id;?>&table=forbes_ad.fb_ad">点击查看</a><?php }?>
+			</td>
+		</tr>
+		
+		<tr class="tr4 ad_upload" id="one" style="display:none;">
+			<td class=td1>上传图片</td>
+			<td align="left">
+				<input type="file" name="src1" style="width:250px;"><?php if($ad->image!=''&&$ad->ad_type=='two'){?><a class="color" title="图片展示" href="<?php echo $ad->image;?>">点击查看</a><?php }?>
+			</td>
+		</tr>
+		
+		<tr class="tr4 ad_upload" id="two" style="display:none;">
+			<td class=td1>上传放大图片</td>
+			<td align="left">
+				<input type="file" name="src2" style="width:250px;"><?php if($ad->image!=''&&$ad->ad_type=='two'){?><a class="color" title="图片展示" href="<?php echo $ad->flash;?>">点击查看</a><?php }?>
 			</td>
 		</tr>
 		<tr class="tr4 ad_upload" id="ad_word" style="display:none;">

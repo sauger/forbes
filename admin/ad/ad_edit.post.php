@@ -44,6 +44,40 @@
 		}
 		$ad->image = "/upload/jj/{$img}";
 	}
+	if($_FILES['src1']['name']!=null){
+		if($_FILES['src1']['size']>2000000){
+			alert('上传图片不得大于2M，请重新上传 !');
+			redirect($_SERVER['HTTP_REFERER']);
+			die();
+		}
+		$upload = new upload_file_class();
+		$upload->save_dir = "/upload/jj/";
+		$img = $upload->handle('src1','filter_pic');
+		
+		if($img === false){
+			alert('上传图片失败 !');
+			redirect($_SERVER['HTTP_REFERER']);
+			die();
+		}
+		$ad->image = "/upload/jj/{$img}";
+	}
+	if($_FILES['src2']['name']!=null){
+		if($_FILES['src2']['size']>2000000){
+			alert('上传图片不得大于2M，请重新上传 !');
+			redirect($_SERVER['HTTP_REFERER']);
+			die();
+		}
+		$upload = new upload_file_class();
+		$upload->save_dir = "/upload/jj/";
+		$img = $upload->handle('src2','filter_pic');
+		
+		if($img === false){
+			alert('上传图片失败 !');
+			redirect($_SERVER['HTTP_REFERER']);
+			die();
+		}
+		$ad->flash = "/upload/jj/{$img}";
+	}
 	if($_FILES['video']['name']!=null){
 		#var_dump($_FILES);
 		if($_FILES['video']['size']>5000000){

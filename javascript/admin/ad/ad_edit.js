@@ -1,5 +1,6 @@
 $(function(){
 	$(".color").colorbox();
+	show_type();
 	
 	$(".date_jquery").datepicker(
 	{
@@ -13,7 +14,17 @@ $(function(){
 	});
 	
 	$("#select_upload").change(function(){
-		$(".ad_upload").hide();
-		$("#ad_"+$(this).val()).show();
+		show_type();
 	});
 })
+
+function show_type(){
+	if($("#select_upload").val()=='two'){
+		$(".ad_upload").hide();
+		$("#one").show();
+		$("#two").show();
+	}else{
+		$(".ad_upload").hide();
+		$("#ad_"+$("#select_upload").val()).show();
+	}
+}

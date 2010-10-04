@@ -3,8 +3,8 @@ include_once "../frame.php";
 $channel = $_GET['channel'];
 $banner = $_GET['banner'];
 if(!is_ajax()) die();
-$banners = array('top_banner','index_middle_banner','right_banner','rich_banner2','rich_banner1','news_banner','list_banner','magazine_banner1','magazine_banner2','login_banner','club_banner','top_img_right','top_img_left','right_img','right_m_img','lang_ad','index_little');
-$channels = array('billionaires','business','city','club','column','entrepreneur','index','investment','investor','life','list','magazine','news','search','survey','tech','login','register','user','getpwd','review','comments','pic_list','event','contact','file_list','index_two.php','testindex.shtml');
+$banners = array('top_banner','index_middle_banner','right_banner','rich_banner2','rich_banner1','news_banner','list_banner','magazine_banner1','magazine_banner2','login_banner','club_banner','top_img_right','top_img_left','right_img','right_m_img','lang_ad','index_little','top_banner2');
+$channels = array('billionaires','business','city','club','column','entrepreneur','index','investment','investor','life','list','magazine','news','search','survey','tech','login','register','user','getpwd','review','comments','pic_list','event','contact','file_list','index.php','testindex.shtml');
 if(!in_array($_GET['channel'],$channels) || !in_array($_GET['banner'],$banners)){
 }
 if ($channel == 'review') $channel = 'news';
@@ -54,6 +54,19 @@ function generate_ad($ad){
 			$array = array("type" => "word",'id' => $ad->id,'width' => $size[0],'height' => $size[1]);
 		;
 		break;
+		case 'two':
+			$width = $size[0];
+			$height = $size[1];
+			$str = "<a href='/ajax/ad_bridge.php?code={$ad->code}' target='_blank'>";
+			$str .= "<img width='{$width}' height='{$height}' border=0 src='{$ad->image}' />";
+			$str .= "</a>";
+			$str .= "<input type='hidden' value='{$ad->id}' />";
+			$str2 = "<a href='/ajax/ad_bridge.php?code={$ad->code}' target='_blank'>";
+			$str2 .= "<img width='{$width}' border=0 src='{$ad->flash}' />";
+			$str2 .= "</a>";
+			$str2 .= "<input type='hidden' value='{$ad->id}' />";
+			$array = array("type" => "two","content" => $str,"two" => $str2);
+		;
 		default:
 			;
 		break;

@@ -12,7 +12,7 @@
 	<meta name="keywords" content="<?php echo $seo[0]->keywords ?>" />
 	<meta name="description" content="<?php echo $seo[0]->description ?>" />
 	<?php
-		use_jquery();
+		use_jquery_ui();
 		js_include_tag('index_two','public','jquery.colorbox-min.js');
 		css_include_tag('index_two','public','colorbox');
 		global $pos_items;

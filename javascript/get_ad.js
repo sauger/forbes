@@ -17,6 +17,16 @@ $(function(){
 			if(data){
 				if(data.type=='word'){
 					$(ob).html("<iframe scrolling='no' width='"+data.width+"' height='"+data.height+"' frameborder='no' border='0' src='/ajax/show_ad.php?id="+data.id+"'></iframe>");
+				}else if(data.type=='two'){
+					$(ob).html(data.two);
+					$height = $(ob).attr('bheight')+'px';
+					$(ob).find('img').css('height',$height);
+					setTimeout(function(){
+						$(ob).find('img').hide('blind');
+						setTimeout(function(){
+							$(ob).html(data.content);
+						}, 1000);
+					}, 3000);
 				}else{
 					$(ob).html(data.content);
 				}
